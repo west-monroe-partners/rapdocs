@@ -62,7 +62,7 @@ A modal appears showing the data profile when the datatype icon is clicked.
 
 Data profiles provide the following statistics:
 
-### Text
+### Common
 
 * **Attribute Type**
   * Raw - Raw data from the Source
@@ -74,58 +74,31 @@ Data profiles provide the following statistics:
 * **Number of Rows**
 * **Min**
 * **Max**
+* **Unique %**
+* **Null %**
+* **Top 5 Values**
+* **Bottom 5 Values**
+* **Distribution Percentiles \(10%, 25%, 50%, 75%, 90%\)**
+
+### Text
+
 * **Min Length**
 * **Max Length**
 * **Avg Length**
-* **Unique %**
-* **Null %**
 * **Numeric %**
 * **Blank %**
 * **Special Char %**
-* **Top 5 Values**
-* **Bottom 5 Values**
-* **Distribution Percentiles \(10%, 25%, 50%, 75%, 90%\)**
 
 ### Numeric
 
-* **Attribute Type**
-  * Raw - Raw data from the Source
-  * Enriched - Enriched data that has been transformed
-* **Data Type**
-  * Text
-  * Numeric
-  * Timestamp
-* **Number of Rows**
-* **Min**
-* **Max**
 * **Average**
 * **Median**
 * **Standard Deviation**
-* **Unique %**
-* **Null %**
 * **Zero %**
-* **Top 5 Values**
-* **Bottom 5 Values**
-* **Distribution Percentiles \(10%, 25%, 50%, 75%, 90%\)**
 
 ### Timestamp
 
-* **Attribute Type**
-  * Raw - Raw data from the Source
-  * Enriched - Enriched data that has been transformed
-* **Data Type**
-  * Text
-  * Numeric
-  * Timestamp
-* **Number of Rows**
-* **Min**
-* **Max**
 * **Average**
 * **Median**
 * **Standard Deviation**
-* **Unique %**
-* **Null %**
-* **Top 5 Values**
-* **Bottom 5 Values**
-* **Distribution Percentiles \(10%, 25%, 50%, 75%, 90%\)**
 

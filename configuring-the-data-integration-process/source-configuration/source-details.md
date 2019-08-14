@@ -52,7 +52,7 @@ An Input Type specifies what format and with what cadence data should be accesse
 
 {% tabs %}
 {% tab title="File Pull" %}
-**File Pull** ingests a flat file at a scheduled time and cadence. A schedule - specified in UTC - will run and retry based on an error count. 
+**File Pull** ingests a flat file at a scheduled time and cadence. A schedule - specified in UTC - can run and retry based on an error count. 
 
 There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
 
@@ -97,14 +97,14 @@ Additional documentation on how to specify a cron schedule can be found at the [
 
 | Appears Under | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- | :--- |
-| Input Type: File Pull or Table Pull | seconds |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | N |
-| Input Type: File Pull or Table Pull | minutes |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | N |
-| Input Type: File Pull or Table Pull | hours |  | Cron Field - Allowed Values: 0-23 - Allowed Special Characters: , - \* / | N |
-| Input Type: File Pull or Table Pull | day\_of\_month |  | Cron Field - Allowed Values: 1-31 - Allowed Special Characters: , - \* ? / L W C | N |
-| Input Type: File Pull or Table Pull | month |  | Cron Field - Allowed Values: 0-11 or JAN-DEC - Allowed Special Characters: , - \* / | N |
-| Input Type: File Pull or Table Pull | day\_of\_week |  | Cron Field - Allowed Values: 0-6 \(0=Monday 6=Sunday\) - Allowed Special Characters: , - \* ? / L C \# | N |
-| Input Type: File Pull or Table Pull | error\_retry\_count | 3 | Number of times an input can be retried before failing | N |
-| Input Type: File Pull or Table Pull | error\_retry\_wait | 60 | Amount of time to wait between error retries \(in seconds\) | N |
+| Input Type: File Pull or Table Pull | seconds |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
+| Input Type: File Pull or Table Pull | minutes |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
+| Input Type: File Pull or Table Pull | hours |  | Cron Field - Allowed Values: 0-23 - Allowed Special Characters: , - \* / | Y |
+| Input Type: File Pull or Table Pull | day\_of\_month |  | Cron Field - Allowed Values: 1-31 - Allowed Special Characters: , - \* ? / L W C | Y |
+| Input Type: File Pull or Table Pull | month |  | Cron Field - Allowed Values: 0-11 or JAN-DEC - Allowed Special Characters: , - \* / | Y |
+| Input Type: File Pull or Table Pull | day\_of\_week |  | Cron Field - Allowed Values: 0-6 \(0=Monday 6=Sunday\) - Allowed Special Characters: , - \* ? / L C \# | Y |
+| Input Type: File Pull or Table Pull | error\_retry\_count | 3 | Number of times an input can be retried before failing | Y |
+| Input Type: File Pull or Table Pull | error\_retry\_wait | 60 | Amount of time to wait between error retries \(in seconds\) | Y |
 | Input Type: File Pull or Table Pull | disable\_schedule | FALSE | Disable schedule | Y |
 
 ### Staging
