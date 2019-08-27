@@ -6,13 +6,13 @@ description: Outputs specify where RAP exports data after importing and transfor
 
 ## Outputs Screen
 
-The Outputs screen allows a user to see all previously created Outputs, as well as search, edit and filter them. By default, only Active Outputs are listed. You can change that by toggling the **Active Only** toggle.
+The Outputs screen allows users to see all previously created Outputs, as well as search, edit and filter them. By default, only Active Outputs are listed. Users can change this by toggling the **Active Only** toggle. Note that only Active Outputs are processed.
 
 ![Outputs Screen](../../.gitbook/assets/image%20%28170%29.png)
 
 ## Edit Output Screen
 
-In the Edit Output Screen, a user can see the various components that make up an Output, including tabs for Output Details, Mapping, Manual Output, and Output History.
+In the Edit Output Screen, users can see the various components that make up an Output, including tabs for Output Details, Mapping, Manual Output, and Output History.
 
 ![Output Details Screen](../../.gitbook/assets/image%20%28108%29.png)
 

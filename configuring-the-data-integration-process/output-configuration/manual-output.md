@@ -8,7 +8,7 @@ description: >-
 
 ## Manual Output Tab
 
-The Manual Output tab allows a user to create a custom-defined output. There are filtering options available for users to define the output.
+The Manual Output tab allows users to create a custom-defined output. There are filtering options available for users to define the output.
 
 ![Manual Output Tab](../../.gitbook/assets/image%20%28131%29.png)
 

@@ -35,7 +35,7 @@ There are two Output File Types: **CSV** or **Parquet**. Parameter selections wi
 {% tab title="Table" %}
 RAP can output and refresh data to a database **Table** using a [Table Connection](../connections-configuration.md#table).
 
-There are three table output drivers: Snowflake, SQL Server, snd Postgres.
+There are three table output drivers: Snowflake, SQL Server, and Postgres.
 {% endtab %}
 
 {% tab title="SFTP" %}

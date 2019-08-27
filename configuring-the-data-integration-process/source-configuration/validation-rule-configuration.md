@@ -20,7 +20,7 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 ## Validations Tab
 
-The Validation tab allows a user to select, edit, remove, or add a Source's Validations. By default, only Active Validation Rules are listed. The **Active Only** toggle changes this setting.
+The Validation tab allows users to select, edit, remove, or add a Source's Validations. By default, only Active Validation Rules are listed. The **Active Only** toggle changes this setting.
 
 ![Source Validations - Active Only](../../.gitbook/assets/image%20%28141%29.png)
 
