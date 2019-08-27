@@ -6,6 +6,12 @@ description: >-
 
 # Dependencies
 
+## How Dependencies Work
+
+{% hint style="danger" %}
+WARNING - CURRENTLY OUT OF DATE - EDITS PENDING ON DRAFT
+{% endhint %}
+
 Dependencies are managed from the Source screen. Dependencies force Sources to wait for other Sources to finish Validation and Enrichment first. The most common use for Dependencies includes Lookups. When performing a Lookup from one source \(Source A\) to another \(Source B\), users often want to wait for Source B to process first before populating the lookup fields in Source A.
 
 RAP provides configurable delays between Sources that are dependent on each other to ensure accurate dependency management in imperfect production scenarios.
@@ -14,13 +20,13 @@ RAP provides configurable delays between Sources that are dependent on each othe
 
 When the source you are looking up from \(Source A\) is of type Timeseries - Timestamp, RAP will use the time range from the file to assist with dependency management.
 
-In the example below, Source A has a date\_column spanning 24 hours from 3PM on 01/03/2020 to 3PM on 01/04/2020. To ensure the keyed lookup source \(Source B\) has up to date information for all times within the range in Source A, RAP take the latest time in Source A - 3PM on 01/04/2020, and compare it to the most recent time Source B was extracted from the source system.
+In the example below, Source A has a date\_column spanning 24 hours from 3PM on 01/03/2020 to 3PM on 01/04/2020. To ensure the keyed lookup source \(Source B\) has up to date information for all times within the range in Source A, RAP take the latest time in Source A - 3PM on 01/04/2020, and compares it to the most recent time Source B was extracted from the source system.
 
 If Source B's most recent extract\_datetime occurs after the latest date time in Source A's data, Source A can run immediately. However, if Source B's extract date occurs before Source A's latest date time, then Source A will wait to execute any processing steps. Once Source B's schedule or file push creates a new Input at a date time after Source A's latest date time - 3PM on 01/04/2020, Source A will then execute.
 
-![One Timeseries Timestamp source, with a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2830%29.png)
+![One Timeseries Timestamp source, with a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2871%29.png)
 
-![Two Keyed Sources, with one acting as a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2869%29.png)
+![Two Keyed Sources, with one acting as a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2840%29.png)
 
 ### The Interval Parameter
 
@@ -40,21 +46,21 @@ Configuring a positive interval forces Source A to wait, even if Source B's extr
 
 The Dependency tab allows users to see all previously created Dependencies, as well as search, edit and filter them. By default, only Active Dependencies are listed. The **Active Only** toggle changes this setting.
 
-![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28167%29.png)
+![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28183%29.png)
 
 To edit a Dependency, select the Dependency directly. This opens the Edit Dependency modal.
 
-![Select a Dependency to Edit](../../.gitbook/assets/image%20%28106%29.png)
+![Select a Dependency to Edit](../../.gitbook/assets/image%20%28117%29.png)
 
 To add a Dependency, select **New Dependency**. This opens the Edit Dependency modal for a new Dependency.
 
-![Source Dependencies - New Dependency](../../.gitbook/assets/image%20%2833%29.png)
+![Source Dependencies - New Dependency](../../.gitbook/assets/image%20%2834%29.png)
 
 ## Edit Dependency Modal
 
 On the Edit Dependency modal, users can modify a specific Dependency's details.
 
-![Edit Dependency](../../.gitbook/assets/image%20%2867%29.png)
+![Edit Dependency](../../.gitbook/assets/image%20%2874%29.png)
 
 #### Fields Available:
 

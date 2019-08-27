@@ -16,21 +16,21 @@ Connections, once configured, can be used for both Sources and Outputs. This all
 
 The Connections screen allows users to search, edit and filter all previously created Connections, as well as create new Connections. By default, only Active Connections are listed. The **Active Only** toggle changes this setting. Note that only Active Connections are operable.
 
-![Connections - Active Only](../.gitbook/assets/image%20%2812%29.png)
+![Connections - Active Only](../.gitbook/assets/image%20%2813%29.png)
 
 To edit a Connection, select the Connection directly. This opens the Edit Connection screen.
 
-![Connections - Select a Connection to Edit](../.gitbook/assets/image%20%2877%29.png)
+![Connections - Select a Connection to Edit](../.gitbook/assets/image%20%2887%29.png)
 
 To add a Connection, select **New Connection**. This opens the Edit Connection screen for a new Connection.
 
-![Connections - New Connection](../.gitbook/assets/image%20%28177%29.png)
+![Connections - New Connection](../.gitbook/assets/image%20%28194%29.png)
 
 ## Edit Connection Screen
 
 Editing a Connection and creating a new Connection leads to the same screen. Users can edit different parameters to configure a Connection.
 
-![Edit Connection](../.gitbook/assets/image%20%28112%29.png)
+![Edit Connection](../.gitbook/assets/image%20%28124%29.png)
 
 ## Parameters
 
@@ -54,13 +54,13 @@ Editing a Connection and creating a new Connection leads to the same screen. Use
 
 ### Table Connection Type
 
-There are currently 7 different database connections available.
+There are currently seven different database connections available.
 
-* SQL Server
-* Snowflake
 * Oracle
 * Postgres
 * Quickbooks
+* Snowflake
+* SQL Server
 * SAP HANA
 
 #### Common Parameters:
@@ -115,7 +115,13 @@ There are currently 7 different database connections available.
       <td style="text-align:left">N</td>
     </tr>
   </tbody>
-</table>#### Additional Parameters: SQL Server
+</table>#### Additional Parameters: Snowflake
+
+| Parameter | Default Value | Description | Advanced |
+| :--- | :--- | :--- | :--- |
+| warehouse |  | Warehouse name | N |
+
+#### Additional Parameters: SQL Server
 
 | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- |
@@ -126,11 +132,7 @@ There are currently 7 different database connections available.
 | trust\_store\_password |  | Password used to check the integrity of the trust store data | Y |
 | host\_name\_in\_certificate |  | Host name to be used in validating the SQL Server SSL certificate | Y |
 
-#### Additional Parameters: Snowflake
-
-| Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- |
-| warehouse |  | Warehouse name | N |
+### 
 
 ### SFTP Connection Type
 
@@ -140,6 +142,8 @@ There are currently 7 different database connections available.
 | password\* |  | SFTP Account Password | N |
 | hostname\* |  | SFTP Account Host Name | N |
 | port | 22 | SFTP Account Port | N |
+
+### 
 
 ### File Connection Type
 

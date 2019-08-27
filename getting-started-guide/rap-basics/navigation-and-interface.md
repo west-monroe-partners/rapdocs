@@ -8,7 +8,7 @@ description: The RAP interface consists of six primary screens
 
 Upon login, users are directed to the Sources screen. The Navigation Menu, located in the top left corner of the screen, enables navigation between RAP screens from any of the currently displayed screens.
 
-![Left-Hand Navigation menu opened](../../.gitbook/assets/image%20%2858%29.png)
+![Left-Hand Navigation menu opened](../../.gitbook/assets/image%20%2862%29.png)
 
 ## Primary Screens
 
