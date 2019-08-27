@@ -125,7 +125,7 @@ ischicago = 'Y'
 
 **Description:** `only output Chicago stations`
 
-![Completed Output Filter](../../.gitbook/assets/image%20%28115%29.png)
+![Completed Output Filter](../../.gitbook/assets/image%20%28127%29.png)
 
 When the configured filter resembles the above image, select **Close** and then **Save** to complete Output Configuration.
 

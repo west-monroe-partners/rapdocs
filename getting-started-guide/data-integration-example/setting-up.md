@@ -18,21 +18,21 @@ If the login page appears, enter the login information provided by your RAP acco
 
 Search for the bucket `wmp-rap-sample-data` using the top search bar and select the [bucket](https://s3.console.aws.amazon.com/s3/buckets/wmp-rap-sample-data/?region=us-east-2&tab=overview).
 
-![S3 Bucket Search](../../.gitbook/assets/image%20%28113%29.png)
+![S3 Bucket Search](../../.gitbook/assets/image%20%28125%29.png)
 
 Select `source-files` in order to navigate to the data file.
 
-![Locate Source Data](../../.gitbook/assets/image%20%28157%29.png)
+![Locate Source Data](../../.gitbook/assets/image%20%28172%29.png)
 
 Right-click the `Divvy_Stations_2017_Q1Q2.csv`file and select **Copy**. For this example, the Divvy Stations data must be copied by each user to their own directory.
 
-![Copy Divvy Stations](../../.gitbook/assets/image%20%2856%29.png)
+![Copy Divvy Stations](../../.gitbook/assets/image%20%2860%29.png)
 
 ## Step 3: Create the Environment
 
 Use the breadcrumbs to navigate back to `wmp-rap-sample-data`.
 
-![Navigation to wmp-rap-sample-data](../../.gitbook/assets/image%20%2837%29.png)
+![Navigation to wmp-rap-sample-data](../../.gitbook/assets/image%20%2839%29.png)
 
 Navigate to the `inbox`.
 
@@ -40,15 +40,15 @@ Navigate to the `inbox`.
 
 Select **Create Folder**, name the folder with your initials, then select **Save**. This creates a folder for use during the Data Integration Example.
 
-![Create Main Folder](../../.gitbook/assets/image%20%28125%29.png)
+![Create Main Folder](../../.gitbook/assets/image%20%28137%29.png)
 
 Navigate inside the new folder, and paste the `Divvy Stations` file directly inside. Select **Paste** on the modal that appears to confirm.
 
-![Paste Divvy Stations](../../.gitbook/assets/image%20%28133%29.png)
+![Paste Divvy Stations](../../.gitbook/assets/image%20%28145%29.png)
 
 In the same location, create a folder called `output` for RAP to output to.
 
-![Create Output Folder](../../.gitbook/assets/image%20%2861%29.png)
+![Create Output Folder](../../.gitbook/assets/image%20%2867%29.png)
 
 You should now have the following AWS folders created:
 
