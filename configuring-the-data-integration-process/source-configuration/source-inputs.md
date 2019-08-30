@@ -33,7 +33,7 @@ Selecting an Input's **Records Staged** or **Records Process** displays a modal 
 
 To view the Processing Logs for any specific phase of an Input, click the corresponding Input Status icon.
 
-![Select a Processing Log to Display](../../.gitbook/assets/image%20%28166%29.png)
+![Select a Processing Log to Display](../../.gitbook/assets/image%20%28167%29.png)
 
 The processing Log contains detailed information useful during troubleshooting. For more information about Processing Logs, see the [Operation Guide](../../operation-guide/).
 
@@ -92,7 +92,7 @@ Each Input can be controlled using the options below, which are available depend
 * **Delete:** Delete the Input from the Source
 * **View Data:** Navigate to the Data View tab - filtering the data for only the selected input
 
-![Options for Keyed Inputs](../../.gitbook/assets/image%20%28191%29.png)
+![Options for Keyed Inputs](../../.gitbook/assets/image%20%28192%29.png)
 {% endtab %}
 {% endtabs %}
 

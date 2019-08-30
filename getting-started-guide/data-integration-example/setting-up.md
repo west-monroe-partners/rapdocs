@@ -22,11 +22,11 @@ If the login page appears, enter the login information provided by your RAP acco
 
 Search for the bucket `training` using the top search bar and select the bucket with your firm's initials as a prefix. It should look like `{firm initials}.training`. Select the bucket.
 
-![S3 Bucket Search](../../.gitbook/assets/image%20%28194%29.png)
+![S3 Bucket Search](../../.gitbook/assets/image%20%28195%29.png)
 
 In the training bucket, there should be an **input** and **output** folder.
 
-![Training Folder](../../.gitbook/assets/image%20%28169%29.png)
+![Training Folder](../../.gitbook/assets/image%20%28170%29.png)
 
 ## Step 3: Create a Unique Input Folder
 
@@ -44,7 +44,7 @@ Select the input folder with your initials.
 
 In the input initials folder, select **Upload**.
 
-![Upload Button](../../.gitbook/assets/image%20%28192%29.png)
+![Upload Button](../../.gitbook/assets/image%20%28193%29.png)
 
 The **Upload** modal should appear. Drag the file **Divvy\_Stations\_2017\_Q1Q2.csv** into the modal. Select **Upload** to upload the file with default settings. 
 
@@ -52,7 +52,7 @@ The **Upload** modal should appear. Drag the file **Divvy\_Stations\_2017\_Q1Q2.
 
 The file should now be in your unique input folder. Verify that it has been uploaded.
 
-![](../../.gitbook/assets/image%20%28155%29.png)
+![](../../.gitbook/assets/image%20%28156%29.png)
 
 ## Step 4: Create a Unique Output Folder
 

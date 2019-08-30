@@ -26,7 +26,7 @@ The Validation tab allows users to select, edit, remove, or add a Source's Valid
 
 To edit a Validation Rule, select the Validation Rule directly. This opens the Edit Validation Rule modal.
 
-![Source Validations - Select a Validation to Edit ](../../.gitbook/assets/image%20%28178%29.png)
+![Source Validations - Select a Validation to Edit ](../../.gitbook/assets/image%20%28179%29.png)
 
 To add a Validation Rule, select **New Validation** **Rule**. This opens the Edit Validation Rule modal for a new Validation Rule.
 

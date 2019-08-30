@@ -24,7 +24,7 @@ To edit a Connection, select the Connection directly. This opens the Edit Connec
 
 To add a Connection, select **New Connection**. This opens the Edit Connection screen for a new Connection.
 
-![Connections - New Connection](../.gitbook/assets/image%20%28196%29.png)
+![Connections - New Connection](../.gitbook/assets/image%20%28197%29.png)
 
 ## Edit Connection Screen
 
