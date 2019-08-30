@@ -22,7 +22,7 @@ Search for the bucket `wmp-rap-sample-data` using the top search bar and select 
 
 Select `source-files` in order to navigate to the data file.
 
-![Locate Source Data](../../.gitbook/assets/image%20%28172%29.png)
+![Locate Source Data](../../.gitbook/assets/image%20%28174%29.png)
 
 Right-click the `Divvy_Stations_2017_Q1Q2.csv`file and select **Copy**. For this example, the Divvy Stations data must be copied by each user to their own directory.
 
