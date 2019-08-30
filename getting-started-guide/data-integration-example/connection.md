@@ -88,5 +88,5 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **Connection Type:** `File`
 * **file\_path:** `s3://wmp-rap-sample-data/inbox/{YOUR INITIALS}/output` 
 
-![Output Connection Configuration](../../.gitbook/assets/image%20%28159%29.png)
+![Output Connection Configuration](../../.gitbook/assets/image%20%28160%29.png)
 
