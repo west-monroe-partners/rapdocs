@@ -44,7 +44,7 @@ The below image ****shows the Active toggle. This is used to deactivate or react
 
 ## Step 2: Select Connection Type
 
-![Active toggle](../../.gitbook/assets/image%20%2816%29.png)
+![Active toggle](../../.gitbook/assets/image%20%2818%29.png)
 
 The below image shows the Connection Type control. Connection type selection dynamically updates the available options.
 
@@ -64,7 +64,7 @@ Select `File`. This tutorial pushes a file to RAP as input and then outputs a fi
 {% endtab %}
 {% endtabs %}
 
-![Connection Type Options](../../.gitbook/assets/image%20%28134%29.png)
+![Connection Type Options](../../.gitbook/assets/image%20%28142%29.png)
 
 ## Step 3: Indicate File Path
 
@@ -88,5 +88,5 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **Connection Type:** `File`
 * **file\_path:** `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}` 
 
-![Output Connection Configuration](../../.gitbook/assets/image%20%28160%29.png)
+![Output Connection Configuration](../../.gitbook/assets/image%20%28168%29.png)
 

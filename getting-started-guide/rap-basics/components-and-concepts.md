@@ -8,7 +8,7 @@ description: 'The RAP ecosystem breaks down into four storage layers, and four p
 
 RAP consists of four storage structures.
 
-![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28142%29.png)
+![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28150%29.png)
 
 ### RAP Metadata Structure
 
@@ -36,29 +36,29 @@ RAP does not generate or store business data, rather it collects this informatio
 
 RAP organizes data processing into four steps.
 
-![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28142%29.png)
+![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28150%29.png)
 
 ### Input
 
 The **Input** step moves data into RAP's Data Lake from source databases or file systems. This process collects information about the file or database table as it exists at the time of extract and stores this data in the Metadata Repository, ultimately generating the indexed RAP Data Lake.
 
-![Input](../../.gitbook/assets/image%20%28119%29.png)
+![Input](../../.gitbook/assets/image%20%28126%29.png)
 
 ### **Staging**
 
 **Staging** reads data from the Data Lake writes data into RAP’s internal Data Hub. This process automatically converts the files in the data lake to the performance-optimized tables within the data hub. Additionally, Staging compares the individual files read from the data lake to what already exists in the Data Hub to track how data has changed since the last file was staged in a sub-process called Change Data Capture.
 
-![Staging](../../.gitbook/assets/image%20%28122%29.png)
+![Staging](../../.gitbook/assets/image%20%28129%29.png)
 
 ### **Validation and Enrichment**
 
 **Validation** & **Enrichment** applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Validation and Enrichment rules represent the majority of the logic and structure of data processing within RAP, and provide a flexible, yet guided framework for data management.
 
-![Validation &amp; Enrichment](../../.gitbook/assets/image%20%28106%29.png)
+![Validation &amp; Enrichment](../../.gitbook/assets/image%20%28113%29.png)
 
 ### **Output**
 
 **Output** processes and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location. 
 
-![Output](../../.gitbook/assets/image%20%2878%29.png)
+![Output](../../.gitbook/assets/image%20%2881%29.png)
 

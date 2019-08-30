@@ -22,14 +22,14 @@ _There can only be one column configuration in an Output. Columns represent the 
 
 To create a Column, select **Add Column** to add a blank Column at the bottom of the list of mappings.
 
-![Add Column](../../.gitbook/assets/image%20%2827%29.png)
+![Add Column](../../.gitbook/assets/image%20%2829%29.png)
 
 To configure Column metadata, select the drop-down on the top right of the Output column. The drop-down allows the user to reveal a metadata field field. Depending on the Output Type, different fields are displayed.
 
 * **Included with all Output Types:** None, Descriptions
 * **Included with Table, Virtual:** Type
 
-![Column Metadata](../../.gitbook/assets/image%20%2833%29.png)
+![Column Metadata](../../.gitbook/assets/image%20%2835%29.png)
 
 ### Column Options
 
@@ -43,11 +43,11 @@ To expose a list of options for a specific Column, click the kebab button \(**�
 * **Move Column to the Bottom**
 * **Remove Column:** Completely removes the specified Column.
 
-![Column Options](../../.gitbook/assets/image%20%28196%29.png)
+![Column Options](../../.gitbook/assets/image%20%28205%29.png)
 
 To **Remove All Columns**, click the kebab button \(**⋮**\) on the top left of the Output Column, and select **Remove All Columns**.
 
-![Remove All Columns](../../.gitbook/assets/image%20%28194%29.png)
+![Remove All Columns](../../.gitbook/assets/image%20%28203%29.png)
 
 ## Source Configurations
 
@@ -57,15 +57,15 @@ _Source Configurations in the Output Mapping tab determine which data ends up in
 
 To begin accessing a source in the Output, select **Add Source** to bring up the Source Selection screen.
 
-![Add Source](../../.gitbook/assets/image%20%2848%29.png)
+![Add Source](../../.gitbook/assets/image%20%2850%29.png)
 
 Added Sources will always display from the right side of the Output Mapping tab, unless they are set to be hidden. Source visibility can be toggled using the **Show/Hide Sources** button. This button brings up the list of connected Sources, and allows users to configure each Source's visibility on the page.
 
-![Show/Hide Sources](../../.gitbook/assets/image%20%28176%29.png)
+![Show/Hide Sources](../../.gitbook/assets/image%20%28185%29.png)
 
 To disassociate a Source from the current Output, click the kebab button \(**⋮**\) found on the top of the Source header to bring up a list of options. Select **Remove**.
 
-![Remove Source](../../.gitbook/assets/image%20%2853%29.png)
+![Remove Source](../../.gitbook/assets/image%20%2855%29.png)
 
 ### Source Mapping
 
@@ -73,7 +73,7 @@ Connecting Source data to an Output column requires a mapping. These mappings fo
 
 To create a single mapping, first [create a Column](output-mapping.md#column-configurations). Then, select the corresponding UI row under the desired Source in order to link the Source data to the Output column.
 
-![Map Source data to an Output column](../../.gitbook/assets/image%20%2861%29.png)
+![Map Source data to an Output column](../../.gitbook/assets/image%20%2863%29.png)
 
 To perform more complex mapping operations, click the kebab button \(⋮\) found on the top of the Source header to bring up a list that includes the following mapping options:
 
@@ -82,22 +82,22 @@ To perform more complex mapping operations, click the kebab button \(⋮\) found
 * **Add All System Columns:** Create and map system columns in Source to existing Columns with the same name, or new ones if Column not yet created
 * **Clear Mappings:** Clears all mappings from the Source. Does not delete Output Columns
 
-![Source Mapping Options](../../.gitbook/assets/image%20%28128%29.png)
+![Source Mapping Options](../../.gitbook/assets/image%20%28135%29.png)
 
 To map multiple Sources to a single Column, first ensure that both relevant Sources are visible via the [Show/Hide Sources](output-mapping.md#source-selection) button. Then, individually map each Source to the desired Column. In the Output, the data from each Source will be appended, **not Joined.** Use this functionality when mapping Columns from multiple Sources that represent the same Output Column. For example:
 
 * Creating an output of Divvy Stations with a Source of Stations from Chicago and a Source of Stations from the suburbs.
 * Creating an output of Vehicles that imports a Cars Source and a Trucks Source, both of which share a `License Plate` Column.
 
-![Multiple Sources mapped to one Column](../../.gitbook/assets/image%20%2888%29.png)
+![Multiple Sources mapped to one Column](../../.gitbook/assets/image%20%2893%29.png)
 
 ## Output Source Details
 
 To open the Output Source Details modal, select the Source header.
 
-![Open Output Source Details](../../.gitbook/assets/image%20%28183%29.png)
+![Open Output Source Details](../../.gitbook/assets/image%20%28192%29.png)
 
-![Output Source Details - File Output Type](../../.gitbook/assets/image%20%28185%29.png)
+![Output Source Details - File Output Type](../../.gitbook/assets/image%20%28194%29.png)
 
 ### Filter Expression
 

@@ -12,7 +12,7 @@ On the Edit Source Screen, users can see the various components that make up a S
 
 When creating a new Source, only the Source Details tab is available. Users configure both the Input and Staging processing steps for a Source via the Source Details Tab.
 
-![Details Tab](../../.gitbook/assets/image%20%28159%29.png)
+![Details Tab](../../.gitbook/assets/image%20%28167%29.png)
 
 ## Initial Parameters
 
