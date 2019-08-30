@@ -1,15 +1,38 @@
 # Checking Statuses
 
+## Understanding Status Codes
+
 In RAP, every input marks its progress with a status code for each phase. The symbol and meaning of each status code are below:
 
- Passed \(P\) – All processes in the phase have succeeded
+\*\*\*\*![](../../.gitbook/assets/ready%20%281%29.png) **Ready \(null\)**: Landing is prepared for processing phase – if the next phase is configured, it will automatically change to In Progress.
 
-![](../../.gitbook/assets/4.png) Failed \(F\) – A process in the phase has failed
+![](../../.gitbook/assets/queued.png) **Queued \(Q\)**: Process queued, waiting for free connections to execute.
 
-* ![](../../.gitbook/assets/4.png) Failed \(F\) – A process in the phase has failed 
-* In Progress \(I\) – A process in the phase is in currently executing 
-* CDC \(C\) – Input is waiting on a previous input to pass the Validation and Enrichment phase 
-* Queued \(Q\) – Input is queued in the process table and receives a connection when one becomes available 
-* Ready \(null\) – Input is ready to be queued for processing
-* \
+![](../../.gitbook/assets/pending%20%281%29.png) **Pending \(CDC\)** : Phase is waiting on a dependent source to complete processing.
+
+\*\*\*\*![](../../.gitbook/assets/inprogress.png) **In-Progress \(I\)**: Processing phase currently executing.
+
+![](../../.gitbook/assets/warning.png) **Warning \(W\)**: State of Source out of sync with destination table.
+
+\*\*\*\*![](../../.gitbook/assets/failed.png) **Failed \(F\)**: Processing phase failed. Check detail modal to discover reason of failure.
+
+\*\*\*\*![](../../.gitbook/assets/completed.png) **Passed \(P\)**: Processing phase successfully completed. Check detail modal to discover phase metadata.
+
+Clicking any of these status icons will display the processing logs for that input/phase. This is typically the most useful and accessible way to troubleshoot the platform.
+
+## Investigating Status Codes
+
+If the status code is `F`, or `Failed`, then the processing will not continue on to the next process in the chain. However, the platform contains reset functionality to provide the user with the tool to make changes and reset the failed process. For more information on using the reset buttons and the various options available to users, refer to the [Inputs](../../configuring-the-data-integration-process/source-configuration/source-inputs.md#controlling-all-inputs) section of the Configuration guide.
+
+In a general troubleshooting scenario, it is best to make changes to a source that would fix the error that caused failure before blindly running a reset. 
+
+{% hint style="danger" %}
+Note: Delete will permanently delete the input. Do not click delete unless you are certain that the input needs removing.
+{% endhint %}
+
+A common scenario, especially when doing large reloads or running many processes concurrently, is long waits for processes to turn from `In-Progress`, to `Passed` or `Failed`. In most situations, the process is waiting for connections to allocate internally.
+
+![A Staging process waiting for connections to allocate](../../.gitbook/assets/10%20%281%29.png)
+
+If any processes timeout, then they will fail and update their status to fail accordingly. If a process is still In Progress for an abnormally long time, a deeper investigation is necessary.
 

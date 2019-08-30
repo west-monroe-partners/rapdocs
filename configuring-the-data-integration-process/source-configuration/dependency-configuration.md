@@ -46,7 +46,7 @@ Configuring a positive interval forces Source A to wait, even if Source B's extr
 
 The Dependency tab allows users to see all previously created Dependencies, as well as search, edit and filter them. By default, only Active Dependencies are listed. The **Active Only** toggle changes this setting.
 
-![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28183%29.png)
+![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28185%29.png)
 
 To edit a Dependency, select the Dependency directly. This opens the Edit Dependency modal.
 

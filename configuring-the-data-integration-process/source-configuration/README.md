@@ -24,13 +24,13 @@ To edit a Source, click the Source name in the list. This opens the Edit Source 
 
 To add a Source, select **New Source**. This opens the Edit Source screen for a new Source.
 
-![Create a New Source](../../.gitbook/assets/image%20%28178%29.png)
+![Create a New Source](../../.gitbook/assets/image%20%28180%29.png)
 
 ## Edit Source Screen
 
 On the Edit Source Screen, users can see the various components that make up a Source, including tabs for Source Details, Dependencies, Validations, Enrichments, Inputs, and a view of the Source data.
 
-![Source Detail](../../.gitbook/assets/image%20%28157%29.png)
+![Source Detail](../../.gitbook/assets/image%20%28158%29.png)
 
 There are many options for Source configuration. The [Source Details](source-details.md) page is the place to start when defining a Source.
 

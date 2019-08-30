@@ -32,5 +32,3 @@ H\) Expanding the source shows additional information regarding number of inputs
 RAP also supports creating a Power BI gateway to connect to the Postgres layer, which enables the Support team to use Power BI to create custom operational reporting. This guide does not cover connecting and configuring Power BI.
 {% endhint %}
 
-
-

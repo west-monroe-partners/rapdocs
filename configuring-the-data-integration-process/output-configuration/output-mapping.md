@@ -43,11 +43,11 @@ To expose a list of options for a specific Column, click the kebab button \(**�
 * **Move Column to the Bottom**
 * **Remove Column:** Completely removes the specified Column.
 
-![Column Options](../../.gitbook/assets/image%20%28193%29.png)
+![Column Options](../../.gitbook/assets/image%20%28195%29.png)
 
 To **Remove All Columns**, click the kebab button \(**⋮**\) on the top left of the Output Column, and select **Remove All Columns**.
 
-![Remove All Columns](../../.gitbook/assets/image%20%28191%29.png)
+![Remove All Columns](../../.gitbook/assets/image%20%28193%29.png)
 
 ## Source Configurations
 
@@ -61,7 +61,7 @@ To begin accessing a source in the Output, select **Add Source** to bring up the
 
 Added Sources will always display from the right side of the Output Mapping tab, unless they are set to be hidden. Source visibility can be toggled using the **Show/Hide Sources** button. This button brings up the list of connected Sources, and allows users to configure each Source's visibility on the page.
 
-![Show/Hide Sources](../../.gitbook/assets/image%20%28173%29.png)
+![Show/Hide Sources](../../.gitbook/assets/image%20%28175%29.png)
 
 To disassociate a Source from the current Output, click the kebab button \(**⋮**\) found on the top of the Source header to bring up a list of options. Select **Remove**.
 
@@ -95,9 +95,9 @@ To map multiple Sources to a single Column, first ensure that both relevant Sour
 
 To open the Output Source Details modal, select the Source header.
 
-![Open Output Source Details](../../.gitbook/assets/image%20%28180%29.png)
+![Open Output Source Details](../../.gitbook/assets/image%20%28182%29.png)
 
-![Output Source Details - File Output Type](../../.gitbook/assets/image%20%28182%29.png)
+![Output Source Details - File Output Type](../../.gitbook/assets/image%20%28184%29.png)
 
 ### Filter Expression
 
