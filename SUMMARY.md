@@ -43,6 +43,7 @@
     * [AWS](operation-guide/maintaining-the-infrastructure/aws/README.md)
       * [EC2](operation-guide/maintaining-the-infrastructure/aws/ec2.md)
       * [S3](operation-guide/maintaining-the-infrastructure/aws/s3.md)
+      * [RDS](operation-guide/maintaining-the-infrastructure/aws/rds.md)
       * [OpenVPN](operation-guide/maintaining-the-infrastructure/aws/openvpn.md)
     * [Postgres](operation-guide/maintaining-the-infrastructure/postgres.md)
 * [FAQ / Troubleshooting](faq-troubleshooting/README.md)
