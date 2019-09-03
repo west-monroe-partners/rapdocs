@@ -8,6 +8,6 @@ RAP Basics provides a brief __conceptual overview of the RAP data integration pr
 
 RAP Basics has two parts:
 
-* [How it Works](components-and-concepts.md): The RAP data integration process
+* [How it Works](how-it-works.md): The RAP data integration process
 * [Navigation and Interface](navigation-and-interface.md): The screens and components users interact with to configure the process
 

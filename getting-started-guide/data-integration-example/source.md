@@ -77,7 +77,7 @@ A database table to be ingested at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Input Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on input type attributes.
+When selecting an Input Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuration-guide/) for more details on input type attributes.
 {% endhint %}
 
 ### **File Type**

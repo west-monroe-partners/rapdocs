@@ -14,7 +14,7 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ### Sources
 
-The [Sources](../../configuring-the-data-integration-process/source-configuration/) Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub.
+The [Sources](../../configuration-guide/source-configuration/) Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub.
 
 ### Process
 
@@ -22,15 +22,15 @@ The Process screen shows the progress and outcome of all execution tasks through
 
 ### Outputs
 
-The [Outputs](../../configuring-the-data-integration-process/output-configuration/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
+The [Outputs](../../configuration-guide/outputs/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
 
 ### Connections
 
-The [Connections ](../../configuring-the-data-integration-process/connections-configuration.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
+The [Connections ](../../configuration-guide/connections.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
 
 ### Validation and Enrichment Templates
 
-The [Validation and Enrichment Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) screen shows all of the available re-usable templates for creating similar Validation Rules and Enrichment Rules to multiple Sources.
+The [Validation and Enrichment Templates](../../configuration-guide/validation-and-enrichment-rule-templates.md) screen shows all of the available re-usable templates for creating similar Validation Rules and Enrichment Rules to multiple Sources.
 
 ### Source Dashboard
 

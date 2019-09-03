@@ -24,7 +24,7 @@ It is important to decide which Output Type an Output is. There are four main ty
 
 {% tabs %}
 {% tab title="File" %}
-RAP will output to a **File** using a [File Connection](../connections-configuration.md#file). 
+RAP will output to a **File** using a [File Connection](../connections.md#file). 
 
 There are two Output File Types: **CSV** or **Parquet**. Parameter selections will update dynamically depending on the selection.
 
@@ -33,7 +33,7 @@ There are two Output File Types: **CSV** or **Parquet**. Parameter selections wi
 {% endtab %}
 
 {% tab title="Table" %}
-RAP can output and refresh data to a database **Table** using a [Table Connection](../connections-configuration.md#table).
+RAP can output and refresh data to a database **Table** using a [Table Connection](../connections.md#table).
 
 There are three table output drivers: Snowflake, SQL Server, and Postgres.
 {% endtab %}

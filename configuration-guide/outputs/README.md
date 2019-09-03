@@ -16,5 +16,5 @@ In the Edit Output Screen, users can see the various components that make up an 
 
 ![Output Details Screen](../../.gitbook/assets/image%20%28115%29.png)
 
-There are many options for what to input for an Output. The [Output Details](output-details.md) page is a good place to start for defining the Output.
+There are many options for what to input for an Output. The [Output Details](details.md) page is a good place to start for defining the Output.
 

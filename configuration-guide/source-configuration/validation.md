@@ -9,7 +9,7 @@ description: >-
 Validation Rules are managed from the Source screen. 
 
 {% hint style="info" %}
-Note: Validation Rules only set a Pass/Warn/Fail flag. Further behavior based on these flag values can be specified in [Outputs](../output-configuration/).
+Note: Validation Rules only set a Pass/Warn/Fail flag. Further behavior based on these flag values can be specified in [Outputs](../outputs/).
 {% endhint %}
 
 Validation Rules can be created as Validation Rule Templates to allow re-usability. More details about Validation Rule Templates can be found on the [Validation and Enrichment Rule Templates page](../validation-and-enrichment-rule-templates.md).

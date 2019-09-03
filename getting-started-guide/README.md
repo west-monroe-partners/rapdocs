@@ -8,7 +8,7 @@ description: >-
 
 Welcome to the RAP Getting Started Guide! This guide serves as an introduction for new users who have yet to use the Rapid Analytics Platform \(RAP\). 
 
-For specific documentation concerning configuring a RAP process, see the [Configuration Guide](../configuring-the-data-integration-process/). For specific documentation concerning the maintenance of a RAP process, see the [Operation Guide](). 
+For specific documentation concerning configuring a RAP process, see the [Configuration Guide](../configuration-guide/). For specific documentation concerning the maintenance of a RAP process, see the [Operation Guide](). 
 
 This guide has two parts:
 
