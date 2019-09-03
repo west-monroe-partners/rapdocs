@@ -16,21 +16,21 @@ Connections, once configured, can be used for both Sources and Outputs. This all
 
 The Connections screen allows users to search, edit and filter all previously created Connections, as well as create new Connections. By default, only Active Connections are listed. The **Active Only** toggle changes this setting. Note that only Active Connections are operable.
 
-![Connections - Active Only](../.gitbook/assets/image%20%2815%29.png)
+![Connections - Active Only](../.gitbook/assets/image%20%2819%29.png)
 
 To edit a Connection, select the Connection directly. This opens the Edit Connection screen.
 
-![Connections - Select a Connection to Edit](../.gitbook/assets/image%20%2892%29.png)
+![Connections - Select a Connection to Edit](../.gitbook/assets/image%20%28101%29.png)
 
 To add a Connection, select **New Connection**. This opens the Edit Connection screen for a new Connection.
 
-![Connections - New Connection](../.gitbook/assets/image%20%28206%29.png)
+![Connections - New Connection](../.gitbook/assets/image%20%28229%29.png)
 
 ## Edit Connection Screen
 
 Editing a Connection and creating a new Connection leads to the same screen. Users can edit different parameters to configure a Connection.
 
-![Edit Connection](../.gitbook/assets/image%20%28131%29.png)
+![Edit Connection](../.gitbook/assets/image%20%28146%29.png)
 
 ## Parameters
 

@@ -26,7 +26,7 @@ T.city IS NULL
 
 Click **Save** to finish.
 
-![Complete Validation Rule](../../.gitbook/assets/image%20%28100%29.png)
+![Complete Validation Rule](../../.gitbook/assets/image%20%28115%29.png)
 
 {% hint style="info" %}
 When entering an expression, type ````` to reveal all of the Source fields available.
@@ -88,7 +88,7 @@ CASE WHEN T.city = 'Chicago' THEN 'Y' ELSE 'N' END
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
 {% endhint %}
 
-![Complete Enrichment Configuration](../../.gitbook/assets/image%20%2847%29.png)
+![Complete Enrichment Configuration](../../.gitbook/assets/image%20%2852%29.png)
 
 Click **Save** when Enrichment Configuration resembles the above image**.**
 
@@ -100,13 +100,13 @@ Recall that the `File Push` Input Type configuration creates a Source that autom
 
 To remedy this, navigate to Inputs page, and for the most recent line item, click on the ellipsis on the far right and select **Reset All Validation & Enrichment**. See below.
 
-![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28103%29.png)
+![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28118%29.png)
 
 ## Step 4: Ensure Validation and Enrichment Completion
 
 Navigate to the **Data View** to double-check that the Validation and Enrichment steps were successful**.** The image below ****shows the view that should display.
 
-![New Column in Data View](../../.gitbook/assets/image%20%2853%29.png)
+![New Column in Data View](../../.gitbook/assets/image%20%2858%29.png)
 
 For every enrichment, a green column should be created in the Data View. Additionally, every entry that is flagged as `Warn` should appear yellow. In this case, no records should be flagged.
 
