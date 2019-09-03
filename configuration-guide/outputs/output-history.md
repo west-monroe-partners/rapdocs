@@ -11,7 +11,7 @@ description: >-
 
 The Output History tab allows a user to monitor the status of RAP Outputs. The top of the page allows a user to filter Outputs by searching by their name, id, status, or by choosing a date range the Output ran.
 
-![Output History Tab](../../.gitbook/assets/image%20%2871%29.png)
+![Output History Tab](../../.gitbook/assets/image%20%2878%29.png)
 
 The Output History tab displays the Output logs at the bottom of the screen and the following columns:
 
@@ -33,11 +33,11 @@ The Output History tab displays the Output logs at the bottom of the screen and 
 
 Clicking the Status icons opens up the Output History Details modal. This shows advanced logging information about Outputs.
 
-![Status Icon](../../.gitbook/assets/image%20%287%29.png)
+![Status Icon](../../.gitbook/assets/image%20%289%29.png)
 
 The Output History Details modal shows the Severity, Date, and Message for each step of the output. The [Checking Logs]() page gives more context on these messages.
 
-![Output History Details Modal](../../.gitbook/assets/image%20%2811%29.png)
+![Output History Details Modal](../../.gitbook/assets/image%20%2813%29.png)
 
 
 
