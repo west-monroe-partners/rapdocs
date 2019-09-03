@@ -14,7 +14,7 @@ In the Edit Output screen, users can see the various components that make up an 
 
 ## Initial Parameters
 
-* **Name:** The name of the Output. This will be displayed on the Outputs screen when browsing Outputs. To ensure Outputs are organized easily searchable, follow the [Naming Conventions](../../common-use-cases/naming-convention.md#outputs).
+* **Name:** The name of the Output. This will be displayed on the Outputs screen when browsing Outputs. To ensure Outputs are organized easily searchable, follow the [Naming Conventions]().
 * **Description:** The description of the Output.
 * **Active:** If set to Active, the Output will be immediately available for use.
 

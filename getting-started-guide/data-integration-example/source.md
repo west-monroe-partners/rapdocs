@@ -8,7 +8,7 @@ description: >-
 
 ## Step 1: Create a Source
 
-Navigate to the Sources screen through the Menu, then create and name a new Source in the same fashion as [input and output connections](connection.md). Be sure to again follow [Naming Conventions](../../common-use-cases/naming-convention.md#input-type-file-push-and-file-pull). In this case, it is  recommended to use `Divvy - Stations 2017 Q1Q2`.
+Navigate to the Sources screen through the Menu, then create and name a new Source in the same fashion as [input and output connections](connection.md). Be sure to again follow [Naming Conventions](). In this case, it is  recommended to use `Divvy - Stations 2017 Q1Q2`.
 
 {% hint style="info" %}
 The below image shows some available controls that we will not use in this basic example. Because these are more advanced features, this section only provides a brief description of each.

@@ -34,7 +34,7 @@ Editing a Connection and creating a new Connection leads to the same screen. Use
 
 ## Parameters
 
-* **Name**: A unique name for the connection. This will be displayed on the Connections screen when browsing Connections. To ensure Connections are organized easily searchable, follow the [Naming Conventions](../common-use-cases/naming-convention.md).
+* **Name**: A unique name for the connection. This will be displayed on the Connections screen when browsing Connections. To ensure Connections are organized easily searchable, follow the [Naming Conventions]().
 * **Description**: The description of the Connection.
 * **Connection Type**: There are 3 options for Connection Type: Table, SFTP and File.
 

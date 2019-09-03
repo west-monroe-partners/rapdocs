@@ -35,7 +35,7 @@ Clicking the Status icons opens up the Output History Details modal. This shows 
 
 ![Status Icon](../../.gitbook/assets/image%20%287%29.png)
 
-The Output History Details modal shows the Severity, Date, and Message for each step of the output. The [Checking Logs](../../operation-guide/monitoring-the-process/checking-logs.md) page gives more context on these messages.
+The Output History Details modal shows the Severity, Date, and Message for each step of the output. The [Checking Logs]() page gives more context on these messages.
 
 ![Output History Details Modal](../../.gitbook/assets/image%20%2811%29.png)
 

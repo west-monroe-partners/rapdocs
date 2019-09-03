@@ -35,7 +35,7 @@ To view the Processing Logs for any specific phase of an Input, click the corres
 
 ![Select a Processing Log to Display](../../.gitbook/assets/image%20%28175%29.png)
 
-The processing Log contains detailed information useful during troubleshooting. For more information about Processing Logs, see the [Operation Guide](../../operation-guide/).
+The processing Log contains detailed information useful during troubleshooting. For more information about Processing Logs, see the [Operation Guide]().
 
 ![Validation Processing Log](../../.gitbook/assets/image%20%281%29.png)
 
