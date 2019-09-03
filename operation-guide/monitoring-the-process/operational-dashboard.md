@@ -24,7 +24,7 @@ D\) The pagination options are located here, with the default set to five source
 
 E\) This dropdown shows different processing trends for the source. a. Staging – Tracks input record counts recorded during the Staging process b. Change Tracking – New, Old, Changed, and Unchanged records are tracked in the Change Data Capture process c. Validation – Input record counts after Validation process. Tracks total, warned, and failed records. d. Throughput – Tracks rows processed per minute and process time for the source F. The last 7 days of processing show on the dashboard with the final date being the date in this box. Saturday and Sunday highlight grey and the current day highlights neon green. 
 
-G\) The Status dropdown filters the dashboard based on input statuses, similar to how the status dropdown works in the Inputs page. H. Expanding the source shows additional information regarding number of inputs that arrived for a given day.
+F\) The last 7 days of processing show on the dashboard with the final date being the date in this box. Saturday and Sunday highlight grey and the current day highlights neon green.G\) The Status dropdown filters the dashboard based on input statuses, similar to how the status dropdown works in the Inputs page. H. Expanding the source shows additional information regarding number of inputs that arrived for a given day.
 
 H\) Expanding the source shows additional information regarding number of inputs that arrived for a given day.
 

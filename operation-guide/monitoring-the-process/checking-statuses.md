@@ -18,7 +18,9 @@ In RAP, every input marks its progress with a status code for each phase. The sy
 
 \*\*\*\*![](../../.gitbook/assets/completed.png) **Passed \(P\)**: Processing phase successfully completed. Check detail modal to discover phase metadata.
 
+{% hint style="info" %}
 Clicking any of these status icons will display the processing logs for that input/phase. This is typically the most useful and accessible way to troubleshoot the platform.
+{% endhint %}
 
 ## Investigating Status Codes
 
