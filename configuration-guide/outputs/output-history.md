@@ -11,7 +11,7 @@ description: >-
 
 The Output History tab allows a user to monitor the status of RAP Outputs. The top of the page allows a user to filter Outputs by searching by their name, id, status, or by choosing a date range the Output ran.
 
-![Output History Tab](../../.gitbook/assets/image%20%2878%29.png)
+![Output History Tab](../../.gitbook/assets/image%20%2884%29.png)
 
 The Output History tab displays the Output logs at the bottom of the screen and the following columns:
 

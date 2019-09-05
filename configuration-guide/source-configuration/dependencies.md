@@ -24,9 +24,9 @@ In the example below, Source A has a date\_column spanning 24 hours from 3PM on 
 
 If Source B's most recent extract\_datetime occurs after the latest date time in Source A's data, Source A can run immediately. However, if Source B's extract date occurs before Source A's latest date time, then Source A will wait to execute any processing steps. Once Source B's schedule or file push creates a new Input at a date time after Source A's latest date time - 3PM on 01/04/2020, Source A will then execute.
 
-![One Timeseries Timestamp source, with a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2880%29.png)
+![One Timeseries Timestamp source, with a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2886%29.png)
 
-![Two Keyed Sources, with one acting as a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2847%29.png)
+![Two Keyed Sources, with one acting as a lookup Keyed Source dependency](../../.gitbook/assets/image%20%2850%29.png)
 
 ### The Interval Parameter
 
@@ -46,21 +46,21 @@ Configuring a positive interval forces Source A to wait, even if Source B's extr
 
 The Dependency tab allows users to see all previously created Dependencies, as well as search, edit and filter them. By default, only Active Dependencies are listed. The **Active Only** toggle changes this setting.
 
-![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28216%29.png)
+![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28230%29.png)
 
 To edit a Dependency, select the Dependency directly. This opens the Edit Dependency modal.
 
-![Select a Dependency to Edit](../../.gitbook/assets/image%20%28139%29.png)
+![Select a Dependency to Edit](../../.gitbook/assets/image%20%28150%29.png)
 
 To add a Dependency, select **New Dependency**. This opens the Edit Dependency modal for a new Dependency.
 
-![Source Dependencies - New Dependency](../../.gitbook/assets/image%20%2841%29.png)
+![Source Dependencies - New Dependency](../../.gitbook/assets/image%20%2842%29.png)
 
 ## Edit Dependency Modal
 
 On the Edit Dependency modal, users can modify a specific Dependency's details.
 
-![Edit Dependency](../../.gitbook/assets/image%20%2883%29.png)
+![Edit Dependency](../../.gitbook/assets/image%20%2889%29.png)
 
 #### Fields Available:
 

@@ -20,17 +20,17 @@ The Connections screen allows users to search, edit and filter all previously cr
 
 To edit a Connection, select the Connection directly. This opens the Edit Connection screen.
 
-![Connections - Select a Connection to Edit](../.gitbook/assets/image%20%28101%29.png)
+![Connections - Select a Connection to Edit](../.gitbook/assets/image%20%28109%29.png)
 
 To add a Connection, select **New Connection**. This opens the Edit Connection screen for a new Connection.
 
-![Connections - New Connection](../.gitbook/assets/image%20%28229%29.png)
+![Connections - New Connection](../.gitbook/assets/image%20%28243%29.png)
 
 ## Edit Connection Screen
 
 Editing a Connection and creating a new Connection leads to the same screen. Users can edit different parameters to configure a Connection.
 
-![Edit Connection](../.gitbook/assets/image%20%28146%29.png)
+![Edit Connection](../.gitbook/assets/image%20%28157%29.png)
 
 ## Parameters
 

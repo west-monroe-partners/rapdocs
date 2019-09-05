@@ -64,7 +64,7 @@ Select `File`. This tutorial pushes a file to RAP as input and then outputs a fi
 {% endtab %}
 {% endtabs %}
 
-![Connection Type Options](../../.gitbook/assets/image%20%28157%29.png)
+![Connection Type Options](../../.gitbook/assets/image%20%28169%29.png)
 
 ## Step 3: Indicate File Path
 
@@ -88,5 +88,5 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **Connection Type:** `File`
 * **file\_path:** `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}` 
 
-![Output Connection Configuration](../../.gitbook/assets/image%20%28185%29.png)
+![Output Connection Configuration](../../.gitbook/assets/image%20%28198%29.png)
 
