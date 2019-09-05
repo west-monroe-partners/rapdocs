@@ -44,7 +44,7 @@ The below image ****shows the Active toggle. This is used to deactivate or react
 
 ## Step 2: Select Connection Type
 
-![Active toggle](../../.gitbook/assets/image%20%2818%29.png)
+![Active toggle](../../.gitbook/assets/image%20%2822%29.png)
 
 The below image shows the Connection Type control. Connection type selection dynamically updates the available options.
 
@@ -64,11 +64,11 @@ Select `File`. This tutorial pushes a file to RAP as input and then outputs a fi
 {% endtab %}
 {% endtabs %}
 
-![Connection Type Options](../../.gitbook/assets/image%20%28142%29.png)
+![Connection Type Options](../../.gitbook/assets/image%20%28169%29.png)
 
 ## Step 3: Indicate File Path
 
-Finally, file\_path is the path to the location of the file, excluding the filename. Recall that the input data is located at `s3://wmp-rap-sample-data/inbox/{YOUR INITIALS}`.
+Finally, file\_path is the path to the location of the file, excluding the filename. Recall that the input data is located at `s3://{FIRM INITIALS}.training/input/{YOUR INITIALS}`.
 
 {% hint style="warning" %}
 After configuring the **Source** connection, be sure the input file is in the correct folder or S3 bucket.
@@ -86,7 +86,7 @@ An additional Connection will be required during the [Output](output.md) phase. 
 
 * **Name:** `Divvy - Output Path`
 * **Connection Type:** `File`
-* **file\_path:** `s3://wmp-rap-sample-data/inbox/{YOUR INITIALS}/output` 
+* **file\_path:** `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}` 
 
-![Output Connection Configuration](../../.gitbook/assets/image%20%28168%29.png)
+![Output Connection Configuration](../../.gitbook/assets/image%20%28198%29.png)
 

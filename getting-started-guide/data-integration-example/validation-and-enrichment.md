@@ -26,7 +26,7 @@ T.city IS NULL
 
 Click **Save** to finish.
 
-![Complete Validation Rule](../../.gitbook/assets/image%20%28100%29.png)
+![Complete Validation Rule](../../.gitbook/assets/image%20%28124%29.png)
 
 {% hint style="info" %}
 When entering an expression, type ````` to reveal all of the Source fields available.
@@ -37,7 +37,7 @@ When field names are prepended with a T, such as `T.city`, it indicates that the
 {% endhint %}
 
 {% hint style="info" %}
-RAP supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's]() [Validation and Enrichment Rule Templates]() section.
+RAP supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's]() [Validation and Enrichment Rule Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) section.
 {% endhint %}
 
 ## **Step 2: Configure Enrichment**
@@ -85,10 +85,10 @@ CASE WHEN T.city = 'Chicago' THEN 'Y' ELSE 'N' END
 ```
 
 {% hint style="info" %}
-Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
+Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
 {% endhint %}
 
-![Complete Enrichment Configuration](../../.gitbook/assets/image%20%2847%29.png)
+![Complete Enrichment Configuration](../../.gitbook/assets/image%20%2856%29.png)
 
 Click **Save** when Enrichment Configuration resembles the above image**.**
 
@@ -100,15 +100,19 @@ Recall that the `File Push` Input Type configuration creates a Source that autom
 
 To remedy this, navigate to Inputs page, and for the most recent line item, click on the ellipsis on the far right and select **Reset All Validation & Enrichment**. See below.
 
-![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28103%29.png)
+![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28127%29.png)
 
 ## Step 4: Ensure Validation and Enrichment Completion
 
 Navigate to the **Data View** to double-check that the Validation and Enrichment steps were successful**.** The image below ****shows the view that should display.
 
-![New Column in Data View](../../.gitbook/assets/image%20%2853%29.png)
+![New Column in Data View](../../.gitbook/assets/image%20%2862%29.png)
 
 For every enrichment, a green column should be created in the Data View. Additionally, every entry that is flagged as `Warn` should appear yellow. In this case, no records should be flagged.
+
+{% hint style="info" %}
+Notice that a few \(41\) Chicago-located Stations are given an `ischicago = 'N'`. This is due to additional whitespace in some input data. Messy data is common — thankfully, RAP has ways to deal with this problem.
+{% endhint %}
 
 This concludes Validation and Enrichments configuration. RAP is now ready to **Output** data, and will be configured in the final part of this guide.
 

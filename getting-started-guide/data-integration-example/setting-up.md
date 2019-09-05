@@ -6,55 +6,73 @@ description: >-
 
 # Setting up
 
-## Step 1: Connect to AWS
+## Step 1: Download the Divvy Data
 
-The Data Integration Example uses Divvy Bike data hosted on Amazon Web Services' S3 buckets. AWS is a popular platform for data storage that RAP uses internally to process data. Use of AWS during this example provides important exposure to the platform.
+The Data Integration Example uses Divvy Bike data hosted on Amazon Web Services' S3 buckets. Click to download the file [Divvy\_Stations\_2017\_Q1Q2.csv](https://wmp-rap-sample-data.s3.us-east-2.amazonaws.com/source-files/Divvy_Stations_2017_Q1Q2.csv). Save it locally.
 
-Navigate to the AWS S3 Management Console for the region US-East-2: [https://s3.console.aws.amazon.com/s3/home?region=us-east-2](https://s3.console.aws.amazon.com/s3/home?region=us-east-2)
+## Step 2: Connect to AWS
+
+AWS is a popular platform for data storage that RAP uses internally to process data. Use of AWS during this example provides important exposure to the platform.
+
+Navigate to the AWS S3 Management Console for your firm. [https://s3.console.aws.amazon.com/s3/home?region=us-east-2](https://s3.console.aws.amazon.com/s3/home?region=us-east-2)
 
 If the login page appears, enter the login information provided by your RAP account team.
 
-## Step 2: Navigate to Divvy Data
+## Step 2: Navigate to the Training Folder
 
-Search for the bucket `wmp-rap-sample-data` using the top search bar and select the [bucket](https://s3.console.aws.amazon.com/s3/buckets/wmp-rap-sample-data/?region=us-east-2&tab=overview).
+Search for the bucket `training` using the top search bar and select the bucket with your firm's initials as a prefix. It should look like `{firm initials}.training`. Select the bucket.
 
-![S3 Bucket Search](../../.gitbook/assets/image%20%28132%29.png)
+![S3 Bucket Search](../../.gitbook/assets/image%20%28241%29.png)
 
-Select `source-files` in order to navigate to the data file.
+In the training bucket, there should be an **input** and **output** folder.
 
-![Locate Source Data](../../.gitbook/assets/image%20%28184%29.png)
+![Training Folder](../../.gitbook/assets/image%20%28210%29.png)
 
-Right-click the `Divvy_Stations_2017_Q1Q2.csv`file and select **Copy**. For this example, the Divvy Stations data must be copied by each user to their own directory.
+## Step 3: Create a Unique Input Folder
 
-![Copy Divvy Stations](../../.gitbook/assets/image%20%2862%29.png)
+Select the **input** folder.
 
-## Step 3: Create the Environment
+![Input Folder](../../.gitbook/assets/image%20%28143%29.png)
 
-Use the breadcrumbs to navigate back to `wmp-rap-sample-data`.
+Click **Create folder** and create a folder with your initials in the **input** folder. If you have the same initials as somebody else, add a suffix that is unique, such as your birthday. Click **Save** to create the folder.
 
-![Navigation to wmp-rap-sample-data](../../.gitbook/assets/image%20%2841%29.png)
+![Create Input Initials Folder](../../.gitbook/assets/image%20%28125%29.png)
 
-Navigate to the `inbox`.
+Select the input folder with your initials.
 
-![Inbox](../../.gitbook/assets/image%20%286%29.png)
+![Select Initials Folder](../../.gitbook/assets/image%20%2866%29.png)
 
-Select **Create Folder**, name the folder with your initials, then select **Save**. This creates a folder for use during the Data Integration Example.
+In the input initials folder, select **Upload**.
 
-![Create Main Folder](../../.gitbook/assets/image%20%28145%29.png)
+![Upload Button](../../.gitbook/assets/image%20%28238%29.png)
 
-Navigate inside the new folder, and paste the `Divvy Stations` file directly inside. Select **Paste** on the modal that appears to confirm.
+The **Upload** modal should appear. Drag the file **Divvy\_Stations\_2017\_Q1Q2.csv** into the modal. Select **Upload** to upload the file with default settings. 
 
-![Paste Divvy Stations](../../.gitbook/assets/image%20%28153%29.png)
+![Upload File](../../.gitbook/assets/image%20%2869%29.png)
 
-In the same location, create a folder called `output` for RAP to output to.
+The file should now be in your unique input folder. Verify that it has been uploaded.
 
-![Create Output Folder](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%28194%29.png)
+
+## Step 4: Create a Unique Output Folder
+
+Use the breadcrumbs to navigate back to `training` folder.
+
+![Navigation to the training folder](../../.gitbook/assets/image%20%2846%29.png)
+
+Select the `output` folder.
+
+![Output Folder](../../.gitbook/assets/image%20%28137%29.png)
+
+Click **Create folder** and create a folder with your initials in the **output** folder. If you have the same initials as somebody else, add a suffix that is unique, such as your birthday. Click **Save** to create the folder.
+
+![Create Output Initials Folder](../../.gitbook/assets/image%20%28172%29.png)
 
 You should now have the following AWS folders created:
 
-* `s3://wmp-rap-sample-data/inbox/{YOUR INITIALS}`
+* `s3://{FIRM INITIALS}.training/input/{YOUR INITIALS}`
   * This should have the file `Divvy_Stations_2017_Q1Q2.csv` in the folder
-* `s3://wmp-rap-sample-data/inbox/{YOUR INITIALS}/output`
+* `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}`
 
 The environment setup is complete. Proceed to [Connection](connection.md) to begin configuring RAP.
 

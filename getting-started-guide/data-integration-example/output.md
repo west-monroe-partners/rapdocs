@@ -63,7 +63,7 @@ Parquet is column-oriented data storage format, useful when direct to file queri
 
 **file\_mask:** Enter `divvy_chicago_only_<TSHH12MISS>.csv`. This is a mask that describes the name of the output, where `<TSHH12MISS>` is replaced by the time the file was generated.
 
-**key\_history, partition,** and **limit\_by\_effective\_range** can be safely left as-is for now. For more detailed information, see the [Output Configuration]() section in the [Configuration Guide]().
+**key\_history, partition,** and **limit\_by\_effective\_range** can be safely left as-is for now. For more detailed information, see the [Output Configuration](../../configuring-the-data-integration-process/output-configuration/) section in the [Configuration Guide]().
 
 ## Step 3: Map Output
 
@@ -125,7 +125,7 @@ ischicago = 'Y'
 
 **Description:** `only output Chicago stations`
 
-![Completed Output Filter](../../.gitbook/assets/image%20%28134%29.png)
+![Completed Output Filter](../../.gitbook/assets/image%20%28161%29.png)
 
 When the configured filter resembles the above image, select **Close** and then **Save** to complete Output Configuration.
 

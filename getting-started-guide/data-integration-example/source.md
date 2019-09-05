@@ -77,7 +77,7 @@ A database table to be ingested at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Input Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on input type attributes.
+When selecting an Input Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on input type attributes.
 {% endhint %}
 
 ### **File Type**
@@ -118,9 +118,9 @@ _The Staging Phase details how RAP reads and stores the Source._
 
 ## Step 5: Save
 
-Click the **Save** button to save the Source; all parameters should be configured. Upon saving the Source, the user will be redirected to the Source details view.
+Click the **Save** button to save the Source; all parameters should be configured. Upon saving the Source, users will be redirected to the Source details view.
 
-![Source Details](../../.gitbook/assets/image%20%28120%29.png)
+![Source Details](../../.gitbook/assets/image%20%28146%29.png)
 
 _RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database._
 
