@@ -6,7 +6,7 @@ The AWS EC2 service contains the virtual machine instances and the secure parame
 
 The image below shows the main instances page of the AWS EC2 component. Access this page from the AWS dashboard by navigating to Services and searching `EC2`. If this screen does not appear after clicking `EC2`, click the **Instances** link on the left side of the page.
 
-![EC2 Instance](../../../.gitbook/assets/image%20%28117%29.png)
+![EC2 Instance](../../../.gitbook/assets/image%20%28126%29.png)
 
 Each of these instances correspond to a virtual machine. The naming convention for each instance is:
 
@@ -28,11 +28,11 @@ In the event that the platforms need a scale up or down, changing the instance t
 
 Navigate to **Instance Settings &gt; Change Instance Type**. Be sure the instance is stopped.
 
-![Change Instance Type button](../../../.gitbook/assets/image%20%28156%29.png)
+![Change Instance Type button](../../../.gitbook/assets/image%20%28168%29.png)
 
 Select **Change Instance Type**, and choose the Instance Type to fit the situation.
 
-![Change Instance Type Modal](../../../.gitbook/assets/image%20%28197%29.png)
+![Change Instance Type Modal](../../../.gitbook/assets/image%20%28211%29.png)
 
 {% hint style="info" %}
 Note: The AWS documentation describes all the different types of instances [here](https://aws.amazon.com/ec2/instance-types/).

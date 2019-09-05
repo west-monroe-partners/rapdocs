@@ -8,13 +8,13 @@ description: Outputs specify where RAP exports data after importing and transfor
 
 The Outputs screen allows users to see all previously created Outputs, as well as search, edit and filter them. By default, only Active Outputs are listed. Users can change this by toggling the **Active Only** toggle. Note that only Active Outputs are processed.
 
-![Outputs Screen](../../.gitbook/assets/image%20%28200%29.png)
+![Outputs Screen](../../.gitbook/assets/image%20%28214%29.png)
 
 ## Edit Output Screen
 
 In the Edit Output Screen, users can see the various components that make up an Output, including tabs for Output Details, Mapping, Manual Output, and Output History.
 
-![Output Details Screen](../../.gitbook/assets/image%20%28130%29.png)
+![Output Details Screen](../../.gitbook/assets/image%20%28141%29.png)
 
 There are many options for what to input for an Output. The [Output Details](output-details.md) page is a good place to start for defining the Output.
 

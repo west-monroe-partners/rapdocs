@@ -6,7 +6,7 @@ The RAP Agent installs on local client machines. Its purpose is to acquire files
 
 The RAP Agent signals its health and continued operation via a heartbeat to the API. Every time an Agent pings the API the `last_transmission_timestamp` of the ping updates in the Database under the Agent Code that pinged the API. Find this information in the stage.agent table in Postgres.
 
-![local RAP Agent last\_transmission\_timestamp](../../.gitbook/assets/image%20%28170%29.png)
+![local RAP Agent last\_transmission\_timestamp](../../.gitbook/assets/image%20%28182%29.png)
 
 In this example, the local agent last hit the API at 14:57 UTC on August 30. Every 30 seconds the agent pings, so if the Agent has not pinged for more than 30 seconds, there may be an issue.
 

@@ -13,7 +13,7 @@ An "Input" is RAP’s atomic unit of data processing. Conceptually, an Input cor
 
 The Source Inputs screen allows users to monitor the status of their Sources' Inputs. If an Input has failed any steps, users can see the logs and investigate the failure.
 
-![Inputs Tab](../../.gitbook/assets/image%20%2839%29.png)
+![Inputs Tab](../../.gitbook/assets/image%20%2840%29.png)
 
 Selecting any Input's field displays a modal with further details.
 
@@ -21,19 +21,19 @@ Selecting any Input's field displays a modal with further details.
 
 Selecting an Input's **Process Time** value displays a modal with sub-times of each of the Input's different phases.
 
-![Process Times Modal](../../.gitbook/assets/image%20%2842%29.png)
+![Process Times Modal](../../.gitbook/assets/image%20%2845%29.png)
 
 ### Records Staged / Processed Modal
 
 Selecting an Input's **Records Staged** or **Records Process** displays a modal with record counts at each of the Input's different phases. Each displayed Output links directly to its own page, providing an easy way to navigate a Source's configured Outputs.
 
-![Records Staged + Processed Modal](../../.gitbook/assets/image%20%2872%29.png)
+![Records Staged + Processed Modal](../../.gitbook/assets/image%20%2877%29.png)
 
 ### Processing Log Modal
 
 To view the Processing Logs for any specific phase of an Input, click the corresponding Input Status icon.
 
-![Select a Processing Log to Display](../../.gitbook/assets/image%20%28192%29.png)
+![Select a Processing Log to Display](../../.gitbook/assets/image%20%28206%29.png)
 
 The processing Log contains detailed information useful during troubleshooting. For more information about Processing Logs, see the [Operation Guide](../../operation-guide/).
 
@@ -70,7 +70,7 @@ Users can control all of the Inputs for a Source using the options below. Not al
 * **View Data:** Navigate to the Data View tab
 * **Pull Data Now:** Immediately generate a new Input for this Source
 
-![Options for All Inputs](../../.gitbook/assets/image%20%28138%29.png)
+![Options for All Inputs](../../.gitbook/assets/image%20%28149%29.png)
 
 ## Controlling One Input
 
@@ -84,7 +84,7 @@ Each Input can be controlled using the options below, which are available depend
 * **Delete:** Delete the Input from the Source
 * **View Data:** Navigate to the Data View tab - filtering the data for only the selected input
 
-![Options for Time Series Inputs](../../.gitbook/assets/image%20%28112%29.png)
+![Options for Time Series Inputs](../../.gitbook/assets/image%20%28121%29.png)
 {% endtab %}
 
 {% tab title="Keyed" %}
@@ -92,7 +92,7 @@ Each Input can be controlled using the options below, which are available depend
 * **Delete:** Delete the Input from the Source
 * **View Data:** Navigate to the Data View tab - filtering the data for only the selected input
 
-![Options for Keyed Inputs](../../.gitbook/assets/image%20%28223%29.png)
+![Options for Keyed Inputs](../../.gitbook/assets/image%20%28237%29.png)
 {% endtab %}
 {% endtabs %}
 

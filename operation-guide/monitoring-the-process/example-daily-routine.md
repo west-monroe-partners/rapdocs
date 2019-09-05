@@ -14,7 +14,7 @@ The primary mechanism to stay informed on the activities of the platform is RAP 
 
 To add alerts, navigate to the Source Detail page, Show Advanced Parameters, and enter an email to the distribution list.
 
-![Add an Email to the Distribution List](../../.gitbook/assets/image%20%28179%29.png)
+![Add an Email to the Distribution List](../../.gitbook/assets/image%20%28191%29.png)
 
 ## Summary View of Nightly Load
 

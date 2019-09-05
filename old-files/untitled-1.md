@@ -212,5 +212,5 @@ RAP periodically cleans up temporary work tables, persisted data tables, and fil
 
 The diagram below demonstrates the difference between _buffer_ and _archive files_:
 
-![](../.gitbook/assets/image%20%28188%29.png)
+![](../.gitbook/assets/image%20%28201%29.png)
 

@@ -22,21 +22,21 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 The Validation tab allows users to select, edit, remove, or add a Source's Validations. By default, only Active Validation Rules are listed. The **Active Only** toggle changes this setting.
 
-![Source Validations - Active Only](../../.gitbook/assets/image%20%28165%29.png)
+![Source Validations - Active Only](../../.gitbook/assets/image%20%28177%29.png)
 
 To edit a Validation Rule, select the Validation Rule directly. This opens the Edit Validation Rule modal.
 
-![Source Validations - Select a Validation to Edit ](../../.gitbook/assets/image%20%28208%29.png)
+![Source Validations - Select a Validation to Edit ](../../.gitbook/assets/image%20%28222%29.png)
 
 To add a Validation Rule, select **New Validation** **Rule**. This opens the Edit Validation Rule modal for a new Validation Rule.
 
-![Source Validations - New Validation Rule](../../.gitbook/assets/image%20%2882%29.png)
+![Source Validations - New Validation Rule](../../.gitbook/assets/image%20%2888%29.png)
 
 ## Validation Rule Parameters
 
 On the Edit Validation Rule modal, users can modify Validation Rule parameters, or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Validation Rule Type** drop down.
 
-![Edit Validation Rule](../../.gitbook/assets/image%20%2856%29.png)
+![Edit Validation Rule](../../.gitbook/assets/image%20%2860%29.png)
 
 {% hint style="info" %}
 Note: **Save as Rule Type** allows users to save Validation Rules as templates for later use. For more details, see [Validation and Enrichment Rule Templates](../validation-and-enrichment-rule-templates.md).
