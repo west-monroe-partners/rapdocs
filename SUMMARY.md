@@ -46,6 +46,8 @@
       * [RDS](operation-guide/maintaining-the-infrastructure/aws/rds.md)
       * [OpenVPN](operation-guide/maintaining-the-infrastructure/aws/openvpn.md)
     * [Postgres](operation-guide/maintaining-the-infrastructure/postgres.md)
+* [Installation Guide](installation-guide/README.md)
+  * [Purpose](installation-guide/purpose.md)
 * [FAQ / Troubleshooting](faq-troubleshooting/README.md)
   * [Post Deployment Smoke Testing](faq-troubleshooting/post-deployment-smoke-testing.md)
   * [Common Errors for each Phase](faq-troubleshooting/common-errors-for-each-phase.md)
