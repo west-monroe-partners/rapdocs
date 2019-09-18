@@ -1,4 +1,4 @@
-# Post-Increment Script Deployment Steps
+# Post-Deployment Steps
 
 Once the CloudFormation stack is CREATE\_COMPLETE, several post deployment steps must be performed. 
 
@@ -46,7 +46,7 @@ The following steps will be completed by the Rap Engineers:
 
     8. **Add** parameters to the EC2 parameter store for the increment environment   
         a. **Optional**: Apply tags to the parameters   
-    9. **Configure** EC2 [Parameter Store parameters.](../parameter-store-parameters.md)  
+    9. **Configure** EC2 [Parameter Store parameters.](parameter-store-parameters.md)  
   a. **Note**: The script only creates String type parameters due to a limitation of CloudFormation.   
       Secure String parameters need to be manually created. 
 

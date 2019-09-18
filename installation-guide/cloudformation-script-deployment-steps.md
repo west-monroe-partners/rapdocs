@@ -1,6 +1,6 @@
-# Increment Script Deployment Steps
+# CloudFormation Script Deployment Steps
 
-Before running the Increment script, complete the parameter checklist located in [Increment Parameter Deployment Checklist.](../increment-parameter-deployment-checklist.md)
+Before running the Increment script, complete the parameter checklist located in [Increment Parameter Deployment Checklist.](increment-parameter-deployment-checklist.md)
 
 1. **Login** to AWS Management Console and navigate to CloudFormation
 2. **Select** Create Stack
@@ -11,5 +11,7 @@ Before running the Increment script, complete the parameter checklist located in
 7. **Check** the box that “I acknowledge that AWS CloudFormation might create IAM resources with custom names.”
 8. **Click** Create
 9. If rollback occurs, **assess** the errors and tweak parameters accordingly 
-10. If successful, **continue** to [Post-Increment Script Deployment Steps](../post-deployment-steps/post-increment-script-deployment-steps.md).
+10. If successful, **continue** to [Post Deployment Steps](post-deployment-steps.md).
+
+
 

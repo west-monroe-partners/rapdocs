@@ -10,8 +10,7 @@
 
        a. **Ex**. \*.example.com, example.com
 
-       b. Certificates need to be created in us-east-1 \(N. Virginia\) for CloudFront, and the region you are   
-            deploying the infrastructure into for the load balancers
+       b. Certificates need to be created in us-east-1 \(N. Virginia\) for CloudFront, and the region you are deploying the infrastructure into for the load balancers
 
 5. **Create** a EC2 key pair to be used in the deployment. **BE SURE TO SAVE THE KEY!**
 6. **Create** a S3 bucket to store the CloudFormation and instance install scripts
@@ -26,15 +25,13 @@
 
 8. **Subscribe** to the Centos 7, OpenVPN, Microsoft Server 2016 Base image. 
 
-       a. **Centos 7**: [https://aws.amazon.com/marketplace/fulfillment?productId=b7ee8a69-ee97-4a49-  
-           9e68-afaee216db2e&ref\_=dtl\_psb\_continue](https://aws.amazon.com/marketplace/fulfillment?productId=b7ee8a69-ee97-4a49-9e68-afaee216db2e&ref_=dtl_psb_continue)
+       a. **Centos 7**: [https://aws.amazon.com/marketplace/fulfillment?productId=b7ee8a69-ee97-4a49-9e68-afaee216db2e&ref\_=dtl\_psb\_continue](https://aws.amazon.com/marketplace/fulfillment?productId=b7ee8a69-ee97-4a49-9e68-afaee216db2e&ref_=dtl_psb_continue)
 
        b. **OpenVPN**: [http://aws.amazon.com/marketplace/pp?sku=8icvdraalzbfrdevgamoddblf](http://aws.amazon.com/marketplace/pp?sku=8icvdraalzbfrdevgamoddblf)
 
-       c. **Microsoft Server 2016 Base:** [https://aws.amazon.com/marketplace/fulfillment?  
-           productId=13c2dbc9-57fc-4958-922e-a1ba7e223b0d&ref\_=dtl\_psb\_continue](https://aws.amazon.com/marketplace/fulfillment?productId=13c2dbc9-57fc-4958-922e-a1ba7e223b0d&ref_=dtl_psb_continue)
+       c. **Microsoft Server 2016 Base:** [https://aws.amazon.com/marketplace/fulfillment?productId=13c2dbc9-57fc-4958-922e-a1ba7e223b0d&ref\_=dtl\_psb\_continue](https://aws.amazon.com/marketplace/fulfillment?productId=13c2dbc9-57fc-4958-922e-a1ba7e223b0d&ref_=dtl_psb_continue)
 
-9. You are now ready to run the Management + Increment script. **Continue** to [Management + Increment Script Deployment Steps](../cloudformation-script-deployment-steps/management-+-increment-script-deployment-steps.md)
+9. You are now ready to run the Management + Increment script. **Continue** to [Management + Increment Script Deployment Steps]()
 
 \*\*\*\*
 
