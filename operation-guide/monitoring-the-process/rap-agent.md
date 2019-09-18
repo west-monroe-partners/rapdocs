@@ -4,19 +4,28 @@ The RAP Agent installs on local client machines. Its purpose is to acquire files
 
 ## RAP Agent Health
 
-The RAP Agent signals its health and continued operation via a heartbeat to the API. Every time an Agent pings the API the `last_transmission_timestamp` of the ping updates in the Database under the Agent Code that pinged the API. Find this information in the stage.agent table in Postgres.
+The RAP Agent signals its health and continued operation via a heartbeat to the API. Every time an Agent pings the API the `last_transmission_timestamp` of the ping updates in the Database under the Agent Code that pinged the API. This timestamp and the related status of agents can found by accessing the Agents screen from the primary navigation menu.
 
-![local RAP Agent last\_transmission\_timestamp](../../.gitbook/assets/image%20%28182%29.png)
+![](../../.gitbook/assets/primary-navigation.png)
 
-In this example, the local agent last hit the API at 14:57 UTC on August 30. Every 30 seconds the agent pings, so if the Agent has not pinged for more than 30 seconds, there may be an issue.
+The Agent screen lists the active agents and their respective health status which is determined by the most recent API ping.  The agent is programed to call the API every 30 seconds and if an agent fails to make its schedule call, the status will be updated to failed. When this scenario takes place, the last transmission time will remain unchanged until the agent resumes its scheduled API calls.  Furthermore the Agent screen lists the plugins that are configured for each Agent.  
+
+Below is an example of the Agent screen with a list of agents and associated statuses, timestamps, and plugins:
+
+![](../../.gitbook/assets/agent-screen.png)
 
 ## RAP Agent Logs
 
-It is helpful to check the log files of the Agent if the Agent is not responding. The log files are located at `<Drive where Agent is installed>/Logs/agent.log`
+In the event that that an Agent has a failed status, the log files can be found at:`<Drive where Agent is installed>/Logs/agent.log`
 
 ![Agent Logs](../../.gitbook/assets/31.png)
 
-The Agent cannot communicate if there are network issues or an inability to hit the RAP API from the Agent’s install location. The Agent cannot run without a Java 8 installation on the on premise machine as well. Refer to the Agent Install Guide for more information involving starting and configuring the RAP Agent.
+System requirements for the the Agent include:
+
+* Java 8 installed on the on premise machine
+* In progress stop point
+
+cannot communicate if there are network issues or an inability to hit the RAP API from the Agent’s install location. The Agent cannot run without a Java 8 installation on the on premise machine as well. Refer to the Agent Install Guide for more information involving starting and configuring the RAP Agent.
 
 To start, stop, or restart the Agent service, navigate to the services window, and restart the service named RAPAgentBat.
 

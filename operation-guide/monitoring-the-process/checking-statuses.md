@@ -2,9 +2,9 @@
 
 ## Understanding Status Codes
 
-In RAP, every input marks its progress with a status code for each phase. The symbol and meaning of each status code are below:
+RAP utilizes the following status codes to report on for each processing phase including input, staging, validation and enrichment, and output.  The symbol and meaning of each status code are below:
 
-\*\*\*\*![](../../.gitbook/assets/ready%20%281%29.png) **Ready \(null\)**: Landing is prepared for processing phase – if the next phase is configured, it will automatically change to In Progress.
+\*\*\*\*![](../../.gitbook/assets/ready%20%281%29.png) **Ready \(null\)**: Landing is prepared for processing phase or waiting for dependent processing phase\(s\) to complete.
 
 ![](../../.gitbook/assets/queued.png) **Queued \(Q\)**: Process queued, waiting for free connections to execute.
 
@@ -24,7 +24,7 @@ Clicking any of these status icons will display the processing logs for that inp
 
 ## Investigating Status Codes
 
-If the status code is `F`, or `Failed`, then the processing will not continue on to the next process in the chain. However, the platform contains reset functionality to provide the user with the tool to make changes and reset the failed process. For more information on using the reset buttons and the various options available to users, refer to the [Inputs](../../configuring-the-data-integration-process/source-configuration/source-inputs.md#controlling-all-inputs) section of the Configuration guide.
+If the status code is `F`, or `Failed`, then the processing will not continue on to the next process in the chain. However, the platform contains reset functionality to provide the user with the ability to make changes and reset the failed process. For more information on using the reset buttons and the various options available to users, refer to the [Inputs](../../configuring-the-data-integration-process/source-configuration/source-inputs.md#controlling-all-inputs) section of the Configuration guide.
 
 In a general troubleshooting scenario, it is best to make changes to a source that would fix the error that caused failure before blindly running a reset. 
 
@@ -32,7 +32,7 @@ In a general troubleshooting scenario, it is best to make changes to a source th
 Note: Delete will permanently delete the input. Do not click delete unless you are certain that the input needs removing.
 {% endhint %}
 
-A common scenario, especially when doing large reloads or running many processes concurrently, is long waits for processes to turn from `In-Progress`, to `Passed` or `Failed`. In most situations, the process is waiting for connections to allocate internally.
+A common scenario, especially when doing large reloads or running many processes concurrently, is longer `In-Progress`phases for processes to proceed to `Passed` or `Failed`. In most situations, the process is waiting for connections to allocate internally.
 
 ![A Staging process waiting for connections to allocate](../../.gitbook/assets/10%20%281%29.png)
 

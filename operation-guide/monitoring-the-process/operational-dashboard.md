@@ -2,7 +2,7 @@
 
 ### Navigation
 
-RAP has a built in Operational Dashboard, viewable by clicking the Source Dashboard link in the left-side menu, as shown in Figure 2.2a. The dashboard URL is http:///source-dashboard.
+RAP has a built in Operational Dashboard, viewable by clicking the Source Dashboard link in the primary navigation menu, as shown in Figure 2.2a. 
 
 ![](../../.gitbook/assets/1%20%281%29.png)
 

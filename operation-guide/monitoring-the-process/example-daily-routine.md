@@ -1,6 +1,6 @@
 # Example Daily Routine
 
-In this section, we will detail a typical day’s activities for maintaining the application. For information about frequently encountered errors during monitoring as well as steps to fix them, see the [RAP Agent](rap-agent.md) page.
+In this section, we will detail a suggested routine for maintaining the application on a daily basis. 
 
 ## Alerts
 
@@ -18,7 +18,7 @@ To add alerts, navigate to the Source Detail page, Show Advanced Parameters, and
 
 ## Summary View of Nightly Load
 
-After addressing all alerts, users check the general status of the previous night’s data loads. Do this by utilizing the Operational Reporting dashboard or the following query:
+After addressing all alerts, users should check the general status of the previous night’s data loads. Do this by utilizing the Operational Reporting dashboard or the following query:
 
 ```sql
 SELECT  i.input_id, i.source_id, s.source_name, s.staging_table_name, i.input_status_code, 
@@ -32,11 +32,18 @@ AND (input_status_code IS DISTINCT FROM 'P'
 ORDER BY s.source_name
 ```
 
-This provides the opportunity to identify any issues with the application and act upon them quickly. For example:
+This provides the opportunity to identify any issues with the application and act upon them quickly. Example error use cases include:
 
-* Finding the error message and determining the cause of the issue \(network partition, credential issues, etc.\) when not all Sources pulling from one Agent succeed Input.
-* A Keyed source succeeds Input and Staging, but is waiting to run Validation & Enrichment. After digging into the source, it is revealed that prior input has failed V&E, causing current input to wait before V&E.
-  * If an issue like this goes unaddressed for a while, there may be days, weeks, or months’ worth of Keyed source data still waiting to complete processing. Pay close attention to Keyed sources every day.
+* Error: Not all sources pulling from on Agent succeeded scheduled inputs.  Resolution Tactic: Finding the error message and determining the cause of the issue \(network partition, credential issues, etc.\).
+* Error: A Keyed source succeeds Input and Staging, but is waiting to run Validation & Enrichment. Resolution: After tracing Validation and Enrichment dependencies for a source, it is revealed that prior input has failed V&E, causing current input to wait before the preceding V&E rule completes processing.
+
+{% hint style="danger" %}
+If an issue like this goes unresolved, the system will continue to follow the scheduling rules which will result in Keyed source data awaiting to process for an extended period of time. Pay close attention to Keyed sources every day.
+{% endhint %}
+
+{% hint style="info" %}
+For information about frequently encountered errors during monitoring as well as steps to fix them, see the [RAP Agent](rap-agent.md) page.
+{% endhint %}
 
 ## Logs
 

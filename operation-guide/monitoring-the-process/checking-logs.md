@@ -25,7 +25,7 @@ Common use cases for using the Actor Log include:
 
 ## Orchestrator Log
 
-The Orchestrator Log provides higher level of details, including information related to system initialization, queueing/wait logic, clean up, connection management, in addition to the processing activities available in the Actor log. The Orchestrator log is available in file format directly on the ETL server. In the instance that the database is unavailable, the Orchestrator log can still be accessed and used in diagnosing issues with the application.
+The Orchestrator Log provides higher level of details, including information related to system initialization, queueing/wait logic, clean up, connection management. The Orchestrator log is available in file format directly on the ETL server. In the instance that the database is unavailable, the Orchestrator log can still be accessed and used in diagnosing issues with the application.
 
 To access the Orchestrator log, follow instructions in the [EC2 section](../maintaining-the-infrastructure/aws/ec2.md).
 
