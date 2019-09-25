@@ -4,7 +4,7 @@ If clicking the status icon and reading the logs does not help diagnose the fail
 
 The **Orchestrator Log** is stored in a file on the ETL box.
 
-The **Actor Log** is stored in a [Postgres ](../maintaining-the-infrastructure/postgres.md)table but can be accessed to an extent through the RAP UI.
+The **Actor Log** is stored in a [Postgres ]()table but can be accessed to an extent through the RAP UI.
 
 ## Actor Log
 
@@ -27,7 +27,7 @@ Common use cases for using the Actor Log include:
 
 The Orchestrator Log provides higher level of details, including information related to system initialization, queueing/wait logic, clean up, connection management. The Orchestrator log is available in file format directly on the ETL server. In the instance that the database is unavailable, the Orchestrator log can still be accessed and used in diagnosing issues with the application.
 
-To access the Orchestrator log, follow instructions in the [EC2 section](../maintaining-the-infrastructure/aws/ec2.md).
+To access the Orchestrator log, follow instructions in the [EC2 section]().
 
 Common use cases for using the Orchestrator log include:
 
