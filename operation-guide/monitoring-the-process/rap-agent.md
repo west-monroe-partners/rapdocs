@@ -14,20 +14,20 @@ Below is an example of the Agent screen with a list of agents and associated sta
 
 ![](../../.gitbook/assets/agent-screen.png)
 
+## RAP Agent System & Network Requirements
+
+In order for the Agent to successfully and securely connect with RAP servers, the on premise machine must have:
+
+* Reliable network connectivity using Hypertext Transfer Protocol Secure \(HTTPS\).
+* Java 8 installation on the on premise machine.
+
 ## RAP Agent Logs
 
 In the event that that an Agent has a failed status, the log files can be found at:`<Drive where Agent is installed>/Logs/agent.log`
 
 ![Agent Logs](../../.gitbook/assets/31.png)
 
-System requirements for the the Agent include:
-
-* Java 8 installed on the on premise machine
-* In progress stop point
-
-cannot communicate if there are network issues or an inability to hit the RAP API from the Agent’s install location. The Agent cannot run without a Java 8 installation on the on premise machine as well. Refer to the Agent Install Guide for more information involving starting and configuring the RAP Agent.
-
 To start, stop, or restart the Agent service, navigate to the services window, and restart the service named RAPAgentBat.
 
-![Restart RAP Agent](../../.gitbook/assets/32.png)
+![](../../.gitbook/assets/32.png)
 
