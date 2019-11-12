@@ -58,6 +58,7 @@
     * [1.6.4](changelog/1.6/1.6.4.md)
     * [1.6.5](changelog/1.6/1.6.5.md)
   * [1.7](changelog/1.7/README.md)
+    * [1.7.1.0](changelog/1.7/1.7.1.0.md)
     * [1.7.0.4](changelog/1.7/1.7.0.4.md)
     * [1.7.0.3](changelog/1.7/1.7.0.3.md)
     * [1.7.0.2](changelog/1.7/1.7.0.2.md)
