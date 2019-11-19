@@ -12,7 +12,7 @@ Navigate to the previously configured \(`Divvy - Stations 2017 Q1Q2` \) Source's
 
 ![Create a New Validation Rule](../../.gitbook/assets/screenshot_11.png)
 
-Configure the following parameters. While there are no [Naming Conventions](../../common-use-cases/naming-convention.md) for Validation rules, use the following values.
+Configure the following parameters. While there are no [Naming Conventions]() for Validation rules, use the following values.
 
 * **Name:** `City is Null`
 * **Description:** `Warn when city is null`
@@ -48,7 +48,7 @@ An Enrichment Rule creates a new column, based on either a formula or a lookup m
 This example portrays a business requirement to filter the location of the station based on whether it exists in Chicago or not. The BI reporting tool requires a flag that indicates this property in a simple way \(as opposed to the `city` column, which contains unpredictable values\). Creating this Enrichment Rule simplifies downstream reporting needs and allows greater flexibility when filtering data later on.
 {% endhint %}
 
-Navigate to the Enrichments tab within the Source, and click **New Enrichment Rule**. To ensure parameter names are valid and follow [naming conventions](../../common-use-cases/naming-convention.md), it is recommend to use the following values:
+Navigate to the Enrichments tab within the Source, and click **New Enrichment Rule**. To ensure parameter names are valid and follow [naming conventions](), it is recommend to use the following values:
 
 * **Name:** `Flag : Is Chicago`
 * **Description:** `Flag if city is Chicago`

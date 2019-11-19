@@ -51,15 +51,15 @@ Check into the [Actor and Orchestrator Logs](checking-logs.md) in the morning to
 
 ## Instance Health
 
-As part of the daily routine, it is a good habit to confirm that the relevant AWS instances are active and healthy. The [EC2 ](../maintaining-the-infrastructure/aws/ec2.md)instances \(ETL & API boxes\) should have an Instance State of `running` and have passed their Status Checks.
+As part of the daily routine, it is a good habit to confirm that the relevant AWS instances are active and healthy. The [EC2 ]()instances \(ETL & API boxes\) should have an Instance State of `running` and have passed their Status Checks.
 
 ![Healthy EC2 Instances](../../.gitbook/assets/13.png)
 
-The [RDS Postgres](../maintaining-the-infrastructure/postgres.md) instance should have a Status of `available` and should have CPU levels and Current Activity below the red line. If these levels are above the normal amount, check the logs and RDS Performance Insights to see what the cause may be.
+The [RDS Postgres]() instance should have a Status of `available` and should have CPU levels and Current Activity below the red line. If these levels are above the normal amount, check the logs and RDS Performance Insights to see what the cause may be.
 
 ![Healthy RDS  Postgres Instance](../../.gitbook/assets/14%20%281%29.png)
 
 {% hint style="info" %}
-See [Maintaining the Infrastructure](../maintaining-the-infrastructure/) for more detailed information on keeping healthy instances.
+See [Maintaining the Infrastructure]() for more detailed information on keeping healthy instances.
 {% endhint %}
 
