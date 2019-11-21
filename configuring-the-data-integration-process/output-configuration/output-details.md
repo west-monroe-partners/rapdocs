@@ -14,7 +14,7 @@ In the Edit Output screen, users can see the various components that make up an 
 
 ## Initial Parameters
 
-* **Name:** The name of the Output. This will be displayed on the Outputs screen when browsing Outputs. To ensure Outputs are organized easily searchable, follow the [Naming Conventions]().
+* **Name:** The name of the Output. This will be displayed on the Outputs screen when browsing Outputs. To ensure Outputs are organized easily searchable, follow the [Naming Conventions](output-details.md).
 * **Description:** The description of the Output.
 * **Active:** If set to Active, the Output will be immediately available for use.
 
@@ -24,7 +24,7 @@ It is important to decide which Output Type an Output is. There are four main ty
 
 {% tabs %}
 {% tab title="File" %}
-RAP will output to a **File** using a [File Connection](../connections-configuration.md#file). 
+RAP will output to a **File** using a [File Connection](../connections-configuration.md#file).
 
 There are two Output File Types: **CSV** or **Parquet**. Parameter selections will update dynamically depending on the selection.
 
@@ -293,7 +293,7 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be changed by users.
       <td style="text-align:left">Y</td>
     </tr>
   </tbody>
-</table>### Output Retention
+</table>\#\#\# Output Retention
 
 <table>
   <thead>

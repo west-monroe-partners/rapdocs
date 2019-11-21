@@ -34,7 +34,7 @@ Editing a Connection and creating a new Connection leads to the same screen. Use
 
 ## Parameters
 
-* **Name**: A unique name for the connection. This will be displayed on the Connections screen when browsing Connections. To ensure Connections are organized easily searchable, follow the [Naming Conventions]().
+* **Name**: A unique name for the connection. This will be displayed on the Connections screen when browsing Connections. To ensure Connections are organized easily searchable, follow the [Naming Conventions](connections-configuration.md).
 * **Description**: The description of the Connection.
 * **Connection Type**: There are 3 options for Connection Type: Table, SFTP and File.
 
@@ -65,57 +65,42 @@ There are currently seven different database connections available.
 
 #### Common Parameters:
 
+| Parameter | Default Value | Description | Advanced |
+| :--- | :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Default Value</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Advanced</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">connection_string</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
+      <th style="text-align:left">connection_string</th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left">
         <p>JDBC connection string for the destination database.</p>
         <p>Overrides all other parameters if specified.</p>
-      </td>
-      <td style="text-align:left">Y</td>
+      </th>
+      <th style="text-align:left">Y</th>
     </tr>
-    <tr>
-      <td style="text-align:left">database_name</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Name of the database</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">host_name</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Host address of the source database</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">password</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Database password</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">port</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Port on the database server</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">user</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Database username</td>
-      <td style="text-align:left">N</td>
-    </tr>
-  </tbody>
-</table>#### Additional Parameters: Snowflake
+  </thead>
+  <tbody></tbody>
+</table>| database\_name |  | Name of the database | N |
+| :--- | :--- | :--- | :--- |
+
+
+| host\_name |  | Host address of the source database | N |
+| :--- | :--- | :--- | :--- |
+
+
+| password |  | Database password | N |
+| :--- | :--- | :--- | :--- |
+
+
+| port |  | Port on the database server | N |
+| :--- | :--- | :--- | :--- |
+
+
+| user |  | Database username | N |
+| :--- | :--- | :--- | :--- |
+
 
 | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- |
@@ -132,8 +117,6 @@ There are currently seven different database connections available.
 | trust\_store\_password |  | Password used to check the integrity of the trust store data | Y |
 | host\_name\_in\_certificate |  | Host name to be used in validating the SQL Server SSL certificate | Y |
 
-### 
-
 ### SFTP Connection Type
 
 | Parameter | Default Value | Description | Advanced |
@@ -142,8 +125,6 @@ There are currently seven different database connections available.
 | password\* |  | SFTP Account Password | N |
 | hostname\* |  | SFTP Account Host Name | N |
 | port | 22 | SFTP Account Port | N |
-
-### 
 
 ### File Connection Type
 

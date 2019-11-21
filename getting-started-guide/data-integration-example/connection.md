@@ -8,7 +8,7 @@ description: This section describes the process of setting up a connection in RA
 
 RAP communicates to external data services through Connections. Connections consist of configurations for **where** and **what type** of data to pull into RAP. Both Sources and Outputs can use connections. For this example, we will configure one file location to pull data from \(Source\) and one to push the data out to \(Output\).
 
-### Opening RAP 
+### Opening RAP
 
 In a Chrome browser, navigate to the RAP Sources screen by accessing the URL provided by your RAP account team and logging in.
 
@@ -24,7 +24,7 @@ On the Connections screen, click New Connection in the top right corner. The ima
 
 ### Naming your new Connection
 
-The below image shows where to add a unique Name and write a brief Description. When naming a Connection, be sure to follow the [Naming Conventions]() guide. Use `Divvy - Input Path` for the Source Connection Name.
+The below image shows where to add a unique Name and write a brief Description. When naming a Connection, be sure to follow the [Naming Conventions](connection.md) guide. Use `Divvy - Input Path` for the Source Connection Name.
 
 ![New Connection Name and Description Fields](../../.gitbook/assets/screenshot_6.png)
 
@@ -39,7 +39,7 @@ Note that all fields marked with an asterisk \(\*\) are mandatory.
 #### Extra Options
 
 {% hint style="info" %}
-The below image ****shows the Active toggle. This is used to deactivate or reactivate a connection. By default, all connections are active when created. Deactivating a connection removes it from the active sources list, and stops any processes from running on the connection. Once this connection is reactivated, it resumes input/output.
+The below image _\*\*_shows the Active toggle. This is used to deactivate or reactivate a connection. By default, all connections are active when created. Deactivating a connection removes it from the active sources list, and stops any processes from running on the connection. Once this connection is reactivated, it resumes input/output.
 {% endhint %}
 
 ## Step 2: Select Connection Type
@@ -74,7 +74,7 @@ Finally, file\_path is the path to the location of the file, excluding the filen
 After configuring the **Source** connection, be sure the input file is in the correct folder or S3 bucket.
 {% endhint %}
 
-Click **Save** to finish Source Connection configuration. 
+Click **Save** to finish Source Connection configuration.
 
 ## Step 4: Create an Output Connection
 

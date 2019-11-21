@@ -8,7 +8,7 @@ description: >-
 
 ## Step 1: Create a Source
 
-Navigate to the Sources screen through the Menu, then create and name a new Source in the same fashion as [input and output connections](connection.md). Be sure to again follow [Naming Conventions](). In this case, it is  recommended to use `Divvy - Stations 2017 Q1Q2`.
+Navigate to the Sources screen through the Menu, then create and name a new Source in the same fashion as [input and output connections](connection.md). Be sure to again follow [Naming Conventions](source.md). In this case, it is recommended to use `Divvy - Stations 2017 Q1Q2`.
 
 {% hint style="info" %}
 The below image shows some available controls that we will not use in this basic example. Because these are more advanced features, this section only provides a brief description of each.
@@ -22,7 +22,7 @@ The below image shows some available controls that we will not use in this basic
 {% endtab %}
 
 {% tab title="Active" %}
-**Active** is used to deactivate or reactivate a source. By default, all sources are active when created. Deactivating a source removes it from the active sources list, and stops any schedules, file watches, and processes from running on the source. Once this source is reactivated, it can begin processing again.
+**Active** is used to deactivate or reactivate a source. By default, all sources are active when created. Deactivating a source removes it from the active sources list, and stops any schedules, file watches, and processes from running on the source. Once this source is reactivated, it can begin processing again.
 {% endtab %}
 
 {% tab title="Agent" %}
@@ -86,7 +86,7 @@ Select `Delimited`. Divvy Stations has a delimiter that separates data fields.
 
 {% tabs %}
 {% tab title="Delimited" %}
-A **Delimited** file is a file where each line has fields separated by a delimiter, representing a new record. The most common format is a CSV, where each each record is separated by a comma. 
+A **Delimited** file is a file where each line has fields separated by a delimiter, representing a new record. The most common format is a CSV, where each each record is separated by a comma.
 {% endtab %}
 
 {% tab title="Fixed Width" %}

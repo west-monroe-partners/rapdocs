@@ -12,7 +12,7 @@ An output connection is necessary in order to complete this phase. If this was n
 
 ### Output Creation
 
-Before configuring any mappings, RAP requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](), use the following values for Output Details configuration:
+Before configuring any mappings, RAP requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](output.md), use the following values for Output Details configuration:
 
 * **Name:** `Divvy - Chicago Stations`
 * **Description:** File output for enriched divvy stations data
@@ -63,7 +63,7 @@ Parquet is column-oriented data storage format, useful when direct to file queri
 
 **file\_mask:** Enter `divvy_chicago_only_<TSHH12MISS>.csv`. This is a mask that describes the name of the output, where `<TSHH12MISS>` is replaced by the time the file was generated.
 
-**key\_history, partition,** and **limit\_by\_effective\_range** can be safely left as-is for now. For more detailed information, see the [Output Configuration](../../configuring-the-data-integration-process/output-configuration/) section in the [Configuration Guide]().
+**key\_history, partition,** and **limit\_by\_effective\_range** can be safely left as-is for now. For more detailed information, see the [Output Configuration](../../configuring-the-data-integration-process/output-configuration/) section in the [Configuration Guide](output.md).
 
 ## Step 3: Map Output
 
@@ -89,7 +89,7 @@ On the left, type `id` in the Output Column, and on the right where a "\_\_\_\_\
 Notice that there is no option to configure datatypes. This is because RAP knows the output is into a plain-text `.csv`, so all output is of type text.
 {% endhint %}
 
-Second, add all of the source data columns at once, instead of one by one. Following the image below, click on the ellipses in the top right, and select **Add All Data Columns**. 
+Second, add all of the source data columns at once, instead of one by one. Following the image below, click on the ellipses in the top right, and select **Add All Data Columns**.
 
 ![Add all Output Columns](../../.gitbook/assets/screenshot_16.png)
 
@@ -148,6 +148,4 @@ For all future data files related to this Source, no manual reset steps are requ
 ### Confirming Successful Output
 
 If configuration was done correctly, the output file should be found in the folder specified by the Connection, and it should contain 518 entries \(519 including the headers\).
-
-
 

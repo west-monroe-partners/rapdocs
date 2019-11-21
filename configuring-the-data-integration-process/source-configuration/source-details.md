@@ -20,7 +20,7 @@ When creating a new Source, only the Source Details tab is available. Users conf
 Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 {% endhint %}
 
-* **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources. To ensure Sources are organized easily searchable, follow [Naming Conventions]().
+* **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources. To ensure Sources are organized easily searchable, follow [Naming Conventions](source-details.md).
 * **Description\*:** The description of the Source.
 * **Active\*:** If set to Active, the Source will run as specified.
 * **Agent\*:** The [Agent ](../../operation-guide/monitoring-the-process/rap-agent.md)that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
@@ -52,7 +52,7 @@ An Input Type specifies what format and with what cadence data should be accesse
 
 {% tabs %}
 {% tab title="File Pull" %}
-**File Pull** ingests a flat file at a scheduled time and cadence. A schedule - specified in UTC - can run and retry based on an error count. 
+**File Pull** ingests a flat file at a scheduled time and cadence. A schedule - specified in UTC - can run and retry based on an error count.
 
 There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
 
@@ -63,7 +63,7 @@ The schedule is based on cron logic. Additional documentation on how to specify 
 {% endtab %}
 
 {% tab title="File Push" %}
-**File Push** ingests a flat file immediately when available. The file location is monitored to watch for the existence of the file. 
+**File Push** ingests a flat file immediately when available. The file location is monitored to watch for the existence of the file.
 
 There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
 
