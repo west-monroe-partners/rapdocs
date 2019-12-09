@@ -1,2 +1,0 @@
-# Post Deployment Smoke Testing
-

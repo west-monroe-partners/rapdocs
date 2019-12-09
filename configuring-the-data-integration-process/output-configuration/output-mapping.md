@@ -145,6 +145,7 @@ These parameters appear depending on the user's Output Type selection.
 | Virtual, Table | table\_name\* |  | Table name for destination table | N |
 | Virtual, Table | table\_schema\* |  | Schema name for destination table | N |
 | Virtual, Table | delete | none | Choice of how we handle the output data into the destination - Options: none, all, input, key, range | N |
+| Table | post\_processing\_command |  | An SQL query that is automatically executed against the destination database after output completes | N |
 | SFTP | file\_mask | FileName&lt;TSHH12MISS&gt;.csv | File mask for output file | N |
 | SFTP | connection\_name\* |  | Connection name for the destination | N |
 | SFTP | partition | segment | Partitioning strategy for files {input, segment} | N |

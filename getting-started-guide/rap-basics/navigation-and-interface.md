@@ -8,7 +8,7 @@ description: The RAP interface consists of six primary screens
 
 Upon login, users are directed to the Sources screen. The Navigation Menu, located in the top left corner of the screen, enables navigation between RAP screens from any of the currently displayed screens.
 
-![Left-Hand Navigation menu opened](../../.gitbook/assets/image%20%2875%29.png)
+![Left-hand Navigation menu opened](../../.gitbook/assets/nav-menu.png)
 
 ## Primary Screens
 
@@ -20,6 +20,8 @@ The [Sources](../../configuring-the-data-integration-process/source-configuratio
 
 The Process screen shows the progress and outcome of all execution tasks through the platform, including sub-processes contained within the four standard processing steps of Input, Staging, Validation and Enrichment and Output.
 
+The Process screen is also home to the Dependency Queue, which displays any inputs that are waiting for other inputs to finish processing. 
+
 ### Outputs
 
 The [Outputs](../../configuring-the-data-integration-process/output-configuration/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
@@ -28,9 +30,9 @@ The [Outputs](../../configuring-the-data-integration-process/output-configuratio
 
 The [Connections ](../../configuring-the-data-integration-process/connections-configuration.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
 
-### Validation and Enrichment Templates
+### Templates
 
-The [Validation and Enrichment Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) screen shows all of the available re-usable templates for creating similar Validation Rules and Enrichment Rules to multiple Sources.
+The [Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) screen shows all of the available re-usable templates for creating similar Validation Rules and Enrichment Rules to multiple Sources.
 
 ### Source Dashboard
 

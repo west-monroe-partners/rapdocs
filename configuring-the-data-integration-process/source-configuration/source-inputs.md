@@ -74,25 +74,13 @@ Users can control all of the Inputs for a Source using the options below. Not al
 
 ## Controlling One Input
 
-Each Input can be controlled using the options below, which are available depending on Source Type. Options can be selected depending on the current state of the Source.
+Users can control individual Inputs with the options below. Certain options are enabled depending on the current state of the Source or Input. If the state of the Source or Input does not allow the user to reset a certain phase, the reason will appear to the left of the context menu when mousing over the option.
 
-{% tabs %}
-{% tab title="Time Series" %}
 * **Reset Staging:** Reset the Staging phase for an Input
-* **Reset Output:** Reset the Output phase for an Input
+* **Reset Output:** Reset the Output phase for an in Input
 * **Reset Validation & Enrichment:** Resets the Validation & Enrichment phase for an Input
 * **Delete:** Delete the Input from the Source
-* **View Data:** Navigate to the Data View tab - filtering the data for only the selected input
+* **View Data:** Navigate to the Data View tab - filter the data for only the selected Input
 
-![Options for Time Series Inputs](../../.gitbook/assets/image%20%28121%29.png)
-{% endtab %}
-
-{% tab title="Keyed" %}
-* **Reset Output:** Reset the Output phase for an Input
-* **Delete:** Delete the Input from the Source
-* **View Data:** Navigate to the Data View tab - filtering the data for only the selected input
-
-![Options for Keyed Inputs](../../.gitbook/assets/image%20%28237%29.png)
-{% endtab %}
-{% endtabs %}
+![Options for One Input - Example: attempting to reset Validation &amp; Enrichment](../../.gitbook/assets/reset-reasons%20%282%29.png)
 

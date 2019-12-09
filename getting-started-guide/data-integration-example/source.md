@@ -14,6 +14,8 @@ Navigate to the Sources screen through the Menu, then create and name a new Sour
 The below image shows some available controls that we will not use in this basic example. Because these are more advanced features, this section only provides a brief description of each.
 {% endhint %}
 
+
+
 ![Extra Options; Leave as-is](../../.gitbook/assets/screenshot_5%20%283%29.png)
 
 {% tabs %}
@@ -38,11 +40,19 @@ The RAP **Agent** establishes a secure connection between data sources and the R
 
 There are three configuration categories which define how the system should Input and Stage data:
 
+There are three configuration categories which define how the system should Input and Stage data:
+
+![Source Detail Options](../../.gitbook/assets/screenshot_4.png)
+
 ![Source Detail Options](../../.gitbook/assets/screenshot_4.png)
 
 ### Source Type
 
+### Source Type
+
 Select `Key`. The Divvy Stations file is a Keyed source. Each record represents a station.
+
+_The Data Refresh Type specifies how RAP tracks changes in data._
 
 {% tabs %}
 {% tab title="Keyed" %}
@@ -82,7 +92,33 @@ When selecting an Input Type, the screen fields will dynamically update in the S
 
 ### **File Type**
 
+_The Connection Type specifies the format of the target source data._
+
+### **File Type**
+
 Select `Delimited`. Divvy Stations has a delimiter that separates data fields.
+
+{% tabs %}
+{% tab title="File" %}
+RAP supports two common **File** types: **Delimited** files designate a single character of text to separate data fields such as a comma or a colon. **Fixed Width** files are plain text files that use spaces to separate data. Data is spaced differently for each file, so RAP requires additional information before it can ingest Fixed Width files.
+{% endtab %}
+
+{% tab title="Table" %}
+A **Table** is a collection of data that exists on a database in an arrangement of rows and columns. Data from tables can be obtained using a query language such as SQL.
+{% endtab %}
+
+{% tab title="SFTP" %}
+**SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
+{% endtab %}
+{% endtabs %}
+
+Select `Delimited`. Divvy Stations has a delimiter that separates data fields.
+
+After selecting a Connection Type, select your connection from the connection drop-down list. The list of connections available depends on your Connection Type.
+
+![Select a Connection](../../.gitbook/assets/connection-dropdown.png)
+
+_The Initiation type specifies how RAP ingests data._
 
 {% tabs %}
 {% tab title="Delimited" %}
@@ -119,6 +155,8 @@ _The Staging Phase details how RAP reads and stores the Source._
 ## Step 5: Save
 
 Click the **Save** button to save the Source; all parameters should be configured. Upon saving the Source, users will be redirected to the Source details view.
+
+![Source Details](../../.gitbook/assets/image%20%28146%29.png)
 
 ![Source Details](../../.gitbook/assets/image%20%28146%29.png)
 
