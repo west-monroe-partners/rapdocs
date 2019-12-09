@@ -18,11 +18,7 @@ Navigate to the Connections screen through the Menu, as seen below.
 
 ![Navigation Menu - Connections](../../.gitbook/assets/screenshot_0.png)
 
-![Navigation Menu - Connections](../../.gitbook/assets/screenshot_0.png)
-
 On the Connections screen, click New Connection in the top right corner. The image below highlights the correct button.
-
-![Create a New Connection](../../.gitbook/assets/screenshot_0b.png)
 
 ![Create a New Connection](../../.gitbook/assets/screenshot_0b.png)
 

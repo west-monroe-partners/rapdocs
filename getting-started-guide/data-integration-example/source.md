@@ -44,8 +44,6 @@ There are three configuration categories which define how the system should Inpu
 
 ![Source Detail Options](../../.gitbook/assets/screenshot_4.png)
 
-![Source Detail Options](../../.gitbook/assets/screenshot_4.png)
-
 ### Source Type
 
 ### Source Type
@@ -155,8 +153,6 @@ _The Staging Phase details how RAP reads and stores the Source._
 ## Step 5: Save
 
 Click the **Save** button to save the Source; all parameters should be configured. Upon saving the Source, users will be redirected to the Source details view.
-
-![Source Details](../../.gitbook/assets/image%20%28146%29.png)
 
 ![Source Details](../../.gitbook/assets/image%20%28146%29.png)
 
