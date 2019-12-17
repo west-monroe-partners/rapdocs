@@ -1,7 +1,7 @@
 ---
 description: >-
   The Details tab for a Source allows a user to specify key information about
-  the Source including ingestion methods and file types.
+  the Source including input types and file types.
 ---
 
 # Details
@@ -11,8 +11,6 @@ description: >-
 On the Edit Source Screen, users can see the various components that make up a Source, including tabs for Source Details, Dependencies, Validations, Enrichments, Inputs, and a view of the Source data.
 
 When creating a new Source, only the Source Details tab is available. Users configure both the Input and Staging processing steps for a Source via the Source Details Tab.
-
-![Details Tab](../../.gitbook/assets/image%20%28197%29.png)
 
 ![Details Tab](../../.gitbook/assets/image%20%28197%29.png)
 
@@ -50,39 +48,7 @@ There are 3 types of Time Series Source Type: **Timestamp**, **Sequence**, and *
 
 ### **Input Types**
 
-### **Input Types**
-
 An Input Type specifies what format and with what cadence data should be accessed from a connection. There are three main types described below. The parameters available will change dynamically depending on a user's selection.
-
-An Input Type specifies what format and with what cadence data should be accessed from a connection. There are three main types described below. The parameters available will change dynamically depending on a user's selection.
-
-{% tabs %}
-{% tab title="File Pull" %}
-**File Pull** ingests a flat file at a scheduled time and cadence. A schedule - specified in UTC - can run and retry based on an error count. 
-
-There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
-
-* A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
-* Data in a **Fixed Width** text file consists of records with constant character length, and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
-
-The schedule is based on cron logic. Additional documentation on how to specify a cron schedule can be found at the [Cron Trigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
-{% endtab %}
-
-{% tab title="File Push" %}
-**File Push** ingests a flat file immediately when available. The file location is monitored to watch for the existence of the file. 
-
-There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
-
-* A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
-* Data in a **Fixed Width** text file consists of records with constant character length, and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
-{% endtab %}
-
-{% tab title="Table Pull" %}
-**Table Pull** extracts data from a database table at a scheduled time and cadence. A schedule - specified in UTC - will run and retry based on an error count.
-
-The schedule is based on cron logic. Additional documentation on how to specify a cron schedule can be found at the [Cron Trigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
-{% endtab %}
-{% endtabs %}
 
 {% tabs %}
 {% tab title="File Pull" %}
@@ -112,40 +78,9 @@ The schedule is based on cron logic. Additional documentation on how to specify 
 {% endtab %}
 {% endtabs %}
 
-After selecting a Connection Type, the user will be able to select a specific connection from the connection drop-down list. Connections are searchable by either the name or path of the connection. When a connection has been selected, users will be able to edit the connection directly by clicking the pencil icon on the right-hand side of the list.
-
-### Initiation Types
-
-An Initiation Type specifies when the target data is ingested into Rap. There are two main types described below. The parameters available will dynamically change depending on a user's selection.
-
-{% tabs %}
-{% tab title="Watcher" %}
-A **Watcher** source monitors the connection and ingests data as soon as it becomes available.
-{% endtab %}
-
-{% tab title="Scheduled" %}
-A **Scheduled** source ingests data at a scheduled time and cadence. A schedule - specified in UTC - can run and retry based on an error count.
-
-The schedule is based on cron logic. Additional documentation on how to specify a cron schedule can be found at the [Cron Trigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
-{% endtab %}
-{% endtabs %}
-
-{% hint style="warning" %}
-In addition to the Initial Parameters, users must also select a Data Refresh, Connection, and Initiation Type before saving the Source. Additional mandatory parameters will appear below depending on the user's selection.
-{% endhint %}
-
 ## Parameter Groups
 
 ### Input
-
-| Filter Appears Under | Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- | :--- |
-| Input Type: File Pull or File Push | file\_mask\* | .csv | Enter the file name or file name pattern to watch for | N |
-| Input Type: Table Pull | pg\_fetch\_size |  | Fetch size for JDBC connection | Y |
-| All | connection\_name\* |  | Connection name of the source | N |
-| Input Type: File Pull | delete\_file | TRUE | Remove file from source system when input completes | Y |
-| Input Type: File Pull | post\_processing\_folder |  | Optional folder to move file to on source system once input is complete | Y |
-| Input Type: Table Pull | source\_query\* | SELECT \* FROM | Query to acquire the source data | N |
 
 | Filter Appears Under | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- | :--- |

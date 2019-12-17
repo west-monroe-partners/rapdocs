@@ -65,63 +65,48 @@ There are currently seven different database connections available.
 
 #### Common Parameters:
 
+| Parameter | Default Value | Description | Advanced |
+| :--- | :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Default Value</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Advanced</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">connection_string</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
+      <th style="text-align:left">connection_string</th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left">
         <p>JDBC connection string for the destination database.</p>
         <p>Overrides all other parameters if specified.</p>
-      </td>
-      <td style="text-align:left">Y</td>
+      </th>
+      <th style="text-align:left">Y</th>
     </tr>
-    <tr>
-      <td style="text-align:left">database_name</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Name</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">host_name</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Host address of the source database</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">password</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Database password</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">port</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Port on the database server</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">user</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Database username</td>
-      <td style="text-align:left">N</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">warehouse</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Warehouse name</td>
-      <td style="text-align:left">N</td>
-    </tr>
-  </tbody>
-</table>#### Additional Parameters: SQL Server
+  </thead>
+  <tbody></tbody>
+</table>| database\_name |  | Name of the database | N |
+| :--- | :--- | :--- | :--- |
+
+
+| host\_name |  | Host address of the source database | N |
+| :--- | :--- | :--- | :--- |
+
+
+| password |  | Database password | N |
+| :--- | :--- | :--- | :--- |
+
+
+| port |  | Port on the database server | N |
+| :--- | :--- | :--- | :--- |
+
+
+| user |  | Database username | N |
+| :--- | :--- | :--- | :--- |
+
+
+| Parameter | Default Value | Description | Advanced |
+| :--- | :--- | :--- | :--- |
+| warehouse |  | Warehouse name | N |
+
+#### Additional Parameters: SQL Server
 
 | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- |

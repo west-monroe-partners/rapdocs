@@ -1,10 +1,10 @@
-# Source Dashboard
+# Operational Dashboard
 
 ### Navigation
 
-RAP includes a dashboard for monitoring the status of Sources which is viewable by navigating to the Source Dashboard from the menu, as shown below. 
+RAP has a built in Operational Dashboard, viewable by clicking the Source Dashboard link in the primary navigation menu, as shown in Figure 2.2a. 
 
-![](../../.gitbook/assets/navigate-to-dashboard%20%282%29.png)
+![](../../.gitbook/assets/1%20%281%29.png)
 
 ### Source Dashboard Screen
 
