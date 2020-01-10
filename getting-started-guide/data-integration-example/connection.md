@@ -16,11 +16,11 @@ In a Chrome browser, navigate to the RAP Sources screen by accessing the URL pro
 
 Navigate to the Connections screen through the Menu, as seen below.
 
-![Navigation Menu - Connections](../../.gitbook/assets/screenshot_0.png)
+![Navigation Menu - Connections](../../.gitbook/assets/navigate-to-connections.png)
 
 On the Connections screen, click New Connection in the top right corner. The image below highlights the correct button.
 
-![Create a New Connection](../../.gitbook/assets/screenshot_0b.png)
+![Create a New Connection](../../.gitbook/assets/create-a-new-connection.png)
 
 ### Naming your new Connection
 
@@ -76,10 +76,6 @@ After configuring the **Source** connection, be sure the input file is in the co
 
 Click **Save** to finish Source Connection configuration.
 
-## Step 4: Create an Output Connection
-
-Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
-
 ## Step 4: Create Output Connection
 
 An additional Connection will be required during the [Output](output.md) phase. Repeat the previous steps to configure an Output Connection with the following parameters:
@@ -89,4 +85,6 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **file\_path:** `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}` 
 
 ![Output Connection Configuration](../../.gitbook/assets/image%20%28198%29.png)
+
+Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
