@@ -36,63 +36,89 @@ The RAP **Agent** establishes a secure connection between data sources and the R
 
 ## Step 2: Configure Source Details
 
-There are three configuration categories which define how the system should Input and Stage data:
+There are three main configuration categories that define how the system should Input and Stage data:
 
-![Source Detail Options](../../.gitbook/assets/screenshot_4.png)
+![Source Detail Options](../../.gitbook/assets/config-types.png)
 
-### Source Type
+### Data Refresh Type
 
-Select `Key`. The Divvy Stations file is a Keyed source. Each record represents a station.
+_The Data Refresh Type specifies how RAP tracks changes in data._
+
+Select `Key`. The Divvy Stations file is suitable for the Key refresh type. Each record represents a station.
 
 {% tabs %}
-{% tab title="Keyed" %}
-**Keyed** sources are data sets containing a unique identifier or key tied to a logical entity. These can be used as lookups from other sources. Time Series sources cannot be used as lookups.
+{% tab title="Key" %}
+Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups.
 {% endtab %}
 
-{% tab title="Time Series" %}
-**Time Series** sources represent transactional sources. Rather than a unique identifier per entity \(such as a Divvy Station\), they have a identifier to track individual _events,_ typically a timestamp.
+{% tab title="Timestamp" %}
+**Timestamp** sources identify changes in data using a column that contains the date and/or time for each record. Collectively, these values represent the time range of the entire data set. Data with newer time ranges replace data with older time ranges.
+{% endtab %}
+
+{% tab title="Sequence" %}
+**Sequence** sources identify changes in data using a column containing integer numbers that follow a sequence. Data with higher value sequences replace data with lower value sequences.
+{% endtab %}
+
+{% tab title="Full" %}
+**Full** sources replace the data completely whenever RAP ingests new data into the source.  
+{% endtab %}
+
+{% tab title="None" %}
+**None** sources do not track changes in data. Instead, RAP appends any new data to the existing data.
 {% endtab %}
 {% endtabs %}
 
 {% hint style="warning" %}
-Be sure to use `Divvy_Stations_2017_Q1Q2.csv -`the other files packaged in the original zip file are Time Series.
+Be sure to use `Divvy_Stations_2017_Q1Q2.csv -`the other files packaged in the original zip file are intended for other Data Refresh Types.
 {% endhint %}
 
-### Input Type
+### Connection Type
 
-Select `File Push`
+_The Connection Type specifies the format of the target source data._
+
+Select `File`, and then select `Delimited`from the File Type option that will appear directly below. Divvy Stations is a CSV file that uses commas to separate data fields.
 
 {% tabs %}
-{% tab title="File Pull" %}
-A flat file to be ingested at a scheduled time and cadence.
+{% tab title="File" %}
+RAP supports two common **File** types: **Delimited** files designate a single character of text to separate data fields such as a comma. **Fixed Width** files are plain text files that use spaces to separate data. Data is spaced differently for each file, so RAP requires additional information before it can ingest Fixed Width files.
 {% endtab %}
 
-{% tab title="File Push" %}
-A file watcher which monitors a folder path to ingest files as soon as they become available.
+{% tab title="Table" %}
+A **Table** is a collection of data that exists in a database in an arrangement of rows and columns. Data from tables can be obtained using a query language such as SQL.
 {% endtab %}
 
-{% tab title="Table Pull" %}
+{% tab title="SFTP" %}
 A database table to be ingested at a scheduled time and cadence.
 {% endtab %}
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Input Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on input type attributes.
+When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on Connection Type attributes.
 {% endhint %}
 
-### **File Type**
+After selecting a Connection Type, select your connection from the connection drop-down list. The list of connections available depends on your Connection Type.
 
-Select `Delimited`. Divvy Stations has a delimiter that separates data fields.
+![Select a Connection](../../.gitbook/assets/connection-dropdown.png)
+
+### **Initiation Type**
+
+_The Initiation Type specifies how RAP ingests data._
+
+Select `Watcher`.
 
 {% tabs %}
-{% tab title="Delimited" %}
-A **Delimited** file is a file where each line has fields separated by a delimiter, representing a new record. The most common format is a CSV, where each each record is separated by a comma.
+{% tab title="Watcher" %}
+RAP continuously monitors a data path \(a local/network folder path or database connection\) and ingests data as soon as it becomes available.
 {% endtab %}
 
-{% tab title="Fixed Width" %}
-A **fixed width** file consists of records with specified length per row, and specified length per column, rather than any delimiters. While less human-readable, they are much more compact, and thus useful for large data volumes.
+{% tab title="Scheduled" %}
+RAP ingests data from a data path at a scheduled time and cadence.
 {% endtab %}
 {% endtabs %}
+
+{% hint style="warning" %}
+When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on Initiation Type attributes.
+{% endhint %}
 
 ## **Step 3: Specify Input Parameters**
 
@@ -120,7 +146,7 @@ _The Staging Phase details how RAP reads and stores the Source._
 
 Click the **Save** button to save the Source; all parameters should be configured. Upon saving the Source, users will be redirected to the Source details view.
 
-![Source Details](../../.gitbook/assets/image%20%28146%29.png)
+![Source Details](../../.gitbook/assets/step-5-save.png)
 
 _RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database._
 
