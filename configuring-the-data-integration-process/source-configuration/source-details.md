@@ -12,7 +12,7 @@ On the Edit Source Screen, users can see the various components that make up a S
 
 When creating a new Source, only the Source Details tab is available. Users configure both the Input and Staging processing steps for a Source via the Source Details Tab.
 
-![Details Tab](../../.gitbook/assets/image%20%28197%29.png)
+![Source Details Tab](../../.gitbook/assets/edit-source-screen%20%281%29.png)
 
 ## Initial Parameters
 
@@ -26,19 +26,20 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 * **Agent\*:** The [Agent ](../../operation-guide/monitoring-the-process/rap-agent.md)that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
 * **Default:** Sets the previously selected Agent to be the default Agent when creating any new Sources.
 
-### Source Types
+### Data Refresh Types
 
-A Source Type specifies how RAP should handle processing and refreshing the data. There are two main types described below. The parameters available will dynamically change depending on a user's selection.
+A Data Refresh Type specifies how RAP should handle processing and refreshing the data. There are two main types described below. The parameters available will dynamically change depending on the user's selection.
 
 {% tabs %}
 {% tab title="Time Series" %}
 **Time Series** data has a time-based event column or a sequential ID that corresponds to an ordering in time. Examples include transactions, events, or logs. In the terminology of traditional star schema models, Time Series sources are analogous to certain types of Facts.
 
-There are 3 types of Time Series Source Type: **Timestamp**, **Sequence**, and **None**. Parameter selections will update dynamically depending on the selection.
+There are 4 types of Time Series Sources: **Timestamp**, **Sequence**, **None**, and **Full**. Parameter selections will update dynamically depending on the selection.
 
-* **Time Series - Timestamp** data contains a column that is datetime formatted and represents the exact time an event occurred. The column \(**date\_column**\) must exist and be non-null.
-* **Time Series - Sequence** data contains a column that is an integer and represents the sequential order that something occurred. The column \(**range\_column**\) must exist and be populated.
-* **Time Series - None** data does not have any column that specifies a unique timestamp or unique sequential order. This option is used for exploratory data analysis for loading the data in initially, but should not be used for production data loads.
+* **Timestamp** data contains a column that is datetime formatted and represents the exact time an event occurred. The column \(**date\_column**\) must exist and be non-null.
+* **Sequence** data contains a column that is an integer and represents the sequential order that something occurred. The column \(**range\_column**\) must exist and be populated.
+*  **None** data does not have any column that specifies a unique timestamp or unique sequential order. This option is used for exploratory data analysis for loading the data in initially, but should not be used for production data loads.
+* **Full** data, like None, does not have any column that specifies an order. With this option, the data is completely replaced every time data is ingested into RAP.
 {% endtab %}
 
 {% tab title="Key" %}
@@ -46,39 +47,26 @@ There are 3 types of Time Series Source Type: **Timestamp**, **Sequence**, and *
 {% endtab %}
 {% endtabs %}
 
-### **Input Types**
+### **Connection Types**
 
-An Input Type specifies what format and with what cadence data should be accessed from a connection. There are three main types described below. The parameters available will change dynamically depending on a user's selection.
+A Connection Type specifies what format and with what cadence data should be accessed from a connection. There are three main types described below. The parameters available will change dynamically depending on the users's selection.
 
 {% tabs %}
-{% tab title="File Pull" %}
-**File Pull** ingests a flat file at a scheduled time and cadence. A schedule - specified in UTC - can run and retry based on an error count.
-
-There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
+{% tab title="File" %}
+RAP supports 2 types of files: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
 
 * A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
-* Data in a **Fixed Width** text file consists of records with constant character length, and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
-
-The schedule is based on cron logic. Additional documentation on how to specify a cron schedule can be found at the [Cron Trigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+* Data in a **Fixed Width** text file consists of records with constant character length and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
 {% endtab %}
 
-{% tab title="File Push" %}
-**File Push** ingests a flat file immediately when available. The file location is monitored to watch for the existence of the file.
-
-There are 2 types of File Pulls: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
-
-* A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
-* Data in a **Fixed Width** text file consists of records with constant character length, and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
+{% tab title="Table" %}
+A **Table** is data that exists in a database. Upon selecting this option, a parameter will appear allowing the user to query the database using SQL.
 {% endtab %}
 
-{% tab title="Table Pull" %}
-**Table Pull** extracts data from a database table at a scheduled time and cadence. A schedule - specified in UTC - will run and retry based on an error count.
-
-The schedule is based on cron logic. Additional documentation on how to specify a cron schedule can be found at the [Cron Trigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+{% tab title="SFTP" %}
+**SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
 {% endtab %}
 {% endtabs %}
-
-## Parameter Groups
 
 ### Input
 
