@@ -72,12 +72,12 @@ A **Table** is data that exists in a database. Upon selecting this option, a par
 
 | Filter Appears Under | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- | :--- |
-| Input Type: File Pull or File Push | file\_mask\* | .csv | Enter the file name or file name pattern to watch for | N |
-| Input Type: Table Pull | pg\_fetch\_size |  | Fetch size for JDBC connection | Y |
+| Connection Type: File | file\_mask\* | .csv | Enter the file name or file name pattern to watch for | N |
+| Connection Type: Table | pg\_fetch\_size |  | Fetch size for JDBC connection | Y |
 | All | connection\_name\* |  | Connection name of the source | N |
-| Input Type: File Pull | delete\_file | TRUE | Remove file from source system when input completes | Y |
-| Input Type: File Pull | post\_processing\_folder |  | Optional folder to move file to on source system once input is complete | Y |
-| Input Type: Table Pull | source\_query\* | SELECT \* FROM | Query to acquire the source data | N |
+| Connection Type: File and SFTP | delete\_file | TRUE | Remove file from source system when input completes | Y |
+| Connection Type: File and SFTP | post\_processing\_folder |  | Optional folder to move file to on source system once input is complete | Y |
+| Connection Type: Table | source\_query\* | SELECT \* FROM | Query to acquire the source data | N |
 
 ### Schedule
 
