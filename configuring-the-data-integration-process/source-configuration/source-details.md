@@ -97,6 +97,8 @@ Additional documentation on how to specify a cron schedule can be found at the [
 
 ### Staging
 
+_\*Any parameter under the File Type option requires the user to have chosen a Connection Type of either File or SFTP._
+
 | Appears Under | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- | :--- |
 | All | compression | none | Specifies if reading from a compressed file | Y |
@@ -109,21 +111,19 @@ Additional documentation on how to specify a cron schedule can be found at the [
 | All | trim\_headers | none | Choose what sides to trim whitespace on the header line or fields | Y |
 | All | trim\_data | both | Choose what sides to trim whitespace on the data elements | Y |
 | All | disable\_profiling | FALSE | Check to disable automatic data profiling for the source | Y |
-| Source Type: Time Series | batch\_size\* | 1000000 | Maximum size of internal tables. Use smaller values for higher concurrency in later stages | Y |
-| Source Type: Time Series | concurrency\* | 1 | Number of processing cores involved in staging phase for Time Series Sources. Minimum number of internal tables | Y |
-| Source Type: Time Series | partition\_column |  | Column\(s\) that will be hashed to calculate where data goes during partitioning \(Can be composite\). Used for Time Series Sources with downstream Window Function Processing | Y |
-| Time Series Range Type: Timestamp | date\_column\* |  | Event date column | N |
-| Time Series Range Type: Timestamp | datetime\_format | M/d/yyyy H:m:s | Java Datetime format for the date\_column | N |
-| Time Series Range Type: Timestamp | get\_date\_from\_file\_name | FALSE | Used to apply the date time from the file name as the event time to all records | Y |
-| Time Series Range Type: Sequence | range\_column\* |  | Sequence column | N |
+| Refresh Type: All \(except Key\) | batch\_size\* | 1000000 | Maximum size of internal tables. Use smaller values for higher concurrency in later stages | Y |
+| Refresh Type: All \(except Key\) | concurrency\* | 1 | Number of processing cores involved in staging phase for Time Series Sources. Minimum number of internal tables | Y |
+| Refresh Type: All \(except Key\) | partition\_column |  | Column\(s\) that will be hashed to calculate where data goes during partitioning \(Can be composite\). Used for Time Series Sources with downstream Window Function Processing | Y |
+| Refresh Type: Key, Timestamp | date\_column\* |  | Event date column | N |
+| Refresh Type: Key, Timestamp | datetime\_format | M/d/yyyy H:m:s | Java Datetime format for the date\_column | N |
+| Refresh Type: Key, Timestamp | get\_date\_from\_file\_name | FALSE | Used to apply the date time from the file name as the event time to all records | Y |
+| Refresh Type: Sequence | range\_column\* |  | Sequence column | N |
 | File Type: Fixed Width | schema\* | {} | JSON Schema for fixed width file types | N |
-| Source Type: Key | cdc\_process\* | N,C | Customization of what types of records to process as part of Change Data Capture. Values are \(N\)ew, \(C\)hanged, \(O\)ld, \(U\)nchanged | Y |
-| Source Type: Key | cdc\_store\_history | FALSE | 0/1 indicating whether to store the history of changes for each input | Y |
-| Source Type: Key | date\_column |  | Event date column | Y |
-| Source Type: Key | datetime\_format | M/d/yyyy H:m:s | Java Datetime format for the date\_column | Y |
-| Source Type: Key | get\_date\_from\_file\_name | FALSE | Used to apply the date time from the file name as the event time to all records | Y |
-| Source Type: Key | exclude\_from\_cdc |  | Array of column names to be excluded from the CDC calculation | Y |
-| Source Type: Key | key\_columns\* |  | Array of one or more columns representing the unique identifier for records in this source | N |
+| Refresh Type: Key | cdc\_process\* | N,C | Customization of what types of records to process as part of Change Data Capture. Values are \(N\)ew, \(C\)hanged, \(O\)ld, \(U\)nchanged | Y |
+| Refresh Type: Key | cdc\_store\_history | FALSE | 0/1 indicating whether to store the history of changes for each input | Y |
+| Refresh Type: Key, Timestamp | get\_date\_from\_file\_name | FALSE | Used to apply the date time from the file name as the event time to all records | Y |
+| Refresh Type: Key | exclude\_from\_cdc |  | Array of column names to be excluded from the CDC calculation | Y |
+| Refresh Type: Key | key\_columns\* |  | Array of one or more columns representing the unique identifier for records in this source | N |
 | File Type: Delimited | column\_delimiter\* | , | Column delimiter character in the Input file | Y |
 | File Type: Delimited | column\_headers |  | Array of strings describing the column headers. Used when files do not contain headers. | Y |
 | File Type: Delimited | header\_qualifier | " | Qualifier character for the header row for delimited files | Y |
@@ -140,8 +140,8 @@ Additional documentation on how to specify a cron schedule can be found at the [
 | All | archive files failed | 1 year | Specifies period of time from input completion after which files are removed from Input archive folder | Y |
 | All | buffer files | 0 | Specifies period of time from output completion after which output files are moved from fast output buffer zone to long term output storage _\(Legacy Compatibility\)_ | Y |
 | All | buffer files failed | 7 days | Specifies period of time from input completion after which files are moved from Input buffer zone to long term Landing folder storage for failed inputs \(output\_status\_code &lt;&gt; ‘P’\) | Y |
-| Source Type: Time Series | data tables | 1 year | Specifies period of time from processing completion after which data tables are dropped \(for Time Series Sources\) | Y |
-| Source Type: Key | data tables | -1 | Specifies period of time from processing completion after which data is deleted \(for Keyed sources\) | Y |
+| Refresh Type: All \(except Key\) | data tables | 1 year | Specifies period of time from processing completion after which data tables are dropped \(for Time Series Sources\) | Y |
+| Refresh Type: Key | data tables | -1 | Specifies period of time from processing completion after which data is deleted \(for Keyed sources\) | Y |
 | All | process information | 2 years | Specifies period of time from processing completion after which data in processing tables \(input, landing, output\_send and associated history tables\) is deleted | Y |
 | All | work tables | 1 day | specifies period of time from processing completion after which work tables \(key_, ts_\) are dropped. | Y |
 | All | work tables failed | 7 days | specifies period of time from input completion after which work tables are dropped for failed inputs. | Y |
