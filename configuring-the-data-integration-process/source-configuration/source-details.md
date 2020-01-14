@@ -85,15 +85,15 @@ Additional documentation on how to specify a cron schedule can be found at the [
 
 | Appears Under | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- | :--- |
-| Input Type: File Pull or Table Pull | seconds |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
-| Input Type: File Pull or Table Pull | minutes |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
-| Input Type: File Pull or Table Pull | hours |  | Cron Field - Allowed Values: 0-23 - Allowed Special Characters: , - \* / | Y |
-| Input Type: File Pull or Table Pull | day\_of\_month |  | Cron Field - Allowed Values: 1-31 - Allowed Special Characters: , - \* ? / L W C | Y |
-| Input Type: File Pull or Table Pull | month |  | Cron Field - Allowed Values: 0-11 or JAN-DEC - Allowed Special Characters: , - \* / | Y |
-| Input Type: File Pull or Table Pull | day\_of\_week |  | Cron Field - Allowed Values: 0-6 \(0=Monday 6=Sunday\) - Allowed Special Characters: , - \* ? / L C \# | Y |
-| Input Type: File Pull or Table Pull | error\_retry\_count | 3 | Number of times an input can be retried before failing | Y |
-| Input Type: File Pull or Table Pull | error\_retry\_wait | 60 | Amount of time to wait between error retries \(in seconds\) | Y |
-| Input Type: File Pull or Table Pull | disable\_schedule | FALSE | Disable schedule | Y |
+| Initiation Type: Scheduled | seconds |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
+| Initiation Type: Scheduled | minutes |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
+| Initiation Type: Scheduled | hours |  | Cron Field - Allowed Values: 0-23 - Allowed Special Characters: , - \* / | Y |
+| Initiation Type: Scheduled | day\_of\_month |  | Cron Field - Allowed Values: 1-31 - Allowed Special Characters: , - \* ? / L W C | Y |
+| Initiation Type: Scheduled | month |  | Cron Field - Allowed Values: 0-11 or JAN-DEC - Allowed Special Characters: , - \* / | Y |
+| Initiation Type: Scheduled | day\_of\_week |  | Cron Field - Allowed Values: 0-6 \(0=Monday 6=Sunday\) - Allowed Special Characters: , - \* ? / L C \# | Y |
+| Initiation Type: Scheduled | error\_retry\_count | 3 | Number of times an input can be retried before failing | Y |
+| Initiation Type: Scheduled | error\_retry\_wait | 60 | Amount of time to wait between error retries \(in seconds\) | Y |
+| Initiation Type: Scheduled | disable\_schedule | FALSE | Disable schedule | Y |
 
 ### Staging
 
