@@ -29,7 +29,7 @@
     * [Output History](configuring-the-data-integration-process/output-configuration/output-history.md)
 * [Operation Guide](operation-guide/README.md)
   * [Monitoring the Process](operation-guide/monitoring-the-process/README.md)
-    * [Operational Dashboard](operation-guide/monitoring-the-process/operational-dashboard.md)
+    * [Source Dashboard](operation-guide/monitoring-the-process/operational-dashboard.md)
     * [Checking Statuses](operation-guide/monitoring-the-process/checking-statuses.md)
     * [Checking Logs](operation-guide/monitoring-the-process/checking-logs.md)
     * [Example Daily Routine](operation-guide/monitoring-the-process/example-daily-routine.md)
