@@ -21,7 +21,7 @@
     * [Inputs](configuring-the-data-integration-process/source-configuration/source-inputs.md)
     * [Data View](configuring-the-data-integration-process/source-configuration/source-data-view.md)
     * [Importing and Exporting Configurations](configuring-the-data-integration-process/source-configuration/importing-and-exporting-source-configurations.md)
-  * [Validation and Enrichment Rule Templates](configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md)
+  * [Templates](configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md)
   * [Outputs](configuring-the-data-integration-process/output-configuration/README.md)
     * [Output Details](configuring-the-data-integration-process/output-configuration/output-details.md)
     * [Output Mapping](configuring-the-data-integration-process/output-configuration/output-mapping.md)
