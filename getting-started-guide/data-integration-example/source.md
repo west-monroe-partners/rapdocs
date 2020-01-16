@@ -48,7 +48,7 @@ Select `Key`. The Divvy Stations file is suitable for the Key refresh type. Each
 
 {% tabs %}
 {% tab title="Key" %}
-Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups.
+Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups. In the terminology of traditional star schema models, Key Sources are analogous to Dimensions.
 {% endtab %}
 
 {% tab title="Timestamp" %}

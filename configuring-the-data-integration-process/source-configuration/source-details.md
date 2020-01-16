@@ -28,22 +28,27 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 
 ### Data Refresh Types
 
-A Data Refresh Type specifies how RAP should handle processing and refreshing the data. There are two main types described below. The parameters available will dynamically change depending on the user's selection.
+A Data Refresh Type specifies how RAP should handle processing and refreshing the data. The five types are described below. The parameters available will dynamically change depending on the user's selection.
 
 {% tabs %}
-{% tab title="Time Series" %}
-**Time Series** data has a time-based event column or a sequential ID that corresponds to an ordering in time. Examples include transactions, events, or logs. In the terminology of traditional star schema models, Time Series sources are analogous to certain types of Facts.
-
-There are 4 types of Time Series Sources: **Timestamp**, **Sequence**, **None**, and **Full**. Parameter selections will update dynamically depending on the selection.
-
-* **Timestamp** data contains a column that is datetime formatted and represents the exact time an event occurred. The column \(**date\_column**\) must exist and be non-null.
-* **Sequence** data contains a column that is an integer and represents the sequential order that something occurred. The column \(**range\_column**\) must exist and be populated.
-*  **None** data does not have any column that specifies a unique timestamp or unique sequential order. This option is used for exploratory data analysis for loading the data in initially, but should not be used for production data loads.
-* **Full** data, like None, does not have any column that specifies an order. With this option, the data is completely replaced every time data is ingested into RAP.
+{% tab title="Key" %}
+Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups. In the terminology of traditional star schema models, Key Sources are analogous to Dimensions.
 {% endtab %}
 
-{% tab title="Key" %}
-**Key** data represents data where each record has a unique identifier comprised of one or more columns. In the terminology of traditional star schema models, Key Sources are analogous to Dimensions.
+{% tab title="Timestamp" %}
+**Timestamp** sources identify changes in data using a column that contains the date and/or time for each record. Collectively, these values represent the time range of the entire data set. Data with newer time ranges replace data with older time ranges.
+{% endtab %}
+
+{% tab title="Sequence" %}
+**Sequence** sources identify changes in data using a column containing integer numbers that follow a sequence. Data with higher value sequences replace data with lower value sequences.
+{% endtab %}
+
+{% tab title="Full" %}
+**Full** sources replace the data completely whenever RAP ingests new data into the source. 
+{% endtab %}
+
+{% tab title="None" %}
+**None** sources do not track changes in data. Instead, RAP appends any new data to the existing data.
 {% endtab %}
 {% endtabs %}
 
