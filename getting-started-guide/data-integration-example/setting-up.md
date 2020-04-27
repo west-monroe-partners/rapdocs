@@ -20,61 +20,11 @@ Your RAP account team will provide you with credentials to an AWS account. Once 
 
 ![Navigate to the S3 service in AWS \(Step 2\)](../../.gitbook/assets/aws-management-console-2.jpg)
 
-## Step 2: Navigate to the Training Folder
+## Step 3: Explore the S3 Environment
 
-Search for the bucket `training` using the top search bar and select the bucket with your firm's initials as a prefix. It should look like `{firm initials}.training`. Select the bucket.
+S3 is a storage service in AWS that allows you to store files in a structured hierarchy as you would in a conventional file system such as a Windows computer, for example.
 
-![S3 Bucket Search](../../.gitbook/assets/image%20%28241%29.png)
+The S3 environment should already be set up based on the requirements of your particular project. Typically, each RAP project will have an _input_ container to hold files that will be ingested into RAP, and an _output_ container which will be the destination of files exported from RAP. 
 
-In the training bucket, there should be an **input** and **output** folder.
-
-![Training Folder](../../.gitbook/assets/image%20%28210%29.png)
-
-## Step 3: Create a Unique Input Folder
-
-Select the **input** folder.
-
-![Input Folder](../../.gitbook/assets/image%20%28143%29.png)
-
-Click **Create folder** and create a folder with your initials in the **input** folder. If you have the same initials as somebody else, add a suffix that is unique, such as your birthday. Click **Save** to create the folder.
-
-![Create Input Initials Folder](../../.gitbook/assets/image%20%28125%29.png)
-
-Select the input folder with your initials.
-
-![Select Initials Folder](../../.gitbook/assets/image%20%2866%29.png)
-
-In the input initials folder, select **Upload**.
-
-![Upload Button](../../.gitbook/assets/image%20%28238%29.png)
-
-The **Upload** modal should appear. Drag the file **Divvy\_Stations\_2017\_Q1Q2.csv** into the modal. Select **Upload** to upload the file with default settings. 
-
-![Upload File](../../.gitbook/assets/image%20%2869%29.png)
-
-The file should now be in your unique input folder. Verify that it has been uploaded.
-
-![](../../.gitbook/assets/image%20%28194%29.png)
-
-## Step 4: Create a Unique Output Folder
-
-Use the breadcrumbs to navigate back to `training` folder.
-
-![Navigation to the training folder](../../.gitbook/assets/image%20%2846%29.png)
-
-Select the `output` folder.
-
-![Output Folder](../../.gitbook/assets/image%20%28137%29.png)
-
-Click **Create folder** and create a folder with your initials in the **output** folder. If you have the same initials as somebody else, add a suffix that is unique, such as your birthday. Click **Save** to create the folder.
-
-![Create Output Initials Folder](../../.gitbook/assets/image%20%28172%29.png)
-
-You should now have the following AWS folders created:
-
-* `s3://{FIRM INITIALS}.training/input/{YOUR INITIALS}`
-  * This should have the file `Divvy_Stations_2017_Q1Q2.csv` in the folder
-* `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}`
-
-The environment setup is complete. Proceed to [Connection](connection.md) to begin configuring RAP.
+The S3 environment may have other containers that may be integral to the project workflow. Your RAP account team will let you know how all of the containers in your S3 environment are to be used. 
 
