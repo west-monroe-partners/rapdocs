@@ -14,9 +14,11 @@ The Data Integration Example uses Divvy Bike data hosted on Amazon Web Services'
 
 AWS is a popular platform for data storage that RAP uses internally to process data. Use of AWS during this example provides important exposure to the platform.
 
-Navigate to the AWS S3 Management Console for your firm. [https://s3.console.aws.amazon.com/s3/home?region=us-east-2](https://s3.console.aws.amazon.com/s3/home?region=us-east-2)
+Your RAP account team will provide you with credentials to an AWS account. Once you have logged in, navigate to the S3 service from the Services dropdown menu in the top-left corner of the AWS Management Console.
 
-If the login page appears, enter the login information provided by your RAP account team.
+![Navigate to the S3 service in AWS \(Step 1\)](../../.gitbook/assets/aws-management-console.jpg)
+
+![Navigate to the S3 service in AWS \(Step 2\)](../../.gitbook/assets/aws-management-console-2.jpg)
 
 ## Step 2: Navigate to the Training Folder
 
