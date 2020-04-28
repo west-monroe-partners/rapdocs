@@ -28,3 +28,17 @@ The S3 environment should already be set up based on the requirements of your pa
 
 The S3 environment may have other containers that may be integral to the project workflow. Your RAP account team will let you know how all of the containers in your S3 environment are to be used. 
 
+## Step 4: Upload the Divvy Data
+
+Before ingesting data from S3 container into RAP, The data must first be uploaded to the input container. Navigate to the designated input container for your project and click the Upload button.  
+
+![Navigate to the input container and click Upload](../../.gitbook/assets/navigate-to-input-container.jpg)
+
+Once the upload modal window appears, drag and drop the example file that was downloaded in Step 1 into the window. Click Next on any following prompts until the upload is complete. 
+
+![Upload the example file](../../.gitbook/assets/upload-example-file.jpg)
+
+{% hint style="warning" %}
+Remember that the name and path of your input container will be unique to your project.
+{% endhint %}
+
