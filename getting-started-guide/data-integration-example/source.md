@@ -96,7 +96,7 @@ A database table to be ingested at a scheduled time and cadence.
 When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on Connection Type attributes.
 {% endhint %}
 
-After selecting a Connection Type, select your connection from the connection drop-down list. The list of connections available depends on your Connection Type.
+After selecting a Connection Type, select the connection that you configured on the previous page from the connection drop-down list. The list of connections available depends on your Connection Type.
 
 ![Select a Connection](../../.gitbook/assets/connection-dropdown.png)
 
