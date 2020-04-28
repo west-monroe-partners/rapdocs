@@ -68,7 +68,7 @@ Select `File`. This tutorial pushes a file to RAP as input and then outputs a fi
 
 ## Step 3: Indicate File Path
 
-Finally, file\_path is the path to the location of the file, excluding the filename. Recall that the input data is located at `s3://{FIRM INITIALS}.training/input/{YOUR INITIALS}`.
+Finally, file\_path is the path to the location of the file, excluding the filename. Recall that the input data is located in S3, so enter the path to _your designated input container_. All file paths will begin with `s3://` , so an example input path will look like`s3://wmp.test/input`.
 
 {% hint style="warning" %}
 After configuring the **Source** connection, be sure the input file is in the correct folder or S3 bucket.
@@ -82,7 +82,7 @@ An additional Connection will be required during the [Output](output.md) phase. 
 
 * **Name:** `Divvy - Output Path`
 * **Connection Type:** `File`
-* **file\_path:** `s3://{FIRM INITIALS}.training/output/{YOUR INITIALS}` 
+* **file\_path:** The path to your output container 
 
 ![Output Connection Configuration](../../.gitbook/assets/image%20%28198%29.png)
 
