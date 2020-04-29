@@ -12,7 +12,7 @@ The Data Integration Example uses Divvy Bike data hosted on Amazon Web Services'
 
 ## Step 2: Connect to AWS
 
-AWS is a popular platform for data storage that RAP uses internally to process data. Use of AWS during this example provides important exposure to the platform.
+RAP uses Amazon Web Services \(AWS\) to host and process the data. In order to setup this example, you will need to use the AWS interface to manually stage data in a location for RAP to pick up and process.
 
 Your RAP account team will provide you with credentials to an AWS account. Once you have logged in, navigate to the S3 service from the Services dropdown menu in the top-left corner of the AWS Management Console.
 
@@ -22,9 +22,9 @@ Your RAP account team will provide you with credentials to an AWS account. Once 
 
 ## Step 3: Explore the S3 Environment
 
-S3 is a storage service in AWS that allows you to store files in a structured hierarchy as you would in a conventional file system such as a Windows computer, for example.
+S3 is a storage service in AWS that allows you to store files in a structured hierarchy as you would in a conventional file system such as Windows File Explorer.
 
-The S3 environment should already be set up based on the requirements of your particular project. Typically, each RAP project will have an _input_ container to hold files that will be ingested into RAP, and an _output_ container which will be the destination of files exported from RAP. 
+The S3 environment should already be provisioned as part of the automated deployment of RAP for your particular project. Typically, each RAP project will have an _input_ container to hold files that will be ingested into RAP, and an _output_ container which will be the destination of files exported from RAP. 
 
 The S3 environment may have other containers that may be integral to the project workflow. Your RAP account team will let you know how all of the containers in your S3 environment are to be used. 
 

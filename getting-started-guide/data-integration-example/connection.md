@@ -6,7 +6,7 @@ description: This section describes the process of setting up a connection in RA
 
 ## Step 1: Create a Connection
 
-RAP communicates to external data services through Connections. Connections consist of configurations for **where** and **what type** of data to pull into RAP. Both Sources and Outputs can use connections. For this example, we will configure one file location to pull data from \(Source\) and one to push the data out to \(Output\).
+RAP communicates to external data services through Connections. Connections consist of configurations for **where** and **what type** of data to pull into RAP. Both Sources and Outputs can use connections. For this example, we will configure one file location to pull data from \(Source\) and another file location to push the data out \(Output\).
 
 ### Opening RAP
 
@@ -48,7 +48,9 @@ The below image _\*\*_shows the Active toggle. This is used to deactivate or rea
 
 The below image shows the Connection Type control. Connection type selection dynamically updates the available options.
 
-Select `File`. This tutorial pushes a file to RAP as input and then outputs a file. For use cases, see the below tabs.
+Select `File`. This tutorial pushes a file to RAP as input and then outputs a file.
+
+For examples of other connection types, see the below tabs.
 
 {% tabs %}
 {% tab title="Table" %}
