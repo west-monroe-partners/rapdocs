@@ -29,6 +29,8 @@ Consider the Source data below. The first image is the first 10 records of taxi 
 
 If the Relation expression is \[This\].DOLocationID = \[Related\].LocationID, the Relation would return only 1 record since LocationID in the related Source is a Key column with unique values.
 
+However, if the Relation expression is \[This\].fare\_amount &gt; 4, the Relation would return multiple columns since multiple records in the fare\_amount column match the expression.
+
 * **Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichment rules since they are much easier to reference. A Source can have only 1 primary Relation.
 
 ![Relation Configuration Screen \(PLACEHOLDER\)](../.gitbook/assets/relations-modal-example.jpg)
