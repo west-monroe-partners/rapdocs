@@ -25,7 +25,7 @@ _Taxi Cases example and pictures here_
 
 * **Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichment rules since they are much easier to reference. A Source can have only 1 primary Relation.
 
-![Relation Configuration Screen](../.gitbook/assets/relations-modal-example.jpg)
+![Relation Configuration Screen \(PLACEHOLDER\)](../.gitbook/assets/relations-modal-example.jpg)
 
 Click "Save" to finish creating the Relation.
 
@@ -33,7 +33,7 @@ Click "Save" to finish creating the Relation.
 
 Through Relations, users can access attributes from another Source when configuring Enrichment rules.  
 
-![Enrichments Configuration Screen](../.gitbook/assets/enrichments-modal-example.jpg)
+![Enrichments Configuration Screen \(PLACEHOLDER\)](../.gitbook/assets/enrichments-modal-example.jpg)
 
 When configuring the Expression property on the Enrichment configuration screen, the user must use the expression syntax specified below to access attributes properly.  
 
