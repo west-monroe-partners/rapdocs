@@ -21,7 +21,13 @@ Relations have a few crucial properties:
 * **Related Source:** Specifies the related Source.
 * **Relation Expression:**  This is a boolean expression written in SQL that "joins" the current Source \(denoted by "This"\) to the related Source \(denoted by "Related"\). The Relation will return 0, 1, or multiple records depending on the result of the expression.
 
-_Taxi Cases example and pictures here_
+Consider the Source data below. The first image is the first 10 records of taxi cab ride data, where each record shows the data for separate trips. The second image is the first 10 records of location data, where each record represents a unique location. Let's say that the first image represents "This" Source, and the second image represents the "Related" Source.
+
+![](../.gitbook/assets/taxi-facts-example.jpg)
+
+![](../.gitbook/assets/taxi-lookup-example.jpg)
+
+If the Relation expression is \[This\].DOLocationID = \[Related\].LocationID, the Relation would return only 1 record since LocationID in the related Source is a Key column with unique values.
 
 * **Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichment rules since they are much easier to reference. A Source can have only 1 primary Relation.
 
