@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome to RAP!](README.md)
+* [Introduction to RAP](introduction-to-rap.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/components-and-concepts.md)
