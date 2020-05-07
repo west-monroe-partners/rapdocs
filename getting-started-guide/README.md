@@ -17,7 +17,7 @@ This guide has two parts:
 
 ## About this Guide
 
-This guide provides users with the knowledge to perform basic tasks within the RAP environment. The getting started guide takes users through an example data configuration project which provide a hands-on tutorial using demo data in an end-to-end scenario. The remaining sections provide more complex instructions on operating and configuring RAP for optimal data processing performance and outputs.
+This guide provides users with the knowledge to perform basic tasks within the RAP environment. The getting started guide takes users through an example data configuration project which provide a hands-on tutorial using demo data in an end-to-end scenario. If you are starting out as a RAP configurator, working through this guide should be enough to prepare you for your first projects. The remaining sections provide more complex instructions on operating and configuring RAP for optimal data processing performance and outputs, and are more appropriate for an experienced data architect.
 
 ## About RAP Users
 
