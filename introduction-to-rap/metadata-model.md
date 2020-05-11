@@ -5,5 +5,5 @@ description: >-
   information.
 ---
 
-# Metadata Model
+# Configuration Metadata Model
 
