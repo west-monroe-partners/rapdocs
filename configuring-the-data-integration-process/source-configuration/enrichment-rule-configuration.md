@@ -4,7 +4,7 @@ description: >-
   Each enrichment rule creates a new column.
 ---
 
-# Enrichment Rules
+# Enrichments
 
 Enrichment Rules are managed from the Source screen. Enrichments provide the logic for adding new columns to the data. 
 

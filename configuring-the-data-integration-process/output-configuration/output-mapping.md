@@ -109,7 +109,7 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 ### Parameters
 
-* **Include Rows:** Filters additionally based on flags set during the [Source Validation](../source-configuration/validation-rule-configuration.md) step
+* **Include Rows:** Filters additionally based on flags set during the [Source Validation]() step
 * **Name:** Names the Source with the applied logic. Name appears atop the Source UI column
 * **Description:** Description of the Source
 * **Active:** If set to Active, the filter will be applied
