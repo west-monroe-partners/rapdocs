@@ -1,7 +1,10 @@
 # Table of contents
 
 * [Welcome to RAP!](README.md)
-* [Introduction to RAP](introduction-to-rap.md)
+* [Introduction to RAP](introduction-to-rap/README.md)
+  * [RAP Infrastructure Components](introduction-to-rap/rap-infrastructure-components.md)
+  * [Metadata Model](introduction-to-rap/metadata-model.md)
+  * [Internal Data Flows](introduction-to-rap/internal-data-flows.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/components-and-concepts.md)
