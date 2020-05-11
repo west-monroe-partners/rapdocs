@@ -6,27 +6,9 @@ description: >-
 
 # Enrichments
 
-Enrichment Rules are managed from the Source screen. Enrichments provide the logic for adding new columns to the data. 
+Enrichments are managed from the Source screen. Enrichments provide the logic for adding new columns to the data. 
 
-Enrichments can take two forms: **Formula** and **Lookup**. 
-
-**Formula**-based enrichment rules populate a new field with the logic of a configured SQL expression. Example:
-
-```sql
-T.revenue - T.cost
-```
-
-**Lookup**-based enrichment rules join disparate data sources on a specified criterion, and populate a new field with the logic of a configurable SQL expression. Example:
-
-```sql
-/* LOOKUP EXPRESSION: */
-L.id = T.customer_id
-
-/* RETURN EXPRESSION: */
-L.customer_name
-```
-
-Enrichments can be created as Enrichment Rules Templates to allow re-usability. More details about Enrichment Rule Templates can be found on the [Validation and Enrichment Rule Templates page](../validation-and-enrichment-rule-templates.md).
+Enrichments can be created as Enrichment Rules Templates to allow re-usability. More details about Enrichment Rule Templates can be found on the [Templates page](../validation-and-enrichment-rule-templates.md).
 
 {% hint style="info" %}
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
@@ -34,7 +16,7 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 ## Enrichments Tab
 
-The Enrichments tab allows users to select, edit, remove, or add a Source's Validations. By default, only Active Enrichments are listed. The **Active Only** toggle changes this setting.
+The Enrichments tab allows users to select, edit, remove, or add a Source's Enrichments. By default, only Active Enrichments are listed. The **Active Only** toggle changes this setting.
 
 ![Source Enrichments - Active Only](../../.gitbook/assets/image%20%28195%29.png)
 
@@ -42,15 +24,15 @@ To edit an Enrichment, select the Enrichment directly. This opens the Edit Enric
 
 ![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28228%29.png)
 
-To add a Validation, select **New Validation**. This opens the Edit Validation modal for a new Dependency.
+To create a new Enrichment, select **New Enrichment Rule**. This opens the Enrichment modal.
 
 ![Source Enrichments - New Enrichment Rule](../../.gitbook/assets/image%20%285%29.png)
 
 ## Enrichment Parameters
 
-On the Edit Enrichment modal, users can modify Enrichment Rule parameters, or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Validation and Enrichment Rule Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
+On the Enrichment modal, users can modify Enrichment parameters or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
 
-![Edit Enrichment Modal](../../.gitbook/assets/image%20%28220%29.png)
+![Enrichment Modal](../../.gitbook/assets/image%20%28220%29.png)
 
 {% hint style="info" %}
 Note: **Save as Rule Type** allows users to save Enrichment Rules as templates for later use. For more details, see [Validation and Enrichment Rule Templates](../validation-and-enrichment-rule-templates.md).
@@ -70,7 +52,70 @@ Note: **Save as Rule Type** allows users to save Enrichment Rules as templates f
 | **Return Expression** |  | Use SQL syntax to set the Enrichment Rule transformation logic. |
 | **Active** | TRUE | Allows the user to set this Validation as Active or not. If Active, it affects the Source load. |
 
-## Lookups
+## Using Relations in Enrichment Rules
+
+Through Relations, users can access attributes from another Source when configuring Enrichment rules.  
+
+![Enrichments Configuration Screen \(PLACEHOLDER\)](../../.gitbook/assets/enrichments-modal-example.jpg)
+
+When configuring the Expression property on the Enrichment configuration screen, the user must use the expression syntax specified below to access attributes properly.  
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Expression</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">[<em>Source Name</em>]</td>
+      <td style="text-align:left">Source container</td>
+      <td style="text-align:left">[Divvy Rides]</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">[This]</td>
+      <td style="text-align:left">Current Source container. Equivalent to [<em>current source name</em>]</td>
+      <td
+      style="text-align:left">[This]</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">[Related]</td>
+      <td style="text-align:left">Container for related Source. Only allowed in Relation expression</td>
+      <td
+      style="text-align:left">[Related]</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">[<em>Relation Name</em>]</td>
+      <td style="text-align:left">Non-primary Relation name, indicates path to the Source containers used
+        in expression</td>
+      <td style="text-align:left">[This]~{To Station Relation}~[Divvy Rides].attribute</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">.</td>
+      <td style="text-align:left">Separator of Source containers and attribute names</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">~</td>
+      <td style="text-align:left">Path indicator, separates Source containers and Relations</td>
+      <td style="text-align:left">[Divvy Rides]~{Relation Z}~[Weather].attribute</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">[<em>Relation</em>].<em>attribute_name</em>
+      </td>
+      <td style="text-align:left">Attribute in the container</td>
+      <td style="text-align:left">
+        <p>[Divvy Rides].trip_id</p>
+        <p>[Divvy Stations].latitude</p>
+        <p>[This]~{To Station Relation}~[Divvy Rides].longitude</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Lookups \(OLD\)
 
 Lookups can be used to add data to a Source from a different Source. They work similarly to the Excel VLOOKUP formula. Lookups can only return one record per row. If RAP detects when a lookup may return more than one record per row, it will prompt a user to specify an `ORDER BY` statement in the parameters to sort the results and select only the `TOP 1` result.
 
