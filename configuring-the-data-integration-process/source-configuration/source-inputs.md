@@ -27,13 +27,13 @@ Selecting an Input's **Process Time** value displays a modal with sub-times of e
 
 Selecting an Input's **Records Staged** or **Records Process** displays a modal with record counts at each of the Input's different phases. Each displayed Output links directly to its own page, providing an easy way to navigate a Source's configured Outputs.
 
-![Records Staged + Processed Modal](../../.gitbook/assets/image%20%2877%29.png)
+![Records Staged + Processed Modal](../../.gitbook/assets/image%20%2878%29.png)
 
 ### Processing Log Modal
 
 To view the Processing Logs for any specific phase of an Input, click the corresponding Input Status icon.
 
-![Select a Processing Log to Display](../../.gitbook/assets/image%20%28206%29.png)
+![Select a Processing Log to Display](../../.gitbook/assets/image%20%28207%29.png)
 
 The processing Log contains detailed information useful during troubleshooting. For more information about Processing Logs, see the [Operation Guide](../../operation-guide/).
 
@@ -70,7 +70,7 @@ Users can control all of the Inputs for a Source using the options below. Not al
 * **View Data:** Navigate to the Data View tab
 * **Pull Data Now:** Immediately generate a new Input for this Source
 
-![Options for All Inputs](../../.gitbook/assets/image%20%28149%29.png)
+![Options for All Inputs](../../.gitbook/assets/image%20%28150%29.png)
 
 ## Controlling One Input
 

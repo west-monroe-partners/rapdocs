@@ -10,7 +10,7 @@ The **Actor Log** is stored in a [Postgres ](checking-logs.md)table but can be a
 
 The Actor Log holds an account of all activity that takes place with any of data processing activities, including source scheduling, input, staging, validation & enrichment, and output. The UI exposes most of the information in this log to the user via the “Processing Log” seen when clicking on the status icons.
 
-![Validation Process Log](../../.gitbook/assets/image%20%28200%29.png)
+![Validation Process Log](../../.gitbook/assets/image%20%28201%29.png)
 
 If the desired information is not available, the full log is accessible through a log.actor\_log table query, e.g.
 
