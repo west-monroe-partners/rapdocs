@@ -78,12 +78,6 @@ When configuring the Expression property on the Enrichment configuration screen,
       style="text-align:left">[This]</td>
     </tr>
     <tr>
-      <td style="text-align:left">[Related]</td>
-      <td style="text-align:left">Container for related Source. Only allowed in Relation expression</td>
-      <td
-      style="text-align:left">[Related]</td>
-    </tr>
-    <tr>
       <td style="text-align:left">[<em>Relation Name</em>]</td>
       <td style="text-align:left">Non-primary Relation name, indicates path to the Source containers used
         in expression</td>
@@ -143,6 +137,18 @@ See all of the supported aggregate functions below:
 | collect\_list |  |  | SELECT collect\_list\(x\) FROM L WHERE &lt;relationship expression&gt; |
 | collect\_set |  |  | SELECT collect\_set\(x\) FROM L WHERE &lt;relationship expression&gt; |
 | sumDistinct |  |  | SELECT sumdistinct\(x\) FROM L WHERE&lt;relationship expression&gt; |
+
+## Chaining Relations
+
+The user can traverse multiple Relations to access attributes from 2 or more Sources apart. Examine the example ERD below:
+
+![Example ERD 3](../../.gitbook/assets/relations-erd3.jpg)
+
+The Relation from Professor to Department has a Cardinality of O because a professor can belong to only 1 department, and the Relation from Department to Course has a Cardinality of M because a Department can have multiple courses. If the user is creating an Enrichment in the Professor Source and wanted to access the total number of credit hours a professor teaches for a certain course, they would type`SUM([This]~{Professor-Department}~{Department~Course}~[Course].CreditHours)`.
+
+{% hint style="warning" %}
+When chaining Relations, only the final Relations may have a Cardinality of M.
+{% endhint %}
 
 ## A Note About Primary Relations
 
