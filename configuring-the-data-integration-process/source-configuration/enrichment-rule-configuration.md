@@ -122,22 +122,3 @@ Let's say that a user has already created a relation called `Student-Major` whic
 
 Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Major}`was a Primary Relation, the user would only have to type `[Major].Name`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
 
-## Lookups \(OLD\)
-
-Lookups can be used to add data to a Source from a different Source. They work similarly to the Excel VLOOKUP formula. Lookups can only return one record per row. If RAP detects when a lookup may return more than one record per row, it will prompt a user to specify an `ORDER BY` statement in the parameters to sort the results and select only the `TOP 1` result.
-
-
-
-![Lookup Configuration](../../.gitbook/assets/image%20%28171%29.png)
-
-### Lookup-Specific Parameters
-
-* **Lookup Source:** Separate Source that the Enrichment is pulling data from.
-* **Lookup Expression:** The expression that specifies the `JOIN ON` condition between the Source and Lookup Source, such as `L.bike_id = T.bike_id`. The prefix L refers to the Lookup Source and the prefix T refers to the current Source. When possible, use RAP's `s_key` to join the Lookup Source: The `s_key` represents the Primary Key columns of the Source, pipe delimited. 
-  * For example: `456|Chicago|15`
-* **Automatic Reprocessing:** Specifies when the current Source records will be re-processed upon Lookup Source refresh.
-  * **None**: The Enrichment is not automatically re-ran when the Lookup Source has updated data.
-  * **New**: The Enrichment automatically re-runs only on the newly added rows that have been added to the Lookup Source.
-  * **All**: The Enrichment automatically re-runs on all updated or new rows when the Lookup Source received a new Input of data.
-* **Select Lookup Column\(s\) to Order Returned Results**: This specifies which columns the `ORDER BY` is run against. Comma-separated list of column names.
-
