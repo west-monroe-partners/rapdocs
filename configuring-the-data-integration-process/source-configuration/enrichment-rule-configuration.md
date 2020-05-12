@@ -116,7 +116,11 @@ Consider this example Entity-Relationship Diagram between 2 Sources in RAP:
 
 ![Example ERD 1](../../.gitbook/assets/relations-erd1.jpg)
 
-Let's say that a RAP configurator has already created a relation called Student-Major which relates the Student and Major Sources. If they were creating an Enrichment in the Student Source and needed to access the Name attribute on the Major Source, they would type `[This]~{Student-Major}~[Major].Name`.
+Let's say that a user has already created a relation called `Student-Major` which relates the Student and Major Sources with the Relation Expression `[This].StudentID = [Related].MajorID`. If they were creating an Enrichment in the Student Source and needed to access the Name attribute on the Major Source, they would type .`[This]~{Student-Major}~[Major].Name`.
+
+## A Note About Primary Relations
+
+Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Major}`was a Primary Relation, the user would only have to type `[Major].Name`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
 
 ## Lookups \(OLD\)
 
