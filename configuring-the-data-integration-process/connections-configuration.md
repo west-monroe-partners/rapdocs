@@ -30,7 +30,7 @@ To add a Connection, select **New Connection**. This opens the Edit Connection s
 
 Editing a Connection and creating a new Connection leads to the same screen. Users can edit different parameters to configure a Connection.
 
-![Edit Connection](../.gitbook/assets/image%20%28157%29.png)
+![Edit Connection](../.gitbook/assets/image%20%28158%29.png)
 
 ## Parameters
 
