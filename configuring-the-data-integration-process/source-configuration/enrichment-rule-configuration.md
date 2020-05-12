@@ -124,6 +124,26 @@ Now, let's modify the ERD a bit:
 
 This ERD depicts a Relation with the Cardinality M \(many\) since a student can be taking multiple courses at once, and a course can have multiple students enrolled at once. Let's say that a user has already created a relation called `Student-Course` which relates the Student and Course Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than 1 record. If the user is creating an Enrichment in the Student Source and wanted to access the total number of credit hours a particular student is enrolled in, they would type`SUM([This]~{Student-Course}~[Course].CreditHours)`.
 
+See all of the supported aggregate functions below:
+
+| Aggregate | Description | Example | Query |
+| :--- | :--- | :--- | :--- |
+| first\_value | still have to  | fill these in | SELECT first\_value\(expression, order\_by\) FROM L WHERE &lt;relationship expression&gt; |
+| avg |  |  | SELECT avg\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| mean |  |  | SELECT mean\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| min |  |  | SELECT min\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| max |  |  | SELECT max\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| stddev |  |  | SELECT stddev\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| sum |  |  | SELECT sum\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| variance |  |  | SELECT variance\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| approx\_count\_distinct |  |  | SELECT approx\_count\_distinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| corr |  |  | SELECT corr\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| count |  |  | SELECT count\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| countDistinct |  |  | SELECT countDistinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| collect\_list |  |  | SELECT collect\_list\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| collect\_set |  |  | SELECT collect\_set\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| sumDistinct |  |  | SELECT sumdistinct\(x\) FROM L WHERE&lt;relationship expression&gt; |
+
 ## A Note About Primary Relations
 
 Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would only have to type `[Computer].OperatingSystem`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
