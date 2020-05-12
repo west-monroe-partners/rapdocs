@@ -16,11 +16,11 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 The Enrichments tab allows users to select, edit, remove, or add a Source's Enrichments. By default, only Active Enrichments are listed. The **Active Only** toggle changes this setting.
 
-![Source Enrichments - Active Only](../../.gitbook/assets/image%20%28195%29.png)
+![Source Enrichments - Active Only](../../.gitbook/assets/image%20%28196%29.png)
 
 To edit an Enrichment, select the Enrichment directly. This opens the Edit Enrichment modal.
 
-![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28228%29.png)
+![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28229%29.png)
 
 To create a new Enrichment, select **New Enrichment Rule**. This opens the Enrichment modal.
 
@@ -112,13 +112,19 @@ When configuring the Expression property on the Enrichment configuration screen,
   </tbody>
 </table>## Enrichment Expression Examples Using Relations
 
-Consider this example Entity-Relationship Diagram between 2 Sources in RAP:
+Consider this example Entity-Relationship Diagram \(ERD\) between 2 Sources in RAP:
 
-![Example ERD 1](../../.gitbook/assets/relations-erd1.jpg)
+![](../../.gitbook/assets/relations-erd1%20%282%29.jpg)
 
-Let's say that a user has already created a relation called `Student-Major` which relates the Student and Major Sources with the Relation Expression `[This].StudentID = [Related].MajorID`. If they were creating an Enrichment in the Student Source and needed to access the Name attribute on the Major Source, they would type .`[This]~{Student-Major}~[Major].Name`.
+Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only 1 computer at a time from the university. If the user is creating an Enrichment in the Student Source and wanted to access the OS attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OS`.
+
+Now, let's modify the ERD a bit:
+
+![Example ERD 2](../../.gitbook/assets/relations-erd2.jpg)
+
+This ERD depicts a Relation with the Cardinality M \(many\) since a student can be taking multiple courses at once, and a course can have multiple students enrolled at once. Let's say that a user has already created a relation called `Student-Course` which relates the Student and Course Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than 1 record. If the user is creating an Enrichment in the Student Source and wanted to access the total number of credit hours a particular student is enrolled in, they would type`SUM([This]~{Student-Course}~[Course].CreditHours)`.
 
 ## A Note About Primary Relations
 
-Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Major}`was a Primary Relation, the user would only have to type `[Major].Name`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
+Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Seniority}`was a Primary Relation, the user would only have to type `[Year].Name`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
 
