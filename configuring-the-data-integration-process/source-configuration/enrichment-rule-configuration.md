@@ -114,9 +114,9 @@ When configuring the Expression property on the Enrichment configuration screen,
 
 Consider this example Entity-Relationship Diagram \(ERD\) between 2 Sources in RAP:
 
-![](../../.gitbook/assets/relations-erd1%20%282%29.jpg)
+![](../../.gitbook/assets/relations-erd1%20%285%29.jpg)
 
-Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only 1 computer at a time from the university. If the user is creating an Enrichment in the Student Source and wanted to access the OS attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OS`.
+Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only 1 computer at a time from the university. If the user is creating an Enrichment in the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
 
 Now, let's modify the ERD a bit:
 
