@@ -22,15 +22,15 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 The Validation tab allows users to select, edit, remove, or add a Source's Validations. By default, only Active Validation Rules are listed. The **Active Only** toggle changes this setting.
 
-![Source Validations - Active Only](../../.gitbook/assets/image%20%28177%29.png)
+![Source Validations - Active Only](../../.gitbook/assets/image%20%28178%29.png)
 
 To edit a Validation Rule, select the Validation Rule directly. This opens the Edit Validation Rule modal.
 
-![Source Validations - Select a Validation to Edit ](../../.gitbook/assets/image%20%28222%29.png)
+![Source Validations - Select a Validation to Edit ](../../.gitbook/assets/image%20%28223%29.png)
 
 To add a Validation Rule, select **New Validation** **Rule**. This opens the Edit Validation Rule modal for a new Validation Rule.
 
-![Source Validations - New Validation Rule](../../.gitbook/assets/image%20%2888%29.png)
+![Source Validations - New Validation Rule](../../.gitbook/assets/image%20%2889%29.png)
 
 ## Validation Rule Parameters
 

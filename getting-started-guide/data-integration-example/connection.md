@@ -66,7 +66,7 @@ For examples of other connection types, see the below tabs.
 {% endtab %}
 {% endtabs %}
 
-![Connection Type Options](../../.gitbook/assets/image%20%28169%29.png)
+![Connection Type Options](../../.gitbook/assets/image%20%28170%29.png)
 
 ## Step 3: Indicate File Path
 
@@ -86,7 +86,7 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **Connection Type:** `File`
 * **file\_path:** The path to your output container 
 
-![Output Connection Configuration](../../.gitbook/assets/image%20%28198%29.png)
+![Output Connection Configuration](../../.gitbook/assets/image%20%28199%29.png)
 
 Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
