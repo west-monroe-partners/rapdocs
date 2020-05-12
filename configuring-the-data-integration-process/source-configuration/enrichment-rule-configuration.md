@@ -114,7 +114,7 @@ When configuring the Expression property on the Enrichment configuration screen,
 
 Consider this example Entity-Relationship Diagram \(ERD\) between 2 Sources in RAP:
 
-![](../../.gitbook/assets/relations-erd1%20%285%29.jpg)
+![Example ERD 1](../../.gitbook/assets/relations-erd1%20%285%29.jpg)
 
 Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only 1 computer at a time from the university. If the user is creating an Enrichment in the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
 
@@ -126,5 +126,5 @@ This ERD depicts a Relation with the Cardinality M \(many\) since a student can 
 
 ## A Note About Primary Relations
 
-Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Seniority}`was a Primary Relation, the user would only have to type `[Year].Name`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
+Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would only have to type `[Computer].OperatingSystem`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
 
