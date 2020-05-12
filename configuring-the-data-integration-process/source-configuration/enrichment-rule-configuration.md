@@ -30,11 +30,9 @@ To create a new Enrichment, select **New Enrichment Rule**. This opens the Enric
 
 On the Enrichment modal, users can modify Enrichment parameters or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
 
-![](../../.gitbook/assets/enrichments-modal-example%20%281%29.jpg)
+![Enrichment Modal \(PLACEHOLDER\)](../../.gitbook/assets/enrichments-modal-example%20%281%29.jpg)
 
-{% hint style="info" %}
-Note: **Save as Rule Type** allows users to save Enrichment Rules as templates for later use. For more details, see [Templates](../validation-and-enrichment-rule-templates.md).
-{% endhint %}
+Click **Save as Rule Type** to save the Enrichment as a Template for later use. For more details, see [Templates](../validation-and-enrichment-rule-templates.md). Otherwise, click **Save** to save the Enrichment.
 
 **Fields Available:**
 
@@ -57,7 +55,7 @@ Through Relations, users can access attributes from another Source when configur
 
 ![Enrichments Configuration Screen \(PLACEHOLDER\)](../../.gitbook/assets/enrichments-modal-example.jpg)
 
-When configuring the Expression property on the Enrichment configuration screen, the user must use the expression syntax specified below to access attributes properly.  
+When configuring the Expression property on the Enrichment configuration screen, the user must use the expression syntax specified below to access the attributes.  
 
 <table>
   <thead>
@@ -112,7 +110,13 @@ When configuring the Expression property on the Enrichment configuration screen,
       </td>
     </tr>
   </tbody>
-</table>
+</table>## Enrichment Expression Examples Using Relations
+
+Consider this example Entity-Relationship Diagram between 2 Sources in RAP:
+
+![Example ERD 1](../../.gitbook/assets/relations-erd1.jpg)
+
+Let's say that a RAP configurator has already created a relation called Student-Major which relates the Student and Major Sources. If they were creating an Enrichment in the Student Source and needed to access the Name attribute on the Major Source, they would type `[This]~{Student-Major}~[Major].Name`.
 
 ## Lookups \(OLD\)
 
