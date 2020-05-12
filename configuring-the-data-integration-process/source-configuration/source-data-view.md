@@ -36,13 +36,13 @@ In the top bar, users can type in PostgreSQL queries to filter records. The stat
 
 Users can select columns by clicking Select Columns. Users can add Descriptions, see Data Types, and check off which columns appear in the View Data tab.
 
-![Select Columns](../../.gitbook/assets/image%20%28134%29.png)
+![Select Columns](../../.gitbook/assets/image%20%28135%29.png)
 
 ### **Sorting Data**
 
 Clicking a column's name sorts the data in ascending order. Clicking again switches to descending order.
 
-![Column Name](../../.gitbook/assets/image%20%2885%29.png)
+![Column Name](../../.gitbook/assets/image%20%2886%29.png)
 
 ## Analyzing Data
 
@@ -58,7 +58,7 @@ Clicking the Datatype icon brings up the data profile of that column. Different 
 
 A modal appears showing the data profile when the datatype icon is clicked.
 
-![Data Profile Modal](../../.gitbook/assets/image%20%28138%29.png)
+![Data Profile Modal](../../.gitbook/assets/image%20%28139%29.png)
 
 Data profiles provide the following statistics:
 

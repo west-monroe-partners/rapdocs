@@ -36,11 +36,11 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 The Enrichments tab allows users to select, edit, remove, or add a Source's Validations. By default, only Active Enrichments are listed. The **Active Only** toggle changes this setting.
 
-![Source Enrichments - Active Only](../../.gitbook/assets/image%20%28195%29.png)
+![Source Enrichments - Active Only](../../.gitbook/assets/image%20%28196%29.png)
 
 To edit an Enrichment, select the Enrichment directly. This opens the Edit Enrichment modal.
 
-![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28228%29.png)
+![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28229%29.png)
 
 To add a Validation, select **New Validation**. This opens the Edit Validation modal for a new Dependency.
 
@@ -50,7 +50,7 @@ To add a Validation, select **New Validation**. This opens the Edit Validation m
 
 On the Edit Enrichment modal, users can modify Enrichment Rule parameters, or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Validation and Enrichment Rule Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
 
-![Edit Enrichment Modal](../../.gitbook/assets/image%20%28220%29.png)
+![Edit Enrichment Modal](../../.gitbook/assets/image%20%28221%29.png)
 
 {% hint style="info" %}
 Note: **Save as Rule Type** allows users to save Enrichment Rules as templates for later use. For more details, see [Validation and Enrichment Rule Templates](../validation-and-enrichment-rule-templates.md).
@@ -76,7 +76,7 @@ Lookups can be used to add data to a Source from a different Source. They work s
 
 
 
-![Lookup Configuration](../../.gitbook/assets/image%20%28171%29.png)
+![Lookup Configuration](../../.gitbook/assets/image%20%28172%29.png)
 
 ### Lookup-Specific Parameters
 
