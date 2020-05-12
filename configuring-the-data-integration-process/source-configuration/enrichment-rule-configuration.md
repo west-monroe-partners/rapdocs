@@ -22,17 +22,15 @@ To edit an Enrichment, select the Enrichment directly. This opens the Edit Enric
 
 ![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28229%29.png)
 
-To create a new Enrichment, select **New Enrichment Rule**. This opens the Enrichment modal.
+To create a new Enrichment, select **New Enrichment**. This opens the Enrichment modal.
 
-![Source Enrichments - New Enrichment Rule](../../.gitbook/assets/image%20%285%29.png)
+![Source Enrichments - New Enrichment](../../.gitbook/assets/image%20%285%29.png)
 
 ## Enrichment Parameters
 
 On the Enrichment modal, users can modify Enrichment parameters or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
 
 ![Enrichment Modal \(PLACEHOLDER\)](../../.gitbook/assets/enrichments-modal-example%20%281%29.jpg)
-
-Click **Save as Rule Type** to save the Enrichment as a Template for later use. For more details, see [Templates](../validation-and-enrichment-rule-templates.md). Otherwise, click **Save** to save the Enrichment.
 
 **Fields Available:**
 
@@ -42,12 +40,14 @@ Click **Save as Rule Type** to save the Enrichment as a Template for later use. 
 | **Enrichment Name\*** |  | The user-defined name of the Enrichment |
 | **Attribute Name\*** |  | The name of the new column of the Enrichment |
 | **Description\*** |  | The user-defined description of the Enrichment |
-| **Rule Type** |  | Configures this rule to be managed from an [Enrichment Template](../validation-and-enrichment-rule-templates.md). If chosen, all configuration is grayed out, and any modifications must be done in the parent template |
-| **Enriched Column Data Type** | Text | This can be Text, Numeric, or Timestamp |
-| **On conversion error set to** | Warn | These are the flags that will be set on records that fail to be converted to either Numeric or Timestamp. Warn, Fail, or Ignore are the possible options. |
-| **Operation Type** | Formula | This can be either Formula or Lookup. For Lookups, see below. |
-| **Return Expression** |  | Use SQL syntax to set the Enrichment Rule transformation logic. |
+| **Expression Data Type** |  | The data type of the result of the Expression. |
+| **Attribute Data Type** |  | The data type of the Enriched Attribute. RAP will attempt to convert the data type of the Expression Data Type to the Attribute Data Type. Leave as Default for no conversion. |
+| **When expression is false, set to** | Warn | These are the flags that will be set on records that fail to be converted to another data type. Warn, Fail, or Ignore are the possible options. For Validations only. |
+| **Expression** |  | Use SQL syntax to set the Enrichment Rule transformation logic. |
+| **Unique Value** |  | Signifies that the Enriched Attribute will have unique values for every record. |
 | **Active** | TRUE | Allows the user to set this Validation as Active or not. If Active, it affects the Source load. |
+
+Click **Save** to save the Enrichment. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
 
 ## Using Relations in Enrichment Rules
 
