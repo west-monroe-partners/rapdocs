@@ -26,7 +26,7 @@ T.city IS NULL
 
 Click **Save** to finish.
 
-![Complete Validation Rule](../../.gitbook/assets/image%20%28124%29.png)
+![Complete Validation Rule](../../.gitbook/assets/image%20%28125%29.png)
 
 {% hint style="info" %}
 When entering an expression, type ````` to reveal all of the Source fields available.
@@ -100,7 +100,7 @@ Recall that the `File Push` Input Type configuration creates a Source that autom
 
 To remedy this, navigate to Inputs page, and for the most recent line item, click on the ellipsis on the far right and select **Reset All Validation & Enrichment**. See below.
 
-![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28127%29.png)
+![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28128%29.png)
 
 ## Step 4: Ensure Validation and Enrichment Completion
 

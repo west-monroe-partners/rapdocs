@@ -10,7 +10,7 @@ description: >-
 
 The Manual Output tab allows users to create a custom-defined output. There are filtering options available for users to define the output.
 
-![Manual Output Tab](../../.gitbook/assets/image%20%28165%29.png)
+![Manual Output Tab](../../.gitbook/assets/image%20%28166%29.png)
 
 The Manual Output tab displays the sources at the bottom of the screen and the following columns:
 
@@ -35,17 +35,17 @@ Ranges are defaulted to their min/max values for easy mass reload of all history
 
 The first step for creating a Manual Output is choosing Sources. Select the **Add Source** button to open the Add Source modal.
 
-![Add Source Button](../../.gitbook/assets/image%20%28148%29.png)
+![Add Source Button](../../.gitbook/assets/image%20%28149%29.png)
 
 The Add Source modal only displays the list of Sources that were selected in the [Output Mapping ](output-mapping.md)tab. The user can select a list of Sources and click **Apply** to add them to the Manual Output.
 
-![Add Source Modal](../../.gitbook/assets/image%20%28100%29.png)
+![Add Source Modal](../../.gitbook/assets/image%20%28101%29.png)
 
 ## Removing Sources
 
 Clicking the Trash Icon from the Manual Output page removes the Source from the Manual Output.
 
-![Trash Icon](../../.gitbook/assets/image%20%28129%29.png)
+![Trash Icon](../../.gitbook/assets/image%20%28130%29.png)
 
 ## Validating the Manual Output
 
@@ -53,11 +53,11 @@ Manual Outputs must be Validated before running. Because mass re-outputs have la
 
 Click the Validate button at the bottom of the screen to validate each source and get the status of each Source.
 
-![Validate Button](../../.gitbook/assets/image%20%28120%29.png)
+![Validate Button](../../.gitbook/assets/image%20%28121%29.png)
 
 Once the Validate button is pressed, the Sources are all validated. The Status will update to reflect the validation of each Source.
 
-![Status After Validation](../../.gitbook/assets/image%20%28123%29.png)
+![Status After Validation](../../.gitbook/assets/image%20%28124%29.png)
 
 There are three possible Status values. 
 
@@ -71,5 +71,5 @@ There are three possible Status values.
 
 Click the Submit button to run the Manual Output. All Completed Sources will run, while Failed Sources are ignored.
 
-![Submit Button](../../.gitbook/assets/image%20%28106%29.png)
+![Submit Button](../../.gitbook/assets/image%20%28107%29.png)
 
