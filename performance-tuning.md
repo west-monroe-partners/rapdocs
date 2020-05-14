@@ -4,5 +4,5 @@ description: Options available to leverage if the data loads in RAP are not meet
 
 # Performance Tuning
 
-TODO - discuss lookup tuning, minimizing window functions
+TODO - discuss lookup tuning, minimizing use of window functions
 
