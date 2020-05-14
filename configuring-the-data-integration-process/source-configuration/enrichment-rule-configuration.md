@@ -152,5 +152,5 @@ When chaining Relations, only the final Relations may have a Cardinality of M.
 
 ## A Note About Primary Relations
 
-Recall that only one Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would only have to type `[Computer].OperatingSystem`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
+Recall that Relations are globally unique and relate two Sources that exist in the RAP environment, but from the context of a Source, only one Primary Relation may exist on that Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would not need to reference the Relations and would only have to type `[Computer].OperatingSystem`. In Example ERD 3, both the `{User-Computer}` Relation and the `{Computer-File}` Relation must be marked as Primary Relations for the user to be able to access the same attribute as `AVG([File].Size)` . Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
 
