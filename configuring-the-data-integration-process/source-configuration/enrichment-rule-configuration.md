@@ -106,17 +106,17 @@ When configuring the Expression property on the Enrichment configuration screen,
   </tbody>
 </table>## Enrichment Expression Examples Using Relations
 
-Consider this example Entity-Relationship Diagram \(ERD\) between 2 Sources in RAP:
+Consider this example Entity-Relationship Diagram \(ERD\) between two Sources in RAP:
 
 ![](../../.gitbook/assets/relations-erd1%20%281%29.jpg)
 
-Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only 1 computer at a time from the university. If the user is creating an Enrichment in the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
+Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only one computer at a time from the university. If the user is creating an Enrichment from the context of the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
 
 Now, let's examine a different scenario:
 
 ![](../../.gitbook/assets/relations-erd2.jpg)
 
-This ERD depicts a Relation with the Cardinality M \(many\) since a customer can make multiple orders. Let's say that a user has already created a relation called `Customer-Order` which relates the Customer and Order Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than 1 record. If the user is creating an Enrichment in the Customer Source and wanted to calculate the total number of items a customer ordered over multiple orders, they would type`SUM([This]~{Customer-Order}~[Course].ItemsOrdered)`.
+This ERD depicts a Relation with the Cardinality M \(many\) since a customer can make multiple orders. Let's say that a user has already created a relation called `Customer-Order` which relates the Customer and Order Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than one record. If the user is creating an Enrichment from the context of the Customer Source and wanted to calculate the total number of items a customer ordered over multiple orders, they would type`SUM([This]~{Customer-Order}~[Course].ItemsOrdered)`.
 
 See all of the supported aggregate functions below:
 
@@ -140,7 +140,7 @@ See all of the supported aggregate functions below:
 
 ## Chaining Relations
 
-The user can traverse multiple Relations to access attributes from 2 or more Sources apart. Examine the example ERD below:
+The user can traverse multiple Relations to access attributes from two or more Sources apart. Examine the example ERD below:
 
 ![](../../.gitbook/assets/relations-erd3%20%281%29.jpg)
 
@@ -152,5 +152,5 @@ When chaining Relations, only the final Relations may have a Cardinality of M.
 
 ## A Note About Primary Relations
 
-Recall that only 1 Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would only have to type `[Computer].OperatingSystem`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
+Recall that only one Primary Relation may exist on each Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would only have to type `[Computer].OperatingSystem`. Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
 
