@@ -1,10 +1,6 @@
 # Table of contents
 
 * [Welcome to RAP!](README.md)
-* [Introduction to RAP](introduction-to-rap/README.md)
-  * [RAP Infrastructure Components](introduction-to-rap/rap-infrastructure-components.md)
-  * [Configuration Metadata Model](introduction-to-rap/metadata-model.md)
-  * [Internal Data Flows](introduction-to-rap/internal-data-flows.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/components-and-concepts.md)
@@ -15,6 +11,12 @@
     * [Source](getting-started-guide/data-integration-example/source.md)
     * [Validation and Enrichment](getting-started-guide/data-integration-example/validation-and-enrichment.md)
     * [Output](getting-started-guide/data-integration-example/output.md)
+* [RAP Technical Overview](introduction-to-rap/README.md)
+  * [RAP Infrastructure Components](introduction-to-rap/rap-infrastructure-components.md)
+  * [Configuration Metadata Model](introduction-to-rap/metadata-model.md)
+  * [Internal Data Flows](introduction-to-rap/internal-data-flows/README.md)
+    * [Validation Query Generation](introduction-to-rap/internal-data-flows/validation-query-generation.md)
+    * [Output Query Generation](introduction-to-rap/internal-data-flows/output-query-generation.md)
 * [Configuration Guide](configuring-the-data-integration-process/README.md)
   * [Connections](configuring-the-data-integration-process/connections-configuration.md)
   * [Sources](configuring-the-data-integration-process/source-configuration/README.md)

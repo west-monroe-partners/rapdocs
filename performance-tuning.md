@@ -8,7 +8,11 @@ In large-scale or complex reporting implementations, performance issues can beco
 
 ### Process History Tables
 
-TODO - how to pick out long-running processes, get V&E query and tune
+TODO - how to pick out long-running processes, get V&E query
+
+### Tuning Validation and Enrichment Rules
+
+TODO - tune based off the generated query, V&E query structure
 
 ### Lookup Overrides
 
