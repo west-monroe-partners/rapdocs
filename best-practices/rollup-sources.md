@@ -6,5 +6,5 @@ description: >-
 
 # Rollup Sources
 
-TODO - when to use rollup sources, why we use them \(performance + break dependency circular chain\)
+In some reporting scenarios, a hard copy of aggregate calculations has to be maintained to support the reporting layer.
 

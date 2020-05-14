@@ -1,5 +1,5 @@
 ---
-description: How to decide the best way to bring sources into RAP.
+description: Consideration to make before bringing in new sources into RAP.
 ---
 
 # Onboarding Sources
