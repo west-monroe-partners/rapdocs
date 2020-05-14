@@ -108,43 +108,43 @@ When configuring the Expression property on the Enrichment configuration screen,
 
 Consider this example Entity-Relationship Diagram \(ERD\) between 2 Sources in RAP:
 
-![Example ERD 1](../../.gitbook/assets/relations-erd1%20%285%29.jpg)
+![](../../.gitbook/assets/relations-erd1%20%281%29.jpg)
 
 Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only 1 computer at a time from the university. If the user is creating an Enrichment in the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
 
-Now, let's modify the ERD a bit:
+Now, let's examine a different scenario:
 
-![Example ERD 2](../../.gitbook/assets/relations-erd2.jpg)
+![](../../.gitbook/assets/relations-erd2.jpg)
 
-This ERD depicts a Relation with the Cardinality M \(many\) since a student can be taking multiple courses at once, and a course can have multiple students enrolled at once. Let's say that a user has already created a relation called `Student-Course` which relates the Student and Course Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than 1 record. If the user is creating an Enrichment in the Student Source and wanted to access the total number of credit hours a particular student is enrolled in, they would type`SUM([This]~{Student-Course}~[Course].CreditHours)`.
+This ERD depicts a Relation with the Cardinality M \(many\) since a customer can make multiple orders. Let's say that a user has already created a relation called `Customer-Order` which relates the Customer and Order Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than 1 record. If the user is creating an Enrichment in the Customer Source and wanted to calculate the total number of items a customer ordered over multiple orders, they would type`SUM([This]~{Customer-Order}~[Course].ItemsOrdered)`.
 
 See all of the supported aggregate functions below:
 
-| Aggregate | Description | Example | Query |
-| :--- | :--- | :--- | :--- |
-| first\_value | still have to  | fill these in | SELECT first\_value\(expression, order\_by\) FROM L WHERE &lt;relationship expression&gt; |
-| avg |  |  | SELECT avg\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| mean |  |  | SELECT mean\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| min |  |  | SELECT min\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| max |  |  | SELECT max\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| stddev |  |  | SELECT stddev\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| sum |  |  | SELECT sum\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| variance |  |  | SELECT variance\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| approx\_count\_distinct |  |  | SELECT approx\_count\_distinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| corr |  |  | SELECT corr\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| count |  |  | SELECT count\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| countDistinct |  |  | SELECT countDistinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| collect\_list |  |  | SELECT collect\_list\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| collect\_set |  |  | SELECT collect\_set\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| sumDistinct |  |  | SELECT sumdistinct\(x\) FROM L WHERE&lt;relationship expression&gt; |
+| Aggregate | Query |
+| :--- | :--- |
+| first\_value | SELECT first\_value\(expression, order\_by\) FROM L WHERE &lt;relationship expression&gt; |
+| avg | SELECT avg\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| mean | SELECT mean\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| min | SELECT min\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| max | SELECT max\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| stddev | SELECT stddev\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| sum | SELECT sum\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| variance | SELECT variance\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| approx\_count\_distinct | SELECT approx\_count\_distinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| corr | SELECT corr\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| count | SELECT count\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| countDistinct | SELECT countDistinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| collect\_list | SELECT collect\_list\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| collect\_set | SELECT collect\_set\(x\) FROM L WHERE &lt;relationship expression&gt; |
+| sumDistinct | SELECT sumdistinct\(x\) FROM L WHERE&lt;relationship expression&gt; |
 
 ## Chaining Relations
 
 The user can traverse multiple Relations to access attributes from 2 or more Sources apart. Examine the example ERD below:
 
-![Example ERD 3](../../.gitbook/assets/relations-erd3.jpg)
+![](../../.gitbook/assets/relations-erd3%20%281%29.jpg)
 
-The Relation from Professor to Department has a Cardinality of O because a professor can belong to only 1 department, and the Relation from Department to Course has a Cardinality of M because a Department can have multiple courses. If the user is creating an Enrichment in the Professor Source and wanted to access the total number of credit hours a professor teaches for a certain course, they would type`SUM([This]~{Professor-Department}~{Department~Course}~[Course].CreditHours)`.
+The Relation from User to Computer has a Cardinality of O because in this example a user owns only one computer, and the Relation from Computer to File has a Cardinality of M because a computer can store multiple files. If the user is creating an Enrichment from the context of the User Source and wanted to access the average file size a user has stored, they would type`AVG([This]~{User-Computer}~{Computer-File}~[File].Size)`.
 
 {% hint style="warning" %}
 When chaining Relations, only the final Relations may have a Cardinality of M.
