@@ -38,7 +38,7 @@
     * [Source Dashboard](operation-guide/monitoring-the-process/operational-dashboard.md)
     * [Checking Statuses](operation-guide/monitoring-the-process/checking-statuses.md)
     * [Checking Logs](operation-guide/monitoring-the-process/checking-logs.md)
-    * [Performance Tuning](operation-guide/monitoring-the-process/performance-tuning.md)
+    * [Common Errors](operation-guide/monitoring-the-process/common-errors.md)
     * [Example Daily Routine](operation-guide/monitoring-the-process/example-daily-routine.md)
     * [RAP Agent](operation-guide/monitoring-the-process/rap-agent.md)
 * [Changelog](changelog/README.md)
