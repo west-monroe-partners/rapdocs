@@ -110,7 +110,7 @@ Consider this example Entity-Relationship Diagram \(ERD\) between two Sources in
 
 ![](../../.gitbook/assets/relations-erd1%20%281%29.jpg)
 
-Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because each student may own only one computer at a time from the university. If the user is creating an Enrichment from the context of the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
+Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because in this example each student may own only one computer at a time from the university. If the user is creating an Enrichment from the context of the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
 
 Now, let's examine a different scenario:
 
