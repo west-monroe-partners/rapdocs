@@ -144,7 +144,7 @@ The user can traverse multiple Relations to access attributes from two or more S
 
 ![](../../.gitbook/assets/relations-erd3%20%281%29.jpg)
 
-The Relation from User to Computer has a Cardinality of O because in this example a user owns only one computer, and the Relation from Computer to File has a Cardinality of M because a computer can store multiple files. If the user is creating an Enrichment from the context of the User Source and wanted to access the average file size a user has stored, they would type`AVG([This]~{User-Computer}~{Computer-File}~[File].Size)`.
+The Relation from User to Computer has a Cardinality of O because in this example a user can own only one computer, and the Relation from Computer to File has a Cardinality of M because a computer can store multiple files. If the user is creating an Enrichment from the context of the User Source and wanted to access the average file size a user has stored, they would type`AVG([This]~{User-Computer}~{Computer-File}~[File].Size)`.
 
 {% hint style="warning" %}
 When chaining Relations, only the final Relations may have a Cardinality of M.
