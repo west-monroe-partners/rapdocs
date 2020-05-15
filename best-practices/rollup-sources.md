@@ -8,3 +8,5 @@ description: >-
 
 In some reporting scenarios, a hard copy of aggregate calculations has to be maintained to support the reporting layer.
 
+TODO - window functions, partition key
+
