@@ -130,17 +130,11 @@ Now all we need to do is capture the Full\_Name attribute in the Order\_Detail S
 
 Finally, create an enriched column on the Order\_Detail Source called _Customer\_Full\_Name_ with the Enrichment expression `[This]~{Order_Header-Order_Detail}~[Order_Header]~{Customer-Order_Header}~[Customer].FullName` This time, we need to traverse two Sources to access attributes in Customer. This is allowed because in the direction we are traversing, both Relations have the cardinality O. In the next example, we'll see how to deal with Relations of cardinality M \(many\).
 
-Consider this example Entity-Relationship Diagram \(ERD\) between two Sources in RAP:
+The Order\_Detail Source now has the attributes that make it possible to track revenue by customer.
 
-![](../../.gitbook/assets/relations-erd1%20%281%29.jpg)
+![The final Order\_Detail Source attributes](../../.gitbook/assets/order_detail-revenue-and-customer_full_name.jpg)
 
-Let's say that a user has already created a relation called `Student-Computer` which relates the Student and Computer Sources with the Relation Expression `[This].ComputerID = [Related].ComputerID`. This Relation has the Cardinality O \(one\) because in this example each student may own only one computer at a time from the university. If the user is creating an Enrichment from the context of the Student Source and wanted to access the OperatingSystem attribute on the Major Source, they would type`[This]~{Student-Computer}~[Computer].OperatingSystem`.
 
-Now, let's examine a different scenario:
-
-![](../../.gitbook/assets/relations-erd2.jpg)
-
-This ERD depicts a Relation with the Cardinality M \(many\) since a customer can make multiple orders. Let's say that a user has already created a relation called `Customer-Order` which relates the Customer and Order Sources. Since the Relation has Cardinality M, the user must use an aggregate function because the Relation has the potential to return more than one record. If the user is creating an Enrichment from the context of the Customer Source and wanted to calculate the total number of items a customer ordered over multiple orders, they would type`SUM([This]~{Customer-Order}~[Course].ItemsOrdered)`.
 
 See all of the supported aggregate functions below:
 
