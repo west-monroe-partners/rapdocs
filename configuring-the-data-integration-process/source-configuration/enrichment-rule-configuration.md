@@ -116,13 +116,19 @@ The Order\_Detail Source should now look like this:
 
 ![Order\_Detail after creating the enriched column Revenue](../../.gitbook/assets/order_detail-revenue.jpg)
 
-The last part of capturing this metric is to retrieve the full name of the customer. Breaking this last step into two parts makes this task slightly easier. Since the cardinality of the Customer-Person Relation is O \(one\), it should be simple to store the full name of the customer in the Customer Source. Let's create an enriched column on the Customer Source called Customer\_Full\_Name with the Enrichment expression `[This]~{Customer-Person}~[Person].FirstName + [This]~{Customer-Person}~[Person].LastName` . 
+The last part of capturing this metric is to retrieve the full name of the customer. Breaking this last step into two parts makes this task slightly easier. Since the cardinality of the Customer-Person Relation is O \(one\), it should be simple to store the full name of the customer in the Customer Source. Let's create an enriched column on the Customer Source called _Full\_Name_ with the Enrichment expression `[This]~{Customer-Person}~[Person].FirstName + [This]~{Customer-Person}~[Person].LastName` . 
 
-Note the special syntax when using Relations in the expression. Relations can make the Enrichment expression quite long, but marking a Relation as the Primary Relation makes referencing it much easier. If the Customer-Person Relation is Primary, the expression for Customer\_Full\_Name can also be written as `[Person].FirstName + [Person].LastName` . 
+Note the special syntax when using Relations in the expression. Relations can make the Enrichment expression quite long, but marking a Relation as the Primary Relation makes referencing it much easier. If the Customer-Person Relation is Primary, the expression for Full\_Name can also be written as `[Person].FirstName + [Person].LastName` . 
 
 The Customer Source should now look like this: 
 
-![Customer after creating the enriched column Revenue ](../../.gitbook/assets/customer-customer_full_name.jpg)
+![Customer after creating the enriched column Full\_Name](../../.gitbook/assets/customer-full_name.jpg)
+
+Now all we need to do is capture the Full\_Name attribute in the Order\_Detail Source. Below is the section of the ERD we need to examine.   
+
+![A section of the example ERD](../../.gitbook/assets/customer_full_name%20%281%29.jpg)
+
+Finally, create an enriched column on the Order\_Detail Source called _Customer\_Full\_Name_ with the Enrichment expression `[This]~{Order_Header-Order_Detail}~[Order_Header]~{Customer-Order_Header}~[Customer].FullName` This time, we need to traverse two Sources to access attributes in Customer. This is allowed because in the direction we are traversing, both Relations have the cardinality O. In the next example, we'll see how to deal with Relations of cardinality M \(many\).
 
 Consider this example Entity-Relationship Diagram \(ERD\) between two Sources in RAP:
 
