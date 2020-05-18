@@ -114,11 +114,15 @@ One useful metric to track in these kinds of data models is _revenue by customer
 
 The Order\_Detail Source should now look like this:
 
-![Order\_Detail after configuring the enriched column Revenue](../../.gitbook/assets/order_detail-revenue.jpg)
+![Order\_Detail after creating the enriched column Revenue](../../.gitbook/assets/order_detail-revenue.jpg)
 
 The last part of capturing this metric is to retrieve the full name of the customer. Breaking this last step into two parts makes this task slightly easier. Since the cardinality of the Customer-Person Relation is O \(one\), it should be simple to store the full name of the customer in the Customer Source. Let's create an enriched column on the Customer Source called Customer\_Full\_Name with the Enrichment expression `[This]~{Customer-Person}~[Person].FirstName + [This]~{Customer-Person}~[Person].LastName` . 
 
-Note the special syntax when using Relations in the expression. Relations can make the Enrichment expression quite long, but marking a Relation as the Primary Relation makes referencing it much easier. If the Customer-Person Relation is Primary, the expression for Customer\_Full\_Name can also be written as `[Person].FirstName + [Person].LastName` .  
+Note the special syntax when using Relations in the expression. Relations can make the Enrichment expression quite long, but marking a Relation as the Primary Relation makes referencing it much easier. If the Customer-Person Relation is Primary, the expression for Customer\_Full\_Name can also be written as `[Person].FirstName + [Person].LastName` . 
+
+The Customer Source should now look like this: 
+
+![Customer after creating the enriched column Revenue ](../../.gitbook/assets/customer-customer_full_name.jpg)
 
 Consider this example Entity-Relationship Diagram \(ERD\) between two Sources in RAP:
 
