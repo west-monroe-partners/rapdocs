@@ -110,13 +110,15 @@ To illustrate the proper use of Relations and Enrichments, let's examine the exa
 
 ![Example ERD](../../.gitbook/assets/relations-erd%20%281%29.jpg)
 
-One useful metric to track in these kinds of data models is _revenue by customer._ To do this, we need to configure Enrichments in the Order\_Detail Source. Let's first create an enriched column, _Revenue._ The Enrichment expression for this would be `[This].OrderQty * [This].UnitPrice`. All of the attributes needed for this enriched column, so we don't need to traverse any Relations.
+One useful metric to track in these kinds of data models is _revenue by customer._ To do this, let's first create an enriched column _Revenue_ on the Order\_Detail Source_._ The Enrichment expression for this would be `[This].OrderQty * [This].UnitPrice`. All of the attributes needed for this enriched column already exist on the Order\_Detail Source, so we don't need any Relations for this metric.
 
 The Order\_Detail Source should now look like this:
 
 ![Order\_Detail after configuring the enriched column Revenue](../../.gitbook/assets/order_detail-revenue.jpg)
 
- 
+The last part of capturing this metric is to retrieve the full name of the customer. Breaking this last step into two parts makes this task slightly easier. Since the cardinality of the Customer-Person Relation is O \(one\), it should be simple to store the full name of the customer in the Customer Source. Let's create an enriched column on the Customer Source called Customer\_Full\_Name with the Enrichment expression `[This]~{Customer-Person}~[Person].FirstName + [This]~{Customer-Person}~[Person].LastName` . 
+
+Note the special syntax when using Relations in the expression. Relations can make the Enrichment expression quite long, but marking a Relation as the Primary Relation makes referencing it much easier. If the Customer-Person Relation is Primary, the expression for Customer\_Full\_Name can also be written as `[Person].FirstName + [Person].LastName` .  
 
 Consider this example Entity-Relationship Diagram \(ERD\) between two Sources in RAP:
 
