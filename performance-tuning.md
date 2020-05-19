@@ -8,11 +8,13 @@ In large-scale or complex reporting implementations, performance issues can beco
 
 ### Process History Tables
 
-TODO - how to pick out long-running processes, get V&E query
+RAP stores the historical run times and generated queries for Validation & Enrichment \(which is normally the most expensive process for any source\) in the stage.process and stage.process\_history tables.  Analyzing the longest runtimes and associated V&E queries can lead to a path where inefficient enrichments can be tuned.
+
+TODO - post some queries to pick out long-running processes, get V&E query, show how to get the query to compile for getting an explain plan
 
 ### Tuning Validation and Enrichment Rules
 
-TODO - tune based off the generated query, V&E query structure
+TODO - tune based off the generated query, V&E query structure, describe some common areas that can be tuned
 
 ### Lookup Overrides
 
