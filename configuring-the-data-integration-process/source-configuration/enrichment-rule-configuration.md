@@ -128,7 +128,9 @@ Now all we need to do is capture the Full\_Name attribute in the Order\_Detail S
 
 ![A section of the example ERD](../../.gitbook/assets/customer_full_name%20%281%29.jpg)
 
-Finally, create an enriched column on the Order\_Detail Source called _Customer\_Full\_Name_ with the Enrichment expression `[This]~{Order_Header-Order_Detail}~[Order_Header]~{Customer-Order_Header}~[Customer].FullName` This time, we need to traverse two Sources to access attributes in Customer. This is allowed because in the direction we are traversing, both Relations have the cardinality O. In the next example, we'll see how to deal with Relations of cardinality M \(many\).
+Finally, create an enriched column on the Order\_Detail Source called _Customer\_Full\_Name_ with the Enrichment expression `[This]~{Order_Header-Order_Detail}~[Order_Header]~{Customer-Order_Header}~[Customer].FullName`If both the Order\_Header-Order\_Detail and the Customer-Order\_Header Relations are Primary, the above expression can also be written as `[Customer].FullName`.
+
+This time, we need to traverse two Sources to access attributes in Customer. This is allowed because in the direction we are traversing, both Relations have the cardinality O. In the next example, we'll see how to deal with Relations of cardinality M \(many\).
 
 The Order\_Detail Source now has the attributes that make it possible to track revenue by customer.
 
