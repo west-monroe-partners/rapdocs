@@ -134,7 +134,7 @@ The Customer Source should now look like this:
 
 Now all we need to do is capture the Full\_Name attribute in the Order\_Detail Source. Below is the section of the ERD we need to examine.   
 
-![A section of the example ERD](../../.gitbook/assets/customer_full_name%20%281%29.jpg)
+![Section of the ERD for Example 1 with added attributes](../../.gitbook/assets/customer_full_name%20%281%29.jpg)
 
 Finally, create an enriched column on the Order\_Detail Source called _Customer\_Full\_Name_ with the Enrichment expression `[This]~{Order_Header-Order_Detail}~[Order_Header]~{Customer-Order_Header}~[Customer].FullName`If both the Order\_Header-Order\_Detail and the Customer-Order\_Header Relations are Primary, the above expression can also be written as `[Customer].FullName`.
 
@@ -152,5 +152,7 @@ Another useful metric to track in this kinda of data set is _customer tenure,_ o
 
 ![ERD Section for Example 2](../../.gitbook/assets/customer-tenure-erd-section.jpg)
 
-## 
+We will be storing all of the enriched columns in the Customer Source. First, we want to know the name of each customer. Create an enriched column in the Customer Source called Full\_Name that combines the FirstName and LastName fields in the Person Source, just like in Example 1.
+
+Customer tenure can be rephrased as "the length of time that a customer has been making purchases at the store". In order to capture this, we need to take the   
 
