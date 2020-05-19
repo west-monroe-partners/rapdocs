@@ -150,5 +150,7 @@ The Order\_Detail Source now has the attributes that make it possible to track r
 
 Another useful metric to track in this kinda of data set is _customer tenure,_ or "customer loyalty". Below is the portion of the ERD we need to examine for this example.
 
+![ERD Section for Example 2](../../.gitbook/assets/customer-tenure-erd-section.jpg)
+
 ## 
 
