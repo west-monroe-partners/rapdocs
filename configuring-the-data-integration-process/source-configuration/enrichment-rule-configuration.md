@@ -106,9 +106,17 @@ When configuring the Expression property on the Enrichment configuration screen,
   </tbody>
 </table>## Relations and Enrichments Examples
 
-To illustrate the proper use of Relations and Enrichments, let's examine the example Entity-Relationship Diagram of an arrangement of Sources in RAP below. The labels near the relationship lines are the names of the Relations that the user would have configured prior to creating any Enrichments. 
+To illustrate the proper use of Relations and Enrichments, let's examine the example Entity-Relationship Diagram of an arrangement of Sources in RAP below. We will use this ERD for both examples. The labels near the relationship lines are the names of the Relations that the user would have configured prior to creating any Enrichments. 
 
 ![Example ERD](../../.gitbook/assets/relations-erd%20%284%29.jpg)
+
+#### 
+
+### Example 1: Revenue By Customer
+
+For this example, we need to focus on a particular section of the ERD shown below.
+
+\(image\)
 
 One useful metric to track in these kinds of data models is _revenue by customer._ To do this, let's first create an enriched column _Revenue_ on the Order\_Detail Source_._ The Enrichment expression for this would be `[This].OrderQty * [This].UnitPrice`. All of the attributes needed for this enriched column already exist on the Order\_Detail Source, so we don't need any Relations for this metric.
 
@@ -130,47 +138,17 @@ Now all we need to do is capture the Full\_Name attribute in the Order\_Detail S
 
 Finally, create an enriched column on the Order\_Detail Source called _Customer\_Full\_Name_ with the Enrichment expression `[This]~{Order_Header-Order_Detail}~[Order_Header]~{Customer-Order_Header}~[Customer].FullName`If both the Order\_Header-Order\_Detail and the Customer-Order\_Header Relations are Primary, the above expression can also be written as `[Customer].FullName`.
 
-This time, we need to traverse two Sources to access attributes in Customer. This is allowed because in the direction we are traversing, both Relations have the cardinality O. In the next example, we'll see how to deal with Relations of cardinality M \(many\).
+This time, we need to traverse two Sources to access attributes in Customer. This is allowed because in the direction we are traversing, both Relations have the cardinality O.
 
 The Order\_Detail Source now has the attributes that make it possible to track revenue by customer.
 
 ![The final Order\_Detail Source attributes](../../.gitbook/assets/order_detail-revenue-and-customer_full_name.jpg)
 
+### Example 2: Customer Tenure
 
+ In the next example, we'll see how to use Relations of cardinality M \(many\). We will use the ERD we started with in Example 1.
 
-See all of the supported aggregate functions below:
+Another useful metric to track in this kinda of data set is _customer tenure,_ or "customer loyalty". Below is the portion of the ERD we need to examine for this example.
 
-| Aggregate | Query |
-| :--- | :--- |
-| first\_value | SELECT first\_value\(expression, order\_by\) FROM L WHERE &lt;relationship expression&gt; |
-| avg | SELECT avg\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| mean | SELECT mean\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| min | SELECT min\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| max | SELECT max\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| stddev | SELECT stddev\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| sum | SELECT sum\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| variance | SELECT variance\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| approx\_count\_distinct | SELECT approx\_count\_distinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| corr | SELECT corr\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| count | SELECT count\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| countDistinct | SELECT countDistinct\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| collect\_list | SELECT collect\_list\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| collect\_set | SELECT collect\_set\(x\) FROM L WHERE &lt;relationship expression&gt; |
-| sumDistinct | SELECT sumdistinct\(x\) FROM L WHERE&lt;relationship expression&gt; |
-
-## Chaining Relations
-
-The user can traverse multiple Relations to access attributes from two or more Sources apart. Examine the example ERD below:
-
-![](../../.gitbook/assets/relations-erd3%20%281%29.jpg)
-
-The Relation from User to Computer has a Cardinality of O because in this example a user can own only one computer, and the Relation from Computer to File has a Cardinality of M because a computer can store multiple files. If the user is creating an Enrichment from the context of the User Source and wanted to access the average file size a user has stored, they would type`AVG([This]~{User-Computer}~{Computer-File}~[File].Size)`.
-
-{% hint style="warning" %}
-When chaining Relations, only the final Relations may have a Cardinality of M.
-{% endhint %}
-
-## A Note About Primary Relations
-
-Recall that Relations are globally unique and relate two Sources that exist in the RAP environment, but from the context of a Source, only one Primary Relation may exist on that Source. When using a Primary Relation in an Enrichment, users may access attributes through that Relation using shorthand. For Example ERD 1, if `{Student-Computer}`was a Primary Relation, the user would not need to reference the Relations and would only have to type `[Computer].OperatingSystem`. In Example ERD 3, both the `{User-Computer}` Relation and the `{Computer-File}` Relation must be marked as Primary Relations for the user to be able to access the same attribute as `AVG([File].Size)` . Because of this, Primary Relations are useful for the Relation that a user intends to use most frequently.
+## 
 
