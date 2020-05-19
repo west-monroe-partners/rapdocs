@@ -108,7 +108,7 @@ When configuring the Expression property on the Enrichment configuration screen,
 
 To illustrate the proper use of Relations and Enrichments, let's examine the example Entity-Relationship Diagram of an arrangement of Sources in RAP below. The labels near the relationship lines are the names of the Relations that the user would have configured prior to creating any Enrichments. 
 
-![Example ERD](../../.gitbook/assets/relations-erd%20%281%29.jpg)
+![Example ERD](../../.gitbook/assets/relations-erd%20%283%29.jpg)
 
 One useful metric to track in these kinds of data models is _revenue by customer._ To do this, let's first create an enriched column _Revenue_ on the Order\_Detail Source_._ The Enrichment expression for this would be `[This].OrderQty * [This].UnitPrice`. All of the attributes needed for this enriched column already exist on the Order\_Detail Source, so we don't need any Relations for this metric.
 
