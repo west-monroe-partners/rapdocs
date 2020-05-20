@@ -8,6 +8,7 @@ RAP leverages various cloud components in AWS.  This section provides an overvie
 
 This section covers the following components of the RAP infrastructure stack, as well as how sizing affects performance when applicable:
 
+* On-Premise Agent
 * Data Lake Storage
 * Virtual Machines
 * Database Layer
