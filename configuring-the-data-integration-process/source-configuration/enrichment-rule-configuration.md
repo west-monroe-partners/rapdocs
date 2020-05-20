@@ -116,7 +116,7 @@ To illustrate the proper use of Relations and Enrichments, let's examine the exa
 
 For this example, we need to focus on a particular section of the ERD shown below.
 
-\(image\)
+![ERD Section for Example 1](../../.gitbook/assets/revenue-by-customer-erd-section.jpg)
 
 One useful metric to track in these kinds of data models is _revenue by customer._ To do this, let's first create an enriched column _Revenue_ on the Order\_Detail Source_._ The Enrichment expression for this would be `[This].OrderQty * [This].UnitPrice`. All of the attributes needed for this enriched column already exist on the Order\_Detail Source, so we don't need any Relations for this metric.
 
@@ -132,7 +132,7 @@ The Customer Source should now look like this:
 
 ![Customer after creating the enriched column Full\_Name](../../.gitbook/assets/customer-full_name.jpg)
 
-Now all we need to do is capture the Full\_Name attribute in the Order\_Detail Source. Below is the section of the ERD we need to examine.   
+Now all we need to do is capture the Full\_Name attribute in the Order\_Detail Source. Below is the section of the ERD we now need to examine.   
 
 ![Section of the ERD for Example 1 with added attributes](../../.gitbook/assets/customer_full_name%20%281%29.jpg)
 
@@ -156,13 +156,17 @@ We will be storing all of the enriched columns in the Customer Source. First, we
 
 Customer tenure can be rephrased as "the amount of time that a customer has been making purchases at the store". In order to capture this, we need to take difference between the most recent date and the earliest date that a customer has made a purchase.
 
-To capture the most recent purchase date, create a new enriched column on the Customer Source called _Most\_Recent\_Order\_Date_ with the Enrichment expression `MAX([This]~{Customer-Order_Header}~[Order_Header].OrderDate)` . Notice the `MAX()` function surrounding the expression. This is an example of an aggregate function. We need to use an aggregate function in this case because the cardinality of the Relation Customer-Order\_Header is M, and has the potential to return more than one record as indicated by the one-to-many relationship. The Enrichment expression cannot return multiple values, so the aggregate function consolidates these into one returnable value. 
+To capture the most recent purchase date, create a new enriched column on the Customer Source called _Most\_Recent\_Order\_Date_ with the Enrichment expression `MAX([This]~{Customer-Order_Header}~[Order_Header].OrderDate)` \(or `[Order_Header].OrderDate` if Customer-Order\_Header is Primary\).
+
+Notice the `MAX()` function surrounding the expression. This is an example of an aggregate function. We need to use an aggregate function in this case because the cardinality of the Relation Customer-Order\_Header is M, and has the potential to return more than one record as indicated by the one-to-many relationship from Customer to Order\_Header. The Enrichment expression cannot return multiple values, so the aggregate function consolidates these into one returnable value. 
 
 {% hint style="info" %}
 RAP uses Spark SQL for aggregate functions. Click [here](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-aggregate-functions.html) for a complete list of Spark aggregate functions. 
 {% endhint %}
 
-To capture the earliest purchase date, create another enriched column called _Oldest\_Order\_Date_ with the same expression, but using the `MAX()` aggregate function instead. The Customer Source should now look like this:
+For the earliest purchase date, create another enriched column called _Oldest\_Order\_Date_ with the same expression, but using the `MAX()` aggregate function instead. The Customer Source should now look like this:
 
 ![Customer Source with added attributes](../../.gitbook/assets/customer-most-recent-and-oldest.jpg)
+
+Finally, in order to capture customer tenure, create an enriched column that takes the difference between the most recent order date and the earliest order date. These fields are in a date format, so we'll need to use a specific aggregate function. The Enrichment expression is `DATEDIFF([This].Earliest_Order_Date, [This].Most_Recent_Order_Date)` .
 
