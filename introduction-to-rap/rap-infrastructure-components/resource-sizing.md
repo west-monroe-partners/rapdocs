@@ -16,9 +16,9 @@ In order to optimize processing power with the allocated resources, general guid
 
 * The ETL sizing uses the c5 series of EC2 instances, all of which have \# of virtual CPUs documented.
 * 4 ECUs for RDS roughly corresponds to 1 vCPU in EC2 instance sizing.
-* The connection pool should contain 1 connection per thread + 2 additional connections \(so for 4 vCPU configurations, this should be set to 6\).  This will allow for one processing thread to be available to RAP per each available vCPU.
+* The connection pool should contain 1 connection per vCPU + 2 additional connections for utility processes \(so for 4 vCPU configurations, this should be set to 6\).  This will allow for one processing thread to be available to RAP per each available vCPU.
 
-By following these 3 guidelines, the sizing of all 3 components can be aligned based on data processing needs.  The following table shows some common configurations.  The approximate additional horsepower over the default deployment is also specified.
+By following these 3 guidelines, the sizing of all 3 components can be aligned to maximize utilization based on data processing needs.  The following table shows some common configurations.  The approximate additional horsepower over the default deployment is also specified.
 
 TODO - add table here
 
