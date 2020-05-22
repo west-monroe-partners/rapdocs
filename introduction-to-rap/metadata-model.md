@@ -9,9 +9,29 @@ description: >-
 
 All data residing on the PostgreSQL database is organized into 3 main schemas.
 
-### Configuration Metadata \(stage\)
+### Configuration and Runtime Metadata \(stage\)
 
 TODO: Document main tables, add an ERD, discuss concept of source\_id vs input\_id vs landing\_id \(add diagram for this as well\)
+
+Source Configuration tables:
+
+* source
+* source\_dependency
+* connection
+
+Runtime Metadata tables:
+
+* input
+* landing
+* dependency\_queue
+* process\_batch
+* process
+* process\_batch\_history
+* process\_history
+
+### Log Data \(log\)
+
+TODO: Document orchestrator log messages
 
 ### Working Data \(work\)
 

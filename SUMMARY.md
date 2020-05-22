@@ -12,7 +12,7 @@
     * [Validation and Enrichment](getting-started-guide/data-integration-example/validation-and-enrichment.md)
     * [Output](getting-started-guide/data-integration-example/output.md)
 * [RAP Technical Overview](introduction-to-rap/README.md)
-  * [RAP Infrastructure Components](introduction-to-rap/rap-infrastructure-components/README.md)
+  * [Infrastructure Components](introduction-to-rap/rap-infrastructure-components/README.md)
     * [User and Machine Authentication](introduction-to-rap/rap-infrastructure-components/user-and-machine-authentication.md)
     * [On-Premise Agent](introduction-to-rap/rap-infrastructure-components/on-premise-agent.md)
     * [Raw Data Lake](introduction-to-rap/rap-infrastructure-components/raw-data-lake.md)
