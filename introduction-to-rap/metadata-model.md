@@ -39,5 +39,5 @@ TODO: Document main types of tables \(data work tables, lookup tables\) and nami
 
 ### Processed Data \(data\)
 
-TODO: Document ts vs. key tables and naming conventions
+TODO: Document ts\_ vs. key\_ tables and naming conventions
 
