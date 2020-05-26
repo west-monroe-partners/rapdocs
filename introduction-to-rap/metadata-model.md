@@ -9,11 +9,15 @@ description: >-
 
 All data residing on the PostgreSQL database is organized into 3 main schemas.
 
+TODO:  finish writing an intro - what broad strokes of data can you get from querying data directly, benefits of being able to understand metadata model \(SSIS / Informatica PowerCenter / other traditional ETL tools have queryable metadata as well\)
+
+TODO: add info / section around 
+
 ### Configuration and Runtime Metadata \(stage\)
 
 TODO: Add an intro, add an ERD, discuss concept of source\_id vs input\_id vs landing\_id \(add diagram for this as well\)
 
-The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are
+The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are also stored in this schema.
 
 Tables containing source configuration metadata are the following:
 

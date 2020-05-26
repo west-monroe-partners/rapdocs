@@ -6,5 +6,7 @@ description: >-
 
 # Internal Data Flows
 
-TODO: Discuss how data moves from source system -&gt; S3 -&gt; RAP work tables -&gt; RAP data table
+TODO:  Show how data moves from source system -&gt; S3 -&gt; RAP work tables -&gt; RAP data table
+
+TODO:  Add diagram of what this looks like
 
