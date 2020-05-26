@@ -34,5 +34,14 @@ Possible Solutions:
 
 ## Enrichment
 
+Issue: An Enrichment fails to convert a data column to the numeric data type.
 
+Possible Solution: A record in the original column may have non-numerical data that cannot be converted to numeric data. Either fix the errors in the data source or delete the problematic data.
+
+Issue: One or more Key Inputs are stuck in the "waiting" status.
+
+Possible Solutions:
+
+1. If previous Inputs have failed the Input, Staging, or Enrichment phases, resolve the errors on those Inputs. For example, an Input that is waiting on the Enrichment phase will release as soon as all errors on previous Inputs are resolved \(and no other dependencies exist for that Source\).
+2. The Source that contains the waiting input may depend on other Sources to finish processing. In this case it is best to check the Workflow Queue. The Workflow Queue can be accessed through the Processing page from the hamburger menu at the top-left of the screen.
 
