@@ -48,7 +48,7 @@ TODO:  list out tables
 
 ### Working Data \(work\)
 
-The **work** schema is used for intermediate processing by RAP.  No data in this schema is intended to be directly exposed via an output.
+The **work** schema is used for intermediate processing by RAP.  All data in this schema is intended to be used internally for RAP processing only and cannot be directly exposed via an output.
 
 The different types of tables in this schema are the following:
 
