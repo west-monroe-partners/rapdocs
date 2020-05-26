@@ -12,17 +12,11 @@ Flat files outputs feeding into other systems are highly dependent on the input 
 
 The primary data model RAP is designed for is the flat data model.  With the advent of columnar databases and columnstore indexes in traditional relational databases, a flat data model can be as performant as a traditional normalized schema, as well as use less storage through columnar compression technologies.
 
-TODO - add details about what this is, show visually how this looks like
-
 ### Loose Dimensional Data Model
 
 In traditional data warehousing, the [star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the reporting schema in the data warehouses for decades.  RAP is able to conform to a loose interpretation of this approach, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
 
-TODO - add rough diagram
-
 ### Hybrid Model
 
 In some cases, a hybrid approach between the flat data modeling approach and the dimensional data modeling approach can be the right approach.
-
-TODO - describe when to roll attributes into flat model and when to normalize to separate table
 

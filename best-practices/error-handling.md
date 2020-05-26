@@ -16,5 +16,5 @@ TODO - discuss warning vs failure
 
 ### Error Outputs
 
-TODO - discuss what should be routed to these \(copy from BSP conceptual arch slides\)
+TODO - discuss what should be routed to these
 
