@@ -20,7 +20,7 @@
     * [User Interface](introduction-to-rap/rap-infrastructure-components/user-interface.md)
     * [Metadata and Intermediate Processing Storage](introduction-to-rap/rap-infrastructure-components/metadata-and-intermediate-processing-storage.md)
     * [Resource Sizing](introduction-to-rap/rap-infrastructure-components/resource-sizing.md)
-  * [Configuration Metadata Model](introduction-to-rap/metadata-model.md)
+  * [Metadata and Business Data Model](introduction-to-rap/metadata-model.md)
   * [Internal Data Flows](introduction-to-rap/internal-data-flows/README.md)
     * [Validation Query Generation](introduction-to-rap/internal-data-flows/validation-query-generation.md)
     * [Output Query Generation](introduction-to-rap/internal-data-flows/output-query-generation.md)
