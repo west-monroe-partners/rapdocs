@@ -28,6 +28,7 @@ Tables containing source configuration metadata are the following:
 * **output\_source**:  Lists out which outputs each source will get written to.
 * **output\_source\_column**:  Contains the source to target mapping for each **output\_source**.
 * **connection**:  Contains information about each connection for file and database sources / targets.  This contains database connection credentials / information for database connections and folder paths for file connections.
+* **lookup**:  Contains the list of sources that need lookup tables built.  This is required for support of lookups not on the primary key \(i.e., not using s\_key\).
 
 Tables containing runtime metadata are the following:
 
@@ -39,6 +40,7 @@ Tables containing runtime metadata are the following:
 * **process**:  Lists out each unit of work being done within batches that are in-progress or ready to run.  This generally is one-to-one with landings through the validation step.  The RAP orchestrator uses this as its processing queue table and pulls unprocessed records off this queue as processing slots open up.
 * **process\_batch\_history**:  Lists out the history of batches that have already ran and completed execution.
 * **process\_history**:  List out the history of processes that have already ran and completed execution.
+* **lookup\_table**:  List of all the active lookup tables in the work schema.
 
 ### Log Data \(log\)
 
