@@ -28,5 +28,5 @@ RAP also supports the following proprietary source systems.  However, since thos
 
 The RAP Agent pulls data from the source system and generates a CSV.  That CSV is then uploaded to the landing bucket in S3.
 
-TODO - arch diagram, point out HTTPS connection
+TODO - arch diagram, HTTPS connection
 
