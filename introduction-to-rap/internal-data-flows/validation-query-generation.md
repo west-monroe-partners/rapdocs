@@ -1,4 +1,4 @@
-# Enrichment Query Generation
+# Validation Query Generation
 
-TODO - add information about how query generation works: left joins, CTEs, etc
+TODO - add information about query generation, left joins, CTEs, etc
 

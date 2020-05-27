@@ -6,8 +6,6 @@ description: A deeper look on how RAP operates internally and stores its metadat
 
 As RAP operates differently than traditional ETL tools, this section provides a deeper dive of how RAP processes data, how AWS drives data flow in RAP, and how RAP is structured internally.  The information presented in this section is helpful to know when architecting a new implementation leveraging RAP as the data processing tool of choice, as well as where to look when troubleshooting issues.
 
-TODO - add logical arch section
-
 ### Audience
 
 The intended audiences for this section are the following:

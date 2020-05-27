@@ -13,8 +13,6 @@ TODO:  finish writing an intro - what broad strokes of data can you get from que
 
 TODO: add useful query patterns somewhere 
 
-TODO - refer to pyramid slide
-
 ### Configuration and Runtime Metadata \(stage\)
 
 TODO: Add an intro, add an ERD, discuss concept of source\_id vs input\_id vs landing\_id \(add diagram for this as well\)
@@ -49,8 +47,6 @@ Tables containing runtime metadata are the following:
 The **log** schema is used to capture messages raised by each actor withing RAP.  Most of the messages exposed through the UI are logged in this schema.  Tables stored here in combination with log files written on the servers for the RAP orchestrator and on-premise Agents can be used for troubleshooting errors.
 
 TODO:  list out tables
-
-TODO - move sections below here to separate section
 
 ### Working Data \(work\)
 
