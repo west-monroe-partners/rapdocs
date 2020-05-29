@@ -52,5 +52,18 @@ Issue: The Output phase fails on a Source.
 Possible Solutions:
 
 1. There may be a Output mapping type mismatch \(available for Table and Virtual Outputs only\). For example, mapping a text field to the numeric type will fail. If the requirements call for the Output column to be a numeric type and the text can be converted to numeric successfully, convert the text in an enrichment rule. Otherwise, fix the issue at the source.
-2. The destination database for the Output is incorrect. Ensure that the Database Name parameter in the Output Details is correct, then reset Output.   
+2. The destination database for the Output is incorrect. Ensure that the Database name, credentials, and host name parameters in the Output Details is correct.
+3. The database may not be accessible by a TCP/IP connection. If not, configure the network to allow TCP/IP accessibility.
+4. The Output Path parameter in the Output Details is incorrect. Ensure that the path is set to the expected S3 container and is formatted as  `s3://<bucket>/<key>`
+5. In the case of an SFTP Output, the SFTP location may be inaccessible. Unblock inbound and outbound ports on the server.
+
+Issue: Dropping a column from an existing Table Output fails.
+
+Possible Solution: A view is using the field that was dropped. Ensure the field is no longer needed in the view and redeploy it without dropping the field.
+
+## General Errors
+
+Issue: All activity in RAP is at a standstill due to server or network issues.
+
+Possible Solution: The Orchestrator might have crashed. Confirm this by checking the log file in the AWS EC2 instance. If the log shows that processing has stopped or any other error messages, restart the Orchestrator by running the following command on the EC2 instance console: `sudo systemctl rap restart`
 
