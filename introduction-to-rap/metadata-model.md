@@ -5,13 +5,15 @@ description: >-
   information.
 ---
 
-# Metadata and Business Data Model
+# Metadata Model
 
 All data residing on the PostgreSQL database is organized into 3 main schemas.
 
 TODO:  finish writing an intro - what broad strokes of data can you get from querying data directly, benefits of being able to understand metadata model \(SSIS / Informatica PowerCenter / other traditional ETL tools have queryable metadata layer as well\)
 
 TODO: add useful query patterns somewhere 
+
+TODO - refer to pyramid slide
 
 ### Configuration and Runtime Metadata \(stage\)
 
@@ -48,19 +50,5 @@ The **log** schema is used to capture messages raised by each actor withing RAP.
 
 TODO:  list out tables
 
-### Working Data \(work\)
-
-The **work** schema is used for intermediate processing by RAP.  All data in this schema is intended to be used internally for RAP processing only and cannot be directly exposed via an output.
-
-The different types of tables in this schema are the following:
-
-TODO:  list them out \(lookup and intermediate tables\), what do \#'s in table names mean
-
-### Processed Data \(data\)
-
-The **data** schema contains all processed data that is ready to be used for lookups or output to an external destination.  This can be thought of as the data hub layer, as data cleansing and enrichments are already complete, and the last step is to write that data out to a reporting warehouse or flat files to an external system.
-
-The different types of tables in this schema are the following:
-
-TODO:  list out abbreviations, what do \#'s in table names mean
+### 
 
