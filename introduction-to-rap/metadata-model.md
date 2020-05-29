@@ -13,11 +13,13 @@ TODO:  finish writing an intro - what broad strokes of data can you get from que
 
 TODO: add useful query patterns somewhere 
 
-TODO - refer to pyramid slide
+TODO: refer to pyramid slide
 
 ### Configuration and Runtime Metadata \(stage\)
 
-TODO: Add an intro, add an ERD, discuss concept of source\_id vs input\_id vs landing\_id \(add diagram for this as well\)
+TODO:  Add an intro, add an ERD, discuss concept of source\_id vs input\_id \(add diagram for this as well\)
+
+TODO:  Update with RAP 2.0 concepts
 
 The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are also stored in this schema.
 
