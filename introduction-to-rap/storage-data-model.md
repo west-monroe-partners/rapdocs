@@ -2,7 +2,7 @@
 
 TODO - write an intro
 
-TODO - RAP uses Avro / Parquet files and Hive tables now, sections below get replaced
+TODO - RAP uses Avro / Parquet files and Hive tables now, sections below should get replaced
 
 ### Working Data \(work\)
 

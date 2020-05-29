@@ -6,7 +6,5 @@ description: >-
 
 # Internal Data Flows
 
-TODO:  Show how data moves from source system -&gt; ADLS/S3 -&gt; Hive table
-
-TODO:  Add diagram of what this looks like \(pull from Miro\)
+TODO: Discuss how data moves from source system -&gt; S3 -&gt; RAP work tables -&gt; RAP data table
 

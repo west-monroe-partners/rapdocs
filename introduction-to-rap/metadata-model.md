@@ -1,7 +1,7 @@
 ---
 description: >-
   An overview of the configuration metadata tables in RAP, as well as some
-  useful query patterns that can be used to quickly get configuration
+  useful query patterns that can be leveraged to quickly get configuration
   information.
 ---
 
@@ -51,6 +51,12 @@ Tables containing runtime metadata are the following:
 The **log** schema is used to capture messages raised by each actor withing RAP.  Most of the messages exposed through the UI are logged in this schema.  Tables stored here in combination with log files written on the servers for the RAP orchestrator and on-premise Agents can be used for troubleshooting errors.
 
 TODO:  list out tables
+
+### Useful Queries
+
+This section lists out some metadata queries that have been useful on prior RAP implementations.
+
+TODO - put random helpful queries here
 
 ### 
 
