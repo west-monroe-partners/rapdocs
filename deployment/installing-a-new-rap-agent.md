@@ -4,7 +4,15 @@ TODO - write an intro
 
 ### Prerequisites
 
-TODO - Java 32-bit version, domains/firewalls
+The following requirements must be met
+
+* The latest 32-bit version of the Java 8 JDK must be installed on the destination machine.  If that is not yet installed on the destination machine, navigate to the Oracle site linked [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), and download and install the Java SE Development Kit that is compatible with the machine that the Agent will be installed on. Version 8u211 or later is required.
+* Since the RAP Agent initiates all it's connections, outbound connections to various cloud resources on the public Internet are required.  If a firewall is limiting outbound internet access, the following resources should be allowed through the firewall \(exact domain names will vary by environment\)
+  * AWS S3 / Azure Data Lake Storage for file landing area via HTTPS \(port 443\)
+  * RAP API endpoint via HTTPS \(port 443\)
+  * Auth0 via HTTPS \(port 443\): &lt;xxx&gt;.auth0.com
+* File and database sources that will be accessed through the RAP Agent must be accessible from the machine the RAP Agent is being installed on.  In the case of database sources, many clients install the RAP Agent software directly on the database server.  However, network connectivity from the machine that the Agent software is being installed on is all that is required.  Note that the RAP Agent will be performing data pulls and uploading to AWS / Azure, so the recommendation is to not segment off the Agent machine from the sources being accessed in a way that traffic needs to cross a limited capacity network segment.
+* The user account intended for RAP on source databases need to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the RAP user and only SQL Server authentication can be used.
 
 ### Setting up a New Agent Code
 

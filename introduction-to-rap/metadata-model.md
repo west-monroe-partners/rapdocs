@@ -1,11 +1,11 @@
 ---
 description: >-
   An overview of the configuration metadata tables in RAP, as well as some
-  useful query patterns that can be leveraged to quickly get configuration
+  useful query patterns that can be used to quickly get configuration
   information.
 ---
 
-# Metadata Model
+# Metadata and Business Data Model
 
 All data residing on the PostgreSQL database is organized into 3 main schemas.
 
@@ -13,13 +13,9 @@ TODO:  finish writing an intro - what broad strokes of data can you get from que
 
 TODO: add useful query patterns somewhere 
 
-TODO: refer to pyramid slide
-
 ### Configuration and Runtime Metadata \(stage\)
 
-TODO:  Add an intro, add an ERD, discuss concept of source\_id vs input\_id \(add diagram for this as well\)
-
-TODO:  Update with RAP 2.0 concepts
+TODO: Add an intro, add an ERD, discuss concept of source\_id vs input\_id vs landing\_id \(add diagram for this as well\)
 
 The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are also stored in this schema.
 
@@ -52,11 +48,19 @@ The **log** schema is used to capture messages raised by each actor withing RAP.
 
 TODO:  list out tables
 
-### Useful Queries
+### Working Data \(work\)
 
-This section lists out some metadata queries that have been useful on prior RAP implementations.
+The **work** schema is used for intermediate processing by RAP.  All data in this schema is intended to be used internally for RAP processing only and cannot be directly exposed via an output.
 
-TODO - put random helpful queries here
+The different types of tables in this schema are the following:
 
-### 
+TODO:  list them out \(lookup and intermediate tables\), what do \#'s in table names mean
+
+### Processed Data \(data\)
+
+The **data** schema contains all processed data that is ready to be used for lookups or output to an external destination.  This can be thought of as the data hub layer, as data cleansing and enrichments are already complete, and the last step is to write that data out to a reporting warehouse or flat files to an external system.
+
+The different types of tables in this schema are the following:
+
+TODO:  list out abbreviations, what do \#'s in table names mean
 
