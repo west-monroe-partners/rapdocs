@@ -13,7 +13,7 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
 * The machine or VM must be running one of the following 2 operating systems:
   * Windows 7 / Server 2008 R2 or later
   * Red Hat 6 or later \(or compatible distribution\)
-* The latest version of the Amazon Corretto JDK must be installed on the destination machine.  If that is not yet installed on the destination machine, navigate to the site linked [here](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html) and download and install the JDK that is compatible with the target architecture and OS of the machine that the Agent will be installed on.  Alternatively, if Oracle JDK 8 is already installed, that will be sufficient as well.
+* The latest version of the Amazon Corretto JDK 8 should preferably be installed on the destination machine.  Alternatively, if Oracle JDK 8 is already installed, that will be sufficient as well.  If neither is installed on the destination machine, navigate to the site linked [here](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html) and download and install the Corretto JDK that is compatible with the target architecture and OS of the machine that the Agent will be installed on.
 * Since the RAP Agent initiates all its own connections, outbound connections to various cloud resources on the public Internet are required.  If a firewall is limiting outbound internet access, the following resources should be allowed through the firewall \(exact domain names will vary by environment\)
   * AWS S3 / Azure Data Lake Storage for file landing area via HTTPS \(port 443\)
   * RAP API endpoint via HTTPS \(port 443\)
