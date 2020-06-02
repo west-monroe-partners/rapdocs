@@ -2,6 +2,8 @@
 
 TODO - Write an intro.  Document default deployment size and how changing Postgres / ETL box sizing affects processing performance.  Also throw in a link to latest AWS pricing for all components and add some ballpark run rates
 
+TODO - how does this concept change for RAP 2.0 / Azure?
+
 ### Scaling Data Processing Resources
 
 Depending on the amount of data being processed and the complexity of the logic in use, scaling up the data processing resources for RAP may be required to meet data loading SLAs.

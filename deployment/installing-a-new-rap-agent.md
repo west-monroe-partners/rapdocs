@@ -28,7 +28,7 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
 
 Prior to adding a new Agent, the Agent code should be set up in the Postgres database.
 
-TODO - show where this is done in UI
+TODO - show where this is done in UI \(new process\)
 
 ### Obtaining the RAP Agent
 

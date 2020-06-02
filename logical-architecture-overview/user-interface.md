@@ -4,5 +4,5 @@ The user interface is the frontend to RAP that developers will interact with the
 
 TODO - what can you do in UI?
 
-TODO - login experience
+TODO - login experience / Auth0
 
