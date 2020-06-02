@@ -115,7 +115,9 @@ There are currently seven different database connections available.
       <td style="text-align:left">N</td>
     </tr>
   </tbody>
-</table>#### Additional Parameters: Snowflake
+</table>
+
+#### Additional Parameters: Snowflake
 
 | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- |
