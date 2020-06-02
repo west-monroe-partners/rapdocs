@@ -1,5 +1,7 @@
 ---
-description: Areas within RAP where data is stored throughout the process.
+description: >-
+  Areas within RAP where data is stored throughout the data processing life
+  cycle.
 ---
 
 # Data Storage
