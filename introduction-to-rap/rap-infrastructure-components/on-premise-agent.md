@@ -1,4 +1,4 @@
-# On-Premise Agent
+# RAP Agent
 
 As most source data will reside in on-premise or private cloud environments, RAP requires a method to transfer that data into AWS for processing.  To achieve this, RAP leverages an agent architecture in order to ingest data into RAP from the various on-premise networks.  On each source system environment, a lightweight Scala-based Agent is installed for the purpose of pulling data from the source system and uploading it to AWS.  The major benefit of this approach is that no VPN needs to be set up into each of the on-premise or private networks.  The only requirement for the Agent is access to initiate connections to the public internet.
 
@@ -28,5 +28,5 @@ RAP also supports the following proprietary source systems.  However, since thos
 
 The RAP Agent pulls data from the source system and generates a CSV.  That CSV is then uploaded to the landing bucket in S3.
 
-TODO - arch diagram, HTTPS connection
+TODO - arch diagram, point out HTTPS connection
 
