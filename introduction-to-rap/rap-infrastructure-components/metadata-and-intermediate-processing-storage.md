@@ -1,4 +1,4 @@
-# Metadata and Intermediate Processing Storage
+# PostgreSQL Database
 
-TODO: Document purpose of Aurora Postgres Serverless here \(metadata and logging\), default encryption enabled
+TODO: Document purpose of PostgreSQL database here \(metadata and logging\), default encryption enabled
 

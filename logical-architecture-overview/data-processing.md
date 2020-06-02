@@ -12,6 +12,8 @@ description: >-
 
 The data lake consists of a Raw data landing area and Transformation area used for RAP's processing steps.
 
+TODO - discuss Raw vs. Transform storage
+
 ### Data Hub
 
 The data hub consists of Hive tables that contain the final processed data for each source.  Each table is one-to-one with a data source that is automatically generated and maintained by RAP.  This layer can be accessed via SQL syntax and is ideal to be used as an exposure point for data exploration purposes and sharing data with other systems.
