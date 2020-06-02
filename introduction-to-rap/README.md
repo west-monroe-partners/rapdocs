@@ -1,5 +1,5 @@
 ---
-description: A deeper look on how RAP operates internally and stores its metadata.
+description: A deeper dive into the technology supporting RAP's operation.
 ---
 
 # Physical Architecture
