@@ -21,6 +21,7 @@
     * [User and Machine Authentication](introduction-to-rap/rap-infrastructure-components/user-and-machine-authentication.md)
     * [RAP Agent](introduction-to-rap/rap-infrastructure-components/on-premise-agent.md)
     * [Data Lake](introduction-to-rap/rap-infrastructure-components/raw-data-lake.md)
+    * [Data Hub](introduction-to-rap/rap-infrastructure-components/data-hub.md)
     * [Virtual Machine Instances](introduction-to-rap/rap-infrastructure-components/virtual-machine-instances.md)
     * [User Interface](introduction-to-rap/rap-infrastructure-components/user-interface.md)
     * [PostgreSQL Database](introduction-to-rap/rap-infrastructure-components/metadata-and-intermediate-processing-storage.md)
