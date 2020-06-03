@@ -1,6 +1,6 @@
-# Data Processing
+# Data Processing Steps
 
-![](../.gitbook/assets/2.0-process-steps.jpg)
+![](../../.gitbook/assets/2.0-process-steps.jpg)
 
 Data processing in RAP consists of 9 possible steps.
 
