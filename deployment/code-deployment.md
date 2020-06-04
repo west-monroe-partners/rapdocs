@@ -20,5 +20,5 @@ TODO - what does client need to set up beforehand, what permissions needed for u
 
 ### Verifying the deployment
 
-Once RAP is up and running, the [Data Integration Example](../getting-started-guide/data-integration-example/) in the Getting Started Guide can be used to verify that the full RAP stack is working correctly.
+Once RAP is up and running, the [Data Integration Example](../getting-started-guide/data-integration-example/) in the Getting Started Guide can be followed to verify that the full RAP stack is working correctly.
 
