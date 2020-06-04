@@ -42,7 +42,7 @@ Tables containing runtime metadata are the following:
 * **process**:  Lists out each unit of work being done within batches that are in-progress or ready to run.  This generally is one-to-one with landings through the validation step.  The RAP orchestrator uses this as its processing queue table and pulls unprocessed records off this queue as processing slots open up.
 * **process\_batch\_history**:  Lists out the history of batches that have already ran and completed execution.
 * **process\_history**:  List out the history of processes that have already ran and completed execution.
-* **lookup\_table**:  List of all the active lookup tables in the work schema.
+* ~~**lookup\_table**:  List of all the active lookup tables in the work schema.~~
 
 ### Log Data \(log\)
 

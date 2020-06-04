@@ -4,21 +4,17 @@ TODO - write an intro - RAP can be deployed AWS vs. Azure deployment, process sh
 
 ### Prerequisites
 
-Before RAP can be deployed, the following requirements need to be met:
-
-* Auth0 account
-* AWS or Azure account
-* Administrator access to both AWS and Auth0 for the person who will be deploying the new RAP environment
+TODO - list them \(Auth0 account, AWS/Azure account, etc\)
 
 ### Deploying to Amazon Web Services \(AWS\)
 
-TODO - what does client need to set up beforehand, what permissions needed for user performing deployment, what to run
+TODO - what does client need to set up beforehand, what permissions needed for user performing deployment
 
 ### Deploying to Microsoft Azure
 
-TODO - what does client need to set up beforehand, what permissions needed for user performing deployment, what to run
+TODO - what does client need to set up beforehand, what permissions needed for user performing deployment
 
 ### Verifying the deployment
 
-Once RAP is up and running, the [Data Integration Example](../getting-started-guide/data-integration-example/) in the Getting Started Guide can be followed to verify that the full RAP stack is working correctly.
+TODO - Step-by-step instructions to create a simple source in RAP and run it
 
