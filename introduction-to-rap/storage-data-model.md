@@ -2,6 +2,8 @@
 
 TODO - write an intro
 
+TODO - RAP uses Avro / Parquet files and Hive tables now, sections below should get replaced
+
 ### Data Lake
 
 TODO - Document Data Lake Raw layer \(Avro files\), how those are organized
