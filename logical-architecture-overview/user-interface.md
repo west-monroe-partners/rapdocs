@@ -20,6 +20,12 @@ For example, clicking on a specific Source on the Sources page will show all of 
 
 ### Processing and Source Dashboard
 
+If errors occur during configuration, the RAP user interface has some troubleshooting functionality that allows both clients and configurators to report and handle issues effectively.
+
+The Processing page and Source Dashboard allows users to monitor Sources and Processes at a global level. From the Processing page, users can view and search all current and upcoming RAP processes as well as any process dependencies.
+
+![Processing Page](../.gitbook/assets/2.0-processing.jpg)
+
 TODO - what can you do in UI?
 
 TODO - login experience / Auth0
