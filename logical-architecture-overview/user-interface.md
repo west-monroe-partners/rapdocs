@@ -26,6 +26,10 @@ The Processing page and Source Dashboard allows users to monitor Sources and Pro
 
 ![Processing Page](../.gitbook/assets/2.0-processing.jpg)
 
+The Source Dashboard shows the current status of all Sources as well as the status of the individual phases of the Source processes. The user can also view the status history of Sources and keep track of activity trends
+
+\(Source Dashboard Photo\)  
+
 TODO - what can you do in UI?
 
 TODO - login experience / Auth0
