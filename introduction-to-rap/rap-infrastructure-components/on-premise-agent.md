@@ -26,7 +26,7 @@ RAP also supports the following proprietary source systems.  However, since thos
 
 ### Data Flow into AWS
 
-The RAP Agent pulls data from the source system and generates a CSV.  That CSV is then uploaded to the landing bucket in S3.
+The RAP Agent pulls data from the source system and generates a CSV.  That CSV is then uploaded to the landing area in the data lake.
 
 TODO - arch diagram, point out HTTPS connection
 
