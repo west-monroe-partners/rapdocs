@@ -1,4 +1,4 @@
 # Deployment
 
-TODO - Put stuff here \(quick intro\)
+TODO - Put stuff here
 
