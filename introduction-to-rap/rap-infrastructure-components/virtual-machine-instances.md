@@ -1,4 +1,4 @@
-# Docker Containers
+# Virtual Machine Instances
 
-TODO: Document Docker containers used by RAP \(Orch + UI?\), where system parameters for Orch are set \(AWS Systems Manager? Equivalent for Azure?\), list out what each parameter means, discuss encryption in place, discuss location of log files
+TODO: Document EC2/VM instances used by RAP \(Orch + UI?\), where system parameters for Orch are set \(AWS Systems Manager, equivalent for Azure?\), list out what each parameter means, discuss EBS volume encryption, discuss location of log files
 
