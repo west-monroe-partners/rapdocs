@@ -2,7 +2,7 @@
 
 The user interface is the front end to RAP that developers will interact with the most.
 
-Users must login to the RAP user interface with a RAP account. Authentication is handled with Auth0, so clients need to be provided with an account in order to login to and use the user interface RAP configurators may sign up with their e-mail address.
+Users must login to the RAP user interface with a RAP account. Authentication is handled with Auth0, so both RAP configurators and clients need to be provided with an account in order to login to and use the user interface.
 
 Within the RAP user interface, the user is able to set up data sources and outputs, enrich existing data, and even perform troubleshooting. Everything can be reached from the hamburger menu in the top-left corner of the screen.
 

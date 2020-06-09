@@ -1,8 +1,12 @@
 # Environment Migration Process
 
-TODO - write intro
+For RAP projects, configurators will be working with two different environments in order to keep test data and production data separate. Environment migration is the process of copying the state of one RAP environment to another so that an identically-configured environments can be created in a timely manner
 
 ### New RAP Implementations
+
+For most RAP implementations, configurators will at first use one environment for testing, building Proof-Of-Concepts, etc. This environment will eventually become the official production environment for the project. Once this happens, configurators will still need another RAP environment that mirrors the state of the production environment for testing and troubleshooting issues with the client.
+
+
 
 TODO - you have one environment that will become PROD eventually, use it as your DEV
 
