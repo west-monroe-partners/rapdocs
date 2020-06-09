@@ -4,9 +4,9 @@ For RAP projects, configurators will be working with two different environments 
 
 ### New RAP Implementations
 
-For most RAP implementations, configurators will at first use one environment for testing, building Proof-Of-Concepts, etc. This environment will eventually become the official production environment for the project. Once this happens, configurators will still need another RAP environment that mirrors the state of the production environment for testing and troubleshooting issues with the client.
+For most RAP implementations, configurators will at first use one environment \(called DEV\) for testing, building Proof-Of-Concepts, etc. This environment will eventually become the official production environment \(PROD\) for the project. Once this happens, configurators will still need another RAP environment that mirrors the state of the production environment for testing and troubleshooting issues with the client.
 
-
+The environment migration process allows configurators to complete this step much quicker than re-creating the environment from scratch. 
 
 TODO - you have one environment that will become PROD eventually, use it as your DEV
 
