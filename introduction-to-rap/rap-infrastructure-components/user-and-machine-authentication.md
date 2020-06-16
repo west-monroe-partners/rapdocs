@@ -13,7 +13,7 @@ TODO - describe machine auth for API and RAP Agents, certificate setup
 
 ### Auth0 Rules Engine
 
-Rules can be set up in Auth0 using JavaScript code.  Detailed [information](https://auth0.com/docs/rules) about how to set up rules are provided by Auth0.
+Rules can be set up in Auth0 using JavaScript code.  Detailed information about how to set up rules are provided in [Auth0's documentation](https://auth0.com/docs/rules).
 
 A few links for how to set up some common rules are below:
 
