@@ -82,9 +82,7 @@ There are currently seven different database connections available.
     </tr>
   </thead>
   <tbody></tbody>
-</table>
-
-| database\_name |  | Name of the database | N |
+</table>| database\_name |  | Name of the database | N |
 | :--- | :--- | :--- | :--- |
 
 

@@ -1,8 +1,10 @@
 ---
-description: This section covers Validation and Enrichment configuration.
+description: >-
+  !! Update to include Relations and Enrichments !!   This section covers
+  Validation and Enrichment configuration.
 ---
 
-# Validation and Enrichment
+# !! Validation and Enrichment
 
 ## Step **1: Configure Validation**
 

@@ -104,9 +104,7 @@ When configuring the Expression property on the Enrichment configuration screen,
       </td>
     </tr>
   </tbody>
-</table>
-
-## Relations and Enrichments Examples
+</table>## Relations and Enrichments Examples
 
 To illustrate the proper use of Relations and Enrichments, let's examine the example Entity-Relationship Diagram of an arrangement of Sources in RAP below. We will use this ERD for both examples. The labels near the relationship lines are the names of the Relations that the user would have configured prior to creating any Enrichments. 
 
