@@ -3,6 +3,7 @@
 * [Welcome to RAP!](README.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
+    * [Who is RAP for?](getting-started-guide/rap-basics/who-is-rap-for.md)
     * [How it Works](getting-started-guide/rap-basics/components-and-concepts.md)
     * [Navigation and Interface](getting-started-guide/rap-basics/navigation-and-interface.md)
   * [Data Integration Example](getting-started-guide/data-integration-example/README.md)
