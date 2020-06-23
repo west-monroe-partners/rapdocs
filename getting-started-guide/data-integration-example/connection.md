@@ -1,7 +1,7 @@
 ---
 description: >-
   This section describes the process of setting up a connection in RAP. !! Add
-  short description of "Parameters"
+  short description of "Parameters" !! Update screenshots to blur data.
 ---
 
 # !! Connection
@@ -80,7 +80,9 @@ Finally, file\_path is the path to the location of the file, excluding the filen
 After configuring the **Source** connection, be sure the input file is in the correct folder or S3 bucket.
 {% endhint %}
 
-Click **Save** to finish Source Connection configuration.
+Click **Save** to finish Source Connection configuration. The final configuration should look something like the following.
+
+![Input Connection Configuration !! update to blur &apos;created by&apos; ](../../.gitbook/assets/rap-3-input-path.png)
 
 ## Step 4: Create Output Connection
 
@@ -90,7 +92,7 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **Connection Type:** `File`
 * **file\_path:** The path to your output container 
 
-![Output Connection Configuration](../../.gitbook/assets/image%20%28199%29.png)
+![Output Connection Configuration !! update to blur &apos;created by&apos;](../../.gitbook/assets/rap-4-output-path-use-me.png)
 
 Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
