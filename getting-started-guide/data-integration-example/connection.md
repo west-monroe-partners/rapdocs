@@ -1,8 +1,10 @@
 ---
-description: This section describes the process of setting up a connection in RAP.
+description: >-
+  This section describes the process of setting up a connection in RAP. !! Add
+  short description of "Parameters"
 ---
 
-# Connection
+# !! Connection
 
 ## Step 1: Create a Connection
 
@@ -67,6 +69,8 @@ For examples of other connection types, see the below tabs.
 {% endtabs %}
 
 ![Connection Type Options](../../.gitbook/assets/image%20%28170%29.png)
+
+!! Parameters "Search Parameter Table. Let us add a brief description of what the "Parameters" section means.
 
 ## Step 3: Indicate File Path
 
