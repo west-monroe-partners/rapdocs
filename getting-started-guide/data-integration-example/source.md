@@ -1,10 +1,11 @@
 ---
 description: >-
   This section describes the process of setting up a Source, including the
-  Source Details, Input Parameters, and Staging Parameters.
+  Source Details, Input Parameters, and Staging Parameters. !! Update the Input
+  validation.
 ---
 
-# Source
+# !! Source
 
 ## Step 1: Create a Source
 
@@ -150,7 +151,9 @@ Click the **Save** button to save the Source; all parameters should be configure
 
 _RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database._
 
-## Step 6: Validate File Input
+## !! Step 6: Validate File Input
+
+!! Update to have the new screenshot and the 'status' column.
 
 Check the Inputs tab at the top of the page to verify that the file has been successfully pushed to the system.
 
