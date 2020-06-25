@@ -4,7 +4,7 @@ description: >-
   Validation and Enrichment configuration.
 ---
 
-# !! Validation and Enrichment
+# !! Relation and Enrichment
 
 ## !! Step **1: Configure Validation !! Change to Relation**
 
@@ -22,10 +22,10 @@ Configure the following parameters. While there are no [Naming Conventions](vali
 * **!! Related Source:** 
 * **!! Relation Cardinality:** 
 
-For the Validation Expression, input:
+For the Validation Expression !!copy paste components of the Realtionship section about \[This\] and \[\]!!, input:
 
 ```sql
-T.city IS NULL
+[This].city IS NULL
 ```
 
 Click **Save** to finish.
