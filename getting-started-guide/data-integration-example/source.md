@@ -157,7 +157,7 @@ _RAP now has all the information it needs to complete the Input & Staging phases
 
 Check the Inputs tab at the top of the page to verify that the file has been successfully pushed to the system.
 
-![Input Found &amp; Ingested !! Update to include new columns](../../.gitbook/assets/screenshot_9%20%281%29.png)
+![Input Found &amp; Ingested](../../.gitbook/assets/screenshot_9%20%281%29.png)
 
 {% hint style="info" %}
 RAP will automatically begin the Input phase when the input files appear in the Connection specified earlier. These files will disappear once RAP ingests them.

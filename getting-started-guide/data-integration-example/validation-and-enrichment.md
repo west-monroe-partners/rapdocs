@@ -6,7 +6,7 @@ description: >-
 
 # !! Validation and Enrichment
 
-## Step **1: Configure Validation**
+## !! Step **1: Configure Validation !! Change to Relation**
 
 A Validation Rule consists of validation logic, in the form of a SQL WHERE statement. After checking each statement individually, RAP tags each record with a pass, failure, or warning flag, as well as which rule\(s\) triggered the warnings or failures. This section makes a simple validation rule that ensures the city field has a value.
 
@@ -19,6 +19,8 @@ Configure the following parameters. While there are no [Naming Conventions](vali
 * **Name:** `City is Null`
 * **Description:** `Warn when city is null`
 * **When expression is true, set to:** `Warn`
+* **!! Related Source:** 
+* **!! Relation Cardinality:** 
 
 For the Validation Expression, input:
 
@@ -28,7 +30,7 @@ T.city IS NULL
 
 Click **Save** to finish.
 
-![Complete Validation Rule](../../.gitbook/assets/image%20%28125%29.png)
+![!! Complete Validation Rule !! Relation](../../.gitbook/assets/image%20%28125%29.png)
 
 {% hint style="info" %}
 When entering an expression, type \`\`\`\`\` to reveal all of the Source fields available.
