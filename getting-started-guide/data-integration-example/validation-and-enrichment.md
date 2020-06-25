@@ -60,9 +60,9 @@ Navigate to the Enrichments tab within the Source, and click **New Enrichment Ru
 
 ### Enriched Column Data Type:
 
-This is a `text` datatype, because it is a conversion of the `city` field to either a "N" or a "Y".
+This is a `text` datatype, because it is a conversion of the `city` field to either a "N" or a "Y". ****Select "string" from the dropdown menu.
 
-### Operation Type:
+### Operation Type: !! Still needed?
 
 `Formula`. For more information on Operation Types, see below:
 
@@ -87,6 +87,10 @@ Enter the following SQL code to create an expression with our desired logic.
 ```sql
 CASE WHEN T.city = 'Chicago' THEN 'Y' ELSE 'N' END
 ```
+
+**!! Recalculation mode**
+
+&lt;!!Insert information&gt;
 
 {% hint style="info" %}
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
