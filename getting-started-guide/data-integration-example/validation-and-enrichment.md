@@ -4,7 +4,7 @@ description: >-
   Validation and Enrichment configuration.
 ---
 
-# !! Relation and Enrichment
+# !! Validation and Enrichment
 
 ## !! Step **1: Configure Validation !! Change to Relation**
 
@@ -127,4 +127,8 @@ This concludes Validation and Enrichments configuration. RAP is now ready to **O
 {% hint style="info" %}
 At this point, the content of the Data Viewer can be downloaded into a CSV file by hitting the **Download** button located underneath the Data Viewer tab on the right of the screen.
 {% endhint %}
+
+## !! Note: Relations
+
+Though not included in this example, Relations are another way to modify the data in a Source. Relations can be thought of as a join/merge between multiple data sources, joining the current source with another reference source.
 
