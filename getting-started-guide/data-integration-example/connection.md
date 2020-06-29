@@ -18,11 +18,11 @@ In a Chrome browser, navigate to the RAP Sources screen by accessing the URL pro
 
 Navigate to the Connections screen through the Menu, as seen below.
 
-![Navigation Menu - Connections](../../.gitbook/assets/navigate-to-connections.png)
+![Navigation Menu - Connections](../../.gitbook/assets/rap-1-connection-blur.png)
 
 On the Connections screen, click New Connection in the top right corner. The image below highlights the correct button.
 
-![Create a New Connection](../../.gitbook/assets/create-a-new-connection.png)
+![Create a New Connection \(upper right, below &apos;Logout&apos;\)](../../.gitbook/assets/rap-2-new-connection.png)
 
 ### Naming your new Connection
 
