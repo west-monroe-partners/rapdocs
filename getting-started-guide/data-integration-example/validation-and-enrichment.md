@@ -6,13 +6,13 @@ description: >-
 
 # !! Validation and Enrichment
 
-## !! Step **1: Configure Validation !! Change to Relation**
+## !! Step **1: Configure Validation** 
 
 A Validation Rule consists of validation logic, in the form of a SQL WHERE statement. After checking each statement individually, RAP tags each record with a pass, failure, or warning flag, as well as which rule\(s\) triggered the warnings or failures. This section makes a simple validation rule that ensures the city field has a value.
 
 Navigate to the previously configured \(`Divvy - Stations 2017 Q1Q2` \) Source's Validation tab, and click New Validation Rule.
 
-![Create a New Validation Rule](../../.gitbook/assets/screenshot_11.png)
+![Create a New Validation Rule !! Update screenshot.](../../.gitbook/assets/screenshot_11.png)
 
 Configure the following parameters. While there are no [Naming Conventions](validation-and-enrichment.md) for Validation rules, use the following values.
 
@@ -30,7 +30,7 @@ For the Validation Expression !!copy paste components of the Realtionship sectio
 
 Click **Save** to finish.
 
-![!! Complete Validation Rule !! Relation](../../.gitbook/assets/image%20%28125%29.png)
+![!! Complete Validation Rule !! Update Screenshot,](../../.gitbook/assets/image%20%28125%29.png)
 
 {% hint style="info" %}
 When entering an expression, type \`\`\`\`\` to reveal all of the Source fields available.
