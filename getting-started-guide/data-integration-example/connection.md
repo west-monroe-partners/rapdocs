@@ -94,5 +94,7 @@ An additional Connection will be required during the [Output](output.md) phase. 
 
 ![Output Connection Configuration](../../.gitbook/assets/rap-4-output-path-blur.png)
 
+Similarly to with the input connection, if there additional parameters of interest to set or change, the "Search Parameter Table" section can be used to identify and modify parameters.
+
 Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
