@@ -1,8 +1,7 @@
 ---
 description: >-
   This section describes the process of setting up a Source, including the
-  Source Details, Input Parameters, and Staging Parameters. !! Update the Input
-  validation.
+  Source Details, Input Parameters, and Staging Parameters.
 ---
 
 # !! Source
@@ -149,15 +148,13 @@ Click the **Save** button to save the Source; all parameters should be configure
 
 ![Source Details](../../.gitbook/assets/step-5-save.png)
 
-_RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database._
+_RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database. !! Update to use the terms of data warehouse, etc._
 
-## !! Step 6: Validate File Input
-
-!! Update to have the new screenshot and the 'status' column.
+## Step 6: Validate File Input
 
 Check the Inputs tab at the top of the page to verify that the file has been successfully pushed to the system.
 
-![Input Found &amp; Ingested !! Update to include new columns](../../.gitbook/assets/screenshot_9%20%281%29.png)
+![Input Found &amp; Ingested](../../.gitbook/assets/rap-6-inputs-update.png)
 
 {% hint style="info" %}
 RAP will automatically begin the Input phase when the input files appear in the Connection specified earlier. These files will disappear once RAP ingests them.
