@@ -70,7 +70,7 @@ For examples of other connection types, see the below tabs.
 
 ![Connection Type Options](../../.gitbook/assets/image%20%28170%29.png)
 
-!! Parameters "Search Parameter Table. Let us add a brief description of what the "Parameters" section means.
+For context, if there are additional parameters of interest to change or modify, begin typing into the Parameter "Search Parameter Table" to modify these additional parameters.
 
 ## Step 3: Indicate File Path
 
@@ -82,7 +82,7 @@ After configuring the **Source** connection, be sure the input file is in the co
 
 Click **Save** to finish Source Connection configuration. The final configuration should look something like the following.
 
-![Input Connection Configuration !! update to blur &apos;created by&apos; ](../../.gitbook/assets/rap-3-input-path.png)
+![Input Connection Configuration](../../.gitbook/assets/rap-3-input-path-blur.png)
 
 ## Step 4: Create Output Connection
 
@@ -92,7 +92,7 @@ An additional Connection will be required during the [Output](output.md) phase. 
 * **Connection Type:** `File`
 * **file\_path:** The path to your output container 
 
-![Output Connection Configuration !! update to blur &apos;created by&apos;](../../.gitbook/assets/rap-4-output-path-use-me.png)
+![Output Connection Configuration](../../.gitbook/assets/rap-4-output-path-blur.png)
 
 Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
