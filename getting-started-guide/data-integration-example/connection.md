@@ -1,7 +1,7 @@
 ---
 description: >-
-  This section describes the process of setting up a connection in RAP. !! Add
-  short description of "Parameters" !! Update screenshots to blur data.
+  This section describes the process of setting up a connection in RAP. !!
+  Answer how the input and output connection correspond to the data flow
 ---
 
 # !! Connection
@@ -95,6 +95,8 @@ An additional Connection will be required during the [Output](output.md) phase. 
 ![Output Connection Configuration](../../.gitbook/assets/rap-4-output-path-blur.png)
 
 Similarly to with the input connection, if there additional parameters of interest to set or change, the "Search Parameter Table" section can be used to identify and modify parameters.
+
+!! Input section here about how the connections correspond to the data lake, data warehouse, etc.
 
 Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
