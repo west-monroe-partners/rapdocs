@@ -12,7 +12,7 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ## !!Primary Screens 
 
-!!include screenshots of the of the different primary screens!!
+!!include screenshots of the of the different primary screens in addition to the links!!
 
 ### Sources
 
