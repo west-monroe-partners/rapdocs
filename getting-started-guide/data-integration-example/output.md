@@ -149,5 +149,3 @@ For all future data files related to this Source, no manual reset steps are requ
 
 If configuration was done correctly, the output file should be found in your designated output container in S3, and it should contain 518 entries \(519 including the headers\).
 
-
-
