@@ -132,3 +132,5 @@ At this point, the content of the Data Viewer can be downloaded into a CSV file 
 
 Though not included in this example, Relations are another way to modify the data in a Source. Relations can be thought of as a join/merge between multiple data sources, joining the current source with another reference source.
 
+!!\(does not apply to just validation and enrichment\)add reference library of known error codes
+
