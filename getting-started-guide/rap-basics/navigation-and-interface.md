@@ -10,7 +10,9 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ![Left-Hand Navigation menu opened](../../.gitbook/assets/image%20%2875%29.png)
 
-## Primary Screens
+## !!Primary Screens 
+
+!!include screenshots of the of the different primary screens!!
 
 ### Sources
 
