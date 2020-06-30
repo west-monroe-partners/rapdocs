@@ -6,5 +6,5 @@ description: '!! Description or pre-requisite for users'
 
 !! Some SQL experience. !! Database Knowledge.
 
-Helpful list of terms
+Helpful list of terms-link out to definitions or how-to
 
