@@ -3,6 +3,7 @@
 * [Welcome to RAP!](README.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
+    * [How it Works \(2\)](getting-started-guide/rap-basics/how-it-works-2.md)
     * [How it Works](getting-started-guide/rap-basics/components-and-concepts.md)
     * [!!Navigation and Interface](getting-started-guide/rap-basics/navigation-and-interface.md)
     * [Prerequisites](getting-started-guide/rap-basics/prerequisites.md)
