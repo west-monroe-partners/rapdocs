@@ -1,16 +1,22 @@
 ---
-description: '!! Description or pre-requisite for users'
+description: >-
+  Though RAP makes the management of data flows and data warehouse easier the
+  ideal audience has an understanding of data base structures and SQL.
 ---
 
-# !! Prerequisites?
+# Prerequisites
 
-!! Some SQL experience. !! Database Knowledge.
+RAP has two main audiences
 
-implementations that might look like something similar to RAP
+### Data Engineers
 
-Helpful list of terms-link out to definitions or how-to
+Data engineers find RAP as a means to more easily create, refine, and modify connections. Data engineers often have a full background to  explore RAP's customizations and advanced features.
 
-Common problems/faq
+### BI/Report Builders
 
+RAP has an audience outside of data engineers who typically work on the output end of data bases. These users typically have a background in Business Intelligence programs or custom reporting efforts. For these professionals to make the most out of their usage with RAP we recommend a general understanding of the following concepts.
 
+* SQL \(SELECT statement parameters and syntax\)
+* Database Manipulation and Calculation \(Joins, Groupings, Calculated Fields\)
+* Data Frameworks \(Databases, warehouses, ETL, Connections\)
 

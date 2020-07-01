@@ -5,7 +5,7 @@
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/components-and-concepts.md)
     * [!!Navigation and Interface](getting-started-guide/rap-basics/navigation-and-interface.md)
-    * [!! Prerequisites?](getting-started-guide/rap-basics/prerequisites.md)
+    * [Prerequisites](getting-started-guide/rap-basics/prerequisites.md)
   * [Data Integration Example](getting-started-guide/data-integration-example/README.md)
     * [Setting up](getting-started-guide/data-integration-example/setting-up.md)
     * [!! Connection](getting-started-guide/data-integration-example/connection.md)

@@ -10,4 +10,5 @@ RAP Basics has two parts:
 
 * [How it Works](components-and-concepts.md): The RAP data integration process
 * [Navigation and Interface](navigation-and-interface.md): The screens and components users interact with to configure the process
+* [Prerequisites](prerequisites.md): Recommend knowledge to ensure success with the RAP platform
 
