@@ -6,5 +6,11 @@ description: '!! Description or pre-requisite for users'
 
 !! Some SQL experience. !! Database Knowledge.
 
-Helpful list of terms
+implementations that might look like something similar to RAP
+
+Helpful list of terms-link out to definitions or how-to
+
+Common problems/faq
+
+
 
