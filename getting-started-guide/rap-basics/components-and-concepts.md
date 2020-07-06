@@ -2,7 +2,7 @@
 description: 'The RAP ecosystem breaks down into four storage layers, and four processes'
 ---
 
-# How it Works
+# How it Works \(Historical\)
 
 ## Four Storage Structures
 

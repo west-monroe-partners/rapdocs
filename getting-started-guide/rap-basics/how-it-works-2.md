@@ -14,17 +14,25 @@ As seen in the above data flow diagram, RAP intakes raw data and outputs an orga
 
 ### Input
 
+![](../../.gitbook/assets/rap-hiw-1-input.png)
+
 The **Input** step moves data into RAP's Data Lake from source databases or file systems. This process collects information about the file or database table as it exists at the time of extract and stores this data in the Metadata Repository, ultimately generating the indexed RAP Data Lake.
 
 ### Staging
+
+![](../../.gitbook/assets/rap-hiw-2-staging.png)
 
 **Staging** reads data from the Data Lake writes data into RAP’s internal Data Hub. This process automatically converts the files in the data lake to the performance-optimized tables within the data hub. Additionally, Staging compares the individual files read from the data lake to what already exists in the Data Hub to track how data has changed since the last file was staged in a sub-process called Change Data Capture.
 
 ### Validation and Enrichment
 
+![](../../.gitbook/assets/rap-hiw-3-validation-and-enrichment.png)
+
 **Validation** & **Enrichment** applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Validation and Enrichment rules represent the majority of the logic and structure of data processing within RAP, and provide a flexible, yet guided framework for data management.
 
 ### **Output**
+
+![](../../.gitbook/assets/rap-hiw-4-output.png)
 
 **Output** processes and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
 
