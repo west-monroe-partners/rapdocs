@@ -6,6 +6,10 @@ description: >-
 
 # !! Connection
 
+## Step 0: Logical Data Flow
+
+
+
 ## Step 1: Create a Connection
 
 RAP communicates to external data services through Connections. Connections consist of configurations for **where** and **what type** of data to pull into RAP. Both Sources and Outputs can use connections. For this example, we will configure one file location to pull data from \(Source\) and another file location to push the data out \(Output\).

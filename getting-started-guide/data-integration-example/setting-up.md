@@ -8,6 +8,8 @@ description: >-
 
 ## Step 0: Logical Data Flow
 
+![](../../.gitbook/assets/setting-up-location.png)
+
 The steps outlined in this Setting Up section correspond to creating a raw data location. The AWS environment created here is the raw data source that then needs to be appropriately ingested into RAP in the subsequent steps of Connection and Source.
 
 ## Step 1: Download the Divvy Data
