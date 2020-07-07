@@ -1,10 +1,8 @@
 ---
-description: >-
-  This section describes the process of setting up a connection in RAP. !!
-  Answer how the input and output connection correspond to the data flow
+description: This section describes the process of setting up a connection in RAP.
 ---
 
-# !! Connection
+# Connection
 
 ## Step 0: Logical Data Flow
 
