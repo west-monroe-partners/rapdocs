@@ -4,7 +4,13 @@ description: >-
   Source Details, Input Parameters, and Staging Parameters.
 ---
 
-# !! Source
+# Source
+
+## Step 0: Logical Data Flow
+
+![](../../.gitbook/assets/source-location.png)
+
+Sources  managing the entire logical data flow. Through setting parameters within the setting or through the different sub-tabs within the Source UI the flow from ingestion through output is managed. This means the four steps discussed in the How It Works section are managed from the Sources UI. What is covered in this step is how Input and Staging are set up. 
 
 ## Step 1: Create a Source
 
@@ -148,7 +154,7 @@ Click the **Save** button to save the Source; all parameters should be configure
 
 ![Source Details](../../.gitbook/assets/step-5-save.png)
 
-_RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database. !! Update to use the terms of data warehouse, etc._
+_RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database._ 
 
 ## Step 6: Validate File Input
 
