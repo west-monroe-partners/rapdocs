@@ -8,7 +8,9 @@ description: >-
 
 ## Step 0: Logical Data Flow
 
+![](../../.gitbook/assets/screen-shot-2020-07-07-at-9.35.32-am.png)
 
+A **Connection** is used in part of the input step and the output step of the data flow. We set up an input and output connection. 
 
 ## Step 1: Create a Connection
 
@@ -99,8 +101,6 @@ An additional Connection will be required during the [Output](output.md) phase. 
 ![Output Connection Configuration](../../.gitbook/assets/rap-4-output-path-blur.png)
 
 Similarly to with the input connection, if there additional parameters of interest to set or change, the "Search Parameter Table" section can be used to identify and modify parameters.
-
-!! Input section here about how the connections correspond to the data lake, data warehouse, etc.
 
 Click **Save** to finish Output Connection configuration. When both Source and Output Connections are configured, move onto [Source](source.md).
 
