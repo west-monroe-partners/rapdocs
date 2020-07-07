@@ -68,7 +68,7 @@ RAP uses a **Metadata Structure** to manage information about configuration, pro
 
 ## Historical Framework
 
-Historically RAP's framework was viewed as four storage structures and four data processing steps. The four storage structures map one to one between the two frameworks, but the eight steps of the logical data flow only roughly map into the four data processing steps. The advantages of of the historical framework is the relationship between the data storage structures and metadata, analytics, and BI. The historical framework diagram is provided below and further reading can be found in the historical framework section \(!! add link\)
+Historically RAP's framework was viewed as four storage structures and four data processing steps. The four storage structures map one to one between the two frameworks, but the eight steps of the logical data flow only roughly map into the four data processing steps. The advantages of of the historical framework is the relationship between the data storage structures and metadata, analytics, and BI. The historical framework diagram is provided below and further reading can be found in the [historical framework section](../../historical-reference/components-and-concepts.md).
 
 ![Illustration of the historical data framework](../../.gitbook/assets/image%20%2825%29.png)
 

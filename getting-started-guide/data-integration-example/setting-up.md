@@ -6,6 +6,10 @@ description: >-
 
 # Setting up
 
+## Step 0: Logical Data Flow
+
+The steps outlined in this Setting Up section correspond to creating a raw data location. The AWS environment created here is the raw data source that then needs to be appropriately ingested into RAP in the subsequent steps of Connection and Source.
+
 ## Step 1: Download the Divvy Data
 
 The Data Integration Example uses Divvy Bike data hosted on Amazon Web Services' S3 buckets. Click to download the file [Divvy\_Stations\_2017\_Q1Q2.csv](https://wmp-rap-sample-data.s3.us-east-2.amazonaws.com/source-files/Divvy_Stations_2017_Q1Q2.csv). Save it locally.
