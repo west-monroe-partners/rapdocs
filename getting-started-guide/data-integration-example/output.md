@@ -2,7 +2,13 @@
 description: This section covers the configuration of an Output.
 ---
 
-# Output
+# !! Output
+
+## !! Logical Data Flow
+
+![](../../.gitbook/assets/source-location.png)
+
+Output processes and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
 
 ## Step 1: Create Output Connection
 

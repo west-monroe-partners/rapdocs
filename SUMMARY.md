@@ -11,7 +11,7 @@
     * [Connection](getting-started-guide/data-integration-example/connection.md)
     * [Source](getting-started-guide/data-integration-example/source.md)
     * [!! Validation and Enrichment](getting-started-guide/data-integration-example/validation-and-enrichment.md)
-    * [Output](getting-started-guide/data-integration-example/output.md)
+    * [!! Output](getting-started-guide/data-integration-example/output.md)
 * [Logical Architecture](logical-architecture-overview/README.md)
   * [RAP Agent](logical-architecture-overview/rap-agent.md)
   * [User Interface](logical-architecture-overview/user-interface.md)
