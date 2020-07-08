@@ -4,7 +4,7 @@ description: This section describes the process of setting up a connection in RA
 
 # Connection
 
-## Step 0: Logical Data Flow
+## Logical Data Flow
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-9.35.32-am.png)
 

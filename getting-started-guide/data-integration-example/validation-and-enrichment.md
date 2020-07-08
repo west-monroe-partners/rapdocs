@@ -1,28 +1,34 @@
 ---
-description: >-
-  !! Update to include Relations and Enrichments !!   This section covers
-  Validation and Enrichment configuration.
+description: This section covers Validation and Enrichment configuration.
 ---
 
 # !! Validation and Enrichment
+
+## Logical Data Flow
+
+![](../../.gitbook/assets/rap-validation-and-enrishment-location.png)
+
+Validation and Enrichment applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Validation and Enrichment rules represent the majority of the logic and structure of data processing within RAP, and provide a flexible, yet guided framework for data management.
 
 ## !! Step **1: Configure Validation** 
 
 A Validation Rule consists of validation logic, in the form of a SQL WHERE statement. After checking each statement individually, RAP tags each record with a pass, failure, or warning flag, as well as which rule\(s\) triggered the warnings or failures. This section makes a simple validation rule that ensures the city field has a value.
 
-Navigate to the previously configured \(`Divvy - Stations 2017 Q1Q2` \) Source's Validation tab, and click New Validation Rule.
+Navigate to the previously configured \(`Divvy - Stations 2017 Q1Q2` \) Source's Validation tab, and click New Enrichment.
 
-![Create a New Validation Rule !! Update screenshot.](../../.gitbook/assets/screenshot_11.png)
+![Create a New Validation Rule](../../.gitbook/assets/rap-enrishment-locations-um.png)
+
+In the screen that opens, select Type **Validation**.
+
+![Select Validation in the Type field at the top of the New Enrichment screen.](../../.gitbook/assets/rap-validation-location.png)
 
 Configure the following parameters. While there are no [Naming Conventions](validation-and-enrichment.md) for Validation rules, use the following values.
 
 * **Name:** `City is Null`
 * **Description:** `Warn when city is null`
 * **When expression is true, set to:** `Warn`
-* **!! Related Source:** 
-* **!! Relation Cardinality:** 
 
-For the Validation Expression !!copy paste components of the Realtionship section about \[This\] and \[\]!!, input:
+For the Validation Expression input the following. Note that \[This\] represents to look within the currently selected data source.
 
 ```sql
 [This].city IS NULL
@@ -30,14 +36,14 @@ For the Validation Expression !!copy paste components of the Realtionship sectio
 
 Click **Save** to finish.
 
-![!! Complete Validation Rule !! Update Screenshot,](../../.gitbook/assets/image%20%28125%29.png)
+![Complete Validation Rule](../../.gitbook/assets/rap-complete-validation-rule.png)
 
 {% hint style="info" %}
 When entering an expression, type \`\`\`\`\` to reveal all of the Source fields available.
 {% endhint %}
 
 {% hint style="info" %}
-When field names are prepended with a T, such as `T.city`, it indicates that the field exists in the current Source.
+When field names are prepended with a \[This\] such as `[This].city`, it indicates that the field exists in the current Source.
 {% endhint %}
 
 {% hint style="info" %}
@@ -57,6 +63,7 @@ Navigate to the Enrichments tab within the Source, and click **New Enrichment Ru
 * **Name:** `Flag : Is Chicago`
 * **Description:** `Flag if city is Chicago`
 * **Enriched Column Name:** `ischicago`
+* **Recalculation Mode:** `Snapshot`
 
 ### Enriched Column Data Type:
 
@@ -85,18 +92,18 @@ Specifying the Operation Type determines which additional parameters need to be 
 Enter the following SQL code to create an expression with our desired logic.
 
 ```sql
-CASE WHEN T.city = 'Chicago' THEN 'Y' ELSE 'N' END
+CASE WHEN [This].city = 'Chicago' THEN 'Y' ELSE 'N' END
 ```
 
 **!! Recalculation mode**
 
-&lt;!!Insert information&gt;
+Recalculation mode indicates if this field needs to be refreshed. For the purpose of this example we keep the choice as Snapshot, which indicates the data source will not be updated once inputed into the system.
 
 {% hint style="info" %}
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
 {% endhint %}
 
-![Complete Enrichment Configuration](../../.gitbook/assets/image%20%2856%29.png)
+![Competed Enrichment Rule](../../.gitbook/assets/rap-complete-enrichment-rule.png)
 
 Click **Save** when Enrichment Configuration resembles the above image**.**
 
@@ -108,13 +115,13 @@ Recall that the `File Push` Input Type configuration creates a Source that autom
 
 To remedy this, navigate to Inputs page, and for the most recent line item, click on the ellipsis on the far right and select **Reset All Validation & Enrichment**. See below.
 
-![Reset All Validation &amp; Enrichment](../../.gitbook/assets/image%20%28128%29.png)
+![Reset All Validation &amp; Enrichment](../../.gitbook/assets/rap-reset-enrichments.png)
 
 ## Step 4: Ensure Validation and Enrichment Completion
 
-Navigate to the **Data View** to double-check that the Validation and Enrichment steps were successful**.** The image below _\*\*_shows the view that should display.
+Navigate to the **Data View** to double-check that the Validation and Enrichment steps were successful**.** The image below shows the view that should display. Note that naming in image if off due to test environment.
 
-![New Column in Data View](../../.gitbook/assets/image%20%2862%29.png)
+![New Column in Data View](../../.gitbook/assets/screen-shot-2020-07-08-at-11.09.27-am.png)
 
 For every enrichment, a green column should be created in the Data View. Additionally, every entry that is flagged as `Warn` should appear yellow. In this case, no records should be flagged.
 
@@ -128,9 +135,7 @@ This concludes Validation and Enrichments configuration. RAP is now ready to **O
 At this point, the content of the Data Viewer can be downloaded into a CSV file by hitting the **Download** button located underneath the Data Viewer tab on the right of the screen.
 {% endhint %}
 
-## !! Note: Relations
+## Note: Relations
 
 Though not included in this example, Relations are another way to modify the data in a Source. Relations can be thought of as a join/merge between multiple data sources, joining the current source with another reference source.
-
-!!\(does not apply to just validation and enrichment\)add reference library of known error codes
 

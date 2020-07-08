@@ -6,7 +6,7 @@ description: >-
 
 # Setting up
 
-## Step 0: Logical Data Flow
+## Logical Data Flow
 
 ![](../../.gitbook/assets/setting-up-location.png)
 

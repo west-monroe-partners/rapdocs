@@ -6,7 +6,7 @@ description: >-
 
 # Source
 
-## Step 0: Logical Data Flow
+## Logical Data Flow
 
 ![](../../.gitbook/assets/source-location.png)
 
