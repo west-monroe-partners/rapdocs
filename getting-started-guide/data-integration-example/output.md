@@ -6,7 +6,7 @@ description: This section covers the configuration of an Output.
 
 ## !! Logical Data Flow
 
-![](../../.gitbook/assets/source-location.png)
+![](../../.gitbook/assets/screen-shot-2020-07-09-at-10.12.59-am.png)
 
 Output processes and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
 
@@ -25,7 +25,7 @@ Before configuring any mappings, RAP requires general information about the desi
 
 ### Output Configurations
 
-![Output Configuration Options](../../.gitbook/assets/screenshot_19.png)
+![Output Configuration Options](../../.gitbook/assets/rap-output-configuration.png)
 
 #### Output Type
 
@@ -79,17 +79,17 @@ With the output details configured, and a location within the connection to push
 
 To enable mappings between the created Divvy Stations source `Divvy - Stations 2017 Q1Q2`and the created Output `Divvy - Chicago Stations` the next step is to add the Source to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source** in the top right corner, as seen below.
 
-![Add a Source to an Output](../../.gitbook/assets/screenshot_14.png)
+![Add a Source to an Output](../../.gitbook/assets/rap-add-new-source-mapping-output.png)
 
 This should bring up a Source selection pane. Select the Source `Divvy - Stations 2017 Q1Q2` and press **Add Source**.
 
 ### Adding Columns
 
-First, add a single column. Click on **Add Column** in the top left corner, seen opposite of **Add Source** in the image above.
+First, add a single column. Click on **Add Column** in the top right middle, seen next to of **Add Source Mapping** in the image above.
 
 On the left, type `id` in the Output Column, and on the right where a "\_\_\_\_\_" shows, click, then select `id` from the Source columns available in the popup. This maps the `id` column in the Source to an identically named column in the Output. The resulting configuration should look like the image below.
 
-![Add a Single Output Column](../../.gitbook/assets/screenshot_15.png)
+![Add a Single Output Column](../../.gitbook/assets/rap-add-single-column-output.png)
 
 {% hint style="info" %}
 Notice that there is no option to configure datatypes. This is because RAP knows the output is into a plain-text `.csv`, so all output is of type text.
@@ -97,7 +97,7 @@ Notice that there is no option to configure datatypes. This is because RAP knows
 
 Second, add all of the source data columns at once, instead of one by one. Following the image below, click on the ellipses in the top right, and select **Add All Data Columns**.
 
-![Add all Output Columns](../../.gitbook/assets/screenshot_16.png)
+![Add all Output Columns](../../.gitbook/assets/rap-map-all-output.png)
 
 {% hint style="info" %}
 Notice that RAP does not configure a duplicate `id` column, as it is able to tell that the user has already configured one.
