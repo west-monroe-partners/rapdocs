@@ -113,7 +113,9 @@ Add a filter that ensures the only records in the output have a flag of `ischica
 
 Click on the Source header above the Source column names to open up the filter menu, as in the image below.
 
-![Create a Filter](../../.gitbook/assets/screenshot_17.png)
+![](../../.gitbook/assets/rap-filter-location-1.png)
+
+![Create a Filter](../../.gitbook/assets/rap-filter-location-2.png)
 
 Enter the following code for the Filter Expression, which makes use of the `ischicago` flag.
 
@@ -131,7 +133,7 @@ ischicago = 'Y'
 
 **Description:** `only output Chicago stations`
 
-![Completed Output Filter](../../.gitbook/assets/image%20%28162%29.png)
+![Completed Output Filter](../../.gitbook/assets/screen-shot-2020-07-13-at-11.52.29-am.png)
 
 When the configured filter resembles the above image, select **Close** and then **Save** to complete Output Configuration.
 
@@ -143,9 +145,9 @@ Now that a Source and Output have been fully configured, the final step is to ru
 
 The output file should appear in the appropriate folder specified during the creation of the output [Connection](connection.md#step-1-create-a-connection).
 
-To ensure the output file is generated, navigate to the Source's Input tab. There, click on the the kebab button \(**⋮**\) on the Stations input and select **Reset All Output**, as seen below.
+To ensure the output file is generated, navigate to the Source's Input tab. There, click on the the kebab button \(**⋮**\) on the Stations input and select **Reset Output**, as seen below.
 
-![Reset Output](../../.gitbook/assets/screenshot_18.png)
+![Reset Output](../../.gitbook/assets/rap-reset-output.png)
 
 {% hint style="info" %}
 For all future data files related to this Source, no manual reset steps are required for the data to flow fully through Validation and Enrichment and generate a new file in the Output folder.
