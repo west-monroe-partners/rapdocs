@@ -2,13 +2,13 @@
 description: This section covers the configuration of an Output.
 ---
 
-# !! Output
+# Output
 
-## !! Logical Data Flow
+## Logical Data Flow
 
 ![](../../.gitbook/assets/screen-shot-2020-07-09-at-10.12.59-am.png)
 
-Output processes and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
+Output processes and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location. In this example we map the output back to an S3 location.
 
 ## Step 1: Create Output Connection
 
@@ -87,7 +87,7 @@ This should bring up a Source selection pane. Select the Source `Divvy - Station
 
 First, add a single column. Click on **Add Column** in the top right middle, seen next to of **Add Source Mapping** in the image above.
 
-On the left, type `id` in the Output Column, and on the right where a "\_\_\_\_\_" shows, click, then select `id` from the Source columns available in the popup. This maps the `id` column in the Source to an identically named column in the Output. The resulting configuration should look like the image below.
+On the left, type `id` in the Output Column, and on the right where a "..." shows, click, then select `id` from the Source columns available in the popup. This maps the `id` column in the Source to an identically named column in the Output. The resulting configuration should look like the image below.
 
 ![Add a Single Output Column](../../.gitbook/assets/rap-add-single-column-output.png)
 
