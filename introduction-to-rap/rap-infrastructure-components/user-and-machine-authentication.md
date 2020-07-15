@@ -15,7 +15,7 @@ TODO - describe machine auth for API and RAP Agents, certificate setup
 
 Rules can be set up in Auth0 using JavaScript code.  Detailed information about how to set up rules are provided in [Auth0's documentation](https://auth0.com/docs/rules).
 
-A few links for how to set up some common rules are below:
+A few links for how to set up some common rules are listed below:
 
 * Setting up an e-mail domain whitelist:  [https://auth0.com/rules/simple-domain-whitelist](https://auth0.com/rules/simple-domain-whitelist)
 
