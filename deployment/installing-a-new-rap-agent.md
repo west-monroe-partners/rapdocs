@@ -14,13 +14,13 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
   * Windows 7 / Server 2008 R2 or later
   * Red Hat 6 or later \(or compatible distribution\)
 * The latest version of the Amazon Corretto JDK 8 should preferably be installed on the destination machine.  Alternatively, if Oracle JDK 8 is already installed, that will be sufficient as well.  If neither is installed on the destination machine, navigate to the site linked [here](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html) and download and install the Corretto JDK that is compatible with the target architecture and OS of the machine that the Agent will be installed on.
-* Since the RAP Agent initiates all its own connections, outbound connections to various cloud resources on the public Internet are required.  If a firewall is limiting outbound internet access, the following resources should be allowed through the firewall \(exact domain names will vary by environment\).  Note that these are all secure endpoints, so if SSL inspection is enabled at the firewall, special consideration is needed to ensure that the certificate presented to the RAP Agent is trusted.
+* Since the RAP Agent initiates all its own connections, outbound connections to various cloud resources on the public Internet are required.  If a firewall is limiting outbound internet access, the following resources should be allowed through the firewall \(exact domain names will vary by environment\).  Note that these are all secure endpoints, so if SSL inspection is enabled at the firewall, special consideration is needed to ensure that the certificate presented to the machine hosting the RAP Agent is trusted.
   * AWS S3 / Azure Data Lake Storage via HTTPS \(port 443\) for the following locations
     * Landing area
     * RAP Agent update area
   * RAP API endpoint via HTTPS \(port 443\)
   * Auth0 via HTTPS \(port 443\)
-* File and database sources that will be accessed through the RAP Agent must be accessible from the machine the RAP Agent is being installed on.  In the case of database sources, many clients install the RAP Agent software directly on the database server.  However, network connectivity from the machine that the Agent software is being installed on is all that is required.  Note that the RAP Agent will be performing data pulls and uploading to AWS / Azure, so the recommendation is to not segment off the Agent machine from the sources being accessed in a way that traffic needs to cross a limited capacity network segment to reach those sources.
+* File and database sources that will be accessed through the RAP Agent must be accessible from the machine the RAP Agent is being installed on.  In the case of database sources, many customers install the RAP Agent software directly on the database server.  However, network connectivity from the machine that the Agent software is being installed on is all that is required.  Note that the RAP Agent will be performing data pulls and uploading to AWS / Azure, so the recommendation is to not segment off the Agent machine from the sources being accessed in a way that traffic needs to cross a limited capacity network segment to reach those sources.
 * The user account intended for RAP on source databases need to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the RAP user and only SQL Server authentication can be used.
   * Mixed-mode authentication can still be enabled to allow for integrated authentication for non-RAP related loads.
 
@@ -36,9 +36,9 @@ The RAP Agent installation build contains information about which environment to
 
 ### Installing the RAP Agent \(Windows\)
 
-TODO - copy/paste from existing Word doc
+TODO - copy/paste from existing Word doc?
 
 ### Installing the RAP Agent \(Linux\)
 
-TODO - copy/paste from existing Word doc
+TODO - copy/paste from existing Word doc?
 
