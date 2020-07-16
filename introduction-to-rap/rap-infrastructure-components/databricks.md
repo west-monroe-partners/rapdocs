@@ -1,4 +1,4 @@
 # Databricks
 
-TODO - document how Databricks is started / scaled / etc
+TODO - document how Databricks is started / scaled / etc, how it acts as core processing code
 

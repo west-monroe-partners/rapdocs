@@ -4,3 +4,5 @@ The purpose of the RAP Agent is to acquire files from local file storage or Amaz
 
 TODO - add a diagram
 
+TODO - step-by-step on what Agent does, from pulling request from RAP database, thorough performing data acquisition, all the way through to landing data in Data Lake
+

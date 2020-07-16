@@ -8,25 +8,31 @@ If exact domains are required for specific networks because of restrictive firew
 * RAP API endpoint
 * S3 landing bucket
 
+TODO - how \# of threads on box Agent is installed on affect \# of parallel data pulls, how to override + guidance on when / how to do so
+
 ### Supported Source Data Types
 
 The RAP Agent currently supports ingestion of the following source data types out of the box.
 
-* Flat files \(CSV, pipe-delimited, etc\) via file share, local drive or SFTP
-* SQL Server
+* Flat file \(CSV, pipe-delimited, etc\) via file share, local drive or SFTP
+* SQL Server \(on-premise or Azure SQL\)
+  * Azure Synapse is not supported at this time
 * PostgreSQL
+* MySQL
 * Snowflake
+* AWS Elasticsearch
+* AWS Athena
 
-RAP also supports the following proprietary source systems.  However, since those drivers are under proprietary licenses and may require a licensing fee from the associated vendor, support is not provided directly out of the box.  Instead, the client requiring support for one of the following source systems will need to acquire the appropriate JDBC driver \(and license file if appropriate\) from the appropriate vendor and provide a copy to the RAP development team so the appropriate driver can be built into the RAP Agent.
+RAP also supports the following proprietary source systems.  However, since those drivers are distributed under proprietary licenses and may require a licensing fee from the associated vendor, support is not provided directly out of the box.  Instead, the organization requesting support for one of the following source systems will need to acquire the appropriate JDBC driver \(and license file if appropriate\) from the appropriate vendor and provide a copy to the RAP development team so the appropriate driver can be built into that organization's RAP Agent.
 
 * Oracle
 * Quickbooks
 * SAP HANA
 * Pervasive SQL
 
-### Data Flow into AWS
+### Data Flow into Cloud Environment
 
 The RAP Agent pulls data from the source system and generates a CSV.  That CSV is then uploaded to the landing area in the data lake.
 
-TODO - arch diagram, point out HTTPS connection
+TODO - arch diagram, point out HTTPS connection / encryption type leveraged
 

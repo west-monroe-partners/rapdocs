@@ -22,6 +22,8 @@ TODO - tuning methods based off the generated query, describe V&E query structur
 
 ### Lookup Overrides
 
+TODO - likely this section can get deleted
+
 **WARNING**:  Setting lookup overrides improperly can be detrimental to performance or lead to duplicate data being generated.  If leveraging this option, please make sure to read this section carefully and fully test your changes before rolling this out to a Production environment.
 
 TODO - add table of types \(copy from Azure DevOps\)
