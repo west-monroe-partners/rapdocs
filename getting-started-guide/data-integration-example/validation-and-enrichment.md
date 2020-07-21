@@ -2,7 +2,7 @@
 description: This section covers Validation and Enrichment configuration.
 ---
 
-# !! Validation and Enrichment
+# Validation and Enrichment
 
 ## Logical Data Flow
 
@@ -69,24 +69,6 @@ Navigate to the Enrichments tab within the Source, and click **New Enrichment Ru
 
 This is a `text` datatype, because it is a conversion of the `city` field to either a "N" or a "Y". ****Select "string" from the dropdown menu.
 
-### Operation Type: !! Still needed?
-
-`Formula`. For more information on Operation Types, see below:
-
-{% tabs %}
-{% tab title="Formula" %}
-Create a calculated column, based on prescribed logic.
-{% endtab %}
-
-{% tab title="Lookup" %}
-Create a new column retrieved from another source by matching to data within this source. Similar to an Excel VLOOKUP formula.
-{% endtab %}
-{% endtabs %}
-
-{% hint style="warning" %}
-Specifying the Operation Type determines which additional parameters need to be specified, if any. If the form requires additional input, ensure that `Formula` is selected.
-{% endhint %}
-
 ### Return Expression:
 
 Enter the following SQL code to create an expression with our desired logic.
@@ -95,9 +77,19 @@ Enter the following SQL code to create an expression with our desired logic.
 CASE WHEN [This].city = 'Chicago' THEN 'Y' ELSE 'N' END
 ```
 
-**!! Recalculation mode**
+**Recalculation mode**
 
 Recalculation mode indicates if this field needs to be refreshed. For the purpose of this example we keep the choice as Snapshot, which indicates the data source will not be updated once inputed into the system.
+
+{% tabs %}
+{% tab title="Snapshot" %}
+Snapshot performs the operation at time of data ingest only – and only on the incoming dataset contained within that Input. These formula are performed in the Enrich step on the incoming data only.
+{% endtab %}
+
+{% tab title="Keep Current" %}
+Keep current forces that formula to be shifted to the Recalculate step, which operates on the post-refresh Hub table that contains all current data for that specific source. Recalculate operates on all rows within that hub table every time a new input is loaded either to \[this\] source \(window functions\) or a dependent related source \(formula that use related source elements\).
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
