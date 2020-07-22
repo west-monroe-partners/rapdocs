@@ -6,11 +6,11 @@ description: >-
 
 # Prerequisites
 
-RAP has two main audiences it targets for configuring pipelines.
+RAP has two main audiences
 
 ### Data Engineers
 
-Data Engineers find RAP as a means to more easily create, refine, and modify connections. Data Engineers often have a full background to explore RAP's customizations and advanced features.
+Data engineers find RAP as a means to more easily create, refine, and modify connections. Data engineers often have a full background to  explore RAP's customizations and advanced features.
 
 ### BI/Report Builders
 
