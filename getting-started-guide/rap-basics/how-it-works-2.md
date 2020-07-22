@@ -12,21 +12,15 @@ description: >-
 
 As seen in the above data flow diagram, RAP intakes raw data and outputs an organized data warehouse. The Logical Data Flow consists of eight steps: Ingest, Parse, CDC, Enrich, Refresh, Re-Calculate, Output, and Post-Process. The Data Storage Flow consists of four main structures: Raw Data, Data Lake, Data Hub, and Data Warehouse. Though not shown in the diagram, each step in each flow consists of generated and configuration meta data to aid the user in process management and configurations respectively. Though there are eight steps in the Logical Data Flow, we will focus on the four data processing steps that summarize the flow.
 
-!! MC - For sections below, the Input / Staging / Validation and Enrichment / Output paradigm is something that relates to RAP 1.x, but the terms changed for RAP 2.0.  The job statuses in the UI for 2.0 don't make mention of these concepts, so this may be a bit confusing for someone to reconcile with what they see in RAP.  I'm thinking this should probably line up more with the 4 data structures \(Lake / Raw, Lake / Transform, Data Hub, Data Warehouse\).
-
 ### Input
 
 ![](../../.gitbook/assets/rap-hiw-1-input.png)
-
-!! MC - CDC step isn't really part of Input historically, it mapped more to Staging
 
 The **Input** step moves data into RAP's Data Lake from source databases or file systems. This process collects information about the file or database table as it exists at the time of extract and stores this data in the Metadata Repository, ultimately generating the indexed RAP Data Lake.
 
 ### Staging
 
 ![](../../.gitbook/assets/rap-hiw-2-staging.png)
-
-!! MC - CDC is not "Change Data Capture" any more in 2.0.  CDC is referred to as "Capture Data Changes".
 
 **Staging** reads data from the Data Lake writes data into RAP’s internal Data Hub. This process automatically converts the files in the data lake to the performance-optimized tables within the data hub. Additionally, Staging compares the individual files read from the data lake to what already exists in the Data Hub to track how data has changed since the last file was staged in a sub-process called Change Data Capture.
 
@@ -44,8 +38,6 @@ The **Input** step moves data into RAP's Data Lake from source databases or file
 
 ## The Four Data Structures and Metadata Structure
 
-!! MC - Can we remove the red squiggly lines in the diagram below?
-
 ![The eight stages of the RAP data flow collected into four data structures](../../.gitbook/assets/rap-data-storage-flow.png)
 
 ### Lake / Raw External Data Source
@@ -60,13 +52,9 @@ RAP does not generate or store business data, rather it collects this informatio
 
 ### RAP Data Lake
 
-!! MC - not solely on S3, can reside on Azure Data Lake Storage if RAP is deployed to Azure
-
 RAP imports raw data from source systems into an indexed **Data Lake**, which utilizes Amazon's S3 file storage technology. As RAP imports the data into the Data Lake, it identifies and stores information such as source database, original file location, and location in the Data Lake within the metadata structure, resulting in a self-managing Data Lake, useful for data scientists to access the raw information gathered on a scheduled basis.
 
 ### RAP Data Hub
-
-!! MC - Data hub no longer resides in Postgres - now is exposed as a Hive table
 
 The **Data Hub** consists of a customized Postgres database structure optimized to process and store data for RAP. As data moves through processing steps, RAP automatically and continuously modifies the underlying table structures to ensure optimal performance.
 
@@ -80,11 +68,7 @@ RAP uses a **Metadata Structure** to manage information about configuration, pro
 
 ## Historical Framework
 
-!! MC - Good idea to refer to the old framework, but doesn't seem the paragraph really adds more than just referring to historical content.  I'd probably just keep this section short to say "RAP 1.x did things differently, here's roughly how things map from 1.x to 2.0, old content link is here if you wanted to look at it".
-
 Historically RAP's framework was viewed as four storage structures and four data processing steps. The four storage structures map one to one between the two frameworks, but the eight steps of the logical data flow only roughly map into the four data processing steps. The advantages of of the historical framework is the relationship between the data storage structures and metadata, analytics, and BI. The historical framework diagram is provided below and further reading can be found in the [historical framework section](../../historical-reference/components-and-concepts.md).
-
-!! MC - The diagram is high-level enough that it still feels like it would apply in the RAP 2.0 world, seems like something we should put up top to say "here's how RAP flows things through at a high-level, now we're going to show how the 8 main steps / 4 data structures map to this".
 
 ![Illustration of the historical data framework](../../.gitbook/assets/image%20%2825%29.png)
 
