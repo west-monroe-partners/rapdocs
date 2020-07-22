@@ -8,8 +8,6 @@ description: The RAP interface consists of six primary screens
 
 Upon login, users are directed to the Sources screen. The Navigation Menu, located in the top left corner of the screen, enables navigation between RAP screens from any of the currently displayed screens.
 
-!! MC - Screenshot below should be updated to 2.0
-
 ![Left-Hand Navigation menu opened](../../.gitbook/assets/image%20%2875%29.png)
 
 ## !!Primary Screens 
@@ -38,13 +36,9 @@ The [Connections ](../../configuring-the-data-integration-process/connections-co
 
 ### Validation and Enrichment Templates
 
-!! MC - Looks like this screen doesn't exist in RAP 2.0 any more
-
 The [Validation and Enrichment Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) screen shows all of the available re-usable templates for creating similar Validation Rules and Enrichment Rules to multiple Sources.
 
 ### Source Dashboard
-
-!! MC - Looks like this screen doesn't exist in RAP 2.0 any more
 
 The Source Dashboard screen provides an over-time view of the outcome of each sources end-to-end processing.
 
@@ -56,27 +50,19 @@ Sources can be thought of as managing the entire logical data flow. Sources work
 
 Within Sources there are seven tabs: Settings, Dependencies, Relations, Enrichments, Inputs, Process, and Data View. In depth information of the Sources location is found [here](../../configuring-the-data-integration-process/source-configuration/), what is provided here is an overview of how the Logical Data Flow seen in the [How it Works](how-it-works-2.md#the-data-flow) section is applied to the Sources interface.
 
-!! MC - Similar to comment on How It Works page, probably should line up sections below with 4 storage layers.
-
 ### Input
 
 The Input step moves data into RAP's Data Lake. The settings of a source requires a connection. We utilize the **Connections** interface of RAP to specify this input location, and then select this connection where prompted.
 
 ### Staging
 
-!! MC - Not really clear where in the UI this sentence is referring to.
-
 Staging reads data from the Data Lake into RAP's internal Data Hub. This step occurs in the settings tab of a source, near the same UI as where the input parameter is entered.
 
 ### Validation and Enrichment
 
-!! MC - Relations is more for defining how to do joins for lookups, think "merging" isn't really the right term to use.  Also, not sure if the Inputs tab should be really referred to in here, feels like that's more used for monitoring / checking run statuses.
-
 Validation and Enrichment occurs within the Data Hub. Validation and Enrichment occurs in several locations of the sources interface. The **Inputs** tab provides a check on if the data is successfully uploaded into RAP. The **Relations** tab allows for rules similar to merging to take place with the data. The **Enrichments** tab allows for different data manipulations and calculations to occur. Finally the **Data Viewer** allows for a visual of the data in tabular format.
 
 ### Output
-
-!! MC - Should refer to the Outputs page as to where this is all set up.
 
 The Output step maps the transformed data from the Data Hub to a Data Warehouse or 3rd party location. Again the **Connections** interface of RAP is used to set up the output location and then within the source settings the output is specified.
 
