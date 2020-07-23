@@ -32,7 +32,7 @@
   * [Metadata Model](introduction-to-rap/metadata-model.md)
   * [Data Storage](introduction-to-rap/storage-data-model.md)
 * [Deployment](deployment/README.md)
-  * [Code Deployment](deployment/code-deployment.md)
+  * [Deployment to a New Environment](deployment/code-deployment.md)
   * [Installing a New RAP Agent](deployment/installing-a-new-rap-agent.md)
   * [Environment Migration Process](deployment/migrations-across-environments.md)
 * [Configuration Guide](configuring-the-data-integration-process/README.md)

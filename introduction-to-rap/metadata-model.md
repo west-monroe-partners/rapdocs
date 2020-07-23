@@ -30,7 +30,7 @@ Tables containing source configuration metadata are the following:
 * **output\_source**:  Lists out which outputs each source will get written to.
 * **output\_source\_column**:  Contains the source to target mapping for each **output\_source**.
 * **connection**:  Contains information about each connection for file and database sources / targets.  This contains database connection credentials / information for database connections and folder paths for file connections.
-* **lookup**:  Contains the list of sources that need lookup tables built.  This is required for support of lookups not on the primary key \(i.e., not using s\_key\).
+* ~~**lookup**:  Contains the list of sources that need lookup tables built.  This is required for support of lookups not on the primary key \(i.e., not using s\_key\).~~
 
 Tables containing runtime metadata are the following:
 

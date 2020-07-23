@@ -1,4 +1,4 @@
 # Deployment
 
-TODO - Put intro stuff here \(RAP on new environments, source migration between environments\)
+TODO - Put stuff here \(quick intro - RAP on new environments, source migration between environments\)
 

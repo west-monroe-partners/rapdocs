@@ -4,7 +4,7 @@ description: Getting a new Agent installed to connect to a new on-premise data s
 
 # Installing a New RAP Agent
 
-TODO - write an intro
+TODO - write an intro \(all data ingested through RAP flows through a RAP Agent, one is installed out of the box in the cloud environment, additional required on-premise\)
 
 ### Prerequisites
 
