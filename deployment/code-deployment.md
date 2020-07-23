@@ -1,6 +1,6 @@
 # Code Deployment
 
-TODO - write an intro - RAP can be deployed AWS vs. Azure deployment, process should be similar but different
+TODO - write an intro - RAP can be deployed on AWS or Azure, process should be similar but different
 
 ### Prerequisites
 

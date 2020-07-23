@@ -12,7 +12,3 @@ TODO - Document Data Lake Transform layer \(Avro and Parquet files\) and naming 
 
 TODO - Document Hive tables created and naming convention
 
-### Data Warehouse
-
-TODO - Document output options available here \(Snowflake, SQL Server, etc.\), as well as virtual output option
-
