@@ -36,3 +36,5 @@ The RAP Agent pulls data from the source system and generates a CSV.  That CSV i
 
 TODO - arch diagram, point out HTTPS connection / encryption type leveraged
 
+TODO - add list of endpoints the Agent communcates with
+
