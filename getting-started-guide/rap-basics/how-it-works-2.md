@@ -10,7 +10,9 @@ description: >-
 
 ![The RAP Data Flow and corresponding storage locations](../../.gitbook/assets/rap-data-flow.png)
 
-As seen in the above data flow diagram, RAP intakes raw data and outputs an organized data warehouse. The Logical Data Flow consists of eight steps: Ingest, Parse, CDC, Enrich, Refresh, Re-Calculate, Output, and Post-Process. The Data Storage Flow consists of four main structures: Raw Data, Data Lake, Data Hub, and Data Warehouse. Though not shown in the diagram, each step in each flow consists of generated and configuration meta data to aid the user in process management and configurations respectively. Though there are eight steps in the Logical Data Flow, we will focus on the four data processing steps that summarize the flow.
+As seen in the above data flow diagram, RAP intakes raw data and outputs an organized data warehouse. The Logical Data Flow consists of eight steps: Ingest, Parse, CDC, Enrich, Refresh, Re-Calculate, Output, and Post-Process. The Data Storage Flow consists of four main structures: Raw Data, Data Lake, Data Hub, and Data Warehouse. Though not shown in the diagram, each step in each flow consists of generated and configuration meta data to aid the user in process management and configurations respectively. 
+
+To illustrate  the logical data flow we will focus in on the four data structures: Lake/Raw, Lake/Transform, Data Hub, and Data Warehouse.
 
 !! MC - For sections below, the Input / Staging / Validation and Enrichment / Output paradigm is something that relates to RAP 1.x, but the terms changed for RAP 2.0.  The job statuses in the UI for 2.0 don't make mention of these concepts, so this may be a bit confusing for someone to reconcile with what they see in RAP.  I'm thinking this should probably line up more with the 4 data structures \(Lake / Raw, Lake / Transform, Data Hub, Data Warehouse\).
 
@@ -64,13 +66,13 @@ RAP does not generate or store business data, rather it collects this informatio
 
 !! MC - not solely on S3, can reside on Azure Data Lake Storage if RAP is deployed to Azure
 
-RAP imports raw data from source systems into an indexed **Data Lake**, which utilizes Amazon's S3 file storage technology. As RAP imports the data into the Data Lake, it identifies and stores information such as source database, original file location, and location in the Data Lake within the metadata structure, resulting in a self-managing Data Lake, useful for data scientists to access the raw information gathered on a scheduled basis.
+RAP imports raw data from source systems into an indexed **Data Lake**, which utilizes Amazon's S3 or Microsoft Azure's file storage technology. As RAP imports the data into the Data Lake, it identifies and stores information such as source database, original file location, and location in the Data Lake within the metadata structure, resulting in a self-managing Data Lake, useful for data scientists to access the raw information gathered on a scheduled basis.
 
 ### RAP Data Hub
 
 !! MC - Data hub no longer resides in Postgres - now is exposed as a Hive table
 
-The **Data Hub** consists of a customized Postgres database structure optimized to process and store data for RAP. As data moves through processing steps, RAP automatically and continuously modifies the underlying table structures to ensure optimal performance.
+The **Data Hub** consists of a Hive table database structure optimized to process and store data for RAP. As data moves through processing steps, RAP automatically and continuously modifies the underlying table structures to ensure optimal performance.
 
 ### RAP- Managed Data Warehouse
 
@@ -80,15 +82,15 @@ The Data Warehouse layer focuses on optimized access for BI tools and analytics.
 
 RAP uses a **Metadata Structure** to manage information about configuration, process tracking, and data tracking throughout the entire platform. RAP utilizes a proprietary table structure to relate all these data points, and stores this information in a Postgres database for easy access.
 
-## Historical Framework
+## Historical Framework \(RAP 1.X\)
 
 !! MC - Good idea to refer to the old framework, but doesn't seem the paragraph really adds more than just referring to historical content.  I'd probably just keep this section short to say "RAP 1.x did things differently, here's roughly how things map from 1.x to 2.0, old content link is here if you wanted to look at it".
 
-Historically RAP's framework was viewed as four storage structures and four data processing steps. The four storage structures map one to one between the two frameworks, but the eight steps of the logical data flow only roughly map into the four data processing steps. The advantages of of the historical framework is the relationship between the data storage structures and metadata, analytics, and BI. The historical framework diagram is provided below and further reading can be found in the [historical framework section](../../historical-reference/components-and-concepts.md).
+RAP's 1.x framework was viewed as four storage structures and four data processing steps. The four storage structures map one to one between the two frameworks, but the eight steps of the logical data flow only roughly map into the four data processing steps. For reference the [historical framework](../../historical-reference/components-and-concepts.md) section is provided.
+
+!! Cut this: The advantages of of the historical framework is the relationship between the data storage structures and metadata, analytics, and BI. The historical framework diagram is provided below and further reading can be found in the [historical framework section](../../historical-reference/components-and-concepts.md).
 
 !! MC - The diagram is high-level enough that it still feels like it would apply in the RAP 2.0 world, seems like something we should put up top to say "here's how RAP flows things through at a high-level, now we're going to show how the 8 main steps / 4 data structures map to this".
-
-![Illustration of the historical data framework](../../.gitbook/assets/image%20%2825%29.png)
 
 
 
