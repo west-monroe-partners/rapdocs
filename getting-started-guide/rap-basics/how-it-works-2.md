@@ -54,7 +54,7 @@ RAP supports many types of enrichments, and not all types of business logic can 
 
 The **Output** step of the logical data flow and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
 
-The Output step is facilitated by the connections and source screens in the RAP interface.
+The Output step is facilitated by the connections and outputs screens in the RAP interface.
 
 ### RAP- Managed Data Warehouse
 

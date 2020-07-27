@@ -8,9 +8,7 @@ description: The RAP interface consists of six primary screens
 
 Upon login, users are directed to the Sources screen. The Navigation Menu, located in the top left corner of the screen, enables navigation between RAP screens from any of the currently displayed screens.
 
-!! MC - Screenshot below should be updated to 2.0
-
-![Left-Hand Navigation menu opened](../../.gitbook/assets/image%20%2875%29.png)
+![Left-Hand Navigation menu opened](../../.gitbook/assets/rap-navigation-menu-source.png)
 
 ## !!Primary Screens 
 
@@ -18,41 +16,37 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ### Sources
 
-The [Sources](../../configuring-the-data-integration-process/source-configuration/) Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub.
+![Sources Screen header and tabs](../../.gitbook/assets/rap-sources-view.png)
+
+The [Sources](../../configuring-the-data-integration-process/source-configuration/) Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub. 
 
 ![](../../.gitbook/assets/close-up-logical-data-flow.png)
 
-When we think of the logical data flow, we can consider the Source Screen controls to be the manager from raw data ingestion all the way to output. Further description of how Sources works with the logical data flow can be seen [here](navigation-and-interface.md#sources-details-the-logical-data-flow).
+When we think of the logical data flow, we can consider the Source Screen controls to be the manager from raw data ingestion all the way to output. 
 
-### Process
+### Processing
 
-The Process screen shows the progress and outcome of all execution tasks through the platform, including sub-processes contained within the four standard processing steps of Input, Staging, Validation and Enrichment and Output.
+![Processing screen with view of overall process and sub-processes](../../.gitbook/assets/rap-processes-screen.png)
+
+The Processing screen shows the progress and outcome of all execution tasks through the platform, including sub-processes. Processing can be navigated to by either the left-hand menu and the selection of processes or within a source selecting the processing tab.
 
 ### Outputs
+
+![Outputs screen](../../.gitbook/assets/rap-outputs-view.png)
 
 The [Outputs](../../configuring-the-data-integration-process/output-configuration/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
 
 ### Connections
 
+![Connections Screen and example settings](../../.gitbook/assets/rap-connections-screen.png)
+
 The [Connections ](../../configuring-the-data-integration-process/connections-configuration.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
-
-### Validation and Enrichment Templates
-
-!! MC - Looks like this screen doesn't exist in RAP 2.0 any more
-
-The [Validation and Enrichment Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) screen shows all of the available re-usable templates for creating similar Validation Rules and Enrichment Rules to multiple Sources.
-
-### Source Dashboard
-
-!! MC - Looks like this screen doesn't exist in RAP 2.0 any more
-
-The Source Dashboard screen provides an over-time view of the outcome of each sources end-to-end processing.
 
 ## Sources Details - The Logical Data Flow
 
 Sources can be thought of as managing the entire logical data flow. Sources work with connections and other sections of RAP to complete this flow. 
 
-![Tab navigation within a RAP Source](../../.gitbook/assets/sources-header.png)
+![Tab navigation within the Sources interface](../../.gitbook/assets/sources-header.png)
 
 Within Sources there are seven tabs: Settings, Dependencies, Relations, Enrichments, Inputs, Process, and Data View. In depth information of the Sources location is found [here](../../configuring-the-data-integration-process/source-configuration/), what is provided here is an overview of how the Logical Data Flow seen in the [How it Works](how-it-works-2.md#the-data-flow) section is applied to the Sources interface.
 
