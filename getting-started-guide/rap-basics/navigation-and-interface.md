@@ -26,7 +26,7 @@ When we think of the logical data flow, we can consider the Source Screen contro
 
 ![Processing screen with view of overall process and sub-processes](../../.gitbook/assets/rap-processes-screen.png)
 
-The Processing screen shows the progress and outcome of all execution tasks through the platform, including sub-processes. Processing can be navigated to by either the left-hand menu and the selection of processes or within a source selecting the processing tab.
+The Processing screen shows the progress and outcome of all execution tasks through the platform, including sub-processes. Processing can be navigated to by either the left-hand menu and the selection of processes or within a source selecting the processing tab. Additionally, any wait conditions preventing processes from executing immediately are visible in the Workflow Queue tab.
 
 ### Outputs
 
@@ -54,7 +54,7 @@ The Ingest step moves data into RAP's Data Lake. The settings tab of the source 
 
 ### Enrichment
 
-Enrichment occurs within the Data Hub and shows up in  several locations of the sources interface. The **Relations** tab allows for rules similar to joins for lookups. The **Enrichments** tab allows for different data manipulations and calculations to occur. Within the Enrichments interface there is also the option for **Validation** which is a useful way to flag or warn the user of possible data issues.  Finally the **Data Viewer** allows for a visual of the data in tabular format.
+Enrichment occurs within the Data Hub and shows up in several locations of the sources interface. The **Relations** tab allows for rules similar to joins for lookups. The **Enrichments** tab allows for different data manipulations and calculations to occur. Within the Enrichments interface there is also the option for **Validation** which is a useful way to flag or warn the user of possible data issues.  Finally the **Data Viewer** allows for a visual of the data in tabular format.
 
 ### Outputs
 
