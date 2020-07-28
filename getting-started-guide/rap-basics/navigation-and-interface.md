@@ -10,9 +10,7 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ![Left-Hand Navigation menu opened](../../.gitbook/assets/rap-navigation-menu-source.png)
 
-## !!Primary Screens 
-
-!!include screenshots of the of the different primary screens in addition to the links!!
+## Primary Screens 
 
 ### Sources
 
@@ -54,17 +52,11 @@ Within Sources there are seven tabs: Settings, Dependencies, Relations, Enrichme
 
 The Ingest step moves data into RAP's Data Lake. The settings tab of the source screen requires an input connection. We utilize the **Connections** interface of RAP to specify this input location, and then select this connection where prompted in the Source settings.
 
-!! MC - Similar to comment on How It Works page, probably should line up sections below with 4 storage layers.
-
 ### Enrichment
-
-!! MC - Relations is more for defining how to do joins for lookups, think "merging" isn't really the right term to use.  Also, not sure if the Inputs tab should be really referred to in here, feels like that's more used for monitoring / checking run statuses.
 
 Enrichment occurs within the Data Hub and shows up in  several locations of the sources interface. The **Relations** tab allows for rules similar to joins for lookups. The **Enrichments** tab allows for different data manipulations and calculations to occur. Within the Enrichments interface there is also the option for **Validation** which is a useful way to flag or warn the user of possible data issues.  Finally the **Data Viewer** allows for a visual of the data in tabular format.
 
 ### Outputs
-
-!! MC - Should refer to the Outputs page as to where this is all set up.
 
 The Output step maps the transformed data from the Data Hub to a Data Warehouse or 3rd party location. Outputs are created and defined in the **Outputs** screens \(found in the left-hand menu\). Outputs utilize Sources and Connections to appropriately move data to the desired location. 
 
