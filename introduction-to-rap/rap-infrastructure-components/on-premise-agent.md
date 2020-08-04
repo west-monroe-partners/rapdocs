@@ -29,6 +29,7 @@ RAP also supports the following proprietary source systems.  However, since thos
 * Quickbooks
 * SAP HANA
 * Pervasive SQL
+* Dynamics 365
 
 ### Data Flow into Cloud Environment
 
