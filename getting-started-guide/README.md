@@ -19,6 +19,8 @@ This guide has two parts:
 
 This guide provides users with the knowledge to perform basic tasks within the RAP environment. The getting started guide takes users through an example data configuration project which provide a hands-on tutorial using demo data in an end-to-end scenario. If you are starting out as a RAP configurator, working through this guide should be enough to prepare you for your first projects. The remaining sections provide more complex instructions on operating and configuring RAP for optimal data processing performance and outputs, and are more appropriate for an experienced data architect.
 
+!!What is the scope of "this guide"? The getting started guide? All documentation? From the language, it sounds like it applies to the entire documentation, and if so - we should maybe change the language up a bit.
+
 ## About RAP Users
 
 RAP is an enterprise data service that has been designed for more technical users in data engineering, data science, technical operations, and analytics.
