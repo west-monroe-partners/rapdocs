@@ -4,7 +4,7 @@ description: >-
   warehouse.
 ---
 
-# !! How it Works \(new version\)
+# How it Works
 
 ## The Logical Data Flow
 
