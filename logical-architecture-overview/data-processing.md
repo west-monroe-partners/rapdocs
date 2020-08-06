@@ -8,6 +8,10 @@ description: >-
 
 ![](../.gitbook/assets/2.0-process-steps.jpg)
 
+### !! Raw Data
+
+!! How should we appropriately discuss the raw data?
+
 ### Data Lake
 
 The data lake consists of a Raw data landing area and Transformation area used for RAP's processing steps.
@@ -20,6 +24,8 @@ The data hub consists of Hive tables that contain the final processed data for e
 
 TODO - how to connect / query?
 
+TODO - how does this connect to the output step?
+
 ### Data Warehouse
 
 The Data Warehouse layer is the exposure layer for curated and cleansed data.  This layer is more tightly maintained than the Data Hub, and is controlled in RAP by configured output mappings.  This is the layer intended to be exposed for enterprise reporting and analytics purposes.
@@ -27,4 +33,6 @@ The Data Warehouse layer is the exposure layer for curated and cleansed data.  T
 The data warehouse will generally reside on a data storage technology outside of RAP, such as SQL Server \(and its various Azure counterparts\) or Snowflake.
 
 TODO - output data models \(flat vs. loose dimensional vs. hybrid - put here or elsewhere?\)
+
+TODO - How does this relate to the output step?
 
