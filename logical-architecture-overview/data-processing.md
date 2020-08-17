@@ -16,7 +16,7 @@ description: >-
 
 The data lake consists of a Raw data landing area and Transformation area used for RAP's processing steps.
 
-TODO - discuss Raw vs. Transform storage, where Agent responsibility ends / RAP core processing responsibility starts
+!! TODO - discuss Raw vs. Transform storage, where Agent responsibility ends / RAP core processing responsibility starts
 
 ### Data Hub
 
