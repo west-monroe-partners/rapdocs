@@ -18,6 +18,26 @@ The UI represents what you see when you log into the RAP platform. The UI is the
 
 RAP's API is a lightweight communicator between all of the components of the infrastructure. The API strictly communicates between the components and does not execute any business logic.
 
+### Meta Storage
+
+Meta Storage is the component that executes the vast majority of business logic and transformation. Meta Storage encompasses the databases and functions \(in Postgres SQL\) to execute the required business logic. 
+
+### Core
+
+Core is the component of orchestration. Core manages executions of beginnings, hand offs, restarts, queues, and makes sure whatever must occur next does in fact occur. Core works closely with the Meta Storage to execute the appropriate business logic in the appropriate order. Core also works with Sparky Job to reference when to start up and when to shut down Spark infrastructure.
+
+### Agent
+
+The [RAP Agent](../../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the RAP Cloud infrastructure.
+
+### Ad Hoc Cluster
+
+The Ad Hoc Cluster enables the UI. The primary purpose of the Ad Hoc Cluster is to execute the UI and ensure nothing breaks in the configuration of RAP. The most common usage of the Ad Hoc Cluster is the Data Viewer, such as viewing the first 200 rows of data.
+
+To illustrate how the Ad Hoc Cluster works 
+
+
+
 
 
 
