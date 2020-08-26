@@ -46,7 +46,24 @@ The data storage is the location of where the data is stored, and is dependent o
 
 ## Infrastructure Application
 
-RAP 2.0 currently exists for AWS and Microsoft Azure infrastructures. Depending on which 
+RAP 2.0 currently exists for AWS and Microsoft Azure systems. Depending on which the specific services are listed below at a high level with additional detail elaborated on in the Amazon Web Services and Microsoft Azure sections. !! Add links to the AWS and Microsoft sections.
+
+### Amazon Web Services Implementation
+
+![Amazon Web Services Infrastructure](../../.gitbook/assets/rap-components-aws.png)
+
+### Microsoft Azure Services Implementation
+
+![Microsoft Azure Infrastructure](../../.gitbook/assets/rap-architecture-agent.png)
+
+### Services Summary
+
+| Service | AWS | Azure |
+| :--- | :--- | :--- |
+| Data Lake |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 
 
