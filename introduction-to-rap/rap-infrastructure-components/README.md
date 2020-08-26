@@ -28,13 +28,25 @@ Core is the component of orchestration. Core manages executions of beginnings, h
 
 ### Agent
 
-The [RAP Agent](../../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the RAP Cloud infrastructure.
+The [RAP Agent](../../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the RAP Cloud infrastructure. The RAP Agent is only utilized during the Ingest stage of the Logical Data Flow.
 
 ### Ad Hoc Cluster
 
 The Ad Hoc Cluster enables the UI. The primary purpose of the Ad Hoc Cluster is to execute the UI and ensure nothing breaks in the configuration of RAP. The most common usage of the Ad Hoc Cluster is the Data Viewer, such as viewing the first 200 rows of data.
 
-To illustrate how the Ad Hoc Cluster works 
+To illustrate how the Ad Hoc Cluster works, when you click "save" on a rule, RAP will generate the query within the meta storage layer, process these rules with the source data, and return the results back through the API. The Ad Hoc Cluster will test this API result \(with a zero records call\), and will return back to the UI. 
+
+### Sparky Job
+
+When a job is ready for scale, the Sparky Job is enlisted to execute. Business logic that is validated in the meta storage layer and Ad Hoc Cluster is then executed, when dictated to by the Core, at scale. Sparky Job on its own is simple spark code. Sparky Job relies on the Core to indicate when to begin, run, or shut down based on appropriate orchestration.
+
+### Data Storage
+
+The data storage is the location of where the data is stored, and is dependent on the services used: AWS or Azure.
+
+## Infrastructure Application
+
+RAP 2.0 currently exists for AWS and Microsoft Azure infrastructures. Depending on which 
 
 
 
