@@ -12,6 +12,7 @@
     * [Validation and Enrichment](getting-started-guide/data-integration-example/validation-and-enrichment.md)
     * [Output](getting-started-guide/data-integration-example/output.md)
 * [Configuration Guide](configuring-the-data-integration-process/README.md)
+  * [Untitled](configuring-the-data-integration-process/untitled.md)
   * [Connections](configuring-the-data-integration-process/connections-configuration.md)
   * [Sources](configuring-the-data-integration-process/source-configuration/README.md)
     * [Details](configuring-the-data-integration-process/source-configuration/source-details.md)
