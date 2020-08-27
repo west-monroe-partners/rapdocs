@@ -37,5 +37,18 @@
 
 11. The service is now updated to start the deployment container, and will now start a task shortly. The task will run, perform the deployment steps in the running container, and then set the service back to 0.
 
-## Monitoring/Troubleshooting the Deployment
+## Updating External Agents 
+
+### On-Premise Agent
+
+1. Deployment service will update the agent jar file in S3 and trigger the auto update process- make sure Agent has autoUpdate set to true in the Agent parameters
+
+### ECS Agent
+
+1. Navigate to the Task Definition for the External Agent service and create a new revision. Update the image to the target version, similar to how the Deployment service was updated in the previous section steps.
+2. Navigate to the Service for the External Image and update the Task Definition to the new revision \(latest\), then save the update to the service. 
+3. A new task should start up with the new Task Definition and the old task should stop.
+4. Confirm that the Agent is running on the target version by checking the Task Definition in the currently running external agent task.
+
+## Monitor/Troubleshoot Deployment
 
