@@ -1,4 +1,4 @@
-# Using the Deployment Service in ECS
+# Using the Deployment Service in AWS
 
 ## Prerequisites
 
@@ -51,4 +51,10 @@
 4. Confirm that the Agent is running on the target version by checking the Task Definition in the currently running external agent task.
 
 ## Monitor/Troubleshoot Deployment
+
+1. Navigate to the Cloudwatch service in AWS and select "Log groups" on the left hand side of the page.
+2. Find the log group called "/ecs/&lt;environment&gt;-deployment-&lt;client&gt;"
+3. Click the logs for the latest running deployment
+
+The Deployment service will log all of the steps it is performing, and attempt to rollback the environment to the previous version if any errors occur. 
 

@@ -36,7 +36,7 @@
   * [Installing a New RAP Agent \(On Premise\)](deployment/installing-a-new-rap-agent.md)
   * [Installing a New RAP Agent \(ECS\)](deployment/installing-a-new-rap-agent-ecs.md)
   * [Environment Migration Process](deployment/migrations-across-environments.md)
-  * [Using the Deployment Service in ECS](deployment/using-the-deployment-service-in-ecs.md)
+  * [Using the Deployment Service in AWS](deployment/using-the-deployment-service-in-ecs.md)
 * [Configuration Guide](configuring-the-data-integration-process/README.md)
   * [Connections](configuring-the-data-integration-process/connections-configuration.md)
   * [Sources](configuring-the-data-integration-process/source-configuration/README.md)
