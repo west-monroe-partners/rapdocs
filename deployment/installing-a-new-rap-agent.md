@@ -2,7 +2,7 @@
 description: Getting a new Agent installed to connect to a new on-premise data source.
 ---
 
-# Installing a New RAP Agent
+# Installing a New RAP Agent \(On Premise\)
 
 TODO - write an intro \(all data ingested through RAP flows through a RAP Agent, one is installed out of the box in the cloud environment, additional required on-premise\)
 
@@ -24,9 +24,11 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
 * The user account intended for RAP on source databases need to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the RAP user and only SQL Server authentication can be used.
   * Mixed-mode authentication can still be enabled to allow for integrated authentication for non-RAP related loads.
 
-### Setting up a New Agent Code
+### Setting up a New Agent Configuration
 
-Prior to adding a new Agent, the Agent code should be set up.
+Prior to installing an Agent, a new record must be added to the meta.agent table in the Postgres Metastore. The record will denote the Agent code and the contain
+
+NOTE: In a future release, this process will be able to be done strictly from the UI
 
 TODO - show where this is done in UI \(new process\)
 
