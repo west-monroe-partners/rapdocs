@@ -8,6 +8,8 @@ In Intellio Data Ops, import/export functionality allows the user to copy source
 
 Any connections used in an exported entity must have an equivalent connection with an IDENTICAL name in the importing environment.
 
+## Exporting
+
 | **Output level exports should include:** |
 | :--- |
 | 1. All selected outputs definitions and their mappings |
