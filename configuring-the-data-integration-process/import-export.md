@@ -13,7 +13,16 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 ## Initiating an Output level Export
 
 1. Navigate to the output mapping tab, of the output that has mappings that you would like to export.
-2. 
+2. In the second column of the table, click the checkbox of each source mapping that you want to export, or click on the top checkbox in the header row to select all 
+
+![](../.gitbook/assets/image%20%28253%29.png)
+
+3. Click the 'Export' button:
+
+![](../.gitbook/assets/image%20%28254%29.png)
+
+
+
 | **Output level exports should include:** |
 | :--- |
 | 1. All selected outputs definitions and their mappings |
