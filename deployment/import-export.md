@@ -36,6 +36,8 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 4. All sources used in the relations from the previous step.
 5. Repeat steps 3,4,5 until all necessary sources are selected.
 
+
+
 ### Initiating a Source Level Export <a id="initiating-a-source-level-export"></a>
 
 1. Navigate to the main sources page.
@@ -64,6 +66,8 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 
 4. All sources used in the relations from the previous step.
 5. Repeat steps 3,4,5 until all necessary sources are selected
+
+
 
 ## Importing <a id="importing"></a>
 
