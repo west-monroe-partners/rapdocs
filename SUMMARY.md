@@ -39,7 +39,6 @@
   * [Environment Migration Process](deployment/migrations-across-environments.md)
   * [Using the Deployment Service in AWS](deployment/using-the-deployment-service-in-ecs.md)
 * [Configuration Guide](configuring-the-data-integration-process/README.md)
-  * [Import/Export](configuring-the-data-integration-process/import-export.md)
   * [Connections](configuring-the-data-integration-process/connections-configuration.md)
   * [Sources](configuring-the-data-integration-process/source-configuration/README.md)
     * [Details](configuring-the-data-integration-process/source-configuration/source-details.md)
