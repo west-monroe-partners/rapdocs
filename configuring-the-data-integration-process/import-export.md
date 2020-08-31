@@ -21,6 +21,8 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 
 ![](../.gitbook/assets/image%20%28254%29.png)
 
+4. Review all the objects in the export modal that appears, in order to make sure all entities shown in the modal were intended to be included in the export, and make sure all entities that are supposed to be imported are included.
+
 
 
 | **Output level exports should include:** |
