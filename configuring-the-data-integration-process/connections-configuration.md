@@ -67,7 +67,12 @@ There are currently seven different database connections available.
 
 | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- |
-
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
 <table>
   <thead>

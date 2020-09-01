@@ -1,4 +1,4 @@
-# !! Data Processing Steps
+# Data Processing Steps
 
 ![](../../.gitbook/assets/2.0-process-steps.jpg)
 
