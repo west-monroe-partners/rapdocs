@@ -81,12 +81,14 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 3. In the Validation Results tab of the import modal, review the following object types to make sure all their components are being deleted, inserted, updated, or are unchanged as expected:
 
 * Outputs
-* Output Columns
-* Output Sources
-* Output Settings
-* Output Source Columns
-* Enrichments
-* Source Settings
+  * Output Columns
+  * Output Sources
+    * Output Source Columns
+  * Output Settings
+* Sources \(if the source was only updated due to one of its children being updated, the 'child\_updates' field on the modal will be marked as true\)
+  * Enrichments
+  * Source Settings
+  * Dependencies
 * Relations
 
 4. Press the 'Import' button at the bottom of the Validation Results tab to complete your import
