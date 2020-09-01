@@ -44,10 +44,6 @@ When a job is ready for scale, the Sparky Job is enlisted to execute. Business l
 
 The data storage is the location of where the data is stored, and is dependent on the services used: AWS or Azure.
 
-{% hint style="info" %}
-For Authentication, RAP utilizes Auth
-{% endhint %}
-
 ## Infrastructure Application
 
 RAP 2.0 currently exists for AWS and Microsoft Azure systems. Depending on which the specific services are listed below at a high level with additional detail elaborated on in the Amazon Web Services and Microsoft Azure sections. !! Add links to the AWS and Microsoft sections.
