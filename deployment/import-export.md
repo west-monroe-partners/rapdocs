@@ -93,5 +93,13 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 
 \*note: if a source, output, or output source was only updated due to one of its children being updated, the 'child\_updates' field on the modal will be marked as true.
 
-4. Press the 'Import' button at the bottom of the Validation Results tab to complete your import
+4. Press the 'Import' button at the bottom of the Validation Results tab to complete your import 
+
+## Workflow Diagrams
+
+![Exporting from a Source](../.gitbook/assets/exporting-from-a-source.jpg)
+
+![Exporting from an Output Source](../.gitbook/assets/exporting-from-output-source.jpg)
+
+
 
