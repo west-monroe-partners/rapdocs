@@ -2,11 +2,11 @@
 
 ## Intro <a id="intro"></a>
 
-In Intellio Data Ops, import/export functionality allows the user to copy sources and outputs, in their entirety, from one environment to another, without having to do any manual reconfiguration in the importing environment. There are two basic ways of exporting, top down from the source level, or bottom up from the output level.
+In Intellio Data Ops, import/export functionality allows the user to copy sources and outputs, in their entirety, from one environment to another, without having to do any manual reconfiguration in the importing environment. There are two basic ways of exporting: from the source level or from the output level.
 
 ### Prerequisite <a id="prerequisite"></a>
 
-Any connection\(s\) used in an exported entity must have an equivalent connection with an IDENTICAL name in the importing environment.
+Any connection\(s\) used in an exported entity must have an equivalent connection with an IDENTICAL name in the target environment.
 
 ## Exporting <a id="exporting"></a>
 
