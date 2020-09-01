@@ -85,11 +85,13 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
   * Output Sources
     * Output Source Columns
   * Output Settings
-* Sources \(if the source was only updated due to one of its children being updated, the 'child\_updates' field on the modal will be marked as true\)
+* Sources
   * Enrichments
   * Source Settings
   * Dependencies
 * Relations
+
+\*note: if a source, output, or output source was only updated due to one of its children being updated, the 'child\_updates' field on the modal will be marked as true.
 
 4. Press the 'Import' button at the bottom of the Validation Results tab to complete your import
 
