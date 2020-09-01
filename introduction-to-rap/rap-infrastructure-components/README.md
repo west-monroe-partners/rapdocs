@@ -62,7 +62,7 @@ RAP 2.0 currently exists for AWS and Microsoft Azure systems. Depending on which
 
 ### Services Summary
 
-| Service | AWS | Azure |
+| Component | AWS | Azure |
 | :--- | :--- | :--- |
 | Data Lake |  |  |
 |  |  |  |
