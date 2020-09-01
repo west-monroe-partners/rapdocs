@@ -71,7 +71,7 @@
     * [Example Daily Routine](operation-guide/monitoring-the-process/example-daily-routine.md)
     * [RAP Agent](operation-guide/monitoring-the-process/rap-agent.md)
 * [Historical Reference](historical-reference/README.md)
-  * [How it Works \(1.x\)](historical-reference/components-and-concepts.md)
+  * [How it Works \(RAP 1.0\)](historical-reference/components-and-concepts.md)
 * [Changelog](changelog/README.md)
   * [1.0](changelog/rap_patch_notes_1.0.md)
   * [1.1](changelog/1.1.md)

@@ -4,7 +4,7 @@ description: >-
   storage layers, and four processes.
 ---
 
-# How it Works \(1.x\)
+# How it Works \(RAP 1.0\)
 
 {% hint style="info" %}
 This is a deprecated view of how the RAP framework breaks down into diffenent steps. For an updated version of the logical data flow and how the storage layers and processes work together see the [How It Works](../getting-started-guide/rap-basics/how-it-works-2.md) section provided in the Getting Started Guide.
