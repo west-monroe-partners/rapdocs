@@ -97,9 +97,7 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 
 ## Workflow Diagrams
 
-![Exporting from a Source](../.gitbook/assets/exporting-from-a-source.jpg)
+![Exporting from a Source](../.gitbook/assets/exporting-from-a-source%20%281%29.jpg)
 
-![Exporting from an Output Source](../.gitbook/assets/exporting-from-output-source.jpg)
-
-
+![Exporting from an Output Source](../.gitbook/assets/exporting-from-output-source%20%281%29.jpg)
 
