@@ -45,7 +45,7 @@ Output is typically just the mapping of sources to a destination. RAP by default
 
 RAP does not allow the user to adjust the grain of the data, so at this point aggregations, unpivots and relational database logic occurs. 
 
-### Post-Processing
+### !! Post-Processing
 
 Post-Processing is a performance step.
 
