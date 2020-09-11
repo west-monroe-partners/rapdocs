@@ -6,7 +6,7 @@ description: Options for modeling output data coming out of RAP.
 
 Once data is in RAP, there should be a path to expose that data externally, whether it's through a data hub, data warehouse, reporting tool, or various flat files that feed into other systems.
 
-Flat files outputs feeding into other systems are highly dependent on the input requirements of those systems, and generally those outputs will be defined by those system requirements.  For the purposes of this section, the focus will be on modeling for an output database to feed into a reporting tool or layer.
+Flat file outputs feeding into other systems are highly dependent on the input requirements of those systems, and generally those outputs will be defined by those system requirements.  For the purposes of this section, the focus will be on modeling for an output database to feed into a reporting tool or layer.
 
 ### Flat Data Model
 
@@ -21,6 +21,8 @@ TODO - discuss union concept, add viz
 ### Loose Dimensional Data Model
 
 In traditional data warehousing, the [star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the reporting schema in the data warehouses for several decades.  RAP is able to conform to a loose interpretation of this approach, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
+
+The general recommendation is to stick to the flat data model as much as possible, but if requirements determine that a more traditional star schema is needed, the loose dimensional model is also an option.
 
 TODO - add rough diagram
 
