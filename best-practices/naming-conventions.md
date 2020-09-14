@@ -60,11 +60,23 @@ As an example, to output to the f\_sales table in the Data Warehouse, the output
 
 TODO - loopback naming, file naming, S3 bucket / ADLS container usage
 
+In most cases, both the Development and Production environments will leverage the same storage account / container for the RAP "inbox".  Therefore, the recommendation is to create a DEV and PROD folder as the top level folders in the inbox.  All files outputted from / ingested into RAP should come from the folder structure for the DEV or PROD environment respectively.
+
+The rest of this section will assume that this folder structure in in place and will denote best practices relative to the root of the appropriate environment folder.
+
+#### Input folder structure
+
+TODO - local agent vs. RAP inbox in AWS / Azure
+
 #### Output files for downstream consumers
 
-Output files are generally driven by the naming convention required by the downstream system ingesting those files.
+Output files names are generally driven by the naming convention required by the downstream system ingesting those files.  In order to prevent naming collisions / confusion, each downstream system should have its own folder in
 
 #### Loopback Files
 
 Loopback files are a special case of file outputs.  As loopbacks are only created to the specific use case of re-ingestion back into RAP, those files are not intended to be used for consumption by any users and are transient in that they exist only until they are re-ingested.
+
+Specific guidelines for loopback file naming and placement are the following:
+
+1. Create a folder called "Loopback" in RAP's data lake.  This folder should only ever be used to output loopback files and not be used to expose data to external systems.
 
