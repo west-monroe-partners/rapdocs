@@ -14,7 +14,7 @@ Table-based sources should be named according to the following convention:
 
 &lt;Source System&gt; - &lt;Table / Entity Name&gt; - &lt;Refresh Type&gt;
 
-&lt;Source System&gt; is the name of the source system where data is being pulled \(ERP, CRM, HR, etc\). In the scenario where a loopback may be needed, the loopback source should be denoted by adding “ – Loopback” to the originating source system name, and the table / entity name should be a very short description of the grain change occurring \(e.g., Sales to Customer\).
+&lt;Source System&gt; is the name of the source system where data is being pulled \(ERP, CRM, HR, etc\). In the scenario where a loopback may be needed, the loopback source should be denoted by adding “ – Loopback” to the originating source system name, and the table / entity name should be a very short description of the grain change occurring \(e.g., Sales Order to Customer\).
 
 &lt;Table / Entity Name&gt; is the exact name of the table or entity being pulled.
 
