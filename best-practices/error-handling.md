@@ -8,11 +8,11 @@ In any data integration project, bad or non-conforming data is something that th
 
 ### Validation Rules
 
-TODO - discuss how to decide what to set, screenshot from UI of where this is set
+TODO - discuss how to decide what to set, link to section in Configuration Guide
 
 ### Enrichment Rules
 
-TODO - discuss warning vs failure, screenshot from UI of where this is set
+TODO - discuss warning vs failure, link to section in Configuration Guide
 
 ### Error Outputs
 
