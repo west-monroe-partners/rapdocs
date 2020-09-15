@@ -42,7 +42,7 @@ Validation and Enrichment rules \(both within sources and templates\) should be 
 * **Conversion**: For rules performing strictly datatype conversions
 * **Enrichment**: For rules adding an enriched field performing any type of calculation / derivation / hard coding
 
-&lt;Source System&gt; is the name of the source system where data is being pulled \(ERP, CRM, etc\). This is done to facilitate the ease of converting rules over to templates as needed. In the scenario where a rule is intended to be used globally across different source systems, the value “Global” should be used.
+**&lt;Source System&gt;** is the name of the source system where data is being pulled \(ERP, CRM, etc\). This is done to facilitate the ease of converting rules over to templates as needed. In the scenario where a rule is intended to be used globally across different source systems, the value “Global” should be used.
 
 As an example, to add a field called “customer\_full\_name” to an ERP source, the enrichment rule should be named “Enrichment – ERP – Customer Full Name”.
 
@@ -70,7 +70,7 @@ Within those those environment folders, a sub-folder should be created for each 
 
 #### Output Files for Downstream Consumers
 
-Output files names are frequently driven by the naming convention required by the downstream system ingesting those files.  In order to prevent naming collisions / confusion, each downstream system should have its own folder in the Output container coming out of RAP.
+Output file names are frequently driven by the naming convention required by the downstream system ingesting those files.  In order to prevent naming collisions / confusion, each downstream system should have its own folder in the Output container coming out of RAP.
 
 #### Loopback Files
 
