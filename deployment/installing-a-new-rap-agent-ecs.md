@@ -2,3 +2,5 @@
 
 !! Needs documentation.
 
+Running teraform code in AWS utilizing ECS.
+
