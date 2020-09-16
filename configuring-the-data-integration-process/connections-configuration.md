@@ -54,7 +54,7 @@ Editing a Connection and creating a new Connection leads to the same screen. Use
 
 ### Table Connection Type
 
-There are currently seven different database connections available.
+There are currently seven different database connections \(available under the 'Driver' dropdown\).
 
 * Oracle
 * Postgres
@@ -63,55 +63,51 @@ There are currently seven different database connections available.
 * SQL Server
 * SAP HANA
 
-#### Common Parameters:
+### Common Parameters
 
-| Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+Based upon the connection type, driver and other reasons there may be need to customize connection parameters. These parameters appear in the parameter table and can be searched. Common parameters are listed below.
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">connection_string</th>
-      <th style="text-align:left"></th>
-      <th style="text-align:left">
-        <p>JDBC connection string for the destination database.</p>
-        <p>Overrides all other parameters if specified.</p>
-      </th>
-      <th style="text-align:left">Y</th>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Description</th>
     </tr>
   </thead>
-  <tbody></tbody>
+  <tbody>
+    <tr>
+      <td style="text-align:left">connection_string</td>
+      <td style="text-align:left">
+        <p>JDBC connection string for the destination database.</p>
+        <p>Overrides all other parameters if specified.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">database_name</td>
+      <td style="text-align:left">Name of the database</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">host_name</td>
+      <td style="text-align:left">Host address of the source database</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">password</td>
+      <td style="text-align:left">Database password</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">port</td>
+      <td style="text-align:left">Port on the database server</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">user</td>
+      <td style="text-align:left">Database username</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">warehouse</td>
+      <td style="text-align:left">Warehouse name</td>
+    </tr>
+  </tbody>
 </table>
-
-| database\_name |  | Name of the database | N |
-| :--- | :--- | :--- | :--- |
-
-
-| host\_name |  | Host address of the source database | N |
-| :--- | :--- | :--- | :--- |
-
-
-| password |  | Database password | N |
-| :--- | :--- | :--- | :--- |
-
-
-| port |  | Port on the database server | N |
-| :--- | :--- | :--- | :--- |
-
-
-| user |  | Database username | N |
-| :--- | :--- | :--- | :--- |
-
-
-| Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- |
-| warehouse |  | Warehouse name | N |
 
 #### Additional Parameters: SQL Server
 
