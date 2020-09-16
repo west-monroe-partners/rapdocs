@@ -63,9 +63,13 @@ There are currently seven different database connections \(available under the '
 * SQL Server
 * SAP HANA
 
-### Common Parameters
+## Parameters
+
+![Location of the Parameters Table](../.gitbook/assets/rap-connections-parameter-table-location.png)
 
 Based upon the connection type, driver and other reasons there may be need to customize connection parameters. These parameters appear in the parameter table and can be searched. Common parameters are listed below.
+
+### Common Parameters
 
 <table>
   <thead>
@@ -109,7 +113,7 @@ Based upon the connection type, driver and other reasons there may be need to cu
   </tbody>
 </table>
 
-#### Additional Parameters: SQL Server
+### Additional Parameters: SQL Server
 
 | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- |
