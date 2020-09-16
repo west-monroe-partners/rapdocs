@@ -32,6 +32,8 @@ NOTE: In a future release, this process will be able to be done strictly from th
 
 TODO - show where this is done in UI \(new process\)
 
+!! What is the step by step?
+
 
 
 ## Obtaining the RAP Agent
