@@ -81,7 +81,11 @@ Listed below are the parameters required to be set in the Microsoft Azure deploy
 | databricksToken | Databricks token |  |
 | dnsZone | Base name of the website to deploy RAP to | Wmprap.com |
 
-### !! During Deployment \(step by step?\)
+### !! Teraforming
+
+!! Split between Azure, AWS \(different providers, credentials\). Where to find the code.
+
+!! split out Azure, AWS.
 
 
 

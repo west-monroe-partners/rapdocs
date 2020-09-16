@@ -1,5 +1,5 @@
 ---
-description: '!! Do we need this for Microsoft Azure as well?'
+description: '!! Add introduction and context. Logical architecture. Processing.'
 ---
 
 # Using the Deployment Service in AWS
