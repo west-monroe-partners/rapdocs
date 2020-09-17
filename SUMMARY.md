@@ -68,7 +68,7 @@
   * [Onboarding New Sources](best-practices/onboarding-sources.md)
   * [Naming Conventions](best-practices/naming-conventions.md)
   * [Output Data Modeling](best-practices/output-data-modeling.md)
-  * [Rollup Sources](best-practices/rollup-sources.md)
+  * [Pre-Calculating Aggregate Data](best-practices/rollup-sources.md)
   * [Handling Data Validation Errors](best-practices/error-handling.md)
   * [Error Notifications](best-practices/error-notifications.md)
 * [Operation Guide](operation-guide/README.md)

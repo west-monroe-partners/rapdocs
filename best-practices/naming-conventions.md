@@ -12,7 +12,7 @@ A consistent naming convention for source names and enrichment names can make th
 
 Table-based sources should be named according to the following convention:
 
-**`<Source System> - <Table / Entity Name> - <Refresh Type>`**
+`<Source System> - <Table / Entity Name> - <Refresh Type>`
 
 **&lt;Source System&gt;** is the name of the source system where data is being pulled \(ERP, CRM, HR, etc\). In the scenario where a loopback may be needed, the loopback source should be denoted by adding “ – Loopback” to the originating source system name, and the table / entity name should be a very short description of the grain change occurring \(e.g., Sales Order to Customer\).
 
@@ -34,7 +34,7 @@ As an example, to pull the Customer table from ERP as a Key refresh source, the 
 
 Validation and Enrichment rules \(both within sources and templates\) should be named according to the following convention:
 
-**`<Operation Type> - <Source System> - <Rule Description>`**
+`<Operation Type> - <Source System> - <Rule Description>`
 
 **&lt;Operation Type&gt;** can be one of the following values:
 
@@ -50,7 +50,7 @@ As an example, to add a field called “customer\_full\_name” to an ERP source
 
 Outputs should be named according to the following convention:
 
-**`<Output System> - <Table / Entity Name>`**
+`<Output System> - <Table / Entity Name>`
 
 &lt;Output System&gt; is the name of the system where data is being outputted to \(DW, Data Lake, etc\). In the scenario where the output is being written out to the Data Lake to facilitate a loopback source, the value should be denoted as “Loopback”.
 
@@ -79,10 +79,4 @@ Loopback files are a special case of file outputs.  As loopbacks are only create
 Specific guidelines for loopback file naming and placement are the following:
 
 1. Create a folder called "Loopback" in RAP's inbox.  This folder should only ever be used to output loopback files and should not be used to expose data to external systems.
-2. Loopback files should be named according to the following convention:
-   1. **`Loopback_<Source_System_Name>_<Original_Grain>_to_<New_Grain>.avro`**
-      1. Loopback files should be named with underscores replacing spaces.
-      2. **&lt;Source\_System\_Name&gt;** is the original source system where the loopback originates \(see Source System naming convention earlier in this document for the suggested convention\).
-      3. **&lt;Original\_Grain&gt;** should be descriptive of the grain where the loopback originates from.
-      4. **&lt;New\_Grain&gt;** should be descriptive of the new grain of data that is being created as part of this loopback.
 

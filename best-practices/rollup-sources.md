@@ -4,7 +4,7 @@ description: >-
   efficiently.
 ---
 
-# Rollup Sources
+# Pre-Calculating Aggregate Data
 
 In some reporting scenarios, a hard copy of aggregate calculations has to be maintained to support the reporting layer.
 
