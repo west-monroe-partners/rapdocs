@@ -69,7 +69,7 @@
   * [Naming Conventions](best-practices/naming-conventions.md)
   * [Output Data Modeling](best-practices/output-data-modeling.md)
   * [Rollup Sources](best-practices/rollup-sources.md)
-  * [Error Handling](best-practices/error-handling.md)
+  * [Handling Data Validation Errors](best-practices/error-handling.md)
 * [Operation Guide](operation-guide/README.md)
   * [Monitoring the Process](operation-guide/monitoring-the-process/README.md)
     * [Source Dashboard](operation-guide/monitoring-the-process/operational-dashboard.md)
