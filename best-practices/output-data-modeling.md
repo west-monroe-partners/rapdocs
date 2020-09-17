@@ -8,9 +8,17 @@ Once data is in RAP, there should be a path to expose that data externally, whet
 
 Flat file outputs feeding into other systems are highly dependent on the input requirements of those systems, and generally those outputs will be defined by those system requirements.  For the purposes of this section, the focus will be on modeling for an output database to feed into a reporting tool or layer.
 
+### Background
+
+The [star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the user-exposed reporting schema in data warehouses for several decades.  It provides a great balance of model simplicity and query performance on relational databases.  However, with the more modern technologies that exist today \(primarily columnar compression and columnstore indexes\), the star schema as it exists may no longer be the optimal solution in many cases.
+
 ### Flat Data Model
 
-The primary data model RAP is designed for is the flat data model.  With the advent of columnar databases and columnstore indexes in traditional relational databases, a flat data model can be as performant as a traditional normalized schema, as well as use less storage through columnar compression technologies.
+The primary data model RAP is designed for is the flat data model.  The flat data model takes advantage of the colulumnar compression offered in relational databases and other large-scale data offerings \(such as Snowflake and Azure Synapse\).  A flat data model can be as performant as a traditional normalized schema, as well as use less storage through columnar compression technologies.
+
+{% hint style="info" %}
+**NOTE**:  Flat data models should only be used for outputs going to columnar compressed tables or to a RAP Virtual Output.  Outputting to a traditional rowstore table can lead to excessive storage consumption and performance issues with writes and updates.
+{% endhint %}
 
 TODO - add details about what this is, show visually how this looks like
 
@@ -20,9 +28,9 @@ TODO - discuss union concept, add viz
 
 ### Loose Dimensional Data Model
 
-In traditional data warehousing, the [star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the reporting schema in the data warehouses for several decades.  RAP is able to conform to a loose interpretation of this approach, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
+The loose dimensional model concept is a variation of the traditional star schema.  RAP is able to conform to a loose interpretation, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
 
-The general recommendation is to stick to the flat data model as much as possible, but if requirements determine that a more traditional star schema is needed, the loose dimensional model is also an option.
+The general recommendation for RAP is to stick to the flat data model as much as possible, but if requirements determine that a more traditional star schema is needed, the loose dimensional model is also an option.
 
 TODO - add rough diagram
 
