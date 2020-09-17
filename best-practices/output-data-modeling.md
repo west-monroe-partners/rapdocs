@@ -34,7 +34,7 @@ TODO - discuss union concept, add viz
 
 The loose dimensional model concept is a variation of the traditional star schema.  RAP is able to conform to a loose interpretation, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
 
-The one way that a loose dimensional model deviates from a star schema is the lack of surrogate key generation.  As a result, dimension tables are tied to the fact tables on either a single natural key or a concatenated composite key.  The primary benefit is that it decouples the dependencies between dimension and fact tables.
+The one way that a loose dimensional model deviates from a star schema is the lack of surrogate key generation.  As a result, dimension tables are tied to the fact tables on either a single natural key or a concatenated composite key.  The primary benefit is that it decouples the dependencies between dimension and fact tables.  There is no need to handle early-arriving facts separately, since the need to generate a placeholder dimension key is eliminated.
 
 The general recommendation for RAP is to stick to the flat data model as much as possible, but if requirements determine that a more traditional star schema is needed, the loose dimensional model is also an option.
 
