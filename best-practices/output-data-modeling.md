@@ -14,10 +14,10 @@ The [star schema](https://www.kimballgroup.com/data-warehouse-business-intellige
 
 ### Flat Data Model
 
-The primary data model RAP is designed for is the flat data model.  The flat data model takes advantage of the colulumnar compression offered in relational databases and other large-scale data offerings \(such as Snowflake and Azure Synapse\).  A flat data model can be as performant as a traditional normalized schema, as well as use less storage through columnar compression technologies.
+The primary data model RAP is designed for is the flat data model.  The flat data model takes advantage of the colulumnar compression offered in relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse\).  A flat data model can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema through columnar compression.
 
 {% hint style="info" %}
-**NOTE**:  Flat data models should only be used for outputs going to columnar compressed tables or to a RAP Virtual Output.  Outputting to a traditional rowstore table can lead to excessive storage consumption and performance issues with writes and updates.
+**NOTE**:  Flat data models should only be used for outputs going to columnar compressed tables or to RAP Virtual Outputs.  Outputting to a traditional rowstore table can lead to excessive storage consumption and performance issues with writes and updates.
 {% endhint %}
 
 TODO - add details about what this is, show visually how this looks like
