@@ -8,7 +8,7 @@ In large-scale or complex implementations, performance issues can become a conce
 
 
 
-TODO - rewrite everything below here for RAP 2.0
+TODO - rewrite everything below here for RAP 2.0, also add something around cost optimization?
 
 ### Process History Tables
 
