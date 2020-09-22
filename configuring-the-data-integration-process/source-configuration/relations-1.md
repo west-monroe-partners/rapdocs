@@ -5,7 +5,7 @@ description: >-
   the pipeline.
 ---
 
-# Relations
+# !! Relations
 
 A Relations is a global relationship between two Sources that the user is able to define. With Relations, the user can access attributes from other Sources to enrich the original Source's data through Enrichments.
 

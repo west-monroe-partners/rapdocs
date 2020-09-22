@@ -5,7 +5,7 @@ description: >-
   information.
 ---
 
-# Metadata Model
+# !! Metadata Model
 
 TODO:  write an intro - what broad strokes of data can you get from querying data directly, benefits of being able to understand metadata model \(SSIS / Informatica PowerCenter / other traditional ETL tools have queryable metadata layer as well\)
 

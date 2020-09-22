@@ -1,4 +1,4 @@
-# Checking Logs
+# !! Checking Logs
 
 If clicking the status icon and reading the logs does not help diagnose the failure, there are two main logs to check: The **Orchestrator Log** and the **Actor Log**.
 

@@ -1,4 +1,4 @@
-# Common Errors
+# !! Common Errors
 
 This section lists some of the common errors for each phase of RAP that developers encounter. This is not an exhaustive list of errors, but it should provide some guidance to help with troubleshooting.
 

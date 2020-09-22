@@ -1,4 +1,4 @@
-# Example Daily Routine
+# !! Example Daily Routine
 
 In this section, we will detail a suggested routine for maintaining the application on a daily basis.
 

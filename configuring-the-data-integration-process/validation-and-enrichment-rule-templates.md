@@ -4,7 +4,7 @@ description: >-
   them across many Sources at once.
 ---
 
-# Templates
+# !! Templates
 
 Templates allow users to create and centrally manage re-usable code across multiple sources.
 

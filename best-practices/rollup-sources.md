@@ -2,7 +2,7 @@
 description: How to most efficiently perform pre-aggregations with RAP.
 ---
 
-# Pre-Calculating Aggregate Data
+# !! Pre-Calculating Aggregate Data
 
 In some reporting scenarios, a hard copy of aggregate calculations has to be maintained to support the reporting layer.
 

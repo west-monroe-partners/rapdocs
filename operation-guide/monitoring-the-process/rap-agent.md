@@ -1,4 +1,4 @@
-# RAP Agent
+# !! RAP Agent
 
 The RAP Agent installs on local client machines. Its purpose is to acquire files from local file storage and upload them to the RAP application. Because the RAP Agent is located on third party client machines, it is often more difficult to troubleshoot issues related to its operation. This section details managing the health of the RAP Agent and troubleshooting issues related to the RAP Agent.
 
