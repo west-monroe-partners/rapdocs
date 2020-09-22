@@ -47,7 +47,7 @@ When field names are prepended with a \[This\] such as `[This].city`, it indicat
 {% endhint %}
 
 {% hint style="info" %}
-RAP supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's](validation-and-enrichment.md) [Validation and Enrichment Rule Templates]() section.
+RAP supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's](validation-and-enrichment.md) [Validation and Enrichment Rule Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) section.
 {% endhint %}
 
 ## **Step 2: Configure Enrichment**
