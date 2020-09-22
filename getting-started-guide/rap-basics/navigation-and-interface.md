@@ -16,7 +16,7 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ![Sources Screen header and tabs](../../.gitbook/assets/rap-sources-view.png)
 
-The [Sources](../../configuring-the-data-integration-process/source-configuration/) Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub. 
+The [Sources]() Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub. 
 
 ![](../../.gitbook/assets/close-up-logical-data-flow.png)
 
@@ -32,13 +32,13 @@ The Processing screen shows the progress and outcome of all execution tasks thro
 
 ![Outputs screen](../../.gitbook/assets/rap-outputs-view.png)
 
-The [Outputs](../../configuring-the-data-integration-process/output-configuration/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
+The [Outputs]() screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
 
 ### Connections
 
 ![Connections Screen and example settings](../../.gitbook/assets/rap-connections-screen.png)
 
-The [Connections ](../../configuring-the-data-integration-process/connections-configuration.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
+The [Connections ]()screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
 
 ## Sources Details - The Logical Data Flow
 
@@ -46,7 +46,7 @@ Sources can be thought of as managing the entire logical data flow. Sources work
 
 ![Tab navigation within the Sources interface](../../.gitbook/assets/sources-header.png)
 
-Within Sources there are seven tabs: Settings, Dependencies, Relations, Enrichments, Inputs, Process, and Data View. In depth information of the Sources location is found [here](../../configuring-the-data-integration-process/source-configuration/), what is provided here is an overview of how the Logical Data Flow seen in the [How it Works](how-it-works-2.md#the-data-flow) section is applied to the Sources interface.
+Within Sources there are seven tabs: Settings, Dependencies, Relations, Enrichments, Inputs, Process, and Data View. In depth information of the Sources location is found [here](), what is provided here is an overview of how the Logical Data Flow seen in the [How it Works](how-it-works-2.md#the-data-flow) section is applied to the Sources interface.
 
 ### Ingest
 
