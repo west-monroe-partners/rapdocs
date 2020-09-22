@@ -31,7 +31,7 @@ If the Relation expression is \[This\].DOLocationID = \[Related\].LocationID, th
 
 However, if the Relation expression is \[This\].fare\_amount &gt; 4, the Relation would return multiple columns since multiple records in the fare\_amount column match the expression.
 
-* **Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichments since they are much easier to reference. Read about [Enrichments](enrichment-rule-configuration.md) for examples of Primary Relations. From the context of a particular Source, that Source can have only one primary Relation.
+* **Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichments since they are much easier to reference. Read about [Enrichments](enrichment-rule-configuration.md) for examples of Primary Relations. From the context of a particular Source, that Source can have only one primary Relation. \(TODO - update description - Primary relation flag is set by RAP by following **all** 1-M and 1-1 relation chains between the current source / related source to determine if multiple relation paths exist between the 2 sources.  If more than one chain of 1-1 / 1-M relations get us between those 2 sources, the relation is marked as non-primary.\)
 
 ![Relation Configuration Screen \(PLACEHOLDER\)](../../.gitbook/assets/relations-modal-example.jpg)
 
