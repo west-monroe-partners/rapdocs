@@ -1,12 +1,29 @@
 # ! Environment Management
 
+This section explains how environments are set up, connected, and maintained. This section is divided into two main sections depending on the deployment environment: Microsoft Azure or Amazon Web Services. Each main section contains the necessary information to go from Agent Installation through environment setup.
+
+
+
+Notes:
+
+* AWS
+  * 
+* Microsoft Azure
+  * 
+
+
+
+Environment management 
+
+
+
 TODO - Put intro stuff here \(RAP on new environments, source migration between environments\)
 
 Multiple environments, movement between, upgrading, downgrading, import / export configuration.
 
 This section explains how environments are set up, connected, and maintained.
 
-This section is divided into two main sections depending on the deployment environment: Microsoft Azure or Amazon Web Services. Each main section contains the necessary information to go from Agent Installation through environment setup.
+
 
 
 
