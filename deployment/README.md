@@ -1,4 +1,4 @@
-# ! Environment Management
+# !! Environment Management
 
 This section explains how environments are set up, connected, and maintained. This section is divided into two main sections depending on the deployment environment: Microsoft Azure or Amazon Web Services. Each main section contains the necessary information to go from Agent Installation through environment setup.
 

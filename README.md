@@ -1,4 +1,4 @@
-# Welcome to RAP!
+# Welcome to Intellio DataOps \(RAP\)!
 
 The Rapid Analytics Platform \(RAP\) is a data integration and warehouse automation service.  By minimizing complexity of data architecture, ​RAP enables lean and agile analytical data processing at scale.   
 

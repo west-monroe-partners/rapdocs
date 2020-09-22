@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to RAP!](README.md)
+* [Welcome to Intellio DataOps \(RAP\)!](README.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [RAP Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/how-it-works-2.md)
@@ -12,7 +12,7 @@
     * [Source](getting-started-guide/data-integration-example/source.md)
     * [Validation and Enrichment](getting-started-guide/data-integration-example/validation-and-enrichment.md)
     * [Output](getting-started-guide/data-integration-example/output.md)
-* [! Logical Architecture](logical-architecture-overview/README.md)
+* [!! Logical Architecture](logical-architecture-overview/README.md)
   * [RAP Agent](logical-architecture-overview/rap-agent.md)
   * [!! User Interface](logical-architecture-overview/user-interface.md)
   * [!! Data Storage](logical-architecture-overview/data-processing.md)
@@ -36,7 +36,7 @@
     * [Resource Sizing](introduction-to-rap/rap-infrastructure-components/resource-sizing.md)
   * [!! Metadata Model](introduction-to-rap/metadata-model.md)
   * [!! Data Storage](introduction-to-rap/storage-data-model.md)
-* [! Environment Management](deployment/README.md)
+* [!! Environment Management](deployment/README.md)
   * [!! Installing a New RAP Agent \(On Premise\)](deployment/installing-a-new-rap-agent.md)
   * [!! Deployment to Amazon Web Services](deployment/deployment-to-amazon-web-services.md)
   * [!! Installing a New RAP Agent \(ECS\)](deployment/installing-a-new-rap-agent-ecs.md)

@@ -4,8 +4,6 @@ description: Getting a new Agent installed to connect to a new on-premise data s
 
 # !! Installing a New RAP Agent \(On Premise\)
 
-RAP Agents are a means of transporting data from a source data source to a location RAP can manage \(either in AWS or Microsoft Azure\). Agents are managed through the RAP interface once installed. This section walks through the process of installing a new RAP agent on premise \(on a client's machine\).
-
 TODO - write an intro \(all data ingested through RAP flows through a RAP Agent, one is installed out of the box in the cloud environment, additional required on-premise\)
 
 ## Prerequisites
@@ -14,7 +12,7 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
 
 * The machine or VM must be running one of the following 2 operating systems:
   * Windows 7 / Server 2008 R2 or later
-  * Red Hat 6 or later \(or compatible distribution\) \(Current Linux distribution is deprecated.\)
+  * Red Hat 6 or later \(or compatible distribution\)
 * The latest version of the Amazon Corretto JDK 8 should preferably be installed on the destination machine.  Alternatively, if Oracle JDK 8 is already installed, that will be sufficient as well.  If neither is installed on the destination machine, navigate to the site linked [here](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html) and download and install the Corretto JDK that is compatible with the target architecture and OS of the machine that the Agent will be installed on.
 * Since the RAP Agent initiates all its own connections, outbound connections to various cloud resources on the public Internet are required.  If a firewall is limiting outbound internet access, the following resources should be allowed through the firewall \(exact domain names will vary by environment\).  Note that these are all secure endpoints, so if SSL inspection is enabled at the firewall, special consideration is needed to ensure that the certificate presented to the machine hosting the RAP Agent is trusted.
   * AWS S3 / Azure Data Lake Storage via HTTPS \(port 443\) for the following locations
@@ -26,13 +24,9 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
 * The user account intended for RAP on source databases need to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the RAP user and only SQL Server authentication can be used.
   * Mixed-mode authentication can still be enabled to allow for integrated authentication for non-RAP related loads.
 
-## !! Setting up a New Agent Configuration
+## Setting up a New Agent Configuration
 
 Prior to installing an Agent, a new record must be added to the meta.agent table in the Postgres Metastore. The record will denote the Agent code and the contain
-
-!! Insert from video.
-
-
 
 NOTE: In a future release, this process will be able to be done strictly from the UI
 
@@ -54,13 +48,9 @@ System Requirements
 
 Installation
 
-!! Include video recording steps as well.
 
 
+## !! Installing the RAP Agent \(Linux\)
 
-## Installing the RAP Agent \(Linux\)
-
-{% hint style="info" %}
-Historically there has existed a RAP Agent for Linux, however, due to lack of demand the Linux RAP Agent has been deprecated. Historical Linux RAP Installation can be found [here](https://westmonroepartners1.sharepoint.com/sites/DDPA/0063900000stpZHAAY/Docs/Forms/AllItems.aspx?FolderCTID=0x0120001A877AC2A8D0754C894745F7F2227E37&id=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation%2FRAP%20Agent%20Install%20Guide%20for%20Red%20Hat%206%2E10%2Epdf&parent=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation), but speak with your RAP contact before selling or promising a Linux RAP Agent.
-{% endhint %}
+TODO - copy/paste from existing [Word doc](https://westmonroepartners1.sharepoint.com/sites/DDPA/0063900000stpZHAAY/Docs/Forms/AllItems.aspx?FolderCTID=0x0120001A877AC2A8D0754C894745F7F2227E37&id=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation%2FRAP%20Agent%20Install%20Guide%20for%20Red%20Hat%206%2E10%2Epdf&parent=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation)?
 
