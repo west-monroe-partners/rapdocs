@@ -8,9 +8,9 @@ description: This example acts as a Hello World tutorial for RAP
 
 This simple introductory example looks at one specific use of RAP. 
 
-For more detailed configuration instructions, please refer to the [Configuration Guide](../../configuring-the-data-integration-process/). 
+For more detailed configuration instructions, please refer to the [Configuration Guide](). 
 
-For operation documentation, refer to the [Operation Guide](../../operation-guide/). 
+For operation documentation, refer to the [Operation Guide](). 
 
 This Data Integration Example progresses in five parts:
 
