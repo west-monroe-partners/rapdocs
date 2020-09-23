@@ -36,6 +36,8 @@ In the top bar, users can type in PostgreSQL queries to filter records. The stat
 
 Users can select columns by clicking Select Columns. Users can add Descriptions, see Data Types, and check off which columns appear in the View Data tab.
 
+TODO - new windows screenshot, what "Retain selection" switch does \(retains currently selected fields in the data viewer, adds new fields selected to view\)
+
 ![Select Columns](../../.gitbook/assets/image%20%28135%29.png)
 
 ### **Sorting Data**
