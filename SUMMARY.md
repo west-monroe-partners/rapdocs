@@ -38,6 +38,7 @@
   * [!! Data Storage](introduction-to-rap/storage-data-model.md)
 * [!! Environment Management](deployment/README.md)
   * [!! Installing a New RAP Agent \(On Premise\)](deployment/installing-a-new-rap-agent.md)
+  * [!! Connecting a RAP Agent to a Source](deployment/connecting-a-rap-agent-to-a-source.md)
   * [!! Deployment to a New Environment](deployment/code-deployment.md)
   * [!! Deployment to Amazon Web Services](deployment/deployment-to-amazon-web-services/README.md)
     * [!! Installing a New RAP Agent \(ECS\)](deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
