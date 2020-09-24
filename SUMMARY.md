@@ -84,6 +84,7 @@
   * [How it Works \(RAP 1.0\)](historical-reference/components-and-concepts.md)
 * [Changelog](changelog/README.md)
   * [2.0](changelog/2.0/README.md)
+    * [2.0.6](changelog/2.0/2.0.6.md)
     * [2.0.5](changelog/2.0/2.0.5.md)
     * [2.0.4](changelog/2.0/2.0.4.md)
     * [2.0.3](changelog/2.0/2.0.3.md)
