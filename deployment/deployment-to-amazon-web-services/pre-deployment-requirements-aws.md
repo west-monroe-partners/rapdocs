@@ -17,9 +17,7 @@ Regardless of the above method, **the domain needs to be purchased and validated
 
 ## **Create a Docker Hub Account**
 
-!! insert
-
-[Docker Hub](https://hub.docker.com/signup)
+Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommended this is not tied to any individual employee.
 
 ## Create a Databricks Account
 
@@ -214,7 +212,7 @@ What follows is a list of parameters that tailor the AWS deployment environment.
   </tbody>
 </table>
 
+## Verify the deployment
 
-
-##  
+Once RAP is up and running, the [Data Integration Example](../../getting-started-guide/data-integration-example/) in the Getting Started Guide can be followed to verify that the full RAP stack is working correctly. 
 

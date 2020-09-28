@@ -1,8 +1,4 @@
-# !! Deployment to Amazon Web Services
+# Deployment to Amazon Web Services
 
-## !! Deploying to Amazon Web Services \(AWS\)
-
-TODO - what does client need to set up beforehand, what permissions needed for user performing deployment, what to run
-
-!! AWS Deployment Steps [link to doc](https://westmonroepartners1.sharepoint.com/:w:/r/sites/Technology/_layouts/15/Doc.aspx?sourcedoc=%7B418824AA-8266-4D46-A551-78EF8371A901%7D&file=AWS%20pre%20deployment.docx&action=default&mobileredirect=true)
+This section details the [requirements](pre-deployment-requirements-aws.md) to deploy Intellio DataOps \(RAP\) onto the AWS ecosystem, an overview of how to use the [deployment services](using-the-deployment-service-in-ecs.md) \(UI in AWS\), and also how to install a [RAP Agent onto AWS](installing-a-new-rap-agent-ecs.md) if required.
 

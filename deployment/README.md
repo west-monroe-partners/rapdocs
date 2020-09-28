@@ -1,6 +1,6 @@
 # !! Environment Management
 
-This section explains how environments are set up, connected, and maintained. This section is divided into two main sections depending on the deployment environment: Microsoft Azure and Amazon Web Services. Each main section contains the necessary information to go from Agent Installation through environment setup.
+This section explains how environments are set up, connected, and maintained. This section is divided into two main sections depending on the deployment environment: [Microsoft Azure](deployment-to-microsoft-azure/) and [Amazon Web Services](deployment-to-amazon-web-services/). Each main section contains the necessary information to go from Agent Installation through environment setup.
 
 Also included in this section is the installation requirements of the RAP agent and best practices for environment management.
 
