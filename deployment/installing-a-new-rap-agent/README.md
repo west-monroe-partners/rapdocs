@@ -30,7 +30,7 @@ Prior to installing the RAP Agent, the following requirements must be met.  Plea
 
 !! Note: this has the parameters "Region" and "s3LandingPath" is there something different for the Microsoft Azure agent?
 
-![New Agent Creation.](../.gitbook/assets/rap-agent-select-new.png)
+![New Agent Creation.](../../.gitbook/assets/rap-agent-select-new.png)
 
 In the RAP UI, from the left hand menu navigate to Agents, and click New. From this settings interface input the required inputs as seen below. Additional parameters exist for more detailed installations. Note that you will need information about the machine the agent will be hosted on.
 
@@ -56,21 +56,21 @@ As a client, go to the AWS S3 console for the specific environment on which RAP 
 
 Identify the appropriate version of the .msi \(installer\) by hovering over the navigation menu in the upper left hand corner of the RAP UI.
 
-![Location of RAP version to identify installation version.](../.gitbook/assets/rap-agent-version-finding.png)
+![Location of RAP version to identify installation version.](../../.gitbook/assets/rap-agent-version-finding.png)
 
 Download the appropriate version of the msi installer. Once downloaded and opened, the computer will be prompted with typical installation commands, such as if the msi is allowed to make changes to the computer and the installation helper popup. Answer the appropriate prompts.
 
-![Selection of RAP Agent installation screens.](../.gitbook/assets/rap-agent-installer-screens.png)
+![Selection of RAP Agent installation screens.](../../.gitbook/assets/rap-agent-installer-screens.png)
 
 A specific **RAP Agent Code** will be required, and this is the **RAP Agent Name** from the RAP UI. Other inputs will be prompted and can be tailored.
 
 The final step of the installation pertains to providing the appropriate security credentials to the RAP Agent and the RAP UI. On the client computer, navigate to the RAP UI and in the RAP IU navigate to the Agents screen and click on the cloud icon under the Config column \(and for the appropriate Agent row\). Clicking on this icon will download the configuration document.
 
-![Config location](../.gitbook/assets/rap-agent-configuration.png)
+![Config location](../../.gitbook/assets/rap-agent-configuration.png)
 
 Locate the file which is binary encrypted and contains the Auth0 credentials. The downloaded file should be named "agent-congic.bin". Move this file to the bin folder within the RAP Agent: C:/Program Files \(x86\)/Rapid Analytics Platform/bin
 
-![How the bin folder should look on client machine.](../.gitbook/assets/rap-agent-how-the-bin-files-should-look.png)
+![How the bin folder should look on client machine.](../../.gitbook/assets/rap-agent-how-the-bin-files-should-look.png)
 
 This should complete the setup of the RAP Agent on the client machine. All further configuration should be able to be completed via the RAP UI, such as locating file paths or database/data warehouse credentials.
 

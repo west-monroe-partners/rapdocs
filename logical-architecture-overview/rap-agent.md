@@ -13,7 +13,7 @@ The RAP Agent was created to solve the common problems related to data ingestion
 The RAP Agent is a small piece of software that requires read only access to the source data and a 443 outbound internet connection. The setup allows for the data upload to bypass client intake firewalls and establishes a secure, encrypted connection between the uploaded source and the upload location.
 
 {% hint style="info" %}
-At the beginning of a project an installation guide will be provided as well as documentation as how to download, install, and set up the specifics of the RAP Agent.
+At the beginning of a project an installation guide will be provided as well as documentation as how to download, install, and set up the specifics of the RAP Agent. Read the overview [here](../deployment/installing-a-new-rap-agent/).
 {% endhint %}
 
 The RAP Agent works as a light weight service. On the client side the RAP Agent turns on when the service is active and shuts down when not active. The service runs the appropriate queries against the source database and passes this to the upload location.
