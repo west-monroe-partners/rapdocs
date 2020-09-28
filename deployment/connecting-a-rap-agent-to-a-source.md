@@ -1,4 +1,4 @@
-# !! Connecting a RAP Agent to a RAP Source
+# !! Connecting a RAP Agent to a Source
 
 Once a RAP Agent is installed on a client machine, what follows here is how to appropriately link the data on the client machine to the RAP UI.
 
