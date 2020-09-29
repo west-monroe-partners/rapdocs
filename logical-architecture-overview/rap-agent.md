@@ -34,3 +34,7 @@ The most common errors related to the RAP Agent are connectivity issues such as 
 
 Due to client specific requirements, legal obligations, or licenses there may be a need to create a custom RAP Agent plugin. Though this is not ideal, our developers have a methodology to run a service on a service as a way to maintain the necessary requirements for the source data and the RAP Agent service. Contact your RAP Lead for specifics.
 
+{% hint style="info" %}
+Additional details about the RAP Agent can be found in the Environment Management sections, including [installation protocol](../deployment/installing-a-new-rap-agent/).
+{% endhint %}
+
