@@ -37,7 +37,9 @@ Refresh represents the merge against the HUB table and the creation of the "one 
 
 Recalculate modifies the HUB table, and applies business logic that requires the entire table: cross row calculations, windowing, ranking. !! Parameter Keep current. When &lt;&gt; is defined as "keep current" the hub table applies the appropriate calculation to the HUB table at this step.
 
-!! Note that calculations occurring at this step are more resource intensive.
+{% hint style="info" %}
+As you move along the data processing steps the resources to manipulate the data become much more intense. As much as possible utilize the Enrich stage and steps earlier in the data processing flow.
+{% endhint %}
 
 ### Output
 
