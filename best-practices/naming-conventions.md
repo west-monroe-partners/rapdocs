@@ -46,6 +46,10 @@ Validation and Enrichment rules \(both within sources and templates\) should be 
 
 As an example, to add a field called “customer\_full\_name” to an ERP source, the enrichment rule should be named “Enrichment – ERP – Customer Full Name”.
 
+### Relation Names
+
+TODO - come up with something
+
 ### Output Names
 
 Outputs should be named according to the following convention:
