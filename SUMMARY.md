@@ -14,7 +14,7 @@
     * [Output](getting-started-guide/data-integration-example/output.md)
 * [!! Logical Architecture](logical-architecture-overview/README.md)
   * [RAP Agent](logical-architecture-overview/rap-agent.md)
-  * [!! User Interface](logical-architecture-overview/user-interface.md)
+  * [User Interface](logical-architecture-overview/user-interface.md)
   * [!! Data Storage](logical-architecture-overview/data-processing.md)
   * [!! Data Processing Engine](logical-architecture-overview/data-processing-engine/README.md)
     * [!! Data Processing Steps](logical-architecture-overview/data-processing-engine/data-processing-1.md)

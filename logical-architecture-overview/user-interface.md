@@ -1,8 +1,8 @@
 ---
-description: '!! Merge top text with lower down text.'
+description: The UX of the Intellio DataOps (RAP) experience.
 ---
 
-# !! User Interface
+# User Interface
 
 ## Overview
 
