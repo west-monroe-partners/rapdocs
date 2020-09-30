@@ -1,6 +1,6 @@
-# !! Data Processing Steps
+# Data Processing Steps
 
-![](../../.gitbook/assets/2.0-process-steps.jpg)
+![The logical data flow with data locations underneath. ](../../.gitbook/assets/2.0-process-steps.jpg)
 
 Data processing in RAP consists of 9 possible steps. During each step is can be helpful to think of a columns being appended to a table. During each step the data is modified with additional columns which represent id's, keys, updates, and metadata. Especially as business logic is applied in CDC through refresh.
 
@@ -25,17 +25,17 @@ With all of the data in same Avro format, Change Data Capture is the first step 
 
 ### Enrich
 
-Enrich executes business rules, calculations, and transformations against the data. Enrich is the primary step for these transformations. The scope for the calculations in this step are at the row level. Custom columns are created per entry. No windowing or aggregation occurs at this step.
+Enrich executes business rules, calculations, and transformations against the data. Enrich is the primary step for these transformations. The scope for the calculations in this step are at the row level. Custom columns are created per entry. No windowing or aggregation occurs at this step. There is no change in the grain of the data at this step.
 
-### Profile
+When thinking of the data processing steps in terms of the components and subcomponents of a SQL statement, Enrich accounts for actions such as such as a single SELECT column \(Enrichment Rule\), or a single WHERE clause \(Validation Rule\)​.
 
 ### Refresh / Upsert
 
-Refresh represents the merge against the HUB table and the creation of the "one source of truth" dataset. Only one HUB table exists per source.
+Refresh represents the merge against the HUB table and the creation of the "one source of truth" dataset. Only one HUB table exists per source. Depending on the refresh type, information pertaining to history and tracking changes may also be captured.
 
 ### Recalculate
 
-Recalculate modifies the HUB table, and applies business logic that requires the entire table: cross row calculations, windowing, ranking. !! Parameter Keep current. When &lt;&gt; is defined as "keep current" the hub table applies the appropriate calculation to the HUB table at this step.
+Recalculate modifies the HUB table, and applies business logic that requires the entire table: cross row calculations, windowing, ranking. In the Sources setting there is a parameter that when defined as "keep current" will directly affect the Recalculate step. When "keep current" is checked every time new data is ingested and processed through the logical data flow, the Hub table at the this step of recalculate will activate and process business logic relevant to the entire Hub table. Recalculations modify the Hub table in place, as processing that require the entire Hub table would generate the same results regardless if run multiple times.
 
 {% hint style="info" %}
 As you move along the data processing steps the resources to manipulate the data become much more intense. As much as possible utilize the Enrich stage and steps earlier in the data processing flow.
@@ -43,15 +43,15 @@ As you move along the data processing steps the resources to manipulate the data
 
 ### Output
 
-Output is typically just the mapping of sources to a destination. RAP by default persists logic all the way to the output warehouse.  
+Output is the mapping of a source to a destination. Intellio DataOps \(RAP\) by default persists logic all the way to the outputted warehouse. Output maps Hub Table columns to an output file, and then sends the Output file to the appropriate destination. Data processing up until this point does not adjust the grain of the data, so at this point aggregations, unpivots and relational database logic can occurs
 
-RAP does not allow the user to adjust the grain of the data, so at this point aggregations, unpivots and relational database logic occurs. 
+Historically RAP could only output data which was contained in the ingestion location, but in RAP 2.0 and the addition of Relations, Output now includes the data in the ingestion source as well as related data.
 
-### !! Post-Processing
+### Post-Processing / Synopsis
 
-Post-Processing is a performance step.
+The Post-Processing step, sometimes referred to as the Synopsis step, is a performance step. This is the step when aggregate calculations are conducted on the output. This step is the most resource expensive. At this step aggregation across Sources can occur. The reason for Post-Processing / Synopsis is to provide a rollup to third party \(typically\) BI tools such as Looker, Tableau. This step could occur on the BI tool side, but to ensure validity of the data it is recommended to occur on the Intellio DataOps side.
 
-
-
-!! Expensive Calculation. As you move through the logical data flow the resources become more intensive to utilize.
+{% hint style="info" %}
+Due to the intensive resource utilization in the Post-Processing step, there may be instances where Output could be redirected to an Ingestion location and the data is processed through RAP a second time to reduce resource costs.
+{% endhint %}
 
