@@ -16,7 +16,7 @@
   * [RAP Agent](logical-architecture-overview/rap-agent.md)
   * [User Interface](logical-architecture-overview/user-interface.md)
   * [!! Data Storage](logical-architecture-overview/data-processing.md)
-  * [!! Data Processing Engine](logical-architecture-overview/data-processing-engine/README.md)
+  * [Data Processing Engine](logical-architecture-overview/data-processing-engine/README.md)
     * [Data Processing Steps](logical-architecture-overview/data-processing-engine/data-processing-1.md)
 * [!! Physical Architecture](introduction-to-rap/README.md)
   * [!! Infrastructure Components](introduction-to-rap/rap-infrastructure-components/README.md)
