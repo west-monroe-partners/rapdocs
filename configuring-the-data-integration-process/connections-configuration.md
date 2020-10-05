@@ -16,15 +16,15 @@ Connections, once configured, can be used for both Sources and Outputs. This all
 
 The Connections screen allows users to search, edit and filter all previously created Connections, as well as create new Connections. By default, only Active Connections are listed. The **Active Only** toggle changes this setting. Note that only Active Connections are operable.
 
-![Connections - Active Only](../.gitbook/assets/active-only-connections.png)
+![Connections - Active Only](../.gitbook/assets/rap-connections-active-only.png)
 
 To edit a Connection, select the Connection directly. This opens the Edit Connection screen.
 
-![Connections - Select a Connection to Edit](../.gitbook/assets/select-a-connection-to-edit.png)
+![Connections - Select a Connection to Edit](../.gitbook/assets/rap-connections-click-in.png)
 
 To add a Connection, select **New Connection**. This opens the Edit Connection screen for a new Connection.
 
-![Connections - Create a New Connection](../.gitbook/assets/create-a-new-connection%20%281%29.png)
+![Connections - Create a New Connection](../.gitbook/assets/rap-connections-new-connection.png)
 
 ## Edit Connection Screen
 
