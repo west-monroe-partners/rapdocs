@@ -30,9 +30,9 @@ To add a Connection, select **New Connection**. This opens the Edit Connection s
 
 Editing a Connection and creating a new Connection leads to the same screen. Users can edit different parameters to configure a Connection.
 
-![Edit Connection](../.gitbook/assets/image%20%28158%29.png)
+![](../.gitbook/assets/rap-connects-edit-screen.png)
 
-## Parameters
+## !! Parameters
 
 * **Name**: A unique name for the connection. This will be displayed on the Connections screen when browsing Connections. To ensure Connections are organized easily searchable, follow the [Naming Conventions](connections-configuration.md).
 * **Description**: The description of the Connection.
