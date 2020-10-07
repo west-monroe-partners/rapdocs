@@ -49,6 +49,7 @@
   * [!! Environment Migration Process](deployment/migrations-across-environments.md)
   * [Import/Export](deployment/import-export.md)
 * [! Configuration Guide](configuring-the-data-integration-process/README.md)
+  * [Agents](configuring-the-data-integration-process/agents.md)
   * [Connections](configuring-the-data-integration-process/connections-configuration.md)
   * [!! Sources](configuring-the-data-integration-process/source-configuration/README.md)
     * [!! Details](configuring-the-data-integration-process/source-configuration/source-details.md)
