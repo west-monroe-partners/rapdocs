@@ -6,10 +6,6 @@ description: >-
 
 # !! Templates
 
-{% hint style="info" %}
-Coming soon.
-{% endhint %}
-
 Templates allow users to create and centrally manage re-usable code across multiple sources.
 
 ## Templates Screen
