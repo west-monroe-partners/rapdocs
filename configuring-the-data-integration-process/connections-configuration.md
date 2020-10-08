@@ -32,42 +32,34 @@ Editing a Connection and creating a new Connection leads to the same screen. Use
 
 ![](../.gitbook/assets/rap-connects-edit-screen.png)
 
-## !! Parameters
+### Connections Parameters
+
+What follower here are an enumeration of the parameters used to set up and customize connections. The  
 
 * **Name**: A unique name for the connection. This will be displayed on the Connections screen when browsing Connections. To ensure Connections are organized easily searchable, follow the [Naming Conventions](connections-configuration.md).
 * **Description**: The description of the Connection.
 * **Connection Type**: There are 3 options for Connection Type: Table, SFTP and File.
+  * **Table** is a connection to an external database.
+  * **SFTP** \(SSH File Transfer protocol\) is a file protocol used to access files over an encrypted SSH transport.
+  * **File** is used to access files and can be local or in Amazon S3 or Microsoft Azure.
 
-{% tabs %}
-{% tab title="Table" %}
-**Table** is a connection to an external database.
-{% endtab %}
+### Connection Type Specific Parameters
 
-{% tab title="SFTP" %}
-**SFTP** \(SSH File Transfer Protocol\) is a file protocol used to access files over an encrypted SSH transport.
-{% endtab %}
+Based on the Connection Type Intellio DataOps \(RAP\) will dynamically adjust to require necessary parameters. For example a File connection type will require storage technology to be specified where as SFTP will require parameters to be inputted into the parameter table found at the bottom of the Setting UI.
 
-{% tab title="File" %}
-**File** is used to access files and can be local or in Amazon S3.
-{% endtab %}
-{% endtabs %}
+**File** requires specification of the **Storage Technology** \(Amazon S3, Azure Data Lake, File System\). Based upon the choice you will need to input the **File Path** \(Amazon S3, File System\), or the Microsoft Azure Account permission parameters \(Account Name, Key, Container\).
 
-### Table Connection Type
+**Table Connection** requires the **Driver** parameter. Currently supported database connections are Access, Athena, Elasticsearch, MySQL, Oracle, Postgres, Quickbooks, SAP HANA, SQL Server, Snowflake.
 
-There are currently seven different database connections \(available under the 'Driver' dropdown\).
+**SFTP** connection requires additional parameters that are found in the Parameter Table at the bottom of the Settings UI, elaborated on below.
 
-* Oracle
-* Postgres
-* Quickbooks
-* Snowflake
-* SQL Server
-* SAP HANA
+## Connections Parameter Table
 
-## Parameters
+Based upon the connection type, driver and other reasons there may be need to customize connection parameters. These parameters appear in the parameter table and can be searched. Common parameters are listed below.
 
 ![Location of the Parameters Table](../.gitbook/assets/rap-connections-parameter-table-location.png)
 
-Based upon the connection type, driver and other reasons there may be need to customize connection parameters. These parameters appear in the parameter table and can be searched. Common parameters are listed below.
+
 
 ### Common Parameters
 

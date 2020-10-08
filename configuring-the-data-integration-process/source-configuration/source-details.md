@@ -6,13 +6,13 @@ description: >-
 
 # !! Details
 
-## Details Tab
+## Settings Tab
 
-On the Edit Source Screen, users can see the various components that make up a Source, including tabs for Source Details, Dependencies, Validations, Enrichments, Inputs, and a view of the Source data.
+When creating a new Source, only the Settings tab is available. Users configure both the Input and Staging processing steps for a Source via the Source Details Tab. On the Edit Settings Screen, users can see the various components that make up a Source, including tabs for Source Settings, Dependencies, Relations, Rules, Inputs, and a view of the Source data \(Date View\).
 
-When creating a new Source, only the Source Details tab is available. Users configure both the Input and Staging processing steps for a Source via the Source Details Tab.
+After the Source is created you can access the Settings tab at any time by clicking on the Settings tab in the upper left.
 
-![Source Details Tab](../../.gitbook/assets/edit-source-screen%20%281%29.png)
+![Source Details Tab](../../.gitbook/assets/rap-source-details.png)
 
 ## Initial Parameters
 
@@ -26,7 +26,7 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 * **Agent\*:** The [Agent ](../../operation-guide/monitoring-the-process/rap-agent.md)that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
 * **Default:** Sets the previously selected Agent to be the default Agent when creating any new Sources.
 
-### Data Refresh Types
+### !! Data Refresh Types
 
 A Data Refresh Type specifies how RAP should handle processing and refreshing the data. The five types are described below. The parameters available will dynamically change depending on the user's selection.
 
@@ -64,12 +64,16 @@ RAP supports 2 types of files: **Delimited** and **Fixed Width**. Parameter sele
 * Data in a **Fixed Width** text file consists of records with constant character length and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
 {% endtab %}
 
-{% tab title="Table" %}
-A **Table** is data that exists in a database. Upon selecting this option, a parameter will appear allowing the user to query the database using SQL.
+{% tab title="Loopback" %}
+
 {% endtab %}
 
 {% tab title="SFTP" %}
 **SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
+{% endtab %}
+
+{% tab title="Table" %}
+A **Table** is data that exists in a database. Upon selecting this option, a parameter will appear allowing the user to query the database using SQL.
 {% endtab %}
 {% endtabs %}
 
