@@ -19,6 +19,7 @@ Prior to installing the Intellio Agent, the following requirements must be met. 
       * Landing area
       * Intellio Agent update area
     * Intellio API endpoint via HTTPS \(port 443\)
+      * Try to navigate to https://api.&lt;your-website-url&gt;/health to check connectivity.
     * Auth0 via HTTPS \(port 443\)
   *  Note that these are all secure endpoints, so if SSL inspection is enabled at the firewall, special consideration is needed to ensure that the certificate presented to the machine hosting the Intellio Agent is trusted.
 * File and database sources that will be accessed through the Intellio Agent must be accessible from the machine the Intellio Agent is being installed on.  
