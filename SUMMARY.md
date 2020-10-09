@@ -15,7 +15,7 @@
 * [Logical Architecture](logical-architecture-overview/README.md)
   * [RAP Agent](logical-architecture-overview/rap-agent.md)
 * [Environment Management](deployment/README.md)
-  * [Installing a New RAP Agent \(On Premise\)](deployment/installing-a-new-rap-agent.md)
+  * [Installing a New Intellio Agent \(On Premise\)](deployment/installing-a-new-rap-agent.md)
   * [Using the Deployment Service in AWS](deployment/using-the-deployment-service-in-ecs.md)
   * [Import/Export](deployment/import-export.md)
 * [Historical Reference](historical-reference/README.md)
