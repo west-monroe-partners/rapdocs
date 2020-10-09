@@ -53,7 +53,7 @@ Users should then navigate to the system environment variables on the machine th
 
 After doing this, open the RAP UI and navigate to the Agent page. Click the New button in the top right corner. On the screen that appears, enter the value you used for the agentCode as the Name and Code and fill out the description as you see fit. The region, machine GUID, and S3LandingPath parameters should be populated with a value of _N/A._ Click save in the bottom right corner.
 
-After doing this, the Microsoft Installer that was sent to you by WMP can be run on the machine where the agent will run. Simply double click the installer to launch it. Click next and accept the terms of the agreement. Next, enter the same agentCode value into the first box that appears. The 2nd box can be used to set the maximum memory usage of the agent. We recommend keeping the defaulted value to ensure application stability. The configuration key can be left blank. 
+After doing this, the Microsoft Installer that was sent to you by WMP can be run on the machine where the agent will run. Simple double click the installer to launch it. Click next and accept the terms of the agreement. Next, enter the same agentCode value into the first box that appears. The 2nd box can be used to set the maximum memory usage of the agent. We recommend keeping the defaulted value to ensure application stability. The configuration key can be left blank. 
 
 Click Next, Click Typical, and Click Install. The agent will install and then press Finish. The install is now complete. 
 
