@@ -12,6 +12,8 @@ TODO - Document Data Lake Raw layer \(Avro files\), how those are organized
 
 TODO - Document Data Lake Transform layer \(Avro and Parquet files\) and naming convention
 
+TODO - IAM roles on buckets / containers, internal inbox, what role permissions are needed to access these areas
+
 ### Data Hub
 
 TODO - Document Hive tables created and naming convention
