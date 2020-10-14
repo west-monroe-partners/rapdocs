@@ -4,7 +4,7 @@ description: >-
   the Source including input types and file types.
 ---
 
-# !! Details
+# Details
 
 ## Settings Tab
 
@@ -26,7 +26,7 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 * **Agent\*:** The [Agent ](../../operation-guide/monitoring-the-process/rap-agent.md)that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
 * **Default:** Sets the previously selected Agent to be the default Agent when creating any new Sources.
 
-### !! Data Refresh Types
+### Data Refresh Types
 
 A Data Refresh Type specifies how RAP should handle processing and refreshing the data. The five types are described below. The parameters available will dynamically change depending on the user's selection.
 
@@ -77,7 +77,7 @@ A **Table** is data that exists in a database. Upon selecting this option, a par
 {% endtab %}
 {% endtabs %}
 
-### Input
+### Additional Inputs
 
 | Filter Appears Under | Parameter | Default Value | Description | Advanced |
 | :--- | :--- | :--- | :--- | :--- |
