@@ -104,15 +104,15 @@ Intervals shift the **dependent** extract date, not the currently selected sourc
 
 The Dependency tab allows users to see all previously created Dependencies, as well as search, edit and filter them. By default, only Active Dependencies are listed. The **Active Only** toggle changes this setting.
 
-![Source Dependencies - Active Only](../../.gitbook/assets/image%20%28231%29.png)
+![Source Dependencies - Active Only](../../.gitbook/assets/rap-dependencies-active-only.png)
 
 To edit a Dependency, select the Dependency directly. This opens the Edit Dependency modal.
 
-![Select a Dependency to Edit](../../.gitbook/assets/image%20%28151%29.png)
+![Select a Dependency to Edit](../../.gitbook/assets/rap-dependencies-select.png)
 
 To add a Dependency, select **New Dependency**. This opens the Edit Dependency modal for a new Dependency.
 
-![Source Dependencies - New Dependency](../../.gitbook/assets/image%20%2842%29.png)
+![Select a Dependency to Edit](../../.gitbook/assets/rap-dependencies-new.png)
 
 ## Edit Dependency Modal
 
