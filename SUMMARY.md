@@ -65,7 +65,7 @@
     * [!! Output Mapping](configuring-the-data-integration-process/output-configuration/output-mapping.md)
     * [!! Manual Output](configuring-the-data-integration-process/output-configuration/manual-output.md)
     * [!! Output History](configuring-the-data-integration-process/output-configuration/output-history.md)
-  * [Common Problems](configuring-the-data-integration-process/common-problems.md)
+  * [!! Common Problems](configuring-the-data-integration-process/common-problems.md)
 * [!! Performance Tuning](performance-tuning.md)
 * [!! Implementation Best Practices](best-practices/README.md)
   * [!! Onboarding New Sources](best-practices/onboarding-sources.md)
