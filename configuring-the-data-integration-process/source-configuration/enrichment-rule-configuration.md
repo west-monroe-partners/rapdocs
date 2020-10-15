@@ -1,7 +1,7 @@
 ---
 description: >-
-  Enrichment Rules allow RAP to modify and transform data as it is brought in.
-  Each enrichment rule creates a new column.
+  Enrichment and Validation Rules allow RAP to modify and transform data as it
+  is brought in. Each enrichment rule creates a new column.
 ---
 
 # !! Rules
