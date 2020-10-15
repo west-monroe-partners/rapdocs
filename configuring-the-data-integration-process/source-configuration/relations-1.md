@@ -13,7 +13,7 @@ A Relations is a global relationship between two Sources that the user is able t
 
 To create a Relation, select a Source from the Sources screen, select the Relations tab, and click "New Relation" in the top-right corner of the screen.
 
-![](../../.gitbook/assets/create-a-relation%20%281%29.jpg)
+![Create new Relation](../../.gitbook/assets/rap-relations-new.png)
 
 Relations have a few crucial properties:
 
@@ -29,11 +29,20 @@ Consider the Source data below. The first image is the first 10 records of taxi 
 
 If the Relation expression is \[This\].DOLocationID = \[Related\].LocationID, the Relation would return only one record since LocationID in the related Source is a Key column with unique values.
 
-However, if the Relation expression is \[This\].fare\_amount &gt; 4, the Relation would return multiple columns since multiple records in the fare\_amount column match the expression.
+However, if the Relation expression is \[This\].fare\_amount &gt; 4, the Relation would return multiple rows since multiple records in the fare\_amount column match the expression.
 
-* **Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichments since they are much easier to reference. Read about [Enrichments](enrichment-rule-configuration.md) for examples of Primary Relations. From the context of a particular Source, that Source can have only one primary Relation. \(TODO - update description - Primary relation flag determines if a reference across that relation can be automatically resolved without defining the relation in an output mapping or enrichment.  It is set automatically by RAP by following **all** 1-M and 1-1 relation chains between the current source / related source to determine if multiple relation paths exist between the 2 sources.  If more than one chain of 1-1 / 1-M relations get us between those 2 sources, the relation is marked as non-primary.\)
+* **Relation Name**: The unique name for a relation.
+* **Relation Description**: Additional information to define the Relation.
+* **Related Source**: The Source by which the current "This" source will be able to reference additional variables.
+* **Boolean Expression**: An expression which will evaluate to TRUE by means of utilizing Spark SQL. 
+* **!! Primary Flag:** Specifies whether the Relation is a primary Relation. This property is intended for the Relation that will be referenced the most when configuring Enrichments since they are much easier to reference. Read about [Enrichments](enrichment-rule-configuration.md) for examples of Primary Relations. From the context of a particular Source, that Source can have only one primary Relation. \(TODO - update description - Primary relation flag determines if a reference across that relation can be automatically resolved without defining the relation in an output mapping or enrichment.  It is set automatically by RAP by following **all** 1-M and 1-1 relation chains between the current source / related source to determine if multiple relation paths exist between the 2 sources.  If more than one chain of 1-1 / 1-M relations get us between those 2 sources, the relation is marked as non-primary.\)
+* **Active Flag**: Indicator of if the Relation is life.
 
-![Relation Configuration Screen \(PLACEHOLDER\)](../../.gitbook/assets/relations-modal-example.jpg)
+![](../../.gitbook/assets/rap-relations-details-screen.png)
 
 Click "Save" to finish creating the Relation.
+
+{% hint style="info" %}
+Across the Intellio DataOps \(RAP\) platform, a grey \(un-clickable\) "Save" button indicates there is an error with the parameters. Typically this error is within an expression field. Double check errors and expressions if you are unable to "Save" your work.
+{% endhint %}
 
