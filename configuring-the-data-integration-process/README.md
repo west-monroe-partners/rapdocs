@@ -14,5 +14,5 @@ The audience of this guide is intended for data engineers, data scientists, and 
 
 ### Common Problems
 
-The Intellio DataOps \(RAP\) user interface provides definitions of the input parameters. There definitions and parameters are listed in the configuration guide, but  also included is a [Common Problems](common-problems.md) section with the purpose to route appropriate problems to the parameters and configuration that will solve these problems.
+The Intellio DataOps \(RAP\) user interface provides definitions of the input parameters.  Definitions and parameters are listed in the configuration guide, but  also included is a [Common Problems](common-problems.md) section with the purpose to route appropriate problems to the parameters and configuration that will solve these problems.
 

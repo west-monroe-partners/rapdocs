@@ -54,6 +54,8 @@ The Processing page and Source Dashboard allows users to monitor Sources and Pro
 
 Within the Process Tab, logs are kept on how data flows through the logical data flow. As seen in the above image, Process IDs 2143-2150 at the bottom of the image report on this particular source going through Ingestion, Capture Data Change \(CDC\), Enrich, Refresh, Attribution Recalculation \(Recalculate\), and Output. When errors occur the Process Tab will held identify at which stage the error occurs.
 
+
+
 ## Connections and Outputs
 
 Connections and Outputs are the means in which data is moved into and out of Intellio DataOps \(RAP\). Connections can be thought of as folder routing, and their settings determine where data is ingested from or sent out to. Outputs rely on connections to dictate where the data is sent to, but Outputs also do types of data manipulation relevant to business logic.
