@@ -1,32 +1,34 @@
 ---
 description: >-
-  Enrichment and Validation Rules allow RAP to modify and transform data as it
-  is brought in. Each enrichment rule creates a new column.
+  Enrichment and Validation Rules allow Intellio DataOps (RAP) to modify and
+  transform data as it is brought in.
 ---
 
 # !! Rules
 
-Enrichments are managed from the Source screen. Enrichments provide the logic for identifying data quality issues or adding new columns to the data. 
+Enrichments are managed from within a Source. Select the "Rules" tab to see the collection of Rules.
+
+!! Source screen. Enrichments provide the logic for identifying data quality issues or adding new columns to the data. 
 
 {% hint style="info" %}
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
 {% endhint %}
 
-## Enrichments Tab
+## Rules Tab
 
 The Enrichments tab allows users to select, edit, remove, or add a Source's Enrichments. By default, only Active Enrichments are listed. The **Active Only** toggle changes this setting.
 
-![Source Enrichments - Active Only](../../.gitbook/assets/image%20%28196%29.png)
+![Source Rules - Active Only](../../.gitbook/assets/rap-rules-active.png)
 
 To edit an Enrichment, select the Enrichment directly. This opens the Edit Enrichment modal.
 
-![Source Enrichments - Select an Enrichment to Edit](../../.gitbook/assets/image%20%28229%29.png)
+![Source Rules - Select Rule](../../.gitbook/assets/rap-select-rule.png)
 
 To create a new Enrichment, select **New Enrichment**. This opens the Enrichment modal.
 
-![Source Enrichments - New Enrichment](../../.gitbook/assets/image%20%285%29.png)
+![Source Rules - New Rule](../../.gitbook/assets/rap-new-enrichment.png)
 
-## Enrichment Parameters
+## ! Enrichment Parameters
 
 On the Enrichment modal, users can modify Enrichment parameters or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
 
