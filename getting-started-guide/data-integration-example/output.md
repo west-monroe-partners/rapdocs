@@ -77,13 +77,29 @@ With the output details configured, and a location within the connection to push
 
 ### Adding a Source
 
-To enable mappings between the created Divvy Stations source `Divvy - Stations 2017 Q1Q2`and the created Output `Divvy - Chicago Stations` the next step is to add the Source to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source** in the top right corner, as seen below.
+To enable mappings between an output and a source, the first step is to add the source to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source Mapping** at the top of the mapping table and underneath the "Mapping" tab, as seen below.
 
-![Add a Source to an Output](../../.gitbook/assets/rap-add-new-source-mapping-output.png)
+![](../../.gitbook/assets/addoutputsource%20%281%29.png)
 
-This should bring up a Source selection pane. Select the Source `Divvy - Stations 2017 Q1Q2` and press **Add Source**.
+This should bring up the Output Source configuration modal. To select the source to map, click on the 'Select Source' search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
+
+![](../../.gitbook/assets/selectmappingsource.png)
+
+#### Options: 
+
+* **Operation Type:** Default is "N/A". Allows the user to mark an output source mapping as an aggregate. More information on aggregate source mappings can be found below.
+* **Name:**
+* **Description:**
+* **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
+* **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
+* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
+* **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
+
+#### Aggregate Output Sources
 
 ### Adding Columns
+
+![](../../.gitbook/assets/addoutputsource.png)
 
 First, add a single column. Click on **Add Column** in the top right middle, seen next to of **Add Source Mapping** in the image above.
 
