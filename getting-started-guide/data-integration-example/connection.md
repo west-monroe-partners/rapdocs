@@ -1,5 +1,5 @@
 ---
-description: This section describes the process of setting up a connection in RAP.
+description: This section describes the process of setting up a connection in DataOps.
 ---
 
 # Connection
@@ -12,11 +12,11 @@ A **Connection** is used in part of the input step and the output step of the da
 
 ## Step 1: Create a Connection
 
-RAP communicates to external data services through Connections. Connections consist of configurations for **where** and **what type** of data to pull into RAP. Both Sources and Outputs can use connections. For this example, we will configure one file location to pull data from \(Source\) and another file location to push the data out \(Output\).
+DataOps communicates to external data services through Connections. Connections consist of configurations for **where** and **what type** of data to pull into DataOps. Both Sources and Outputs can use connections. For this example, we will configure one file location to pull data from \(Source\) and another file location to push the data out \(Output\).
 
-### Opening RAP
+### Opening DataOps
 
-In a Chrome browser, navigate to the RAP Sources screen by accessing the URL provided by your RAP account team and logging in.
+In a Chrome browser, navigate to the DataOps Sources screen by accessing the URL provided by your DataOps account team and logging in.
 
 ### Making a new Connection
 
@@ -54,7 +54,7 @@ The below image _\*\*_shows the Active toggle. This is used to deactivate or rea
 
 The below image shows the Connection Type control. Connection type selection dynamically updates the available options.
 
-Select `File`. This tutorial pushes a file to RAP as input and then outputs a file.
+Select `File`. This tutorial pushes a file to DataOps as input and then outputs a file.
 
 For examples of other connection types, see the below tabs.
 

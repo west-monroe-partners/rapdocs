@@ -1,12 +1,12 @@
 ---
-description: The RAP interface consists of six primary screens
+description: The DataOps interface consists of six primary screens
 ---
 
 # Navigation and Interface
 
 ## Navigation Menu
 
-Upon login, users are directed to the Sources screen. The Navigation Menu, located in the top left corner of the screen, enables navigation between RAP screens from any of the currently displayed screens.
+Upon login, users are directed to the Sources screen. The Navigation Menu, located in the top left corner of the screen, enables navigation between DataOps screens from any of the currently displayed screens.
 
 ![Left-Hand Navigation menu opened](../../.gitbook/assets/rap-navigation-menu-source.png)
 
@@ -16,7 +16,7 @@ Upon login, users are directed to the Sources screen. The Navigation Menu, locat
 
 ![Sources Screen header and tabs](../../.gitbook/assets/rap-sources-view.png)
 
-The [Sources]() Screen controls loading data from external systems into RAP, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub. 
+The [Sources]() Screen controls loading data from external systems into DataOps, assesses quality via Validation Rules, and transforms data using Enrichment Rules. Additionally, it contains the Inputs tab to track the progress of individual file processing and enable restart of any failed or mis-configured processing tasks. Lastly, it contains the Data Viewer tab, allowing users to view and query the data for this Source stored within the Data Hub. 
 
 ![](../../.gitbook/assets/close-up-logical-data-flow.png)
 
@@ -42,7 +42,7 @@ The [Connections ]()screen controls the connections to the External Source Syste
 
 ## Sources Details - The Logical Data Flow
 
-Sources can be thought of as managing the entire logical data flow. Sources work with connections and other sections of RAP to complete this flow. 
+Sources can be thought of as managing the entire logical data flow. Sources work with connections and other sections of DataOps to complete this flow. 
 
 ![Tab navigation within the Sources interface](../../.gitbook/assets/sources-header.png)
 
@@ -50,7 +50,7 @@ Within Sources there are seven tabs: Settings, Dependencies, Relations, Enrichme
 
 ### Ingest
 
-The Ingest step moves data into RAP's Data Lake. The settings tab of the source screen requires an input connection. We utilize the **Connections** interface of RAP to specify this input location, and then select this connection where prompted in the Source settings.
+The Ingest step moves data into DataOps' Data Lake. The settings tab of the source screen requires an input connection. We utilize the **Connections** interface of DataOps to specify this input location, and then select this connection where prompted in the Source settings.
 
 ### Enrichment
 

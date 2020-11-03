@@ -48,7 +48,7 @@ There are three main configuration categories that define how the system should 
 
 ### Data Refresh Type
 
-_The Data Refresh Type specifies how RAP tracks changes in data._
+_The Data Refresh Type specifies how DataOps tracks changes in data._
 
 Select `Key`. The Divvy Stations file is suitable for the Key refresh type. Each record represents a station.
 
@@ -86,7 +86,7 @@ Select `File`, and then select `Delimited`from the File Type option that will ap
 
 {% tabs %}
 {% tab title="File" %}
-RAP supports two common **File** types: **Delimited** files designate a single character of text to separate data fields such as a comma. **Fixed Width** files are plain text files that use spaces to separate data. Data is spaced differently for each file, so RAP requires additional information before it can ingest Fixed Width files.
+DataOps supports two common **File** types: **Delimited** files designate a single character of text to separate data fields such as a comma. **Fixed Width** files are plain text files that use spaces to separate data. Data is spaced differently for each file, so DataOps requires additional information before it can ingest Fixed Width files.
 {% endtab %}
 
 {% tab title="Table" %}
@@ -108,13 +108,13 @@ After selecting a Connection Type, select the connection that you configured on 
 
 ### **Initiation Type**
 
-_The Initiation Type specifies how RAP ingests data._
+_The Initiation Type specifies how_ DataOps _ingests data._
 
 Select `Watcher`.
 
 {% tabs %}
 {% tab title="Watcher" %}
-RAP continuously monitors a data path \(a local/network folder path or database connection\) and ingests data as soon as it becomes available.
+DataOps continuously monitors a data path \(a local/network folder path or database connection\) and ingests data as soon as it becomes available.
 {% endtab %}
 
 {% tab title="Scheduled" %}
@@ -133,18 +133,18 @@ Input parameters specify where within the connection the data exists, and how to
 **file\_mask:** Enter `Divvy_Stations*.csv`. The **file\_mask** represents the _name_ of the file. Using a mask allows the selection of multiple files that fit a specific pattern.
 
 {% hint style="info" %}
-In RAP, a mask uses \* for representing a variable block of text. For example, `TestData*.csv` matches both `TestData04.09.2018.csv` and `TestData04.10.2018.csv`, as well as just `TestData.csv`.
+In DataOps, a mask uses \* for representing a variable block of text. For example, `TestData*.csv` matches both `TestData04.09.2018.csv` and `TestData04.10.2018.csv`, as well as just `TestData.csv`.
 {% endhint %}
 
 {% hint style="info" %}
-File masks typically help with automated daily loads from external exported data. In this scenario, the exporting system typically post-pends the file name with the timestamp of extract. By using the file mask, RAP can identify these files as generated from the same system, and process them within one source.
+File masks typically help with automated daily loads from external exported data. In this scenario, the exporting system typically post-pends the file name with the timestamp of extract. By using the file mask, DataOps can identify these files as generated from the same system, and process them within one source.
 {% endhint %}
 
 **connection\_name:** Select the input connection configured earlier: `Divvy - Input Path` . For help configuring the connection, see [Connection Configuration](connection.md).
 
 ## **Step 4: Specify Staging Parameters**
 
-_The Staging Phase details how RAP reads and stores the Source._
+_The Staging Phase details how DataOps reads and stores the Source._
 
 **key\_columns:** Enter `id` . These are the primary keys for the input CSV: Divvy Stations uses `id` as its primary key.
 
@@ -154,7 +154,7 @@ Click the **Save** button to save the Source; all parameters should be configure
 
 ![Source Details](../../.gitbook/assets/step-5-save.png)
 
-_RAP now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the RAP internal storage database._ 
+_DataOps_ _now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the DataOps_ _internal storage database._ 
 
 ## Step 6: Validate File Input
 
@@ -163,6 +163,6 @@ Check the Inputs tab at the top of the page to verify that the file has been suc
 ![Input Found &amp; Ingested](../../.gitbook/assets/rap-6-inputs-update.png)
 
 {% hint style="info" %}
-RAP will automatically begin the Input phase when the input files appear in the Connection specified earlier. These files will disappear once RAP ingests them.
+DataOps will automatically begin the Input phase when the input files appear in the Connection specified earlier. These files will disappear once DataOps ingests them.
 {% endhint %}
 

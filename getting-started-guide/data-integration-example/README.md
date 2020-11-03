@@ -1,12 +1,12 @@
 ---
-description: This example acts as a Hello World tutorial for RAP
+description: This example acts as a Hello World tutorial for DataOps
 ---
 
 # Data Integration Example
 
 ## Introduction
 
-This simple introductory example looks at one specific use of RAP. 
+This simple introductory example looks at one specific use of DataOps. 
 
 For more detailed configuration instructions, please refer to the [Configuration Guide](). 
 
@@ -23,7 +23,7 @@ This Data Integration Example progresses in five parts:
 ## Requirements
 
 {% hint style="info" %}
-Access to a RAP environment
+Access to a DataOps environment
 {% endhint %}
 
 {% hint style="info" %}
@@ -31,7 +31,7 @@ Access to an Amazon S3 Bucket for flat file input & output
 {% endhint %}
 
 {% hint style="info" %}
-Access to Google Chrome, the only browser fully-certified for use with RAP
+Access to Google Chrome, the only browser fully-certified for use with DataOps
 {% endhint %}
 
 ## About the Data Source
