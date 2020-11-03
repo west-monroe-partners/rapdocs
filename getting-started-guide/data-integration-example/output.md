@@ -92,8 +92,8 @@ This should bring up the Output Source configuration modal. To select the source
 * **Description:** Allows the user to briefly describe to other users the use case of the Source Mapping.
 * **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output. A different pattern can be set 
 * **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
-* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
-* **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
+* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB.
+* **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset.
 
 ### Adding Columns
 
