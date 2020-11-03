@@ -2,7 +2,7 @@
 
 * [Welcome to Intellio DataOps \(RAP\)!](README.md)
 * [Getting Started Guide](getting-started-guide/README.md)
-  * [RAP Basics](getting-started-guide/rap-basics/README.md)
+  * [DataOps Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/how-it-works-2.md)
     * [Navigation and Interface](getting-started-guide/rap-basics/navigation-and-interface.md)
     * [Prerequisites](getting-started-guide/rap-basics/prerequisites.md)
@@ -13,7 +13,7 @@
     * [Validation and Enrichment](getting-started-guide/data-integration-example/validation-and-enrichment.md)
     * [Output](getting-started-guide/data-integration-example/output.md)
 * [Logical Architecture](logical-architecture-overview/README.md)
-  * [RAP Agent](logical-architecture-overview/rap-agent.md)
+  * [DataOps Agent](logical-architecture-overview/rap-agent.md)
   * [User Interface](logical-architecture-overview/user-interface.md)
   * [Data Storage](logical-architecture-overview/data-processing.md)
   * [Data Processing Engine](logical-architecture-overview/data-processing-engine/README.md)

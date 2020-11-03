@@ -1,5 +1,5 @@
 ---
-description: The UX of the Intellio DataOps (RAP) experience.
+description: The UX of the DataOps (RAP) experience.
 ---
 
 # User Interface
@@ -8,13 +8,13 @@ description: The UX of the Intellio DataOps (RAP) experience.
 
 ![Left hand main menu of the RAP UI.](../.gitbook/assets/rap-ui-menu.png)
 
-The user interface is the front end to Intellio DataOps \(RAP\) that developers will interact with the most.
+The user interface is the front end to DataOps \(RAP\) that developers will interact with the most.
 
-Users must login to the RAP user interface with a RAP account. Authentication is handled with Auth0, so clients need to be provided with an account in order to login to and use the user interface RAP configurators may sign up with their e-mail address.
+Users must login to the DataOps user interface with a DataOps account. Authentication is handled with Auth0, so clients need to be provided with an account in order to login to and use the user interface DataOps configurators may sign up with their e-mail address.
 
-Within the RAP user interface, the user is able to set up data sources and outputs, enrich existing data, and even perform troubleshooting. Everything can be reached from the hamburger menu in the top-left corner of the screen.
+Within the DataOps user interface, the user is able to set up data sources and outputs, enrich existing data, and even perform troubleshooting. Everything can be reached from the hamburger menu in the top-left corner of the screen.
 
-Sources, Outputs, and Connections can be viewed and filtered from their respective pages. Users will be using these pages the most when configuring data in RAP since Sources, Outputs, and Connections are all required components of RAP's data ingestion and output processes.
+Sources, Outputs, and Connections can be viewed and filtered from their respective pages. Users will be using these pages the most when configuring data in DataOps since Sources, Outputs, and Connections are all required components of DataOps' data ingestion and output processes.
 
 Note that clicking on a specific Source on the Sources page will show all of the details and options related to that Source. The same is true for the Outputs and Connections pages.
 
@@ -28,7 +28,7 @@ The Source Dashboard \(the UI shown when 'Sources' is selected from the left-han
 
 ![Tabs within a Source.](../.gitbook/assets/rap-ui-sources-tabs.png)
 
-Sources are the main containers of the Intellio DataOps \(RAP\) interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of RAP enable Sources to work through the Logical Architecture. 
+Sources are the main containers of the DataOps \(RAP\) interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of DataOps enable Sources to work through the Logical Architecture. 
 
 Within a Source the tab structure along the top provides a framework of organizing a monitoring different aspects of the logical data flow. Enumerated below are the general summary of what each tab represents.
 
@@ -46,9 +46,9 @@ Within a Source the tab structure along the top provides a framework of organizi
 
 ### Processing
 
-If errors occur during configuration, the RAP user interface has some troubleshooting functionality that allows both clients and configurators to report and handle issues effectively.
+If errors occur during configuration, the DataOps user interface has some troubleshooting functionality that allows both clients and configurators to report and handle issues effectively.
 
-The Processing page and Source Dashboard allows users to monitor Sources and Processes at a global level. From the Processing page, users can view and search all current and upcoming RAP processes as well as any process dependencies.
+The Processing page and Source Dashboard allows users to monitor Sources and Processes at a global level. From the Processing page, users can view and search all current and upcoming DataOps processes as well as any process dependencies.
 
 ![Process Tab and status of logical data flow ](../.gitbook/assets/rap-ui-process.png)
 
@@ -62,7 +62,7 @@ Connections and Outputs are the means in which data is moved into and out of Int
 
 ![Connections Settings.](../.gitbook/assets/rap-ui-connections.png)
 
-Connections contain the necessary information to locate data that will be ingested or outputted. Based on connection type and storage type different parameters will appear that need to be populated. These parameters could be just the file path \(inclusive of S3\), credentials to access a database, or additional information to support the RAP Agent.
+Connections contain the necessary information to locate data that will be ingested or outputted. Based on connection type and storage type different parameters will appear that need to be populated. These parameters could be just the file path \(inclusive of S3\), credentials to access a database, or additional information to support the DataOps Agent.
 
 ### Outputs
 
