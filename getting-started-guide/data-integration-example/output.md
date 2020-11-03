@@ -110,7 +110,7 @@ First, to add a single column, click on **Add Column** in the top middle of the 
 
 Then, when the create column modal opens \(seen in the image below\), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
 
-![](../../.gitbook/assets/image%20%28264%29.png)
+![](../../.gitbook/assets/image%20%28265%29.png)
 
 Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
 
@@ -121,6 +121,20 @@ Furthermore, to add all of the source data columns at once, instead of one by on
 {% hint style="warning" %}
 Note: It is best practice to manually add all Output Columns when configuring an enterprise grade system to adhere to destination naming convention and semantics.
 {% endhint %}
+
+### Mapping Expressions
+
+Once at least one source mapping and column have been created, the user can start mapping attributes by clicking on the empty cell that lies at the intersection of the target source mapping and the target column, example below:
+
+![](../../.gitbook/assets/enteringexpression.png)
+
+Once the user clicks the empty cell they would like to map a value to, the expression entry modal will appear:
+
+![](../../.gitbook/assets/image%20%28264%29.png)
+
+To map an attribute from the target source of the source mapping, type a period "." to reveal a drop down of all attributes of this source. Choose an attribute from the drop down to map it to the target field.  
+  
+To map an attribute from a source that is related to the target source of the source mapping, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the target source of the source mapping. Once the user has selected a related source, a drop down of the attributes of that source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
 
 ### Filtering Data
 
