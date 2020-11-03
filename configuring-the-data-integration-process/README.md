@@ -1,4 +1,4 @@
-# ! Configuration Guide
+# !! Configuration Guide
 
 {% hint style="info" %}
 Much of the detailed explanations of parameters and functionality are present within the Intellio DataOps \(RAP\) UI. In addition the details of the parameters, common questions are documented in this section as a guide for troubleshooting.

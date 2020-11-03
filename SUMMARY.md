@@ -48,7 +48,7 @@
     * [!! Using the Deployment Service in Microsoft Azure](deployment/deployment-to-microsoft-azure/using-the-deployment-service-in-microsoft-azure.md)
   * [!! Environment Migration Process](deployment/migrations-across-environments.md)
   * [Import/Export](deployment/import-export.md)
-* [! Configuration Guide](configuring-the-data-integration-process/README.md)
+* [!! Configuration Guide](configuring-the-data-integration-process/README.md)
   * [!! Agents](configuring-the-data-integration-process/agents.md)
   * [Connections](configuring-the-data-integration-process/connections-configuration.md)
   * [!! Sources](configuring-the-data-integration-process/source-configuration/README.md)
