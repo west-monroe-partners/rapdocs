@@ -95,13 +95,6 @@ This should bring up the Output Source configuration modal. To select the source
 * **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
 * **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
 
-#### Aggregate Output Sources
-
-Aggregate outputs allow users to output data at a grain higher than their actual data. All columns in the output fall into one of two categories:
-
-* **GROUPS:** Static fields by which rows with matching values will be grouped together. Akin to columns in a SQL "GROUP BY" clause.
-* **MEASURES:** Usually numeric fields that we will perform aggregate operations on.
-
 ### Adding Columns
 
 ![](../../.gitbook/assets/addoutputsource.png)
@@ -135,6 +128,13 @@ Once the user clicks the empty cell they would like to map a value to, the expre
 To map an attribute from the target source of the source mapping, type a period "." to reveal a drop down of all attributes of this source. Choose an attribute from the drop down to map it to the target field.  
   
 To map an attribute from a source that is related to the target source of the source mapping, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the target source of the source mapping. Once the user has selected a related source, a drop down of the attributes of that source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
+
+### Aggregate Output Sources
+
+Aggregate outputs allow users to output data at a grain higher than their actual data. All columns in the output fall into one of two categories:
+
+* **GROUPS:** Static fields by which rows with matching values will be grouped together. Akin to columns in a SQL "GROUP BY" clause.
+* **MEASURES:** Usually numeric fields that we will perform aggregate operations on.
 
 ### Filtering Data
 
