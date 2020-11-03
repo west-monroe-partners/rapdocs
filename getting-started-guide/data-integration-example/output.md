@@ -18,7 +18,7 @@ An output connection is necessary in order to complete this phase. If this was n
 
 ### Output Creation
 
-Before configuring any mappings, DataOps requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](output.md), use the following values for Output Details configuration:
+Before configuring any mappings, RAP requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](output.md), use the following values for Output Details configuration:
 
 * **Name:** `Divvy - Chicago Stations`
 * **Description:** File output for enriched divvy stations data
@@ -29,11 +29,11 @@ Before configuring any mappings, DataOps requires general information about the 
 
 #### Output Type
 
-DataOps offers four output types. For this example we will use `File`.
+RAP offers four output types. For this example we will use `File`.
 
 {% tabs %}
 {% tab title="File" %}
-DataOps can output to a **File**, which can be a CSV or Parquet format and optionally compressed with gzip.
+RAP can output to a **File**, which can be a CSV or Parquet format and optionally compressed with gzip.
 {% endtab %}
 
 {% tab title="Table" %}
@@ -73,7 +73,7 @@ Parquet is column-oriented data storage format, useful when direct to file queri
 
 ## Step 3: Map Output
 
-With the output details configured, and a location within the connection to push the data established, the next task is to map the individual columns from the DataOps data hub to the output file.
+With the output details configured, and a location within the connection to push the data established, the next task is to map the individual columns from the RAP data hub to the output file.
 
 ### Adding a Source
 
@@ -92,7 +92,7 @@ On the left, type `id` in the Output Column, and on the right where a "..." show
 ![Add a Single Output Column](../../.gitbook/assets/rap-add-single-column-output.png)
 
 {% hint style="info" %}
-Notice that there is no option to configure datatypes. This is because DataOps knows the output is into a plain-text `.csv`, so all output is of type text.
+Notice that there is no option to configure datatypes. This is because RAP knows the output is into a plain-text `.csv`, so all output is of type text.
 {% endhint %}
 
 Second, add all of the source data columns at once, instead of one by one. Following the image below, click on the ellipses in the top right, and select **Add All Data Columns**.
@@ -100,7 +100,7 @@ Second, add all of the source data columns at once, instead of one by one. Follo
 ![Add all Output Columns](../../.gitbook/assets/rap-map-all-output.png)
 
 {% hint style="info" %}
-Notice that DataOps does not configure a duplicate `id` column, as it is able to tell that the user has already configured one.
+Notice that RAP does not configure a duplicate `id` column, as it is able to tell that the user has already configured one.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -125,7 +125,7 @@ ischicago = 'Y'
 
 #### Parameters:
 
-**Include Rows:** `Passed` only. This checks flags created during [Validation](validation-and-enrichment.md#step-1-configure-validation) to determine which data to include in the output. Here, if rows failed validation then DataOps would be unable to correctly filter them.
+**Include Rows:** `Passed` only. This checks flags created during [Validation](validation-and-enrichment.md#step-1-configure-validation) to determine which data to include in the output. Here, if rows failed validation then RAP would be unable to correctly filter them.
 
 **Operation Type:** `N/A`, this guide does not transform the data in any other way.
 

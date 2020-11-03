@@ -8,11 +8,11 @@ description: This section covers Validation and Enrichment configuration.
 
 ![](../../.gitbook/assets/rap-validation-and-enrishment-location.png)
 
-Validation and Enrichment applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Validation and Enrichment rules represent the majority of the logic and structure of data processing within DataOps, and provide a flexible, yet guided framework for data management.
+Validation and Enrichment applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Validation and Enrichment rules represent the majority of the logic and structure of data processing within RAP, and provide a flexible, yet guided framework for data management.
 
 ## Step **1: Configure Validation** 
 
-A Validation Rule consists of validation logic, in the form of a SQL WHERE statement. After checking each statement individually, DataOps tags each record with a pass, failure, or warning flag, as well as which rule\(s\) triggered the warnings or failures. This section makes a simple validation rule that ensures the city field has a value.
+A Validation Rule consists of validation logic, in the form of a SQL WHERE statement. After checking each statement individually, RAP tags each record with a pass, failure, or warning flag, as well as which rule\(s\) triggered the warnings or failures. This section makes a simple validation rule that ensures the city field has a value.
 
 Navigate to the previously configured \(`Divvy - Stations 2017 Q1Q2` \) Source's Validation tab, and click New Enrichment.
 
@@ -47,7 +47,7 @@ When field names are prepended with a \[This\] such as `[This].city`, it indicat
 {% endhint %}
 
 {% hint style="info" %}
-DataOps supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's](validation-and-enrichment.md) [Validation and Enrichment Rule Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) section.
+RAP supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's](validation-and-enrichment.md) [Validation and Enrichment Rule Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) section.
 {% endhint %}
 
 ## **Step 2: Configure Enrichment**
@@ -118,10 +118,10 @@ Navigate to the **Data View** to double-check that the Validation and Enrichment
 For every enrichment, a green column should be created in the Data View. Additionally, every entry that is flagged as `Warn` should appear yellow. In this case, no records should be flagged.
 
 {% hint style="info" %}
-Notice that a few \(41\) Chicago-located Stations are given an `ischicago = 'N'`. This is due to additional whitespace in some input data. Messy data is common — thankfully, DataOps has ways to deal with this problem.
+Notice that a few \(41\) Chicago-located Stations are given an `ischicago = 'N'`. This is due to additional whitespace in some input data. Messy data is common — thankfully, RAP has ways to deal with this problem.
 {% endhint %}
 
-This concludes Validation and Enrichments configuration. DataOps is now ready to **Output** data, and will be configured in the final part of this guide.
+This concludes Validation and Enrichments configuration. RAP is now ready to **Output** data, and will be configured in the final part of this guide.
 
 {% hint style="info" %}
 At this point, the content of the Data Viewer can be downloaded into a CSV file by hitting the **Download** button located underneath the Data Viewer tab on the right of the screen.

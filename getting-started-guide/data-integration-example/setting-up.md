@@ -10,7 +10,7 @@ description: >-
 
 ![](../../.gitbook/assets/setting-up-location.png)
 
-The steps outlined in this Setting Up section correspond to creating a raw data location. The AWS environment created here is the raw data source that then needs to be appropriately ingested into DataOps in the subsequent steps of Connection and Source.
+The steps outlined in this Setting Up section correspond to creating a raw data location. The AWS environment created here is the raw data source that then needs to be appropriately ingested into RAP in the subsequent steps of Connection and Source.
 
 ## Step 1: Download the Divvy Data
 
@@ -18,9 +18,9 @@ The Data Integration Example uses Divvy Bike data hosted on Amazon Web Services'
 
 ## Step 2: Connect to AWS
 
-DataOps uses Amazon Web Services \(AWS\) to host and process the data. In order to setup this example, you will need to use the AWS interface to manually stage data in a location for DataOps to pick up and process.
+RAP uses Amazon Web Services \(AWS\) to host and process the data. In order to setup this example, you will need to use the AWS interface to manually stage data in a location for RAP to pick up and process.
 
-Your DataOps account team will provide you with credentials to an AWS account. Once you have logged in, navigate to the S3 service from the Services dropdown menu in the top-left corner of the AWS Management Console.
+Your RAP account team will provide you with credentials to an AWS account. Once you have logged in, navigate to the S3 service from the Services dropdown menu in the top-left corner of the AWS Management Console.
 
 ![Navigate to the S3 service in AWS \(Step 1\)](../../.gitbook/assets/aws-management-console.jpg)
 
@@ -30,13 +30,13 @@ Your DataOps account team will provide you with credentials to an AWS account. O
 
 S3 is a storage service in AWS that allows you to store files in a structured hierarchy as you would in a conventional file system such as Windows File Explorer.
 
-The S3 environment should already be provisioned as part of the automated deployment of DataOps for your particular project. Typically, each DataOps project will have an _input_ container to hold files that will be ingested into DataOps, and an _output_ container which will be the destination of files exported from DataOps. 
+The S3 environment should already be provisioned as part of the automated deployment of RAP for your particular project. Typically, each RAP project will have an _input_ container to hold files that will be ingested into RAP, and an _output_ container which will be the destination of files exported from RAP. 
 
-The S3 environment may have other containers that may be integral to the project workflow. Your DataOps account team will let you know how all of the containers in your S3 environment are to be used. 
+The S3 environment may have other containers that may be integral to the project workflow. Your RAP account team will let you know how all of the containers in your S3 environment are to be used. 
 
 ## Step 4: Upload the Divvy Data
 
-Before ingesting data from S3 container into DataOps, The data must first be uploaded to the input container. Navigate to the designated input container for your project and click the Upload button.  
+Before ingesting data from S3 container into RAP, The data must first be uploaded to the input container. Navigate to the designated input container for your project and click the Upload button.  
 
 ![Navigate to the input container and click Upload](../../.gitbook/assets/navigate-to-input-container.jpg)
 
