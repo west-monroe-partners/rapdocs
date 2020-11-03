@@ -31,7 +31,7 @@ This should bring up the Source Mapping configuration modal. To select the sourc
 * **Operation Type:** Default is "N/A". Allows the user to mark an output source mapping as an aggregate. More information on aggregate source mappings can be found below.
 * **Name:** The name of the Source Mapping defaults to name of the source itself. The user may want to set their own name for the source mapping, for instance to help distinguish between two Source Mappings that come from the same source.
 * **Description:** Allows the user to briefly describe to other users the use case of the Source Mapping.
-* **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output. A different pattern can be set 
+* **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
 * **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
 * **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
 * **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
