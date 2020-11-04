@@ -14,7 +14,87 @@ The Output Mapping tab can be split into three sections: [Column Configurations]
 * **Source Configurations** allows selection of multiple sources and mappings to Output Columns.
 * **Output Source Details** allows filtering and operations on Source data.
 
-### Mapping Expressions
+Important note, no changes made to an output mapping will take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
+
+## Adding a Source
+
+To enable mappings between an output and a source, the first step is to add the source to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source Mapping** at the top of the mapping table and underneath the "Mapping" tab, as seen below.
+
+![](../../.gitbook/assets/addoutputsource%20%281%29.png)
+
+This should bring up the Source Mapping configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
+
+![](../../.gitbook/assets/selectmappingsource.png)
+
+#### Options: 
+
+* **Filter Expression:** Allows users to define a condition that will exclude rows of data from the output, for which the filter expression does not evaluate to **true**. More information on filter expressions can be found in this article below.
+* **Operation Type:** Default is "N/A". Allows the user to mark an output source mapping as an aggregate. More information on aggregate source mappings can be found below.
+* **Name:** The name of the Source Mapping defaults to name of the source itself. The user may want to set their own name for the source mapping, for instance to help distinguish between two Source Mappings that come from the same source.
+* **Description:** Allows the user to briefly describe to other users the use case of the Source Mapping.
+* **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
+* **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
+* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
+* **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
+
+## Adding Columns
+
+![](../../.gitbook/assets/addoutputsource.png)
+
+First, to add a single column, click on **Add Column** in the top middle of the screen, seen next to the **Remove All Columns** button in the image above.
+
+Then, when the create column modal opens \(seen in the image below\), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
+
+![](../../.gitbook/assets/image%20%28265%29.png)
+
+Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
+
+## Aggregate Output Sources
+
+Aggregate outputs allow users to output data at a grain higher than their actual data. An source mapping is set as an aggregate source mapping by checking the **Aggregate** option of the **Operation Type** field on the source mapping details modal. Aggregate outputs are denoted on screen by the icon circled in the picture below:
+
+![](../../.gitbook/assets/aggregateicon.png)
+
+ All columns of an aggregate source mapping fall into one of two categories:
+
+* **GROUPS:** Static fields by which rows with matching values will be grouped together. Akin to columns in a SQL "GROUP BY" clause.
+* **MEASURES:** Usually numeric fields that we will perform aggregate operations on.
+
+Which category a column falls under is determined by the expression mapped to it for the aggregate source mapping.
+
+![](../../.gitbook/assets/aggregateexpression.png)
+
+## Source Mapping Menu Controls
+
+To open the Source Mapping control menu, click on the kebab button \(⋮\) at the far right of the **Source/Mapping Name** column of the output mapping
+
+![Source Mapping Menu can be seen on the right](../../.gitbook/assets/image%20%28270%29.png)
+
+* **View/Edit Details:**
+* **Automap:**
+* **Add&Map All Source Columns:**
+* **Clear Mappings:** Clears all expressions mapped to columns from this source mapping. This does not take effect until the output mapping save button and the bottom right hand corner of the screen is pressed.
+* **Remove:** Removes the source mapping in question from the output. This does not take effect until the output mapping save button and the bottom right hand corner of the screen is pressed.
+
+{% hint style="warning" %}
+Note: It is best practice to manually add all Output Columns when configuring an enterprise grade system to adhere to destination naming convention and semantics.
+{% endhint %}
+
+## Column Menu Controls
+
+To add all of the source data columns and map their corresponding source attributes all at once, instead of one by one, click on the kebab button \(⋮\), and press the "Add&Map All Source Columns" button \(circled in the image below\)
+
+![](../../.gitbook/assets/image%20%28266%29.png)
+
+* **View/Edit Details:**
+* **Move Left:**
+* **Move Right:**
+* **Automap:**
+* **Clear Mappings:**
+* **Hide:**
+* **Remove:**
+
+## Mapping Expressions
 
 Once at least one source mapping and column have been created, the user can start mapping attributes by clicking on the empty cell that lies at the intersection of the target source mapping and the target column, example below:
 
@@ -28,16 +108,7 @@ To map an attribute from the target source of the source mapping, type a period 
   
 To map an attribute from a source that is related to the target source of the source mapping, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the target source of the source mapping. Once the user has selected a related source, a drop down of the attributes of that source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
 
-### Aggregate Output Sources
-
-Aggregate outputs allow users to output data at a grain higher than their actual data. All columns in the output fall into one of two categories:
-
-* **GROUPS:** Static fields by which rows with matching values will be grouped together. Akin to columns in a SQL "GROUP BY" clause.
-* **MEASURES:** Usually numeric fields that we will perform aggregate operations on.
-
-## 
-
-## 
+## OLD STUFF IS BELOW THIS
 
 ## Column Configurations
 
@@ -45,63 +116,13 @@ _There can only be one column configuration in an Output. Columns represent the 
 
 ### 
 
-### Adding Columns
 
-![](../../.gitbook/assets/addoutputsource.png)
 
-First, to add a single column, click on **Add Column** in the top middle of the screen, seen next to the **Remove All Columns** button in the image above.
-
-Then, when the create column modal opens \(seen in the image below\), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
-
-![](../../.gitbook/assets/image%20%28265%29.png)
-
-Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
-
-### Automatic Column Mapping
-
-To add all of the source data columns and map their corresponding source attributes all at once, instead of one by one, click on the kebab button \(⋮\), and press the "Add&Map All Source Columns" button \(circled in the image below\)
-
-![](../../.gitbook/assets/addandmapallcolumns.png)
-
-{% hint style="warning" %}
-Note: It is best practice to manually add all Output Columns when configuring an enterprise grade system to adhere to destination naming convention and semantics.
-{% endhint %}
-
-## Source Configurations
+## 
 
 _Source Configurations in the Output Mapping tab determine which data ends up in the Output, allowing users to select multiple sources, filter them based on validation rules, and perform operations on the Source data._
 
 
-
-### Adding a Source
-
-To enable mappings between an output and a source, the first step is to add the source to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source Mapping** at the top of the mapping table and underneath the "Mapping" tab, as seen below.
-
-![](../../.gitbook/assets/addoutputsource%20%281%29.png)
-
-This should bring up the Source Mapping configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
-
-![](../../.gitbook/assets/selectmappingsource.png)
-
-#### Options: 
-
-* **Operation Type:** Default is "N/A". Allows the user to mark an output source mapping as an aggregate. More information on aggregate source mappings can be found below.
-* **Name:** The name of the Source Mapping defaults to name of the source itself. The user may want to set their own name for the source mapping, for instance to help distinguish between two Source Mappings that come from the same source.
-* **Description:** Allows the user to briefly describe to other users the use case of the Source Mapping.
-* **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
-* **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
-* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
-* **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
-
-To begin accessing a source in the Output, select **Add Source** to bring up the Source Selection screen.
-
-![Add Source](../../.gitbook/assets/image%20%2859%29.png)
-
-Added Sources will always display from the right side of the Output Mapping tab, unless they are set to be hidden. Source visibility can be toggled using the **Show/Hide Sources** button. This button brings up the list of connected Sources, and allows users to configure each Source's visibility on the page.
-
-![Show/Hide Sources](../../.gitbook/assets/image%20%28218%29.png)
-
-To disassociate a Source from the current Output, click the kebab button \(**⋮**\) found on the top of the Source header to bring up a list of options. Select **Remove**.
 
 ![Remove Source](../../.gitbook/assets/image%20%2864%29.png)
 
