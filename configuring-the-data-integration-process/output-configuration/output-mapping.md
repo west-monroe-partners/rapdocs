@@ -14,7 +14,9 @@ The Output Mapping tab can be split into three sections: [Column Configurations]
 * **Source Configurations** allows selection of multiple sources and mappings to Output Columns.
 * **Output Source Details** allows filtering and operations on Source data.
 
-Important note, no changes made to an output mapping will take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
+{% hint style="info" %}
+Important note: no changes made to an output mapping will take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
+{% endhint %}
 
 ## Adding a Source
 
@@ -51,7 +53,7 @@ Optionally, the user can add a description to the column, or explicitly set the 
 
 ## Aggregate Output Sources
 
-Aggregate outputs allow users to output data at a grain higher than their actual data. An source mapping is set as an aggregate source mapping by checking the **Aggregate** option of the **Operation Type** field on the source mapping details modal. Aggregate outputs are denoted on screen by the icon circled in the picture below:
+Aggregate outputs allow users to output data at a grain higher than their actual data. A source mapping is set as an aggregate source mapping by checking the **Aggregate** option of the **Operation Type** field on the source mapping details modal. Aggregate outputs are denoted on screen by the icon circled in the picture below:
 
 ![](../../.gitbook/assets/aggregateicon.png)
 
@@ -63,6 +65,8 @@ Aggregate outputs allow users to output data at a grain higher than their actual
 Which category a column falls under is determined by the expression mapped to it for the aggregate source mapping.
 
 ![](../../.gitbook/assets/aggregateexpression.png)
+
+If an aggregate function is selected, the column automatically becomes a **MEASURE** column. Conversely, if no aggregate function is selected, the column automatically becomes a **GROUP** column.
 
 ## Source Mapping Menu Controls
 
