@@ -19,7 +19,7 @@ TODO:  Add an intro, add an ERD, discuss concept of source\_id vs input\_id \(ad
 
 TODO:  Update with RAP 2.0 concepts
 
-![Configuration Metadata Diagram](../.gitbook/assets/image%20%28271%29.png)
+![Configuration Metadata Diagram](../.gitbook/assets/image%20%28274%29.png)
 
 The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are also stored in this schema.
 
@@ -35,6 +35,8 @@ Tables containing source configuration metadata are the following:
 * ~~**lookup**:  Contains the list of sources that need lookup tables built.  This is required for support of lookups not on the primary key \(i.e., not using s\_key\).~~
 
 Tables containing runtime metadata are the following:
+
+![Process Metadata Diagram](../.gitbook/assets/image%20%28271%29.png)
 
 * **input**:  Represents a single pull of data, whether that is a single pull of a table, a CSV file, etc.
 * **landing**:  Represents a "partition" of an input.  This is the smallest unit of data that is processed by RAP.  Keyed sources are one-to-one between inputs and landings, but time series sources can be split up into multiple landings to allow for higher parallelism and overall better performance processing large chunks of data.
