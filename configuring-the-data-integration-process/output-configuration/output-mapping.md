@@ -19,7 +19,7 @@ Important note: no changes made to an output mapping will take effect unless the
 
 ## Adding a Channel
 
-To enable mappings between an output and a source, the first step is to add the channel to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source Mapping** at the top of the mapping table and underneath the "Mapping" tab, as seen below.
+To enable mappings between an output and a source, the first step is to add the channel to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source Mapping** at the top of the mapping table and underneath the **Mapping** tab, as seen below.
 
 ![](../../.gitbook/assets/addoutputsource%20%281%29.png)
 
@@ -34,7 +34,7 @@ This should bring up the Channel configuration modal. To select the source to ma
 * **Name:** The name of the Channel defaults to name of the source itself. The user may want to set their own name for the channel, for instance to help distinguish between two Channels that come from the same source.
 * **Description:** Allows the user to briefly describe to other users the use case of the Channel.
 * **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
-* **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
+* **Key History:** Default is false. Output key history for channels of Key sources - ignore for Time Series sources.
 * **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
 * **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
 
@@ -50,9 +50,9 @@ Then, when the create column modal opens \(seen in the image below\), a column n
 
 Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
 
-## Aggregate Output Sources
+## Aggregate Channels
 
-Aggregate outputs allow users to output data at a grain higher than their actual data. A channel is set as an aggregate channel by checking the **Aggregate** option of the **Operation Type** field on the channel details modal. Aggregate outputs are denoted on screen by the icon circled in the picture below:
+Aggregate channels allow users to output data at a grain higher than their actual data. A channel is set as an aggregate channel by checking the **Aggregate** option of the **Operation Type** field on the channel details modal. Aggregate channels are denoted on screen by the icon circled in the picture below:
 
 ![](../../.gitbook/assets/aggregateicon.png)
 
@@ -117,9 +117,9 @@ Once the user clicks the empty cell they would like to map a value to, the expre
 
 ![](../../.gitbook/assets/image%20%28264%29.png)
 
-To map an attribute from the target source of the channel, type a period "." to reveal a drop down of all attributes of this source. Choose an attribute from the drop down to map it to the target field.  
+To map an attribute from the target source of the channel, type a period "." to reveal a drop down of all attributes of this channel's source. Choose an attribute from the drop down to map it to the target field.  
   
-To map an attribute from a source that is related to the target source of the channel, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel. Once the user has selected a related source, a drop down of the attributes of that source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
+To map an attribute from a source that is related to the target source of the channel, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel. Once the user has selected a related source, a drop down of the attributes of that related source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
 
 ### 
 
