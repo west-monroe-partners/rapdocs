@@ -11,7 +11,7 @@ description: >-
 * **Columns:** Define the final schema of the Output data.
 * **Channel:** Union between a source and the output, that defines how attributes from the source flow into the output.
 * **Mapping:** Expression that ties a channel to a column.
-* **Output Mapping:** Collection of all mappings that collectively defines how the data moves from the sources into the output tables.
+* **Output Mapping:** Collection of all mappings that collectively defines how the data moves from all channels into the output table.
 
 {% hint style="info" %}
 Important note: no changes made to an output mapping will take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
