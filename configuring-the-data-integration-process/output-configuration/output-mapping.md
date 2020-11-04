@@ -23,16 +23,16 @@ To enable mappings between an output and a source, the first step is to add the 
 
 ![](../../.gitbook/assets/addoutputsource%20%281%29.png)
 
-This should bring up the Source Mapping configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
+This should bring up the Channel configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
 
 ![](../../.gitbook/assets/selectmappingsource.png)
 
 #### Options: 
 
 * **Filter Expression:** Allows users to define a condition that will exclude rows of data from the output, for which the filter expression does not evaluate to **true**.
-* **Operation Type:** Default is "N/A". Allows the user to mark an output source mapping as an aggregate. More information on aggregate source mappings can be found below.
-* **Name:** The name of the Source Mapping defaults to name of the source itself. The user may want to set their own name for the source mapping, for instance to help distinguish between two Source Mappings that come from the same source.
-* **Description:** Allows the user to briefly describe to other users the use case of the Source Mapping.
+* **Operation Type:** Default is "N/A". Allows the user to mark a channel as an aggregate. More information on aggregate channels can be found below.
+* **Name:** The name of the Channel defaults to name of the source itself. The user may want to set their own name for the channel, for instance to help distinguish between two Channels that come from the same source.
+* **Description:** Allows the user to briefly describe to other users the use case of the Channel.
 * **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
 * **Key History:** Default is false. Output key history for Key Output Sources - ignore for Time Series sources.
 * **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
@@ -52,16 +52,16 @@ Optionally, the user can add a description to the column, or explicitly set the 
 
 ## Aggregate Output Sources
 
-Aggregate outputs allow users to output data at a grain higher than their actual data. A source mapping is set as an aggregate source mapping by checking the **Aggregate** option of the **Operation Type** field on the source mapping details modal. Aggregate outputs are denoted on screen by the icon circled in the picture below:
+Aggregate outputs allow users to output data at a grain higher than their actual data. A channel is set as an aggregate channel by checking the **Aggregate** option of the **Operation Type** field on the channel details modal. Aggregate outputs are denoted on screen by the icon circled in the picture below:
 
 ![](../../.gitbook/assets/aggregateicon.png)
 
- All columns of an aggregate source mapping fall into one of two categories:
+ All columns of an aggregate channel fall into one of two categories:
 
 * **GROUPS:** Static fields by which rows with matching values will be grouped together. Akin to columns in a SQL "GROUP BY" clause.
 * **MEASURES:** Usually numeric fields that we will perform aggregate operations on.
 
-Which category a column falls under is determined by the expression mapped to it for the aggregate source mapping.
+Which category a column falls under is determined by the expression mapped to it for the aggregate channel.
 
 ![](../../.gitbook/assets/aggregateexpression.png)
 
@@ -109,7 +109,7 @@ To open the column menu, click on the list icon button \(circled in the image be
 
 ## Mapping Expressions
 
-Once at least one source mapping and column have been created, the user can start mapping attributes by clicking on the empty cell that lies at the intersection of the target source mapping and the target column, example below:
+Once at least one channel and column have been created, the user can start mapping attributes by clicking on the empty cell that lies at the intersection of the target channel and the target column, example below:
 
 ![](../../.gitbook/assets/enteringexpression.png)
 
@@ -117,9 +117,9 @@ Once the user clicks the empty cell they would like to map a value to, the expre
 
 ![](../../.gitbook/assets/image%20%28264%29.png)
 
-To map an attribute from the target source of the source mapping, type a period "." to reveal a drop down of all attributes of this source. Choose an attribute from the drop down to map it to the target field.  
+To map an attribute from the target source of the channel, type a period "." to reveal a drop down of all attributes of this source. Choose an attribute from the drop down to map it to the target field.  
   
-To map an attribute from a source that is related to the target source of the source mapping, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the target source of the source mapping. Once the user has selected a related source, a drop down of the attributes of that source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
+To map an attribute from a source that is related to the target source of the channel, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel. Once the user has selected a related source, a drop down of the attributes of that source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
 
 ### 
 
