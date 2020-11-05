@@ -45,6 +45,7 @@
     * [!! Installing a New RAP Agent On ECS \(AWS\)](deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
   * [!! Deployment to Microsoft Azure](deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements \(Microsoft Azure\)](deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
+    * [Performing the Deployment](deployment/deployment-to-microsoft-azure/performing-the-deployment.md)
     * [!! Using the Deployment Service in Microsoft Azure](deployment/deployment-to-microsoft-azure/using-the-deployment-service-in-microsoft-azure.md)
   * [!! Environment Migration Process](deployment/migrations-across-environments.md)
   * [Import/Export](deployment/import-export.md)
