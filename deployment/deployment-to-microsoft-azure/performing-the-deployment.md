@@ -74,9 +74,15 @@ In the Azure Portal Resource Group that's been created, navigate to the Databric
 
 In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations
 
-![](../../.gitbook/assets/image%20%28274%29.png)
+![](../../.gitbook/assets/image%20%28276%29.png)
 
-Once this cluster is created, navigate to the databricks home screen and create a new notebook. On a command box, add this code snippet:
+Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
+
+![](../../.gitbook/assets/image%20%28275%29.png)
+
+After the pool is created, save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating the Key Vault.
+
+Navigate to the Databricks home screen and create a new notebook. On a command box, add this code snippet:
 
 ```text
 val databricksPrincipalId = ""
@@ -123,6 +129,8 @@ dbutils.fs.ls("mnt/jars")
 ```
 
 This should not error out and should list the datatypes.avro file.
+
+Next, click on the user dropdown in the top right of the Databricks portal. Click "User Settings" in the dropdown. On the Access Tokens tab, click "Generate New Token". Set the token lifetime to blank, so the token will not expire. Copy the token for use later on \(It will be used in the "Updating Key Vaults" section of this guide.
 
 ## Updating Key Vaults
 
