@@ -132,11 +132,38 @@ This should not error out and should list the datatypes.avro file.
 
 Next, click on the user dropdown in the top right of the Databricks portal. Click "User Settings" in the dropdown. On the Access Tokens tab, click "Generate New Token". Set the token lifetime to blank, so the token will not expire. Copy the token for use later on \(It will be used in the "Updating Key Vaults" section of this guide.
 
+Capture a value out of the Databricks URL before moving on to the key vault step. If the URL is [https://xxxxxxxxxxxx.azuredatabricks.net/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration](https://adb-4433553810974403.3.azuredatabricks.net/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration) then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Key Vault.
+
 ## Updating Key Vaults
 
-## Configuring Custom Endpoint
+There are two Key Vaults that will need updated before the containers can run properly. The keys in the JSON will all exist, but some of the values will need to be updated/replaced.
+
+The first secret that will need updating is the "&lt;environment&gt;-public-system-configuration" secret. It is recommended to copy the JSON value of the secret into a text editor such as [Notepad++](https://notepad-plus-plus.org/downloads/) for easy updating.
+
+Public system configuration values that need updates:
+
+* databricks-jdbc-uri
+  * replace the number after/protocolv1/o/ with the number we saved from the Databricks URL in the last step of the Databricks post deployment instructions
+* databricks-instance-pool-id
+  * replace with value of sparky-pool ID that we saved in Databricks config step
+
+The second secret that will need updating is the "&lt;environment&gt;-private-secret-configuration" secret.
+
+Private system configuration values that need updates:
+
+* databricks-token
+  * replace with value saved from generating the access token in Databricks config step
+* databricks-spark-conf
+  * replace with account key from storage account &lt;environment&gt;storage&lt;client&gt;
+  * Example value: {"fs.azure.account.key.devstorageintellio.blob.core.windows.net": "qTNCgxxxxxxxxxxxxxxxxxxxxxxxxxxxUuSk8x7LwAWXbKFiA2xxxxxxxxxxxxz0H5t0uZxxxxxiL5cEy8kag=="}
+
+When the JSONs are updated and ready to go back into Key Vault, just create a new version of the secret with the updated JSON values. 
+
+## Running Deployment Container
 
 ## Configuring Postgres System Configuration Table
+
+## Configuring Custom Endpoint
 
 ## Auth0 Rule Updates
 
