@@ -15,11 +15,23 @@ Add the permissions and grant them consent if needed.
 
 Save the Application \(client\) ID and generate a secret for the app registration. These will be used when populating variables in Terraform Cloud in the next step.
 
+## Fork Infrastrucure Repository in GitHub
+
+Work with DataOps team to get a service GitHub account added - this will be used to fork the main Infrastructure repository into the service account.
+
 ## Setting up Terraform Cloud Workspace
 
-Create a new workspace in Terraform Cloud. Choose "Version control workflow"
+Create a new workspace in Terraform Cloud. Choose "Version control workflow". Configure the VCS connection to the forked repository in GitHub. Follow the Terraform Cloud steps when configuring a new VCS connection.
+
+When the VCS connection is created, set the working directory to "terraform/azure". The VCS branch can be the default branch, as it generally defaults to master.
+
+{% hint style="info" %}
+Make sure that the Terraform version in the workspace is set to "0.12.29"
+{% endhint %}
 
 ## Populating Variables in Terraform Cloud
+
+
 
 ## Running Terraform Cloud
 
