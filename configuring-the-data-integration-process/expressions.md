@@ -4,11 +4,11 @@ description: >-
   (RAP) user interface.
 ---
 
-# !! Expressions
+# !! Intellio® QL
 
-Expressions occur in many locations in the Intellio DataOps \(RAP\) user interface, such as Relations, Rules, ...
+Expressions occur in many locations in the Intellio® DataOps \(RAP\) user interface, namely Relations, Rules, Output Mappings, and Dataviewer filters. In order to access source attributes and traverse relations within these expressions, the user must use **Intellio® Query Language**.
 
-Expressions within Intellio DataOps \(RAP\) follows [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html). Spark SQL is negligibly different from basic SQL, so a proficiency in one typically implies a proficiency in the other.
+Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html). Spark SQL is negligibly different from basic SQL, so a proficiency in one typically implies a proficiency in the other.
 
 <table>
   <thead>
@@ -25,7 +25,7 @@ Expressions within Intellio DataOps \(RAP\) follows [Spark SQL](https://spark.ap
   <tbody>
     <tr>
       <td style="text-align:left">[<em>Source Name</em>]</td>
-      <td style="text-align:left">Source container</td>
+      <td style="text-align:left">Source container. Simply a source name wrapped in brackets.</td>
       <td style="text-align:left">Output Mappings</td>
       <td style="text-align:left">[SalesOrderDetail]</td>
     </tr>
@@ -71,12 +71,6 @@ Expressions within Intellio DataOps \(RAP\) follows [Spark SQL](https://spark.ap
     </tr>
   </tbody>
 </table>
-
-{% hint style="info" %}
-Across the Intellio DataOps \(RAP\) platform, a grey \(un-clickable\) "Save" button indicates there is an error. Typically this error is within an expression field. Double check errors and expressions if you are unable to "Save" your work.
-{% endhint %}
-
-
 
 
 
