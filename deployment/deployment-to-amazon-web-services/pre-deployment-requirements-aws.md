@@ -45,11 +45,11 @@ Create a [Terraform Cloud](https://www.terraform.io/) account. This is for infra
 
 ## Create an Auth0 Account
 
-Auth0 Developer tier is required. Again create a specific account for the Intellio DataOps \(RAP\) deployment team.
+[Auth0](https://auth0.com/) Developer tier is required. Again create a specific account for the Intellio DataOps \(RAP\) deployment team.
 
 ## Create an AWS Environment
 
-If an AWS environment does not already exist, it is required to deploy onto AWS. Create an account specific for the Intellio DataOps \(RAP\) team, and the account should be able to create Active Directory resources.
+If an AWS environment does not already exist, it is required to deploy onto AWS. [Create an account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) specific for the Intellio DataOps \(RAP\) team, and the account should be able to create Active Directory resources.
 
 ## Decide on a VPN
 
