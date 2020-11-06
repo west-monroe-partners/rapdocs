@@ -126,9 +126,7 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 ### Output Mapping Expressions
 
-More Info on output mapping expressions can be found here. 
-
-### Dataviewer Filter Expressions
+More Info on output mapping expressions can be found [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/output-configuration/output-mapping#mapping-expressions). 
 
 
 
