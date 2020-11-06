@@ -204,7 +204,7 @@ Navigate to the Frontend Endpoint resource called &lt;environment&gt;-FrontendEn
 
 After adding the custom hostname, click on the custom hostname to configure the domain further. The configuration should then look similar to the following image, with the deployment specific values replaced.
 
-![](../../.gitbook/assets/image%20%28279%29.png)
+![](../../.gitbook/assets/image%20%28278%29.png)
 
 {% hint style="warning" %}
 Make sure the Azure CDN step is followed so that CDN can access the Key Vault where the secret lives
@@ -234,7 +234,7 @@ Test the backend health before adding the health probe, then Save the update to 
 
 In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
 
-![](../../.gitbook/assets/image%20%28278%29.png)
+![](../../.gitbook/assets/image%20%28277%29%20%281%29.png)
 
 ## Smoke Testing
 

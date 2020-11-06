@@ -27,19 +27,21 @@ Expressions within Intellio DataOps \(RAP\) follows [Spark SQL](https://spark.ap
       <td style="text-align:left">[<em>Source Name</em>]</td>
       <td style="text-align:left">Source container</td>
       <td style="text-align:left">Output Mappings</td>
-      <td style="text-align:left">[Divvy Rides]</td>
+      <td style="text-align:left">[SalesOrderDetail]</td>
     </tr>
     <tr>
-      <td style="text-align:left">[This]</td>
+      <td style="text-align:left"><em>[This]</em>
+      </td>
       <td style="text-align:left">
         <p>Current source container. Equivalent to [<em>current source name</em>]</p>
-        <p>Optional for output mapping &amp; dataviewer expressions</p>
+        <p>Optional for Output Mapping &amp; Dataviewer expressions</p>
       </td>
-      <td style="text-align:left">Rules, Relations</td>
+      <td style="text-align:left">All</td>
       <td style="text-align:left">[This]</td>
     </tr>
     <tr>
-      <td style="text-align:left">[Related]</td>
+      <td style="text-align:left"><em>[Related]</em>
+      </td>
       <td style="text-align:left">Container for related source. Only allowed in relation expression.</td>
       <td
       style="text-align:left">Relations</td>
@@ -47,22 +49,25 @@ Expressions within Intellio DataOps \(RAP\) follows [Spark SQL](https://spark.ap
     </tr>
     <tr>
       <td style="text-align:left">{<em>Relation Name</em>}</td>
-      <td style="text-align:left">Non-primary relation name, indicates path to the source containers used
-        in expression</td>
+      <td style="text-align:left">Relation name, indicates path to the source containers used in expression.
+        Preceded by <em>[This]~</em> to access non-primary relations</td>
       <td style="text-align:left">Rules, Output Mappings</td>
       <td style="text-align:left">[This]~{Non Primary Relation Name}.attribute_name</td>
     </tr>
     <tr>
       <td style="text-align:left">.</td>
-      <td style="text-align:left">Separator of source containers and attribute names</td>
+      <td style="text-align:left">Separator of source containers and attribute names. Can also be used to
+        directly display the attribute drop down of the current source in Dataviewer
+        and Output Mapping expressions.</td>
       <td style="text-align:left">All</td>
-      <td style="text-align:left">[SalesOrderID].CustomerID</td>
+      <td style="text-align:left">[Source Name].attribute_name</td>
     </tr>
     <tr>
       <td style="text-align:left">~</td>
-      <td style="text-align:left">Path indicator, separates source containers and Relations</td>
+      <td style="text-align:left">Path indicator, separates source containers and Relations. Used after <em>[This]</em> to
+        access non-primary relations.</td>
       <td style="text-align:left">Rules, Output Mappings</td>
-      <td style="text-align:left">[This]~{Relation Z}~[Weather].att</td>
+      <td style="text-align:left">[This]~{Relation Name}~[Related Source Name].attribute_name</td>
     </tr>
   </tbody>
 </table>
