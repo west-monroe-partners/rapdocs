@@ -15,6 +15,16 @@ Two options exist for URL management:
 
 Regardless of the above method, **the domain needs to be purchased and validated before a RAP deployment.**
 
+## SSL Certificate
+
+A valid SSL certificate that the client organization controls to perform secure connect and termination for RAP websites. Select from the following:
+
+* Use an existing certificate and define a subdomain allocated to RAP.
+* Purchase a new SSL certificate for a new domain or subdomain.
+  * An Azure partner is Digicert.com
+  * Deployment requires either a wildcard certificate or two single domain certificates per environment.
+  * After purchase is complete, verify ownership of the domain to receive the certificate. **This is a requirement for deployment.**
+
 ## **Create a Docker Hub Account**
 
 Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommended this is not tied to any individual employee.
