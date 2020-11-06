@@ -91,7 +91,7 @@ val databricksPrincipalEndpoint = ""
 val environment = ""
 val client = ""
 
-spark.sql("CREATE DATABASE azuretest")
+spark.sql("CREATE DATABASE " + environment.toLowerCase)
 
 val configs = Map(
   "fs.azure.account.auth.type" -> "OAuth",
@@ -175,9 +175,42 @@ If this message does not exist - try running the container again \(click stop an
 
 ## Configuring Postgres System Configuration Table
 
+Use the "database-connection" value from the Private secret in Key Vault to connect to the Azure Database for PostgreSQL server that is installed in the Resource Group. It will be named &lt;environment&gt;-db-&lt;client&gt;, Ex: dev-db-intellio. You may need to add the IP that you're connecting from to the Connection Security on the database configuration window. We recommend using a tool like PgAdmin or DataGrip to connect to the server.
+
+Run the following queries in the database named &lt;environment&gt;. 
+
+{% hint style="info" %}
+Replace the "DEV" values with the name of your environment. Make sure that the databricks-db-name is all lowercase.
+{% endhint %}
+
+```text
+
+update meta.system_configuration set value = 'DEV' where name = 'environment';
+update meta.system_configuration set value = 'dev' where name = 'databricks-db-name';
+update meta.system_configuration set value = 'Databricks' where name = 'spark-provider';
+update meta.system_configuration set value = 'Azure' where name = 'cloud';
+insert into meta.agent values ('local','local',null,null,
+                               '{"default": true, "autoUpdate": false,
+                                "maxResources": 4, "akkaStreamTimeout": 300,
+                                 "checkDeltaInterval": 30,
+                                  "checkPushFilesInterval": 10}','startxx',false);
+```
+
 
 
 ## Configuring Custom Endpoint
+
+Navigate to the Frontend Endpoint resource called &lt;environment&gt;-FrontendEndpoint-&lt;client&gt;, Ex: Dev-FrontendEndpoint-Intellio. Click "Custom domain" in the overview screen. In the "Custom hostname" box, enter the DNS name of the Intellio site that is being deployed. This will generally be: &lt;environment&gt;-&lt;dnsZone&gt;. dnsZone was a variable that was set when the Terraform variables were populated. The custom hostname will need to be DNS resolvable before it can be added.
+
+After adding the custom hostname, click on the custom hostname to configure the domain further. The configuration should then look similar to the following image, with the deployment specific values replaced.
+
+![](../../.gitbook/assets/image%20%28277%29.png)
+
+{% hint style="warning" %}
+Make sure the Azure CDN step is followed so that CDN can access the Key Vault where the secret lives
+{% endhint %}
+
+Save the configuration and this step will be complete.
 
 ## Restart Everything!
 
