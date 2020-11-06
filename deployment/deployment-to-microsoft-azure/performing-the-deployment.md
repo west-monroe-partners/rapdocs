@@ -204,7 +204,7 @@ Navigate to the Frontend Endpoint resource called &lt;environment&gt;-FrontendEn
 
 After adding the custom hostname, click on the custom hostname to configure the domain further. The configuration should then look similar to the following image, with the deployment specific values replaced.
 
-![](../../.gitbook/assets/image%20%28278%29.png)
+![](../../.gitbook/assets/image%20%28279%29.png)
 
 {% hint style="warning" %}
 Make sure the Azure CDN step is followed so that CDN can access the Key Vault where the secret lives
@@ -222,11 +222,19 @@ At this point, all the post Terraform configuration should be good to go. There 
 
 Check the container logs to ensure the containers have started and are running with no errors. Once all three containers are running, it's time to go on the site!
 
+## Check Application Gateway Health probe
+
+Navigate to the Application Gateway and click "Health probes" in the left menu blade. There should be one record with the name &lt;environment&gt;-HealthProbe-&lt;client&gt;, EX: Dev-HealthProbe-Intellio. Make sure that the "Host" value is set to the IP of the currently running Api Container instance. If the values are different, change the Host value on the Health Probe to equal the IP address of the currently running Api container instance. The IP Address is in the overview of the container instance like so:
+
+![](../../.gitbook/assets/image%20%28277%29.png)
+
+Test the backend health before adding the health probe, then Save the update to the health probe.
+
 ## Auth0 Rule Updates
 
 In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
 
-![](../../.gitbook/assets/image%20%28277%29.png)
+![](../../.gitbook/assets/image%20%28278%29.png)
 
 ## Smoke Testing
 
