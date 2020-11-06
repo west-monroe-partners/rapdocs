@@ -7,19 +7,57 @@ description: >-
 
 # !! Metadata Model
 
-TODO:  write an intro - what broad strokes of data can you get from querying data directly, benefits of being able to understand metadata model \(SSIS / Informatica PowerCenter / other traditional ETL tools have queryable metadata layer as well\)
+As a metadata driven tool, Intellio has a broad interconnected set of metadata tables that store and relate the various aspects of the platform. An understanding of the backend tables can be helpful for diagnosing issues and creating efficient platform configurations. The metadata tables can be broken into three major categories:
 
-TODO: add useful query patterns somewhere 
+* User Configuration Metadata
+* Processing Metadata
+* User Interface Metadata
 
-TODO: refer to pyramid slide
+### Configuration Metadata
 
-### Configuration and Runtime Metadata \(stage\)
+Configuration metadata tracks and stores all of the configurations that a user performs within the user interface. This includes the creation of sources, dependnecies, agents, connection, outputs, rules, relations, and mappings. Additionally, there are a number of supporting tables that store parsed and parameterized versions of user input, as well as static information tables that are used as reference. The configuration metadata tables are all stored in the Meta schema within the Postgres database. The diagram below illustrates how each of these tables is connected. This category of tables can be further broken down into three types of tables:
 
-TODO:  Add an intro, add an ERD, discuss concept of source\_id vs input\_id \(add diagram for this as well\)
+* User Configured - These tables store the exact user configurations as specified in the user interface
+  * Source
+    * This table tracks the configurations for Source objects, including all parsing, cdc, retention, schedule, and cost parameters as well as the connection and agent used.
+    * Changing values in the Source Settings page will change values in this table
+    * Key fields: source\_id
+  * Source Relation \(source\_relation\)
+    * This table tracks the configurations of Source Relations. A single record is created for each relation, tracking its associated sources, cardinality, and expression. 
+    * Changing values in the Source Relations tab will change values in this table.
+    * Additional detail for this table can be found in the Source Relation Parameter table.
+    * Key field: source\_relation\_id.
+  * Enrichment, 
+    * This table tracks the configurations of Enrichments. A single record is created for each enrichment, tracking its associated source, expression, and datatype.
+    * Changing values in the Enrichments tab on the Source page will change values in this table.
+    * Additonal detail for this table can be found in the Enrichment Parameter table.
+    * Key field: Enrichment\_id
+  * Output
+    * This table tracks the configurations of Outputs. A single record is created for each output, tracking its parameters and connection.
+    * Changing values in the Setting tab of the Output page will change values in this table.
+    * Key field: output\_id
+  * Output Source
+    * This table tracks the configurations of Source to Output Mappings. A single record is created for each Source to Output Mapping, tracking its source, output, and parameters.
+    * Adding/Removing Sources in the Mappings tab or editing a Source to Output Mapping in the View/Edit Details popup will changes values in this table.
+    * Key field: output\_source\_id
+  * Output Column
+    * This table tracks the configurations for the individual columns that exist within an output. A single record exists for each column defined on an output, tracking its name, position, associated output, and datatype.
+    * Adding/removing/editing an output column on the Mappings tab of the Output page will change values in this table.
+    * Key Field: output\_column\_id
+  * Output Source Column
+    * This table tracks the configurations for the individual fields that are mapped into output columns. A single record exists for each Output Column to Source Field, tracking its associated output column, associated output source, and associated field.
+    * Adding/removing/editing a cell in the Mapping tab of the Output page will change values in this table.
+    * Key field: Output\_source\_column\_id
+  *  Source Dependency
+  *  Agent, and Connection.
+  * Typically, each of these tables has Service API functions that can read and write the data to the table as users update their configurations
+* Derived - These tables store dynamic data that is derived from user input. Editing configurations in the UI does not directly change them, but they are updated to reflect changes in their associated User Configured tables.
+  * Raw Attributes
+    * This table tracks 
 
 TODO:  Update with RAP 2.0 concepts
 
-![Configuration Metadata Diagram](../.gitbook/assets/image%20%28271%29%20%281%29.png)
+![Configuration ](../.gitbook/assets/image%20%28279%29.png)
 
 The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are also stored in this schema.
 
@@ -36,7 +74,7 @@ Tables containing source configuration metadata are the following:
 
 Tables containing runtime metadata are the following:
 
-![Process Metadata Diagram](../.gitbook/assets/image%20%28271%29.png)
+![Process Flow Diagram](../.gitbook/assets/image%20%28280%29.png)
 
 * **input**:  Represents a single pull of data, whether that is a single pull of a table, a CSV file, etc.
 * **landing**:  Represents a "partition" of an input.  This is the smallest unit of data that is processed by RAP.  Keyed sources are one-to-one between inputs and landings, but time series sources can be split up into multiple landings to allow for higher parallelism and overall better performance processing large chunks of data.
@@ -61,6 +99,10 @@ The **log** schema is used to capture messages raised by each actor withing RAP.
 This section lists out some metadata queries that have been useful on prior RAP implementations.
 
 TODO - put random helpful queries here
+
+TODO: add useful query patterns somewhere 
+
+TODO: refer to pyramid slide
 
 ### 
 
