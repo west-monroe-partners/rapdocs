@@ -10,6 +10,8 @@ Expressions occur in many locations in the Intellio® DataOps \(RAP\) user inter
 
 Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html). Spark SQL is negligibly different from basic SQL, so a proficiency in one typically implies a proficiency in the other.
 
+## Syntax
+
 <table>
   <thead>
     <tr>
@@ -71,6 +73,58 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
     </tr>
   </tbody>
 </table>
+
+## Auto Complete Trigger Keys
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Key</b>
+      </th>
+      <th style="text-align:left"><b>Preceding token</b>
+      </th>
+      <th style="text-align:left"><b>Drop-down values</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">.</td>
+      <td style="text-align:left">
+        <p>[This]</p>
+        <p>[Related]</p>
+        <p>Source container</p>
+      </td>
+      <td style="text-align:left">All source attributes (raw, enriched, system) + {source non-primary relations}</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">[</td>
+      <td style="text-align:left">White space or start of line</td>
+      <td style="text-align:left">[This] + all related sources (directly and pass-through via primary relations)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">`</td>
+      <td style="text-align:left">White space or start of line</td>
+      <td style="text-align:left">Spark SQL functions</td>
+    </tr>
+  </tbody>
+</table>
+
+## Example Expressions
+
+### Relation Expressions
+
+
+
+### Rule Expressions
+
+
+
+### Output Mapping Expressions
+
+
+
+### Dataviewer Filter Expressions
 
 
 
