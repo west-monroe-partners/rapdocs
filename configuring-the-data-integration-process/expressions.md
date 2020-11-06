@@ -114,15 +114,19 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 ### Relation Expressions
 
+#### For relating a pair of tables by a foreign key
 
+> \[This\].ProductID = \[Related\].ProductID
 
 ### Rule Expressions
 
+#### Multiplying an attribute from a related source \(named 'ShoppingCart'\) to an attribute of the current source through a primary relation
 
+> \[This\].ListPrice \* \[ShoppingCart\].Quantity
 
 ### Output Mapping Expressions
 
-
+More Info on output mapping expressions can be found here. 
 
 ### Dataviewer Filter Expressions
 
