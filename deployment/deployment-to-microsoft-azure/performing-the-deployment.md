@@ -204,7 +204,7 @@ Navigate to the Frontend Endpoint resource called &lt;environment&gt;-FrontendEn
 
 After adding the custom hostname, click on the custom hostname to configure the domain further. The configuration should then look similar to the following image, with the deployment specific values replaced.
 
-![](../../.gitbook/assets/image%20%28277%29.png)
+![](../../.gitbook/assets/image%20%28278%29.png)
 
 {% hint style="warning" %}
 Make sure the Azure CDN step is followed so that CDN can access the Key Vault where the secret lives
@@ -214,5 +214,21 @@ Save the configuration and this step will be complete.
 
 ## Restart Everything!
 
+At this point, all the post Terraform configuration should be good to go. There are three container instances that should be restarted now - Core, Agent, and Api. Navigate to each of the containers, click stop on them, and then click start once they're fully stopped. We recommend starting them in the following order -
+
+1. Api
+2. Core
+3. Agent
+
+Check the container logs to ensure the containers have started and are running with no errors. Once all three containers are running, it's time to go on the site!
+
 ## Auth0 Rule Updates
+
+In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
+
+![](../../.gitbook/assets/image%20%28277%29.png)
+
+## Smoke Testing
+
+Time to drop a file in!
 
