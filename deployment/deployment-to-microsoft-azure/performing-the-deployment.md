@@ -161,9 +161,25 @@ When the JSONs are updated and ready to go back into Key Vault, just create a ne
 
 ## Running Deployment Container
 
+Navigate to the Container instance named &lt;environment&gt;-Deployment-&lt;client&gt;. Ex: Dev-Deployment-Intellio. Click "Containers" on the left blade menu and then click "Logs". Check to see if the container has ran successfully. There should be a final message in the logs that says
+
+```text
+ INFO  Azure.AzureDeployActor - Deployment complete
+```
+
+If this message exists - the first time deployment is good to go.
+
+If this message does not exist - try running the container again \(click stop and start on the container\) and troubleshoot from there. 
+
+\*Add common deployment container errors here\*
+
 ## Configuring Postgres System Configuration Table
 
+
+
 ## Configuring Custom Endpoint
+
+## Restart Everything!
 
 ## Auth0 Rule Updates
 
