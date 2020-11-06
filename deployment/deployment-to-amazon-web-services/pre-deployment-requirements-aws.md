@@ -35,9 +35,13 @@ Recommended to create a premium account on [Databricks](https://databricks.com/t
 
 Create a specific account for the Intellio DataOps \(RAP\) deployment team.
 
-## Create a BitBucket Account
+## Create a GitHub Account
 
-Create a [BitBucket](https://id.atlassian.com/signup?application=bitbucket&continue=https%3A//bitbucket.org/account/signin/%3Foptintocst%3D1%26next%3D/%3Faidsignup%3D1) account. This will allow for access to the Intellio DataOps \(RAP\) source code.
+Create a [GitHub](https://github.com/) account. This will allow for access to the Intellio DataOps \(RAP\) source code.
+
+## Create a Terraform Cloud Account
+
+Create a [Terraform Cloud](https://www.terraform.io/) account. This is for infrastructure deployment.
 
 ## Create an Auth0 Account
 
