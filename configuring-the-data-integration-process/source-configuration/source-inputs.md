@@ -7,80 +7,72 @@ description: >-
 
 # !! Inputs
 
-An "Input" is RAP’s atomic unit of data processing. Conceptually, an Input corresponds to a single file or scheduled Table pull from a configured Source. 
+An "Input" is Intellio’s atomic unit of data processing. Conceptually, an Input corresponds to a single file or scheduled Table pull from a configured Source. 
 
 ## Source Inputs Tab <a id="validations-screen"></a>
 
-The Source Inputs screen allows users to monitor the status of their Sources' Inputs. If an Input has failed any steps, users can see the logs and investigate the failure.
+The Source Inputs screen allows users to monitor the status of their Sources' Inputs. The Inputs tab provides insight into the processing of all stages for a given Source. The top of the page has a variety of filters, which allow filtering based on the status of all four processing stages, as well as the file path name. The fields displayed are as follows:
 
-![Inputs Tab](../../.gitbook/assets/image%20%2840%29.png)
+### Columns and statuses
 
-Selecting any Input's field displays a modal with further details.
+* **Id** - The input ID. Used to indicate this input in logs, processes, and the dependnecy queue
+* **File** - The source file name, not present for table sources
+* **Received DateTime** - The timestamp at which the input was pulled into Intellio
+* **Size** - The total file size of the source file/database pull
+* **Record Count** - The number of records appearing in the original input file/database pull
+* **Effective Record Count** - The number of records appearing in the hub table after CDC.
+* **Status** - Indicates whether an input has successfully gone through all of its processing steps. Click this status to navigate to the Process page filtered for that input.
 
-### Process Time Modal
+  * ![](../../.gitbook/assets/completed.png)  Everything has processed correctly
+  * ![](../../.gitbook/assets/failed.png)  A failure has occurred for this input
+  * ![](../../.gitbook/assets/pending%20%281%29.png)  The input is waiting in the dependency queue
+  * ![](../../.gitbook/assets/inprogress.png)  The input is currently running a process
+  * ![](../../.gitbook/assets/image%20%28291%29.png)The input is launching a new cluster
+  * ![](../../.gitbook/assets/delete.png)The input is queued for deletion
+  * Grey Check Mark - The input has passed processing but contains 0 records.
 
-Selecting an Input's **Process Time** value displays a modal with sub-times of each of the Input's different phases.
+* **Checkbox -** Used to select multiple inputs for reprocessing
 
-![Process Times Modal](../../.gitbook/assets/image%20%2845%29.png)
+![The Inputs Page](../../.gitbook/assets/image%20%28293%29.png)
 
-### Records Staged / Processed Modal
+### Three Dot Menu 
 
-Selecting an Input's **Records Staged** or **Records Process** displays a modal with record counts at each of the Input's different phases. Each displayed Output links directly to its own page, providing an easy way to navigate a Source's configured Outputs.
+Contains reprocessing options. Kicking off any of these reprocess options will lead to all downstream processes running as well. i.e. Reset Capture Data Changes will perform enrichment, refresh, and output after completing. If one of these options is greyed out, hover over the value to find out why it is not currently a valid choice.
 
-![Records Staged + Processed Modal](../../.gitbook/assets/image%20%2878%29.png)
+* **Reset Parsing**
+  * Only present for file sources
+  * Rereads data from the source file
+  * Use this when a file is not read into Intellio correctly after adjusting the parsing parameters
+* **Reset Change Data Capture**
+  * Recalculates all CDC values and rewrites CDC files for a specific input
+  * Use this when changing the CDC tracking fields or source refresh type
+* **Reset Enrichment**
+  * Regenerate enrichment query and run it to rewrite enrichment file for a specific input
+  * User this to test out newly created enrichments.
+* **Reset Output**
+  * Regenerate output query and output delete query for a specific input and run it.
+  * Use this to repopulate outputs with newly mapped values
+* **Delete Input**
+  * Delete this input from Intellio and the hub table.
+  * This process type can cause other inputs to process in order to fill in data gaps.
+  * Use this to get rid of unwanted data
 
-### Processing Log Modal
-
-To view the Processing Logs for any specific phase of an Input, click the corresponding Input Status icon.
-
-![Select a Processing Log to Display](../../.gitbook/assets/image%20%28207%29.png)
-
-The processing Log contains detailed information useful during troubleshooting. For more information about Processing Logs, see the [Operation Guide](../../operation-guide/).
-
-![Validation Processing Log](../../.gitbook/assets/image%20%281%29.png)
-
-## Statuses and Inputs
-
-The Inputs tab provides insight into the processing of all stages for a given Source. The top of the page has a variety of filters, which allow filtering based on the status of all four processing stages, as well as the file path name.
-
-Each row represents a file for each source and each column value represents the status of a particular processing phase \(Input, Staging, Validation & Enrichment, Output\).
-
-\*\*\*\*![](../../.gitbook/assets/ready%20%281%29.png) **Ready**: Landing is prepared for processing phase – if the next phase is configured, it will automatically change to In Progress.
-
-![](../../.gitbook/assets/queued.png) **Queued**: Process queued, waiting for free connections to execute.
-
-![](../../.gitbook/assets/pending%20%281%29.png) **Pending**: Phase is waiting on a dependent source to complete processing.
-
-\*\*\*\*![](../../.gitbook/assets/inprogress.png) **In-Progress**: Processing phase currently executing.
-
-![](../../.gitbook/assets/warning.png) **Warning**: State of Source out of sync with destination table.
-
-\*\*\*\*![](../../.gitbook/assets/failed.png) **Failed**: Processing phase failed. Check detail modal to discover reason of failure.
-
-\*\*\*\*![](../../.gitbook/assets/completed.png) **Completed**: Processing phase successfully completed. Check detail modal to discover phase metadata.
+![Example Menu with Invalid Options](../../.gitbook/assets/image%20%28289%29.png)
 
 ## Controlling All Inputs
 
 Users can control all of the Inputs for a Source using the options below. Not all options will be available depending on the current state of the Source.
 
-* **Reset All Output:** Reset the Output phase for all Sources
-* **Reset All Staging:** Reset the Staging phase for all Sources
-* **Reset All Validation & Enrichment:** Reset the Validation and Enrichment phases for all Sources
+* **Reset All Output:** Reset the Output phase for all inputs
+* **Reset All Parsing:** Reset the Parsing phase for all inputs
+* **Reset All Enrichment:** Reset the Enrichment phase for all inputs
+* **Reset All Capture Data Changes:** Reset the CDC phase for all inputs
 * **Delete All Source Data:** Delete all stored data for the Source
 * **View Data:** Navigate to the Data View tab
-* **Pull Data Now:** Immediately generate a new Input for this Source
+* **Pull Data Now:** Immediately generate a new Input for this Source \(not available on watcher sources\)
+* **Recalculate**: Perform all net new and changed enrichments on the hub table to bring it up to date.
 
-![Options for All Inputs](../../.gitbook/assets/image%20%28150%29.png)
+![Options for all inputs](../../.gitbook/assets/image%20%28292%29.png)
 
-## Controlling One Input
 
-Users can control individual Inputs with the options below. Certain options are enabled depending on the current state of the Source or Input. If the state of the Source or Input does not allow the user to reset a certain phase, the reason will appear to the left of the context menu when mousing over the option.
-
-* **Reset Staging:** Reset the Staging phase for an Input
-* **Reset Output:** Reset the Output phase for an in Input
-* **Reset Validation & Enrichment:** Resets the Validation & Enrichment phase for an Input
-* **Delete:** Delete the Input from the Source
-* **View Data:** Navigate to the Data View tab - filter the data for only the selected Input
-
-![Options for One Input - Example: attempting to reset Validation &amp; Enrichment](../../.gitbook/assets/reset-reasons.png)
 
