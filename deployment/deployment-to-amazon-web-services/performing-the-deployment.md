@@ -46,27 +46,27 @@ The variable names are case sensitive - please enter them as they appear in this
 | RDSmasterusername | rap\_admin | Database master username |
 | RDSmasterpassword | password123 | Database master password - mark sensitive |
 | RDSport | 5432 | RDS port |
-| TransitiontoAA | Transition to Standard-Infrequent Access | Default is 60 days |
-| TransitiontoGLACIER | Transition to Amazon Glacier |  |
-| stageUsername | Database Stage username | e.g. stage\_user |
-| stagePassword | Database Stage password |  |
-| coreImageName | Core application Docker image tag |  |
-| agentImageName | Agent application Docker image tag |  |
-| apiImageName | API application Docker image tag |  |
-| deploymentImageName | Deployment application Docker image tag |  |
-| dockerUsername | Client docker service account username |  |
-| dockerPassword | Client docker service account password |  |
-| urlEnvPrefix | prefix for environment URLs | e.g. dev or prod |
-| baseUrl | the base URL of the certificate | example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp-rap" |
-| databricksToken | Token from the Databricks environment |  |
-| usEast1CertURL | full certificate used for SSL | e.g. \*.wmrapdemo.com |
-| auth0Domain | Auth0 domain | See Auth0 Deployment documentation. |
-| auth0ClientId | Auth0 client id |  |
-| auth0ClientSecret | Auth0 client secret |  |
+| TransitiontoAA | 60 | Transition to Standard-Infrequent Access |
+| TransitiontoGLACIER | 360 | Transition to Amazon Glacier |
+| stageUsername | stageuser | Database stage username for metastore access |
+| stagePassword | password123 | Database stage password for metastore access - mark sensitive |
+| coreImageName | 2.0.11 | Core application Docker image tag |
+| agentImageName | 2.0.11 | Agent application Docker image tag |
+| apiImageName | 2.0.11 | API application Docker image tag |
+| deploymentImageName | 2.0.11 | Deployment application Docker image tag |
+| dockerUsername | wmpintellio | DockerHub service account username |
+| dockerPassword | xxxxx | DockerHub service account password |
+| urlEnvPrefix | dev | Prefix for environment site url |
+| baseUrl | intellioplatform | the base URL of the certificate - example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp-rap" |
+| databricksToken | dapi10323SSXXXXXXX | Token from the Databricks environment - generate access token in Databricks and place here |
+| usEast1CertURL | \*.intellioplatform.com | Full certificate name \(with wildcards\) used for SSL |
+| auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
+| auth0ClientId | jdflsdfsdf | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
+| auth0ClientSecret | faddfjXXXSssddff | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
 
 ## Running Terraform Cloud
 
-When the variables are configured, Terraform is ready to generate a plan. Click the "Queue plan" button and let Terraform do it's magic. If all the variables are correct, then the plan should have about 74 resources to add. If the plan finishes successfully, then click apply and let the deployment begin!
+When the variables are configured, Terraform is ready to generate a plan. Click the "Queue plan" button and let Terraform do it's magic. If all the variables are correct, then the plan should have about 134 resources to add. If the plan finishes successfully, then click apply and let the deployment begin!
 
 \*Add common terraform run hiccups here\*
 
