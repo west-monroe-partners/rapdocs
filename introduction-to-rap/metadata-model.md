@@ -119,7 +119,7 @@ Processing metadata tracks and stores the movement and manipulation of data with
 #### **Tables**
 
 * **User Configured**
-  *  **Source Dependency** \(source\_dependency\)
+  *  Source Dependency ****\(source\_dependency\)
     * This table tracks the configurations for Source Dependencies. A single record is created for each dependency, tracking its associated sources and and interval settings. This table will be considered when determining if an enrichment process is clear to run.
     * Adding or editing a dependency on the Dependencies tab of the Source page will change values in this table. 
     * Key field: source\_dependency\_id
