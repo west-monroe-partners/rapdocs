@@ -30,26 +30,172 @@ Manually enter the following variable names and set values accordingly. If prede
 The variable names are case sensitive - please enter them as they appear in this list
 {% endhint %}
 
-| variable  | example  | description  |
-| :--- | :--- | :--- |
-| vpcCidrBlock  | 10.0  | Enter the first two digits for the VPC’s /16 CDIR block. Example: \`10.1\`  |
-| dockerUsername  | intellio  | Docker username for account that will have access to WMPDockerhub  |
-| dockerPassword  | &lt;password&gt;  | Password for above account  |
-| RDSmasterpassword  | &lt;password&gt;  | Administrative Password for the RDS Postgres Database. Use any printable ASCII character except /, double quotes, or @.  |
-| auth0ClientId  | 384u3kddxj112j3  | Client Id of Auth0 account’s Management API application  |
-| environment  | Dev | The environment to be deployed. This is prepended to all resource names Ex: Dev  |
-| databricksToken  |  | Populate this and reapply once the first deploy finishes and Databricks is configured.  |
-| auth0ClientSecret  | s09df098ds0f8s0d8f0sd98f0s  | Client secret of Auth0 account’s Management API application  |
-| auth0Domain  | intellio.auth0.com  | Domain of the Auth0 account  |
-| client  | Intellio  | Client name. This is postpended to all resource names. Ex: WMP  |
-| clientSecret  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure client secret from user/app authenticating deploy - This comes from step one, the deployment principal |
-| clientId  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure client ID from user/app authenticating deploy - This comes from step one, the deployment principal |
-| dnsZone  | dev.intellio.com  | Base URL for the wildcard cert  |
-| region  | East US  | Azure region to deploy the environment to  |
-| tenantId  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure tenant ID  |
-| subscriptionId  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure Subscription ID  |
-| cert  |  | Contents of the SSL certificate  |
-| imageVersion  | 2.x.x | Deployment version for the platform  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Variable</th>
+      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">awsRegion</td>
+      <td style="text-align:left">us-west-2</td>
+      <td style="text-align:left">AWS Region for deployment - As of 11/9/2020 us-west-1 is not supported</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">awsAccessKey</td>
+      <td style="text-align:left">AKIAXXXXXXXX</td>
+      <td style="text-align:left">Access Key for Master Deployment IAM user</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">awsSecretKey</td>
+      <td style="text-align:left">fdldsjfs8f34dfsdf344334**</td>
+      <td style="text-align:left">Secret Key for Master Deployment IAM user</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">environment</td>
+      <td style="text-align:left">Environment being deployed</td>
+      <td style="text-align:left">This will be prepended to resources in the environment. E.g. Dev. Prod.
+        etc.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Client Name</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vpcCidrBlock</td>
+      <td style="text-align:left">CIDR block (first two digits)</td>
+      <td style="text-align:left">Only the first two digits here, not the full CIDR block. e.g. 10.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">avalibilityZoneA</td>
+      <td style="text-align:left">Primary availability zone</td>
+      <td style="text-align:left">Not all regions have availability zones. e.g. us-west-2-a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">avalibilityZoneB</td>
+      <td style="text-align:left">Secondary availability zone</td>
+      <td style="text-align:left">
+        <p>Not all regions have availability zones</p>
+        <p>e.g. us-west-2-a</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RDSretentionperiod</td>
+      <td style="text-align:left">Database backup retention period (in days)</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RDSmasterusername</td>
+      <td style="text-align:left">Database master username</td>
+      <td style="text-align:left">e.g. admin</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RDSmasterpassword</td>
+      <td style="text-align:left">Database master password</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RDSpostgresengineversion</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RDSport</td>
+      <td style="text-align:left">Database port</td>
+      <td style="text-align:left">e.g. 5432</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TransitiontoAA</td>
+      <td style="text-align:left">Transition to Standard-Infrequent Access</td>
+      <td style="text-align:left">Default is 60 days</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TransitiontoGLACIER</td>
+      <td style="text-align:left">Transition to Amazon Glacier</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">stageUsername</td>
+      <td style="text-align:left">Database Stage username</td>
+      <td style="text-align:left">e.g. stage_user</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">stagePassword</td>
+      <td style="text-align:left">Database Stage password</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">coreImageName</td>
+      <td style="text-align:left">Core application Docker image tag</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">agentImageName</td>
+      <td style="text-align:left">Agent application Docker image tag</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">apiImageName</td>
+      <td style="text-align:left">API application Docker image tag</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">deploymentImageName</td>
+      <td style="text-align:left">Deployment application Docker image tag</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">dockerUsername</td>
+      <td style="text-align:left">Client docker service account username</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">dockerPassword</td>
+      <td style="text-align:left">Client docker service account password</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">urlEnvPrefix</td>
+      <td style="text-align:left">prefix for environment URLs</td>
+      <td style="text-align:left">e.g. dev or prod</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">baseUrl</td>
+      <td style="text-align:left">the base URL of the certificate</td>
+      <td style="text-align:left">example <a href="https://(urlEnvPrefix)(baseUrl).com">https://(urlEnvPrefix)(baseUrl).com</a> This
+        should not include www. .com or https://. e.g. &quot;wmp-rap&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">databricksToken</td>
+      <td style="text-align:left">Token from the Databricks environment</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">usEast1CertURL</td>
+      <td style="text-align:left">full certificate used for SSL</td>
+      <td style="text-align:left">e.g. *.wmrapdemo.com</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">auth0Domain</td>
+      <td style="text-align:left">Auth0 domain</td>
+      <td style="text-align:left">See Auth0 Deployment documentation.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">auth0ClientId</td>
+      <td style="text-align:left">Auth0 client id</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">auth0ClientSecret</td>
+      <td style="text-align:left">Auth0 client secret</td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Running Terraform Cloud
 
