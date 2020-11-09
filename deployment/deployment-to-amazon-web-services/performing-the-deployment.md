@@ -84,7 +84,7 @@ After the terraform is complete, there will be various resources created in the 
 
 Log into the Databricks account that was created during Pre-Deployment steps.
 
-Configure instance profile - [Official Databricks Documentation](https://docs.databricks.com/administration-guide/cloud-configurations/aws/instance-profiles.html). When configuring the instance profile, make sure that the authorized S3 bucket is "&lt;environment&gt;-datalake-&lt;client&gt;" ex: dev-datalake-intellio.
+Configure instance profile - [Official Databricks Documentation](https://docs.databricks.com/administration-guide/cloud-configurations/aws/instance-profiles.html)
 
 Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
 
@@ -92,7 +92,7 @@ Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with th
 
 After the pool is created, save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating Secrets Manager.
 
-In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations. Make sure the previously created instance profile is used when configuring.
+In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations
 
 ![](../../.gitbook/assets/image%20%28288%29.png)
 
@@ -129,8 +129,6 @@ This should not error out and should display the table data.
 Capture a value out of the Databricks URL before moving on to the Secret Manager step. If the URL is [https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration  ](https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration%20)then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Secret Manager secrets.
 
 ## Updating Secrets Manager
-
-\*\*\*\*\*\*\*next to update
 
 There are two Key Vaults that will need updated before the containers can run properly. The keys in the JSON will all exist, but some of the values will need to be updated/replaced.
 

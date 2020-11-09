@@ -5,7 +5,7 @@ description: >-
   information.
 ---
 
-# !! Metadata Model
+# Metadata Model
 
 As a metadata driven tool, Intellio has a broad interconnected set of metadata tables that store and relate the various aspects of the platform. The majority of this data is stored in the meta schema, with the exception of logs which are stored in the log schema. An understanding of the backend tables can be helpful for diagnosing issues and creating efficient platform configurations. The metadata tables can be broken into three major categories:
 

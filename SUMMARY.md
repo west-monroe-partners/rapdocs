@@ -35,7 +35,7 @@
     * [Databricks](introduction-to-rap/rap-infrastructure-components/databricks.md)
     * [PostgreSQL Database](introduction-to-rap/rap-infrastructure-components/metadata-and-intermediate-processing-storage.md)
     * [Resource Sizing](introduction-to-rap/rap-infrastructure-components/resource-sizing.md)
-  * [!! Metadata Model](introduction-to-rap/metadata-model.md)
+  * [Metadata Model](introduction-to-rap/metadata-model.md)
   * [!! Data Storage](introduction-to-rap/storage-data-model.md)
 * [!! Environment Management](deployment/README.md)
   * [!! Installing a New RAP Agent \(On Premise\)](deployment/installing-a-new-rap-agent/README.md)
