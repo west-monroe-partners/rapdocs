@@ -40,6 +40,7 @@
   * [!! Installing a New RAP Agent \(On Premise\)](deployment/installing-a-new-rap-agent/README.md)
     * [!! Connecting a RAP Agent to a RAP Source](deployment/installing-a-new-rap-agent/connecting-a-rap-agent-to-a-source.md)
   * [Deployment to Amazon Web Services](deployment/deployment-to-amazon-web-services/README.md)
+    * [Performing the Deployment](deployment/deployment-to-amazon-web-services/performing-the-deployment.md)
     * [Pre Deployment Requirements \(AWS\)](deployment/deployment-to-amazon-web-services/pre-deployment-requirements-aws.md)
     * [Using the Deployment Service in AWS](deployment/deployment-to-amazon-web-services/using-the-deployment-service-in-ecs.md)
     * [!! Installing a New RAP Agent On ECS \(AWS\)](deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
