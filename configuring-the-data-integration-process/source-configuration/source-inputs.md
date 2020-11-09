@@ -5,7 +5,7 @@ description: >-
   step.
 ---
 
-# !! Inputs
+# Inputs
 
 An "Input" is Intellio’s atomic unit of data processing. Conceptually, an Input corresponds to a single file or scheduled Table pull from a configured Source. 
 
