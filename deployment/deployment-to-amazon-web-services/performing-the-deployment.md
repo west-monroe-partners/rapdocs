@@ -84,7 +84,7 @@ After the terraform is complete, there will be various resources created in the 
 
 Log into the Databricks account that was created during Pre-Deployment steps.
 
-Configure instance profile - ADD CONTENT
+Configure instance profile - [Official Databricks Documentation](https://docs.databricks.com/administration-guide/cloud-configurations/aws/instance-profiles.html)
 
 Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
 
