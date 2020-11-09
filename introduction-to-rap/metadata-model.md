@@ -204,7 +204,7 @@ Tables containing runtime metadata are the following:
 
 ![Process Flow Diagram](../.gitbook/assets/image%20%28280%29.png)
 
-### Useful Queries
+## Useful Queries
 
 This section lists out some metadata queries that have been useful on prior RAP implementations.
 
