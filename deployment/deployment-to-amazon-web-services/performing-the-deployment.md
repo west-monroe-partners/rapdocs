@@ -32,6 +32,8 @@ Make sure that the Terraform version in the workspace is set to "0.12.29"
 
 Manually enter the following variable names and set values accordingly. If predeployment steps were followed, these values should be mostly known. 
 
+In Databricks, click user dropdown in the top right of the Databricks portal. Click "User Settings" in the dropdown. On the Access Tokens tab, click "Generate New Token". Set the token lifetime to blank, so the token will not expire. Use the token in the "databricksToken" variable here.
+
 {% hint style="danger" %}
 The variable names are case sensitive - please enter them as they appear in this list
 {% endhint %}
@@ -82,69 +84,51 @@ After the terraform is complete, there will be various resources created in the 
 
 Log into the Databricks account that was created during Pre-Deployment steps.
 
-In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations
-
-![](../../.gitbook/assets/image%20%28276%29.png)
+Configure instance profile - ADD CONTENT
 
 Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
 
-![](../../.gitbook/assets/image%20%28275%29.png)
+![](../../.gitbook/assets/image%20%28287%29.png)
 
-After the pool is created, save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating the Key Vault.
+After the pool is created, save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating Secrets Manager.
+
+In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations
+
+![](../../.gitbook/assets/image%20%28288%29.png)
 
 Navigate to the Databricks home screen and create a new notebook. On a command box, add this code snippet:
 
 ```text
-val databricksPrincipalId = ""
-val databricksPrincipalSecret = ""
-val databricksPrincipalEndpoint = ""
 val environment = ""
 val client = ""
 
 spark.sql("CREATE DATABASE " + environment.toLowerCase)
-
-val configs = Map(
-  "fs.azure.account.auth.type" -> "OAuth",
-  "fs.azure.account.oauth.provider.type" -> "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-  "fs.azure.account.oauth2.client.id" -> databricksPrincipalId,
-  "fs.azure.account.oauth2.client.secret" -> databricksPrincipalSecret,
-  "fs.azure.account.oauth2.client.endpoint" -> databricksPrincipalEndpoint)
-
-dbutils.fs.mount(
-  source = "abfss://"+environment+"-jars-"+client+"@"+environment+"storage"+client+".dfs.core.windows.net/",
-  mountPoint = "/mnt/jars",
-  extraConfigs = configs)
-  
-val df = spark.read.format("avro").load("dbfs:/mnt/jars/datatypes.avro")
+val df = spark.read.format("avro").load("s3a://"+environment.toLowerCase+"-datalake-"+client.toLowerCase+"/datatypes.avro")
 df.write.saveAsTable("datatypes")
-spark.sql("INSERT INTO datatypes SELECT decimal + 1, bigint + 1, string || '2',
- int +1, float +1, double +1, date + INTERVAL 1 DAY, timestamp + INTERVAL 1 HOUR,
-  false, long + 1 FROM datatypes")
+spark.sql("INSERT INTO datatypes SELECT decimal + 1, bigint + 1, string || '2', int +1, float +1, double +1, date + INTERVAL 1 DAY, timestamp + INTERVAL 1 HOUR, false, long + 1 FROM datatypes")
 ```
 
-There are 5 variables at the top that will need to be updated. Navigate to Active Directory and then App Registrations. Search for the application named &lt;Environment&gt;-Databricks. Ex: Dev-Databricks. Click on this application. Use the Application \(client\) ID on the App Registration overview as the databricksPrincipalId value. Create a new client secret in the App Registration and save that value in the databricksPrincipalSecret value. Head back to the overview of this App Registration and click "Endpoints". Copy the value in "OAuth 2.0 token endpoint \(v1\)" and save that value in the databricksPrincipalEndpoint variable. Finally, enter the environment and client values that we used in the Terraform variable step.
+There are 2 variables at the top that will need to be updated. Enter the environment and client values that we used in the Terraform variable step.
 
-Navigate to the storage container in the resource group called "&lt;environment&gt;storage&lt;client&gt;" Ex: devstorageintellio
+Navigate to the S3 bucket named "&lt;environment&gt;-datalake-&lt;client&gt;" Ex: dev-datalake-intellio
 
-Place the following file in the container called "&lt;environment&gt;-jars-&lt;client&gt;" Ex: dev-jars-intellio
+Place the following file in the bucket root-
 
 {% embed url="https://s3.us-east-2.amazonaws.com/wmp.rap/datatypes.avro" %}
 
 Once this file is uploaded, connect the workbook to the cluster that was created earlier, and run this snippet.
 
-Test that the jars path is mounted by running 
+Test that the table is created by running
 
 ```text
-dbutils.fs.ls("mnt/jars")
+spark.sql("select * from datatypes").show
 ```
 
-This should not error out and should list the datatypes.avro file.
+This should not error out and should display the table data.
 
-Next, click on the user dropdown in the top right of the Databricks portal. Click "User Settings" in the dropdown. On the Access Tokens tab, click "Generate New Token". Set the token lifetime to blank, so the token will not expire. Copy the token for use later on \(It will be used in the "Updating Key Vaults" section of this guide.
+Capture a value out of the Databricks URL before moving on to the Secret Manager step. If the URL is [https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration  ](https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration%20)then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Secret Manager secrets.
 
-Capture a value out of the Databricks URL before moving on to the key vault step. If the URL is [https://xxxxxxxxxxxx.azuredatabricks.net/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration](https://adb-4433553810974403.3.azuredatabricks.net/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration) then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Key Vault.
-
-## Updating Key Vaults
+## Updating Secrets Manager
 
 There are two Key Vaults that will need updated before the containers can run properly. The keys in the JSON will all exist, but some of the values will need to be updated/replaced.
 
