@@ -110,52 +110,110 @@ These tables store static data provided by Intellio itself. This data is used as
 
 ![Configuration Metadata Tables](../.gitbook/assets/image%20%28281%29.png)
 
-## Processing Metadata
+## Runtime Metadata
 
-The **stage** schema consists of both configuration metadata and processing metadata.  All metadata that defines what each source is, how they get processed and the outputs they get written to are stored in this schema.  All metadata around each process and data that flows through RAP are also stored in this schema.
+Processing metadata tracks and stores the movement and manipulation of data within Intellio. Every time that data is pulled into the system, it goes through a standard set of operations that can be found [here](https://intellio.gitbook.io/dataops/logical-architecture-overview/data-processing-engine/data-processing-1). Throughout the course of this processing, Intellio must constantly evaluate if and when a process is valid to proceed forward to its next steps. This logic called the Intellio **Workflow** takes place in a series of tables and functions. Additionally, details about each process and the Spark jobs that run it are stored in **Log** tables keep track of all logs produced by the processes.
 
-Tables containing source configuration metadata are the following:
+### **Workflow**
 
-* **source**:  Represents a single piece of source data and all the configuration metadata related to that source.  This is analogous to the Source page in the RAP UI.  This can be a type of flat file, database table, etc.
-* **source\_dependency**:  Lists out the dependencies between sources and the lag intervals allowed for those dependencies.  This table is used to determine whether an input should wait for updated data on another source before running Validation & Enrichment processing.
-* **output**:  A single output generated from RAP, whether that is a CSV file, a database table, etc.
-* **output\_column**:  Lists out the fields \(and associated datatypes\) for every output.
-* **output\_source**:  Lists out which outputs each source will get written to.
-* **output\_source\_column**:  Contains the source to target mapping for each **output\_source**.
-* **connection**:  Contains information about each connection for file and database sources / targets.  This contains database connection credentials / information for database connections and folder paths for file connections.
-* ~~**lookup**:  Contains the list of sources that need lookup tables built.  This is required for support of lookups not on the primary key \(i.e., not using s\_key\).~~
+#### **Tables**
+
+* **User Configured**
+  *  **Source Dependency** \(source\_dependency\)
+    * This table tracks the configurations for Source Dependencies. A single record is created for each dependency, tracking its associated sources and and interval settings. This table will be considered when determining if an enrichment process is clear to run.
+    * Adding or editing a dependency on the Dependencies tab of the Source page will change values in this table. 
+    * Key field: source\_dependency\_id
+* **Derived**
+  * Schedule Run \(schedule\_run\)
+    * This table tracks the scheduled ingestion processes within Intellio tacking the source, start time, and agent involved.
+    * Every time an ingestion process is supposed to run, whether by a Pull Now, Schedule, or Watcher, a new record will be created in this table 
+    * Key field: schedule\_run\_id
+  * Input
+    * This table tracks single pulls of data, whether that is a single pull of a table, a CSV file, etc. It tracks the time of ingest, number of records, and overall status of the input.
+    * Every time an ingestion completes, a new record will be created in this table
+    * Key field: input\_id
+  * Workflow Queue \(workflow\_queue\)
+    * This table tracks each process that is waiting to be run though Intellio including all parameters necessary for running the process. 
+    * Before a process can be run, it MUST be inserted into this table. Intellio will then check the ability of that process to run. 
+      * If it is unable to be run in the current state, the wait\_reasons field will be updated.
+      *  If it is able to run, the record will be immediately removed from the table and passed along to the process enqueueing funcion.
+    * Records in this table will be checked every time an Intellio process finishes.
+    * Key field: workflow\_queue\_id
+  * Process 
+    * This table tracks each process that is ready to run in Intellio including all parameters necessary to run the process.
+    * If a process is present in this table, it is valid to run. All of its wait conditions and dependencies have been satisfied. 
+    * Spark jobs will periodically check this table for work. Any process present will be picked up and completed as resources are available.
+    * Key field: process\_id
+  * Spark Job
+    * This table tracks each spark job launched by Intellio for processing, including its name, size, job id, heartbeat, and current process.
+    * A job will remain in this table and update its heartbeat timestamp every 30 seconds for as long as it is running. 
+    * Key field: Job\_id
+* **System Provided**
+  * Workflow
+    * This table tracks the processes that should be enqueued and released following each process type
+    * Each row has a completed process type, a status \(Pass or Fail\), a list of process types to enqueue after completion, and a list of process types to check after completion. Some records have additional subtype and cloud parameters can can further refine the processing done. 
+    * Key Field: completed\_process/completed\_process\_subtype/status\_code/refresh\_type/ingestion\_type/cloud
+  * Wait Type \(wait\_type\)
+    * This table tracks all of the various reasons a process may need to wait before it can be run
+    * Each row contains a process type, a refresh type, and a query that will be run to determine if a wait is needed.
+    * Each query is tokenized with &lt;source\_id&gt;, &lt;input\_id&gt;, or &lt;process\_id&gt; which will be replaced with the value of the process in question when being executed.
+    * For each query, a null result means that the process does not need to wait for that specific reason, however a process may have multiple wait conditions. It must pass them all in order to be enqueued.
+
+#### Functions
+
+* Workflow Enqueue \(prc\_w\_trigger\_enqueue\)
+  * This function takes a process ID and a status code as arguments. It is called from the process end function.
+  * Based on the supplied process id and status code, the function will check the workflow table to determine which processes should be inserted into the workflow queue
+  * Logic in the function will dictate which parameters are stored on each workflow queue record. This varies by process type.
+  * This function ends after writing records to the workflow queue table.
+* Workflow Release \(prc\_w\_trigger\_release\)
+  * This function takes a process ID and a status code as arguments. It is called from the Core after running the workflow enqueue function.
+  * Based on the supplied process id and status code, the function will check the workflow table to determine which processes should be checked for release from the workflow queue.
+  * For each process that needs to be checked, the function will retrieve the applicable queries from the wait type table based on process type and refresh type. 
+  * If the function does not find any wait reasons, it will remove the record from the workflow queue table and pass the process on to the process enqueueing function.
+  * If the function does find applicable wait reasons, it will update the record in the workflow queue table to reflect these reasons.
+  * This function ends after running all applicable wait type queries against each applicable process.
+* Process Enqueue \(prc\_process\_enqueue\)
+  * This function takes a number of arguments that vary from process to process, it only operates on a single process per function run. It is called from the workflow release function.
+  * The process will update input statuses and generate queries as needed. It will then insert a record to the process table for a spark cluster to pick up and run.
+  * The process is finished after inserting a record to the process queue.
+* Get Next \(prc\_process\_get\_next\)
+  * Spark jobs will call this function when they are ready for work.
+  * The function takes a spark job id as an argument
+  * Based on the spark job size, it will be matched with a process from the process table. The job will then run that process.
+  * If there is no work to be done, the spark job will be told to wait and try again.
+  * The function ends when it returns a new process id to the spark job, or when it tells the spark job to wait for more work.
+* Process End \(prc\_process\_end\)
+  * This function takes a process id and a status code as arguments. Is it called by the spark job when it has finished the process
+  * It will move the process from the process table to process history. It then calls the Workflow Enqueue function. Bringing us full circle.
+
+### Logging
+
+* Agent Log \(log.agent\)
+  * This table tracks all logs from the agent, including the agent code, timestamp, and message.
+  * These logs can be seen in the agent tab of the UI.
+* Actor Log \(log.actor\_log\)
+  * This table tracks all logs from the core, sparky and some database functions. They include the log id, a timestamp, a message, and a severity.
+  * These logs can be seen in the process screen of the UI.
+* API Log \(log.api\_log\)
+  * This table tracks all errors from the API. They include the timestamp, submitted userid, request body and headers, and the server error message.
+  * Only errors are tracked in this table
+  * These logs cannot currently be seen in the UI.
 
 Tables containing runtime metadata are the following:
 
 ![Process Flow Diagram](../.gitbook/assets/image%20%28280%29.png)
 
-* **input**:  Represents a single pull of data, whether that is a single pull of a table, a CSV file, etc.
-* **landing**:  Represents a "partition" of an input.  This is the smallest unit of data that is processed by RAP.  Keyed sources are one-to-one between inputs and landings, but time series sources can be split up into multiple landings to allow for higher parallelism and overall better performance processing large chunks of data.
-* **output\_send**:  Represents a single instance of an output that is generated.  One output\_send record is generated each time a source dataset is written for an output.  For example, in the instance where 5 sources write to the same output in a given day, 5 output\_send records are generated on that same day for that output.
-* **dependency\_queue**:  Lists out all the inputs / sources that have not had their wait conditions satisfied yet and are in a waiting status.  Metadata is also stored that shows which source is blocking the dependency from being cleared.
-* **process\_batch**:  Lists out each batch of data that is either in progress or ready to run.  What each batch represents depends on the processing step.  For staging though V&E, each batch will be a single input going through one step of processing \(staging, cdc, validation\).  On the output side, each batch will be a single instance of an output being written out.  Each output batch can contain one or more output\_send records.  These records are moved over to the process\_batch\_history table after the batch completes execution.
-* **process**:  Lists out each unit of work being done within batches that are in-progress or ready to run.  This generally is one-to-one with landings through the validation step.  The RAP orchestrator uses this as its processing queue table and pulls unprocessed records off this queue as processing slots open up.
-* **process\_batch\_history**:  Lists out the history of batches that have already ran and completed execution.
-* **process\_history**:  List out the history of processes that have already ran and completed execution.
-* ~~**lookup\_table**:  List of all the active lookup tables in the work schema.~~
-
-### Log Data \(log\)
-
-The **log** schema is used to capture messages raised by each actor withing RAP.  Most of the messages exposed through the UI are logged in this schema.  Tables stored here in combination with log files written on the servers for the RAP orchestrator and on-premise Agents can be used for troubleshooting errors.
-
-* **actor\_log**:  Contains log messages generated from the various actors maintained by the Orchestrators.  These correspond to messages viewable on the Inputs and Process pages.
-* **agent**: Contains log messages generated by the various on-premise RAP Agents.  These are the same log messages visible on the Agent tab on the RAP UI.
-* **staging\_error**:  Contains the error messages and associated raw record that cause the Staging step to fail.
-
 ### Useful Queries
 
 This section lists out some metadata queries that have been useful on prior RAP implementations.
 
-TODO - put random helpful queries here
-
-TODO: add useful query patterns somewhere 
-
-TODO: refer to pyramid slide
+* To see process logs
+  * SELECT \* FROM log.actor\_log a JOIN meta.process\_history p ON a.log\_id = p.log\_id WHERE process\_id = &lt;process\_id&gt;
+* To see the reason for your api error
+  * SELECT \* FROM log.api\_log WHERE user\_id = &lt;user\_id@domain.com&gt;
+* To check if your source is scheduled to run
+  * SELECT \* FROM meta.schedule\_run WHERE source\_id = &lt;source\_id&gt;
 
 ### 
 
