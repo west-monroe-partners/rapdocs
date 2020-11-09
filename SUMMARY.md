@@ -88,7 +88,7 @@
     * [!! RAP Agent](operation-guide/monitoring-the-process/rap-agent.md)
 * [Historical Reference](historical-reference/README.md)
   * [How it Works \(RAP 1.0\)](historical-reference/components-and-concepts.md)
-* [!! Changelog](changelog/README.md)
+* [Changelog](changelog/README.md)
   * [2.0](changelog/2.0/README.md)
     * [2.0.11](changelog/2.0/2.0.11.md)
     * [2.0.10](changelog/2.0/2.0.10.md)
