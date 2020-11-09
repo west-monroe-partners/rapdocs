@@ -1,3 +1,7 @@
+---
+description: '******THIS IS NOT COMPLETE OR READY FOR CLIENT USE*****************'
+---
+
 # Performing the Deployment
 
 ## Creating Deployment AWS User for Terraform
@@ -72,11 +76,11 @@ When the variables are configured, Terraform is ready to generate a plan. Click 
 
 ## Post Terraform Steps
 
-After the terraform is complete, there will be a resource group now created in Azure Portal. These are the main resources created by Terraform, but there are still configuration changes that need to be done before any data can be brought into the platform. 
+After the terraform is complete, there will be various resources created in the AWS account. These are the main resources created by Terraform, but there are still configuration changes that need to be done before any data can be brought into the platform. 
 
 ## Configuring Databricks
 
-In the Azure Portal Resource Group that's been created, navigate to the Databricks resource. Click "Launch Workspace" on the overview page.
+Log into the Databricks account that was created during Pre-Deployment steps.
 
 In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations
 
