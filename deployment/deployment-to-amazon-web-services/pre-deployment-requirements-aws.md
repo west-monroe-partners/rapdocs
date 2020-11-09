@@ -59,172 +59,37 @@ If a VPN vendor is not already chosen, recommend to utilize Open VPN which can b
 
 What follows is a list of parameters that tailor the AWS deployment environment.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Variable</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Additional Info</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">awsRegion</td>
-      <td style="text-align:left">AWS Region for deployment</td>
-      <td style="text-align:left">As of 6/24/2020 us-west-1 is not supported</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">awsAccessKey</td>
-      <td style="text-align:left">Access key for AWS account running the terraform script</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">awsSecretKey</td>
-      <td style="text-align:left">Secret Key for AWS account running the terraform script</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">environment</td>
-      <td style="text-align:left">Environment being deployed</td>
-      <td style="text-align:left">This will be prepended to resources in the environment. E.g. Dev. Prod.
-        etc.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Client Name</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">vpcCidrBlock</td>
-      <td style="text-align:left">CIDR block (first two digits)</td>
-      <td style="text-align:left">Only the first two digits here, not the full CIDR block. e.g. 10.1</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">avalibilityZoneA</td>
-      <td style="text-align:left">Primary availability zone</td>
-      <td style="text-align:left">Not all regions have availability zones. e.g. us-west-2-a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">avalibilityZoneB</td>
-      <td style="text-align:left">Secondary availability zone</td>
-      <td style="text-align:left">
-        <p>Not all regions have availability zones</p>
-        <p>e.g. us-west-2-a</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">RDSretentionperiod</td>
-      <td style="text-align:left">Database backup retention period (in days)</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">RDSmasterusername</td>
-      <td style="text-align:left">Database master username</td>
-      <td style="text-align:left">e.g. admin</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">RDSmasterpassword</td>
-      <td style="text-align:left">Database master password</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">RDSpostgresengineversion</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">RDSport</td>
-      <td style="text-align:left">Database port</td>
-      <td style="text-align:left">e.g. 5432</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TransitiontoAA</td>
-      <td style="text-align:left">Transition to Standard-Infrequent Access</td>
-      <td style="text-align:left">Default is 60 days</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TransitiontoGLACIER</td>
-      <td style="text-align:left">Transition to Amazon Glacier</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">stageUsername</td>
-      <td style="text-align:left">Database Stage username</td>
-      <td style="text-align:left">e.g. stage_user</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">stagePassword</td>
-      <td style="text-align:left">Database Stage password</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">coreImageName</td>
-      <td style="text-align:left">Core application Docker image tag</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">agentImageName</td>
-      <td style="text-align:left">Agent application Docker image tag</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">apiImageName</td>
-      <td style="text-align:left">API application Docker image tag</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">deploymentImageName</td>
-      <td style="text-align:left">Deployment application Docker image tag</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">dockerUsername</td>
-      <td style="text-align:left">Client docker service account username</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">dockerPassword</td>
-      <td style="text-align:left">Client docker service account password</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">urlEnvPrefix</td>
-      <td style="text-align:left">prefix for environment URLs</td>
-      <td style="text-align:left">e.g. dev or prod</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">baseUrl</td>
-      <td style="text-align:left">the base URL of the certificate</td>
-      <td style="text-align:left">example <a href="https://(urlEnvPrefix)(baseUrl).com">https://(urlEnvPrefix)(baseUrl).com</a> This
-        should not include www. .com or https://. e.g. &quot;wmp-rap&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">databricksToken</td>
-      <td style="text-align:left">Token from the Databricks environment</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">usEast1CertURL</td>
-      <td style="text-align:left">full certificate used for SSL</td>
-      <td style="text-align:left">e.g. *.wmrapdemo.com</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">auth0Domain</td>
-      <td style="text-align:left">Auth0 domain</td>
-      <td style="text-align:left">See Auth0 Deployment documentation.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">auth0ClientId</td>
-      <td style="text-align:left">Auth0 client id</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">auth0ClientSecret</td>
-      <td style="text-align:left">Auth0 client secret</td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Variable | Example | Description |
+| :--- | :--- | :--- |
+| awsRegion | us-west-2 | AWS Region for deployment - As of 11/9/2020 us-west-1 is not supported |
+| awsAccessKey | AKIAXXXXXXXX | Access Key for Master Deployment IAM user  - mark as sensitive |
+| awsSecretKey | fdldsjfs8f34dfsdf344334\*\* | Secret Key for Master Deployment IAM user - mark as sensitive |
+| environment | dev | This will be prepended to resources in the environment. E.g. Dev. Prod. etc.  |
+| client | intellio | This will be postpended to resources in the environment - use company or organization name |
+| vpcCidrBlock | 10.1 | Only the first two digits here, not the full CIDR block |
+| avalibilityZoneA | us-west-2a | Not all regions have availability zones |
+| avalibilityZoneB | us-west-2b | Not all regions have availability zones |
+| RDSretentionperiod | 7 | Database backup retention period \(in days\) |
+| RDSmasterusername | rap\_admin | Database master username |
+| RDSmasterpassword | password123 | Database master password - mark sensitive |
+| RDSport | 5432 | RDS port |
+| TransitiontoAA | 60 | Transition to Standard-Infrequent Access |
+| TransitiontoGLACIER | 360 | Transition to Amazon Glacier |
+| stageUsername | stageuser | Database stage username for metastore access |
+| stagePassword | password123 | Database stage password for metastore access - mark sensitive |
+| coreImageName | 2.0.11 | Core application Docker image tag |
+| agentImageName | 2.0.11 | Agent application Docker image tag |
+| apiImageName | 2.0.11 | API application Docker image tag |
+| deploymentImageName | 2.0.11 | Deployment application Docker image tag |
+| dockerUsername | wmpintellio | DockerHub service account username |
+| dockerPassword | xxxxx | DockerHub service account password |
+| urlEnvPrefix | dev | Prefix for environment site url |
+| baseUrl | intellioplatform | the base URL of the certificate - example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp-rap" |
+| databricksToken | dapi10323SSXXXXXXX | Token from the Databricks environment - generate access token in Databricks and place here |
+| usEast1CertURL | \*.intellioplatform.com | Full certificate name \(with wildcards\) used for SSL |
+| auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
+| auth0ClientId | jdflsdfsdf | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
+| auth0ClientSecret | faddfjXXXSssddff | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
 
 ## Verify the deployment
 
