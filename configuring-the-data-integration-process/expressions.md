@@ -107,6 +107,11 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
       <td style="text-align:left">White space or start of line</td>
       <td style="text-align:left">Spark SQL functions</td>
     </tr>
+    <tr>
+      <td style="text-align:left">~</td>
+      <td style="text-align:left">Source Container</td>
+      <td style="text-align:left">All Relations by relation name instead of related source name.</td>
+    </tr>
   </tbody>
 </table>
 
