@@ -76,11 +76,15 @@ In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-
 
 ![](../../.gitbook/assets/image%20%28276%29.png)
 
-Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
+Click "Create Cluster".
+
+Naviage back to to "Clusters" and click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
 
 ![](../../.gitbook/assets/image%20%28275%29.png)
 
-After the pool is created, save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating the Key Vault.
+Click "Create".
+
+After the pool is created, go back to the pool configuration and save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating the Key Vault.
 
 Navigate to the Databricks home screen and create a new notebook. On a command box, add this code snippet:
 
@@ -107,9 +111,7 @@ dbutils.fs.mount(
   
 val df = spark.read.format("avro").load("dbfs:/mnt/jars/datatypes.avro")
 df.write.saveAsTable("datatypes")
-spark.sql("INSERT INTO datatypes SELECT decimal + 1, bigint + 1, string || '2',
- int +1, float +1, double +1, date + INTERVAL 1 DAY, timestamp + INTERVAL 1 HOUR,
-  false, long + 1 FROM datatypes")
+spark.sql("INSERT INTO datatypes SELECT decimal + 1, bigint + 1, string || '2',int +1, float +1, double +1, date + INTERVAL 1 DAY, timestamp + INTERVAL 1 HOUR,false, long + 1 FROM datatypes")
 ```
 
 There are 5 variables at the top that will need to be updated. Navigate to Active Directory and then App Registrations. Search for the application named &lt;Environment&gt;-Databricks. Ex: Dev-Databricks. Click on this application. Use the Application \(client\) ID on the App Registration overview as the databricksPrincipalId value. Create a new client secret in the App Registration and save that value in the databricksPrincipalSecret value. Head back to the overview of this App Registration and click "Endpoints". Copy the value in "OAuth 2.0 token endpoint \(v1\)" and save that value in the databricksPrincipalEndpoint variable. Finally, enter the environment and client values that we used in the Terraform variable step.
