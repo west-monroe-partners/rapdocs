@@ -133,9 +133,9 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 ### Rule Expressions
 
-#### _Multiplying an attribute from a related source \(named 'ShoppingCart'\) to an attribute of the current source through a primary relation_
+#### _Multiplying an attribute from a related source to an attribute of the current source through a primary relation_
 
-> \[This\].ListPrice \* \[ShoppingCart\].Quantity
+> \[This\].ListPrice \* \[Related Source Name\].Quantity
 
 #### _Aggregating a column from a primary related source with many cardinality_
 
