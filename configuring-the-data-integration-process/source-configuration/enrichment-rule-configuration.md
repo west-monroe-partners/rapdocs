@@ -45,7 +45,7 @@ To create a new Rule, click the **New Rule** button. This opens the create/edit 
 | **Unique Value** | FALSE | Signifies that the Rule Attribute will have unique values for every record. |
 | **Active** | TRUE | Allows the user to set this Validation as Active or not. If Active, it affects the Source load. |
 
-Click **Save** to save the Enrichment. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
+Click **Save** to save the Rule. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
 
 ## Rule Expressions
 
