@@ -133,11 +133,11 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 ### Rule Expressions
 
-More Info on rule expressions can be found [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/source-configuration/enrichment-rule-configuration#example-expressions).
+More Info on rule expressions and examples can be found at the bottom of the rules page of the configuration guide [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/source-configuration/enrichment-rule-configuration#example-expressions).
 
 ### Output Mapping Expressions
 
-More Info on output mapping expressions can be found [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/output-configuration/output-mapping#mapping-expressions). 
+More Info on output mapping expressions and examples can be found at the bottom of the output mapping page of the configuration guide [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/output-configuration/output-mapping#mapping-expressions). 
 
 
 
