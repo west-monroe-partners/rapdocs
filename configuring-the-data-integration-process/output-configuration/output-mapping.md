@@ -4,7 +4,7 @@ description: >-
   allows a user to rename columns, append multiple Sources, and filter data.
 ---
 
-# !! Output Mapping
+# Output Mapping
 
 ## Key Terms 
 
@@ -123,9 +123,9 @@ Once the user clicks the empty cell they would like to map a value to, the expre
 
 ![](../../.gitbook/assets/image%20%28264%29.png)
 
-To map an attribute from the target source of the channel, type a period "." to reveal a drop down of all attributes of this channel's source. Choose an attribute from the drop down to map it to the target field.  
+To begin mapping an attribute, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel and the target source of the channel, represented by _\[This\]_.   
   
-To map an attribute from a source that is related to the target source of the channel, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel. Once the user has selected a related source, a drop down of the attributes of that related source can be revealed by typing a period ".". Then, choose an attribute from the drop down to map it to the target field.
-
-### 
+To map an attribute from the target source of the channel select _\[This\]_, or to map an attribute from a source that is related to the target source of the channel, choose one of the other sources in the drop down.  
+  
+Once a source has been selected, they can type a period "." to reveal a drop down of all attributes of this selected source. Choose an attribute from the drop down to map it to the target field.
 
