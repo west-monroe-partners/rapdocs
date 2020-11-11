@@ -119,21 +119,31 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 ### Relation Expressions
 
-#### _For relating a pair of tables by a foreign key_
+#### For relating a pair of tables by a foreign key
 
 > \[This\].ProductID = \[Related\].ProductID
 
-#### _For relating a table by finding a key within one of many fields_
+#### For relating a table by finding a key within one of many fields
 
 > \[This\].CityName IN \(\[Related\].DepartureCity, \[Related\].ArrivalCity\)
 
-#### _For relating a table by finding a quantity within a range_
+#### For relating a table by finding a quantity within a range
 
 > \[This\].Subtotal BETWEEN \(\[Related\].Subtotal - 10\) AND \(\[Related\].Subtotal + 10\)
 
 ### Rule Expressions
 
-More Info on rule expressions can be found here.
+#### _Multiplying an attribute from a related source to an attribute of the current source through a primary relation_
+
+> \[This\].ListPrice \* \[Related Source Name\].Quantity
+
+#### _Aggregating a column from a primary related source with many cardinality_
+
+> SUM\(\[Related Source Name\].SalesTotal\)
+
+#### _Aggregating a column from a non-primary related source with many cardinality_
+
+> SUM\(\[This\]~{Relation Name}~\[Related Source Name\].SalesTotal\)
 
 ### Output Mapping Expressions
 
