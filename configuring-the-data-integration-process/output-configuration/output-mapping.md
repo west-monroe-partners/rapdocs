@@ -8,13 +8,13 @@ description: >-
 
 ## Key Terms 
 
-* **Columns:** Define the final schema of the Output data.
+* **Columns:** Define the final schema of the Output data, such as the target file headers or table column names and types.
 * **Channel:** Union between a source and the output, that defines how attributes from the source flow into the output.
 * **Mapping:** Expression that ties a channel to a column.
 * **Output Mapping:** Collection of all mappings that collectively defines how the data moves from all channels into the output table.
 
 {% hint style="info" %}
-Important note: no changes made to an output mapping will take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
+Changes made to an output mapping will not take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
 {% endhint %}
 
 ## Adding a Channel
@@ -23,26 +23,26 @@ To enable mappings between an output and a source, the first step is to add the 
 
 ![](../../.gitbook/assets/addoutputsource%20%281%29.png)
 
-This should bring up the Channel configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
+This will bring up the Channel configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
 
 ![](../../.gitbook/assets/selectmappingsource.png)
 
 #### Options: 
 
 * **Filter Expression:** Allows users to define a condition that will exclude rows of data from the output, for which the filter expression does not evaluate to **true**.
-* **Operation Type:** Default is "N/A". Allows the user to mark a channel as an aggregate. More information on aggregate channels can be found below.
+* **Operation Type:** Default is "N/A". Allows the user to mark a channel as an aggregate. More information on aggregate channels can be found [below](output-mapping.md#aggregate-channels).
 * **Name:** The name of the Channel defaults to name of the source itself. The user may want to set their own name for the channel, for instance to help distinguish between two Channels that come from the same source.
 * **Description:** Allows the user to briefly describe to other users the use case of the Channel.
 * **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
 * **Key History:** Default is false. Output key history for channels of Key sources - ignore for Time Series sources.
-* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB
+* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB. This aligns to the Synopsis Processing phase.
 * **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
 
 ## Adding Columns
 
 ![](../../.gitbook/assets/addoutputsource.png)
 
-First, to add a single column, click on **Add Column** in the top middle of the screen, seen next to the **Remove All Columns** button in the image above.
+To add a single column, click on **Add Column** in the top middle of the screen, seen next to the **Remove All Columns** button in the image above.
 
 Then, when the create column modal opens \(seen in the image below\), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
 
@@ -50,9 +50,15 @@ Then, when the create column modal opens \(seen in the image below\), a column n
 
 Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
 
+{% hint style="info" %}
+**Column Data Types**
+
+The Column Data Types listed in this drop down are the target system's available data types
+{% endhint %}
+
 ## Aggregate Channels
 
-Aggregate channels allow users to output data at a grain higher than their actual data. A channel is set as an aggregate channel by checking the **Aggregate** option of the **Operation Type** field on the channel details modal. Aggregate channels are denoted on screen by the icon circled in the picture below:
+Aggregate channels allow users to output data at a higher grain than their actual data. A channel is set as aggregate by checking the **Aggregate** option of the **Operation Type** field on the channel details modal. Aggregate channels are denoted on screen by the icon circled in the picture below:
 
 ![](../../.gitbook/assets/aggregateicon.png)
 
