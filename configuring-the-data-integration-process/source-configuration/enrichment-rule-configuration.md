@@ -8,7 +8,7 @@ description: >-
 
 Enrichments are managed from within a Source. Select the "Rules" tab to see the collection of Rules.
 
-!! Source screen. Enrichments provide the logic for identifying data quality issues or adding new columns to the data. 
+!! Source screen. Rules provide the logic for identifying data quality issues or adding new columns to the data. 
 
 {% hint style="info" %}
 Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
@@ -16,42 +16,38 @@ Note: The supported syntax in the expression input is specific to PostgreSQL. Re
 
 ## Rules Tab
 
-The Enrichments tab allows users to select, edit, remove, or add a Source's Enrichments. By default, only Active Enrichments are listed. The **Active Only** toggle changes this setting.
+The Rules tab allows users to select, edit, remove, or add a Source's Rules. By default, only Active Rules are listed. The **Active Only** toggle changes this setting.
 
-![Source Rules - Active Only](../../.gitbook/assets/rap-rules-active.png)
+\*Add screenshot highlighting active only toggle here\*
 
-To edit an Enrichment, select the Enrichment directly. This opens the Edit Enrichment modal.
+To create a new Rule, click the **New Rule** button. This opens the create/edit Rule modal.
 
-![Source Rules - Select Rule](../../.gitbook/assets/rap-select-rule.png)
+\*Add Screenshot highlighting New Rule button here Here\*
 
-To create a new Enrichment, select **New Enrichment**. This opens the Enrichment modal.
+\*add blurb and screenshot of editing existing rule here
 
-![Source Rules - New Rule](../../.gitbook/assets/rap-new-enrichment.png)
+## ! Rule Parameters
 
-## ! Enrichment Parameters
-
-On the Enrichment modal, users can modify Enrichment parameters or apply an existing [Template ](../validation-and-enrichment-rule-templates.md)using the **Enrichment Rule Type** dropdown. Selecting **Enforce** ensures that a Template cannot be modified and is only configurable through the [Templates](../validation-and-enrichment-rule-templates.md) screen, while leaving **Enforce** unchecked copies the Template into a rule specific to the Source.
-
-![Enrichment Modal \(PLACEHOLDER\)](../../.gitbook/assets/enrichments-modal-example%20%281%29.jpg)
+\*Add blurb and screenshot of create/edit Rule modal here\*
 
 **Fields Available:**
 
 | Parameter | Default Value | Description |
 | :--- | :--- | :--- |
-| **Type** | Enrichment | The type of the Enrichment. Validations mark records as pass/fail based on a boolean expression in the expression field. |
-| **Enrichment Name\*** |  | The user-defined name of the Enrichment |
-| **Attribute Name\*** |  | The name of the new column of the Enrichment |
-| **Description\*** |  | The user-defined description of the Enrichment |
-| **Expression Data Type** |  | The data type of the result of the Expression. |
-| **Attribute Data Type** |  | The data type of the Enriched Attribute. RAP will attempt to convert the data type of the Expression Data Type to the Attribute Data Type. Leave as Default for no conversion. |
+| **Type** | Enrichment | The type of the Rule. Validations mark records as pass/fail based on a boolean expression in the expression field. |
+| **Enrichment Name\*** | No Default | The user-defined name of the Rule. This is what will appear in the  |
+| **Attribute Name\*** | No Default | The name of the new column of the Rule. This what will appear in attribute dropdowns of expressions, and within expressions. |
+| **Description** | No Default | The user-defined description of the Rule |
+| **Expression Data Type** | Interpreted from expression | The data type of the result of the Expression. |
+| **Attribute Data Type** | Expression Data Type | The data type of the Enriched Attribute. RAP will attempt to convert the data type of the Expression Data Type to the Attribute Data Type. Leave as Default for no conversion. |
 | **When expression is false, set to** | Warn | These are the flags that will be set on records that fail to be converted to another data type. Warn, Fail, or Ignore are the possible options. For Validations only. |
-| **Expression** |  | Use SQL syntax to set the Enrichment Rule transformation logic. |
-| **Unique Value** |  | Signifies that the Enriched Attribute will have unique values for every record. |
+| **Expression** | No Default | Use SQL syntax to set the Enrichment Rule transformation logic. |
+| **Unique Value** | FALSE | Signifies that the Rule Attribute will have unique values for every record. |
 | **Active** | TRUE | Allows the user to set this Validation as Active or not. If Active, it affects the Source load. |
 
 Click **Save** to save the Enrichment. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
 
-## Using Relations in Enrichment Rules
+## Rule Expressions
 
 Through Relations, users can access attributes from another Source when configuring Enrichment rules.  
 
@@ -108,7 +104,7 @@ When configuring the Expression property on the Enrichment configuration screen,
   </tbody>
 </table>
 
-## Relations and Enrichments Examples
+## Relations and Rules Examples
 
 To illustrate the proper use of Relations and Enrichments, let's examine the example Entity-Relationship Diagram of an arrangement of Sources in RAP below. We will use this ERD for both examples. The labels near the relationship lines are the names of the Relations that the user would have configured prior to creating any Enrichments. 
 
