@@ -55,55 +55,6 @@ Through Relations, users can access attributes from another Source when configur
 
 When configuring the Expression property on the Enrichment configuration screen, the user must use the expression syntax specified below to access the attributes.  
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Expression</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">[<em>Source Name</em>]</td>
-      <td style="text-align:left">Source container</td>
-      <td style="text-align:left">[Divvy Rides]</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">[This]</td>
-      <td style="text-align:left">Current Source container. Equivalent to [<em>current source name</em>]</td>
-      <td
-      style="text-align:left">[This]</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">[<em>Relation Name</em>]</td>
-      <td style="text-align:left">Non-primary Relation name, indicates path to the Source containers used
-        in expression</td>
-      <td style="text-align:left">[This]~{To Station Relation}~[Divvy Rides].attribute</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">.</td>
-      <td style="text-align:left">Separator of Source containers and attribute names</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">~</td>
-      <td style="text-align:left">Path indicator, separates Source containers and Relations</td>
-      <td style="text-align:left">[Divvy Rides]~{Relation Z}~[Weather].attribute</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">[<em>Relation</em>].<em>attribute_name</em>
-      </td>
-      <td style="text-align:left">Attribute in the container</td>
-      <td style="text-align:left">
-        <p>[Divvy Rides].trip_id</p>
-        <p>[Divvy Stations].latitude</p>
-        <p>[This]~{To Station Relation}~[Divvy Rides].longitude</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Relations and Rules Examples
 
 To illustrate the proper use of Relations and Enrichments, let's examine the example Entity-Relationship Diagram of an arrangement of Sources in RAP below. We will use this ERD for both examples. The labels near the relationship lines are the names of the Relations that the user would have configured prior to creating any Enrichments. 
