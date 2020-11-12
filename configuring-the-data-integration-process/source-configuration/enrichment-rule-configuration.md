@@ -22,9 +22,9 @@ The Rules tab allows users to select, edit, remove, or add a Source's Rules. By 
 
 To create a new Rule, click the **New Rule** button. This opens the create/edit Rule modal.
 
-\*Add Screenshot highlighting New Rule button here Here\*
+![New Rule Button](../../.gitbook/assets/image%20%28294%29.png)
 
-\*add blurb and screenshot of editing existing rule here
+\*add blurb and screenshot of editing existing rule here, point out how expressions can be clicked on to open references to other rules\*
 
 ## ! Rule Parameters
 
@@ -35,25 +35,16 @@ To create a new Rule, click the **New Rule** button. This opens the create/edit 
 | Parameter | Default Value | Description |
 | :--- | :--- | :--- |
 | **Type** | Enrichment | The type of the Rule. Validations mark records as pass/fail based on a boolean expression in the expression field. |
-| **Enrichment Name\*** | No Default | The user-defined name of the Rule. This is what will appear in the  |
-| **Attribute Name\*** | No Default | The name of the new column of the Rule. This what will appear in attribute dropdowns of expressions, and within expressions. |
+| **Rule Name\*** | No Default | The user-defined name of the Rule. This is what will appear in the  |
+| **Attribute Name\*** | No Default | The name of the new column of the Rule. This what will appear in attribute dropdowns of expressions, and within expressions. When creating a new rule, this field will automatically be filled in with valid formatting based on what the user enters into the Rule Name field. |
 | **Description** | No Default | The user-defined description of the Rule |
 | **Expression Data Type** | Interpreted from expression | The data type of the result of the Expression. |
 | **Attribute Data Type** | Expression Data Type | The data type of the Enriched Attribute. RAP will attempt to convert the data type of the Expression Data Type to the Attribute Data Type. Leave as Default for no conversion. |
 | **When expression is false, set to** | Warn | These are the flags that will be set on records that fail to be converted to another data type. Warn, Fail, or Ignore are the possible options. For Validations only. |
-| **Expression** | No Default | Use SQL syntax to set the Enrichment Rule transformation logic. |
-| **Unique Value** | FALSE | Signifies that the Rule Attribute will have unique values for every record. |
-| **Active** | TRUE | Allows the user to set this Validation as Active or not. If Active, it affects the Source load. |
+| **Expression** | No Default | Use Intillio QL/Postgres SQL syntax to set the Rule transformation logic. |
+| **Active** | TRUE | Allows the user to set this Rule as Active or not. If active, it will be applied on new inputs and source resets. |
 
 Click **Save** to save the Rule. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
-
-## Rule Expressions
-
-Through Relations, users can access attributes from another Source when configuring Enrichment rules.  
-
-![Enrichments Configuration Screen \(PLACEHOLDER\)](../../.gitbook/assets/enrichments-modal-example.jpg)
-
-When configuring the Expression property on the Enrichment configuration screen, the user must use the expression syntax specified below to access the attributes.  
 
 ## Relations and Rules Examples
 
@@ -134,4 +125,8 @@ Finally, in order to capture customer tenure, create an enriched column that tak
 #### _Aggregating a column from a non-primary related source with many cardinality_
 
 > SUM\(\[This\]~{Relation Name}~\[Related Source Name\].SalesTotal\)
+
+#### _Rounding a column down to two decimal places_
+
+> ROUND\(\[This\].AverageCost, 2\)
 
