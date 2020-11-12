@@ -1,14 +1,10 @@
 ---
 description: >-
   Enrichment and Validation Rules allow Intellio DataOps (RAP) to modify and
-  transform data as it is brought in.
+  transform data as it is ingested.
 ---
 
 # !! Rules
-
-Rules are managed from within a Source. Select the "Rules" tab to see a source's collection of rules.
-
-!! Source screen. Rules provide the logic for identifying data quality issues or adding new columns to the data. 
 
 ## Rules Tab
 
@@ -51,7 +47,9 @@ Rule expressions are made up of a mix of Spark SQL, and Intellio QL. Specificall
 
 To begin entering a rule expression, either enter an open bracket "\[" to reveal a drop down of sources with a primary relation chain to the current source and _\[This\]_, or enter a tick mark " \` " to reveal a drop down of Spark SQL functions_._ Then the user can continue filling out the expression however they would like, as long as the attributes are accessed using Intellio QL, and the expression as a whole follows Spark SQL syntax.
 
-More information on Intellio QL can be found here in the configuration, and more information on SparkSQL can be found [here](https://spark.apache.org/docs/3.0.0/api/sql/index.html).
+{% hint style="info" %}
+More information on Intellio QL can be found [here in the configuration guide](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions), and more information on SparkSQL can be found [here](https://spark.apache.org/docs/3.0.0/api/sql/index.html).
+{% endhint %}
 
 ## Example Expressions
 
