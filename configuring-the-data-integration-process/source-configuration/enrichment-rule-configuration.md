@@ -30,7 +30,7 @@ To edit an existing rule, click on any column of that rule's row in the table be
 
 ## ! Rule Parameters
 
-\*Add blurb and screenshot of create/edit Rule modal here\*
+![Create Rule Modal](../../.gitbook/assets/image%20%28297%29.png)
 
 **Fields Available:**
 
@@ -40,7 +40,7 @@ To edit an existing rule, click on any column of that rule's row in the table be
 | **Rule Name\*** | No Default | The user-defined name of the Rule. This is what will appear in the  |
 | **Attribute Name\*** | No Default | The name of the new column of the Rule. This what will appear in attribute dropdowns of expressions, and within expressions. When creating a new rule, this field will automatically be filled in with valid formatting based on what the user enters into the Rule Name field. |
 | **Description** | No Default | The user-defined description of the Rule |
-| **Expression Data Type** | Interpreted from expression | The data type of the result of the Expression. |
+| **Expression Data Type** | Interpreted from expression | The data type of the result of the Expression, automatically inferred by DataOps. This field is not controlled by the user. |
 | **Attribute Data Type** | Expression Data Type | The data type of the Enriched Attribute. RAP will attempt to convert the data type of the Expression Data Type to the Attribute Data Type. Leave as Default for no conversion. |
 | **Recalculation Mode** | Snapshot | Snapshot means that the field will never be recalculated even after attributes the rule depends on get updated. Keep current means that if an attribute value a record depends on gets updated, the dependent attribute will also be updated during processing. |
 | **When expression is false, set to** | Warn | These are the flags that will be set on records that fail to be converted to another data type. Warn, Fail, or Ignore are the possible options. For Validations only. |
@@ -66,4 +66,8 @@ Click **Save** to save the Rule. Clicking **Save and Create Validation** will cr
 #### _Rounding a column down to two decimal places_
 
 > ROUND\(\[This\].AverageCost, 2\)
+
+#### _Window function aggregating one attribute of the current source while partitioning on another_
+
+> SUM\(\[This\].TotalCost\) OVER \(PARTITION BY \[This\].CustomerID\)
 
