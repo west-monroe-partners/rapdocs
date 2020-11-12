@@ -22,9 +22,11 @@ The Rules tab allows users to select, edit, remove, or add a Source's Rules. By 
 
 To create a new Rule, click the **New Rule** button. This opens the create/edit Rule modal.
 
-![New Rule Button](../../.gitbook/assets/image%20%28294%29.png)
+![New Rule Button](../../.gitbook/assets/image%20%28296%29.png)
 
-\*add blurb and screenshot of editing existing rule here, point out how expressions can be clicked on to open references to other rules\*
+To edit an existing rule, click on any column of that rule's row in the table besides the expression column \(circled in the picture below\). If a rule references another rule in its expression, a link will appear in the expression column that, when clicked, will open the edit rule modal of the rule that is referenced by the link \(boxed in the picture below\).
+
+![All columns besides the expression column in the Rule Table can be clicked to open the edit Rule modal.](../../.gitbook/assets/image%20%28294%29.png)
 
 ## ! Rule Parameters
 
@@ -40,8 +42,9 @@ To create a new Rule, click the **New Rule** button. This opens the create/edit 
 | **Description** | No Default | The user-defined description of the Rule |
 | **Expression Data Type** | Interpreted from expression | The data type of the result of the Expression. |
 | **Attribute Data Type** | Expression Data Type | The data type of the Enriched Attribute. RAP will attempt to convert the data type of the Expression Data Type to the Attribute Data Type. Leave as Default for no conversion. |
+| **Recalculation Mode** | Snapshot | Snapshot means that the field will never be recalculated even after attributes the rule depends on get updated. Keep current means that if an attribute value a record depends on gets updated, the dependent attribute will also be updated during processing. |
 | **When expression is false, set to** | Warn | These are the flags that will be set on records that fail to be converted to another data type. Warn, Fail, or Ignore are the possible options. For Validations only. |
-| **Expression** | No Default | Use Intillio QL/Postgres SQL syntax to set the Rule transformation logic. |
+| **Expression** | No Default | Use[ Intellio QL](https://app.gitbook.com/@intellio/s/dataops/~/drafts/-MLwpeBgYEcGrh4eZftR/v/master/configuring-the-data-integration-process/expressions)/[Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html) syntax to set the Rule transformation logic. |
 | **Active** | TRUE | Allows the user to set this Rule as Active or not. If active, it will be applied on new inputs and source resets. |
 
 Click **Save** to save the Rule. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
