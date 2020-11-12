@@ -6,13 +6,9 @@ description: >-
 
 # !! Rules
 
-Enrichments are managed from within a Source. Select the "Rules" tab to see the collection of Rules.
+Rules are managed from within a Source. Select the "Rules" tab to see a source's collection of rules.
 
 !! Source screen. Rules provide the logic for identifying data quality issues or adding new columns to the data. 
-
-{% hint style="info" %}
-Note: The supported syntax in the expression input is specific to PostgreSQL. Refer to PostgreSQL documentation: [https://www.postgresql.org/docs/10/functions.html](https://www.postgresql.org/docs/10/functions.html)
-{% endhint %}
 
 ## Rules Tab
 
@@ -28,7 +24,7 @@ To edit an existing rule, click on any column of that rule's row in the table be
 
 ![All columns besides the expression column in the Rule Table can be clicked to open the edit Rule modal.](../../.gitbook/assets/image%20%28294%29.png)
 
-## ! Rule Parameters
+## Rule Parameters
 
 ![Create Rule Modal](../../.gitbook/assets/image%20%28297%29.png)
 
@@ -49,6 +45,14 @@ To edit an existing rule, click on any column of that rule's row in the table be
 
 Click **Save** to save the Rule. Clicking **Save and Create Validation** will create an extra Validation column to mark whether the values from the Expression Data Type succeeded the conversion to the specified Attribute Data Type.
 
+## Rule Expressions
+
+Rule expressions are made up of a mix of Spark SQL, and Intellio QL. Specifically, Intellio QL is used access source data attributes, which will be used within a Spark SQL expression the way column names would be used in a normal Spark SQL context.
+
+To begin entering a rule expression, either enter an open bracket "\[" to reveal a drop down of sources with a primary relation chain to the current source and _\[This\]_, or enter a tick mark " \` " to reveal a drop down of Spark SQL functions_._ Then the user can continue filling out the expression however they would like, as long as the attributes are accessed using Intellio QL, and the expression as a whole follows Spark SQL syntax.
+
+More information on Intellio QL can be found here in the configuration, and more information on SparkSQL can be found [here](https://spark.apache.org/docs/3.0.0/api/sql/index.html).
+
 ## Example Expressions
 
 #### _Multiplying an attribute from a related source to an attribute of the current source through a primary relation_
@@ -57,17 +61,17 @@ Click **Save** to save the Rule. Clicking **Save and Create Validation** will cr
 
 #### _Aggregating a column from a primary related source with many cardinality_
 
-> SUM\(\[Related Source Name\].SalesTotal\)
+> sum\(\[Related Source Name\].SalesTotal\)
 
 #### _Aggregating a column from a non-primary related source with many cardinality_
 
-> SUM\(\[This\]~{Relation Name}~\[Related Source Name\].SalesTotal\)
+> sum\(\[This\]~{Relation Name}~\[Related Source Name\].SalesTotal\)
 
 #### _Rounding a column down to two decimal places_
 
-> ROUND\(\[This\].AverageCost, 2\)
+> round\(\[This\].AverageCost, 2\)
 
 #### _Window function aggregating one attribute of the current source while partitioning on another_
 
-> SUM\(\[This\].TotalCost\) OVER \(PARTITION BY \[This\].CustomerID\)
+> sum\(\[This\].TotalCost\) OVER \(PARTITION BY \[This\].CustomerID\)
 
