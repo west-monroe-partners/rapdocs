@@ -9,7 +9,7 @@ description: >-
 
 ## Creating Relations
 
-To create a Relation, select a Source from the Sources screen, select the Relations tab, and click "New Relation" in the top-right corner of the screen.
+To create a Relation, select a Source from the Sources screen, select the Relations tab, and click "New Relation" button in the top-right corner of the screen.
 
 ![Create new Relation](../../.gitbook/assets/rap-relations-new.png)
 
@@ -20,6 +20,12 @@ Once "New Relation" is clicked the setting screen appears with required properti
 ![](../../.gitbook/assets/rap-relations-details-screen.png)
 
 * **Relation Name:** __The name of the Relation must be unique because a Relation is simply a relationship between any two Sources in the RAP environment, and a unique identifier is needed to distinguish one Relation from another.
+
+{% hint style="info" %}
+ If no relation name is specified, the relation name will default to the following pattern:   
+'_Current Source Name - Related Source Name'_
+{% endhint %}
+
 * **Related Source:** Specifies the related Source.
 * **Relation Expression:**  This is a boolean expression written in SQL that "joins" the current Source \(denoted by "\[This\]"\) to the related Source \(denoted by "\[Related\]"\). The Relation will return 0, 1, or multiple records depending on the result of the expression. The relation expression will define how the resulting data will look, see the Relation Example below for further details. See the [Expressions](../expressions.md) page for more details on Expressions.
 * **Primary Flag:** When set, sets one relation mapping between the Source and Related Source. Practically, a Primary Relation is much easier to reference in Enrichments. If the Related Source via the defined Relation will be referenced many times in an Enrichment it is recommended to make it a Primary Relation.
