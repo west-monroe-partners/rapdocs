@@ -249,7 +249,5 @@ In the Auth0 Dashboard there is a section on the left hand menu called "Rules". 
 
 ![](../../.gitbook/assets/image%20%28277%29%20%281%29.png)
 
-## Smoke Testing
 
-Time to drop a file in!
 
