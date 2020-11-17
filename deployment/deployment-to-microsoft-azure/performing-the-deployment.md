@@ -134,17 +134,6 @@ This should not error out and should list the datatypes.avro file.
 
 Next, click on the user dropdown in the top right of the Databricks portal. Click "User Settings" in the dropdown. On the Access Tokens tab, click "Generate New Token". Set the token lifetime to blank, so the token will not expire. Copy the token for use later on \(It will be used in the "Updating Key Vaults" section of this guide.
 
-We will need to make an API request to the Databricks API to create a secret scope for our Databricks secret. Recommended tool to do this is [Postman](https://www.postman.com/downloads/) - but any method to make a POST API request can be used. Make a POST API request to [https://xxxxxxxxxxx.azuredatabricks.net/api/2.0/secrets/scopes/create](https://adb-6797256387059301.1.azuredatabricks.net/api/2.0/secrets/scopes/create) \(Replace the x's with the value in the Databricks URL for the environment\) The body of the request will be -
-
-```text
-{
-  "scope": "auth0token",
-  "initial_manage_principal": "users"
-}
-```
-
-The authorization is a "Bearer Token" and the token is the Databricks Access token we generated above. After making the request, the reponse should be a 200 OK with no body.
-
 Capture a value out of the Databricks URL before moving on to the key vault step. If the URL is [https://xxxxxxxxxxxx.azuredatabricks.net/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration](https://adb-4433553810974403.3.azuredatabricks.net/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration) then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Key Vault.
 
 ## Updating Key Vaults
@@ -249,5 +238,7 @@ In the Auth0 Dashboard there is a section on the left hand menu called "Rules". 
 
 ![](../../.gitbook/assets/image%20%28277%29%20%281%29.png)
 
+## Smoke Testing
 
+Time to drop a file in!
 
