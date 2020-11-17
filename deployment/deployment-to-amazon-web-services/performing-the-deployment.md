@@ -1,7 +1,3 @@
----
-description: '******THIS IS NOT COMPLETE OR READY FOR CLIENT USE*****************'
----
-
 # Performing the Deployment
 
 ## Creating Deployment AWS User for Terraform
