@@ -126,15 +126,26 @@ spark.sql("select * from datatypes").show
 
 This should not error out and should display the table data.
 
+We will need to make an API request to the Databricks API to create a secret scope for our Databricks secret. Recommended tool to do this is [Postman](https://www.postman.com/downloads/) - but any method to make a POST API request can be used. Make a POST API request to [https://xxxxxxxxxxx.azuredatabricks.net/api/2.0/secrets/scopes/create](https://adb-6797256387059301.1.azuredatabricks.net/api/2.0/secrets/scopes/create) \(Replace the x's with the value in the Databricks URL for the environment\) The body of the request will be -
+
+```text
+{
+  "scope": "auth0token",
+  "initial_manage_principal": "users"
+}
+```
+
+The authorization is a "Bearer Token" and the token is the Databricks Access token we generated in the Terraform cloud variable step. After making the request, the response should be a 200 OK with no body.
+
 Capture a value out of the Databricks URL before moving on to the Secret Manager step. If the URL is [https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration  ](https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration%20)then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Secret Manager secrets.
 
 ## Updating Secrets Manager
 
 \*\*\*\*\*\*\*next to update
 
-There are two Key Vaults that will need updated before the containers can run properly. The keys in the JSON will all exist, but some of the values will need to be updated/replaced.
+There are two Secrets Manager secrets that will need updated before the containers can run properly. The keys in the secrets will all exist, but some of the values will need to be updated/replaced.
 
-The first secret that will need updating is the "&lt;environment&gt;-public-system-configuration" secret. It is recommended to copy the JSON value of the secret into a text editor such as [Notepad++](https://notepad-plus-plus.org/downloads/) for easy updating.
+The first secret that will need updating is the "&lt;environment&gt;-public-system-configuration" secret. 
 
 Public system configuration values that need updates:
 
@@ -149,11 +160,6 @@ Private system configuration values that need updates:
 
 * databricks-token
   * replace with value saved from generating the access token in Databricks config step
-* databricks-spark-conf
-  * replace with account key from storage account &lt;environment&gt;storage&lt;client&gt;
-  * Example value: {"fs.azure.account.key.devstorageintellio.blob.core.windows.net": "qTNCgxxxxxxxxxxxxxxxxxxxxxxxxxxxUuSk8x7LwAWXbKFiA2xxxxxxxxxxxxz0H5t0uZxxxxxiL5cEy8kag=="}
-
-When the JSONs are updated and ready to go back into Key Vault, just create a new version of the secret with the updated JSON values. 
 
 ## Running Deployment Container
 
@@ -171,7 +177,7 @@ If this message does not exist - try running the container again \(click stop an
 
 ## Configuring Postgres System Configuration Table
 
-Use the "database-connection" value from the Private secret in Key Vault to connect to the Azure Database for PostgreSQL server that is installed in the Resource Group. It will be named &lt;environment&gt;-db-&lt;client&gt;, Ex: dev-db-intellio. You may need to add the IP that you're connecting from to the Connection Security on the database configuration window. We recommend using a tool like PgAdmin or DataGrip to connect to the server.
+Use the "database-connection" value from the Private secret in Key Vault to connect to the RDS in the RDS service within AWS.
 
 Run the following queries in the database named &lt;environment&gt;. 
 
@@ -184,29 +190,13 @@ Replace the "DEV" values with the name of your environment. Make sure that the d
 update meta.system_configuration set value = 'DEV' where name = 'environment';
 update meta.system_configuration set value = 'dev' where name = 'databricks-db-name';
 update meta.system_configuration set value = 'Databricks' where name = 'spark-provider';
-update meta.system_configuration set value = 'Azure' where name = 'cloud';
+update meta.system_configuration set value = 'AWS' where name = 'cloud';
 insert into meta.agent values ('local','local',null,null,
                                '{"default": true, "autoUpdate": false,
                                 "maxResources": 4, "akkaStreamTimeout": 300,
                                  "checkDeltaInterval": 30,
                                   "checkPushFilesInterval": 10}','startxx',false);
 ```
-
-
-
-## Configuring Custom Endpoint
-
-Navigate to the Frontend Endpoint resource called &lt;environment&gt;-FrontendEndpoint-&lt;client&gt;, Ex: Dev-FrontendEndpoint-Intellio. Click "Custom domain" in the overview screen. In the "Custom hostname" box, enter the DNS name of the Intellio site that is being deployed. This will generally be: &lt;environment&gt;-&lt;dnsZone&gt;. dnsZone was a variable that was set when the Terraform variables were populated. The custom hostname will need to be DNS resolvable before it can be added.
-
-After adding the custom hostname, click on the custom hostname to configure the domain further. The configuration should then look similar to the following image, with the deployment specific values replaced.
-
-![](../../.gitbook/assets/image%20%28278%29.png)
-
-{% hint style="warning" %}
-Make sure the Azure CDN step is followed so that CDN can access the Key Vault where the secret lives
-{% endhint %}
-
-Save the configuration and this step will be complete.
 
 ## Restart Everything!
 
@@ -218,21 +208,11 @@ At this point, all the post Terraform configuration should be good to go. There 
 
 Check the container logs to ensure the containers have started and are running with no errors. Once all three containers are running, it's time to go on the site!
 
-## Check Application Gateway Health probe
-
-Navigate to the Application Gateway and click "Health probes" in the left menu blade. There should be one record with the name &lt;environment&gt;-HealthProbe-&lt;client&gt;, EX: Dev-HealthProbe-Intellio. Make sure that the "Host" value is set to the IP of the currently running Api Container instance. If the values are different, change the Host value on the Health Probe to equal the IP address of the currently running Api container instance. The IP Address is in the overview of the container instance like so:
-
-![](../../.gitbook/assets/image%20%28277%29.png)
-
-Test the backend health before adding the health probe, then Save the update to the health probe.
-
 ## Auth0 Rule Updates
 
 In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
 
 ![](../../.gitbook/assets/image%20%28277%29%20%281%29.png)
 
-## Smoke Testing
 
-Time to drop a file in!
 

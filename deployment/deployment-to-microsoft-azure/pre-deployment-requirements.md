@@ -44,9 +44,12 @@ Again, recommend this account not be tied to any one person, and create an accou
 * [https://www.terraform.io/](https://www.terraform.io/) 
 * This will be used to manage the terraform deployment in the cloud 
 
-## Create a GitHub Account
+## Create a Bitbucket Account
 
-Create a [GitHub](https://github.com/) account. This will allow for access to the Intellio DataOps \(RAP\) source code.
+* We recommend this account is not tied to an employee 
+* The account will be given Read access to the Terraform repository 
+* [https://bitbucket.org/wmp-rap/infrastructure/src/master/terraform/azure/](https://bitbucket.org/wmp-rap/infrastructure/src/master/terraform/azure/) 
+* We store all code in bitbucket, so access can be given to the account to view other portions of the codebase if requested 
 
 ## Choose VPN
 
