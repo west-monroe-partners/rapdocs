@@ -57,7 +57,7 @@ If a VPN vendor is not already chosen, recommend to utilize Open VPN which can b
 
 ## AWS Deployment Parameters
 
-What follows is a list of parameters that tailor the AWS deployment environment.
+What follows is a list of parameters that tailor the standard AWS deployment environment.
 
 | Variable | Example | Description |
 | :--- | :--- | :--- |
@@ -90,6 +90,17 @@ What follows is a list of parameters that tailor the AWS deployment environment.
 | auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
 | auth0ClientId | jdflsdfsdf | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
 | auth0ClientSecret | faddfjXXXSssddff | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
+
+If running a non-public facing deployment - these variables will need to be added:
+
+| Variable | Example | Description |
+| :--- | :--- | :--- |
+| publicFacing | no | Triggers the infrastructure to deploy non-public facing resources |
+| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer |
+| privateApiName | api.intellio.test | API url |
+| privateDomainName | intellio.test | Base url for the environment |
+| privateUIName | dev.intellio.test | UI url |
+| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to |
 
 ## Verify the deployment
 
