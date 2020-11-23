@@ -27,7 +27,7 @@ A valid SSL certificate that the client organization controls to perform secure 
 
 ## **Create a Docker Hub Account**
 
-Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommended this is not tied to any individual employee.
+Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommended this is not tied to any individual employee. Send the Docker username to the West Monroe team so that they can provide access to the Intellio Docker repository.
 
 ## Create a Databricks Account
 
