@@ -31,6 +31,10 @@ Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommen
 
 ## Create a Databricks Account
 
+{% hint style="danger" %}
+The Databricks Account will require a credit card to be added during sign up - Please have a corporate card or billing account ready to go
+{% endhint %}
+
 Recommended to create a premium account on [Databricks](https://databricks.com/try-databricks). The standard account is acceptable for the development environment, but a premium account will be needed before production release.
 
 Create a specific account for the Intellio DataOps \(RAP\) deployment team.
