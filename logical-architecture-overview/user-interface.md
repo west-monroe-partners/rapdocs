@@ -19,7 +19,7 @@ Sources, Outputs, and Connections can be viewed and filtered from their respecti
 Note that clicking on a specific Source on the Sources page will show all of the details and options related to that Source. The same is true for the Outputs and Connections pages.
 
 {% hint style="info" %}
-Provided in this section is a brief overview of the Intellio DataOps \(RAP\) UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide](../configuring-the-data-integration-process/).
+Provided in this section is a brief overview of the Intellio DataOps \(RAP\) UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide]().
 {% endhint %}
 
 ## Sources and Processing
@@ -76,7 +76,7 @@ The additional business logic that may be applied to data during the Output stag
 
 ### Agents
 
-The Agents UI manages parameters related to how an Agent will ingest appropriate data. Additional data on the Intellio DataOps \(RAP\) agent can be found in the [Agent Installation Guide](../deployment/installing-a-new-rap-agent/) and its subsequent [Source Connection Guide](../deployment/installing-a-new-rap-agent/connecting-a-rap-agent-to-a-source.md).
+The Agents UI manages parameters related to how an Agent will ingest appropriate data. Additional data on the Intellio DataOps \(RAP\) agent can be found in the [Agent Installation Guide]() and its subsequent [Source Connection Guide]().
 
 ### Documentation
 

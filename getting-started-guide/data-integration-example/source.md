@@ -99,7 +99,7 @@ A database table to be ingested at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on Connection Type attributes.
+When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on Connection Type attributes.
 {% endhint %}
 
 After selecting a Connection Type, select the connection that you configured on the previous page from the connection drop-down list. The list of connections available depends on your Connection Type.
@@ -123,7 +123,7 @@ RAP ingests data from a data path at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](../../configuring-the-data-integration-process/) for more details on Initiation Type attributes.
+When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on Initiation Type attributes.
 {% endhint %}
 
 ## **Step 3: Specify Input Parameters**
