@@ -27,13 +27,13 @@ Prior to installing the DataOps Agent, the following requirements must be met.  
 
 ![New Agent Creation.](../.gitbook/assets/rap-agent-select-new.png)
 
-In the RAP UI, from the left hand menu navigate to Agents, and click New. From this settings interface input the required inputs as seen below. Additional parameters exist for more detailed installations. Note that you will need information about the machine the agent will be hosted on.
+In the DataOps UI, from the left hand menu navigate to Agents, and click New. From this settings interface input the required inputs as seen below. Additional parameters exist for more detailed installations. Note that you will need information about the machine the agent will be hosted on.
 
 | Agent Inputs | Detail |
 | :--- | :--- |
-| Name | Agent code on the backend, and name reference for sources and other RAP elements within the UI. |
+| Name | Agent code on the backend, and name reference for sources and other DataOps elements within the UI. |
 | Description | Necessary clarification and detail. |
-| Region | AWS region, or Microsoft Azure region that the RAP is stored and being processed in \(e.g. "us-west-2", "East US 1"\). |
+| Region | AWS region, or Microsoft Azure region that the DataOps is stored and being processed in \(e.g. "us-west-2", "East US 1"\). |
 | Machine Guid | A specific key to identify the machine the agent is running on, see below for the terminal command to obtain. |
 | s3LandingPath | Path to Datalake bucket \(e.g. "s3://dev-datalake-intellio"\) |
 
@@ -45,19 +45,19 @@ To get the Machine Guid, run the following command in the terminal on the server
 reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography /v MachineGuid
 ```
 
-## Installing the RAP Agent \(Windows\)
+## Installing the DataOps Agent \(Windows\)
 
 Navigate to the AWS S3 console for the specific environment on which DataOps will be operating. Navigate to the bucket: &lt;environment&gt;-agentjar-&lt;client&gt;. Within this bucket there is a path called "msi-install". Install the appropriate version based on the version of DataOps that is live in the environment.
 
-Identify the appropriate version of the .msi \(installer\) by hovering over the navigation menu in the upper left hand corner of the RAP UI.
+Identify the appropriate version of the .msi \(installer\) by hovering over the navigation menu in the upper left hand corner of the DataOps UI.
 
-![Location of RAP version to identify installation version.](../.gitbook/assets/rap-agent-version-finding.png)
+![Location of DataOps version to identify installation version.](../.gitbook/assets/rap-agent-version-finding.png)
 
 Download the appropriate version of the MSI installer. Run the installer and fill in the appropriate prompts.
 
-![Selection of RAP Agent installation screens.](../.gitbook/assets/rap-agent-installer-screens.png)
+![Selection of DataOps Agent installation screens.](../.gitbook/assets/rap-agent-installer-screens.png)
 
-A specific **RAP Agent Code** will be required, and this is the **Agent Name** that was configured in the RAP UI. Do not alter the configuration key unless directed to by a DataOps team member. 
+A specific **RAP Agent Code** will be required, and this is the **Agent Name** that was configured in the DataOps UI. Do not alter the configuration key unless directed to by a DataOps team member. 
 
 The final step of the installation pertains to providing the appropriate credential configuration to the application. Navigate to the DataOps UI and Agents screen and click on the cloud icon under the Config column \(and for the appropriate Agent row\). Clicking on this icon will download the configuration document.
 
@@ -73,9 +73,11 @@ Once the service is restarted, navigate to the DataOps UI and check the Agent lo
 
 This should complete the setup of the Agent on the client machine. All further configuration should be able to be completed via the DataOps UI, such as locating file paths or database/data warehouse credentials.
 
-## Installing the RAP Agent \(Linux\)
+## Installing the DataOps Agent \(Linux\)
 
 {% hint style="info" %}
-Historically there has existed a RAP Agent for Linux, however, due to lack of demand the Linux RAP Agent has been deprecated. Historical Linux RAP Installation can be found [here](https://westmonroepartners1.sharepoint.com/sites/DDPA/0063900000stpZHAAY/Docs/Forms/AllItems.aspx?FolderCTID=0x0120001A877AC2A8D0754C894745F7F2227E37&id=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation%2FRAP%20Agent%20Install%20Guide%20for%20Red%20Hat%206%2E10%2Epdf&parent=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation), but speak with your RAP contact before selling or promising a Linux RAP Agent.
+Historically, DataOps also provided a native Agent for Linux \(Centos/Redhat\), however, due to lack of demand the Linux DataOps Agent has been deprecated. Historical Linux RAP Installation can be found [here](https://westmonroepartners1.sharepoint.com/sites/DDPA/0063900000stpZHAAY/Docs/Forms/AllItems.aspx?FolderCTID=0x0120001A877AC2A8D0754C894745F7F2227E37&id=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation%2FRAP%20Agent%20Install%20Guide%20for%20Red%20Hat%206%2E10%2Epdf&parent=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation).
+
+Linux agents are now supported via Docker containers hosted by AWS ECS or Azure Container Instances
 {% endhint %}
 

@@ -15,7 +15,7 @@ description: >-
 
 3. Enter a valid email address
 
-4. Check your email for a confirmation email. Click the "Sign Up" link inside. This should navigate you to the main DataOps support portal page
+4. Check your email for a confirmation email. Click the "Sign Up" link inside. This should navigate you to the main RAP support portal page
 
 5. Click "Suggest a New Feature" and create a ticket similar to the one below requesting access to your team's group
 

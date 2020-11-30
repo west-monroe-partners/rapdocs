@@ -45,7 +45,7 @@ The variable names are case sensitive - please enter them as they appear in this
 | avalibilityZoneA | us-west-2a | Not all regions have availability zones |
 | avalibilityZoneB | us-west-2b | Not all regions have availability zones |
 | RDSretentionperiod | 7 | Database backup retention period \(in days\) |
-| RDSmasterusername | admin | Database master username |
+| RDSmasterusername | rap\_admin | Database master username |
 | RDSmasterpassword | password123 | Database master password - mark sensitive |
 | RDSport | 5432 | RDS port |
 | TransitiontoAA | 60 | Transition to Standard-Infrequent Access |
@@ -59,7 +59,7 @@ The variable names are case sensitive - please enter them as they appear in this
 | dockerUsername | wmpintellio | DockerHub service account username |
 | dockerPassword | xxxxx | DockerHub service account password |
 | urlEnvPrefix | dev | Prefix for environment site url |
-| baseUrl | intellioplatform | the base URL of the certificate - example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp" |
+| baseUrl | intellioplatform | the base URL of the certificate - example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp-rap" |
 | databricksToken | dapi10323SSXXXXXXX | Token from the Databricks environment - generate access token in Databricks and place here |
 | usEast1CertURL | \*.intellioplatform.com | Full certificate name \(with wildcards\) used for SSL |
 | auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
