@@ -6,5 +6,3 @@ Also included in this section is the [installation requirements of the agent](in
 
 The audience for this section are data engineers and data architects who are setting up the Intellio DataOps instances. Those individuals installing the Intellio DataOps agents, standing up the Microsoft Azure or Amazon Web Services instances, and others working on the deployment team.
 
-!! Multiple environments, movement between, upgrading, downgrading, import / export configuration.
-
