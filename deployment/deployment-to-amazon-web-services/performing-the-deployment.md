@@ -137,8 +137,6 @@ Capture a value out of the Databricks URL before moving on to the Secret Manager
 
 ## Updating Secrets Manager
 
-\*\*\*\*\*\*\*next to update
-
 There are two Secrets Manager secrets that will need updated before the containers can run properly. The keys in the secrets will all exist, but some of the values will need to be updated/replaced.
 
 The first secret that will need updating is the "&lt;environment&gt;-public-system-configuration" secret. 
