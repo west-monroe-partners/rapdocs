@@ -2,7 +2,7 @@
 description: A deeper dive into the technology supporting RAP's operation.
 ---
 
-# !! Physical Architecture
+# Physical Architecture
 
 This section goes into deeper technical detail about the technology powering RAP.  The information presented here is useful for understanding how the various technology pieces come together, as well as for knowing where to go if performing more in-depth troubleshooting.
 
