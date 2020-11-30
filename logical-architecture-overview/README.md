@@ -10,14 +10,18 @@ It is helpful to think of Intellio DataOps \(RAP\) is a modifications of SQL cla
 
 ### The Logical Data Flow
 
-![The Data Processing Steps](../.gitbook/assets/rap-logical-data-flow-new.png)
+![](../.gitbook/assets/rap-logical-data-flow-new.png)
+
+### The Logical Component Architecture
+
+![](../.gitbook/assets/logical_architecture.png)
 
 ### Audience
 
 The intended audiences for this section are the following:
 
-* Data architects who have experience with traditional ETL tools and solutions and are seeking to understand how RAP works in anticipation of needing to lead a new RAP implementation.
-* Cloud and application architects who are looking to understand how data moves through the RAP engine.
-* Experienced RAP configurators who are looking to understand more deeply how RAP works \(the how and why behind the configuration\).
-* Developers looking to gain a deeper understanding of what RAP does in anticipation of needing to work on RAP core processing code.
+* Data architects who have experience with traditional ETL tools and solutions and are seeking to understand how DataOps works in anticipation of needing to lead a new DataOps implementation.
+* Cloud and application architects who are looking to understand how data moves through DataOps.
+* Experienced DataOps configurators who are looking to understand more deeply how DataOps works \(the how and why behind the configuration\).
+* Developers looking to gain a deeper understanding of what DataOps does in anticipation of needing to work on RAP core processing code.
 
