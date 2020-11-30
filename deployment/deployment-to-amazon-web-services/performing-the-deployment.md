@@ -1,4 +1,4 @@
-# !! Performing the Deployment
+# Performing the Deployment
 
 ## Creating Deployment AWS User for Terraform
 
@@ -69,8 +69,6 @@ The variable names are case sensitive - please enter them as they appear in this
 ## Running Terraform Cloud
 
 When the variables are configured, Terraform is ready to generate a plan. Click the "Queue plan" button and let Terraform do it's magic. If all the variables are correct, then the plan should have about 134 resources to add. If the plan finishes successfully, then click apply and let the deployment begin!
-
-\*Add common terraform run hiccups here\*
 
 ## Post Terraform Steps
 
@@ -166,8 +164,6 @@ Navigate to the Container instance named &lt;environment&gt;-Deployment-&lt;clie
 If this message exists - the first time deployment is good to go.
 
 If this message does not exist - try running the container again \(click stop and start on the container\) and troubleshoot from there. 
-
-\*Add common deployment container errors here\*
 
 ## Configuring Postgres System Configuration Table
 
