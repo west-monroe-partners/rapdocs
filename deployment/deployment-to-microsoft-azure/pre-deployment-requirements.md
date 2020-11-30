@@ -2,7 +2,7 @@
 description: Requirements to set up RAP in a Microsoft Azure environment.
 ---
 
-# Pre Deployment Requirements \(Microsoft Azure\)
+# Pre Deployment Requirements
 
 This section is the list of requirements needed before RAP can be deployed in the Microsoft Azure environment. Make sure the information listed in each section is appropriately actioned upon whether via credentials, accounts or permissions.
 

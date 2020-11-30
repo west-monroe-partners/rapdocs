@@ -1,4 +1,4 @@
-# Using the Deployment Service in AWS
+# Using the Deployment Service
 
 ## Prerequisites
 

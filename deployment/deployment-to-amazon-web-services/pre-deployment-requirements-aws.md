@@ -1,4 +1,4 @@
-# Pre Deployment Requirements \(AWS\)
+# Pre Deployment Requirements
 
 Outlined here are the requirements necessary to deploy Intellio DataOps onto the AWS platform.
 

@@ -11,7 +11,7 @@ The DataOps Agent was created to solve the common problems related to data inges
 The DataOps Agent is a small piece of software that requires read only access to the source data and a 443 outbound internet connection. The setup allows for the data upload to bypass client intake firewalls and establishes a secure, encrypted connection between the uploaded source and the upload location.
 
 {% hint style="info" %}
-At the beginning of a project an installation guide will be provided as well as documentation as how to download, install, and set up the specifics of the DataOps Agent. Read the overview [here](../deployment/installing-a-new-rap-agent/).
+At the beginning of a project an installation guide will be provided as well as documentation as how to download, install, and set up the specifics of the DataOps Agent. Read the overview [here](../deployment/installing-a-new-agent.md).
 {% endhint %}
 
 The DataOps Agent works as a light weight service. On the client side the DataOps Agent turns on when the service is active and shuts down when not active. The service runs the appropriate queries against the source database and passes this to the upload location.
@@ -33,6 +33,6 @@ The most common errors related to the DataOps Agent are connectivity issues such
 Due to client specific requirements, legal obligations, or licenses there may be a need to create a custom DataOps Agent plugin. Though this is not ideal, our developers have a methodology to run a service on a service as a way to maintain the necessary requirements for the source data and the DataOps Agent service. Contact your DataOps Lead for specifics.
 
 {% hint style="info" %}
-Additional details about the DataOps Agent can be found in the Environment Management sections, including [installation protocol](../deployment/installing-a-new-rap-agent/).
+Additional details about the DataOps Agent can be found in the Environment Management sections, including [installation protocol](../deployment/installing-a-new-agent.md).
 {% endhint %}
 

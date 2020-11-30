@@ -5,5 +5,5 @@ description: >-
   in AWS).
 ---
 
-# Deployment to Amazon Web Services
+# Deployment to AWS
 
