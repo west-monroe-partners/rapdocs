@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to Intellio DataOps \(RAP\)!](README.md)
+* [Welcome to Intellio DataOps!](README.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [Intellio Support Portal Sign Up](getting-started-guide/intellio-support-portal.md)
   * [DataOps Basics](getting-started-guide/rap-basics/README.md)
@@ -23,8 +23,8 @@
   * [Infrastructure Components](introduction-to-rap/rap-infrastructure-components/README.md)
     * [!! Authentication Engine](introduction-to-rap/rap-infrastructure-components/user-and-machine-authentication.md)
     * [!! User Interface](introduction-to-rap/rap-infrastructure-components/user-interface.md)
-    * [!! RAP Agent](introduction-to-rap/rap-infrastructure-components/on-premise-agent.md)
-    * [!! RAP API](introduction-to-rap/rap-infrastructure-components/rap-api.md)
+    * [!! Agent](introduction-to-rap/rap-infrastructure-components/on-premise-agent.md)
+    * [!! API](introduction-to-rap/rap-infrastructure-components/rap-api.md)
     * [!! Meta Storage](introduction-to-rap/rap-infrastructure-components/meta-storage.md)
     * [!! Core](introduction-to-rap/rap-infrastructure-components/core.md)
     * [!! Ad Hoc Cluster](introduction-to-rap/rap-infrastructure-components/ad-hoc-cluster.md)
@@ -42,7 +42,7 @@
     * [Pre Deployment Requirements](deployment/deployment-to-amazon-web-services/pre-deployment-requirements-aws.md)
     * [Performing the Deployment](deployment/deployment-to-amazon-web-services/performing-the-deployment.md)
     * [Using the Deployment Service](deployment/deployment-to-amazon-web-services/using-the-deployment-service-in-ecs.md)
-    * [!! Installing a New RAP Agent On ECS \(AWS\)](deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
+    * [!! Installing a New Agent On ECS \(AWS\)](deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
   * [Deployment to Microsoft Azure](deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements](deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
     * [Performing the Deployment](deployment/deployment-to-microsoft-azure/performing-the-deployment.md)

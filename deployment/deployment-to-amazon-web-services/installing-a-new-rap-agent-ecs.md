@@ -1,4 +1,4 @@
-# !! Installing a New RAP Agent On ECS \(AWS\)
+# !! Installing a New Agent On ECS \(AWS\)
 
 !! Needs documentation.
 

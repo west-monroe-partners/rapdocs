@@ -1,14 +1,14 @@
 ---
-description: The UX of the DataOps (RAP) experience.
+description: The UX of the DataOps experience.
 ---
 
 # User Interface
 
 ## Overview
 
-![Left hand main menu of the RAP UI.](../.gitbook/assets/rap-ui-menu.png)
+![Left hand main menu of the DataOps UI.](../.gitbook/assets/rap-ui-menu.png)
 
-The user interface is the front end to DataOps \(RAP\) that developers will interact with the most.
+The user interface is the front end to DataOps that developers will interact with the most.
 
 Users must login to the DataOps user interface with a DataOps account. Authentication is handled with Auth0, so clients need to be provided with an account in order to login to and use the user interface DataOps configurators may sign up with their e-mail address.
 
@@ -19,7 +19,7 @@ Sources, Outputs, and Connections can be viewed and filtered from their respecti
 Note that clicking on a specific Source on the Sources page will show all of the details and options related to that Source. The same is true for the Outputs and Connections pages.
 
 {% hint style="info" %}
-Provided in this section is a brief overview of the Intellio DataOps \(RAP\) UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide](../configuring-the-data-integration-process/).
+Provided in this section is a brief overview of the Intellio DataOps UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide](../configuring-the-data-integration-process/).
 {% endhint %}
 
 ## Sources and Processing
@@ -28,7 +28,7 @@ The Source Dashboard \(the UI shown when 'Sources' is selected from the left-han
 
 ![Tabs within a Source.](../.gitbook/assets/rap-ui-sources-tabs.png)
 
-Sources are the main containers of the DataOps \(RAP\) interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of DataOps enable Sources to work through the Logical Architecture. 
+Sources are the main containers of the DataOps interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of DataOps enable Sources to work through the Logical Architecture. 
 
 Within a Source the tab structure along the top provides a framework of organizing a monitoring different aspects of the logical data flow. Enumerated below are the general summary of what each tab represents.
 
@@ -56,7 +56,7 @@ Within the Process Tab, logs are kept on how data flows through the logical data
 
 ## Connections and Outputs
 
-Connections and Outputs are the means in which data is moved into and out of Intellio DataOps \(RAP\). Connections can be thought of as folder routing, and their settings determine where data is ingested from or sent out to. Outputs rely on connections to dictate where the data is sent to, but Outputs also do types of data manipulation relevant to business logic.
+Connections and Outputs are the means in which data is moved into and out of Intellio DataOps. Connections can be thought of as folder routing, and their settings determine where data is ingested from or sent out to. Outputs rely on connections to dictate where the data is sent to, but Outputs also do types of data manipulation relevant to business logic.
 
 ### Connections
 
@@ -76,7 +76,7 @@ The additional business logic that may be applied to data during the Output stag
 
 ### Agents
 
-The Agents UI manages parameters related to how an Agent will ingest appropriate data. Additional data on the Intellio DataOps \(RAP\) agent can be found in the [Agent Installation Guide](../deployment/installing-a-new-agent.md) and its subsequent [Source Connection Guide]().
+The Agents UI manages parameters related to how an Agent will ingest appropriate data. Additional data on the Intellio DataOps agent can be found in the [Agent Installation Guide](../deployment/installing-a-new-agent.md).
 
 ### Documentation
 
@@ -90,7 +90,7 @@ If you require assistance with Intellio DataOps, the Contact Support option exis
 
 When you first encounter the Intellio DataOps environment you will be prompted to either sign up or to log in. 
 
-![Intellio DataOps \(RAP\) login screen.](../.gitbook/assets/rap-ui-login-signup.png)
+![Intellio DataOps login screen.](../.gitbook/assets/rap-ui-login-signup.png)
 
 In the sign up case you will be prompted to enter a username and a password. The admin of the Intellio DataOps environment should white list emails of the client domain and implementation team. If you email is appropriately whitelisted, then a confirmation email will be sent to the email and next steps will be prompted for the user to login.
 

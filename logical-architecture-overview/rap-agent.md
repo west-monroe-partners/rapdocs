@@ -22,7 +22,7 @@ The DataOps Agent is an input to the Ingest phase of the logical data flow.
 
 ![DataOps Agent location within DataOps](../.gitbook/assets/rap-agent-location.png)
 
-The DataOps Agent has a connection to DataOps every 30 seconds to check for if there is work required to be done with the service and to check the connection. The RAP Agent can be checked and modified in the "Agent" category of the left-hand menu. Here you can also monitor if the connection is live and if any errors have occurred.
+The DataOps Agent has a connection to DataOps every 30 seconds to check for if there is work required to be done with the service and to check the connection. The Agent can be checked and modified in the "Agent" category of the left-hand menu. Here you can also monitor if the connection is live and if any errors have occurred.
 
 {% hint style="info" %}
 The most common errors related to the DataOps Agent are connectivity issues such as outbound firewalls. Other errors often include other processes crashing the service that the DataOps Agent runs on.

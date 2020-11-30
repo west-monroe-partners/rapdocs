@@ -15,11 +15,11 @@ DataOps leverages various cloud components in AWS or Azure \(depending on the pl
 
 ### UI \(User Interface\)
 
-The UI represents what you see when you log into the RAP platform. The UI is the front end view of RAP. The [UI](../../logical-architecture-overview/user-interface.md#overview) is characteristic of the left-hand menu and consists of screens including Sources, Connections, Agents, and Outputs.
+The UI represents what you see when you log into the DataOps platform. The UI is the front end view of DataOps. The [UI](../../logical-architecture-overview/user-interface.md#overview) is characteristic of the left-hand menu and consists of screens including Sources, Connections, Agents, and Outputs.
 
 ### API
 
-RAP's API is a lightweight communicator between all of the components of the infrastructure. The API strictly communicates between the components and does not execute any business logic.
+DataOps' API is a lightweight communicator between all of the components of the infrastructure. The API strictly communicates between the components and does not execute any business logic.
 
 ### Meta Storage
 
@@ -31,7 +31,7 @@ Core is the component of orchestration. Core manages executions of beginnings, h
 
 ### Agent
 
-The [RAP Agent](../../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the RAP Cloud infrastructure. The RAP Agent is only utilized during the Ingest stage of the Logical Data Flow.
+The [DataOps Agent](../../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the DataOps Cloud infrastructure. The DataOps Agent is only utilized during the Ingest stage of the Logical Data Flow.
 
 ### Interactive Cluster
 
