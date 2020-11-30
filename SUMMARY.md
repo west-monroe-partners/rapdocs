@@ -33,7 +33,7 @@
     * [Data Hub](introduction-to-rap/rap-infrastructure-components/data-hub.md)
     * [Docker Containers](introduction-to-rap/rap-infrastructure-components/virtual-machine-instances.md)
     * [Databricks](introduction-to-rap/rap-infrastructure-components/databricks.md)
-    * [PostgreSQL Database](introduction-to-rap/rap-infrastructure-components/metadata-and-intermediate-processing-storage.md)
+    * [!! PostgreSQL Database](introduction-to-rap/rap-infrastructure-components/metadata-and-intermediate-processing-storage.md)
     * [Resource Sizing](introduction-to-rap/rap-infrastructure-components/resource-sizing.md)
   * [Metadata Model](introduction-to-rap/metadata-model.md)
   * [!! Data Storage](introduction-to-rap/storage-data-model.md)
