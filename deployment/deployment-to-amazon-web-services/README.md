@@ -7,3 +7,5 @@ description: >-
 
 # Deployment to AWS
 
+The audience for this section are data engineers and data architects who are setting up the Intellio DataOps instances. Those individuals installing the Intellio DataOps agents, standing up the Amazon Web Services instances, and others working on the deployment team.
+
