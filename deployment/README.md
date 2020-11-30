@@ -1,4 +1,4 @@
-# Environment Deployment
+# Deployment & Management
 
 This section explains how environments are set up, connected, and maintained. This section is divided into two main sections depending on the deployment environment: [Microsoft Azure](deployment-to-microsoft-azure/) and [Amazon Web Services](deployment-to-amazon-web-services/). Each main section contains the necessary information to go from Agent Installation through environment setup.
 
