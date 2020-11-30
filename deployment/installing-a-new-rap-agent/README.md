@@ -106,7 +106,3 @@ Installation
 Historically there has existed a RAP Agent for Linux, however, due to lack of demand the Linux RAP Agent has been deprecated. Historical Linux RAP Installation can be found [here](https://westmonroepartners1.sharepoint.com/sites/DDPA/0063900000stpZHAAY/Docs/Forms/AllItems.aspx?FolderCTID=0x0120001A877AC2A8D0754C894745F7F2227E37&id=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation%2FRAP%20Agent%20Install%20Guide%20for%20Red%20Hat%206%2E10%2Epdf&parent=%2Fsites%2FDDPA%2F0063900000stpZHAAY%2FDocs%2FImplementation%2FTechnical%20Documentation%2F3%20-%20RAP%2FRAP%20Agent%20Installation), but speak with your RAP contact before selling or promising a Linux RAP Agent.
 {% endhint %}
 
-## Installing the RAP Agent on AWS \(ECS\)
-
-!! The RAP agent can also be deployed on AWS by utilizing a custom ECS setup. Documentation for how to deploy the RAP Agent on the AWS cloud can be found here.
-
