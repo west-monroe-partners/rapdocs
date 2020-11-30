@@ -48,7 +48,6 @@
   * [!! Deployment to Microsoft Azure](deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements \(Microsoft Azure\)](deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
     * [!! Performing the Deployment](deployment/deployment-to-microsoft-azure/performing-the-deployment.md)
-    * [!! Using the Deployment Service in Microsoft Azure](deployment/deployment-to-microsoft-azure/using-the-deployment-service-in-microsoft-azure.md)
   * [!! Environment Migration Process](deployment/migrations-across-environments.md)
 * [!! Configuration Guide](configuring-the-data-integration-process/README.md)
   * [Import/Export](configuring-the-data-integration-process/import-export.md)
