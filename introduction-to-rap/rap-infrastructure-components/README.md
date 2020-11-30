@@ -65,3 +65,5 @@ DataOps utilizes Terraform to codify and manage all infrastructure services, com
 
 For a detailed list of components, please refer to the infrastructure [Github Repository](https://github.com/Intellio-DataOps/infrastructure) and use the Terraform CLI command [show](https://www.terraform.io/docs/commands/show.html) to generate a human-readable list of all services for your specific cloud vendor.
 
+If you do not have access to Github, please work with your West Monroe Project Team or the Intellio DataOps development team.
+
