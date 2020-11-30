@@ -20,7 +20,7 @@
   * [Data Processing Engine](logical-architecture-overview/data-processing-engine/README.md)
     * [Data Processing Steps](logical-architecture-overview/data-processing-engine/data-processing-1.md)
 * [!! Physical Architecture](introduction-to-rap/README.md)
-  * [!! Infrastructure Components](introduction-to-rap/rap-infrastructure-components/README.md)
+  * [Infrastructure Components](introduction-to-rap/rap-infrastructure-components/README.md)
     * [!! Authentication Engine](introduction-to-rap/rap-infrastructure-components/user-and-machine-authentication.md)
     * [!! User Interface](introduction-to-rap/rap-infrastructure-components/user-interface.md)
     * [!! RAP Agent](introduction-to-rap/rap-infrastructure-components/on-premise-agent.md)
