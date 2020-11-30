@@ -49,7 +49,7 @@ The data storage is the location of where the data is stored, and is dependent o
 
 ## Infrastructure Application
 
-DataOps supports both AWS and Microsoft Azure cloud providers.
+DataOps supports both AWS and Microsoft Azure cloud providers. The diagrams below represent the standard deployment of the major DataOps services. These diagrams are neither comprehensive nor the only architecture available for deployment for a specific environment. The standard deployments are often modified to adhere to specific client security policies or to integrate in a more custom fashion with outside services.
 
 ### Amazon Web Services Implementation
 
@@ -59,31 +59,9 @@ DataOps supports both AWS and Microsoft Azure cloud providers.
 
 ![](../../.gitbook/assets/dataops-architecture-azure.svg)
 
-### Services Summary
+### Terraform
 
-| Component | AWS | Azure |
-| :--- | :--- | :--- |
-| Data Lake |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+DataOps utilizes Terraform to codify and manage all infrastructure services, components, and dependencies.
 
-{% hint style="info" %}
-!! Resource Costs. Add here some links to pricing for the different resources.
-{% endhint %}
-
-
-
-
-
-!! Add image of the physical architecture, what software used, etc.
-
-RAP leverages various cloud components in AWS or Azure \(depending on the platform selected\).  This section provides an overview of the components leveraged by RAP, how they are leverages as part of the RAP processing engine, and how sizing affects processing performance.
-
-This section covers the following components of the RAP infrastructure stack, as well as how sizing affects performance when applicable:
-
-* On-Premise Agent
-* Data Lake Storage
-* Virtual Machines
-* Database Layer
+For a detailed list of components, please refer to the infrastructure [Github Repository](https://github.com/Intellio-DataOps/infrastructure) and use the Terraform CLI command [show](https://www.terraform.io/docs/commands/show.html) to generate a human-readable list of all services for your specific cloud vendor.
 
