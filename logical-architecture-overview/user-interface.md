@@ -76,7 +76,7 @@ The additional business logic that may be applied to data during the Output stag
 
 ### Agents
 
-The Agents UI manages parameters related to how an Agent will ingest appropriate data. Additional data on the Intellio DataOps \(RAP\) agent can be found in the [Agent Installation Guide](../deployment/installing-a-new-rap-agent/) and its subsequent [Source Connection Guide](../deployment/installing-a-new-rap-agent/connecting-a-rap-agent-to-a-source.md).
+The Agents UI manages parameters related to how an Agent will ingest appropriate data. Additional data on the Intellio DataOps \(RAP\) agent can be found in the [Agent Installation Guide](../deployment/installing-a-new-rap-agent.md) and its subsequent [Source Connection Guide]().
 
 ### Documentation
 
