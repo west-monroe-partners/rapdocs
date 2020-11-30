@@ -8,19 +8,3 @@ The audience for this section are data engineers and data architects who are set
 
 !! Multiple environments, movement between, upgrading, downgrading, import / export configuration.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
