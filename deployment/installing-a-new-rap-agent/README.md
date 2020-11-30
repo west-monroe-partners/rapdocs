@@ -2,7 +2,7 @@
 description: Getting a new Agent installed to connect to a new on-premise data source.
 ---
 
-# !! Installing a New RAP Agent \(On Premise\)
+# Installing a New RAP Agent \(On Premise\)
 
 RAP Agents are a means of transporting data from a source data source to a location RAP can manage \(either in AWS or Microsoft Azure\). Agents are managed through the RAP interface once installed. This section walks through the process of installing a new RAP agent on premise \(on a client's machine\).
 
