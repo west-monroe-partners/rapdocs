@@ -1,4 +1,4 @@
-# Resource Sizing
+# !! Resource Sizing
 
 TODO - Write an intro.  Document default deployment size and how changing Postgres / Databricks sizing affects processing performance.  Also throw in a link to latest AWS pricing for all components and add some ballpark run rates
 
