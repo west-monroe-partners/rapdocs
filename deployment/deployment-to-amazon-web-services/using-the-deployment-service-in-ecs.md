@@ -1,7 +1,3 @@
----
-description: '!! Add introduction and context. Logical architecture. Processing.'
----
-
 # Using the Deployment Service in AWS
 
 ## Prerequisites
