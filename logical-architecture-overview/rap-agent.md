@@ -8,8 +8,6 @@ The DataOps Agent was created to solve the common problems related to data inges
 
 ## Process
 
-![The left side box indicates how the DataOps Agent aggregates client-side data and passes this data into the cloud infrastructure](../.gitbook/assets/rap-architecture-agent.png)
-
 The DataOps Agent is a small piece of software that requires read only access to the source data and a 443 outbound internet connection. The setup allows for the data upload to bypass client intake firewalls and establishes a secure, encrypted connection between the uploaded source and the upload location.
 
 {% hint style="info" %}
