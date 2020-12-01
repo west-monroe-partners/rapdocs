@@ -37,6 +37,12 @@ The graph view allows users to see a visual representation of the current source
 
 ![Graph View](../../.gitbook/assets/image%20%28303%29.png)
 
+#### Table View
+
+The table view allows users to quickly view, filter, search, and sort all relations that involve the current source.
+
+
+
 ## Primary Relations
 
 Primary relations are relations that are designated by the user to be the main relation between a pair of sources.  The first relation between a pair of sources will be automatically set as the primary relation, this can be changed by toggling the Primary Flag on the create/edit Relation Modal. 
@@ -44,6 +50,10 @@ Primary relations are relations that are designated by the user to be the main r
 ![Primary Flog Toggle circled at the bottom right](../../.gitbook/assets/image%20%28299%29.png)
 
 In practice, the most important property of primary relations is that they can be accessed using the shorthand Intellio QL pattern, instead of the longhand pattern. The shorthand pattern allows the primary relation to be accessed using only the name of the related source: _\[Related Source Name\].attribute\_name_. While the long hand pattern requires the user to specify both the related source, as well as the relation name: _\[Related Source Name\]~{Relation Name}.attribute\_name._
+
+## Self Relations
+
+
 
 ## Relation Expressions
 
@@ -54,10 +64,6 @@ The relation expression will define how the resulting data will look, see the Re
 #### _For relating a pair of tables by a foreign key_
 
 > \[This\].ProductID = \[Related\].ProductID
-
-#### _For relating a table by finding a key within one of many fields_
-
-> \[This\].CityName IN \(\[Related\].DepartureCity, \[Related\].ArrivalCity\)
 
 #### _For relating a table by finding a quantity within a range_
 
