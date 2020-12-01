@@ -1,6 +1,6 @@
 ---
 description: >-
-  An overview of the configuration metadata tables in RAP, as well as some
+  An overview of the configuration metadata tables in DataOps, as well as some
   useful query patterns that can be leveraged to quickly get configuration
   information.
 ---
@@ -72,7 +72,7 @@ Configuration metadata tracks and stores all of the configurations that a user p
 These tables store dynamic data that is derived from user input. Editing configurations in the UI does not directly change them, but they are updated to reflect changes in their associated User Configured tables.
 
 * **Raw Attribute** \(raw\_attribute\)
-  * This table tracks the raw attributes that appear in each source. A single record is created for each attribute present in the data upon ingestion. The table tracks the original name of the attribute, the normalized name, with things like numbers, spaces etc. removed, the RAP column alias, and the most recent input that had the attribute present.
+  * This table tracks the raw attributes that appear in each source. A single record is created for each attribute present in the data upon ingestion. The table tracks the original name of the attribute, the normalized name, with things like numbers, spaces etc. removed, the DataOps column alias, and the most recent input that had the attribute present.
   * Raw attributes will be added and updated whenever a new input is pulled into a source.
   * Raw attributes are referenced in the creation of Rules and Relations.
   * Key fields: source\_id/raw\_attribute\_name/data\_type
@@ -206,7 +206,7 @@ Tables containing runtime metadata are the following:
 
 ## Useful Queries
 
-This section lists out some metadata queries that have been useful on prior RAP implementations.
+This section lists out some metadata queries that have been useful on prior DataOps implementations.
 
 * To see process logs
   * SELECT \* FROM log.actor\_log a JOIN meta.process\_history p ON a.log\_id = p.log\_id WHERE process\_id = &lt;process\_id&gt;

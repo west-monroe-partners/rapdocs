@@ -13,18 +13,12 @@ To create a Relation, select a Source from the Sources screen, select the Relati
 
 ![Create new Relation](../../.gitbook/assets/rap-relations-new.png)
 
-![Create Relation Modal](../../.gitbook/assets/rap-relations-details-screen.png)
+![Create Relation Modal](../../.gitbook/assets/image%20%28298%29.png)
 
 ## Relation Properties
 
-* **Relation Name:** __The name of the Relation must be unique because a Relation is simply a relationship between any two Sources in the RAP environment, and a unique identifier is needed to distinguish one Relation from another.
-
-{% hint style="info" %}
- If no relation name is specified, the relation name will default to the following pattern:   
-'_Current Source Name - Related Source Name'_
-{% endhint %}
-
-* **Related Source:** Specifies the related Source.
+* **Relation Name:** __The name of the Relation must be unique in case more than one relation is defined between a pair of sources. If no relation name is specified, the relation name will default to the pattern: '_Current Source Name - Related Source Name'_
+* **Related Source:** Specifies the source for which a relationship with the current source is being defined. 
 * **Relation Expression:**  This is a boolean expression written in SQL that "joins" the current Source \(denoted by "\[This\]"\) to the related Source \(denoted by "\[Related\]"\). The Relation will return 0, 1, or multiple records depending on the result of the expression. The relation expression will define how the resulting data will look, see the Relation Example below for further details. See the [Expressions](../expressions.md) page for more details on Expressions.
 * **Primary Flag:** Marks a relation as the main relation between the two sources, for when there are multiple relations between a pair of sources. Ideally, the primary relation will be a standard foreign key relation. When making a new relation, if the new relation is between two sources that have no primary relation yet, the new relation will automatically be marked as primary. Practically, a Primary Relation is much easier to reference in Enrichments. If the Related Source via the defined Relation will be referenced many times in an Enrichment it is recommended to make it a Primary Relation.
 * **Active Flag**: Indicates if the Relation is currently available to Rule expressions and can be accessed during data processing.
@@ -35,9 +29,17 @@ Click "Save" to finish creating the Relation.
 Across the Intellio DataOps \(RAP\) platform, a grey \(un-clickable\) "Save" button indicates there is an error with the parameters. Typically this error is within an expression field. Double check errors and expressions if you are unable to "Save" your work.
 {% endhint %}
 
+## Graph View vs Table View
+
+
+
 ## Primary Relations
 
+Primary relations are relations that are designated by the user to be the main relation between a pair of sources.  The first relation between a pair of sources will be automatically set as the primary relation, this can be changed by toggling the Primary Flag on the create/edit Relation Modal. 
 
+![Primary Flog Toggle circled at the bottom right](../../.gitbook/assets/image%20%28299%29.png)
+
+In practice, the most important property of primary relations is that they can be accessed using the short hand Intellio QL pattern, instead of the longhand pattern.
 
 ## Relation Expressions
 

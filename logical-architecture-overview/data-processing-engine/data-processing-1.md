@@ -43,9 +43,7 @@ As you move along the data processing steps the resources to manipulate the data
 
 ### Output
 
-Output is the mapping of a source to a destination. Intellio DataOps \(RAP\) by default persists logic all the way to the outputted warehouse. Output maps Hub Table columns to an output file, and then sends the Output file to the appropriate destination. Data processing up until this point does not adjust the grain of the data, so at this point aggregations, unpivots and relational database logic can occurs
-
-Historically DataOps could only output data which was contained in the ingestion location, but in RAP 2.0 and the addition of Relations, Output now includes the data in the ingestion source as well as related data.
+Output is the mapping of a source to a destination. Intellio DataOps by default persists logic all the way to the outputted warehouse. Output maps Hub Table columns to an output file, and then sends the Output file to the appropriate destination. Data processing up until this point does not adjust the grain of the data, so at this point aggregations, unpivots and relational database logic can occurs
 
 ### Post-Processing / Synopsis
 
