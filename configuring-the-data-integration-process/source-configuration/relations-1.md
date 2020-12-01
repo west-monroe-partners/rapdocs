@@ -41,7 +41,7 @@ In practice, the most important property of primary relations is that they can b
 
 ## Relation Expressions
 
-The relation expression will define how the resulting data will look, see the Relation Example below for further details. See the [Intellio™ QL](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions) page for more details on Expressions.
+The relation expression will define how the resulting data will look, see the Relation Example below for further details. Expressions must resolve to a boolean value, and very relation expression must contain an instance of each of the source containers _\[This\]_ and _\[Related\]_ . In essence, each row in _\[This\]_ source \(in other words, the current source\) is related to every row in the _\[Related\]_ source in which the relation expression is true. See the [Intellio™ QL](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions) page for more details on expression syntax.
 
 ### Example Relation Expressions
 
