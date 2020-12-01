@@ -10,7 +10,7 @@ description: >-
 
 ## Data Processing
 
-Intellio DataOps \(RAP\) does not create data. Intellio DataOps \(RAP\) copies, moves, processes, transforms, and performs calculations on data. The location where these actions take place through the logical data flow are raw data, data lake, data hub, and data warehouse.
+Intellio DataOps does not create data. Intellio DataOps copies, moves, processes, transforms, and performs calculations on data. The location where these actions take place through the logical data flow are raw data, data lake, data hub, and data warehouse.
 
 ### Raw Data
 
