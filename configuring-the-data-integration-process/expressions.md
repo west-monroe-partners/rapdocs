@@ -123,10 +123,6 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 > \[This\].ProductID = \[Related\].ProductID
 
-#### _For relating a table by finding a key within one of many fields_
-
-> \[This\].CityName IN \(\[Related\].DepartureCity, \[Related\].ArrivalCity\)
-
 #### _For relating a table by finding a quantity within a range_
 
 > \[This\].Subtotal BETWEEN \(\[Related\].Subtotal - 10\) AND \(\[Related\].Subtotal + 10\)
