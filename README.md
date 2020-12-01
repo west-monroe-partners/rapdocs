@@ -1,4 +1,4 @@
-# Welcome to Intellio DataOps!
+# Welcome to Intellio DataOps \(RAP\)!
 
 Intellio DataOps \(Formerly known as RAP\) is a data integration and warehouse automation service.  By minimizing complexity of data architecture, ​DataOps enables lean and agile analytical data processing at scale.   
 

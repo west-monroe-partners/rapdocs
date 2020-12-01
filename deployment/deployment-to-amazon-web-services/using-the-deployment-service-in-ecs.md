@@ -3,13 +3,13 @@
 ## Prerequisites
 
 * AWS Console Access
-* Read and write access to DataOps ECS Clusters and Task Definitions
+* Read and write access to RAP ECS Clusters and Task Definitions
 * Read access to deployment cloudwatch logs
 * RDS Query Editor access or PgAdmin access
 
 ## Running the Service
 
-1. Make sure there are no currently running processes in DataOps. Check the UI or check the meta.process table - if processes exist, then wait for them to finish or work with the Configuration team to clear them out of the process queue.
+1. Make sure there are no currently running processes in RAP. Check the UI or check the meta.process table - if processes exist, then wait for them to finish or work with the Configuration team to clear them out of the process queue.
 2. Navigate to the Amazon ECS Service in the AWS Management Console
 3. Click the "Task Definitions" link on the left side of the page
 

@@ -30,7 +30,7 @@ Ingest is the first step of the logical data flow and is the process by which da
 
 ### DataOps Data Lake / Transform
 
-DataOps imports the appropriately transformed raw data from source systems into an indexed **Data Lake**, which utilizes Amazon's S3 or Microsoft Azure's Data Lake Gen2 file storage technology. As DataOps imports the data into the Data Lake, it identifies and stores information such as source database, original file location, and location in the Data Lake within the metadata structure, resulting in a self-managing Data Lake, useful for data scientists to access the raw information gathered on a scheduled basis.
+DataOps imports the appropriately transformed raw data from source systems into an indexed **Data Lake**, which utilizes Amazon's S3 or Microsoft Azure's Data Lake Gen2 file storage technology. As RAP imports the data into the Data Lake, it identifies and stores information such as source database, original file location, and location in the Data Lake within the metadata structure, resulting in a self-managing Data Lake, useful for data scientists to access the raw information gathered on a scheduled basis.
 
 #### Enrichment
 
@@ -41,7 +41,7 @@ The Enrichment step is facilitated by the Enrichment tab within the Source scree
 {% hint style="info" %}
 **Enrichments Execution**
 
-DataOps supports many types of enrichments, and not all types of business logic can be executed at the same time. Based on the type of enrichment, calculation, or aggregation the enrichment will execute at a different, appropriate time in the logical data flow or data processing actions. DataOps' interface keeps the details of these executions behind the scenes and user friendly.
+DataOps supports many types of enrichments, and not all types of business logic can be executed at the same time. Based on the type of enrichment, calculation, or aggregation the enrichment will execute at a different, appropriate time in the logical data flow or data processing actions. RAP's interface keeps the details of these executions behind the scenes and user friendly.
 {% endhint %}
 
 ### DataOps Data Hub
