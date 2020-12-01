@@ -41,5 +41,5 @@ In practice, the most important property of primary relations is that they can b
 
 ## Relation Expressions
 
-
+[Intellio](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions)™[ QL](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions)
 
