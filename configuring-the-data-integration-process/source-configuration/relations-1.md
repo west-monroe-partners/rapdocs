@@ -35,13 +35,13 @@ The Relations tab has two main views: the graph view and the table view.
 
 The graph view allows users to see a visual representation of the current source, all sources related to the current source either directly or through a primary relation chain, and all the relations that connect these sources.
 
-![Graph View](../../.gitbook/assets/image%20%28303%29.png)
+![Graph View](../../.gitbook/assets/image%20%28304%29.png)
 
 #### Table View
 
 The table view allows users to quickly view, filter, search, and sort all relations that involve the current source.
 
-
+![Table View](../../.gitbook/assets/image%20%28303%29.png)
 
 ## Primary Relations
 
