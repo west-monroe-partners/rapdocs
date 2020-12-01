@@ -43,3 +43,17 @@ In practice, the most important property of primary relations is that they can b
 
 The relation expression will define how the resulting data will look, see the Relation Example below for further details. See the [Intellio™ QL](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions) page for more details on Expressions.
 
+### Example Relation Expressions
+
+#### _For relating a pair of tables by a foreign key_
+
+> \[This\].ProductID = \[Related\].ProductID
+
+#### _For relating a table by finding a key within one of many fields_
+
+> \[This\].CityName IN \(\[Related\].DepartureCity, \[Related\].ArrivalCity\)
+
+#### _For relating a table by finding a quantity within a range_
+
+> \[This\].Subtotal BETWEEN \(\[Related\].Subtotal - 10\) AND \(\[Related\].Subtotal + 10\)
+
