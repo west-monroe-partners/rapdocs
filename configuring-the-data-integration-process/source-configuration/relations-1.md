@@ -29,7 +29,13 @@ Across the Intellio DataOps \(RAP\) platform, a grey \(un-clickable\) "Save" but
 
 ## Graph View vs Table View
 
+The Relations tab has two main views: the graph view and the table view. 
 
+#### Graph View
+
+The graph view allows users to see a visual representation of the current source, all sources related to the current source either directly or through a primary relation chain, and all the relations that connect these sources.
+
+![Graph View](../../.gitbook/assets/image%20%28303%29.png)
 
 ## Primary Relations
 
