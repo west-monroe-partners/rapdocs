@@ -169,7 +169,7 @@ If this message does not exist - try running the container again \(click stop an
 
 Use the "database-connection" value from the Private secret in Key Vault to connect to the RDS in the RDS service within AWS.
 
-Run the following queries in the database named &lt;environment&gt;. Update the region parameter with the AWS region that DataOps is deployed in.
+Run the following queries in the database named &lt;environment&gt;. 
 
 {% hint style="info" %}
 Replace the "DEV" values with the name of your environment. Make sure that the databricks-db-name is all lowercase.
@@ -182,7 +182,7 @@ update meta.system_configuration set value = 'dev' where name = 'databricks-db-n
 update meta.system_configuration set value = 'Databricks' where name = 'spark-provider';
 update meta.system_configuration set value = 'AWS' where name = 'cloud';
 insert into meta.agent values ('local','local',null,null,
-                               '{"region": "<aws-region>", "default": true, "autoUpdate": false,
+                               '{"default": true, "autoUpdate": false,
                                 "maxResources": 4, "akkaStreamTimeout": 300,
                                  "checkDeltaInterval": 30,
                                   "checkPushFilesInterval": 10}','startxx',false);

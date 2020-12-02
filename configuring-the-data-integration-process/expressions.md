@@ -119,13 +119,7 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 
 ### Relation Expressions
 
-#### _For relating a pair of tables by a foreign key_
-
-> \[This\].ProductID = \[Related\].ProductID
-
-#### _For relating a table by finding a quantity within a range_
-
-> \[This\].Subtotal BETWEEN \(\[Related\].Subtotal - 10\) AND \(\[Related\].Subtotal + 10\)
+More Info on relation expressions and examples can be found at the bottom of the relation page of the configuration guide [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/source-configuration/relations-1#relation-expressions).
 
 ### Rule Expressions
 
