@@ -23,14 +23,6 @@ Prior to installing the DataOps Agent, the following requirements must be met.  
 * The user account intended for the Agent to use to access source databases needs to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the Agent user and only SQL Server authentication can be used.
   * Mixed-mode authentication can still be enabled to allow for integrated authentication for non-DataOps related loads.
 
-## **Machine Guid Command**
-
-Your machine Guid will be needed to complete the installation. To get the Machine Guid, run the following command in the terminal on the server that the Agent will be installed on.
-
-```text
-reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography /v MachineGuid
-```
-
 ## Setting up a New Agent Configuration
 
 ![New Agent Creation.](../.gitbook/assets/rap-agent-select-new.png)
@@ -45,7 +37,13 @@ In the DataOps UI, from the left hand menu navigate to Agents, and click New. Fr
 | Machine Guid | A specific key to identify the machine the agent is running on, see below for the terminal command to obtain. |
 | s3LandingPath | Path to Datalake bucket \(e.g. "s3://dev-datalake-intellio"\) |
 
-#### 
+#### Machine Guid Command
+
+To get the Machine Guid, run the following command in the terminal on the server that the Agent will be installed on.
+
+```text
+reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography /v MachineGuid
+```
 
 ## Installing the DataOps Agent \(Windows\)
 
