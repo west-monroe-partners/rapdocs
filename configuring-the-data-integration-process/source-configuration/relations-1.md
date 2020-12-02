@@ -15,6 +15,10 @@ To create a Relation, select a Source from the Sources screen, select the Relati
 
 ![Create Relation Modal](../../.gitbook/assets/image%20%28298%29.png)
 
+{% hint style="info" %}
+The user can define a relation between the current source and itself by selecting the current source in the related source modal. 
+{% endhint %}
+
 ## Relation Properties
 
 * **Relation Name:** __The name of the Relation must be unique in case more than one relation is defined between a pair of sources. If no relation name is specified, the relation name will default to the pattern: '_Current Source Name - Related Source Name'_
@@ -50,10 +54,6 @@ Primary relations are relations that are designated by the user to be the main r
 ![Primary Flog Toggle circled at the bottom right](../../.gitbook/assets/image%20%28299%29.png)
 
 In practice, the most important property of primary relations is that they can be accessed using the shorthand Intellio QL pattern, instead of the longhand pattern. The shorthand pattern allows the primary relation to be accessed using only the name of the related source: _\[Related Source Name\].attribute\_name_. While the long hand pattern requires the user to specify both the related source, as well as the relation name: _\[Related Source Name\]~{Relation Name}.attribute\_name._
-
-## Self Relations
-
-
 
 ## Relation Expressions
 
