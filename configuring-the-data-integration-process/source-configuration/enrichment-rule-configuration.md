@@ -4,7 +4,7 @@ description: >-
   transform data as it is ingested.
 ---
 
-# !! Rules
+# Rules
 
 ## Rules Tab
 
