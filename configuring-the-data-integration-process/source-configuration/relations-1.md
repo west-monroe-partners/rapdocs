@@ -1,8 +1,8 @@
 ---
 description: >-
   A Relation allows users to access attributes from different Sources (within
-  the Source the Relation is made) and use these attributes in Enrichment rules
-  and other logic further down the pipeline.
+  the Source the Relation is made) and use these attributes in Rules and other
+  logic further down the pipeline.
 ---
 
 # !! Relations
@@ -12,7 +12,7 @@ description: >-
 To create a Relation, select a Source from the Sources screen, select the Relations tab, and click "New Relation" button in the top-right corner of the screen. Once the button has been clicked, the create Relation Modal will open. Fill out all the required parameters and all desired optional parameters \(more info below\) and press the save button to create your new relation. The save button will be disabled until all required parameters are filled in, and a valid expression has been entered.
 
 {% hint style="info" %}
-The user can define a relation between the current source and itself by selecting the current source in the related source modal. Self relations can _never_ be primary.
+**Self Relations:** The user can define a relation between the current source and itself by selecting the current source in the related source modal. Self relations can _never_ be primary.
 {% endhint %}
 
 ![New Relation Button](../../.gitbook/assets/image%20%28302%29.png)
