@@ -41,7 +41,6 @@
     * [Pre Deployment Requirements](deployment/deployment-to-amazon-web-services/pre-deployment-requirements-aws.md)
     * [Performing the Deployment](deployment/deployment-to-amazon-web-services/performing-the-deployment.md)
     * [Using the Deployment Service](deployment/deployment-to-amazon-web-services/using-the-deployment-service-in-ecs.md)
-    * [!! Installing a New Agent On ECS \(AWS\)](deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
   * [Deployment to Microsoft Azure](deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements](deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
     * [Performing the Deployment](deployment/deployment-to-microsoft-azure/performing-the-deployment.md)
