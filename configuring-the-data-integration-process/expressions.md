@@ -59,8 +59,8 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
     <tr>
       <td style="text-align:left">.</td>
       <td style="text-align:left">Separator of source containers and attribute names. Can also be used to
-        directly display the attribute drop down of the current source in Dataviewer
-        and Output Mapping expressions.</td>
+        directly display the attribute drop down of the current source in Data
+        Viewer and Output Mapping expressions.</td>
       <td style="text-align:left">All</td>
       <td style="text-align:left">[Source Name].attribute_name</td>
     </tr>
