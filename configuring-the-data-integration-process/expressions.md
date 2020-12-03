@@ -28,7 +28,7 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
     <tr>
       <td style="text-align:left">[<em>Source Name</em>]</td>
       <td style="text-align:left">Source container. Simply a source name wrapped in brackets.</td>
-      <td style="text-align:left">Output Mappings</td>
+      <td style="text-align:left">Output Mappings, Rules</td>
       <td style="text-align:left">[SalesOrderDetail]</td>
     </tr>
     <tr>
@@ -36,7 +36,7 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
       </td>
       <td style="text-align:left">
         <p>Current source container. Equivalent to [<em>current source name</em>]</p>
-        <p>Optional for Output Mapping &amp; Dataviewer expressions</p>
+        <p>Optional for Output Mapping &amp; Data Viewer expressions</p>
       </td>
       <td style="text-align:left">All</td>
       <td style="text-align:left">[This]</td>
