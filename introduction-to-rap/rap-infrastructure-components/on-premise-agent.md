@@ -10,7 +10,7 @@ If exact domains are required for specific networks because of restrictive firew
 
 * Auth0
 * RAP API endpoint
-* S3 landing bucket
+* Data Lake landing location \(S3 bucket or Azure storage account\)
 
 TODO - how \# of threads on box Agent is installed on affect \# of parallel data pulls, how to override + guidance on when / how to do so
 

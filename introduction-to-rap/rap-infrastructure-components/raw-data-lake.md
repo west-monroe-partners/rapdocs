@@ -10,5 +10,5 @@ Tool = AWS Simple Storage Service \(S3\)
 
 ### Microsoft Azure Services Implementation
 
-Tool = Azure Data Lake Storage \(ADLS\) v2
+Tool = Azure Data Lake Storage \(ADLS\) v2 Blob Storage
 

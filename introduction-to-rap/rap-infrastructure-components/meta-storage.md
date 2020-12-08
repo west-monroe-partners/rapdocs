@@ -2,7 +2,7 @@
 
 ### Amazon Web Services Implementation
 
-Tool = Postgres RDS \(Relational Database Service\)
+Tool = Postgres SQL 
 
 Why?
 
@@ -12,7 +12,7 @@ Details / Issues?
 
 ### Microsoft Azure Services Implementation
 
-Tool = Azure Database for PostgreSQL
+Tool = ??
 
 Why?
 
