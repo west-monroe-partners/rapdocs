@@ -48,7 +48,13 @@ As an example, to add a field called “customer\_full\_name” to an ERP source
 
 ### Relation Names
 
-TODO - come up with something
+Relations should be named according to the following convention:
+
+**`<Source 1 Name> (<Cardinality 1>) to <Source 2 Name> (<Cardinality 2>)`**
+
+&lt;Source 1 Name&gt; and &lt;Source 2 Name&gt; are the names of the two sources on either side of the Relation.
+
+&lt;Cardinality 1&gt; and &lt;Cardinality 2&gt; are the cardinalities of the respective sources on either side of the Relation.  Values here can be "ONE" or "MANY".
 
 ### Output Names
 
@@ -78,7 +84,11 @@ Output file names are frequently driven by the naming convention required by the
 
 #### Loopback Files
 
-Loopback files are a special case of file outputs.  As loopbacks are only created to the specific use case of re-ingestion back into RAP, those files are not intended to be used for consumption by any users and are transient in that they exist only until they are re-ingested.  This will be the only scenario where output files should be written to the Inbox container.
+{% hint style="info" %}
+Before implementing a loopback, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add a lot of extra complexity and I/O, and only should be leveraged when no other options exist.
+{% endhint %}
+
+Loopback files are a special case of file outputs.  As loopbacks are only created to the specific use case of re-ingestion back into DataOps, those files are not intended to be used for consumption by any users and are transient in that they exist only until they are re-ingested.  This will be the only scenario where output files should be written to the Inbox container.
 
 Specific guidelines for loopback file naming and placement are the following:
 
