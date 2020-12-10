@@ -8,5 +8,5 @@ In some reporting scenarios, a hard copy of aggregate calculations has to be mai
 
 TODO - replace this section with aggregate overview \(warehouse recalc\), when to do in RAP vs. reporting tool
 
-TODO - add something about loopback pipeline \(RAP -&gt; Avro file -&gt; RAP\), when to use
+TODO - add something about loopback pipeline \(RAP -&gt; Avro file -&gt; RAP\), why it's generally a bad idea, when to use
 
