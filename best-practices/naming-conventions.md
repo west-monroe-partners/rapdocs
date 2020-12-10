@@ -7,7 +7,7 @@ description: Suggested standards for naming objects in RAP.
 A consistent naming convention for source names and enrichment names can make the difference between an easily maintainable solution and one that is difficult to understand.  This section suggests a naming convention that project teams can leverage when starting a new implementation.
 
 {% hint style="info" %}
-Note that different implementation teams may leverage a different standard that that proposed here, whether that is due to customer naming requirements or specialized business rules where a different naming convention is preferable.  On existing implementations, follow the standard naming convention that is already in place over the convention proposed here.
+Note that implementation teams may leverage a different standard that that proposed here, whether that is due to customer naming requirements or specialized business rules where a different naming convention is preferable.  On existing implementations, if a naming convention is already in place, follow the existing naming convention over the convention proposed here.
 {% endhint %}
 
 ### Source Names
