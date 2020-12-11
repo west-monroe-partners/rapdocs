@@ -6,6 +6,10 @@ description: Suggested standards for naming objects in RAP.
 
 A consistent naming convention for source names and enrichment names can make the difference between an easily maintainable solution and one that is difficult to understand.  This section suggests a naming convention that project teams can leverage when starting a new implementation.
 
+{% hint style="info" %}
+Note that implementation teams may leverage a different standard that that proposed here, whether that is due to customer naming requirements or specialized business rules where a different naming convention is preferable.  On existing implementations, if a naming convention is already in place, follow the existing naming convention over the convention proposed here.
+{% endhint %}
+
 ### Source Names
 
 #### Table-based Sources
@@ -66,6 +70,10 @@ Outputs should be named according to the following convention:
 
 As an example, to output to the f\_sales table in the Data Warehouse, the output should be named “DW – f\_sales”.
 
+### Output Source Channel Names
+
+TODO - define a standard
+
 ### File Names and Bucket Usage
 
 TODO - loopback naming, file naming, S3 bucket / ADLS container usage
@@ -85,7 +93,7 @@ Output file names are frequently driven by the naming convention required by the
 #### Loopback Files
 
 {% hint style="info" %}
-Before implementing a loopback, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add a lot of extra complexity and I/O, and only should be leveraged when no other options exist.
+Before implementing a loopback, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add extra complexity and I/O and should only be leveraged when no other options exist.
 {% endhint %}
 
 Loopback files are a special case of file outputs.  As loopbacks are only created to the specific use case of re-ingestion back into DataOps, those files are not intended to be used for consumption by any users and are transient in that they exist only until they are re-ingested.  This will be the only scenario where output files should be written to the Inbox container.
