@@ -24,13 +24,13 @@ It is important to decide which Output Type an Output is. There are four main ty
 
 {% tabs %}
 {% tab title="File" %}
-DataOps will output a **File** using a [File Connection](../connections-configuration.md#file).
+DataOps will output a **File** using a File Connection.
 
 There are five Output File Types: **Avro**, **CSV**, **JSON**, **Parquet**, or **Text**. Parameter selections will update dynamically depending on the selection.
 {% endtab %}
 
 {% tab title="Table" %}
-RAP can output and refresh data to a database **Table** using a [Table Connection](../connections-configuration.md#table).
+DataOps can output and refresh data to a database **Table** using a Table Connection.
 
 There are three table output drivers: Snowflake, SQL Server, and Postgres.
 {% endtab %}
