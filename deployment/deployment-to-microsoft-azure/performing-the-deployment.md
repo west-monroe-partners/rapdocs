@@ -13,8 +13,6 @@ After creating the App Registration, navigate to the API permissions section of 
 
 Add the permissions and grant them consent if needed. 
 
-Navigate to the Azure Subscription and add this newly created app registration as an "Owner" on the subscription.
-
 Save the Application \(client\) ID and generate a secret for the app registration. These will be used when populating variables in Terraform Cloud in the next step.
 
 ## Fork Infrastrucure Repository in GitHub
