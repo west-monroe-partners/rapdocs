@@ -60,15 +60,17 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
   <tbody>
     <tr>
       <td style="text-align:left">Table, File</td>
-      <td style="text-align:left">connection_name*</td>
+      <td style="text-align:left">Connection*</td>
       <td style="text-align:center"></td>
-      <td style="text-align:left">Connection name for the destination</td>
+      <td style="text-align:left">Name of the DataOps connection used to write the output to the desired
+        destination</td>
     </tr>
     <tr>
       <td style="text-align:left">Virtual</td>
-      <td style="text-align:left">view_schema*</td>
+      <td style="text-align:left">View Name*</td>
       <td style="text-align:center"></td>
-      <td style="text-align:left">Schema name for Output view</td>
+      <td style="text-align:left">Name of the Virtual Table/View that will appear in the Databricks environment
+        once the output is processed.</td>
     </tr>
     <tr>
       <td style="text-align:left">File Type: Parquet</td>
@@ -247,42 +249,9 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
 
 \#\#\# Output Retention
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Process Type</th>
-      <th style="text-align:left">Filter Appears Under</th>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Default Value</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">CSV, Parquet</td>
-      <td style="text-align:left">File</td>
-      <td style="text-align:left">archive_files</td>
-      <td style="text-align:left">1 year</td>
-      <td style="text-align:left">How long to retain files in the Output Archive S3 folder</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CSV, Parquet</td>
-      <td style="text-align:left">File</td>
-      <td style="text-align:left">buffer_files</td>
-      <td style="text-align:left">0</td>
-      <td style="text-align:left">
-        <p>How long to retain files in the Output Archive S3 folder</p>
-        <p><em>(Legacy Compatability)</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CSV, Parquet</td>
-      <td style="text-align:left">File</td>
-      <td style="text-align:left">temporary_files</td>
-      <td style="text-align:left">14 days</td>
-      <td style="text-align:left">How long to retain temporary files in S3</td>
-    </tr>
-  </tbody>
-</table>
+| Process Type | Filter Appears Under | Parameter | Default Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| CSV, Parquet | File | archive\_files | 1 year | How long files will remain in archive folder. |
+| CSV, Parquet | File | buffer\_files | 0 | Interval to retain files in fast output buffer storage |
+| CSV, Parquet | File | temporary\_files | 14 days | Amount of time temporary files will remain stored |
 
