@@ -74,7 +74,7 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
     </tr>
     <tr>
       <td style="text-align:left">File Type: Parquet</td>
-      <td style="text-align:left">file_mask</td>
+      <td style="text-align:left">file_name</td>
       <td style="text-align:center">
         <p><code>FileName</code>
         </p>
@@ -84,21 +84,10 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
       <td style="text-align:left">File mask for output file</td>
     </tr>
     <tr>
-      <td style="text-align:left">File Type: CSV</td>
-      <td style="text-align:left">file_mask</td>
-      <td style="text-align:center">
-        <p><code>FileName</code>
-        </p>
-        <p><code>&lt;TSHH12MISS&gt;.csv</code>
-        </p>
-      </td>
-      <td style="text-align:left">File mask for output file</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Virtual</td>
-      <td style="text-align:left">view_name*</td>
-      <td style="text-align:center"></td>
-      <td style="text-align:left">Name for Output view</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:center">&lt;code&gt;&lt;/code&gt;</td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">Virtual</td>
