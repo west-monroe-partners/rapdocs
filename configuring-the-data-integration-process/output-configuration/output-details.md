@@ -59,7 +59,7 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Table, File, SFTP</td>
+      <td style="text-align:left">Table, File</td>
       <td style="text-align:left">connection_name*</td>
       <td style="text-align:center"></td>
       <td style="text-align:left">Connection name for the destination</td>
@@ -82,7 +82,7 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
       <td style="text-align:left">File mask for output file</td>
     </tr>
     <tr>
-      <td style="text-align:left">SFTP, File Type: CSV</td>
+      <td style="text-align:left">File Type: CSV</td>
       <td style="text-align:left">file_mask</td>
       <td style="text-align:center">
         <p><code>FileName</code>
@@ -111,13 +111,13 @@ Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory an
       <td style="text-align:left">Output key history for Key Output Sources - ignore for Time Series sources</td>
     </tr>
     <tr>
-      <td style="text-align:left">File, SFTP</td>
+      <td style="text-align:left">File</td>
       <td style="text-align:left">partition</td>
       <td style="text-align:center">segment</td>
       <td style="text-align:left">Partitioning strategy for files Options: input, segment</td>
     </tr>
     <tr>
-      <td style="text-align:left">File, SFTP</td>
+      <td style="text-align:left">File</td>
       <td style="text-align:left">
         <p>limit_by</p>
         <p>_effective_range</p>
