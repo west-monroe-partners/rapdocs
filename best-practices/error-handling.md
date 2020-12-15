@@ -16,5 +16,5 @@ TODO - discuss warning vs failure, link to section in Configuration Guide
 
 ### Error Outputs
 
-TODO - discuss what should be routed to these \(copy from Insurance Brokerage accelerator conceptual arch slides\)
+TODO - discuss what should be routed to these \(copy content from KTS slides\)
 

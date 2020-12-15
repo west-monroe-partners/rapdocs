@@ -70,9 +70,9 @@ Outputs should be named according to the following convention:
 
 As an example, to output to the f\_sales table in the Data Warehouse, the output should be named “DW – f\_sales”.
 
-### Channel \(Output Source\) Names
+### Output Source Channel Names
 
-Channels are given the same name as the Source name by default by DataOps.  However, this can be confusing for new developers / configurators in understanding what that output grain means or what it is used for, since the source name is more focused on describing the source and not the destination.  Therefore, the recommended convention is to use the name of the output grain instead \(ex: Sales Order, Purchase Order, Inventory Snapshot, etc\).  Since DataOps shows the Source name next to the Channel name in the Output Mappings, having those 2 values be different is helpful to give a full picture of what the source data is and the grain that plays in the output.
+TODO - define a standard
 
 ### File Names and Bucket Usage
 
@@ -80,19 +80,17 @@ TODO - loopback naming, file naming, S3 bucket / ADLS container usage
 
 #### Input Folder Structure
 
-TODO - local agent vs. DataOps inbox in AWS / Azure
+TODO - local agent vs. RAP inbox in AWS / Azure
 
-The simplest scenario where it is an option would be to drop files in DataOps' internal "inbox".  This will be a special account or container that exists in AWS / Azure for the purpose of ingesting file-based data into DataOps.  In most cases, both the Development and Production environments will leverage the same storage account / container for the DataOps inbox.  Therefore, the recommendation is to create a DEV and PROD folder as the top level folders in the inbox.  All files ingested into DataOps from the Inbox should come from the folder structure for the DEV or PROD environment respectively.
+The simplest scenario where it is an option would be to drop files in RAP's internal "inbox".  This will be a special account or container that exists in AWS / Azure for the purpose of ingesting file-based data into RAP.  In most cases, both the Development and Production environments will leverage the same storage account / container for the RAP inbox.  Therefore, the recommendation is to create a DEV and PROD folder as the top level folders in the inbox.  All files ingested into RAP from the Inbox should come from the folder structure for the DEV or PROD environment respectively.
 
 Within those those environment folders, a sub-folder should be created for each input system.  As upstream file names are frequently out of the control of the implementation team, the separate folders will help keep files organized and avoid naming conflicts.
 
 #### Output Files for Downstream Consumers
 
-Output file names are frequently driven by the naming convention required by the downstream system ingesting those files.  In order to prevent naming collisions / confusion, each downstream system should have its own folder in the Output container coming out of DataOps.
+Output file names are frequently driven by the naming convention required by the downstream system ingesting those files.  In order to prevent naming collisions / confusion, each downstream system should have its own folder in the Output container coming out of RAP.
 
 #### Loopback Files
-
-TODO:  move this around - loopbacks no longer have to be written to separate file, convention should change appropriately
 
 {% hint style="info" %}
 Before implementing a loopback, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add extra complexity and I/O and should only be leveraged when no other options exist.
