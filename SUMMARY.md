@@ -46,6 +46,7 @@
   * [Deployment to Microsoft Azure](deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements](deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
     * [Performing the Deployment](deployment/deployment-to-microsoft-azure/performing-the-deployment.md)
+    * [!! New Version Upgrade Process](deployment/deployment-to-microsoft-azure/new-version-upgrade-process.md)
   * [Installing a New Agent](deployment/installing-a-new-agent.md)
   * [!! Environment Migration Process](deployment/migrations-across-environments.md)
 * [!! Configuration Guide](configuring-the-data-integration-process/README.md)
