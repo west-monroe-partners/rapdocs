@@ -77,7 +77,7 @@
   * [!! Output Data Modeling](best-practices/output-data-modeling.md)
   * [!! Pre-Calculating Aggregate Data](best-practices/rollup-sources.md)
   * [!! Handling Data Validation Errors](best-practices/error-handling.md)
-  * [Crossing X:Many Cardinality Relations](best-practices/crossing-x-many-cardinality-relations.md)
+  * [!! Crossing X:Many Cardinality Relations](best-practices/crossing-x-many-cardinality-relations.md)
   * [!! Error Notifications](best-practices/error-notifications.md)
 * [!! Operation Guide](operation-guide/README.md)
   * [!! Monitoring the Process](operation-guide/monitoring-the-process/README.md)
