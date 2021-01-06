@@ -9,8 +9,8 @@ In most situations, crossing to the Many side of a one-to-many / many-to-many re
 Some examples where this may be needed include the following:
 
 * Crossing a junction table to get a single value \(employee serving a specific role for a client, single 
-* Getting the min / max record from a header / detail relationship \(used in scenarios where the source system is not fully normalized / data is stored at the wrong grain\)
-* Calculating an aggregation of measures on a lower-grain table
+* Getting the min / max record from a header / detail relationship \(for example, scenarios where the source system is not fully normalized / data is stored at the wrong grain\)
+* Calculating an aggregation of measures on a lower-grain table in order to calculate another measure on the higher grain table
 
 {% hint style="info" %}
 The primary goal of crossing to the Many side of a relation is to get a singular value or record.  If the logic does not support that goal, consider whether either the logic or the driving grain needs to be modified.
