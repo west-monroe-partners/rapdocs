@@ -75,7 +75,7 @@
   * [!! Onboarding New Sources](best-practices/onboarding-sources.md)
   * [!! Naming Conventions](best-practices/naming-conventions.md)
   * [!! Output Data Modeling](best-practices/output-data-modeling.md)
-  * [!! Pre-Calculating Aggregate Data](best-practices/rollup-sources.md)
+  * [!! Pre-Calculating Aggregate Data](best-practices/pre-calculating-aggregate-data.md)
   * [!! Handling Data Validation Errors](best-practices/error-handling.md)
   * [!! Crossing X:Many Cardinality Relations](best-practices/crossing-x-many-cardinality-relations.md)
   * [!! Error Notifications](best-practices/error-notifications.md)
