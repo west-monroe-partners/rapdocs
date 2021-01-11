@@ -69,7 +69,7 @@
     * [!! Output History](configuring-the-data-integration-process/output-configuration/output-history.md)
   * [!! Common Problems](configuring-the-data-integration-process/common-problems.md)
   * [!! Relations and Rules Detailed Example](configuring-the-data-integration-process/relations-and-rules-detailed-example.md)
-  * [!! Intellio® QL](configuring-the-data-integration-process/expressions.md)
+  * [! Intellio® QL](configuring-the-data-integration-process/expressions.md)
 * [!! Performance Tuning](performance-tuning.md)
 * [!! Implementation Best Practices](best-practices/README.md)
   * [!! Onboarding New Sources](best-practices/onboarding-sources.md)
