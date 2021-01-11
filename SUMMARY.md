@@ -57,7 +57,7 @@
     * [!! Details](configuring-the-data-integration-process/source-configuration/source-details.md)
     * [!! Dependencies](configuring-the-data-integration-process/source-configuration/dependency-configuration.md)
     * [!! Relations](configuring-the-data-integration-process/source-configuration/relations-1.md)
-    * [! Rules](configuring-the-data-integration-process/source-configuration/enrichment-rule-configuration.md)
+    * [!! Rules](configuring-the-data-integration-process/source-configuration/enrichment-rule-configuration.md)
     * [Inputs](configuring-the-data-integration-process/source-configuration/source-inputs.md)
     * [!! Process](configuring-the-data-integration-process/source-configuration/process.md)
     * [!! Data View](configuring-the-data-integration-process/source-configuration/source-data-view.md)
