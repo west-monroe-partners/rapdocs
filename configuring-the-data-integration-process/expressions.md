@@ -4,7 +4,7 @@ description: >-
   (RAP) user interface.
 ---
 
-# ! Intellio® QL
+# !! Intellio® QL
 
 Expressions occur in many locations in the Intellio® DataOps \(RAP\) user interface, namely Relations, Rules, Output Mappings, and Dataviewer filters. In order to access source attributes and traverse relations within these expressions, the user must use **Intellio® Query Language**.
 
