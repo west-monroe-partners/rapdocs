@@ -35,7 +35,7 @@ Some example use cases include the following:
 
 #### X:Many Relation Aggregations
 
-Another common pattern may be to aggregate by traversing to the Many side of a One-to-Many or Many-to-Many relationship.  For example, a sum of Sales Order Lines may need to be rolled up to the Sales Order Header grain for a calculation.  When done in this manner, DataOps is able to determine the right grain to aggregate to automatically, as it will use the lowers aggregation grain needed to retain the grain of the driving side of the relation \(in our example, Lines will be aggregated to the Header grain\).
+Another common pattern is to aggregate by traversing to the Many side of a One-to-Many or Many-to-Many relationship.  For example, a sum of Sales Order Lines may need to be rolled up to the Sales Order Header grain for a calculation.  When done in this manner, DataOps is able to determine the right grain to aggregate to automatically, as it will use the lowest aggregation grain needed to retain the grain of the driving side of the relation \(in our example, Line data will be aggregated to the Header grain\).
 
 Information about how this pattern works are covered in detail in the [Crossing X:Many Cardinality Relations section](crossing-x-many-cardinality-relations.md) of this document.
 
