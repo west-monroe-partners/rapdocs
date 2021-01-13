@@ -70,7 +70,7 @@ The way around this is knowing exactly which attribute type code in LocationAttr
 
 Knowing this, we can essentially distill the 1:M relation between Location and LocationAttributeJunction down to a 1:1 relation by leveraging a relationship with the following condition:
 
-* Location.LocationID = LocationAttributeJunction.LocationID AND LocationAttributeJunction.AttributeTypeCode = 10
+* \[Location\].\[LocationID\] = \[LocationAttributeJunction\].\[LocationID\] AND \[LocationAttributeJunction\].\[AttributeTypeCode\] = 10
 
 With this new relation in place, our relation chain from Location to Attribute becomes 1:1 + M:1, which combined is a M:1 relation.  Using this relation, the Attribute table can be traversed to from the Location table as usual \(making sure to specify the new 1:1 relation and not the normal 1:M relation\):
 
