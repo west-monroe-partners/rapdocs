@@ -80,9 +80,11 @@ With this new relation in place, our relation chain from Location to Attribute b
 Getting to a single value from the Many side of a 1:M or M:M relation requires distilling the Many side of the relation down to a One cardinality through additional filters.  When done correctly, the new relation can be traversed as normal \(without blowing out the driving source grain\).
 {% endhint %}
 
-### Crossing though a chain of multiple Many cardinality relations
+### Traversing though a chain of multiple Many cardinality relations
 
-TODO - copy from slides
+Traversing through a chain of multiple 1:M / M:M relations requires some extra planning and consideration.  DataOps will not allow crossing multiple relations with a Many cardinality on the opposite end with a single rule or expression.  As such, the chain will need to be broken into smaller 1:M / M:M traversals with only a single Many cardinality crossing in each traversal.  Once those smaller traversals are determined, those traversals can be performed using the methods described earlier in this page, and the resulting intermediate calculations can be chained together to get to the final desired calculation.
+
+TODO - example scenario
 
 
 
