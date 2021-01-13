@@ -40,7 +40,7 @@ Retrieving a single record from the Many side of a relation requires a rule that
 
 #### Example Scenario
 
-Take for example a model there Locations can have multiple Attributes tied to them, each being different Attribute Types assigned in a a junction table.  For our purposes, suppose we want to get a single Location Type Attribute for all Locations.
+Take for example a model where Locations can have multiple Attributes tied to them, each having different Attribute Types assigned in a a junction table.  For our purposes, suppose we want to get a single Location Type Attribute for all Locations.
 
 ![Example many-to-many relationship](../.gitbook/assets/image%20%28330%29.png)
 
