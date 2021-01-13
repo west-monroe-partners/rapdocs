@@ -77,7 +77,7 @@ With this new relation in place, our relation chain from Location to Attribute b
 * \[This\]~\[Location to LocationAttributeJunction LocationType \(One to One\)\]~\[LocationAttributeJunction\]~\[Attribute\].\[AttributeValue\]
 
 {% hint style="success" %}
-Getting to a single value from the Many side of a 1:M or M:M relation requires distilling the Many side of the relation down to a One cardinality through filters.  When done correctly, the new relation can be traversed as normal \(without blowing out the driving source grain\).
+Getting to a single value from the Many side of a 1:M or M:M relation requires distilling the Many side of the relation down to a One cardinality through additional filters.  When done correctly, the new relation can be traversed as normal \(without blowing out the driving source grain\).
 {% endhint %}
 
 ### Crossing though a chain of multiple Many cardinality relations
