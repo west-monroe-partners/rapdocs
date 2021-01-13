@@ -1,6 +1,6 @@
 ---
 description: >-
-  Details related to the Expressions that can be used in the Intellio DataOps
+  Details related to the Expressions that can be used in the Intellio® DataOps
   (RAP) user interface.
 ---
 
@@ -128,6 +128,4 @@ More Info on rule expressions and examples can be found at the bottom of the rul
 ### Output Mapping Expressions
 
 More Info on output mapping expressions and examples can be found at the bottom of the output mapping page of the configuration guide [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/output-configuration/output-mapping#mapping-expressions). 
-
-
 
