@@ -68,7 +68,7 @@ To get from the Location table to the Attribute table, the relationship chain is
 
 The way around this is knowing exactly which attribute type code in LocationAttributeJunction corresponds to the Location Type attribute.  Through analysis, suppose we determined that AttributeTypeCode = 10 corresponds to Location Type.
 
-Knowing this, we can essentially distill the 1:M relation between Location and LocationAttributeJunction down to a 1:1 relation by leveraging a relationship with the following condition:
+Knowing this, we can distill the 1:M relation between Location and LocationAttributeJunction down to a 1:1 relation by leveraging a relationship with the following condition:
 
 * \[Location\].\[LocationID\] = \[LocationAttributeJunction\].\[LocationID\] AND \[LocationAttributeJunction\].\[AttributeTypeCode\] = 10
 
