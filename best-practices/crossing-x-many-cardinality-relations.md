@@ -8,7 +8,7 @@ In most situations, crossing to the Many side of a one-to-many / many-to-many re
 
 Some examples where this may be needed include the following:
 
-* Crossing a junction table to get a single value \(employee serving a specific role for a client, single 
+* Crossing a junction table to get a single value \(for example, getting an employee serving a specific role for a client, getting the primary contact name for a client with multiple contacts\)
 * Getting the min / max record from a header / detail relationship \(for example, scenarios where the source system is not fully normalized / data is stored at the wrong grain\)
 * Calculating an aggregation of measures on a lower-grain table in order to calculate another measure on the higher grain table
 
@@ -16,13 +16,53 @@ Some examples where this may be needed include the following:
 The primary goal of crossing to the Many side of a relation is to get a singular value or record.  If the logic does not support that goal, consider whether either the logic or the driving grain needs to be modified.
 {% endhint %}
 
-### Getting a single record
-
-TODO - copy from slides
-
 ### Getting an aggregated value
 
-TODO - copy from slides
+The simplest traversal scenario is aggregating across a relation to the Many side.  This can be done via an enrichment that simply aggregates the related field on the Many side of the relation, and DataOps will automatically aggregate up to the grain of your current source.
+
+### Retrieving a single record
+
+Retrieving a single record from the Many side of a relation requires a rule that can correctly select no more than a single record from that side of the relation.  To do so, a reliable way to specify all primary key values from the Many side of the relation given a record from the driving side of the relation needs to be determined.  In essence, this approach consists of determining a way to reduce the relation down to a M:1 or 1:1 relation \(for M:M and 1:M relations respectively\).
+
+#### Example Scenario
+
+Take for example a model there Locations can have multiple Attributes tied to them, each being different Attribute Types assigned in a a junction table.  For our purposes, suppose we want to get a single Location Type Attribute for all Locations.
+
+![Example many-to-many relationship](../.gitbook/assets/image%20%28329%29.png)
+
+In this scenario, the primary keys are the following:
+
+_Location_
+
+* LocationID
+
+_LocationAttributeJunction_
+
+* LocationID
+* AttributeTypeCode
+
+_Attribute_
+
+* AttributeID
+
+Relationships are also specified as follows:
+
+* **Location &lt;-&gt; LocationAttributeJunction:**  Location.LocationID = LocationAttributeJunction.LocationID
+* **LocationAttributeJunction &lt;-&gt; Attribute:**  LocationAttributeJunction.AttributeID = Attribute.AttributeID
+
+To get from the Location table to the Attribute table, the relationship chain is 1:M + M:1, which is a combined M:M relation.  If traversing the chain only via standard joins, that would cause the grain of the Location table to be broken.
+
+The way around this is knowing exactly which attribute type code in LocationAttributeJunction corresponds to the Location Type attribute.  Through analysis, suppose we determined that AttributeTypeCode = 10 corresponds to Location Type.
+
+Knowing this, we can essentially distill the 1:M relation between Location and LocationAttributeJunction down to a 1:1 relation by leveraging a relationship with the following condition:
+
+* Location.LocationID = LocationAttributeJunction.LocationID AND LocationAttributeJunction.AttributeTypeCode = 10
+
+With this new relation in place, our relation chain from Location to Attribute becomes 1:1 + M:1, which combined is a M:1 relation.  Using this relation, the Attribute table can be traversed to from the Location table as usual \(making sure to use the new 1:1 relation and not the normal 1:M relation\).
+
+{% hint style="success" %}
+Getting to a single value from the Many side of a 1:M or M:M relation requires distilling the Many side of the relation down to a One cardinality through filters.  When done correctly, the new relation can be traversed as normal \(without blowing out the driving source grain\).
+{% endhint %}
 
 ### Crossing though a chain of multiple Many cardinality relations
 
