@@ -1,7 +1,7 @@
 ---
 description: >-
   Enrichment and Validation Rules allow Intellio DataOps (RAP) to modify and
-  transform data.
+  transform data as it is ingested.
 ---
 
 # !! Rules
@@ -29,7 +29,7 @@ To edit an existing rule, click on any column of that rule's row in the table be
 | Parameter | Default Value | Description |
 | :--- | :--- | :--- |
 | **Type** | Enrichment | The type of the Rule. Validations mark records as pass/fail based on a boolean expression in the expression field. |
-| **Rule Name\*** | No Default | The user-defined name of the Rule. |
+| **Rule Name\*** | No Default | The user-defined name of the Rule. This is what will appear in the  |
 | **Attribute Name\*** | No Default | The name of the new column of the Rule. This what will appear in attribute dropdowns of expressions, and within expressions. When creating a new rule, this field will automatically be filled in with valid formatting based on what the user enters into the Rule Name field. |
 | **Description** | No Default | The user-defined description of the Rule |
 | **Expression Data Type** | Interpreted from expression | The data type of the result of the Expression, automatically inferred by DataOps. This field is not controlled by the user. |

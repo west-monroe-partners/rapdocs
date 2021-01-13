@@ -1,12 +1,11 @@
 ---
 description: >-
-  Sources allow RAP to import, transform, and quality check data Inputs as they
-  flow into and through the system.
+  A Source represents a single schema of data. Sources are the logical grouping
+  for Inputs, Relations, and Rules. They typically reference a single database
+  table or file
 ---
 
-# !! Sources
-
-The fields in the Source Configuration vary based on the selected Source Type and Input Type. This guide provides step-by-step instructions for each Source type, and then for each Input type. To configure a Source, users must select both Source Type and Input Type.
+# Sources
 
 ## Sources Screen
 
@@ -26,11 +25,5 @@ To add a Source, select **New Source**. This opens the Edit Source screen for a 
 
 ![Sources - Create a New Source](../../.gitbook/assets/new-source.png)
 
-## Edit Source Screen
 
-On the Edit Source Screen, users can see the various components that make up a Source, including tabs for Source Details, Dependencies, Validations, Enrichments, Inputs, and a view of the Source data.
-
-![Edit Source Screen](../../.gitbook/assets/edit-source-screen.png)
-
-There are many options for Source configuration. The [Source Details](source-details.md) page is the place to start when defining a Source.
 

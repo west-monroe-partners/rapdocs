@@ -4,7 +4,7 @@ description: >-
   represent the hardware location and authentication to access systems.
 ---
 
-# !! Connections
+# !! Connection
 
 The fields in the Connection Configuration vary based on the selected Connection Type and Driver. This guide provides step-by-step instructions for each Connection Type and Driver.
 

@@ -4,7 +4,7 @@ description: >-
   the Output including the Connection to use and the Output Type.
 ---
 
-# Output Details
+# !! Output Details
 
 ## Settings Tab
 
@@ -36,14 +36,14 @@ There are three table output drivers: Snowflake, SQL Server, and Postgres.
 {% endtab %}
 
 {% tab title="Virtual" %}
-Rather than push data out to a separate system, DataOps can also manage a database view on top of the Hub tables within the connected Databricks environment, otherwise known as a **Virtual Output**.
+DataOps can output data to a database view in the connected Databricks environment, otherwise known as a **Virtual** table.
 {% endtab %}
 {% endtabs %}
 
 ## Output Parameters
 
 {% hint style="info" %}
-Asterisks \(\*\) in the Parameter Name column indicate mandatory parameters
+Asterisks \(\*\) in the Parameter Name column mean the Parameter is mandatory and must be changed by users.
 {% endhint %}
 
 ### Output
@@ -55,7 +55,7 @@ Asterisks \(\*\) in the Parameter Name column indicate mandatory parameters
 | Table | Table Schema\* |  | Name of the schema the output table will be written to in the target DB. |
 | Virtual | View Name\* |  | Name of the Virtual Table/View that will appear in the Databricks environment once the output is processed. |
 | File Type: All | file\_name | \`\` | File name for output file. For all except text, extension will be added automatically. |
-| Column Delimiter | , |  | Column delimiter character for Output File |
+| column\_delimiter | , |  | Column delimiter character for Output File |
 | File Type: CSV | compression | none | Compression for file outputs. Options: none, gzip |
 | Virtual | effective\_filter | effective\_range | Effective filter for Time Series Output Sources |
 | File Type: Text | file\_extension\* |  | Extension that will be appended to the file name when DataOps writes text file outputs |
@@ -73,10 +73,10 @@ Asterisks \(\*\) in the Parameter Name column indicate mandatory parameters
 | File Type: CSV, Parquet | buffer\_files | 0 | Interval to retain files in fast output buffer storage |
 | File Type: CSV, Parquet | temporary\_files | 14 days | Amount of time temporary files will remain stored |
 
-### Output Alerts \(AWS ONLY\)
+### Output Alerts
 
 | Appears Under | Parameter | Default Value | Description |
 | :--- | :--- | :--- | :--- |
-| All | Output Failure Topics |  | List of AWS Simple Notification Service topic ARNs to be notified upon Output Failure |
-| All | Output Success Topics |  | List of AWS Simple Notification Service topic ARNs to be notified upon Output Success |
+| All \(AWS Only\) | Output Failure Topics |  | List of AWS Simple Notification Service topic ARNs to be notified upon Output Failure |
+| All \(AWS Only\) | Output Success Topics |  | List of AWS Simple Notification Service topic ARNs to be notified upon Output Success |
 
