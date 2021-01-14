@@ -20,10 +20,6 @@ To edit an existing rule, click on any column of that rule's row in the table be
 
 ![All columns besides the expression column in the Rule Table can be clicked to open the edit Rule modal.](../../.gitbook/assets/image%20%28294%29.png)
 
-## Enrichments vs Validations
-
-In DataOps, there are two distinct types of Rules: Enrichments and Validations. An **Enrichment** An Enrichment is a rule type that defines an individual SQL expression resulting in a new column of any supported data type. A **Validation** is a specific type of Enrichment focused on data quality rules that only return Boolean data type columns. A validation verifies that a given column value \(or group of column values\) for each row adheres to a specified rule defined in the validation expression. All validations of a source are aggregated into s\_validation\_status\_code system attribute with Pass/Fail/Warn values for each column.
-
 ## Rule Parameters
 
 ![Create Rule Modal](../../.gitbook/assets/image%20%28297%29.png)
@@ -76,8 +72,4 @@ More information on Intellio QL can be found [here in the configuration guide](h
 #### _Window function aggregating one attribute of the current source while partitioning on another_
 
 > sum\(\[This\].TotalCost\) OVER \(PARTITION BY \[This\].CustomerID\)
-
-#### _Validation rule to determine if a numeric column of the source is above a specified threshold_
-
-> This.TotalCost &gt; 100
 
