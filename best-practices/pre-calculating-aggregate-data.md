@@ -27,7 +27,7 @@ The primary method to aggregate data in the context of a single source is to use
 Some example use cases include the following:
 
 * Sum on current grain as part of an intermediate calculation
-  * Ex: For a % of sales calculation of a Sales Order for a Customer, the denominator needs to be calculated as **SUM\(\[This\].\[sales\_amount\]\) OVER \(PARTITION BY \[This\].\[customer\_id\]\)**
+  * Ex: For a % of sales calculation of a Sales Order for a Customer, the denominator needs to be calculated as **SUM\(\[This\].sales\_amount\) OVER \(PARTITION BY \[This\].customer\_id\)**
 * Calculating a running total as part of an intermediate calculation\
   * Ex: **SUM\(\[This\].invoice\_commission\) OVER \(PARTITION BY \[This\].UniqTransHead\)**
 
