@@ -6,9 +6,11 @@ description: How to handle potential data errors in DataOps.
 
 In any data integration project, bad or non-conforming data is something that the development team will most likely encounter.  Data architects need to ensure an approach to handle those errors is part of the design to ensure that errors are caught and rerouted to the appropriate place.  This section suggests an approach that could be leveraged to capture and route off errors and warnings to a separate location for further analysis.
 
-### Setting the Error Level on Rules
+### Creating Validation Rules
 
-TODO - discuss how to decide what to set, link to section in Configuration Guide, add screenshot
+The way that records are marked with Warn or Fail statuses are through the configuration of Validation Rules.  Refer to the [Rules section](../configuring-the-data-integration-process/source-configuration/enrichment-rule-configuration.md) in the documentation for detailed information about how to configure Validation rules.
+
+The guideline for defining Validation rules are to mark rules related to critical fields / checks as Fail and all other rule checks as Warn.
 
 ### Routing Output Data
 
