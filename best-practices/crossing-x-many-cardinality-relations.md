@@ -74,7 +74,7 @@ Knowing this, we can distill the 1:M relation between Location and LocationAttri
 
 With this new relation in place, our relation chain from Location to Attribute becomes 1:1 + M:1, which combined is a M:1 relation.  Using this relation, the Attribute table can be traversed to from the Location table as usual \(making sure to specify the new 1:1 relation and not the normal 1:M relation\):
 
-* \[This\]~{Location to LocationAttributeJunction LocationType \(One to One\)}~\[LocationAttributeJunction\]~\[Attribute\].AttributeValue
+* \[This\]~{Location \(One\) to LocationAttributeJunction LocationType \(One\)}~\[LocationAttributeJunction\]~\[Attribute\].AttributeValue
 
 {% hint style="success" %}
 Getting to a single value from the Many side of a 1:M or M:M relation requires distilling the Many side of the relation down to a One cardinality through additional filters.  When done correctly, the new relation can be traversed as normal \(without blowing out the driving source grain\).
@@ -131,7 +131,7 @@ Next, we need to determine the UniqCdServicingRole associated to a Producer role
 
 We can then set the enriched field ProducerName on the Policy source by chaining both new relations as follows:
 
-* ProducerName = \[This\]~{Policy to Line Min \(One to One\)}~\[Line\]~{Line to LineEmpJT Producer \(One to One\)}~\[LineEmpJT\]~\[Employee\].NameOf
+* ProducerName = \[This\]~{Policy \(One\) to Line Min \(One\)}~\[Line\]~{Line \(One\) to LineEmpJT Producer \(One\)}~\[LineEmpJT\]~\[Employee\].NameOf
 
 {% hint style="info" %}
 Multiple many-to-many relationships can be traversed in DataOps with a little bit of additional planning up front.  Leveraging the pattern of breaking down the multiple many-to-many relationships into their own traversals and chaining everything together at the end will allow for getting to the needed value at the end.
