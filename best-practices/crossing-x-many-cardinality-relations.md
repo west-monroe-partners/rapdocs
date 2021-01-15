@@ -59,7 +59,7 @@ _Attribute_
 
 * AttributeID
 
-Relationships are also specified as follows:
+Relationships are the following:
 
 * **Location &lt;-&gt; LocationAttributeJunction:**  Location.LocationID = LocationAttributeJunction.LocationID
 * **LocationAttributeJunction &lt;-&gt; Attribute:**  LocationAttributeJunction.AttributeID = Attribute.AttributeID
@@ -70,11 +70,11 @@ The way around this is knowing exactly which attribute type code in LocationAttr
 
 Knowing this, we can distill the 1:M relation between Location and LocationAttributeJunction down to a 1:1 relation by leveraging a relationship with the following condition:
 
-* \[Location\].\[LocationID\] = \[LocationAttributeJunction\].\[LocationID\] AND \[LocationAttributeJunction\].\[AttributeTypeCode\] = 10
+* \[Location\].LocationID = \[LocationAttributeJunction\].LocationID AND \[LocationAttributeJunction\].AttributeTypeCode = 10
 
 With this new relation in place, our relation chain from Location to Attribute becomes 1:1 + M:1, which combined is a M:1 relation.  Using this relation, the Attribute table can be traversed to from the Location table as usual \(making sure to specify the new 1:1 relation and not the normal 1:M relation\):
 
-* \[This\]~\[Location to LocationAttributeJunction LocationType \(One to One\)\]~\[LocationAttributeJunction\]~\[Attribute\].\[AttributeValue\]
+* \[This\]~{Location to LocationAttributeJunction LocationType \(One to One\)}~\[LocationAttributeJunction\]~\[Attribute\].AttributeValue
 
 {% hint style="success" %}
 Getting to a single value from the Many side of a 1:M or M:M relation requires distilling the Many side of the relation down to a One cardinality through additional filters.  When done correctly, the new relation can be traversed as normal \(without blowing out the driving source grain\).
@@ -84,7 +84,56 @@ Getting to a single value from the Many side of a 1:M or M:M relation requires d
 
 Traversing through a chain of multiple 1:M / M:M relations requires some extra planning and consideration.  DataOps will not allow crossing multiple relations with a Many cardinality on the opposite end with a single rule or expression.  As such, the chain will need to be broken into smaller 1:M / M:M traversals with only a single Many cardinality crossing in each traversal.  Once those smaller traversals are determined, those traversals can be performed using the methods described earlier in this page, and the resulting intermediate calculations can be chained together to get to the final desired calculation.
 
-TODO - example scenario
+#### Example Scenario
 
+Suppose we have the following data model.  This comes from an insurance brokerage management system.
 
+![Sample model with multiple many-to-many relationships](../.gitbook/assets/image%20%28333%29.png)
+
+From this model, suppose we want to get the Producer associated to the first Line, and assign that value on the Policy table.  To do this traversal, we have two relationships with a Many cardinality that we need to traverse \(Policy -&gt; Line and Line -&gt; LineEmpJT\).
+
+In this model, the primary keys are the following:
+
+_Policy_
+
+* UniqPolicy
+
+_Line_
+
+* UniqLine
+
+_LineEmpJT_
+
+* UniqLine
+* UniqCdServicingRole
+
+_Employee_
+
+* UniqEmployee
+
+Relationships are the following:
+
+* Policy &lt;-&gt; Line:  \[Policy\].UniqPolicy = \[Line\].UniqPolicy
+* Line &lt;-&gt; LineEmpJT:  \[Line\].UniqLine = \[LineEmpJT\].UniqLine
+* LineEmpJT &lt;-&gt; Employee:  \[LineEmpJT\].UniqEmployee = \[Employee\].UniqEmployee
+
+To start, we need to traverse the Policy -&gt; Line relation to get to the minimum Line record associated to the Policy.  To do that, we can define an enriched field MinUniqLine on the Policy source as follows \(note this needs to be defined as a Unique Value enrichment\):
+
+* MinUniqLine = MIN\(\[Line\].UniqLine\)
+
+Using this enriched field, we can reduce the Policy to Line traversal to a 1:1 relationship by defining the following relation:
+
+* \[Policy\].MinUniqLine = \[LineEmpJT\].UniqLine
+
+Next, we need to determine the UniqCdServicingRole associated to a Producer role.  For our example, let's assume we determined that UniqCdServicingRole = 15 is associated to Producers.  Using that information, we can reduce the Line to LineEmpJT traversal to a 1:1 relationship by defining a relation with the following condition:
+
+* \[LineEmpJT\].s\_key = CONCAT\(\[Line\].UniqLine, '\|15'\)
+
+We can then set the enriched field ProducerName on the Policy source by chaining both new relations as follows:
+
+* ProducerName = \[This\]~{Policy to Line Min \(One to One\)}~\[Line\]~{Line to LineEmpJT Producer \(One to One\)}~\[LineEmpJT\]~\[Employee\].NameOf
+
+{% hint style="info" %}
+Multiple many-to-many relationships can be traversed in DataOps with a little bit of additional planning up front.  Leveraging the pattern of breaking down the multiple many-to-many relationships into their own traversals and chaining everything together at the end will allow for getting to the needed value at the end.
+{% endhint %}
 
