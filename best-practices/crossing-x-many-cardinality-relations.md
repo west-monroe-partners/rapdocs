@@ -113,9 +113,9 @@ _Employee_
 
 Relationships are the following:
 
-* Policy &lt;-&gt; Line:  \[Policy\].UniqPolicy = \[Line\].UniqPolicy
-* Line &lt;-&gt; LineEmpJT:  \[Line\].UniqLine = \[LineEmpJT\].UniqLine
-* LineEmpJT &lt;-&gt; Employee:  \[LineEmpJT\].UniqEmployee = \[Employee\].UniqEmployee
+* **Policy &lt;-&gt; Line:**  \[Policy\].UniqPolicy = \[Line\].UniqPolicy
+* **Line &lt;-&gt; LineEmpJT:**  \[Line\].UniqLine = \[LineEmpJT\].UniqLine
+* **LineEmpJT &lt;-&gt; Employee:**  \[LineEmpJT\].UniqEmployee = \[Employee\].UniqEmployee
 
 To start, we need to traverse the Policy -&gt; Line relation to get to the minimum Line record associated to the Policy.  To do that, we can define an enriched field MinUniqLine on the Policy source as follows \(note this needs to be defined as a Unique Value enrichment\):
 
