@@ -12,6 +12,8 @@ The way that records are marked with Warn or Fail statuses are through the confi
 
 The guideline for defining Validation rules are to mark rules related to critical fields / checks as Fail and all other rule checks as Warn.
 
+TODO - add examples
+
 ### Routing Output Data
 
 Once data is flagged with an Error or a Warning status, those records should be routed off to a common error table for analysis.
