@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Welcome to Intellio DataOps!](README.md)
+* [Extensibility](extensibility/README.md)
+  * [Custom Ingestion](extensibility/custom-ingestion.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [Intellio Support Portal Sign Up](getting-started-guide/intellio-support-portal.md)
   * [DataOps Basics](getting-started-guide/rap-basics/README.md)
