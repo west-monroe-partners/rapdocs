@@ -74,17 +74,19 @@ As an example, to output to the f\_sales table in the Data Warehouse, the output
 
 Channels are given the same name as the Source name by default by DataOps.  However, this can be confusing for new developers / configurators in understanding what that output grain means or what it is used for, since the source name is more focused on describing the source and not the destination.  Therefore, the recommended convention is to use the name of the output grain instead \(ex: Sales Order, Purchase Order, Inventory Snapshot, etc\).  Since DataOps shows the Source name next to the Channel name in the Output Mappings, having those 2 values be different is helpful to give a full picture of what the source data is and the grain that plays in the output.
 
-### File Names and Bucket Usage
+### File / Folder Names
 
-TODO - loopback naming, file naming, S3 bucket / ADLS container usage
+#### Inbox Folder Structure
 
-#### Input Folder Structure
+The simplest scenario where it is an option would be to drop files in DataOps' internal "inbox".  This will be a special account or container that exists in AWS / Azure for the purpose of ingesting file-based data into DataOps.  The recommendation is to create a top-level Inbox folder on the storage account or bucket, then point the connection in DataOps to that Inbox folder.
 
-TODO - local agent vs. DataOps inbox in AWS / Azure
+In some cases, both the Development and Production environments may leverage the same storage account / container for the DataOps inbox.  In this case, the recommendation is to create a DEV and PROD folder as the top level folders and to have the Inbox folder exist below there.  All files ingested into DataOps from the Inbox should come from the folder structure for the DEV or PROD environment respectively.  When the two environments use separate storage buckets / containers, environment folders can be omitted.
 
-The simplest scenario where it is an option would be to drop files in DataOps' internal "inbox".  This will be a special account or container that exists in AWS / Azure for the purpose of ingesting file-based data into DataOps.  In most cases, both the Development and Production environments will leverage the same storage account / container for the DataOps inbox.  Therefore, the recommendation is to create a DEV and PROD folder as the top level folders in the inbox.  All files ingested into DataOps from the Inbox should come from the folder structure for the DEV or PROD environment respectively.
+Within the root of the Inbox folder, a sub-folder should be created for each input system.  As upstream file names are frequently out of the control of the implementation team, the separate folders will help keep files organized and avoid naming conflicts.
 
-Within those those environment folders, a sub-folder should be created for each input system.  As upstream file names are frequently out of the control of the implementation team, the separate folders will help keep files organized and avoid naming conflicts.
+#### On-Premise Folder Sources
+
+For on-premise source folders \(Windows file shares or local directories\), many times those structures are controlled and standardized based on customer standards or prior server usage.  However, as much as possible, leveraging the same guidelines as the Inbox folder structure defined in the previous section would still be recommended to minimize file naming / search pattern collisions.
 
 #### Output Files for Downstream Consumers
 
