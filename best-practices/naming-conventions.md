@@ -56,9 +56,9 @@ Relations should be named according to the following convention:
 
 **`<Source 1 Name> (<Cardinality 1>) to <Source 2 Name> (<Cardinality 2>)`**
 
-&lt;Source 1 Name&gt; and &lt;Source 2 Name&gt; are the names of the two sources on either side of the Relation.
+**&lt;Source 1 Name&gt;** and **&lt;Source 2 Name&gt;** are the names of the two sources on either side of the Relation.
 
-&lt;Cardinality 1&gt; and &lt;Cardinality 2&gt; are the cardinalities of the respective sources on either side of the Relation.  Values here can be "ONE" or "MANY".
+**&lt;Cardinality 1&gt;** and **&lt;Cardinality 2&gt;** are the cardinalities of the respective sources on either side of the Relation.  Values here can be "ONE" or "MANY".
 
 ### Output Names
 
