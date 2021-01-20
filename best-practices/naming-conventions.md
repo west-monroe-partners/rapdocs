@@ -93,7 +93,7 @@ Output file names are frequently driven by the naming convention required by the
 #### Loopback Sources
 
 {% hint style="info" %}
-Before implementing a loopback source, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add extra complexity and I/O and should only be leveraged when no other options exist.
+Before implementing a loopback source, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add extra complexity and I/O and should only be leveraged when no other \(more performant\) options exist.
 {% endhint %}
 
 Loopbacks are a special use case for leveraging virtual outputs.  DataOps is able to automatically re-ingest virtual outputs to a Loopback source as soon as the virtual output is updated.  The virtual output can be leveraged directly through the Hive metastore as a normal virtual output if desired.
