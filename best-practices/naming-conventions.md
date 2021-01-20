@@ -1,5 +1,7 @@
 ---
-description: Suggested standards for naming objects in RAP.
+description: >-
+  Suggested standards for naming objects both within DataOps and at handoff
+  points.
 ---
 
 # !! Naming Conventions
