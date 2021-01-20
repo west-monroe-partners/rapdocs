@@ -20,7 +20,7 @@ Table-based sources should be named according to the following convention:
 
 **`<Source System> - <Table / Entity Name> - <Refresh Type>`**
 
-**&lt;Source System&gt;** is the name of the source system where data is being pulled \(ERP, CRM, HR, etc\). In the scenario where a loopback may be needed, the loopback source should be denoted by adding “ – Loopback” to the originating source system name, and the table / entity name should be a very short description of the grain change occurring \(e.g., Sales Order to Customer\).
+**&lt;Source System&gt;** is the name of the source system where data is being pulled \(ERP, CRM, HR, etc\). In the scenario where the source is a loopback may be needed, the loopback source should be denoted by adding “Loopback - ” as a prefix to the originating source system name, and the table / entity name should be a very short description of the grain change occurring \(e.g., Sales Order to Customer\).
 
 On multi-tenant implementations, the source system name should also take into account the division / company name that is being ingested.  One situation where this is needed is when each division / company uses their own separate instance of the same ERP system.  In this case, prefix the source system name with the division or company name \(ex: instead of just "ERP", use "Company 1 ERP" as the source system name\).
 
