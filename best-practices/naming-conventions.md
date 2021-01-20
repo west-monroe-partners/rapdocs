@@ -56,9 +56,9 @@ Relations should be named according to the following convention:
 
 **`<Source 1 Name> (<Cardinality 1>) to <Source 2 Name> (<Cardinality 2>)`**
 
-**&lt;Source 1 Name&gt;** and **&lt;Source 2 Name&gt;** are the names of the two sources on either side of the Relation.
+&lt;Source 1 Name&gt; and &lt;Source 2 Name&gt; are the names of the two sources on either side of the Relation.
 
-**&lt;Cardinality 1&gt;** and **&lt;Cardinality 2&gt;** are the cardinalities of the respective sources on either side of the Relation.  Values here can be "ONE" or "MANY".
+&lt;Cardinality 1&gt; and &lt;Cardinality 2&gt; are the cardinalities of the respective sources on either side of the Relation.  Values here can be "ONE" or "MANY".
 
 ### Output Names
 
@@ -90,21 +90,23 @@ Within those those environment folders, a sub-folder should be created for each 
 
 Output file names are frequently driven by the naming convention required by the downstream system ingesting those files.  In order to prevent naming collisions / confusion, each downstream system should have its own folder in the Output container coming out of DataOps.
 
-#### Loopback Sources
+#### Loopback Files
+
+TODO:  move this around - loopbacks no longer have to be written to separate file, convention should change appropriately
 
 {% hint style="info" %}
-Before implementing a loopback source, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add extra complexity and I/O and should only be leveraged when no other \(more performant\) options exist.
+Before implementing a loopback, consider if there are any alternative approaches that can be used instead of loopbacks.  Loopbacks add extra complexity and I/O and should only be leveraged when no other options exist.
 {% endhint %}
 
-Loopbacks are a special use case for leveraging virtual outputs.  DataOps is able to automatically re-ingest virtual outputs to a Loopback source as soon as the virtual output is updated.  The virtual output can be leveraged directly through the Hive metastore as a normal virtual output if desired.
+Loopback files are a special case of file outputs.  As loopbacks are only created to the specific use case of re-ingestion back into DataOps, those files are not intended to be used for consumption by any users and are transient in that they exist only until they are re-ingested.  This will be the only scenario where output files should be written to the Inbox container.
 
-Specific guidelines for Loopback naming are the following:
+Specific guidelines for loopback file naming and placement are the following:
 
-1. Loopback sources should be named according to the following convention:
-   1. **`Loopback - <Ultimate_Source_System_Name> - <Original_Grain> to <New_Grain> - <Refresh Type>`**
-      1. **&lt;Ultimate\_Source\_System\_Name&gt;** is the original source system where the loopback originates \(see Source System naming convention earlier in this document for the suggested convention\).
-      2. **&lt;Original\_Grain&gt;** should be descriptive of the grain where the loopback originates from.
-      3. **&lt;New\_Grain&gt;** should be descriptive of the new grain of data that is being created as part of this loopback.
-      4. **&lt;Refresh Type&gt;** is the refresh type of the loopback source.  Refer to the Source naming convention earlier in this document for the suggested values.
-2. The virtual output should be named according to the output naming convention earlier in this document.  If the virtual output is being used strictly for the purpose of a loopback, the suggested name of the **&lt;Output System&gt;** value in the convention is "Loopback".
+1. Create a folder called "Loopback" in RAP's inbox.  This folder should only ever be used to output loopback files and should not be used to expose data to external systems.
+2. Loopback files should be named according to the following convention:
+   1. **`Loopback_<Source_System_Name>_<Original_Grain>_to_<New_Grain>.avro`**
+      1. Loopback files should be named with underscores replacing spaces.
+      2. **&lt;Source\_System\_Name&gt;** is the original source system where the loopback originates \(see Source System naming convention earlier in this document for the suggested convention\).
+      3. **&lt;Original\_Grain&gt;** should be descriptive of the grain where the loopback originates from.
+      4. **&lt;New\_Grain&gt;** should be descriptive of the new grain of data that is being created as part of this loopback.
 
