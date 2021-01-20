@@ -13,7 +13,7 @@ Some examples of when aggregations in DataOps may be used include the following:
 * Calculating the denominator of a percentage calculation \(ex: for a percentage of sales calculation\)
 * Calculating a running total
 
-Some examples where aggregations should not be done in DataOps are the following:
+Some examples where aggregations should **not** be done in DataOps are the following:
 
 * Simple aggregations for the sole purpose of an output grain change or a lookup from another source. Generally, the lowest grain should be output to the destination, and any higher-grain lookups can be handled via X:Many lookup patterns.
 * Aggregating a lower grain measure up to a higher grain for the sole purpose of exposing that derivation. This should generally be handled by the downstream reporting / exposure tool instead.
