@@ -1,4 +1,6 @@
 # !! Implementation Best Practices
 
-This section will provide information on the best practices and techniques that will help prevent issues and maintain a solid and efficient workflow within DataOps.
+This section provides information on the best practices and techniques that can be leveraged to provide an easy to follow implementation, as well as handle data issues gracefully and prevent performance issues within DataOps.
+
+The primary audience for this section are data engineers and data architects who are designing and configuring pipelines within Intellio DataOps.
 
