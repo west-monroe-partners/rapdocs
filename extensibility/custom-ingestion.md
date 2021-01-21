@@ -33,7 +33,7 @@ _`import play.api.libs.json._`_
 
 _`val session = new IngestionSession("<YourEnvName>", "<YourSourceName>")`_ 
 
-_`val customParams = session.customParams`_ 
+_`val customParams = session.customParameters`_ 
 
 _`val connection = session.getSecureConnectionParameters()`_
 
@@ -60,9 +60,9 @@ The 10th line runs the custom ingest. It pulls the data as specified in the inge
 
 The custom ingestion can be run in one of three ways
 
-1. Execute the Notebook directly in Databricks. This will allow for fast troubleshooting and development iteration
-2. Execute a Pull Now on the Custom Source.
-3. Set a schedule for the Custom Source.
+1. Execute the Notebook directly in Databricks. This will allow for fast troubleshooting and development iteration. You must attach the Maven repository to your cluster before running. The coordinates for the current Maven version of the SDK are com.wmp.intellio:dataops-sdk\_2.12:0.3.1
+2. Execute a Pull Now on the Custom Source. This will automatically handle attaching the SDK code to your cluster.
+3. NOT SUPPORTED YET: Set a schedule for the Custom Source.
 
 ### Advanced Patterns
 
