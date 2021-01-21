@@ -94,6 +94,14 @@ If these troubleshooting steps are followed and the Agent is still not running, 
 
 This should complete the setup of the Agent on the client machine. All further configuration should be able to be completed via the DataOps UI, such as locating file paths or database/data warehouse credentials.
 
+## Uninstalling the DataOps Agent
+
+Uninstalling the DataOps can be triggered in 2 ways. The first way is from the initial MSI that was used to install the Agent. Double click the MSI and click Remove when prompted. This can also be triggered from "Add/Remove Programs" in the Windows control panel. The program will be called Intellio DataOps Agent.
+
+When the uninstall is complete, there is a manual step needed to remove the service. Open a command prompt in Administrator mode and run the command \(replace "IntellioAgent Dev" with the service name that was installed on the server.\)
+
+![Remove Service Command](../.gitbook/assets/image%20%28344%29.png)
+
 ## Installing the DataOps Agent \(Linux\)
 
 {% hint style="info" %}
