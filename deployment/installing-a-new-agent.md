@@ -60,7 +60,7 @@ Download the appropriate version of the MSI installer. Run the installer and fil
 
 ![Initial MSI screen](../.gitbook/assets/image%20%28340%29.png)
 
-A specific **RAP Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. Do not alter the configuration key unless directed to by a DataOps team member. 
+A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. Do not alter the configuration key unless directed to by a DataOps team member. 
 
 ![Agent Setup Screen 1](../.gitbook/assets/image%20%28337%29.png)
 
