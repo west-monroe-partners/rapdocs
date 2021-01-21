@@ -44,15 +44,27 @@ _`spark.sql("SELECT * FROM datatypes") }`_
 
 _`session.ingest(ingestDf)`_
 
+#### Imports
+
 The first three lines are standard import statements. They are needed to utilize all of the DataOps SDK functionality.
+
+#### Ingestion Session
 
 The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed. 
 
+#### Accessing Custom Parameters
+
 The 5th line access the custom parameters created in the source configuration. It will be a JsObject.
 
-The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject.
+#### Accessing Connection Parameters
+
+The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself. 
+
+#### Creating The DataFrame Function
 
 The 7th-9th lines are the key part of the ingestion where the custom user code will go. These lines define a function that returns a dataframe. In the example, the code will write a log to DataOps, then run a spark query, returning a dataframe. Replace the code within ingestDf with custom code in order to run your code.
+
+#### Executing The Ingestion
 
 The 10th line runs the custom ingest. It pulls the data as specified in the ingestDf function, normalizes it, and sends it to the DataOps Datalake.
 
