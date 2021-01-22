@@ -86,7 +86,7 @@ Traversing through a chain of multiple 1:M / M:M relations requires some extra p
 
 #### Example Scenario
 
-Suppose we have the following data model.  This comes from an insurance brokerage management system.
+Suppose we have the following data model from an insurance brokerage management system.
 
 ![Sample model with multiple many-to-many relationships](../.gitbook/assets/image%20%28333%29.png)
 
