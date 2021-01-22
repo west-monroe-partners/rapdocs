@@ -8,6 +8,10 @@ description: >-
 
 DataOps Agents are a means of transporting data from a source data source to a cloud storage location DataOps can manage \(either in AWS or Microsoft Azure\). Agents are managed through the DataOps interface once installed. This section walks through the process of installing a new DataOps Agent on a Windows server. Currently, the Agent can only be installed on Windows.
 
+{% hint style="danger" %}
+As of Intellio DataOps release 2.1.3, the Agent MSI has been reworked to match the DataOps branding - as well as some other core changes. Any MSI version pre-2.1.3 has now been deprecated. If a pre-2.1.3 DataOps MSI has been installed, please uninstall and reinstall using a 2.1.3 or later MSI version. The documentation in this guide covers MSI versions of 2.1.3 and later.
+{% endhint %}
+
 ## Prerequisites \(Requirements for Installation\)
 
 Prior to installing the DataOps Agent, the following requirements must be met.  Please ensure that the machine hosting the DataOps Agent meets the requirements prior to installation.
@@ -39,8 +43,9 @@ In the DataOps UI, from the left hand menu navigate to Agents, and click New. Fr
 
 | Agent Inputs | Detail |
 | :--- | :--- |
-| Name | Agent code on the backend, and name reference for sources and other DataOps elements within the UI. |
+| Name | Agent name on the backend, and name reference for sources and other DataOps elements within the UI. |
 | Description | Necessary clarification and detail. |
+| Code | Agent code on the backend - this ideally should be the same as Name |
 | Region | AWS region, or Microsoft Azure region that the DataOps is stored and being processed in \(e.g. "us-west-2", "East US 1"\). |
 | Machine Guid | A specific key to identify the machine the agent is running on, see below for the terminal command to obtain. |
 | s3LandingPath | Path to Datalake bucket \(e.g. "s3://dev-datalake-intellio"\) |
@@ -57,23 +62,49 @@ Identify the appropriate version of the .msi \(installer\) by hovering over the 
 
 Download the appropriate version of the MSI installer. Run the installer and fill in the appropriate prompts.
 
-![Selection of DataOps Agent installation screens.](../.gitbook/assets/rap-agent-installer-screens.png)
+![Initial MSI screen](../.gitbook/assets/image%20%28340%29.png)
 
-A specific **RAP Agent Code** will be required, and this is the **Agent Name** that was configured in the DataOps UI. Do not alter the configuration key unless directed to by a DataOps team member. 
+A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. Do not alter the configuration key unless directed to by a DataOps team member. 
+
+![Agent Setup Screen 1](../.gitbook/assets/image%20%28337%29.png)
+
+If a second DataOps agent is being installed on the same server, the port will need to be altered so both agents are not running on the same port. If this is the first DataOps agent, then the port should be left as the default value of 25530.
+
+![Agent Setup Screen 2](../.gitbook/assets/image%20%28338%29.png)
 
 The final step of the installation pertains to providing the appropriate credential configuration to the application. Navigate to the DataOps UI and Agents screen and click on the cloud icon under the Config column \(and for the appropriate Agent row\). Clicking on this icon will download the configuration document.
 
 ![Config location](../.gitbook/assets/rap-agent-configuration.png)
 
-Locate the file. The downloaded file should be named "agent-config.bin". Move this file to the bin folder within the Agent: C:/Program Files \(x86\)/Rapid Analytics Platform/bin
+Locate the file. The downloaded file should be named "agent-config.bin". Move this file to the bin folder within the Agent program files location: C:/Program Files/Intellio DataOps/bin
 
-![How the bin folder should look on client machine.](../.gitbook/assets/rap-agent-how-the-bin-files-should-look.png)
+![](../.gitbook/assets/image%20%28341%29.png)
 
-Once the file has been placed, navigate to the "Services" explorer on the server and restart the service named "RAPAgentBat".
+Once the file has been placed, navigate to the "Services" explorer on the server and restart the service named "IntellioAgent_\__\[agent-code\]". For example, if your agent code was "Dev", the service would be named "IntellioAgent Dev".
 
 Once the service is restarted, navigate to the DataOps UI and check the Agent logs and status to make sure it is online and heartbeating.
 
+If the Agent does not come online with a green status icon within 5 minutes, please double check all of the above steps to make sure that configuration was set up properly. If the above steps all look correct, please check the log files on the server that the Agent has been installed on. These files will be located at: C:/logs/intellio/. The current log file will be called "agent.log".
+
+![Agent Log Files](../.gitbook/assets/image%20%28339%29.png)
+
+If the service is running and no log files are being created, there is a good chance that Java is not installed correctly on the server. Please consult the Java requirements at the beginning of the guide.
+
+Another common error is the misplacement of the agent-config.bin file. If the following message is in the logs, please make sure that the agent-config.bin file is placed in the appropriate location, and the service is restarted after the placement of the file. The file needs to be named "agent-config.bin" as well.
+
+![Agent Config error message](../.gitbook/assets/image%20%28342%29.png)
+
+If these troubleshooting steps are followed and the Agent is still not running, please reach out to your client team for support.
+
 This should complete the setup of the Agent on the client machine. All further configuration should be able to be completed via the DataOps UI, such as locating file paths or database/data warehouse credentials.
+
+## Uninstalling the DataOps Agent
+
+Uninstalling the DataOps can be triggered in 2 ways. The first way is from the initial MSI that was used to install the Agent. Double click the MSI and click Remove when prompted. This can also be triggered from "Add/Remove Programs" in the Windows control panel. The program will be called Intellio DataOps Agent.
+
+When the uninstall is complete, there is a manual step needed to remove the service. Open a command prompt in Administrator mode and run the command \(replace "IntellioAgent Dev" with the service name that was installed on the server.\)
+
+![Remove Service Command](../.gitbook/assets/image%20%28344%29.png)
 
 ## Installing the DataOps Agent \(Linux\)
 
