@@ -8,6 +8,10 @@ description: >-
 
 DataOps Agents are a means of transporting data from a source data source to a cloud storage location DataOps can manage \(either in AWS or Microsoft Azure\). Agents are managed through the DataOps interface once installed. This section walks through the process of installing a new DataOps Agent on a Windows server. Currently, the Agent can only be installed on Windows.
 
+{% hint style="danger" %}
+As of Intellio DataOps release 2.1.3, the Agent MSI has been reworked to match the DataOps branding - as well as some other core changes. Any MSI version pre-2.1.3 has now been deprecated. If a pre-2.1.3 DataOps MSI has been installed, please uninstall and reinstall using a 2.1.3 or later MSI version. The documentation in this guide covers MSI versions of 2.1.3 and later.
+{% endhint %}
+
 ## Prerequisites \(Requirements for Installation\)
 
 Prior to installing the DataOps Agent, the following requirements must be met.  Please ensure that the machine hosting the DataOps Agent meets the requirements prior to installation.
