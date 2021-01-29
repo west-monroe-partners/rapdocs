@@ -40,7 +40,9 @@ The one way that a loose dimensional model deviates from a star schema is the la
 
 The general recommendation for DataOps is to stick to the flat data model as much as possible, but if requirements determine that a more traditional star schema is needed, the loose dimensional model is also an option.
 
-For additional information about the loose dimensional data model and the rationale behind the approach, please refer to [this resource](https://www.westmonroepartners.com/perspectives/resource/data-modeling-approach-leverage-analytics-reporting) on our website.
+TODO - add rough diagram
+
+TODO - add use cases where this works
 
 ### Hybrid Model
 
