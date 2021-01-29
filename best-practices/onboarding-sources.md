@@ -1,5 +1,5 @@
 ---
-description: Consideration to make before bringing in new sources into DataOps.
+description: Consideration to make before bringing in new sources into RAP.
 ---
 
 # !! Onboarding New Sources
