@@ -110,5 +110,5 @@ Specific guidelines for Loopback naming are the following:
       2. **&lt;Original\_Grain&gt;** should be descriptive of the grain where the loopback originates from.
       3. **&lt;New\_Grain&gt;** should be descriptive of the new grain of data that is being created as part of this loopback.
       4. **&lt;Refresh Type&gt;** is the refresh type of the loopback source.  Refer to the Source naming convention earlier in this document for the suggested values.
-2. The virtual output should be named according to the output naming convention earlier in this document.  If the virtual output is being used strictly for the purpose of a loopback, the suggested name of the **&lt;Output System&gt;** value in the convention is "Loopback".
+2. The virtual output \(and associated channel\) should be named according to the output naming convention earlier in this document.  If the virtual output is being used strictly for the purpose of a loopback, the suggested name of the **&lt;Output System&gt;** value in the convention is "Loopback".
 
