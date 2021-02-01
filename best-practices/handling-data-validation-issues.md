@@ -16,13 +16,21 @@ TODO - add examples
 
 ### Routing Output Data
 
-Once data is flagged with an Error or a Warning status, those records should be routed off to a common error table for analysis.
+Once data is flagged with an Error or a Warning status, those records should be routed off to a common error table for further analysis.  The recommended approach \(diagrammed below\) is the following:
+
+* For records with a Passed status, data flows through to the target system
+* For records raising a Warning status, data still flows through to the target system but is also routed to the error table
+* For records raising an Error status, data does not flow through to the target system and is redirected to the error table
 
 ![Logical flow](../.gitbook/assets/image%20%28332%29.png)
 
 ![Data flow](../.gitbook/assets/image%20%28331%29.png)
 
-The common error table should contain the following fields:
+The common error table should contain the following fields \(these should all be direct mappings\):
 
-TODO - list fields
+* **s\_source\_id:**  Source ID where the error record comes from/
+* **s\_input\_id:**  Input ID related to the dataset where the error record originates.
+* **s\_validation\_status\_code:**  Status code of the record \('Fail' or 'Warn'\)
+* **s\_key:**  Key value of the record \(if source is a keyed source\).  This can be left blank for non-keyed sources.
+* **s\_row\_id:**  Row ID of the errored record.
 
