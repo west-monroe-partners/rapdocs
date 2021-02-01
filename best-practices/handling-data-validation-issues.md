@@ -34,9 +34,19 @@ Once data is flagged with an Error or a Warning status, those records should be 
 
 ![Data flow](../.gitbook/assets/image%20%28331%29.png)
 
+#### Channel Configuration
+
+The output flows for each output are controlled through the [Channel configuration page](../configuring-the-data-integration-process/output-configuration/output-mapping.md#adding-a-channel).
+
+![Example channel settings to filter on record validation status.](../.gitbook/assets/image%20%28345%29.png)
+
+Routing validation issues is generally going to be done via the "Include Rows" options.  However, if desired, separate outputs can be created to capture specific validation rule violations if needed by leveraging the resulting flag in the Channel filter expression.
+
+#### Error Table Layout
+
 The common error table should contain the following fields \(these should all be direct mappings\):
 
-* **s\_source\_id:**  Source ID where the error record comes from/
+* **s\_source\_id:**  Source ID where the error record comes from.
 * **s\_input\_id:**  Input ID related to the dataset where the error record originates.
 * **s\_validation\_status\_code:**  Status code of the record \('Fail' or 'Warn'\)
 * **s\_key:**  Key value of the record \(if source is a keyed source\).  This can be left blank for non-keyed sources.
