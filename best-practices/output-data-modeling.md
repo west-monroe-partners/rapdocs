@@ -34,15 +34,13 @@ TODO - discuss union concept, add viz
 
 ### Loose Dimensional Data Model
 
-The loose dimensional model concept is a variation of the traditional star schema.  DataOps is able to conform to a loose interpretation, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
+The loose dimensional model concept is a variation of the traditional star schema.  DataOps is able to conform to a loose interpretation of the Kimball star schema, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
 
-The one way that a loose dimensional model deviates from a star schema is the lack of surrogate key generation.  As a result, dimension tables are tied to the fact tables on either a single natural key or a concatenated composite key.  The primary benefit is that it decouples the dependencies between dimension and fact tables.  There is no need to handle early-arriving facts separately, since the need to generate a placeholder dimension key is eliminated.
+The one way that a loose dimensional model deviates from a traditional star schema is the lack of surrogate key generation.  As a result, dimension tables are tied to the fact tables on either a single natural key or a concatenated composite key.  The primary benefit is that it decouples the dependencies between dimension and fact tables.  There is no need to handle early-arriving facts separately, since the need to generate a placeholder dimension key is eliminated.  Most modern reporting tools on the market today are able to handle the loose relationships between fact and dimension tables with this approach, meaning we don't need to deal with the complexity of handling early-arriving facts within DataOps.
 
 The general recommendation for DataOps is to stick to the flat data model as much as possible, but if requirements determine that a more traditional star schema is needed, the loose dimensional model is also an option.
 
-TODO - add rough diagram
-
-TODO - add use cases where this works
+For additional information about the loose dimensional data model and the rationale behind the approach, please refer to [this resource](https://www.westmonroepartners.com/perspectives/resource/data-modeling-approach-leverage-analytics-reporting) on our website.
 
 ### Hybrid Model
 
