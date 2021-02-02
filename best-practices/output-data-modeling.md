@@ -20,13 +20,19 @@ The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-i
 
 TODO - update this section based on latest OBT content
 
-The primary data modeling methodology that DataOps is designed for is the "One Big Table" model.  As it's name suggests, the idea is to encapsulate as much of the reporting data model as possible into a single flat table.  This approach takes advantage of the columnar compression offered in modern relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse, for example\).  A single big table can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema and be much less complex to use.
+The primary data modeling methodology that DataOps is designed for is the "One Big Table" model.  As it's name suggests, the idea is to encapsulate as much of the reporting data model as possible into a single \(sparsely populated\) flat table.  This approach takes advantage of the columnar compression offered in modern relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse, for example\).  A single big table can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema and be much less complex to use.
 
 {% hint style="info" %}
 **NOTE**:  The One Big Table approach should only be used for outputs going to columnar compressed tables or to Virtual Outputs.  Outputting to a rowstore-oriented technology can lead to excessive I/O and storage consumption.
 {% endhint %}
 
+The methodology that needs to be followed with this approach is the following:
 
+1. Determine logical dimensions and facts, as well as relationships between dimensions and facts.  Note that this step still leverages traditional Kimball methodology for modeling.
+2. Once logical dimensions / facts and associated relationships are determined, denormalize all dimensional attributes into each fact table.
+3. Merge all denormalized fact entities into a single large entity.
+   1. Any shared dimensional attributes \(i.e., conformed dimensions\) should use the same field across all relevant fact grains.
+   2. All measures should use fields that are _**not**_ shared with any other grain.
 
 ![An example of a star schema collapsed into One Big Table.](../.gitbook/assets/image%20%28259%29.png)
 
