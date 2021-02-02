@@ -13,7 +13,7 @@ Flat file outputs feeding into other systems are highly dependent on the input r
 The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the user-exposed reporting schema in data warehouses for several decades.  It provides a great balance of model simplicity and query performance on traditional relational databases.  However, with the more modern technologies that exist today \(primarily columnar compression and columnstore indexes, as well as more advanced modeling functionality in reporting tools\), the star schema as originally defined may no longer be the optimal solution in most cases.  Rather, alternative takes on the Kimball star schema may be a better answer.
 
 {% hint style="info" %}
-**NOTE:**  None of the modeling approaches suggested here eliminate the need to understand the concepts of the Kimball methodology.  Rather, the approaches here are an extension of that methodology to better align the physical representation of that model to storage and reporting technologies available today.
+**NOTE:**  None of the modeling approaches suggested here eliminate the need to understand the concepts of the Kimball methodology.  Rather, the approaches discussed here are an extension of that methodology to better align the physical representation of the data model to capabilities in storage and reporting technologies available today.
 {% endhint %}
 
 ### "One Big Table" Model
