@@ -40,7 +40,7 @@ The methodology that needs to be followed with this approach is the following:
 
 The loose dimensional model concept is a variation of the traditional star schema.  DataOps is able to conform to a loose interpretation of the Kimball star schema, allowing for dimensions to be leveraged while still using some of the benefits from the flat data modeling approach.
 
-The one way that a loose dimensional model deviates from a traditional star schema is the lack of surrogate key generation.  As a result, dimension tables are tied to the fact tables on either a single natural key or a concatenated composite key.  The primary benefit is that it decouples the dependencies between dimension and fact tables.  There is no need to handle early-arriving facts separately, since the need to generate a placeholder dimension key is eliminated.  Most modern reporting tools on the market today are able to handle the loose relationships between fact and dimension tables with this approach, meaning we don't need to deal with the complexity of handling early-arriving facts within DataOps.
+The primary way that a loose dimensional model deviates from a traditional star schema is the lack of surrogate key generation.  As a result, dimension tables are tied to the fact tables on either a single natural key or a concatenated composite key.  The primary benefit is that it decouples the dependencies between dimension and fact tables.  There is no need to handle early-arriving facts separately, since the need to generate a placeholder dimension key is eliminated.  Most modern reporting tools on the market today are able to handle the loose relationships between fact and dimension tables with this approach, meaning we don't need to deal with the complexity of handling early-arriving facts within DataOps.
 
 The general recommendation for DataOps is to stick to the "One Big Table" model as much as possible, but if requirements determine that a more traditional star-like schema is needed, the loose dimensional model is also a viable option.
 
@@ -48,7 +48,7 @@ For additional information about the loose dimensional data model and the ration
 
 ### Hybrid Model
 
-In many cases, a hybrid approach between the One Big Table modeling approach and the loose dimensional data modeling approach may be the right design.  As the One Big Table design tracks dimensional attributes as of a single point in time, dimensional tables may need to be created when those attributes need to be kept current and reprocessing affected records is prohibitively expensive.
+In some cases, a hybrid approach between the One Big Table data modeling approach and the loose dimensional data modeling approach may be the right design.  As the One Big Table design tracks dimensional attributes as of a single point in time, dimensional tables may need to be created when those attributes need to be kept current and reprocessing affected records would be prohibitively expensive.
 
 TODO - describe when to roll attributes into flat model and when to normalize to separate table
 
