@@ -10,16 +10,16 @@ Flat file outputs feeding into other systems are highly dependent on the input r
 
 ### Background
 
-The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the user-exposed reporting schema in data warehouses for several decades.  It provides a great balance of model simplicity and query performance on traditional relational databases.  However, with the more modern technologies that exist today \(primarily columnar compression and columnstore indexes, as well as more advanced modeling functionality in reporting tools\), the star schema as originally defined may no longer be the optimal solution in most cases.
+The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the user-exposed reporting schema in data warehouses for several decades.  It provides a great balance of model simplicity and query performance on relational databases.  However, with the more modern technologies that exist today \(primarily columnar compression and columnstore indexes, as well as more advanced modeling functionality in reporting tools\), the star schema as originally defined may no longer be the optimal solution in many cases.
 
 ### "One Big Table" Model
 
 TODO - update this section based on latest OBT content
 
-The primary data model that DataOps is designed for is the "One Big Table" model.  As it's name suggests, the idea is to encapsulate as much of the reporting data model as possible into a single flat table.  This approach takes advantage of the columnar compression offered in modern relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse, for example\).  A single big table can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema and be much less complex to use.
+The primary data model RAP is designed for is the flat data model.  The flat data model takes advantage of the columnar compression offered in relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse\).  A flat data model can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema through columnar compression.
 
 {% hint style="info" %}
-**NOTE**:  The One Big Table approach should only be used for outputs going to columnar compressed tables or to Virtual Outputs.  Outputting to a rowstore-oriented technology can lead to excessive I/O and storage consumption.
+**NOTE**:  Flat data models should only be used for outputs going to columnar compressed tables or to Virtual Outputs.  Outputting to a rowstore-oriented technology can lead to excessive I/O and storage consumption.
 {% endhint %}
 
 TODO - add details about what this is, show visually how this looks like
@@ -28,7 +28,7 @@ TODO - add use cases where this works
 
 TODO - discuss union concept, add viz
 
-![An example of a star schema collapsed into One Big Table.](../.gitbook/assets/image%20%28259%29.png)
+![An example of a star schema collapsed into a single flat table.](../.gitbook/assets/image%20%28259%29.png)
 
 ### 
 
