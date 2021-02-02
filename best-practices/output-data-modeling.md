@@ -32,7 +32,7 @@ The methodology that needs to be followed with this approach is the following:
 2. Once logical dimensions / facts and associated relationships are determined, denormalize all dimensional attributes into each fact table.
 3. Merge all denormalized fact entities into a single large entity.
    1. Any shared dimensional attributes \(i.e., conformed dimensions\) should use the same field across all relevant fact grains.
-   2. All measures should use fields that are _**not**_ shared with any other grain.
+   2. All measures should use fields that are _**not**_ shared with any other fact grain.
 
 ![An example of a star schema collapsed into One Big Table.](../.gitbook/assets/image%20%28259%29.png)
 
