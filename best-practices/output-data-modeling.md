@@ -26,7 +26,7 @@ The primary data modeling methodology that DataOps is designed for is the "One B
 **NOTE**:  The One Big Table approach should only be used for outputs going to columnar compressed tables or to Virtual Outputs.  Outputting to a rowstore-oriented technology can lead to excessive I/O and storage consumption.
 {% endhint %}
 
-The primary 
+
 
 ![An example of a star schema collapsed into One Big Table.](../.gitbook/assets/image%20%28259%29.png)
 
