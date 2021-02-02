@@ -1,5 +1,5 @@
 ---
-description: How to handle potential data errors in DataOps.
+description: How to handle potential data issues in DataOps.
 ---
 
 # !! Handling Data Validation Issues

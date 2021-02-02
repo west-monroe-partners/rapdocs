@@ -18,8 +18,6 @@ The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-i
 
 ### "One Big Table" Model
 
-TODO - update this section based on latest OBT content
-
 The primary data modeling methodology that DataOps is designed for is the "One Big Table" model.  As it's name suggests, the idea is to encapsulate as much of the reporting data model as possible into a single \(sparsely populated\) flat table.  This approach takes advantage of the columnar compression offered in modern relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse, for example\).  A single big table can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema and be much less complex to use.
 
 {% hint style="info" %}
