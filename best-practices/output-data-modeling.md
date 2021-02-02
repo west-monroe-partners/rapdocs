@@ -6,27 +6,27 @@ description: Options for modeling output data coming out of DataOps.
 
 Once data is in DataOps, there should be a path to expose that data externally, whether it's through a data hub, data warehouse, reporting tool, or various flat files that feed into other systems.
 
-Flat file outputs feeding into other systems are highly dependent on the input requirements of those systems, and generally those outputs will be defined by those system requirements.  For the purposes of this section, the focus will be on modeling for an output database to feed into a reporting tool or layer.
+Flat file outputs feeding into other systems are highly dependent on the input requirements of those systems, and generally those output layouts will be defined by those system requirements.  For the purposes of this section, the focus will be on modeling for an output database to feed into a reporting tool or layer.
 
 ### Background
 
-The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the user-exposed reporting schema in data warehouses for several decades.  It provides a great balance of model simplicity and query performance on traditional relational databases.  However, with the more modern technologies that exist today \(primarily columnar compression and columnstore indexes, as well as more advanced modeling functionality in reporting tools\), the star schema as originally defined may no longer be the optimal solution in most cases.
+The [Kimball star schema](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/) has been the most widely used approach for modeling the user-exposed reporting schema in data warehouses for several decades.  It provides a great balance of model simplicity and query performance on traditional relational databases.  However, with the more modern technologies that exist today \(primarily columnar compression and columnstore indexes, as well as more advanced modeling functionality in reporting tools\), the star schema as originally defined may no longer be the optimal solution in most cases.  Rather, alternative takes on the Kimball star schema may be a better answer.
+
+{% hint style="info" %}
+**NOTE:**  None of the modeling approaches suggested here eliminate the need to understand the concepts of the Kimball methodology.  Rather, the approaches here are an extension of that methodology to better align the physical representation of that model to storage and reporting technologies available today.
+{% endhint %}
 
 ### "One Big Table" Model
 
 TODO - update this section based on latest OBT content
 
-The primary data model that DataOps is designed for is the "One Big Table" model.  As it's name suggests, the idea is to encapsulate as much of the reporting data model as possible into a single flat table.  This approach takes advantage of the columnar compression offered in modern relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse, for example\).  A single big table can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema and be much less complex to use.
+The primary data modeling methodology that DataOps is designed for is the "One Big Table" model.  As it's name suggests, the idea is to encapsulate as much of the reporting data model as possible into a single flat table.  This approach takes advantage of the columnar compression offered in modern relational databases and other large-scale cloud storage offerings \(such as Snowflake and Azure Synapse, for example\).  A single big table can be as performant as a traditional normalized schema, as well as use less storage than a traditional rowstore star schema and be much less complex to use.
 
 {% hint style="info" %}
 **NOTE**:  The One Big Table approach should only be used for outputs going to columnar compressed tables or to Virtual Outputs.  Outputting to a rowstore-oriented technology can lead to excessive I/O and storage consumption.
 {% endhint %}
 
-TODO - add details about what this is, show visually how this looks like
-
-TODO - add use cases where this works
-
-TODO - discuss union concept, add viz
+The primary 
 
 ![An example of a star schema collapsed into One Big Table.](../.gitbook/assets/image%20%28259%29.png)
 
