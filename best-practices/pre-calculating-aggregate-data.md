@@ -44,5 +44,5 @@ Information about how this pattern works are covered in detail in the [Crossing 
 A few things to keep in mind when aggregating data in DataOps:
 
 * Aggregations run in the context of an entire source \(not just the latest incremental data\).  Therefore, the existence of aggregate calculations in a source can significantly impact the amount of time to process incremental data \(especially when the incremental data volume is much less than the total data volume\).
-* All aggregations need to run in the context of an entire source, all aggregations done through an enrichment rule will need to have the "Keep Current" recalculation mode selected.
+* Since all aggregations need to run in the context of an entire source, all aggregations done through an enrichment rule will need to have the "Keep Current" recalculation mode selected.
 
