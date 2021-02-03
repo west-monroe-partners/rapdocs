@@ -48,9 +48,5 @@ For additional information about the loose dimensional data model and the ration
 
 ### Hybrid Model
 
-In some cases, a hybrid approach between the One Big Table data modeling approach and the loose dimensional data modeling approach may be the right design.  As the One Big Table design tracks dimensional attributes as of a single point in time, dimensional tables may need to be created when those attributes need to be kept current and reprocessing affected records would be prohibitively expensive.
-
-TODO - describe when to roll attributes into flat model and when to normalize to separate table
-
-TODO - add example use cases where this works
+In some cases, a hybrid approach between the One Big Table data modeling approach and the loose dimensional data modeling approach may be the right design.  As the One Big Table design tracks dimensional attributes as of a single point in time by default, dimensional tables may need to be created when those attributes need to be kept current and reprocessing affected records would be prohibitively expensive.  In this scenario, the needed dimension table\(s\) relate directly to the One Big Table, resulting in a physical data model looking like a star schema with only a single center node.
 
