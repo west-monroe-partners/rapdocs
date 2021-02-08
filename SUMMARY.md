@@ -91,6 +91,8 @@
 * [Historical Reference](historical-reference/README.md)
   * [How it Works \(RAP 1.0\)](historical-reference/components-and-concepts.md)
 * [Changelog](changelog/README.md)
+  * [2.2](changelog/2.2/README.md)
+    * [2.2.0](changelog/2.2/2.2.0.md)
   * [2.1](changelog/2.1/README.md)
     * [2.1.5](changelog/2.1/2.1.5.md)
     * [2.1.4](changelog/2.1/2.1.4.md)
