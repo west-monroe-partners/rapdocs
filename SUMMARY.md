@@ -4,7 +4,6 @@
 * [Extensibility](extensibility/README.md)
   * [Custom Ingestion](extensibility/custom-ingestion.md)
 * [Getting Started Guide](getting-started-guide/README.md)
-  * [Intellio Support Portal Sign Up](getting-started-guide/intellio-support-portal.md)
   * [DataOps Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/how-it-works-2.md)
     * [Navigation and Interface](getting-started-guide/rap-basics/navigation-and-interface.md)
