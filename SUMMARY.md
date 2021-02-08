@@ -1,8 +1,7 @@
 # Table of contents
 
 * [Welcome to Intellio DataOps!](README.md)
-* [Extensibility](extensibility/README.md)
-  * [Custom Ingestion](extensibility/custom-ingestion.md)
+* [Extensibility](extensibility.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [DataOps Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/how-it-works-2.md)
@@ -16,6 +15,7 @@
     * [Output](getting-started-guide/data-integration-example/output.md)
 * [Configuration Guide](configuring-the-data-integration-process/README.md)
   * [Import/Export](configuring-the-data-integration-process/import-export.md)
+  * [Custom Ingestion](configuring-the-data-integration-process/custom-ingestion.md)
   * [Sources](configuring-the-data-integration-process/source-configuration/README.md)
     * [Relations](configuring-the-data-integration-process/source-configuration/relations-1.md)
     * [Inputs](configuring-the-data-integration-process/source-configuration/source-inputs.md)
