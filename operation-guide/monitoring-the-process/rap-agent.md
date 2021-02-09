@@ -29,5 +29,5 @@ In the event that that an Agent has a failed status, the log files can be found 
 
 To start, stop, or restart the Agent service, navigate to the services window, and restart the service named RAPAgentBat.
 
-![](../../.gitbook/assets/32.png)
+![](../../.gitbook/assets/32%20%281%29.png)
 

@@ -92,7 +92,7 @@ If the service is running and no log files are being created, there is a good ch
 
 Another common error is the misplacement of the agent-config.bin file. If the following message is in the logs, please make sure that the agent-config.bin file is placed in the appropriate location, and the service is restarted after the placement of the file. The file needs to be named "agent-config.bin" as well.
 
-![Agent Config error message](../.gitbook/assets/image%20%28342%29.png)
+![Agent Config error message](../.gitbook/assets/image%20%28343%29.png)
 
 If these troubleshooting steps are followed and the Agent is still not running, please reach out to your client team for support.
 

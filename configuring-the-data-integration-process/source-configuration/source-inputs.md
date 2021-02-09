@@ -33,7 +33,7 @@ The Source Inputs screen allows users to monitor the status of their Sources' In
 
 * **Checkbox -** Used to select multiple inputs for reprocessing
 
-![The Inputs Page](../../.gitbook/assets/image%20%28293%29.png)
+![The Inputs Page](../../.gitbook/assets/image%20%28293%29%20%281%29.png)
 
 ### Three Dot Menu 
 

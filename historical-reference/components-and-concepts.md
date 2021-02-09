@@ -14,7 +14,7 @@ This is a deprecated view of how the RAP framework breaks down into diffenent st
 
 RAP consists of four storage structures.
 
-![RAP Storage Structure and Processing Steps](../.gitbook/assets/image%20%28179%29.png)
+![RAP Storage Structure and Processing Steps](../.gitbook/assets/image%20%28206%29.png)
 
 ### RAP Metadata Structure
 
@@ -42,7 +42,7 @@ RAP does not generate or store business data, rather it collects this informatio
 
 RAP organizes data processing into four steps.
 
-![RAP Storage Structure and Processing Steps](../.gitbook/assets/image%20%28179%29.png)
+![RAP Storage Structure and Processing Steps](../.gitbook/assets/image%20%28206%29.png)
 
 ### Input
 

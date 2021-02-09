@@ -57,37 +57,46 @@ More information on Intellio QL can be found [here in the configuration guide](h
 
 ## Example Expressions
 
-#### _Multiplying an attribute from a related source to an attribute of the current source through a primary relation_
+### _Multiplying an attribute from a related source to an attribute of the current source through a primary relation_
 
 > \[This\].ListPrice \* \[Related Source Name\].Quantity
 
-#### _Aggregating a column from a primary related source with many cardinality_
+### _Aggregating a column from a primary related source with many cardinality_
 
 > sum\(\[Related Source Name\].SalesTotal\)
 
-#### _Aggregating a column from a non-primary related source with many cardinality_
+### _Aggregating a column from a non-primary related source with many cardinality_
 
 > sum\(\[This\]~{Relation Name}~\[Related Source Name\].SalesTotal\)
 
-#### _Rounding a column down to two decimal places_
+### _Rounding a column down to two decimal places_
 
 > round\(\[This\].AverageCost, 2\)
 
-#### _Window function aggregating one attribute of the current source while partitioning on another_
+### _Window function aggregating one attribute of the current source while partitioning on another_
 
 > sum\(\[This\].TotalCost\) OVER \(PARTITION BY \[This\].CustomerID\)
 
-#### _Validation rule to determine if a numeric column of the source is above a specified threshold_
+### _Validation rule to determine if a numeric column of the source is above a specified threshold_
 
 > This.TotalCost &gt; 100
 
 ## When will my rule get processed?
+
 #### Enrichment
-  * All traversal rules, regardless of keep current
-  * Rules that do not contain window functions and do not depend on a window function rule, regardless of keep current
-#### Refresh
-  * All window function rules (window function rules must be keep current)
-  * All rules that depend on window functions (rules that depend on window functions must be keep current)
-#### Attribute Recalculation
-  * All keep current traversal rules WHEN the related source gets new data
-  * All rules that depend on the above keep current traversal rules (rules dependent on keep current rules must be keep current)
+
+* All traversal rules, regardless of keep current
+* Rules that do not contain window functions and do not depend on a window function rule, regardless of keep current
+
+**Refresh**
+
+* All window function rules \(window function rules must be keep current\)
+* All rules that depend on window functions \(rules that depend on window functions must be keep current\)
+
+**Attribute Recalculation**
+
+* All keep current traversal rules WHEN the related source gets new data
+* All rules that depend on the above keep current traversal rules \(rules dependent on keep current rules must be keep current\)
+
+
+
