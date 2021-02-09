@@ -81,6 +81,7 @@ More information on Intellio QL can be found [here in the configuration guide](h
 
 > This.TotalCost &gt; 100
 
+## When will my rule get processed?
 #### Enrichment
   * All traversal rules, regardless of keep current
   * Rules that do not contain window functions and do not depend on a window function rule, regardless of keep current
