@@ -10,7 +10,7 @@ description: This section covers Validation and Enrichment configuration.
 
 Validation and Enrichment applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Validation and Enrichment rules represent the majority of the logic and structure of data processing within DataOps, and provide a flexible, yet guided framework for data management.
 
-## Step **1: Configure Validation** 
+## Step **1: Configure Validation**
 
 A Validation Rule consists of validation logic, in the form of a SQL WHERE statement. After checking each statement individually, DataOps tags each record with a pass, failure, or warning flag, as well as which rule\(s\) triggered the warnings or failures. This section makes a simple validation rule that ensures the city field has a value.
 
@@ -47,7 +47,7 @@ When field names are prepended with a \[This\] such as `[This].city`, it indicat
 {% endhint %}
 
 {% hint style="info" %}
-DataOps supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's](validation-and-enrichment.md) [Validation and Enrichment Rule Templates](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) section.
+DataOps supports Rule Types, whereby commonly used Validation Rules can be saved as preset templates. This is a more advanced feature discussed in the [Configuration Guide's](validation-and-enrichment.md) [Validation and Enrichment Rule Templates](https://github.com/west-monroe-partners/rapdocs/tree/dbdd67bb9146c835a1a1a52830857289997bebd8/configuring-the-data-integration-process/validation-and-enrichment-rule-templates.md) section.
 {% endhint %}
 
 ## **Step 2: Configure Enrichment**
@@ -67,7 +67,7 @@ Navigate to the Enrichments tab within the Source, and click **New Enrichment Ru
 
 ### Enriched Column Data Type:
 
-This is a `text` datatype, because it is a conversion of the `city` field to either a "N" or a "Y". ****Select "string" from the dropdown menu.
+This is a `text` datatype, because it is a conversion of the `city` field to either a "N" or a "Y". _\*\*_Select "string" from the dropdown menu.
 
 ### Return Expression:
 

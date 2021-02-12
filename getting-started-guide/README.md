@@ -6,9 +6,9 @@ description: >-
 
 # Getting Started Guide
 
-Welcome to the DataOps Getting Started Guide! This guide serves as an introduction for new users who have yet to use the DataOps. 
+Welcome to the DataOps Getting Started Guide! This guide serves as an introduction for new users who have yet to use the DataOps.
 
-For specific documentation concerning configuring a DataOps process, see the [Configuration Guide](../configuring-the-data-integration-process/). For specific documentation concerning the maintenance of a DataOps process, see the [Operation Guide](../operation-guide/). 
+For specific documentation concerning configuring a DataOps process, see the [Configuration Guide](../configuring-the-data-integration-process/). For specific documentation concerning the maintenance of a DataOps process, see the [Operation Guide](https://github.com/west-monroe-partners/rapdocs/tree/dbdd67bb9146c835a1a1a52830857289997bebd8/operation-guide/README.md).
 
 This guide has two parts:
 

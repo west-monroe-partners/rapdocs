@@ -4,7 +4,7 @@ description: >-
   (RAP) user interface.
 ---
 
-# !! Intellio® QL
+# Intellio® QL
 
 Expressions occur in many locations in the Intellio® DataOps \(RAP\) user interface, namely Relations, Rules, Output Mappings, and Data Viewer filters. In order to access source attributes and traverse relations within these expressions, the user must use **Intellio® Query Language**.
 
@@ -15,15 +15,11 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 {% tabs %}
 {% tab title="Source Containers" %}
 * **\[**_**Source Name**_**\]** -- Source container. Simply a source name wrapped in brackets.
-
   * **Usage Locations:** Output Mappings, Rules
   * **Usage Examples:** \[SalesOrderDetail\].OrderQuantity
-
 * _**\[This\]** --_ Current source container. Equivalent to \[_current source name_\]. Optional for Output Mapping & Data Viewer expressions
-
   * **Usage Locations:** Anywhere Intellio QL is used
   * **Usage Examples:** \[This\].OrderQuantity
-
 * _**\[Related\]** --_ Container for related source. Only allowed in relation expression.
   * **Usage Locations:** Container for related source. Only allowed in relation expression.
   * **Usage Example:** \[This\].ID = \[Related\].ID
@@ -48,22 +44,18 @@ Expressions within Intellio® DataOps \(RAP\) follow [Spark SQL](https://spark.a
 ### _**Source Containers**_
 
 * \[_Source Name_\] -- Source container. Simply a source name wrapped in brackets.
-
   * **Usage Locations:** Output Mappings, Rules
   * **Usage Examples:** \[SalesOrderDetail\].OrderQuantity
-
 * _\[This\] --_ Current source container. Equivalent to \[_current source name_\]. Optional for Output Mapping & Data Viewer expressions
-
   * **Usage Locations:** Anywhere Intellio QL is used
   * **Usage Examples:** \[This\].OrderQuantity
-
-* _\[Related\] ****--_ Container for related source. Only allowed in relation expression.
+* _\[Related\] \*\*--_ Container for related source. Only allowed in relation expression.
   * **Usage Locations:** Container for related source. Only allowed in relation expression.
   * **Usage Example:** \[This\].ID = \[Related\].ID
 
 ### _**Relation Containers**_
 
-* {_Relation Name_} ****_--_ Relation name, indicates path to the source containers used in expression. Preceded by _\[Source Container\]~_ to access non-primary relations
+* {_Relation Name_} _\*\*--_ Relation name, indicates path to the source containers used in expression. Preceded by _\[Source Container\]~_ to access non-primary relations
   * **Usage Locations:** Rules, Output Mappings
   * **Usage Example:** \[This\]~{Non Primary Relation Name}.attribute\_name
 
@@ -191,5 +183,5 @@ More Info on rule expressions and examples can be found at the bottom of the rul
 
 ### Output Mapping Expressions
 
-More Info on output mapping expressions and examples can be found at the bottom of the output mapping page of the configuration guide [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/output-configuration/output-mapping#mapping-expressions). 
+More Info on output mapping expressions and examples can be found at the bottom of the output mapping page of the configuration guide [here](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/output-configuration/output-mapping#mapping-expressions).
 

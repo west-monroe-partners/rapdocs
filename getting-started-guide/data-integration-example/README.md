@@ -6,11 +6,11 @@ description: This example acts as a Hello World tutorial for DataOps
 
 ## Introduction
 
-This simple introductory example looks at one specific use of DataOps. 
+This simple introductory example looks at one specific use of DataOps.
 
-For more detailed configuration instructions, please refer to the [Configuration Guide](../../configuring-the-data-integration-process/). 
+For more detailed configuration instructions, please refer to the [Configuration Guide](../../configuring-the-data-integration-process/).
 
-For operation documentation, refer to the [Operation Guide](../../operation-guide/). 
+For operation documentation, refer to the [Operation Guide](https://github.com/west-monroe-partners/rapdocs/tree/dbdd67bb9146c835a1a1a52830857289997bebd8/operation-guide/README.md).
 
 This Data Integration Example progresses in five parts:
 
