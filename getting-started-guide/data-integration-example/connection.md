@@ -20,7 +20,7 @@ Navigate to the Connections screen through the Menu, as seen below.
 
 On the Connections screen, click New Connection in the top right corner. The image below highlights the correct button.
 
-![Create a New Connection](../../.gitbook/assets/create-a-new-connection.png)
+![Create a New Connection](../../.gitbook/assets/create-a-new-connection%20%281%29.png)
 
 ### Naming your new Connection
 
