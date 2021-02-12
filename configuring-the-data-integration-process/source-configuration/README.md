@@ -20,7 +20,7 @@ Each Source can be activated or inactivated by clicking the kebab button \(**⋮
 
 To edit a Source, click the Source name in the list. This opens the Edit Source screen.
 
-![Select a Source to Edit](../../.gitbook/assets/image%20%28168%29.png)
+![Select a Source to Edit](../../.gitbook/assets/image%20%28209%29%20%281%29.png)
 
 To add a Source, select **New Source**. This opens the Edit Source screen for a new Source.
 
