@@ -34,7 +34,7 @@ Note: Delete will permanently delete the input. Do not click delete unless you a
 
 A common scenario, especially when doing large reloads or running many processes concurrently, is longer `In-Progress`phases for processes to proceed to `Passed` or `Failed`. In most situations, the process is waiting for connections to allocate internally.
 
-![A Staging process waiting for connections to allocate](../../.gitbook/assets/10%20%281%29.png)
+![A Staging process waiting for connections to allocate](../../.gitbook/assets/10%20%281%29%20%281%29.png)
 
 If any processes timeout, then they will fail and update their status to fail accordingly. If a process is still In Progress for an abnormally long time, a deeper investigation is necessary.
 
