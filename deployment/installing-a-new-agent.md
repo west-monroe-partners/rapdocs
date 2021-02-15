@@ -26,6 +26,7 @@ Prior to installing the DataOps Agent, the following requirements must be met.  
 * File and database sources that will be accessed through the DataOps Agent must be accessible from the machine the Agent is being installed on.  In the case of database sources, many customers install the Agent software directly on the database server - network connectivity from the machine that the Agent software is being installed on is all that is required.  Note that the Agent will be performing data pulls and uploading to AWS / Azure, so the recommendation is to not segment off the Agent machine from the sources being accessed in a way that traffic needs to cross a limited capacity network segment to reach those sources.
 * The user account intended for the Agent to use to access source databases needs to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the Agent user and only SQL Server authentication can be used.
   * Mixed-mode authentication can still be enabled to allow for integrated authentication for non-DataOps related loads.
+* A Windows user account must be created to run the agent with username and password. This user must have the ability to access any folders containing source data as well as the ability to run services.
 
 ## **Machine Guid Command**
 
@@ -64,9 +65,9 @@ Download the appropriate version of the MSI installer. Run the installer and fil
 
 ![Initial MSI screen](../.gitbook/assets/image%20%28340%29.png)
 
-A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. Do not alter the configuration key unless directed to by a DataOps team member. 
+A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. The windows username and password to run the service must also be entered. Do not alter the configuration key unless directed to by a DataOps team member. Do not alter the configuration key unless directed to by a DataOps team member.  
 
-![Agent Setup Screen 1](../.gitbook/assets/image%20%28337%29.png)
+![Agent Setup Screen 1](../.gitbook/assets/image%20%28190%29.png)
 
 If a second DataOps agent is being installed on the same server, the port will need to be altered so both agents are not running on the same port. If this is the first DataOps agent, then the port should be left as the default value of 25530.
 
