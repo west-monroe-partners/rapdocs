@@ -12,7 +12,7 @@ description: >-
 * Use rule templates to centralize and simplify management of rules with identical or nearly identical structure
 * Define and enforce transparent naming convention for Source, Relation, Rule and Attribute names. This will make tokenization
 * Think of each token as a master data element and create and enforce tokenization plan before you start making tokens. Tokens provide powerful way to provide flexible transformation logic but they can quickly become unmanageable if same structure is not followed for each source group using them
-* Clearly define value that token should contain in token description and provide clear default value
+* Clearly define value that token should contain in token description and provide most common default value as an example
 * Make sure token values cover only variable portion of template attributes
 
 ### Don't

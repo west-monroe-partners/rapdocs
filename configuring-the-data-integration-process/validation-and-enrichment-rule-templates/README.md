@@ -25,31 +25,3 @@ Template that shares structure with Relation. Name, Related Source Name Name and
 
 ![Template-Token-Source relationship diagram](../../.gitbook/assets/image%20%28186%29.png)
 
-
-
-## Managing Templates
-
-### Editing Templates
-
-Users can edit Templates within the Templates screen. Select a Template to display the Edit Modal.
-
-![Editing a Template](../../.gitbook/assets/editing-a-template.png)
-
-In the Edit Modal, users can modify the Template. Saving the Template immediately applies the new logic to all Sources attached to the Template.
-
-![Edit Modal - Save a Validation Rule](../../.gitbook/assets/image%20%28161%29.png)
-
-### Applying Templates to Many Sources from the Templates Screen
-
-Users may apply a Template on many Sources at once, eliminating the need to open up each Source separately. In the Templates screen, click the **Select Sources** button to display the Select Sources modal.
-
-![Select Sources Button](../../.gitbook/assets/select-sources-button.png)
-
-The Select Sources modal allows users to select multiple Sources and apply the Rule against it. Users can also search for specific Sources.
-
-![Select Sources Modal](../../.gitbook/assets/image%20%2815%29.png)
-
-{% hint style="info" %}
-Note: A Source above is marked as **Has Dependents**, which prevents the Source from being deselected. This means that the Source not only already has the rule applied, but has additional Active rules configured that depend on the value output by the Template in question.
-{% endhint %}
-
