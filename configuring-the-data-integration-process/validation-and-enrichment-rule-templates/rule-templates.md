@@ -4,6 +4,8 @@ description: Rule template management screens
 
 # Rule Templates
 
+### Managing Templates
+
 Selecting Templates-&gt;Rule Templates from main menu opens Rule Templates list view :
 
 ![](../../.gitbook/assets/image%20%28109%29.png)
@@ -58,21 +60,21 @@ After selecting sources, click Validate button. System will evaluate each templa
 
  
 
-![Validation status dialog](../../.gitbook/assets/image%20%28267%29.png)
+![Validation status dialog](../../.gitbook/assets/image%20%28283%29.png)
 
 Sources marked green passed template validation and are ready for the template to be linked. Sources marked red didn't pass validation. Clicking on red status icon shows validation error details:
 
-![Validation Error Details](../../.gitbook/assets/image%20%28283%29.png)
+![Validation Error Details](../../.gitbook/assets/image%20%28310%29.png)
 
 Clicking on source name opens new browser tab with source settings to help user correct validation errors \(configure token values, check metadata, etc.\). By clicking triple-dot action menu, user can remove source from the list to be linked and address issues at a later time. Once issues have been corrected, click RE-VALIDATE button to repeat checks:
 
  
 
-![](../../.gitbook/assets/image%20%28252%29.png)
+![](../../.gitbook/assets/image%20%28257%29.png)
 
 Once all validation checks have passed, SAVE button is enabled. Click it to link template to displayed sources. After saving, updated linked sources tab is displayed:
 
  
 
-![Linked Sources](../../.gitbook/assets/image%20%28257%29.png)
+![Linked Sources](../../.gitbook/assets/image%20%28268%29.png)
 
