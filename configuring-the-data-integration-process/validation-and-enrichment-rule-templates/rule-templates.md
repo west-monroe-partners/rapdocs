@@ -78,3 +78,18 @@ Once all validation checks have passed, SAVE button is enabled. Click it to link
 
 ![Linked Sources](../../.gitbook/assets/image%20%28268%29.png)
 
+Clicking on Source Name on the Linked Sources tab list opens up new browser tab with Linked source Rule dialog:
+
+![Template-linked Rule Dialog](../../.gitbook/assets/image%20%28320%29.png)
+
+Rules linked to Template cannot be edited directly. Actions available are:
+
+| Action | Description |
+| :--- | :--- |
+| View Rule Template Link | Opens Rule Template setting page |
+| Duplicate | Clones Rule and opens it up in new dialog |
+| Unlink | Removes link between Rule and Template and converts Template-linked rule to regular Rule |
+| Delete | Removes link between Rule and Template and physically deletes the rule. Equivalent to "Remove Linked Sources" action on Template page |
+
+
+

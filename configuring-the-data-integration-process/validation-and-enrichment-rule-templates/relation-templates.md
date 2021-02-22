@@ -67,7 +67,7 @@ Once Relation Template is saved, it can now be applied to sources using Linked S
 
 To link Template to source\(s\), click NEW + button and select one ore more sources in the dialog and click VALIDATE:
 
-![](../../.gitbook/assets/image%20%28320%29.png)
+![](../../.gitbook/assets/image%20%28321%29.png)
 
 System applies token values configured for the selected sources, creates Relation objects based on the Template and validates them for each of the selected sources. Results of the validation are summarized on the next dialog:
 
