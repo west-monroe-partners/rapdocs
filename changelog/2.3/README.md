@@ -29,3 +29,10 @@ description: Released 2/22/2021
 | **Impact** | Allows users to reset sources to their initial state, and clear broken raw attributes on the source. This button will also produce a list of any dependent rules, relations, or output mappings that are preventing metadata deletion. |
 | **Details** | [2.3.0](2.3.0.md) |
 
+|  | Changed Default Value of the 'Force Case Insensitive' Source Parameter |
+| :--- | :--- |
+| **What** | Newly configured sources will now default to converting all ingested column names to lowercase |
+| **Why** | Greater attribute name standardization |
+| **Impact** | This will affect all newly configured sources. So in order to prevent this lowercasing, users will need to manually toggle this source parameter before the initial ingestion of a source. |
+| **Details** | [2.3.0](2.3.0.md) |
+
