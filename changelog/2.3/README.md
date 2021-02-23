@@ -22,3 +22,10 @@ description: Released 2/22/2021
 | **Impact** | Agent ver. 2.2+ will automatically update to 2.3. If you're upgrading from 2.1.x or prior version, upgrade to ver. 2.2 first before upgrading to 2.3, otherwise all deployed agents would need to be manually redeployed |
 | **Details** | [2.3.0](2.3.0.md) |
 
+|  | Fixed Source Data Deletion |
+| :--- | :--- |
+| **What** | Separate 'Delete All Source Data' button on the Source inputs tab into two distinct buttons: 'Delete Source Data' and 'Delete Source Metadata'. |
+| **Why** |  |
+| **Impact** |  |
+| **Details** | [2.3.0](2.3.0.md) |
+
