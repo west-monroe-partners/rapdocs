@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Welcome to Intellio DataOps!](README.md)
-* [Extensibility](extensibility.md)
 * [Getting Started Guide](getting-started-guide/README.md)
   * [DataOps Basics](getting-started-guide/rap-basics/README.md)
     * [How it Works](getting-started-guide/rap-basics/how-it-works-2.md)
