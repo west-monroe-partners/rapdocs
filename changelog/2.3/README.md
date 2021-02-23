@@ -24,8 +24,8 @@ description: Released 2/22/2021
 
 |  | Fixed Source Data Deletion |
 | :--- | :--- |
-| **What** | Separate 'Delete All Source Data' button on the Source inputs tab into two distinct buttons: 'Delete Source Data' and 'Delete Source Metadata'. |
-| **Why** |  |
-| **Impact** |  |
+| **What** | Separate 'Delete All Source Data' button on the Source inputs tab into two distinct buttons: 'Delete Source Data' and 'Delete Source Metadata'. 'Delete Source Data' deletes inputs, input history, processes in workflow queue, and drops the hub tables. 'Delete Source Metadata' deletes raw attributes, and drops hub tables.  |
+| **Why** | Old 'Delete All Source Data' button did not clear source raw attributes, which forced users to recreate sources from scratch if a problem arose in the source's raw attributes. |
+| **Impact** | Allows users to reset sources to their initial state, and clear broken raw attributes on the source. This button will also produce a list of any dependent rules, relations, or output mappings that are preventing metadata deletion. |
 | **Details** | [2.3.0](2.3.0.md) |
 
