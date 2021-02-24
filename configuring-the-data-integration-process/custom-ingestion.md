@@ -35,7 +35,7 @@ _`val session = new IngestionSession("<YourEnvName>", "<YourSourceName>")`_
 
 _`val customParams = session.customParameters`_ 
 
-_`val connection = session.getSecureConnectionParameters()`_
+_`val connection = session.connectionParameters`_
 
 _`def ingestDf(): DataFrame = {  
 session.log("About to query the data.", "I")`_ 
@@ -79,4 +79,5 @@ The custom ingestion can be run in one of three ways
 ### Advanced Patterns
 
 * Custom Parameters and custom connections can be used to allow a single notebook to connect to multiple different data sources. i.e. Create a generic SalesForce connector, then specify the table name in the custom parameters.
+* Latest tracking fields are available for each session. They include latest timestamp, latest sequence, extract datetime, and input id. They can be accessed with session.latestTrackingFields
 
