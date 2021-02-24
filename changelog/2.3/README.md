@@ -15,7 +15,7 @@ description: Released 2/22/2021
 | **Impact** | Templates introduce new way to create and manage Relations and Rules \(Enrichment and Validation\). Relations and Rules created from the Template are centrally managed using Template management screens |
 | **Details** | [Templates and Tokens](../../configuring-the-data-integration-process/validation-and-enrichment-rule-templates/) |
 
-|   | Move Agent to Connection |
+|   | Move Agent to Connection - PLEASE READ NOTE IN IMPACT SECTION REGARDING AUTH0  |
 | :--- | :--- |
 | **What** | Connections have new direction attribute: Source or Output. Same connection can no longer be used on both. Source connection has optional Agent attribute \(relocated from Source Settings\) . When no Agent is specified for the Connection, it is using direct Spark ingestion. |
 | **Why** | Convenience: users are no longer required to specify Agent for every new Source. This also allows to better manage dev/prod agents: Agent attribute stays with the Connection and no longer  exported/imported. This also enabled us to restrict access from Agents to sensitive, encrypted Connection data. Now only agent specified on the Connection will have access.   |
