@@ -19,7 +19,7 @@ description: Released 2/22/2021
 | :--- | :--- |
 | **What** | Connections have new direction attribute: Source or Output. Same connection can no longer be used on both. Source connection has optional Agent attribute \(relocated from Source Settings\) . When no Agent is specified for the Connection, it is using direct Spark ingestion. |
 | **Why** | Convenience: users are no longer required to specify Agent for every new Source. This also allows to better manage dev/prod agents: Agent attribute stays with the Connection and no longer  exported/imported. This also enabled us to restrict access from Agents to sensitive, encrypted Connection data. Now only agent specified on the Connection will have access.   |
-| **Impact** | Agent ver. 2.2+ will automatically update to 2.3. If you're upgrading from 2.1.x or prior version, upgrade to ver. 2.2 first before upgrading to 2.3, otherwise all deployed agents would need to be manually redeployed. Your Auth0 account will also need a custom "hook" added globally, so you will need to upgrade to Developer \($23/month minimum\) if you are using a free Auth0 account. |
+| **Impact** | Agent ver. 2.2+ will automatically update to 2.3. If you're upgrading from 2.1.x or prior version, upgrade to ver. 2.2 first before upgrading to 2.3, otherwise all deployed agents would need to be manually redeployed. **IMPORTANT: Your Auth0 account will also need a custom "hook" added globally, so you will need to upgrade to Developer \($23/month minimum\) if you are using a free Auth0 account.** |
 | **Details** | [2.3.0](2.3.0.md) |
 
 |  | Fixed Source Data Deletion |
