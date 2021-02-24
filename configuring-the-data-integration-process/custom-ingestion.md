@@ -54,11 +54,11 @@ The 4th line creates a new DataOps ingestion session. When this line is run, a n
 
 #### Accessing Custom Parameters
 
-The 5th line access the custom parameters created in the source configuration. It will be a JsObject.
+The 5th line access the custom parameters created in the source configuration. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson)
 
 #### Accessing Connection Parameters
 
-The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself. 
+The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson) This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself. 
 
 #### Creating The DataFrame Function
 
