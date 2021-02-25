@@ -21,6 +21,8 @@ In order to create a Custom Ingestion source, users should use the Custom radio 
 
 ![Custom Source Screen](../.gitbook/assets/image%20%28336%29.png)
 
+### Setting up your cluster
+
 ### Creating your Notebook
 
 Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. We will break it down piece by piece.
@@ -31,7 +33,7 @@ _`import org.apache.spark.sql.DataFrame`_
 
 _`import play.api.libs.json._`_
 
-_`val session = new IngestionSession("<YourEnvName>", "<YourSourceName>")`_ 
+_`val session = new IngestionSession("<YourEnvironmentName>", "<YourSourceName>")`_ 
 
 _`val customParams = session.customParameters`_ 
 
