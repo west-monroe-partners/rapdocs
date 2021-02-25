@@ -33,7 +33,7 @@ _`import org.apache.spark.sql.DataFrame`_
 
 _`import play.api.libs.json._`_
 
-_`val session = new IngestionSession("<YourEnvironmentName>", "<YourSourceName>")`_ 
+_`val session = new IngestionSession("<YourEnvironmentName>", "<YourCustomSourceName>")`_ 
 
 _`val customParams = session.customParameters`_ 
 
