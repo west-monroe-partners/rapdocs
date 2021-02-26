@@ -5,7 +5,7 @@ description: >-
   function that creates a dataframe of data, users
 ---
 
-# Custom Ingestion
+# Custom Ingestion - PLEASE USE THE 2.2 BRANCH FOR DOCS DO NOT USE THE NIGHTLY BRANCH
 
 ## Configuring a Custom Ingestion Source
 
