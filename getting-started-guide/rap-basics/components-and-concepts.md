@@ -8,7 +8,7 @@ description: 'The RAP ecosystem breaks down into four storage layers, and four p
 
 RAP consists of four storage structures.
 
-![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28206%29.png)
+![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28206%29%20%281%29.png)
 
 ### RAP Metadata Structure
 
@@ -36,7 +36,7 @@ RAP does not generate or store business data, rather it collects this informatio
 
 RAP organizes data processing into four steps.
 
-![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28206%29.png)
+![RAP Storage Structure and Processing Steps](../../.gitbook/assets/image%20%28206%29%20%281%29.png)
 
 ### Input
 
