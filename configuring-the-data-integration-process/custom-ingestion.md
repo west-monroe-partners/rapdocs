@@ -25,20 +25,20 @@ In order to create a Custom Ingestion source, users should use the Custom radio 
 
 Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. We will break it down piece by piece.
 
-_`import com.wmp.intellio.dataops.sdk._`_ 
+_\`import com.wmp.intellio.dataops.sdk._\`\_
 
 _`import org.apache.spark.sql.DataFrame`_
 
-_`import play.api.libs.json._`_
+_\`import play.api.libs.json._\`\_
 
-_`val session = new IngestionSession("<YourEnvName>", "<YourSourceName>")`_ 
+_`val session = new IngestionSession("<YourEnvName>", "<YourSourceName>")`_
 
-_`val customParams = session.customParameters`_ 
+_`val customParams = session.customParameters`_
 
 _`val connection = session.connectionParameters`_
 
-_`def ingestDf(): DataFrame = {  
-session.log("About to query the data.", "I")`_ 
+_`def ingestDf(): DataFrame = {    
+session.log("About to query the data.", "I")`_
 
 _`spark.sql("SELECT * FROM datatypes") }`_
 
@@ -50,7 +50,7 @@ The first three lines are standard import statements. They are needed to utilize
 
 #### Ingestion Session
 
-The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed. 
+The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed.
 
 #### Accessing Custom Parameters
 
@@ -58,7 +58,7 @@ The 5th line access the custom parameters created in the source configuration. I
 
 #### Accessing Connection Parameters
 
-The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson) This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself. 
+The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson) This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself.
 
 #### Creating The DataFrame Function
 
