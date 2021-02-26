@@ -17,7 +17,11 @@ Because DataOps cannot track all of the different potential connection types tha
 
 ### Creating a Custom Source
 
-In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. After clicking the Custom button, users will first be asked to select a connection from any of the preconfigured custom connections. Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. After selecting one, a location for the Notebook/JAR will need to be provided. If only running manually from the notebook, this can set to "N/A". All Custom Ingestion sources are setup as Scheduled sources by default.
+In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. After clicking the Custom button, users will first be asked to select a connection from any of the preconfigured custom connections. 
+
+Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook. 
+
+After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If only the data will only be pulled manually from the notebook, this can set to "N/A". All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ![Custom Source Screen](../.gitbook/assets/image%20%28336%29.png)
 
