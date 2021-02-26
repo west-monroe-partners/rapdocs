@@ -11,9 +11,9 @@ description: >-
 
 ### Creating a Custom Connection
 
-Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON synatx. We will cover how these connections are accessed in user code as part of a later section.
+Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON synatx. We will cover how these connections are accessed in user code as part of a later section. **Dummy connection for now**
 
-![Custom Connection](../.gitbook/assets/image%20%28334%29.png)
+![Custom Connection](../../.gitbook/assets/image%20%28334%29.png)
 
 ### Creating a Custom Source
 
@@ -25,44 +25,40 @@ After selecting an initiation type, a location for the Notebook/JAR will need to
 
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
-![Custom Source Screen](../.gitbook/assets/image%20%28336%29.png)
+![Custom Source Screen](../../.gitbook/assets/image%20%28336%29.png)
 
 ### Setting up a cluster
 
 Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. A page will display similar to the one below:
 
-![rap-mini-sparky cluster config page](../.gitbook/assets/image%20%287%29.png)
+![rap-mini-sparky cluster config page](../../.gitbook/assets/image%20%287%29.png)
 
 Navigate to the Libraries tab, and click the **Install New** button. This will launch a popup as seen below. Choose DBFS/S3, Jar, and enter S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar for AWS or TBD for Azure
 
-![Install Library Popup](../.gitbook/assets/image%20%282%29.png)
+![Install Library Popup](../../.gitbook/assets/image%20%282%29.png)
 
 The cluster will then need to be restarted. This process should be repeated for any cluster that will run a DataOps custom ingestion notebook.
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<YourEnvironmentName>`**_  with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ Users will also need to replace the _**`<YourCustomSourceName>`**_ with the name of the associated custom Intellio source. 
+Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_  with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ Users will also need to replace the _**`<DataOpsSourceName>`**_ with the name of the associated custom DataOps source.
 
-_`import com.wmp.intellio.dataops.sdk._`_ 
+```text
+import com.wmp.intellio.dataops.sdk._
+import org.apache.spark.sql.DataFrame
 
-_`import org.apache.spark.sql.DataFrame`_
+val session = new IngestionSession("<DataOpsEnvironmentName>", "<DataOpsSourceName>") 
 
-_`import play.api.libs.json._`_
+def ingestDf(): DataFrame = {
+    val values: List[Int] = List(1,2,3,4,5) 
+    val df: Dataframe = values.toDF()
+    return df
+}
 
-_`val session = new IngestionSession("`**`<YourEnvironmentName>`**`", "`**`<YourCustomSourceName>`**`")`_ 
+session.ingest(ingestDf)
+```
 
-_`val customParams = session.customParameters`_ 
-
-_`val connection = session.connectionParameters`_
-
-_`def ingestDf(): DataFrame = {  
-session.log("About to query the data.", "I")`_ 
-
-_`spark.sql("SELECT * FROM datatypes") }`_
-
-_`session.ingest(ingestDf)`_
-
-#### Imports - Line 1-3
+#### Imports - Line 1-2
 
 The first three lines are standard import statements. They are needed to utilize all of the DataOps SDK functionality.
 
@@ -70,19 +66,13 @@ The first three lines are standard import statements. They are needed to utilize
 
 The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed. 
 
-#### Accessing Custom Parameters - Line 5
 
-The 5th line access the custom parameters created in the source configuration. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson)
 
-#### Accessing Connection Parameters - Line 6
-
-The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson) This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself. 
-
-#### Creating The DataFrame Function - Line 7-9
+#### Creating The DataFrame Function - Line 6-10
 
 The 7th-9th lines are the key part of the ingestion where the custom user code will go. These lines define a function that returns a dataframe. In the example, the code will write a log to DataOps, then run a spark query, returning a dataframe. Replace the code within ingestDf with custom code in order to run your custom code.
 
-#### Executing The Ingestion - Line 10
+#### Executing The Ingestion - Line 12
 
 The 10th line runs the custom ingest. It pulls the data as specified in the ingestDf function, normalizes it, and sends it to the DataOps Datalake.
 
