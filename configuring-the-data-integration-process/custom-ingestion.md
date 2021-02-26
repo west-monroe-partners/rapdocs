@@ -21,25 +21,27 @@ In order to create a Custom Ingestion source, users should use the Custom radio 
 
 Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook. 
 
-After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If only the data will only be pulled manually from the notebook, this can set to "N/A". All Custom Ingestion sources are setup as Scheduled sources by default.
+After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If the user plans to run the notebook manually, as we will in this example, this can set to "N/A". In the future, the notebook path can be found in the Databricks workspace tab.
+
+All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ![Custom Source Screen](../.gitbook/assets/image%20%28336%29.png)
 
-### Setting up your cluster
+### Setting up a cluster
 
-Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. You will be brought to a page similar to the one below:
+Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. A page will display similar to the one below:
 
 ![rap-mini-sparky cluster config page](../.gitbook/assets/image%20%287%29.png)
 
-Navigate to the Libraries tab, and click the **Install New** button. This will launch a popup as seen below. Choose DBFS/S3, Jar, and enter S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar
+Navigate to the Libraries tab, and click the **Install New** button. This will launch a popup as seen below. Choose DBFS/S3, Jar, and enter S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar for AWS or TBD for Azure
 
 ![Install Library Popup](../.gitbook/assets/image%20%282%29.png)
 
-You will then need to restart the Cluster. This process should be repeated for any cluster that will run a DataOps custom ingestion notebook.
+The cluster will then need to be restarted. This process should be repeated for any cluster that will run a DataOps custom ingestion notebook.
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. You will need to replace _**`<YourEnvironmentName>`**_  with the name of your DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ You will also need to replace the _**`<YourCustomSourceName>`**_ with the name of the associated custom Intellio source. 
+Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<YourEnvironmentName>`**_  with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ Users will also need to replace the _**`<YourCustomSourceName>`**_ with the name of the associated custom Intellio source. 
 
 _`import com.wmp.intellio.dataops.sdk._`_ 
 
@@ -60,27 +62,27 @@ _`spark.sql("SELECT * FROM datatypes") }`_
 
 _`session.ingest(ingestDf)`_
 
-#### Imports
+#### Imports - Line 1-3
 
 The first three lines are standard import statements. They are needed to utilize all of the DataOps SDK functionality.
 
-#### Ingestion Session
+#### Ingestion Session - Line 4
 
 The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed. 
 
-#### Accessing Custom Parameters
+#### Accessing Custom Parameters - Line 5
 
 The 5th line access the custom parameters created in the source configuration. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson)
 
-#### Accessing Connection Parameters
+#### Accessing Connection Parameters - Line 6
 
 The 6th line accesses the connection parameters for the source's custom connection. It will be a JsObject. See documentation for Play JSON here: [https://www.playframework.com/documentation/2.8.x/ScalaJson](https://www.playframework.com/documentation/2.8.x/ScalaJson) This function can also be called with a connection ID or name in order to access connections besides the one configured on the source itself. 
 
-#### Creating The DataFrame Function
+#### Creating The DataFrame Function - Line 7-9
 
-The 7th-9th lines are the key part of the ingestion where the custom user code will go. These lines define a function that returns a dataframe. In the example, the code will write a log to DataOps, then run a spark query, returning a dataframe. Replace the code within ingestDf with custom code in order to run your code.
+The 7th-9th lines are the key part of the ingestion where the custom user code will go. These lines define a function that returns a dataframe. In the example, the code will write a log to DataOps, then run a spark query, returning a dataframe. Replace the code within ingestDf with custom code in order to run your custom code.
 
-#### Executing The Ingestion
+#### Executing The Ingestion - Line 10
 
 The 10th line runs the custom ingest. It pulls the data as specified in the ingestDf function, normalizes it, and sends it to the DataOps Datalake.
 
@@ -88,7 +90,7 @@ The 10th line runs the custom ingest. It pulls the data as specified in the inge
 
 The custom ingestion can be run in one of three ways
 
-1. Execute the Notebook directly in Databricks. This will allow for fast troubleshooting and development iteration. You must attach the Maven repository to your cluster before running. The coordinates for the current Maven version of the SDK are com.wmp.intellio:dataops-sdk\_2.12:0.3.1
+1. Execute the Notebook directly in Databricks. This will allow for fast troubleshooting and development iteration. You must attach the SDK jar to your cluster before running. The coordinates for the current version of the SDK are S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar for AWS or TBD for Azure
 2. Execute a Pull Now on the Custom Source. This will automatically handle attaching the SDK code to your cluster.
 3. Set a schedule for the Custom Source.
 
