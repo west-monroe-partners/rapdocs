@@ -30,7 +30,7 @@ On the Connections screen, click New Connection in the top right corner. The ima
 
 ### Naming your new Connection
 
-The below image shows where to add a unique Name and write a brief Description. When naming a Connection, be sure to follow the [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions) guide. Use `Divvy - Input Path` for the Source Connection Name.
+The below image shows where to add a unique Name and write a brief Description. When naming a Connection, be sure to follow the [Naming Conventions](connection.md) guide. Use `Divvy - Input Path` for the Source Connection Name.
 
 ![New Connection Name and Description Fields](../../.gitbook/assets/screenshot_6.png)
 

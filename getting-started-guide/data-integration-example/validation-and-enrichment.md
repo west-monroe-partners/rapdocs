@@ -22,7 +22,7 @@ In the screen that opens, select Type **Validation**.
 
 ![Select Validation in the Type field at the top of the New Enrichment screen.](../../.gitbook/assets/rap-validation-location.png)
 
-Configure the following parameters. While there are no [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions) for Validation rules, use the following values.
+Configure the following parameters. While there are no [Naming Conventions](validation-and-enrichment.md) for Validation rules, use the following values.
 
 * **Name:** `City is Null`
 * **Description:** `Warn when city is null`
@@ -58,7 +58,7 @@ An Enrichment Rule creates a new column, based on either a formula or a lookup m
 This example portrays a business requirement to filter the location of the station based on whether it exists in Chicago or not. The BI reporting tool requires a flag that indicates this property in a simple way \(as opposed to the `city` column, which contains unpredictable values\). Creating this Enrichment Rule simplifies downstream reporting needs and allows greater flexibility when filtering data later on.
 {% endhint %}
 
-Navigate to the Enrichments tab within the Source, and click **New Enrichment Rule**. To ensure parameter names are valid and follow [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions), it is recommend to use the following values:
+Navigate to the Enrichments tab within the Source, and click **New Enrichment Rule**. To ensure parameter names are valid and follow [naming conventions](validation-and-enrichment.md), it is recommend to use the following values:
 
 * **Name:** `Flag : Is Chicago`
 * **Description:** `Flag if city is Chicago`
