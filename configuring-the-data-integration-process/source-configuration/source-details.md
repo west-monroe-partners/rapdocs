@@ -23,7 +23,7 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 * **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources. To ensure Sources are organized easily searchable, follow [Naming Conventions](source-details.md).
 * **Description\*:** The description of the Source.
 * **Active\*:** If set to Active, the Source will run as specified.
-* **Agent\*:** The [Agent ](../../operation-guide/monitoring-the-process/rap-agent.md)that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
+* **Agent\*:** The [Agent ]()that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
 * **Default:** Sets the previously selected Agent to be the default Agent when creating any new Sources.
 
 ### Data Refresh Types
