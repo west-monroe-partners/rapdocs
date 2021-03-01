@@ -18,7 +18,7 @@ An output connection is necessary in order to complete this phase. If this was n
 
 ### Output Creation
 
-Before configuring any mappings, DataOps requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](output.md), use the following values for Output Details configuration:
+Before configuring any mappings, DataOps requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions), use the following values for Output Details configuration:
 
 * **Name:** `Divvy - Chicago Stations`
 * **Description:** File output for enriched divvy stations data
@@ -69,7 +69,7 @@ Parquet is column-oriented data storage format, useful when direct to file queri
 
 **file\_mask:** Enter `divvy_chicago_only_<TSHH12MISS>.csv`. This is a mask that describes the name of the output, where `<TSHH12MISS>` is replaced by the time the file was generated.
 
-**key\_history, partition,** and **limit\_by\_effective\_range** can be safely left as-is for now. For more detailed information, see the [Output Configuration](../../configuring-the-data-integration-process/output-configuration/) section in the [Configuration Guide](output.md).
+**key\_history, partition,** and **limit\_by\_effective\_range** can be safely left as-is for now. For more detailed information, see the [Output Configuration]() section in the [Configuration Guide](output.md).
 
 ## Step 3: Map Output
 
