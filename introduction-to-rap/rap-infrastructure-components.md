@@ -9,13 +9,13 @@ description: >-
 
 ## The Components
 
-![](../../.gitbook/assets/logical_architecture.png)
+![](../.gitbook/assets/logical_architecture.png)
 
 DataOps leverages various cloud components in AWS or Azure \(depending on the platform selected\). Regardless of the platform, the actions of the components remain the same. This section provides an overview of these different components and how these components interact with one another. Subsequent sections explore the details as they pertain to what specific services are leveraged in the AWS or Azure platform.
 
 ### UI \(User Interface\)
 
-The UI represents what you see when you log into the DataOps platform. The UI is the front end view of DataOps. The [UI](../../logical-architecture-overview/user-interface.md#overview) is characteristic of the left-hand menu and consists of screens including Sources, Connections, Agents, and Outputs.
+The UI represents what you see when you log into the DataOps platform. The UI is the front end view of DataOps. The [UI](../logical-architecture-overview/user-interface.md#overview) is characteristic of the left-hand menu and consists of screens including Sources, Connections, Agents, and Outputs.
 
 ### API
 
@@ -31,7 +31,7 @@ Core is the component of orchestration. Core manages executions of beginnings, h
 
 ### Agent
 
-The [DataOps Agent](../../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the DataOps Cloud infrastructure. The DataOps Agent is only utilized during the Ingest stage of the Logical Data Flow.
+The [DataOps Agent](../logical-architecture-overview/rap-agent.md#overview) works to move data from the client infrastructure into the DataOps Cloud infrastructure. The DataOps Agent is only utilized during the Ingest stage of the Logical Data Flow.
 
 ### Interactive Cluster
 
@@ -53,11 +53,11 @@ DataOps supports both AWS and Microsoft Azure cloud providers. The diagrams belo
 
 ### Amazon Web Services Implementation
 
-![](../../.gitbook/assets/dataops-architecture.svg)
+![](../.gitbook/assets/dataops-architecture.svg)
 
 ### Microsoft Azure Services Implementation
 
-![](../../.gitbook/assets/dataops-architecture-azure.svg)
+![](../.gitbook/assets/dataops-architecture-azure.svg)
 
 ### Terraform
 
