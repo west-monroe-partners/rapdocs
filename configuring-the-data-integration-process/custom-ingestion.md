@@ -1,8 +1,8 @@
 ---
 description: >-
   The Custom Ingestion SDK will allow users to define their own data acquisition
-  code in a Databricks Notebook or a custom Jar. By writing a single scala
-  function that creates a dataframe of data, users
+  code in a Databricks Notebook or a custom Jar. This page is a "Hello World"
+  for custom ingestion
 ---
 
 # Custom Ingestion
