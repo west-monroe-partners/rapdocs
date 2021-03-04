@@ -18,7 +18,7 @@ An output connection is necessary in order to complete this phase. If this was n
 
 ### Output Creation
 
-Before configuring any mappings, DataOps requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](output.md), use the following values for Output Details configuration:
+Before configuring any mappings, DataOps requires general information about the desired Output, including a name and where within the connection the output should push data. To begin creating an Output, select Outputs in the Navigation Menu, and then select **Create New Output** on the Outputs screen. Following the [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions), use the following values for Output Details configuration:
 
 * **Name:** `Divvy - Chicago Stations`
 * **Description:** File output for enriched divvy stations data
