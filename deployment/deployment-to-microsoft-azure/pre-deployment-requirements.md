@@ -12,6 +12,12 @@ Create a Distribution Group or Microsoft 365 group for all 3rd party account sig
 
 * DataOps uses as many native Azure services as possible, but some 3rd party vendors are used to allow for easier customization per client, and simplified operations for version upgrades/rollback
 
+## Define DNS Names and Process for Managing Records
+
+* One name for UI and one for API
+  * EX: prod.dataops.com and api.prod.dataops.com
+* Delegate subdomain or create DNS records in DNS provider
+
 ## SSL Certificate
 
 A valid SSL certificate that the client organization controls to perform secure connect and termination for DataOps websites. Select from the following:
@@ -20,6 +26,7 @@ A valid SSL certificate that the client organization controls to perform secure 
 * Purchase a new SSL certificate for a new domain or subdomain.
   * An Azure partner is Digicert.com
   * Deployment requires either a wildcard certificate or two single domain certificates per environment.
+  * Certificate must cover the DNS names defined in the previous step!
   * After purchase is complete, verify ownership of the domain to receive the certificate. **This is a requirement for deployment.**
 
 ## **Create a Docker Hub Account**
@@ -31,6 +38,7 @@ Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommen
 Create if one does not already exist with the following guidance:
 
 * We recommend this account is not tied to an employee 
+* [https://auth0.com/](https://auth0.com/)
 * Auth0 tier should be a minimum of “Developer” \($23/month\) with external users, 100 external active users, and 1,000 Machine to Machine tokens
 * Create an account for the DataOps deployment team 
 
