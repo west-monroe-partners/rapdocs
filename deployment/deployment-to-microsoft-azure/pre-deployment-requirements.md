@@ -31,7 +31,7 @@ Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommen
 Create if one does not already exist with the following guidance:
 
 * We recommend this account is not tied to an employee 
-* Auth0 tier should be “Developer Pro” with external users, 100 external active users, and 1,000 Machine to Machine tokens
+* Auth0 tier should be a minimum of “Developer” \($23/month\) with external users, 100 external active users, and 1,000 Machine to Machine tokens
 * Create an account for the DataOps deployment team 
 
 ## Create Azure Environment
@@ -48,7 +48,7 @@ Again, recommend this account not be tied to any one person, and create an accou
 
 Create a [GitHub](https://github.com/) account. This will allow for access to the Intellio DataOps source code.
 
-## Choose VPN
+## Choose VPN \(Optional\)
 
 Ensure the VPN can be deployed into a VNET Azure, or utilize Open VPN to be deployed into the DataOps environment.
 
