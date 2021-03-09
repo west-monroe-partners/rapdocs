@@ -12,12 +12,6 @@ Create a Distribution Group or Microsoft 365 group for all 3rd party account sig
 
 * DataOps uses as many native Azure services as possible, but some 3rd party vendors are used to allow for easier customization per client, and simplified operations for version upgrades/rollback
 
-## Define DNS Names and Process for Managing Records
-
-* One name for UI and one for API
-  * EX: prod.dataops.com and api.prod.dataops.com
-* Delegate subdomain or create DNS records in DNS provider
-
 ## SSL Certificate
 
 A valid SSL certificate that the client organization controls to perform secure connect and termination for DataOps websites. Select from the following:
@@ -26,7 +20,6 @@ A valid SSL certificate that the client organization controls to perform secure 
 * Purchase a new SSL certificate for a new domain or subdomain.
   * An Azure partner is Digicert.com
   * Deployment requires either a wildcard certificate or two single domain certificates per environment.
-  * Certificate must cover the DNS names defined in the previous step!
   * After purchase is complete, verify ownership of the domain to receive the certificate. **This is a requirement for deployment.**
 
 ## **Create a Docker Hub Account**
@@ -38,9 +31,8 @@ Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommen
 Create if one does not already exist with the following guidance:
 
 * We recommend this account is not tied to an employee 
-* [https://auth0.com/](https://auth0.com/)
-* Auth0 tier should be a minimum of “Developer” \($23/month\) with external users, 100 external active users, and 1,000 Machine to Machine tokens
-* Create an account for the DataOps deployment team
+* Auth0 tier should be “Developer Pro” with external users, 100 external active users, and 1,000 Machine to Machine tokens
+* Create an account for the DataOps deployment team 
 
 ## Create Azure Environment
 
@@ -56,7 +48,7 @@ Again, recommend this account not be tied to any one person, and create an accou
 
 Create a [GitHub](https://github.com/) account. This will allow for access to the Intellio DataOps source code.
 
-## Choose VPN \(Optional, can be done later\)
+## Choose VPN
 
 Ensure the VPN can be deployed into a VNET Azure, or utilize Open VPN to be deployed into the DataOps environment.
 
@@ -82,11 +74,20 @@ Ensure the VPN can be deployed into a VNET Azure, or utilize Open VPN to be depl
 | subscriptionId  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure Subscription ID  |
 | cert  |  | Contents of the SSL certificate  |
 | imageVersion  | 2.0.6  | Deployment version for the platform  |
-| publicFacing | yes | Is the infrastructure private or public facing? |
 
-## Next Steps
+## Terraform README
 
-Once all of the prerequisites are complete, and the variables have been figured out, navigate to the [Performing the Deployment](https://app.gitbook.com/@wmp-rap/s/rap/~/drafts/-MVMMZtmzextcDim-8qp/v/master/deployment/deployment-to-microsoft-azure/performing-the-deployment) guide to begin deploying IDO resources.
+\(Skip if using Terraform cloud\) Use this [link](https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html) to set up terraform on your cli and for all other questions regarding setting up a connection with azure look at [this](https://www.terraform.io/docs/providers/azurerm/index.html) link. Make sure the Azure cli works by running az resource list. Also make sure to set your default subscription with az account set --subscription=""  
+
+In order to provision front door correctly right now you need to only assign 1 frontend URL, then uncomment the second URL and add it back into the script 
+
+There is also a limitation with azure CDN and custom domain names. They can not be managed through terraform at this time. They need to be added manually and have their https turned on for Content Delivery Network. [link](https://github.com/terraform-providers/terraform-provider-azurerm/issues/398) to Github post about it.\ 
+
+pkcs12 -export -in star.azure.wmpdemo.com.crt -inkey STAR\_azure\_wmpdemo\_com\_key.txt -out azure.wmpdemo.pfx 
+
+Need to make sure that I have access to create azure active directory tenants need to be able to create enterprise applications with this provision service principles 
+
+You need to setup the right permissions for CDN to access your Key vault: 1\) Register Azure CDN as an app in your Azure Active Directory \(AAD\) via PowerShell using this command: New-AzureRmADServicePrincipal -ApplicationId "[205478c0](https://bitbucket.org/wmp-rap/infrastructure/commits/205478c0)-bd83-4e1b-a9d6-db63a3e1e1c8". 2\) Grant Azure CDN service the permission to access the secrets in your Key vault. Go to “Access policies” from your Key vault to add a new policy, then grant “Microsoft.Azure.Cdn” service principal a “get-secret” permission. 
 
 ## Verify the deployment
 
