@@ -84,6 +84,16 @@ Ensure the VPN can be deployed into a VNET Azure, or utilize Open VPN to be depl
 | imageVersion  | 2.0.6  | Deployment version for the platform  |
 | publicFacing | yes | Is the environment private or public facing? |
 
+## SSL Certificate Contents
+
+The "cert" variable will need the SSL certificate contents in Base 64 encoding, so it can be saved as a text variable. To do this, you will need to download the certificate in .pfx format, with no password protection. This can easily be done if the certificate is saved in Azure Key Vault certificate manager. Once the certificate is downloaded, run these two commands in Windows Powershell \(change the values in the first line to point to the pfx file on your local system\):
+
+$fileContentBytes = get-content 'C:\&lt;path-to-pfx&gt;\&lt;file&gt;.pfx' -Encoding Byte
+
+\[System.Convert\]::ToBase64String\($fileContentBytes\) \| Out-File 'pfx-encoded-bytes.txt'
+
+Then, open pfx-encoded-bytes.txt and save the contents of the file into the "cert" variable in Terraform.
+
 ## Next Steps
 
 Once all of the prerequisites are complete, and the variables have been figured out, navigate to the [Performing the Deployment](https://app.gitbook.com/@wmp-rap/s/rap/~/drafts/-MVMMZtmzextcDim-8qp/v/master/deployment/deployment-to-microsoft-azure/performing-the-deployment) guide to begin deploying IDO resources.
