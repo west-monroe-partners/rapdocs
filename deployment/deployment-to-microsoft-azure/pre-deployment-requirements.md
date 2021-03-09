@@ -82,20 +82,11 @@ Ensure the VPN can be deployed into a VNET Azure, or utilize Open VPN to be depl
 | subscriptionId  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure Subscription ID  |
 | cert  |  | Contents of the SSL certificate  |
 | imageVersion  | 2.0.6  | Deployment version for the platform  |
+| publicFacing | yes | Is the environment private or public facing? |
 
-## Terraform README
+## Next Steps
 
-\(Skip if using Terraform cloud\) Use this [link](https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html) to set up terraform on your cli and for all other questions regarding setting up a connection with azure look at [this](https://www.terraform.io/docs/providers/azurerm/index.html) link. Make sure the Azure cli works by running az resource list. Also make sure to set your default subscription with az account set --subscription=""  
-
-In order to provision front door correctly right now you need to only assign 1 frontend URL, then uncomment the second URL and add it back into the script 
-
-There is also a limitation with azure CDN and custom domain names. They can not be managed through terraform at this time. They need to be added manually and have their https turned on for Content Delivery Network. [link](https://github.com/terraform-providers/terraform-provider-azurerm/issues/398) to Github post about it.\ 
-
-pkcs12 -export -in star.azure.wmpdemo.com.crt -inkey STAR\_azure\_wmpdemo\_com\_key.txt -out azure.wmpdemo.pfx 
-
-Need to make sure that I have access to create azure active directory tenants need to be able to create enterprise applications with this provision service principles 
-
-You need to setup the right permissions for CDN to access your Key vault: 1\) Register Azure CDN as an app in your Azure Active Directory \(AAD\) via PowerShell using this command: New-AzureRmADServicePrincipal -ApplicationId "[205478c0](https://bitbucket.org/wmp-rap/infrastructure/commits/205478c0)-bd83-4e1b-a9d6-db63a3e1e1c8". 2\) Grant Azure CDN service the permission to access the secrets in your Key vault. Go to “Access policies” from your Key vault to add a new policy, then grant “Microsoft.Azure.Cdn” service principal a “get-secret” permission. 
+Once all of the prerequisites are complete, and the variables have been figured out, navigate to the [Performing the Deployment](https://app.gitbook.com/@wmp-rap/s/rap/~/drafts/-MVMMZtmzextcDim-8qp/v/master/deployment/deployment-to-microsoft-azure/performing-the-deployment) guide to begin deploying IDO resources.
 
 ## Verify the deployment
 
