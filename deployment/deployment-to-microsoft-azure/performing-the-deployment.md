@@ -57,6 +57,17 @@ The variable names are case sensitive - please enter them as they appear in this
 | subscriptionId  | c6fxxxxxbf1-axxa-43d1-axx8-c50669xxxxef  | Azure Subscription ID  |
 | cert  |  | Contents of the SSL certificate  |
 | imageVersion  | 2.x.x | Deployment version for the platform  |
+| publicFacing | yes | Is the environment public or private facing? |
+
+## SSL Certificate Contents
+
+The "cert" variable will need the SSL certificate contents in Base 64 encoding, so it can be saved as a text variable. To do this, you will need to download the certificate in .pfx format, with no password protection. This can easily be done if the certificate is saved in Azure Key Vault certificate manager. Once the certificate is downloaded, run these two commands in Windows Powershell \(change the values in the first line to point to the pfx file on your local system\):
+
+$fileContentBytes = get-content 'C:\&lt;path-to-pfx&gt;\&lt;file&gt;.pfx' -Encoding Byte
+
+\[System.Convert\]::ToBase64String\($fileContentBytes\) \| Out-File 'pfx-encoded-bytes.txt'
+
+Then, open pfx-encoded-bytes.txt and save the contents of the file into the "cert" variable in Terraform.
 
 ## Running Terraform Cloud
 
