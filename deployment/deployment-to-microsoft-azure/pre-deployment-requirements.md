@@ -12,21 +12,6 @@ Create a Distribution Group or Microsoft 365 group for all 3rd party account sig
 
 * DataOps uses as many native Azure services as possible, but some 3rd party vendors are used to allow for easier customization per client, and simplified operations for version upgrades/rollback
 
-## Decide on Public or Private Endpoint Architecture
-
-Public Endpoints
-
-* UI/API will be accessible on public internet, secured with Auth0 for authentication and SSL certificate for HTTPS
-* On-prem source systems can use Agent to bypass firewall and VPN tunneling to stream data into platform
-
-Private Endpoints
-
-* UI will be accessed through private VM that is deployed in the IDO VNet, connections to the VM will be made using Azure Bastion
-* API is not publicly exposed
-* Agent can only access networks that can be VNet Peered to IDO VNet
-
-Please reach out to IDO team for diagrams of both architectures
-
 ## Define DNS Names and Process for Managing Records
 
 * One name for UI and one for API
