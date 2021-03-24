@@ -26,7 +26,7 @@ Prior to installing the DataOps Agent, the following requirements must be met.  
 * File and database sources that will be accessed through the DataOps Agent must be accessible from the machine the Agent is being installed on.  In the case of database sources, many customers install the Agent software directly on the database server - network connectivity from the machine that the Agent software is being installed on is all that is required.  Note that the Agent will be performing data pulls and uploading to AWS / Azure, so the recommendation is to not segment off the Agent machine from the sources being accessed in a way that traffic needs to cross a limited capacity network segment to reach those sources.
 * The user account intended for the Agent to use to access source databases needs to be set up with native database engine authentication.  In the case of SQL Server, Windows / Azure AD authentication is not supported for the Agent user and only SQL Server authentication can be used.
   * Mixed-mode authentication can still be enabled to allow for integrated authentication for non-DataOps related loads.
-* A Windows user account must be created to run the agent with username and password. This user must have the ability to access any folders containing source data as well as the ability to run services.
+* A Windows user account must be created to run the agent with username and password. This user must have the ability to access any folders containing source data as well as the ability to run services. The command whoami can be run in a command line to determine the current userid.
 
 ## **Machine Guid Command**
 
