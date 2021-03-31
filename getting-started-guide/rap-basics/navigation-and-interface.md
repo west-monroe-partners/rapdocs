@@ -32,13 +32,13 @@ The Processing screen shows the progress and outcome of all execution tasks thro
 
 ![Outputs screen](../../.gitbook/assets/rap-outputs-view.png)
 
-The [Outputs](../../configuring-the-data-integration-process/output-configuration/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
+The [Outputs]() screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
 
 ### Connections
 
 ![Connections Screen and example settings](../../.gitbook/assets/rap-connections-screen.png)
 
-The [Connections ](../../configuring-the-data-integration-process/connections-configuration.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
+The [Connections ]()screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
 
 ## Sources Details - The Logical Data Flow
 

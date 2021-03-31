@@ -8,7 +8,7 @@ description: >-
 
 Welcome to the DataOps Getting Started Guide! This guide serves as an introduction for new users who have yet to use the DataOps. 
 
-For specific documentation concerning configuring a DataOps process, see the [Configuration Guide](../configuring-the-data-integration-process/). For specific documentation concerning the maintenance of a DataOps process, see the [Operation Guide](../operation-guide/). 
+For specific documentation concerning configuring a DataOps process, see the [Configuration Guide](../configuring-the-data-integration-process/). For specific documentation concerning the maintenance of a DataOps process, see the [Operation Guide](). 
 
 This guide has two parts:
 
