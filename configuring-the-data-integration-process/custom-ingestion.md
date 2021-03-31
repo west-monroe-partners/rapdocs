@@ -1,19 +1,17 @@
 ---
 description: >-
   The Custom Ingestion SDK will allow users to define their own data acquisition
-  code in a Databricks Notebook or a custom Jar. By writing a single scala
-  function that creates a dataframe of data, users
+  code in a Databricks Notebook or a custom Jar. This page is a "Hello World"
+  for custom ingestion
 ---
 
 # Custom Ingestion
-
-The Custom Ingestion SDK will allow users to define their own data acquisition code in a Databricks Notebook or a custom Jar. This page is a "Hello World" for custom ingestion. Full Scaladoc for the SDK can be found [here](https://docs.intellio.wmp.com/com/wmp/intellio/dataops/sdk/IngestionSession.html).
 
 ## Configuring a Custom Ingestion Source
 
 ### Creating a Custom Connection
 
-Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON syntax. We will cover how these connections are accessed in user code as part of a later section. **Dummy connection for now**
+Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON synatx. We will cover how these connections are accessed in user code as part of a later section. **Dummy connection for now**
 
 ![Custom Connection](../.gitbook/assets/image%20%28334%29.png)
 

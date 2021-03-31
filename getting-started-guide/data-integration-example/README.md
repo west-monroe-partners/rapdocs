@@ -10,7 +10,7 @@ This simple introductory example looks at one specific use of DataOps.
 
 For more detailed configuration instructions, please refer to the [Configuration Guide](../../configuring-the-data-integration-process/). 
 
-For operation documentation, refer to the [Operation Guide](). 
+For operation documentation, refer to the [Operation Guide](../../operation-guide/). 
 
 This Data Integration Example progresses in five parts:
 
