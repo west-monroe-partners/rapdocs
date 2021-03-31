@@ -3,8 +3,23 @@
 Outlined here are the requirements necessary to deploy Intellio DataOps onto the AWS platform.
 
 {% hint style="info" %}
-For each of the following accounts we recommend a service account be created \(e.g. rap@wmp.com\) so as to not tie infrastructure to a specific employee.
+For each of the following accounts we recommend a service account be created \(e.g. ido@wmp.com\) so as to not tie infrastructure to a specific employee.
 {% endhint %}
+
+## Decide on Public or Private Endpoint Architecture
+
+Public Endpoints
+
+* UI/API will be accessible on public internet, secured with Auth0 for authentication and SSL certificate for HTTPS
+* On-premise source systems can use Agent to bypass firewall and VPN tunneling to stream data into platform
+
+Private Endpoints
+
+* UI will be accessed through private VM that is deployed in the IDO VNet, connections to the VM will be made using VPN or Amazon Appstream
+* API is not publicly exposed
+* Agent can only access networks that can be VPC Peered to IDO VNet
+
+Please reach out to IDO team for diagrams of both architectures
 
 ## URL Management
 
@@ -29,15 +44,13 @@ A valid SSL certificate that the client organization controls to perform secure 
 
 Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommended this is not tied to any individual employee. Send the Docker username to the West Monroe team so that they can provide access to the Intellio Docker repository.
 
-## Create a Databricks Account
+## Sign up for a Databricks E2 Account
 
 {% hint style="danger" %}
 The Databricks Account will require a credit card to be added during sign up - Please have a corporate card or billing account ready to go
 {% endhint %}
 
-Recommended to create a premium account on [Databricks](https://databricks.com/try-databricks). The standard account is acceptable for the development environment, but a premium account will be needed before production release.
-
-Create a specific account for the Intellio DataOps deployment team.
+Reach out to WMP team or Databricks representative to get Databricks E2 Account provisioned
 
 ## Create a GitHub Account
 
