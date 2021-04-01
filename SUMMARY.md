@@ -52,6 +52,7 @@
     * [!! Resource Sizing](introduction-to-rap/rap-infrastructure-components/resource-sizing.md)
   * [Metadata Model](introduction-to-rap/metadata-model.md)
 * [Deployment & Management](deployment/README.md)
+  * [Deploying A Snowflake Instance](deployment/deploying-a-snowflake-instance.md)
   * [Deployment to AWS](deployment/deployment-to-amazon-web-services/README.md)
     * [Pre Deployment Requirements](deployment/deployment-to-amazon-web-services/pre-deployment-requirements-aws.md)
     * [Performing the Deployment](deployment/deployment-to-amazon-web-services/performing-the-deployment.md)
