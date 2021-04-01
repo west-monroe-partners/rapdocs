@@ -30,7 +30,37 @@ If using any type of DataOps deployment besides a private Azure deployment, no a
 
 ## Setting up IDO user accounts and databases
 
-SCRIPT COMING SOON
+Log into the Snowflake portal using the account URL recorded earlier and the admin credentials. A worksheet should be opened by default. In the top right corner of the worksheet, Change the Role to ACCOUNTADMIN. Then run each of the following commands in the worksheet. 
+
+```text
+--Create Database
+CREATE DATABASE SNOWFLAKE_EXAMPLE;
+
+-- read only user
+CREATE role READ_ROLE;
+CREATE USER read_user password = 'password', LOGIN_NAME = read_user, DEFAULT_ROLE = read_user, DEFAULT_WAREHOUSE = COMPUTE_WH;
+GRANT ROLE READ_ROLE to USER read_user;
+GRANT USAGE, OPERATE on warehouse COMPUTE_WH to role READ_ROLE;
+GRANT USAGE ON DATABASE SNOWFLAKE_EXAMPLE TO role READ_ROLE;
+GRANT USAGE ON SCHEMA SNOWFLAKE_EXAMPLE.PUBLIC TO role READ_ROLE;
+GRANT select on all tables in schema SNOWFLAKE_EXAMPLE.PUBLIC to role READ_ROLE;
+GRANT select on all views in schema SNOWFLAKE_EXAMPLE.PUBLIC to role READ_ROLE;
+GRANT select on future tables in schema SNOWFLAKE_EXAMPLE.PUBLIC to role READ_ROLE;
+GRANT select on future views in schema SNOWFLAKE_EXAMPLE.PUBLIC to role READ_ROLE;
+
+--Read/Write User
+CREATE role RW_ROLE;
+CREATE USER rw_user password = 'password', LOGIN_NAME = rw_user, DEFAULT_ROLE = RW_ROLE, DEFAULT_WAREHOUSE = COMPUTE_WH;
+GRANT ROLE RW_ROLE to USER rw_user;
+GRANT USAGE, OPERATE on warehouse COMPUTE_WH to role RW_ROLE;
+GRANT USAGE ON DATABASE SNOWFLAKE_EXAMPLE to role RW_ROLE;
+GRANT ALL, usage ON schema SNOWFLAKE_EXAMPLE.PUBLIC to ROLE RW_ROLE;
+GRANT ALL on ALL TABLES IN SCHEMA SNOWFLAKE_EXAMPLE.PUBLIC to role RW_ROLE;
+GRANT ALL on all views in schema SNOWFLAKE_EXAMPLE.PUBLIC to role RW_ROLE;
+GRANT ALL ON FUTURE TABLES IN SCHEMA SNOWFLAKE_EXAMPLE.PUBLIC TO ROLE RW_ROLE;
+GRANT ALL on future views in schema SNOWFLAKE_EXAMPLE.PUBLIC to role RW_ROLE;
+
+```
 
 ## Setting up a Snowflake Integration
 
@@ -51,11 +81,17 @@ SELECT value FROM meta.system_configuration WHERE name = 'environment';
 
 ```
 
+After creating the integration, be sure to grant usage of that integration to the Snowflake user/role that will be used for the DataOps output connection. Do so by running a statment similar to the one below.
+
+```text
+GRANT USAGE ON INTEGRATION DATAOPS_OUTPUT_SNOWFLAKEEXAMPLE TO ROLE RW_ROLE;
+```
+
 ## Setting up a Snowflake IDO connection
 
 The Snowflake instance is now ready for use with DataOps. Create a new connection and fill it out with the information relevant to your snowflake setup. We recommend leaving Connection String and Table Schema blank unless specifically needed.
 
 ![](../.gitbook/assets/image%20%28209%29.png)
 
-
+After creating the connection. It will be available for use in Snowflake outputs. You are now ready to output to Snowflake via DataOps.
 
