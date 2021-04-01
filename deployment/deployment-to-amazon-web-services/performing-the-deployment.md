@@ -18,17 +18,15 @@ When the connection is made between Terraform Cloud and the forked repo, make su
 
 Create a new workspace in Terraform Cloud. Choose "Version control workflow". Configure the VCS connection to the forked repository in GitHub. Follow the Terraform Cloud steps when configuring a new VCS connection.
 
-When the VCS connection is created, set the working directory to "terraform/aws". The VCS branch can be the default branch, as it generally defaults to master.
+When the VCS connection is created, set the working directory to "terraform/aws/main-deployment". The VCS branch can be the default branch, as it generally defaults to master.
 
 {% hint style="info" %}
-Make sure that the Terraform version in the workspace is set to "0.12.29"
+Make sure that the Terraform version in the workspace is set to "0.13.6"
 {% endhint %}
 
 ## Populating Variables in Terraform Cloud
 
-Manually enter the following variable names and set values accordingly. If predeployment steps were followed, these values should be mostly known. 
-
-In Databricks, click user dropdown in the top right of the Databricks portal. Click "User Settings" in the dropdown. On the Access Tokens tab, click "Generate New Token". Set the token lifetime to blank, so the token will not expire. Use the token in the "databricksToken" variable here.
+Manually enter the following variable names and set values accordingly. If the pre-deployment steps were followed, these values should be mostly known. 
 
 {% hint style="danger" %}
 The variable names are case sensitive - please enter them as they appear in this list
@@ -39,32 +37,31 @@ The variable names are case sensitive - please enter them as they appear in this
 | awsRegion | us-west-2 | AWS Region for deployment - As of 11/9/2020 us-west-1 is not supported |
 | awsAccessKey | AKIAXXXXXXXX | Access Key for Master Deployment IAM user  - mark as sensitive |
 | awsSecretKey | fdldsjfs8f34dfsdf344334\*\* | Secret Key for Master Deployment IAM user - mark as sensitive |
+| publicFacing | yes | yes/no - controls public vs private facing architecture |
 | environment | dev | This will be prepended to resources in the environment. E.g. Dev. Prod. etc.  |
 | client | intellio | This will be postpended to resources in the environment - use company or organization name |
 | vpcCidrBlock | 10.1 | Only the first two digits here, not the full CIDR block |
-| avalibilityZoneA | us-west-2a | Not all regions have availability zones |
-| avalibilityZoneB | us-west-2b | Not all regions have availability zones |
-| RDSretentionperiod | 7 | Database backup retention period \(in days\) |
+| availabilityZoneA | us-west-2a | Not all regions have availability zones |
+| availabilityZoneB | us-west-2b | Not all regions have availability zones |
 | RDSmasterusername | admin | Database master username |
 | RDSmasterpassword | password123 | Database master password - mark sensitive |
-| RDSport | 5432 | RDS port |
-| TransitiontoAA | 60 | Transition to Standard-Infrequent Access |
-| TransitiontoGLACIER | 360 | Transition to Amazon Glacier |
 | stageUsername | stageuser | Database stage username for metastore access |
 | stagePassword | password123 | Database stage password for metastore access - mark sensitive |
-| coreImageName | 2.0.11 | Core application Docker image tag |
-| agentImageName | 2.0.11 | Agent application Docker image tag |
-| apiImageName | 2.0.11 | API application Docker image tag |
-| deploymentImageName | 2.0.11 | Deployment application Docker image tag |
+| imageVersion | 2.3.2 | Deployment version for the platform |
 | dockerUsername | wmpintellio | DockerHub service account username |
 | dockerPassword | xxxxx | DockerHub service account password |
 | urlEnvPrefix | dev | Prefix for environment site url |
 | baseUrl | intellioplatform | the base URL of the certificate - example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp" |
-| databricksToken | dapi10323SSXXXXXXX | Token from the Databricks environment - generate access token in Databricks and place here |
 | usEast1CertURL | \*.intellioplatform.com | Full certificate name \(with wildcards\) used for SSL |
 | auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
 | auth0ClientId | jdflsdfsdf | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
 | auth0ClientSecret | faddfjXXXSssddff | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
+| databricksE2Enabled | yes | Is Databricks E2 architecture being used in this environment? |
+| databricksAccountId | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2 |
+| databricksAccountUser | user@wmp.com | Username for main E2 account user |
+| databricksAccountPassword | xxxxxxxxx | Password for main E2 account user |
+
+There are some advanced variables that can be added as well - please refer to the variables file in the infrastructure repository to see a list of all variables.
 
 ## Running Terraform Cloud
 
@@ -76,33 +73,7 @@ After the terraform is complete, there will be various resources created in the 
 
 ## Configuring Databricks
 
-Log into the Databricks account that was created during Pre-Deployment steps.
-
-Configure instance profile - [Official Databricks Documentation](https://docs.databricks.com/administration-guide/cloud-configurations/aws/instance-profiles.html). When configuring the instance profile, make sure that the authorized S3 bucket is "&lt;environment&gt;-datalake-&lt;client&gt;" ex: dev-datalake-intellio.
-
-Click "Pools" and then "Create Pool". Create a pool called "sparky-pool" with the following configurations
-
-![](../../.gitbook/assets/image%20%28287%29.png)
-
-After the pool is created, save the value called "DatabricksInstancePoolId" in the Tags section of the configuration. This value will be used later when updating Secrets Manager.
-
-In Databricks, navigate to the "Clusters" tab. Create a cluster named "rap-mini-sparky". Configure the cluster with the following configurations. Make sure the previously created instance profile is used when configuring.
-
-![](../../.gitbook/assets/image%20%28288%29.png)
-
-Navigate to the Databricks home screen and create a new notebook. On a command box, add this code snippet:
-
-```text
-val environment = ""
-val client = ""
-
-spark.sql("CREATE DATABASE " + environment.toLowerCase)
-val df = spark.read.format("avro").load("s3a://"+environment.toLowerCase+"-datalake-"+client.toLowerCase+"/datatypes.avro")
-df.write.saveAsTable("datatypes")
-spark.sql("INSERT INTO datatypes SELECT decimal + 1, bigint + 1, string || '2', int +1, float +1, double +1, date + INTERVAL 1 DAY, timestamp + INTERVAL 1 HOUR, false, long + 1 FROM datatypes")
-```
-
-There are 2 variables at the top that will need to be updated. Enter the environment and client values that we used in the Terraform variable step.
+Log into the Databricks account that was created during the Terraform deploy. The account URL is an output variable from the Terraform apply.
 
 Navigate to the S3 bucket named "&lt;environment&gt;-datalake-&lt;client&gt;" Ex: dev-datalake-intellio
 
@@ -110,48 +81,9 @@ Place the following file in the bucket root-
 
 {% embed url="https://s3.us-east-2.amazonaws.com/wmp.rap/datatypes.avro" %}
 
-Once this file is uploaded, connect the workbook to the cluster that was created earlier, and run this snippet.
+Once this file is uploaded, connect the workbook called "databricks-init" and run the workbook. Attach to the "dataops-init-cluster"
 
-Test that the table is created by running
-
-```text
-spark.sql("select * from datatypes").show
-```
-
-This should not error out and should display the table data.
-
-We will need to make an API request to the Databricks API to create a secret scope for our Databricks secret. Recommended tool to do this is [Postman](https://www.postman.com/downloads/) - but any method to make a POST API request can be used. Make a POST API request to [https://xxxxxxxxxxx.azuredatabricks.net/api/2.0/secrets/scopes/create](https://adb-6797256387059301.1.azuredatabricks.net/api/2.0/secrets/scopes/create) \(Replace the x's with the value in the Databricks URL for the environment\) The body of the request will be -
-
-```text
-{
-  "scope": "auth0token",
-  "initial_manage_principal": "users"
-}
-```
-
-The authorization is a "Bearer Token" and the token is the Databricks Access token we generated in the Terraform cloud variable step. After making the request, the response should be a 200 OK with no body.
-
-Capture a value out of the Databricks URL before moving on to the Secret Manager step. If the URL is [https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403\#/setting/clusters/1102-212023-gauge891/configuration  ](https://xxxxxxxxxxxx.cloud.databricks.com/?o=4433553810974403#/setting/clusters/1102-212023-gauge891/configuration%20)then you would want to capture the "4433553810974403" portion after the /?o= for use when updating the Secret Manager secrets.
-
-## Updating Secrets Manager
-
-There are two Secrets Manager secrets that will need updated before the containers can run properly. The keys in the secrets will all exist, but some of the values will need to be updated/replaced.
-
-The first secret that will need updating is the "&lt;environment&gt;-public-system-configuration" secret. 
-
-Public system configuration values that need updates:
-
-* databricks-jdbc-uri
-  * replace the number after/protocolv1/o/ with the number we saved from the Databricks URL in the last step of the Databricks post deployment instructions
-* databricks-instance-pool-id
-  * replace with value of sparky-pool ID that we saved in Databricks config step
-
-The second secret that will need updating is the "&lt;environment&gt;-private-secret-configuration" secret.
-
-Private system configuration values that need updates:
-
-* databricks-token
-  * replace with value saved from generating the access token in Databricks config step
+If the workbook runs successfully, move on to the next step! 
 
 ## Running Deployment Container
 
