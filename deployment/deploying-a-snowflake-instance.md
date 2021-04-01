@@ -93,5 +93,5 @@ The Snowflake instance is now ready for use with DataOps. Create a new connectio
 
 ![](../.gitbook/assets/image%20%28209%29.png)
 
-
+After creating the connection. It will be available for use in Snowflake outputs. You are now ready to output to Snowflake via DataOps.
 
