@@ -2,7 +2,7 @@
 description: Outputs specify where RAP exports data after importing and transforming it.
 ---
 
-# !! Outputs
+# Outputs
 
 ## Outputs Screen
 

@@ -38,7 +38,7 @@ The [Outputs](../../configuring-the-data-integration-process/output-configuratio
 
 ![Connections Screen and example settings](../../.gitbook/assets/rap-connections-screen.png)
 
-The [Connections ](../../configuring-the-data-integration-process/connections-configuration.md)screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
+The [Connections ]()screen controls the connections to the External Source Systems and Data Warehouses. Connections can be used for both Sources and Outputs.
 
 ## Sources Details - The Logical Data Flow
 
