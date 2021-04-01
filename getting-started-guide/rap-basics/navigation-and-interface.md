@@ -32,7 +32,7 @@ The Processing screen shows the progress and outcome of all execution tasks thro
 
 ![Outputs screen](../../.gitbook/assets/rap-outputs-view.png)
 
-The [Outputs]() screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
+The [Outputs](../../configuring-the-data-integration-process/output-configuration/) screen controls loading data from the Data Hub to the Data Warehouse layers. Source-target mapping, logs, and other output details can be viewed here, as well as historical outputs.
 
 ### Connections
 

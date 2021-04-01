@@ -1,4 +1,4 @@
-# Deploying A Snowflake Instance
+# Deploying a Snowflake Instance
 
 ## Setting up an account
 
@@ -8,7 +8,7 @@ On the initial page, contact info must be filled out for the account.
 
 ![](../.gitbook/assets/image%20%28120%29.png)
 
-The next page will be used for basic account configuration. The Snowflake edition must be selected on this page. For private Azure deployments, Business Critical Edition must be used for security integration. For all other types of deployments, we recommend Enterprise edition. 
+The next page will be used for basic account configuration. The Snowflake edition must be selected on this page. For deployments without public endpoints, Business Critical Edition must be used for security integration using PrivateLink. For all other types of deployments, we recommend Enterprise edition. 
 
 After selecting the Snowflake edition. Select the cloud provider that matches your DataOps deployment, then select the region that is same as/closest to the region in which your DataOps instance is deployed.
 
@@ -26,7 +26,7 @@ This will navigate to the Snowflake activation page. Create an admin user name a
 
 ## Setting up networking
 
-If using any type of DataOps deployment besides a private Azure deployment, no additional steps are necessary. For private Azure deployments, follow the steps detailed [here](https://docs.snowflake.com/en/user-guide/privatelink-azure.html#configuring-access-to-snowflake-with-azure-private-link) to connect Snowflake into your private Azure VNet.
+If your DataOps deployment has public endpoints, no additional steps are necessary. For fully private deployments, follow the steps detailed [here](https://docs.snowflake.com/en/user-guide/privatelink-azure.html#configuring-access-to-snowflake-with-azure-private-link) for Azure and [here](https://docs.snowflake.com/en/user-guide/admin-security-privatelink.html#what-is-aws-privatelink) for AWS to set up a PrivateLink connection between the internal and snowflake networks.
 
 ## Setting up IDO user accounts and databases
 
@@ -74,11 +74,10 @@ Snowflake integrations should be named _DATAOPS\_OUTPUT\_&lt;&gt;_ replacing the
 
 Snowflake integrations should have allowed storage locations of "s3://&lt;datalakeBucket&gt;" for AWS environments and "azure://&lt;storageAccount&gt;.blob.core.windows.net/&lt;datalakeContainer" for Azure environments.
 
-The best way to find the value of the environment name is to run the below query against the DataOps postgres instance. 
+The best way to find the value of the environment name is to run the below query against the DataOps Postgres instance. 
 
 ```text
 SELECT value FROM meta.system_configuration WHERE name = 'environment';
-
 ```
 
 After creating the integration, be sure to grant usage of that integration to the Snowflake user/role that will be used for the DataOps output connection. Do so by running a statment similar to the one below.
