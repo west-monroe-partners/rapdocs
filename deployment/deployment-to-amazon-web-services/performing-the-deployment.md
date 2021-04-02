@@ -113,11 +113,6 @@ update meta.system_configuration set value = 'DEV' where name = 'environment';
 update meta.system_configuration set value = 'dev' where name = 'databricks-db-name';
 update meta.system_configuration set value = 'Databricks' where name = 'spark-provider';
 update meta.system_configuration set value = 'AWS' where name = 'cloud';
-insert into meta.agent values ('local','local',null,null,
-                               '{"region": "<aws-region>", "default": true, "autoUpdate": false,
-                                "maxResources": 4, "akkaStreamTimeout": 300,
-                                 "checkDeltaInterval": 30,
-                                  "checkPushFilesInterval": 10}','startxx',false);
 ```
 
 ## Restart Everything!
