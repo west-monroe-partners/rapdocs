@@ -38,6 +38,7 @@
   * [!! Common Problems](configuring-the-data-integration-process/common-problems.md)
   * [!! Relations and Rules Detailed Example](configuring-the-data-integration-process/relations-and-rules-detailed-example.md)
   * [!! Intellio® QL](configuring-the-data-integration-process/expressions.md)
+  * [Lineage](configuring-the-data-integration-process/lineage.md)
 * [Logical Architecture](logical-architecture-overview/README.md)
   * [DataOps Agent](logical-architecture-overview/rap-agent.md)
   * [User Interface](logical-architecture-overview/user-interface.md)
