@@ -65,17 +65,7 @@ Download the appropriate version of the MSI installer. Run the installer and fil
 
 ![Initial MSI screen](../.gitbook/assets/image%20%28340%29.png)
 
-A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. The windows username and password to run the service must also be entered. Do not alter the configuration key unless directed to by a DataOps team member.
-
-{% hint style="warning" %}
-The service account username MUST include the domain or local server name. Example:  &lt;domain&gt;\username or &lt;local server name&gt;\username
-
-This can be easily found by opening a command prompt and running "whoami" in the terminal.
-
-The user must have the ability to log on as and run services. The user must also be able to access any folders containing source data if the Agent will be performing file Ingestions.
-{% endhint %}
-
-This user must have the ability to access any folders containing source data as well as the ability to run services
+A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. The windows username and password to run the service must also be entered. Do not alter the configuration key unless directed to by a DataOps team member. 
 
 ![Agent Setup Screen 1](../.gitbook/assets/image%20%28191%29.png)
 
