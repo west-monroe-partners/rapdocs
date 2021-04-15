@@ -67,6 +67,12 @@ Download the appropriate version of the MSI installer. Run the installer and fil
 
 A specific Intellio DataOps **Agent Code** will be required, and this is the **Agent Code** that was configured in the DataOps UI. The windows username and password to run the service must also be entered. Do not alter the configuration key unless directed to by a DataOps team member. 
 
+{% hint style="warning" %}
+The service account username MUST include the domain - server\admin instead of just admin.
+
+This can be easily found by opening a command prompt and running "whoami" in the terminal.
+{% endhint %}
+
 ![Agent Setup Screen 1](../.gitbook/assets/image%20%28191%29.png)
 
 If a second DataOps agent is being installed on the same server, the port will need to be altered so both agents are not running on the same port. If this is the first DataOps agent, then the port should be left as the default value of 25530.
