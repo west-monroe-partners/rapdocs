@@ -19,7 +19,7 @@ In Terraform Cloud, navigate to the appropriate workspace and then click "Variab
 
 Update the "imageVersion" variable with the version number that is being upgraded to.
 
-![](../../.gitbook/assets/image%20%28269%29.png)
+![](../../.gitbook/assets/image%20%28286%29.png)
 
 Queue the Terraform plan, providing a "Reason for queueing plan". 
 
@@ -55,6 +55,12 @@ Change the Revision to the latest version \(just created in the previous steps\)
 ![Updating the Service](../../.gitbook/assets/d3.png)
 
 The service is now updated to start the deployment container, and will now start a task shortly. The task will run, perform the deployment steps in the running container, and then set the service back to 0.
+
+Navigate to the Intellio DataOps UI and confirm that the hover-over on the Menu tab indicates the newest version of the software.
+
+![](../../.gitbook/assets/image%20%28325%29%20%281%29%20%281%29.png)
+
+
 
 
 
