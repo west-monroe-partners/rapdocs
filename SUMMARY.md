@@ -88,6 +88,7 @@
   * [!! Error Notifications](best-practices/error-notifications.md)
 * [!! Operation Guide](operation-guide/README.md)
   * [!! Monitoring the Process](operation-guide/monitoring-the-process/README.md)
+    * [Metadata monitoring dataset](operation-guide/monitoring-the-process/metadata-monitoring-dataset.md)
     * [!! Source Dashboard](operation-guide/monitoring-the-process/operational-dashboard.md)
     * [!! Checking Statuses](operation-guide/monitoring-the-process/checking-statuses.md)
     * [!! Checking Logs](operation-guide/monitoring-the-process/checking-logs.md)
