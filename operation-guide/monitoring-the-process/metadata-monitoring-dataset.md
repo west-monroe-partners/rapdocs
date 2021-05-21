@@ -26,9 +26,9 @@ Diagram below illustrates how data is flowing from postgres to the meta.process 
         <p>system_configuration</p>
       </td>
       <td style="text-align:left">meta-monitor-refresh-interval</td>
-      <td style="text-align:left">Interval in seconds to data in meta.process_history data table in databricks</td>
-      <td
-      style="text-align:left">900</td>
+      <td style="text-align:left">Interval in seconds to data in meta.process_history data table in databricks.
+        Setting this value to 0 will disable metadata refresh process</td>
+      <td style="text-align:left">900</td>
     </tr>
     <tr>
       <td style="text-align:left">

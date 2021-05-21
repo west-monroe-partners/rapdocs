@@ -15,6 +15,7 @@
 * [Configuration Guide](configuring-the-data-integration-process/README.md)
   * [Import/Export](configuring-the-data-integration-process/import-export.md)
   * [Custom Ingestion](configuring-the-data-integration-process/custom-ingestion.md)
+  * [Custom Post Output](configuring-the-data-integration-process/custom-post-output.md)
   * [!! Agent](configuring-the-data-integration-process/agents.md)
   * [!! Connection](configuring-the-data-integration-process/connections-configuration.md)
   * [Sources](configuring-the-data-integration-process/source-configuration/README.md)
