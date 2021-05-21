@@ -31,7 +31,7 @@ All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ### Setting up a cluster
 
-Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. A page will display similar to the one below:
+Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run the job. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. A page will display similar to the one below:
 
 ![rap-mini-sparky cluster config page](../.gitbook/assets/image%20%287%29.png)
 
