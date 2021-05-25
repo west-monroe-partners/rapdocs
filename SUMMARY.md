@@ -76,6 +76,8 @@
 
 * [Announcements](releases/announcements.md)
 * [Changelog](releases/changelog/README.md)
+  * [2.4](releases/changelog/2.4/README.md)
+    * [2.4.0](releases/changelog/2.4/2.4.0.md)
   * [2.3](releases/changelog/2.3/README.md)
     * [2.3.3](releases/changelog/2.3/2.3.3.md)
     * [2.3.2](releases/changelog/2.3/2.3.2.md)
