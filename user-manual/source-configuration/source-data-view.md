@@ -4,13 +4,13 @@ description: >-
   filtering options make it clear which data is newly loaded or enriched.
 ---
 
-# !! Data View
+# Data View
 
 ## Data View Tab
 
 The Data View tab allows users to view a Source's data. Users can filter and sort the data to validate proper execution of enrichment and validation rules.
 
-![Data View](../../.gitbook/assets/image%20%2853%29.png)
+![The Data Viewer Screen](../../.gitbook/assets/image%20%28328%29.png)
 
 Column headers are color coded to indicate Raw versus Enriched data.
 
@@ -28,17 +28,15 @@ Rows are color coded to indicate a record's Validation flag.
 
 Users can filter results in a number of ways.
 
-### Typing SQL
+### Typing IQL
 
-In the top bar, users can type in PostgreSQL queries to filter records. The statements will be evaluated after a `WHERE` clause is added to a `SELECT *` query.
+In the top bar, users can type in Intellio QL to filter the data. Using \[This\].field in the same way as an enrichment rule. Te \` key can also be used to access common spark functions.
 
 ### Selecting Columns
 
-Users can select columns by clicking Select Columns. Users can add Descriptions, see Data Types, and check off which columns appear in the View Data tab.
+Users can select columns by clicking Select Columns. Users can see Data Types and select which columns appear in the View Data tab using the check boxes.The listed fields can also be filtered down using the text entry box. If the Retain Selection toggle is flipped to off, only columns actively on the screen, taking the typed filter into account, will be selected for display.
 
-TODO - new windows screenshot, what "Retain selection" switch does \(retains currently selected fields in the data viewer, adds new fields selected to view\)
-
-![Select Columns](../../.gitbook/assets/image%20%28135%29.png)
+![](../../.gitbook/assets/image%20%28342%29.png)
 
 ### **Sorting Data**
 
@@ -56,11 +54,11 @@ The Download button in the top right will download a `.csv` file of the data as 
 
 Clicking the Datatype icon brings up the data profile of that column. Different datatypes provide different data profile data.
 
-![Column Datatype icon](../../.gitbook/assets/image%20%2851%29.png)
+![Clinking the Int datatype will open the data profile](../../.gitbook/assets/image%20%28327%29.png)
 
-A modal appears showing the data profile when the datatype icon is clicked.
+A modal appears showing the data profile when the datatype label is clicked. Older data profiles for the source can be accessed by using **Select profiling timestamp**.
 
-![Data Profile Modal](../../.gitbook/assets/image%20%28139%29.png)
+![The Data Profile](../../.gitbook/assets/image%20%28325%29.png)
 
 Data profiles provide the following statistics:
 

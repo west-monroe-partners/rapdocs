@@ -39,7 +39,7 @@
   * [!! Rules](user-manual/source-configuration/enrichment-rule-configuration.md)
   * [Inputs](user-manual/source-configuration/source-inputs.md)
   * [!! Process](user-manual/source-configuration/process.md)
-  * [!! Data View](user-manual/source-configuration/source-data-view.md)
+  * [Data View](user-manual/source-configuration/source-data-view.md)
 * [Outputs](user-manual/output-configuration/README.md)
   * [Output Details](user-manual/output-configuration/output-details.md)
   * [Output Mapping](user-manual/output-configuration/output-mapping.md)
