@@ -20,7 +20,7 @@ You need to select Test Source before you can start configuring template attribu
 
 ![New Rule Template Settings Tab](../../.gitbook/assets/image%20%28102%29.png)
 
-Rule Template is configured identically to [Rule](../source-configuration/enrichment-rule-configuration.md). Following attributes of the Rule Template can be tokenized using _${token\_name}_ syntax:
+Rule Template is configured identically to [Rule](). Following attributes of the Rule Template can be tokenized using _${token\_name}_ syntax:
 
 * Template Name
 * Attribute Name

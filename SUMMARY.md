@@ -33,17 +33,12 @@
 
 * [Connections](user-manual/connections.md)
 * [Sources](user-manual/source-configuration/README.md)
-  * [!! Details](user-manual/source-configuration/source-details.md)
-  * [!! Dependencies](user-manual/source-configuration/dependency-configuration.md)
   * [Relations](user-manual/source-configuration/relations-1.md)
-  * [!! Rules](user-manual/source-configuration/enrichment-rule-configuration.md)
   * [Inputs](user-manual/source-configuration/source-inputs.md)
-  * [!! Process](user-manual/source-configuration/process.md)
   * [Data View](user-manual/source-configuration/source-data-view.md)
 * [Outputs](user-manual/output-configuration/README.md)
   * [Output Details](user-manual/output-configuration/output-details.md)
   * [Output Mapping](user-manual/output-configuration/output-mapping.md)
-  * [!! Output History](user-manual/output-configuration/output-history.md)
 * [SDK](user-manual/sdk/README.md)
   * [Custom Post Output](user-manual/sdk/custom-post-output.md)
   * [Custom Ingestion](user-manual/sdk/custom-ingestion.md)
@@ -63,7 +58,6 @@
     * [Performing the Deployment](operations/deployment/deployment-to-amazon-web-services/performing-the-deployment.md)
     * [New Version Upgrade Process \(Terraform\)](operations/deployment/deployment-to-amazon-web-services/new-version-upgrade-process-terraform.md)
     * [New Version Upgrade Process \(Manual\)](operations/deployment/deployment-to-amazon-web-services/using-the-deployment-service-in-ecs.md)
-    * [!! Installing a New Agent On ECS \(AWS\)](operations/deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
   * [Deployment to Microsoft Azure](operations/deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements](operations/deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
     * [Performing the Deployment](operations/deployment/deployment-to-microsoft-azure/performing-the-deployment.md)
@@ -74,7 +68,8 @@
 
 ## Releases
 
-* [Announcements](releases/announcements.md)
+* [Announcements](releases/announcements/README.md)
+  * [2.4.0](releases/announcements/2.4.0.md)
 * [Changelog](releases/changelog/README.md)
   * [2.4](releases/changelog/2.4/README.md)
     * [2.4.0](releases/changelog/2.4/2.4.0.md)
