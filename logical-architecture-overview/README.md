@@ -2,7 +2,7 @@
 description: A deeper look of how DataOps is organized and processes data.
 ---
 
-# Logical Architecture
+# Logical
 
 As Intellio DataOps operates differently than traditional ETL tools, this section provides a deeper dive of how DataOps processes data, how data flows through DataOps, and how DataOps is logically organized.  The information presented in this section is helpful to know when architecting a new implementation leveraging DataOps as the data processing tool of choice.
 
