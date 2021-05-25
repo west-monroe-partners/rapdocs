@@ -44,7 +44,16 @@ For connections that do not need any parameters, enter an empty JSON object {}
 
 ## File
 
-* **Storage Technology\*:** Specifies if the Agent or Databricks will attempt to access the 
+* **Storage Technology\*:** Specifies the type of file storage Agent/Databricks will attempt to access
+* **File Path\*:** The folder/container path for DataOps to access when pulling or generating files
+
+## Table
+
+* **Driver\*:** Which JDBC driver should be used
+
+## Parameters
+
+The parameters section will change dynamically based on the required selections above, are typically optional to configure, and are used for advanced configuration or specifications.
 
 
 

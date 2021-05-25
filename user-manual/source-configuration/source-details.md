@@ -30,17 +30,33 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 * **Group Name:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
 * **Source Name Template:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
 * **Active\*:** If set to Active, the Source will run as specified.
-* **Connection Type\*:** Selector to help filter the Connection dropdown
-* **Connection\*:** The Connection to use for this source
+* **Connection Type\*:** Selector to help filter the [Connection ](../connections.md)dropdown
+* **Connection\*:** The [Connection ](../connections.md)to use for this source
 
 
 
 {% tabs %}
-{% tab title="File" %}
-RAP supports 2 types of files: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
+{% tab title="Custom" %}
+* **Initiation Type\*:** Specifies if your custom code is compiled into an executable Jar file, or is in a Databricks Notebook
 
-* A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
-* Data in a **Fixed Width** text file consists of records with constant character length and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
+#### Jar
+
+* **Jar Location\*:** Specifies the location in the Cloud storage technology where the Jar is stored
+* **Main Class Name\*:** Name of the primary class in the Jar to be run when executed
+
+#### Notebook
+
+* **Notebook Path**\***:** Path to the notebook within Databricks.
+  * eg. /Shared/mynotebookname
+{% endtab %}
+
+{% tab title="File" %}
+* **File Mask\*:** Name of file within the connection folder/path.
+  * Glob syntax supported: eg. myfile\*.csv
+* **File Type\*:** Serialization format of the file
+* **Parser\*:** DataOps has two supported parsers for certain File Types
+  * Spark: Native Spark libraries or extensions used
+  * Core: DataOps custom Akka streams parser for delimited files with advanced error handling and malformed file debugging
 {% endtab %}
 
 {% tab title="Loopback" %}
