@@ -35,8 +35,6 @@
   * [Import/Export](user-manual/configuring-the-data-integration-process/import-export.md)
   * [Custom Ingestion](user-manual/configuring-the-data-integration-process/custom-ingestion.md)
   * [Custom Post Output](user-manual/configuring-the-data-integration-process/custom-post-output.md)
-  * [!! Agent](user-manual/configuring-the-data-integration-process/agents.md)
-  * [!! Connection](user-manual/configuring-the-data-integration-process/connections-configuration.md)
   * [Sources](user-manual/configuring-the-data-integration-process/source-configuration/README.md)
     * [!! Details](user-manual/configuring-the-data-integration-process/source-configuration/source-details.md)
     * [!! Dependencies](user-manual/configuring-the-data-integration-process/source-configuration/dependency-configuration.md)
@@ -50,15 +48,10 @@
     * [Relation Templates](user-manual/configuring-the-data-integration-process/validation-and-enrichment-rule-templates/relation-templates.md)
     * [Rule Templates](user-manual/configuring-the-data-integration-process/validation-and-enrichment-rule-templates/rule-templates.md)
     * [Best Practices](user-manual/configuring-the-data-integration-process/validation-and-enrichment-rule-templates/best-practices.md)
-  * [!! Outputs](user-manual/configuring-the-data-integration-process/output-configuration/README.md)
+  * [Outputs](user-manual/configuring-the-data-integration-process/output-configuration/README.md)
     * [Output Details](user-manual/configuring-the-data-integration-process/output-configuration/output-details.md)
     * [Output Mapping](user-manual/configuring-the-data-integration-process/output-configuration/output-mapping.md)
-    * [!! Manual Output](user-manual/configuring-the-data-integration-process/output-configuration/manual-output.md)
     * [!! Output History](user-manual/configuring-the-data-integration-process/output-configuration/output-history.md)
-  * [!! Common Problems](user-manual/configuring-the-data-integration-process/common-problems.md)
-  * [!! Relations and Rules Detailed Example](user-manual/configuring-the-data-integration-process/relations-and-rules-detailed-example.md)
-  * [!! Intellio® QL](user-manual/configuring-the-data-integration-process/expressions.md)
-  * [Lineage](user-manual/configuring-the-data-integration-process/lineage.md)
 
 ## Operations
 
@@ -76,6 +69,7 @@
     * [New Version Upgrade Process \(Terraform\)](operations/deployment/deployment-to-microsoft-azure/new-version-upgrade-process.md)
   * [Installing a New Agent](operations/deployment/installing-a-new-agent.md)
 * [Metadata Monitoring Dataset](operations/metadata-monitoring-dataset.md)
+* [Lineage Queries](operations/lineage.md)
 
 ## Releases
 

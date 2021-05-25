@@ -66,7 +66,3 @@ The **Post-Process** step of the logical data flow runs any aggregations or calc
 
 DataOps uses a **Metadata Structure** to manage information about configuration, process tracking, and data tracking throughout the entire platform. DataOps utilizes a proprietary table structure to relate all these data points, and stores this information in a Postgres database for easy access.
 
-## Historical Framework \(RAP 1.X\)
-
-RAP's 1.x framework was viewed as four storage structures and four data processing steps. The four storage structures map one to one between the two frameworks, but the eight steps of the logical data flow only roughly map into the four data processing steps. For reference the [historical framework]() section is provided.
-

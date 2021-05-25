@@ -16,7 +16,7 @@ The Output History tab allows a user to monitor the status of RAP Outputs. The t
 The Output History tab displays the Output logs at the bottom of the screen and the following columns:
 
 * **id:** Unique identifier used on the backend
-* **Output Run Name:** Name of the Output. Generated either in the [Output Details ](output-details.md)or [Manual Output](manual-output.md) tabs
+* **Output Run Name:** Name of the Output. Generated either in the [Output Details ](output-details.md)or [Manual Output]() tabs
 * **Output Source Name:** Source name
 * **Records Inserted:** Count of records inserted into the target
 * **Records Deleted:** Count of records deleted from the target
@@ -26,7 +26,7 @@ The Output History tab displays the Output logs at the bottom of the screen and 
 * **User:** User that ran the Output
 * **Type:** 
   * **A:** Automatic, as configured in [Output Details](output-details.md)
-  * **M:** Manual, as configured in [Manual Output](manual-output.md) 
+  * **M:** Manual, as configured in [Manual Output]() 
 * **Status:** Icons showing the status of the Output
 
 ## Viewing Output Details
