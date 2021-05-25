@@ -10,7 +10,7 @@ description: >-
 
 In the Edit Output screen, users can see the various components that make up an Output, including tabs for Output Settings, Mappings, and Output History. When initially configuring an Output, this is the only visible tab.
 
-![](../../../.gitbook/assets/image%20%28308%29.png)
+![](../../.gitbook/assets/image%20%28308%29.png)
 
 ## Initial Parameters
 

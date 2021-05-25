@@ -23,5 +23,5 @@ Template that shares structure with Relation. Name, Related Source Name Name and
 
 ####  
 
-![Template-Token-Source relationship diagram](../../../.gitbook/assets/image%20%28186%29.png)
+![Template-Token-Source relationship diagram](../../.gitbook/assets/image%20%28186%29.png)
 

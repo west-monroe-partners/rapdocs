@@ -8,17 +8,17 @@ description: Rule template management screens
 
 Selecting Templates-&gt;Rule Templates from main menu opens Rule Templates list view :
 
-![](../../../.gitbook/assets/image%20%28109%29.png)
+![](../../.gitbook/assets/image%20%28109%29.png)
 
 ### Creating new Rule Template
 
 Clicking NEW + button opens new template Setting tab:
 
-![New Rule Template Settings](../../../.gitbook/assets/image%20%2832%29.png)
+![New Rule Template Settings](../../.gitbook/assets/image%20%2832%29.png)
 
 You need to select Test Source before you can start configuring template attributes. Test source is required for enabling auto-complete attribute dropdown for \[This\] source container and related sources. Token values configured for the selected Test Source will be used for validation of the Template. These values can be updated by the user.
 
-![New Rule Template Settings Tab](../../../.gitbook/assets/image%20%28102%29.png)
+![New Rule Template Settings Tab](../../.gitbook/assets/image%20%28102%29.png)
 
 Rule Template is configured identically to [Rule](../source-configuration/enrichment-rule-configuration.md). Following attributes of the Rule Template can be tokenized using _${token\_name}_ syntax:
 
@@ -28,7 +28,7 @@ Rule Template is configured identically to [Rule](../source-configuration/enrich
 
 Typing $ will display searchable list of configured tokens:
 
-![Using Token in Rule Template attributes](../../../.gitbook/assets/image%20%2879%29.png)
+![Using Token in Rule Template attributes](../../.gitbook/assets/image%20%2879%29.png)
 
 Common examples of token use
 
@@ -46,7 +46,7 @@ Once template has been validated and saved, it can now be linked \(applied\) to 
 
  
 
-![Linked Sources Tab](../../../.gitbook/assets/image%20%28245%29.png)
+![Linked Sources Tab](../../.gitbook/assets/image%20%28245%29.png)
 
 To link source\(s\), click NEW + button and select sources in searchable list.
 
@@ -54,33 +54,33 @@ To link source\(s\), click NEW + button and select sources in searchable list.
 Note: sources already linked to the template are not shown 
 {% endhint %}
 
-![Select source dialog](../../../.gitbook/assets/image%20%28237%29.png)
+![Select source dialog](../../.gitbook/assets/image%20%28237%29.png)
 
 After selecting sources, click Validate button. System will evaluate each template and display dialog with validation status for each of the selected sources:
 
  
 
-![Validation status dialog](../../../.gitbook/assets/image%20%28283%29.png)
+![Validation status dialog](../../.gitbook/assets/image%20%28283%29.png)
 
 Sources marked green passed template validation and are ready for the template to be linked. Sources marked red didn't pass validation. Clicking on red status icon shows validation error details:
 
-![Validation Error Details](../../../.gitbook/assets/image%20%28310%29.png)
+![Validation Error Details](../../.gitbook/assets/image%20%28310%29.png)
 
 Clicking on source name opens new browser tab with source settings to help user correct validation errors \(configure token values, check metadata, etc.\). By clicking triple-dot action menu, user can remove source from the list to be linked and address issues at a later time. Once issues have been corrected, click RE-VALIDATE button to repeat checks:
 
  
 
-![](../../../.gitbook/assets/image%20%28257%29.png)
+![](../../.gitbook/assets/image%20%28257%29.png)
 
 Once all validation checks have passed, SAVE button is enabled. Click it to link template to displayed sources. After saving, updated linked sources tab is displayed:
 
  
 
-![Linked Sources](../../../.gitbook/assets/image%20%28268%29.png)
+![Linked Sources](../../.gitbook/assets/image%20%28268%29.png)
 
 Clicking on Source Name on the Linked Sources tab list opens up new browser tab with Linked source Rule dialog:
 
-![Template-linked Rule Dialog](../../../.gitbook/assets/image%20%28320%29.png)
+![Template-linked Rule Dialog](../../.gitbook/assets/image%20%28320%29.png)
 
 Rules linked to Template cannot be edited directly. Actions available are:
 

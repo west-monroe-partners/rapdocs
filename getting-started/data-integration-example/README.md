@@ -8,7 +8,7 @@ description: This example acts as a Hello World tutorial for DataOps
 
 This simple introductory example looks at one specific use of DataOps. 
 
-For more detailed configuration instructions, please refer to the [Configuration Guide](../../user-manual/configuring-the-data-integration-process/). 
+For more detailed configuration instructions, please refer to the [Configuration Guide](). 
 
 This Data Integration Example progresses in five parts:
 

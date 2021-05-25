@@ -13,7 +13,7 @@ description: Released 2/22/2021
 | **What** | Templates provide mechanism for centralized management of  sources with similar processing logic.  |
 | **Why** | Templates enable reusable pattern for quick data integration from multiple "parallel" source systems \(ERP, EHR, etc.\) |
 | **Impact** | Templates introduce new way to create and manage Relations and Rules \(Enrichment and Validation\). Relations and Rules created from the Template are centrally managed using Template management screens |
-| **Details** | [Templates and Tokens](../../../user-manual/configuring-the-data-integration-process/validation-and-enrichment-rule-templates/) |
+| **Details** | [Templates and Tokens](../../../user-manual/validation-and-enrichment-rule-templates/) |
 
 |   | Move Agent to Connection - PLEASE READ NOTE IN IMPACT SECTION REGARDING AUTH0  |
 | :--- | :--- |

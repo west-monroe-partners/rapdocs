@@ -23,17 +23,17 @@ The Source Inputs screen allows users to monitor the status of their Sources' In
 * **Effective Record Count** - The number of records appearing in the hub table after CDC.
 * **Status** - Indicates whether an input has successfully gone through all of its processing steps. Click this status to navigate to the Process page filtered for that input.
 
-  * ![](../../../.gitbook/assets/completed.png)  Everything has processed correctly
-  * ![](../../../.gitbook/assets/failed.png)  A failure has occurred for this input
-  * ![](../../../.gitbook/assets/pending%20%281%29.png)  The input is waiting in the dependency queue
-  * ![](../../../.gitbook/assets/inprogress.png)  The input is currently running a process
-  * ![](../../../.gitbook/assets/image%20%28291%29.png)The input is launching a new cluster
-  * ![](../../../.gitbook/assets/delete.png)The input is queued for deletion
+  * ![](../../.gitbook/assets/completed.png)  Everything has processed correctly
+  * ![](../../.gitbook/assets/failed.png)  A failure has occurred for this input
+  * ![](../../.gitbook/assets/pending%20%281%29.png)  The input is waiting in the dependency queue
+  * ![](../../.gitbook/assets/inprogress.png)  The input is currently running a process
+  * ![](../../.gitbook/assets/image%20%28291%29.png)The input is launching a new cluster
+  * ![](../../.gitbook/assets/delete.png)The input is queued for deletion
   * Grey Check Mark - The input has passed processing but contains 0 records.
 
 * **Checkbox -** Used to select multiple inputs for reprocessing
 
-![The Inputs Page](../../../.gitbook/assets/image%20%28293%29%20%281%29%20%281%29.png)
+![The Inputs Page](../../.gitbook/assets/image%20%28293%29%20%281%29%20%281%29.png)
 
 ### Three Dot Menu 
 
@@ -57,7 +57,7 @@ Contains reprocessing options. Kicking off any of these reprocess options will l
   * This process type can cause other inputs to process in order to fill in data gaps.
   * Use this to get rid of unwanted data
 
-![Example Menu with Invalid Options](../../../.gitbook/assets/image%20%28289%29.png)
+![Example Menu with Invalid Options](../../.gitbook/assets/image%20%28289%29.png)
 
 ## Controlling All Inputs
 
@@ -72,7 +72,7 @@ Users can control all of the Inputs for a Source using the options below. Not al
 * **Pull Data Now:** Immediately generate a new Input for this Source \(not available on watcher sources\)
 * **Recalculate**: Perform all net new and changed enrichments on the hub table to bring it up to date.
 
-![Options for all inputs](../../../.gitbook/assets/image%20%28292%29.png)
+![Options for all inputs](../../.gitbook/assets/image%20%28292%29.png)
 
 
 

@@ -10,7 +10,7 @@ description: >-
 
 The Data View tab allows users to view a Source's data. Users can filter and sort the data to validate proper execution of enrichment and validation rules.
 
-![Data View](../../../.gitbook/assets/image%20%2853%29.png)
+![Data View](../../.gitbook/assets/image%20%2853%29.png)
 
 Column headers are color coded to indicate Raw versus Enriched data.
 
@@ -38,13 +38,13 @@ Users can select columns by clicking Select Columns. Users can add Descriptions,
 
 TODO - new windows screenshot, what "Retain selection" switch does \(retains currently selected fields in the data viewer, adds new fields selected to view\)
 
-![Select Columns](../../../.gitbook/assets/image%20%28135%29.png)
+![Select Columns](../../.gitbook/assets/image%20%28135%29.png)
 
 ### **Sorting Data**
 
 Clicking a column's name sorts the data in ascending order. Clicking again switches to descending order.
 
-![Column Name](../../../.gitbook/assets/image%20%2886%29.png)
+![Column Name](../../.gitbook/assets/image%20%2886%29.png)
 
 ## Analyzing Data
 
@@ -56,11 +56,11 @@ The Download button in the top right will download a `.csv` file of the data as 
 
 Clicking the Datatype icon brings up the data profile of that column. Different datatypes provide different data profile data.
 
-![Column Datatype icon](../../../.gitbook/assets/image%20%2851%29.png)
+![Column Datatype icon](../../.gitbook/assets/image%20%2851%29.png)
 
 A modal appears showing the data profile when the datatype icon is clicked.
 
-![Data Profile Modal](../../../.gitbook/assets/image%20%28139%29.png)
+![Data Profile Modal](../../.gitbook/assets/image%20%28139%29.png)
 
 Data profiles provide the following statistics:
 

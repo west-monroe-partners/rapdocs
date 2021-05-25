@@ -15,9 +15,9 @@ To create a Relation, select a Source from the Sources screen, select the Relati
 **Self Relations:** The user can define a relation between the current source and itself by selecting the current source in the related source modal. Self relations can _never_ be primary.
 {% endhint %}
 
-![New Relation Button](../../../.gitbook/assets/image%20%28302%29.png)
+![New Relation Button](../../.gitbook/assets/image%20%28302%29.png)
 
-![Create Relation Modal](../../../.gitbook/assets/image%20%28298%29.png)
+![Create Relation Modal](../../.gitbook/assets/image%20%28298%29.png)
 
 ## Relation Properties
 
@@ -39,19 +39,19 @@ The Relations tab has two main views: the graph view and the table view.
 
 The graph view allows users to see a visual representation of the current source, all sources related to the current source either directly or through a primary relation chain, and all the relations that connect these sources.
 
-![Graph View](../../../.gitbook/assets/image%20%28304%29.png)
+![Graph View](../../.gitbook/assets/image%20%28304%29.png)
 
 #### Table View
 
 The table view allows users to quickly view, filter, search, and sort all relations that involve the current source.
 
-![Table View](../../../.gitbook/assets/image%20%28303%29.png)
+![Table View](../../.gitbook/assets/image%20%28303%29.png)
 
 ## Primary Relations
 
 Primary relations are relations that are designated by the user to be the main relation between a pair of sources.  The first relation between a pair of sources will be automatically set as the primary relation, this can be changed by toggling the Primary Flag on the create/edit Relation Modal. 
 
-![Primary Flog Toggle circled at the bottom right](../../../.gitbook/assets/image%20%28299%29.png)
+![Primary Flog Toggle circled at the bottom right](../../.gitbook/assets/image%20%28299%29.png)
 
 In practice, the most important property of primary relations is that they can be accessed using the shorthand Intellio QL pattern, instead of the longhand pattern. The shorthand pattern allows the primary relation to be accessed using only the name of the related source: _\[Related Source Name\].attribute\_name_. While the long hand pattern requires the user to specify both the related source, as well as the relation name: _\[This\]~{Relation Name}~\[Related Source Name\].attribute\_name._
 

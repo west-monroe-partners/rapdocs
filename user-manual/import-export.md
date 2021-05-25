@@ -76,7 +76,7 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 1. Navigate to the main Sources page   
 2. Press the 'Import' button on the far right of the header
 
-![](../../.gitbook/assets/image%20%28258%29%20%281%29.png)
+![](../.gitbook/assets/image%20%28258%29%20%281%29.png)
 
 3. In the Validation Results tab of the import modal, review the following object types to make sure all their components are being deleted, inserted, updated, or are unchanged as expected:
 
@@ -97,7 +97,7 @@ Any connection\(s\) used in an exported entity must have an equivalent connectio
 
 ## Workflow Diagrams
 
-![Exporting from a Source](../../.gitbook/assets/exporting-from-a-source%20%281%29.jpg)
+![Exporting from a Source](../.gitbook/assets/exporting-from-a-source%20%281%29.jpg)
 
-![Exporting from an Output Source](../../.gitbook/assets/exporting-from-output-source%20%281%29.jpg)
+![Exporting from an Output Source](../.gitbook/assets/exporting-from-output-source%20%281%29.jpg)
 

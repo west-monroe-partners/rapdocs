@@ -8,11 +8,15 @@ description: >-
 
 ## Settings Tab
 
-When creating a new Source, only the Settings tab is available. Users configure both the Input and Staging processing steps for a Source via the Source Details Tab. On the Edit Settings Screen, users can see the various components that make up a Source, including tabs for Source Settings, Dependencies, Relations, Rules, Inputs, and a view of the Source data \(Date View\).
+When creating a new Source, only the Settings tab is available. 
+
+The Setting tab enables user to configure parameters that apply to the entire source across all Inputs and Processes associated with the Source.
+
+Most of the parameters focus on where, how, and when to ingest data into the DataOps managed data lake, how to refresh data, how to track that information over time, as well as any infrastructure related configuration or tuning to help manage performance and cost of processing this dataset.
 
 After the Source is created you can access the Settings tab at any time by clicking on the Settings tab in the upper left.
 
-![Source Details Tab](../../../.gitbook/assets/rap-source-details.png)
+![](../../.gitbook/assets/image%20%28316%29.png)
 
 ## Initial Parameters
 
@@ -22,9 +26,35 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 
 * **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources. To ensure Sources are organized easily searchable, follow [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions).
 * **Description\*:** The description of the Source.
+* **Hub View Name:**  Name of view alias of the raw hub table in Databricks
+* **Group Name:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
+* **Source Name Template:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
 * **Active\*:** If set to Active, the Source will run as specified.
-* **Agent\*:** The [Agent ]()that is used to monitor and manage incoming data. The RAP Agent installs on local client machines, acquires files from local file storage, and uploads them to the RAP application.
-* **Default:** Sets the previously selected Agent to be the default Agent when creating any new Sources.
+* **Connection Type\*:** Selector to help filter the Connection dropdown
+* **Connection\*:** The Connection to use for this source
+
+
+
+{% tabs %}
+{% tab title="File" %}
+RAP supports 2 types of files: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
+
+* A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
+* Data in a **Fixed Width** text file consists of records with constant character length and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
+{% endtab %}
+
+{% tab title="Loopback" %}
+
+{% endtab %}
+
+{% tab title="SFTP" %}
+**SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
+{% endtab %}
+
+{% tab title="Table" %}
+A **Table** is data that exists in a database. Upon selecting this option, a parameter will appear allowing the user to query the database using SQL.
+{% endtab %}
+{% endtabs %}
 
 ### Data Refresh Types
 
@@ -49,31 +79,6 @@ Sources with the **Key** refresh type contain a unique identifier or _key_ tied 
 
 {% tab title="None" %}
 **None** sources do not track changes in data. Instead, RAP appends any new data to the existing data.
-{% endtab %}
-{% endtabs %}
-
-### **Connection Types**
-
-A Connection Type specifies what format and with what cadence data should be accessed from a connection. There are three main types described below. The parameters available will change dynamically depending on the users's selection.
-
-{% tabs %}
-{% tab title="File" %}
-RAP supports 2 types of files: **Delimited** and **Fixed Width**. Parameter selections will update dynamically depending on the selection.
-
-* A **Delimited** file consists of lines indicated by line ending characters, and has fields separated by a delimiter. The most common format is a CSV, where each each field is separated by a comma. 
-* Data in a **Fixed Width** text file consists of records with constant character length and optional line ending characters. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
-{% endtab %}
-
-{% tab title="Loopback" %}
-
-{% endtab %}
-
-{% tab title="SFTP" %}
-**SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
-{% endtab %}
-
-{% tab title="Table" %}
-A **Table** is data that exists in a database. Upon selecting this option, a parameter will appear allowing the user to query the database using SQL.
 {% endtab %}
 {% endtabs %}
 

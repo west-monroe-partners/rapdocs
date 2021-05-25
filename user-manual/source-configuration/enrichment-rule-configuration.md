@@ -10,15 +10,15 @@ description: >-
 
 The Rules tab allows users to select, edit, remove, or add a Source's Rules. By default, only Active Rules are listed. The **Active Only** toggle changes this setting.
 
-![Active rule toggle switch](../../../.gitbook/assets/activeruletoggle.png)
+![Active rule toggle switch](../../.gitbook/assets/activeruletoggle.png)
 
 To create a new Rule, click the **New Rule** button. This opens the create/edit Rule modal.
 
-![New Rule Button](../../../.gitbook/assets/image%20%28296%29.png)
+![New Rule Button](../../.gitbook/assets/image%20%28296%29.png)
 
 To edit an existing rule, click on any column of that rule's row in the table besides the expression column \(circled in the picture below\). If a rule references another rule in its expression, a link will appear in the expression column that, when clicked, will open the edit rule modal of the rule that is referenced by the link \(boxed in the picture below\).
 
-![All columns besides the expression column in the Rule Table can be clicked to open the edit Rule modal.](../../../.gitbook/assets/image%20%28294%29.png)
+![All columns besides the expression column in the Rule Table can be clicked to open the edit Rule modal.](../../.gitbook/assets/image%20%28294%29.png)
 
 ## Enrichments vs Validations
 
@@ -26,7 +26,7 @@ In DataOps, there are two distinct types of Rules: Enrichments and Validations. 
 
 ## Rule Parameters
 
-![Create Rule Modal](../../../.gitbook/assets/image%20%28297%29.png)
+![Create Rule Modal](../../.gitbook/assets/image%20%28297%29.png)
 
 **Fields Available:**
 
