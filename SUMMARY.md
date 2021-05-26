@@ -31,29 +31,31 @@
 
 ## User Manual
 
-* [Connections](user-manual/connections.md)
-* [!! Schedules](user-manual/schedules.md)
 * [Sources](user-manual/source-configuration/README.md)
   * [Settings](user-manual/source-configuration/source-details.md)
   * [Dependencies](user-manual/source-configuration/dependency-configuration.md)
   * [Relations](user-manual/source-configuration/relations-1.md)
   * [Rules](user-manual/source-configuration/enrichment-rule-configuration.md)
   * [Inputs](user-manual/source-configuration/source-inputs.md)
-  * [!! Process](user-manual/source-configuration/process.md)
+  * [Process](user-manual/source-configuration/process.md)
   * [Data View](user-manual/source-configuration/source-data-view.md)
+* [Processing](user-manual/processing.md)
 * [Outputs](user-manual/output-configuration/README.md)
   * [Output Details](user-manual/output-configuration/output-details.md)
   * [Output Mapping](user-manual/output-configuration/output-mapping.md)
   * [!! Output History](user-manual/output-configuration/output-history.md)
-* [SDK](user-manual/sdk/README.md)
-  * [Custom Post Output](user-manual/sdk/custom-post-output.md)
-  * [Custom Ingestion](user-manual/sdk/custom-ingestion.md)
-* [Import/Export](user-manual/import-export.md)
+* [Connections](user-manual/connections.md)
+* [!! Schedules](user-manual/schedules.md)
+* [Agents](user-manual/agents.md)
 * [Templates and Tokens](user-manual/validation-and-enrichment-rule-templates/README.md)
   * [Tokens](user-manual/validation-and-enrichment-rule-templates/tokens.md)
   * [Relation Templates](user-manual/validation-and-enrichment-rule-templates/relation-templates.md)
   * [Rule Templates](user-manual/validation-and-enrichment-rule-templates/rule-templates.md)
   * [Best Practices](user-manual/validation-and-enrichment-rule-templates/best-practices.md)
+* [SDK](user-manual/sdk/README.md)
+  * [Custom Post Output](user-manual/sdk/custom-post-output.md)
+  * [Custom Ingestion](user-manual/sdk/custom-ingestion.md)
+* [Import/Export](user-manual/import-export.md)
 
 ## Operations
 

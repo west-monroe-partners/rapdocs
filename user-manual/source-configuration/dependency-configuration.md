@@ -1,3 +1,9 @@
+---
+description: >-
+  Dependencies allow configurators to modify the workflow engine to introduce
+  waits to the processing queues
+---
+
 # Dependencies
 
 ## Introduction

@@ -1,8 +1,7 @@
 ---
 description: >-
-  A Relation allows users to define the logical data model between Sources and
-  use the connections to traverse between Sources, then use these attributes in
-  Rules and other logical structures downstream
+  Relations define intra-source connections and enable users to configure
+  lookups and cross-source aggregates
 ---
 
 # Relations

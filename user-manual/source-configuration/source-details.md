@@ -123,7 +123,7 @@ The diagram below can be used as base guidance for which Refresh Type to select 
 
 Data Refresh selection is one of the most important decisions for design, and while this diagram provides base guidance, careful consideration and understanding of how the data is generated and will be used is required to make the correct decision.
 
-![](../../.gitbook/assets/image%20%28348%29.png)
+![](../../.gitbook/assets/image%20%28349%29.png)
 
 ## Initiation Type
 
