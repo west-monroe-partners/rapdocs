@@ -4,7 +4,7 @@ description: >-
   the Source including input types and file types.
 ---
 
-# !! Details
+# Settings
 
 ## Settings Tab
 
@@ -18,7 +18,7 @@ After the Source is created you can access the Settings tab at any time by click
 
 ![](../../.gitbook/assets/image%20%28316%29.png)
 
-## Initial Parameters
+## Base Parameters
 
 {% hint style="info" %}
 Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
@@ -33,7 +33,7 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 * **Connection Type\*:** Selector to help filter the [Connection ](../connections.md)dropdown
 * **Connection\*:** The [Connection ](../connections.md)to use for this source
 
-
+### Connection Type Specific Parameters
 
 {% tabs %}
 {% tab title="Custom" %}
@@ -60,127 +60,115 @@ Asterisks \(\*\) mean the Parameter is mandatory and must be specified by users.
 {% endtab %}
 
 {% tab title="Loopback" %}
-
+* **Virtual Output\*:** Name of the virtual output this source is linked to and will pull data from
 {% endtab %}
 
 {% tab title="SFTP" %}
 **SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
+
+**See File tab for detailed parameters overview**
 {% endtab %}
 
 {% tab title="Table" %}
-A **Table** is data that exists in a database. Upon selecting this option, a parameter will appear allowing the user to query the database using SQL.
+* **Source Query\*:** Query to run against the connection database.
+  * There are tokens available to assist with filtering data on ingest to only records updated or inserted that are not already in DataOps
+    * &lt;extract\_datetime&gt;
+      * This will be replaced with the timestamp of the last successful ingestion process
+    * &lt;latest\_sequence&gt;
+      * This will be replaced with MAX\(s\_sequence\) from all inputs previously processed
+    * &lt;latest\_timestamp&gt;
+      * This will be replaced with MAX\(s\_update\_timestamp\) for Keyed or MAX\(s\_timestamp\) for Timeseries refresh types over all inputs previously processed
 {% endtab %}
 {% endtabs %}
 
-### Data Refresh Types
+## Data Refresh Types
 
-A Data Refresh Type specifies how RAP should handle processing and refreshing the data. The five types are described below. The parameters available will dynamically change depending on the user's selection.
+A Data Refresh Type specifies how DataOps should handle processing, refreshing, and storing the data. The five types are described below. The parameters available will dynamically change depending on the user's selection.
 
 {% tabs %}
+{% tab title="Full" %}
+**Full** sources assume each batch of data contains the most recent version of all data for all history. It is a full truncate and reload style refresh.
+
+Full refresh is the most simple and can process any data. It's often useful to start with Full refresh if you do not yet know which more specific and performant alternative to use.
+{% endtab %}
+
 {% tab title="Key" %}
-Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups. In the terminology of traditional star schema models, Key Sources are analogous to Dimensions.
+Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity.
+
+Key refresh is often the most convenient logically, but has performance trade-offs at scale when compared to None, Sequence, or Timestamp. If possible, those alternatives are preferred, but not always logically possible.
 {% endtab %}
 
 {% tab title="Timestamp" %}
-**Timestamp** sources identify changes in data using a column that contains the date and/or time for each record. Collectively, these values represent the time range of the entire data set. Data with newer time ranges replace data with older time ranges.
+**Timestamp** sources identify changes in data using a column that contains the date and/or time for each record. This is most commonly used with Event or IOT data that is written once and only once and has a monotonically increasing timestamp tracking field.
+
+It is also often useful for performance optimization vs Keyed if the source data has a defined period where records can be updated, after which they are guaranteed to be static, such as in monthly finance and accounting datasets.
 {% endtab %}
 
 {% tab title="Sequence" %}
-**Sequence** sources identify changes in data using a column containing integer numbers that follow a sequence. Data with higher value sequences replace data with lower value sequences.
-{% endtab %}
+**Sequence** sources identify changes in data using a column that contains a monotonically increasing ID tracking field and follows a write-once pattern.
 
-{% tab title="Full" %}
-**Full** sources replace the data completely whenever RAP ingests new data into the source. 
+It is also often useful for performance optimization vs Keyed if the source data has a defined range where records can be updated, after which they are guaranteed to be static.
 {% endtab %}
 
 {% tab title="None" %}
-**None** sources do not track changes in data. Instead, RAP appends any new data to the existing data.
+**None** is used when it can be assumed that all data from new Inputs can be considered New.
+
+This is useful for datasets that have an upstream CDC process and can guarantee once-and-only-once delivery of Data to DataOps.
+
+This is the most performant Refresh type, as CDC and the expensive portions of Refresh are skipped. 
 {% endtab %}
 {% endtabs %}
 
-### Additional Inputs
+The diagram below can be used as base guidance for which Refresh Type to select for what types of source datasets.
 
-| Filter Appears Under | Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- | :--- |
-| Connection Type: File | file\_mask\* | .csv | Enter the file name or file name pattern to watch for | N |
-| Connection Type: Table | pg\_fetch\_size |  | Fetch size for JDBC connection | Y |
-| All | connection\_name\* |  | Connection name of the source | N |
-| Connection Type: File and SFTP | delete\_file | TRUE | Remove file from source system when input completes | Y |
-| Connection Type: File and SFTP | post\_processing\_folder |  | Optional folder to move file to on source system once input is complete | Y |
-| Connection Type: Table | source\_query\* | SELECT \* FROM | Query to acquire the source data | N |
+Data Refresh selection is one of the most important decisions for design, and while this diagram provides base guidance, careful consideration and understanding of how the data is generated and will be used is required to make the correct decision.
 
-### Schedule
+![](../../.gitbook/assets/image%20%28348%29.png)
 
-Additional documentation on how to specify a cron schedule can be found at the [Cron Trigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)
+## Initiation Type
 
-| Appears Under | Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- | :--- |
-| Initiation Type: Scheduled | seconds |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
-| Initiation Type: Scheduled | minutes |  | Cron Field - Allowed Values: 0-59 - Allowed Special Characters: , - \* / | Y |
-| Initiation Type: Scheduled | hours |  | Cron Field - Allowed Values: 0-23 - Allowed Special Characters: , - \* / | Y |
-| Initiation Type: Scheduled | day\_of\_month |  | Cron Field - Allowed Values: 1-31 - Allowed Special Characters: , - \* ? / L W C | Y |
-| Initiation Type: Scheduled | month |  | Cron Field - Allowed Values: 0-11 or JAN-DEC - Allowed Special Characters: , - \* / | Y |
-| Initiation Type: Scheduled | day\_of\_week |  | Cron Field - Allowed Values: 0-6 \(0=Monday 6=Sunday\) - Allowed Special Characters: , - \* ? / L C \# | Y |
-| Initiation Type: Scheduled | error\_retry\_count | 3 | Number of times an input can be retried before failing | Y |
-| Initiation Type: Scheduled | error\_retry\_wait | 60 | Amount of time to wait between error retries \(in seconds\) | Y |
-| Initiation Type: Scheduled | disable\_schedule | FALSE | Disable schedule | Y |
+This determines how new Inputs are generated within DataOps. Most Connections Types only currently support [Scheduled](../schedules.md) pulls of data from the Connection, however File Connections include a watcher feature that will automatically begin processing any new files moved or generated in the Connection folder that also match the configured File Mask.
 
-### Staging
+With Custom Connection Type Sources utilizing the [SDK](../sdk/), it is possible to have a source be both scheduled and/or initialized from outside of DataOps utilizing the methods within the SDK and the Databricks APIs, providing maximum flexibility for any custom integration with 3rd party tools or in-house built applications 
 
-_\*Any parameter under the File Type option requires the user to have chosen a Connection Type of either File or SFTP._
+## Cluster Type
 
-| Appears Under | Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- | :--- |
-| All | compression | none | Specifies if reading from a compressed file | Y |
-| All | error\_threshold | 1 | Number of errors the staging phase will endure before failing the entire phase | Y |
-| All | line\_terminator | \r\n | Specifies character used to terminate lines in the file. Default is \n for unix and \r\n for Windows | Y |
-| All | obfuscated\_columns |  | Array of column keys that will be hashed via MD5 before storing | Y |
-| All | rows\_to\_skip | 0 | Integer indicating how many rows to skip | Y |
-| All | convert\_null\_identifiers |  | Array of text NULL identifiers that will be converted to Postgres NULL during staging | Y |
-| All | update\_landing\_timestamp | TRUE | 0/1 specifies if landing start/end timestamps should be updated from the date\_column data | Y |
-| All | trim\_headers | none | Choose what sides to trim whitespace on the header line or fields | Y |
-| All | trim\_data | both | Choose what sides to trim whitespace on the data elements | Y |
-| All | disable\_profiling | FALSE | Check to disable automatic data profiling for the source | Y |
-| Refresh Type: All \(except Key\) | batch\_size\* | 1000000 | Maximum size of internal tables. Use smaller values for higher concurrency in later stages | Y |
-| Refresh Type: All \(except Key\) | concurrency\* | 1 | Number of processing cores involved in staging phase for Time Series Sources. Minimum number of internal tables | Y |
-| Refresh Type: All \(except Key\) | partition\_column |  | Column\(s\) that will be hashed to calculate where data goes during partitioning \(Can be composite\). Used for Time Series Sources with downstream Window Function Processing | Y |
-| Refresh Type: Key, Timestamp | date\_column\* |  | Event date column | N |
-| Refresh Type: Key, Timestamp | datetime\_format | M/d/yyyy H:m:s | Java Datetime format for the date\_column | N |
-| Refresh Type: Key, Timestamp | get\_date\_from\_file\_name | FALSE | Used to apply the date time from the file name as the event time to all records | Y |
-| Refresh Type: Sequence | range\_column\* |  | Sequence column | N |
-| File Type: Fixed Width | schema\* | {} | JSON Schema for fixed width file types | N |
-| Refresh Type: Key | cdc\_process\* | N,C | Customization of what types of records to process as part of Change Data Capture. Values are \(N\)ew, \(C\)hanged, \(O\)ld, \(U\)nchanged | Y |
-| Refresh Type: Key | cdc\_store\_history | FALSE | 0/1 indicating whether to store the history of changes for each input | Y |
-| Refresh Type: Key, Timestamp | get\_date\_from\_file\_name | FALSE | Used to apply the date time from the file name as the event time to all records | Y |
-| Refresh Type: Key | exclude\_from\_cdc |  | Array of column names to be excluded from the CDC calculation | Y |
-| Refresh Type: Key | key\_columns\* |  | Array of one or more columns representing the unique identifier for records in this source | N |
-| File Type: Delimited | column\_delimiter\* | , | Column delimiter character in the Input file | Y |
-| File Type: Delimited | column\_headers |  | Array of strings describing the column headers. Used when files do not contain headers. | Y |
-| File Type: Delimited | header\_qualifier | " | Qualifier character for the header row for delimited files | Y |
-| File Type: Delimited | text\_qualifier | " | Qualifier character for data rows for delimited files | Y |
-| File Type: Delimited | extra\_column\_prefix | _\_extra\_column_ | Column prefix appended when extra columns are found in the headers. Useful when headers are manually set, but new columns appear in a file. | Y |
-| File Type: Delimited | ignore\_missing\_headers | FALSE | Place nulls in columns if row comes in with less columns than the manually specified  headers. | Y |
-| File Type: Delimited | allow\_extra\_columns | FALSE | Use column prefix to create new columns when more columns come in than specified in Column Headers parameter | Y |
+* **Custom:** Allows you to specify the infrastructure used by DataOps to process the data. You are able to specify any parameters available in the "existing\_cluster\_id OR new\_cluster" and "libraries" of the [Databricks Jobs API](https://docs.databricks.com/dev-tools/api/latest/jobs.html).
+  * These parameters should be structured as a single JSON object with the top level keys set as the relevant Field Names under the API docs from Databricks listed above.
+  * Here are some examples:
 
-### Retention
+```text
+{
+"new_cluster": {
+  "spark_version": "7.3.x-scala2.12",
+  "node_type_id": "r3.xlarge",
+    "aws_attributes": {
+      "availability": "ON_DEMAND"
+    },
+    "num_workers": 10
+  },
+  "libraries": [
+    {
+      "jar": "dbfs:/my-jar.jar"
+    },
+    {
+      "maven": {
+        "coordinates": "org.jsoup:jsoup:1.7.2"
+      }
+    }
+  ]       
+}
+```
 
-| Appears Under | Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- | :--- |
-| All | archive files | 1 year | Specifies period of time from input completion after which failed files are removed from Input archive folder | Y |
-| All | archive files failed | 1 year | Specifies period of time from input completion after which files are removed from Input archive folder | Y |
-| All | buffer files | 0 | Specifies period of time from output completion after which output files are moved from fast output buffer zone to long term output storage _\(Legacy Compatibility\)_ | Y |
-| All | buffer files failed | 7 days | Specifies period of time from input completion after which files are moved from Input buffer zone to long term Landing folder storage for failed inputs \(output\_status\_code &lt;&gt; ‘P’\) | Y |
-| Refresh Type: All \(except Key\) | data tables | 1 year | Specifies period of time from processing completion after which data tables are dropped \(for Time Series Sources\) | Y |
-| Refresh Type: Key | data tables | -1 | Specifies period of time from processing completion after which data is deleted \(for Keyed sources\) | Y |
-| All | process information | 2 years | Specifies period of time from processing completion after which data in processing tables \(input, landing, output\_send and associated history tables\) is deleted | Y |
-| All | work tables | 1 day | specifies period of time from processing completion after which work tables \(key_, ts_\) are dropped. | Y |
-| All | work tables failed | 7 days | specifies period of time from input completion after which work tables are dropped for failed inputs. | Y |
+```text
+{
+    "existing_cluster_id":"0512-152727-third1"
+}
+```
 
-### Alerts
+* **DataOps Managed:** This setting with use the default cluster configuration for the environment, optionally tune-able via the Performance & Cost detailed parameters section.
 
-| Appears Under | Parameter | Default Value | Description | Advanced |
-| :--- | :--- | :--- | :--- | :--- |
-| All | distribution\_list |  | Comma separated list of email addresses to receive alerts | Y |
-| All | enable\_failure | FALSE | Enables alert generation for processing failures | Y |
-| All | enable\_success | FALSE | Enables alert generation for successful processing events | Y |
+## Advanced Parameters
+
+Depending on the selections made in the required parameters section, the advanced parameters section will provide various sub-settings to help configurators tune the jobs to their needs. Descriptions for each are included in the UI. Please submit a support ticket if the descriptions in the UI do not adequately explain the functionality of a specific parameter.
 

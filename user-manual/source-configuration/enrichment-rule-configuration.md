@@ -1,10 +1,10 @@
 ---
 description: >-
-  Enrichment and Validation Rules allow Intellio DataOps (RAP) to modify and
-  transform data.
+  Enrichment and Validation Rules allow Intellio DataOps to modify and transform
+  data.
 ---
 
-# !! Rules
+# Rules
 
 ## Rules Tab
 

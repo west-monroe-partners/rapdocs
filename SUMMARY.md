@@ -32,11 +32,12 @@
 ## User Manual
 
 * [Connections](user-manual/connections.md)
+* [!! Schedules](user-manual/schedules.md)
 * [Sources](user-manual/source-configuration/README.md)
-  * [!! Details](user-manual/source-configuration/source-details.md)
-  * [!! Dependencies](user-manual/source-configuration/dependency-configuration.md)
+  * [Settings](user-manual/source-configuration/source-details.md)
+  * [Dependencies](user-manual/source-configuration/dependency-configuration.md)
   * [Relations](user-manual/source-configuration/relations-1.md)
-  * [!! Rules](user-manual/source-configuration/enrichment-rule-configuration.md)
+  * [Rules](user-manual/source-configuration/enrichment-rule-configuration.md)
   * [Inputs](user-manual/source-configuration/source-inputs.md)
   * [!! Process](user-manual/source-configuration/process.md)
   * [Data View](user-manual/source-configuration/source-data-view.md)
