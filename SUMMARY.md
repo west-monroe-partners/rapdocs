@@ -45,7 +45,7 @@
   * [Output Mapping](user-manual/output-configuration/output-mapping.md)
   * [!! Output History](user-manual/output-configuration/output-history.md)
 * [Connections](user-manual/connections.md)
-* [!! Schedules](user-manual/schedules.md)
+* [Schedules](user-manual/schedules.md)
 * [Agents](user-manual/agents.md)
 * [Templates and Tokens](user-manual/validation-and-enrichment-rule-templates/README.md)
   * [Tokens](user-manual/validation-and-enrichment-rule-templates/tokens.md)
