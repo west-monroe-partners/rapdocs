@@ -62,7 +62,9 @@ GRANT ALL on future views in schema SNOWFLAKE_EXAMPLE.PUBLIC to role RW_ROLE;
 
 ```
 
-## Setting up a Snowflake Integration
+## Setting up a Snowflake Integration - Only applies to IDO Version 2.3.3 and lower
+
+_If you are on version 2.4.0 or higher, this step can be skipped. IDO now uses the Databricks Spark Connector to write to Snowflake._
 
 An integration between Snowflake and the cloud account must be created in order to DataOps to write data out to Snowflake. 
 
