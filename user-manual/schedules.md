@@ -10,7 +10,9 @@ description: >-
 
 Schedules was previous found under the Source Settings parameter table \(&lt;2.4.0\). It now has its own page which can be accessed from the main menu; simply hit Schedules to be taken to the list of Schedules.
 
-The description is the parsed CRON expression. Names can be anything, but best practice is to have a CRON expression present or use time specific statement.
+{% hint style="info" %}
+The schedule description is always the parsed CRON expression. Names can be anything, but best practice is to have a CRON expression present or use time specific statement.
+{% endhint %}
 
 ![](../.gitbook/assets/schedules_002.png)
 
@@ -29,4 +31,12 @@ The schedule settings page allows users to create and update schedules. The exam
 * **Day of Week:** Specific days of the week as numerals ranging from 0-6 \(0=Monday 6=Sunday\) - Allowed Special Characters: , - \* ? / L C \#
 * **Error Retry Count\*:** Number of times the input will retry upon error \(_default 3\)_
 * **Error Retry Wait\*:** Number of seconds the input will wait before retry _\(default 60\)_
+
+## Add a Schedule to a Source
+
+In order to add a schedule to a source, simply navigate to the source settings page of your desired source. There, select the desired schedule from the Schedules dropdown.
+
+{% hint style="info" %}
+The schedules dropdown will not appear for loopback connections nor watcher initiation types.
+{% endhint %}
 
