@@ -34,9 +34,11 @@ The schedule settings page allows users to create and update schedules. The exam
 
 ## Add a Schedule to a Source
 
-In order to add a schedule to a source, simply navigate to the source settings page of your desired source. There, select the desired schedule from the Schedules dropdown.
+In order to add a schedule to a source, simply navigate to the source settings page of your desired source. There, select the desired schedule from the Schedules dropdown. The dropdown is located directly beneath the **Initiation Type**.
 
 {% hint style="info" %}
 The schedules dropdown will not appear for loopback connections nor watcher initiation types.
 {% endhint %}
+
+![](../.gitbook/assets/schedules_004%20%281%29.png)
 
