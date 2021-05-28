@@ -54,7 +54,6 @@ CRON \(Command Run On\) is used to create repetitive schedules. Use the followin
 | Day of month | 1-31 | , - \* ? / L W |
 | Month | 1-12 or JAN-DEC | , - \* / |
 | Day of week | 1-7 or SUN-SAT | , - \* ? / L \# |
-| Year \(optional\) | 1970-2099 | , - \* / |
 
 {% hint style="info" %}
 You must specify either day of month or day of week, but not both. Insert a question mark \(?\) as a placeholder for the one not specified.
