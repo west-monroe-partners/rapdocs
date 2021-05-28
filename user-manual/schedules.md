@@ -53,7 +53,7 @@ CRON \(Command Run On\) is used to create repetitive schedules. Use the followin
 | Hours | 0-23 | , - \* / |
 | Day of month | 1-31 | , - \* ? / L W |
 | Month | 1-12 or JAN-DEC | , - \* / |
-| Day of week | 1-7 or SUN-SAT | , - \* ? / L \# |
+| Day of week | 0-6 or MON-SUN | , - \* ? / L \# |
 
 {% hint style="info" %}
 You must specify either day of month or day of week, but not both. Insert a question mark \(?\) as a placeholder for the one not specified.
@@ -157,6 +157,16 @@ The following table describes the legal special characters and how you can use t
         <p>The <code>W</code> character can only be used to specify a single day, not
           a range or list of days.</p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>C </code>(calendar)</td>
+      <td style="text-align:left">This characters is short-hand for &quot;calendar&quot; and is only allowed
+        for the day-of-month and day-of-week fields. This means values are calculated
+        against the associated calendar, if any. If no calendar is associated,
+        then it is equivalent to having an all-inclusive calendar. A value of &quot;5C&quot;
+        in the day-of-month field means &quot;the first day included by the calendar
+        on or after the 5th.&quot; A value of &quot;1C&quot; in the day-of-week
+        field means &quot;the first day included by the calendar on or after Tuesday&quot;</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>#</code>
