@@ -1,7 +1,7 @@
 ---
 description: >-
   A schedule uses a CRON expression to determine how often source inputs are
-  updated. Multiple sources can be assigned to a singular schedule.
+  updated. Multiple sources can be assigned to a single schedule.
 ---
 
 # Schedules
