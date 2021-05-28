@@ -58,8 +58,6 @@ CRON \(Command Run On\) is used to create repetitive schedules. Use the followin
 {% hint style="info" %}
 You must specify either day of month or day of week, but not both. Insert a question mark \(?\) as a placeholder for the one not specified.
 
-If you do not specify the year, the year will be automatically determined by taking into consideration whether the date \(month and day\) inserted has already passed when compared to the current date of the system. If the date has not already passed, the current year is inserted. If the date has already passed, the next year is inserted.
-
 The names of months and days of the week are not case sensitive. "MON" is the same as "mon".
 {% endhint %}
 
