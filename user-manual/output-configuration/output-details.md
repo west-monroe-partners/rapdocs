@@ -4,7 +4,7 @@ description: >-
   the Output including the Connection to use and the Output Type.
 ---
 
-# Output Settings
+# Settings
 
 In the Edit Output screen, users can see the various components that make up an Output, including tabs for Output Settings, Mappings, and Output History. When initially configuring an Output, this is the only visible tab.
 
