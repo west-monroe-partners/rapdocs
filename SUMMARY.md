@@ -43,7 +43,7 @@
   * [Processing Queue](user-manual/processing/processing-queue.md)
   * [!! Workflow Queue](user-manual/processing/workflow-queue.md)
 * [Outputs](user-manual/output-configuration/README.md)
-  * [Output Details](user-manual/output-configuration/output-details.md)
+  * [Output Settings](user-manual/output-configuration/output-details.md)
   * [Output Mapping](user-manual/output-configuration/output-mapping.md)
   * [!! Output History](user-manual/output-configuration/output-history.md)
 * [Connections](user-manual/connections.md)
