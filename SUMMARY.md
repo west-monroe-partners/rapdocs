@@ -48,7 +48,7 @@
   * [!! Output History](user-manual/output-configuration/output-history.md)
 * [Connections](user-manual/connections.md)
 * [Schedules](user-manual/schedules.md)
-* [!! Agents](user-manual/agents/README.md)
+* [Agents](user-manual/agents/README.md)
   * [!! Settings](user-manual/agents/settings.md)
   * [!! Logs](user-manual/agents/logs.md)
 * [Templates and Tokens](user-manual/validation-and-enrichment-rule-templates/README.md)
