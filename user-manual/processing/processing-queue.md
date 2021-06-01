@@ -1,15 +1,6 @@
----
-description: >-
-  The processing page provides a real-time overview of the system, including
-  those processes currently waiting as part of the workflow engine's dependency
-  queue
----
+# Processing Queue
 
-# Processing
-
-## Processing Queue
-
-![Sample Processing Queue](../.gitbook/assets/image%20%28350%29.png)
+![Sample Processing Queue](../../.gitbook/assets/image%20%28350%29.png)
 
 The Processing Queue tab provides an interactive overview of all processes completed, active, errored or otherwise in the system, filtered by day \(defaulted to today\).
 
@@ -31,11 +22,11 @@ The fields displayed for process are as follows:
 
   **Status:**  An icon and help-text indicating the result of the Processing Step
 
-  ![](../.gitbook/assets/completed.png)   No errors or warnings. Processed successfully  
-  ![](../.gitbook/assets/failed.png)   A failure has occurred in the process chain  
-  ![](../.gitbook/assets/inprogress.png)   The process is currently running  
-  ![](../.gitbook/assets/image%20%28291%29.png)  The process is launching a new cluster  
-  ![](../.gitbook/assets/image%20%28351%29.png) The process chain has encountered an error but recovered successfully
+  ![](../../.gitbook/assets/completed.png)   No errors or warnings. Processed successfully  
+  ![](../../.gitbook/assets/failed.png)   A failure has occurred in the process chain  
+  ![](../../.gitbook/assets/inprogress.png)   The process is currently running  
+  ![](../../.gitbook/assets/image%20%28291%29.png)  The process is launching a new cluster  
+  ![](../../.gitbook/assets/image%20%28351%29.png) The process chain has encountered an error but recovered successfully
 
 * **Cost:** An _estimate_ of the cost to execute a specific job, based on published costs by the cloud vendor and Databricks multiplied by runtime, in cents.
 * **\#:** Processed record counts popup to quickly access and display metadata about the data processed
