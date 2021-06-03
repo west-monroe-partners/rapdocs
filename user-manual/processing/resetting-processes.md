@@ -26,6 +26,10 @@ If any CDC parameters have changed, a similar prompt will show up. It is HIGHLY 
 A common processing misstep that users find themselves in is to reset CDC after making changes to Rules. This results in extra processing time for the source and is unnecessary.
 {% endhint %}
 
+{% hint style="danger" %}
+There is a known bug in IDO version 2.3.3 and lower where resetting CDC on any input except the oldest one on keyed sources can cause duplicate data in the hub table. This issue is fixed in version 2.4.0
+{% endhint %}
+
 ## Validation/Enrichment Rules Have Changed
 
 If any Validation or Enrichment rules are updated or created, there are two options to propagate the changes to the data.
