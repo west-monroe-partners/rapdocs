@@ -4,7 +4,11 @@ During the development lifecycle, users will need to reset their sources often t
 
 The following buttons are considered the "source level reset" buttons and will be referred to throughout the guide.
 
-![](../../.gitbook/assets/image%20%28357%29.png)
+![](../../.gitbook/assets/image%20%28359%29.png)
+
+The following buttons are considered the "input level reset" buttons and will be referred to throughout the guide.
+
+![](../../.gitbook/assets/image%20%28358%29.png)
 
 ## Ingestion Parameters Have Changed
 
@@ -47,13 +51,23 @@ If any changes have been made to the Output settings or Output Mappings, then th
 
 ## Ingestion Has Failed
 
+A failed Ingestion process can not be reset. Delete the failed input using the input level "Delete" button and use the source level button "Pull Now" to kick off a new Ingestion process.
+
 ## Parsing Has Failed
+
+Once the error has been resolved, use the input level "Reset Parsing" button to enqueue a new parse process for the input. Source level reset button can be used here as well if multiple inputs have failed.
 
 ## Capture Data Changes Has Failed
 
+Once the error has been resolved, use the input level "Reset CDC" button to enqueue a new Capture Data Changes process for the input. Source level reset button can be used here as well if multiple inputs have failed.
+
 ## Enrichment or Refresh Has Failed
 
+Once the error has been resolved, use the input level "Reset Enrichment" button to enqueue a new Enrichment process for the input. If Refresh failed, the Enrichment process will run first, then Refresh will run. Source level reset button can be used here as well if multiple inputs have failed.
+
 ## Output Has Failed
+
+Once the error has been resolved, use the input level "Reset Output" button to enqueue a new Output process for the input. Source level reset button can be used here as well if multiple inputs have failed.
 
 
 
