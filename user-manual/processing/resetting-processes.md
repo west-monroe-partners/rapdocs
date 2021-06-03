@@ -45,5 +45,15 @@ If any changes have been made to the Output settings or Output Mappings, then th
 1. Use the source level reset button called "Reset All Output". The benefit of resetting output this way is that refresh types are optimized to run in this fashion, especially when running deletes on the target output table.
 2. Use the input level reset button called "Reset Output". This will reset the output for the individual inputs data. Is generally useful for unit testing changes to output settings before running all inputs on the source through output.
 
+## Ingestion Has Failed
+
+## Parsing Has Failed
+
+## Capture Data Changes Has Failed
+
+## Enrichment or Refresh Has Failed
+
+## Output Has Failed
+
 
 
