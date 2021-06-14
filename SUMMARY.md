@@ -31,6 +31,7 @@
 
 ## User Manual
 
+* [!! Managing System Configuration](user-manual/managing-system-configuration.md)
 * [Sources](user-manual/source-configuration/README.md)
   * [Settings](user-manual/source-configuration/source-details.md)
   * [Dependencies](user-manual/source-configuration/dependency-configuration.md)
