@@ -31,7 +31,6 @@
 
 ## User Manual
 
-* [!! Managing System Configuration](user-manual/managing-system-configuration.md)
 * [Sources](user-manual/source-configuration/README.md)
   * [Settings](user-manual/source-configuration/source-details.md)
   * [Dependencies](user-manual/source-configuration/dependency-configuration.md)
@@ -62,6 +61,7 @@
   * [Custom Post Output](user-manual/sdk/custom-post-output.md)
   * [Custom Ingestion](user-manual/sdk/custom-ingestion.md)
 * [Import/Export](user-manual/import-export.md)
+* [Managing System Configuration](user-manual/managing-system-configuration.md)
 
 ## Operations
 
