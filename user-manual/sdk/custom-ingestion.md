@@ -29,6 +29,16 @@ All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ![Custom Source Screen](../../.gitbook/assets/image%20%28336%29.png)
 
+### Specifying a Custom Cluster
+
+Cluster configuration is a very important part of ensuring reliable execution of your custom job. Please refer to the [Sources Settings](../source-configuration/source-details.md#cluster-type) page for a detailed overview of options.
+
+{% hint style="danger" %}
+Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
+
+While potentially viable in specific situations, DataOps is not responsible for state clearing and results controls. Developers must handle these within their notebooks to guarantee reliable results and stability. 
+{% endhint %}
+
 ### Creating your first Notebook
 
 Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_  with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ Users will also need to replace the _**`<DataOpsSourceName>`**_ with the name of the associated custom DataOps source.
