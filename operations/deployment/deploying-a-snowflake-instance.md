@@ -64,6 +64,10 @@ GRANT ALL on future views in schema SNOWFLAKE_EXAMPLE.PUBLIC to role RW_ROLE;
 
 ## Setting up a Snowflake Integration
 
+{% hint style="warning" %}
+As of IDO version 2.4.0, the Snowflake Integration is no longer needed. We now use the Spark integration with Snowflake to write data to Snowflake during the Output process. 
+{% endhint %}
+
 An integration between Snowflake and the cloud account must be created in order to DataOps to write data out to Snowflake. 
 
 Instructions for setting up an AWS storage integration can be found [here](https://docs.snowflake.com/en/user-guide/data-load-s3-config-storage-integration.html).
