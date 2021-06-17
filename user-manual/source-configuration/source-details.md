@@ -160,12 +160,6 @@ With Custom Connection Type Sources utilizing the [SDK](../sdk/), it is possible
 }
 ```
 
-```text
-{
-    "existing_cluster_id":"0512-152727-third1"
-}
-```
-
 * **DataOps Managed:** This setting with use the default cluster configuration for the environment, optionally tune-able via the Performance & Cost detailed parameters section.
 
 ## Advanced Parameters
