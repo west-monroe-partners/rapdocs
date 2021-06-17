@@ -29,17 +29,15 @@ All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ![Custom Source Screen](../../.gitbook/assets/image%20%28336%29.png)
 
-### Setting up a cluster
+### Specifying a Custom Cluster
 
-Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. A page will display similar to the one below:
+Cluster configuration is a very important part of ensuring reliable execution of your custom job. Please refer to the [Sources Settings](../source-configuration/source-details.md#cluster-type) page for a detailed overview of options.
 
-![rap-mini-sparky cluster config page](../../.gitbook/assets/image%20%287%29.png)
+{% hint style="danger" %}
+Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
 
-Navigate to the Libraries tab, and click the **Install New** button. This will launch a popup as seen below. Choose DBFS/S3, Jar, and enter S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar for AWS or TBD for Azure
-
-![Install Library Popup](../../.gitbook/assets/image%20%282%29.png)
-
-The cluster will then need to be restarted. This process should be repeated for any cluster that will run a DataOps custom ingestion notebook.
+While potentially viable in specific situations, DataOps is not responsible for state clearing and results controls. Developers must handle these within their notebooks to guarantee reliable results and stability. 
+{% endhint %}
 
 ### Creating your first Notebook
 
