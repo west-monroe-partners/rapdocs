@@ -1,6 +1,6 @@
 # Custom Post Output
 
- The Custom Post Output SDK will allow users to define code in a Databricks Notebook or a custom Jar that will be run after the output process. This page is a "Hello World" for custom post output. Full Scaladoc for the SDK can be found [here](https://docs.intellio.wmp.com/com/wmp/intellio/dataops/sdk/PostOutputSession.html). 
+The Custom Post Output SDK will allow users to define code in a Databricks Notebook or a custom Jar that will be run after the output process. This page is a "Hello World" for custom post output. Full Scaladoc for the SDK can be found [here](https://docs.intellio.wmp.com/com/wmp/intellio/dataops/sdk/PostOutputSession.html). 
 
 
 
