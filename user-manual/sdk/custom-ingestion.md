@@ -29,18 +29,6 @@ All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ![Custom Source Screen](../../.gitbook/assets/image%20%28336%29.png)
 
-### Setting up a cluster
-
-Before running a custom notebook, the DataOps SDK must be attached to the cluster that will run. For the purpose of getting started, we will use the rap-mini-sparky cluster. After clicking into the Clusters page, click into the rap-mini-spark cluster. A page will display similar to the one below:
-
-![rap-mini-sparky cluster config page](../../.gitbook/assets/image%20%287%29.png)
-
-Navigate to the Libraries tab, and click the **Install New** button. This will launch a popup as seen below. Choose DBFS/S3, Jar, and enter S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar for AWS or TBD for Azure
-
-![Install Library Popup](../../.gitbook/assets/image%20%282%29.png)
-
-The cluster will then need to be restarted. This process should be repeated for any cluster that will run a DataOps custom ingestion notebook.
-
 ### Creating your first Notebook
 
 Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_  with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ Users will also need to replace the _**`<DataOpsSourceName>`**_ with the name of the associated custom DataOps source.
