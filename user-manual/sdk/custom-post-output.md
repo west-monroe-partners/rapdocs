@@ -29,7 +29,7 @@ Below is a sample of notebook code that sets up a post output session and then p
 ```text
 import com.wmp.intellio.dataops.sdk._
 
-val session = new IngestionSession("<DataOpsEnvironmentName>", "<DataOpsOutputName>") 
+val session = new PostOutputSession("<DataOpsEnvironmentName>", "<DataOpsOutputName>") 
 
 def helloWorld(): Unit = {
 log("Hello World!")
@@ -57,7 +57,7 @@ The 5th-7th lines are the key part of the post output where the custom user code
 
 The 10th line runs the custom post output. It pulls the data as specified in the helloWorld function.
 
-### Running the Custom Ingestion
+### Running the Custom Post Output
 
 The custom post output can be run in one of three ways
 
