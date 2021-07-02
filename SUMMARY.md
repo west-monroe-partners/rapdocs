@@ -20,7 +20,6 @@
 ---
 
 * [Logical](logical-architecture-overview/README.md)
-  * [Operation Type](logical-architecture-overview/operation-type.md)
   * [DataOps Agent](logical-architecture-overview/rap-agent.md)
   * [User Interface](logical-architecture-overview/user-interface.md)
   * [Data Storage](logical-architecture-overview/data-processing.md)
