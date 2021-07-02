@@ -1,8 +1,8 @@
-# !! Workflow Queue
+# Workflow Queue
 
 ![Sample Workflow Queue](../../.gitbook/assets/image%20%28364%29.png)
 
-The Workflow Queue tab provides a simple view of incoming processes. It provides information regarding sources such as their queue id, when the workflow process was created, name of the source, input id, type of operation, wait type and wait details. 
+The Workflow Queue tab provides a view of processes that have upstream dependencies they are waiting on. All processes in this list require another process to finish successfully, or the blocker manually removed by a user to be released into the Processing Queue. It provides information regarding sources such as their queue id, when the workflow process was created, name of the source, input id, type of operation, wait type and wait details. 
 
 Detailed breakdown of each header:
 

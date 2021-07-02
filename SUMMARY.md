@@ -41,7 +41,7 @@
   * [Data View](user-manual/source-configuration/source-data-view.md)
 * [Processing](user-manual/processing/README.md)
   * [Processing Queue](user-manual/processing/processing-queue.md)
-  * [!! Workflow Queue](user-manual/processing/workflow-queue.md)
+  * [Workflow Queue](user-manual/processing/workflow-queue.md)
   * [Resetting Processes](user-manual/processing/resetting-processes.md)
 * [Outputs](user-manual/output-configuration/README.md)
   * [Settings](user-manual/output-configuration/output-details.md)
