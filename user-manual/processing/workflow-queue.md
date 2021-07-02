@@ -15,9 +15,6 @@ Detailed breakdown of each header:
   ```text
   --Query to get all operation type names
   select process_name from meta.process_type;
-
-  --Query to get all operation type names & their descriptions
-  Coming soon!
   ```
 
 * **Wait Type**: Each wait type represents the item state in the workflow queue. To see a full list of all available wait types - please execute the _following_ query.
