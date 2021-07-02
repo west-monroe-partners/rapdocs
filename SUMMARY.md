@@ -85,6 +85,7 @@
 ## Releases
 
 * [Announcements](releases/announcements/README.md)
+  * [Performance Improvements and Delta Lake in 2.4.1](releases/announcements/performance-improvements-and-delta-lake-in-2.4.1.md)
   * [Quality of Life Features in 2.4.0](releases/announcements/quality-of-life-features-in-2.4.0.md)
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
