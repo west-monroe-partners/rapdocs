@@ -113,11 +113,11 @@ If running a non-public facing deployment - these variables will need to be adde
 | Variable | Example | Description |
 | :--- | :--- | :--- |
 | publicFacing | no | Triggers the infrastructure to deploy non-public facing resources |
-| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer |
+| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | Optional ARN to an SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If not set, the cert will be used the same way as in the public deployment. |
 | privateApiName | api.intellio.test | API url |
 | privateDomainName | intellio.test | Base url for the environment |
 | privateUIName | dev.intellio.test | UI url |
-| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to |
+| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to. If not set, a hosted zone will be created. |
 
 ## Verify the deployment
 
