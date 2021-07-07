@@ -90,6 +90,7 @@
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
   * [2.4](releases/changelog/2.4/README.md)
+    * [2.4.1](releases/changelog/2.4/2.4.1.md)
     * [2.4.0 - Hotfix](releases/changelog/2.4/2.4.0-june-15th-hotfix.md)
     * [2.4.0](releases/changelog/2.4/2.4.0.md)
   * [2.3](releases/changelog/2.3/README.md)
