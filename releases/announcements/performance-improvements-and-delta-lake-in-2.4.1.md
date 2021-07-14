@@ -114,6 +114,8 @@ Updated formula to calculate the available number of executors using the number 
 
 ## Improved Auto-Refresh of Source Status, Process, and Inputs pages
 
+_By: Vadim Orlov, Innovation Fellow and Intellio Labs Lead Architect_
+
 As part of the 6/21 Hotfix for 2.4.0, we were forced to temporarily disable the auto-refresh functionality due to it's impact on overall platform stability. Because manually refreshing the pages is an extremely painful user experience, we quickly designed not only a fix - but an improvement to this critical feature.
 
 #### 2.4.0 Behavior: 
