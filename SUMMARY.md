@@ -43,6 +43,7 @@
   * [Processing Queue](user-manual/processing/processing-queue.md)
   * [Workflow Queue](user-manual/processing/workflow-queue.md)
   * [Resetting Processes](user-manual/processing/resetting-processes.md)
+  * [Singleton Cluster Processing](user-manual/processing/singleton-cluster-processing.md)
 * [Outputs](user-manual/output-configuration/README.md)
   * [Settings](user-manual/output-configuration/output-details.md)
   * [Mapping](user-manual/output-configuration/output-mapping.md)
