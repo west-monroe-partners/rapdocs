@@ -2,6 +2,16 @@
 
 For environments that are underdoing daily development, it may be beneficial to stand up a singleton cluster to attach to sources that are undergoing development. This will enable the user to have an always-on cluster that will require minimal to no cluster launching time when resetting processes on the source.
 
+## Limitations
+
+{% hint style="danger" %}
+Do not use the "rap-mini-sparky" cluster as the singleton cluster!
+{% endhint %}
+
+{% hint style="danger" %}
+Do not attach a Databricks notebook to the configured cluster. It will cause issues with DataOps processing.
+{% endhint %}
+
 ## Cluster Configuration
 
 Create a new cluster in Databricks. The name can be whatever makes sense for your team. Set the following configurations on the cluster. For Instance Profile - Choose the instance profile that has been configured for your environment. In most cases, there should only be one and it should be called "&lt;environment&gt;-db-instance-profile-&lt;client&gt;"
