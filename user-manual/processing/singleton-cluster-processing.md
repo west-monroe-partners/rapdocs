@@ -1,4 +1,4 @@
-# Singleton Cluster Processing
+# Development Environment Setup
 
 For environments that are underdoing daily development, it may be beneficial to stand up a singleton cluster to attach to sources that are undergoing development. This will enable the user to have an always-on cluster that will require minimal to no cluster launching time when resetting processes on the source.
 
@@ -32,5 +32,5 @@ Navigate to the Performance & Cost parameter section on the same source and conf
 
 ![](../../.gitbook/assets/image%20%28366%29.png)
 
-Once these are complete, make sure the changes to the source are saved! Once they're saved, try launching a process that has passed previously to test functionality. As long as the cluster is running, you should not be waiting for clusters to launch and processes should start running immediately.
+Once these are complete, make sure the changes to the source are saved! Once they're saved, try launching a process that has passed previously to test functionality. As long as the cluster is running, you should only be waiting for 10-15 seconds maximum for the job to be provisioned to the cluster \(IDO will display that it is launching a cluster\) and processes should start running immediately.
 
