@@ -107,6 +107,10 @@ What follows is a list of parameters that tailor the standard AWS deployment env
 | auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
 | auth0ClientId | xxx | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
 | auth0ClientSecret | xxx | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
+| databricksE2Enabled | yes | Is Databricks E2 architecture being used in this environment? |
+| databricksAccountId | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2 |
+| databricksAccountUser | user@wmp.com | Username for main E2 account user |
+| databricksAccountPassword | xxxxxxxxx | Password for main E2 account user |
 
 If running a non-public facing deployment - these variables will need to be added:
 
