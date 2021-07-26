@@ -127,6 +127,7 @@ If running a non-public facing deployment - these variables are optional:
 | :--- | :--- | :--- |
 | privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If this variable is not added, a new certificate will be requested by the Terraform script. |
 | privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to. If this variable is not added, a new private hosted zone will be created by the Terraform script. |
+| usePublicRoute53 | no | If set to yes, an existing public route 53 zone will be used instead of using/creating a private zone. |
 
 ## Verify the deployment
 
