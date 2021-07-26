@@ -18,8 +18,13 @@ Private Endpoints
 * UI will be accessed through private VM that is deployed in the IDO VNet, connections to the VM will be made using VPN or Amazon Appstream
 * API is not publicly exposed
 * Agent can only access networks that can be VPC Peered to IDO VNet
+* Public or Private Route 53 Hosted Zone can be used, depending on DNS settings
 
 Please reach out to IDO team for diagrams of both architectures
+
+{% hint style="warning" %}
+Amazon AppStream is not available in the us-east-2 and us-west-1 regions - please take this into consideration if using a private facing deployment.
+{% endhint %}
 
 ## URL Management
 
@@ -36,6 +41,7 @@ A valid SSL certificate that the client organization controls to perform secure 
 
 * Use an existing certificate and define a subdomain allocated to DataOps.
 * Purchase a new SSL certificate for a new domain or subdomain.
+  * If a subdomain is used, a certificate can be purchased on AWS ACM
   * An Azure partner is Digicert.com
   * Deployment requires either a wildcard certificate or two single domain certificates per environment.
   * After purchase is complete, verify ownership of the domain to receive the certificate. **This is a requirement for deployment.**
@@ -50,7 +56,7 @@ Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommen
 The Databricks Account will require a credit card to be added during sign up - Please have a corporate card or billing account ready to go
 {% endhint %}
 
-Reach out to WMP team or Databricks representative to get Databricks E2 Account provisioned
+Reach out to WMP team or Databricks representative to get Databricks E2 Account provisioned.
 
 ## Create a GitHub Account
 
@@ -70,7 +76,7 @@ If an AWS environment does not already exist, it is required to deploy onto AWS.
 
 ## Decide on a VPN
 
-If a VPN vendor is not already chosen, recommend to utilize Open VPN which can be deployed into the Intellio DataOps environment.
+If a VPN vendor is not already chosen, recommend to utilize Open VPN which can be deployed into the Intellio DataOps environment. VPN is not necessary for deployment - however, it may be necessary if using the private facing infrastructure
 
 ## AWS Deployment Parameters
 
@@ -107,17 +113,27 @@ What follows is a list of parameters that tailor the standard AWS deployment env
 | auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
 | auth0ClientId | xxx | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
 | auth0ClientSecret | xxx | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
+| databricksE2Enabled | yes | Is Databricks E2 architecture being used in this environment? |
+| databricksAccountId | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2 |
+| databricksAccountUser | user@wmp.com | Username for main E2 account user |
+| databricksAccountPassword | xxxxxxxxx | Password for main E2 account user |
 
 If running a non-public facing deployment - these variables will need to be added:
 
 | Variable | Example | Description |
 | :--- | :--- | :--- |
 | publicFacing | no | Triggers the infrastructure to deploy non-public facing resources |
-| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer |
 | privateApiName | api.intellio.test | API url |
 | privateDomainName | intellio.test | Base url for the environment |
 | privateUIName | dev.intellio.test | UI url |
-| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to |
+
+If running a non-public facing deployment - these variables are optional:
+
+| Variable | Example | Description |
+| :--- | :--- | :--- |
+| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If this variable is not added, a new certificate will be requested by the Terraform script. |
+| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to. If this variable is not added, a new private hosted zone will be created by the Terraform script. |
+| usePublicRoute53 | no | If set to yes, an existing public route 53 zone will be used instead of using/creating a private zone. |
 
 ## Verify the deployment
 
