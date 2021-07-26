@@ -21,6 +21,10 @@ Private Endpoints
 
 Please reach out to IDO team for diagrams of both architectures
 
+{% hint style="warning" %}
+Amazon AppStream is not available in the us-east-2 and us-west-1 regions - please take this into consideration if using a private facing deployment.
+{% endhint %}
+
 ## URL Management
 
 Two options exist for URL management:
