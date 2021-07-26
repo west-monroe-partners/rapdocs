@@ -148,5 +148,7 @@ In the Auth0 Dashboard there is a section on the left hand menu called "Rules". 
 
 ![](../../../.gitbook/assets/image%20%28277%29%20%281%29.png)
 
+## Accessing Private Facing Environments
 
+To access the site in a private facing environment, a VM will need to be setup that is connected to the IDO VPC that was deployed by Terraform. Amazon Appstream can be used, as well as creating a jumpbox VM manually, as long as either have access to the IDO VPC - directly or through peering connection.
 
