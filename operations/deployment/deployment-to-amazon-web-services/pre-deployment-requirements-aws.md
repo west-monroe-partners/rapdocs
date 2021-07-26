@@ -113,11 +113,16 @@ If running a non-public facing deployment - these variables will need to be adde
 | Variable | Example | Description |
 | :--- | :--- | :--- |
 | publicFacing | no | Triggers the infrastructure to deploy non-public facing resources |
-| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer |
 | privateApiName | api.intellio.test | API url |
 | privateDomainName | intellio.test | Base url for the environment |
 | privateUIName | dev.intellio.test | UI url |
-| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to |
+
+If running a non-public facing deployment - these variables are optional:
+
+| Variable | Example | Description |
+| :--- | :--- | :--- |
+| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If this variable is not added, a new certificate will be requested by the Terraform script. |
+| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to. If this variable is not added, a new private hosted zone will be created by the Terraform script. |
 
 ## Verify the deployment
 
