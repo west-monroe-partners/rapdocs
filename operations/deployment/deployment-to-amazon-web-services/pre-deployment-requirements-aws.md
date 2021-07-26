@@ -41,6 +41,7 @@ A valid SSL certificate that the client organization controls to perform secure 
 
 * Use an existing certificate and define a subdomain allocated to DataOps.
 * Purchase a new SSL certificate for a new domain or subdomain.
+  * If a subdomain is used, a certificate can be purchased on AWS ACM
   * An Azure partner is Digicert.com
   * Deployment requires either a wildcard certificate or two single domain certificates per environment.
   * After purchase is complete, verify ownership of the domain to receive the certificate. **This is a requirement for deployment.**
@@ -55,7 +56,7 @@ Create a [Docker Hub](https://hub.docker.com/signup) account, and it is recommen
 The Databricks Account will require a credit card to be added during sign up - Please have a corporate card or billing account ready to go
 {% endhint %}
 
-Reach out to WMP team or Databricks representative to get Databricks E2 Account provisioned
+Reach out to WMP team or Databricks representative to get Databricks E2 Account provisioned.
 
 ## Create a GitHub Account
 
@@ -75,7 +76,7 @@ If an AWS environment does not already exist, it is required to deploy onto AWS.
 
 ## Decide on a VPN
 
-If a VPN vendor is not already chosen, recommend to utilize Open VPN which can be deployed into the Intellio DataOps environment.
+If a VPN vendor is not already chosen, recommend to utilize Open VPN which can be deployed into the Intellio DataOps environment. VPN is not necessary for deployment - however, it may be necessary if using the private facing infrastructure
 
 ## AWS Deployment Parameters
 
