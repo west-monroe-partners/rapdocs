@@ -21,7 +21,7 @@ Create a new workspace in Terraform Cloud. Choose "Version control workflow". Co
 When the VCS connection is created, set the working directory to "terraform/aws/main-deployment". The VCS branch can be the default branch, as it generally defaults to master.
 
 {% hint style="info" %}
-Make sure that the Terraform version in the workspace is set to "0.13.6"
+Make sure that the Terraform version in the workspace is set to "0.14.11"
 {% endhint %}
 
 ## Populating Variables in Terraform Cloud
@@ -60,6 +60,23 @@ The variable names are case sensitive - please enter them as they appear in this
 | databricksAccountId | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2 |
 | databricksAccountUser | user@wmp.com | Username for main E2 account user |
 | databricksAccountPassword | xxxxxxxxx | Password for main E2 account user |
+
+If running a non-public facing deployment - these variables will need to be added:
+
+| Variable | Example | Description |
+| :--- | :--- | :--- |
+| publicFacing | no | Triggers the infrastructure to deploy non-public facing resources |
+| privateApiName | api.intellio.test | API url |
+| privateDomainName | intellio.test | Base url for the environment |
+| privateUIName | dev.intellio.test | UI url |
+
+If running a non-public facing deployment - these variables are optional:
+
+| Variable | Example | Description |
+| :--- | :--- | :--- |
+| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If this variable is not added, a new certificate will be requested by the Terraform script. |
+| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to. If this variable is not added, a new private hosted zone will be created by the Terraform script. |
+| usePublicRoute53 | no | If set to yes, an existing public route 53 zone will be used instead of using/creating a private zone. |
 
 There are some advanced variables that can be added as well - please refer to the variables file in the infrastructure repository to see a list of all variables.
 
@@ -131,5 +148,7 @@ In the Auth0 Dashboard there is a section on the left hand menu called "Rules". 
 
 ![](../../../.gitbook/assets/image%20%28277%29%20%281%29.png)
 
+## Accessing Private Facing Environments
 
+To access the site in a private facing environment, a VM will need to be setup that is connected to the IDO VPC that was deployed by Terraform. Amazon Appstream can be used, as well as creating a jumpbox VM manually, as long as either have access to the IDO VPC - directly or through peering connection.
 
