@@ -18,6 +18,7 @@ Private Endpoints
 * UI will be accessed through private VM that is deployed in the IDO VNet, connections to the VM will be made using VPN or Amazon Appstream
 * API is not publicly exposed
 * Agent can only access networks that can be VPC Peered to IDO VNet
+* Public or Private Route 53 Hosted Zone can be used, depending on DNS settings
 
 Please reach out to IDO team for diagrams of both architectures
 
