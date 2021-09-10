@@ -67,6 +67,7 @@
 ## Operations
 
 * [Deployment & Management](operations/deployment/README.md)
+  * [Changing Sparky Pool Instance Type](operations/deployment/changing-sparky-pool-instance-type.md)
   * [Deploying a Snowflake Instance](operations/deployment/deploying-a-snowflake-instance.md)
   * [Merging Latest Terraform Changes](operations/deployment/merging-latest-terraform-changes.md)
   * [Deployment to AWS](operations/deployment/deployment-to-amazon-web-services/README.md)
