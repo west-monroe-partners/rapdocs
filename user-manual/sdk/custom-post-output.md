@@ -27,7 +27,7 @@ Below is a sample of notebook code that sets up a post output session and then p
 ```text
 import com.wmp.intellio.dataops.sdk._
 
-val session = new PostOutputSession("<DataOpsEnvironmentName>", "<DataOpsOutputName>") 
+val session = new PostOutputSession("<DataOpsEnvironmentName>", "<DataOpsOutputName>", "<DataOpsOutputSourceName>") 
 
 def helloWorld(): Unit = {
 log("Hello World!")

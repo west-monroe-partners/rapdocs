@@ -60,6 +60,7 @@
   * [Best Practices](user-manual/validation-and-enrichment-rule-templates/best-practices.md)
 * [SDK](user-manual/sdk/README.md)
   * [Custom Post Output](user-manual/sdk/custom-post-output.md)
+  * [Custom Parsing](user-manual/sdk/custom-parsing.md)
   * [Custom Ingestion](user-manual/sdk/custom-ingestion.md)
 * [Import/Export](user-manual/import-export.md)
 * [Managing System Configuration](user-manual/managing-system-configuration.md)
