@@ -4,13 +4,9 @@ The Custom Parsing SDK will allow users to define their own file parsing code in
 
 ## Configuring a Custom Parsing Source
 
-### Creating a Custom Source
-
-
-
 Any file type source in IDO can be made into a Custom Parse source.  For this example, we will be using a CSV file. 
 
-In order to create a Custom Parsing source, users should first select a File Connection Type. After choosing to ingest a file, users will be able to chose which type of file they are ingesting. For the purpose of this example, we will use Delimited, but note that ANY file type can be ingested through the "Other" type.
+In order to create a Custom Parsing source, users should first select a File Connection Type. After choosing to ingest a file, users will be able to choose which type of file they are ingesting. For the purpose of this example, we will use Delimited, but note that ANY file type can be ingested through the "Other" type. Just be sure to correctly specify the file extension in the file mask parameter.
 
 Finally, we will choose a parser. In this example we will choose Custom Notebook to use custom Databricks notebook code to parse our data. Note that for the "Other" file type only the Custom parsers are available. 
 
