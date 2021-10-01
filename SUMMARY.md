@@ -84,6 +84,7 @@
     * [New Version Upgrade Process \(Terraform\)](operations/deployment/deployment-to-microsoft-azure/new-version-upgrade-process.md)
     * [Hotfix Upgrade Process](operations/deployment/deployment-to-microsoft-azure/hotfix-upgrade-process.md)
   * [Installing a New Agent](operations/deployment/installing-a-new-agent.md)
+  * [Migrating legacy custom cluster configurations in version 2.5](operations/deployment/migrating-legacy-custom-cluster-configurations-in-version-2.5.md)
 * [Metadata Monitoring Dataset](operations/metadata-monitoring-dataset.md)
 * [Lineage Queries](operations/lineage.md)
 
