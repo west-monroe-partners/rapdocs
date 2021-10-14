@@ -32,51 +32,51 @@ Manually enter the following variable names and set values accordingly. If the p
 The variable names are case sensitive - please enter them as they appear in this list
 {% endhint %}
 
-| Variable | Example | Description |
-| :--- | :--- | :--- |
-| awsRegion | us-west-2 | AWS Region for deployment - As of 11/9/2020 us-west-1 is not supported |
-| awsAccessKey | AKIAXXXXXXXX | Access Key for Master Deployment IAM user  - mark as sensitive |
-| awsSecretKey | fdldsjfs8f34dfsdf344334\*\* | Secret Key for Master Deployment IAM user - mark as sensitive |
-| publicFacing | yes | yes/no - controls public vs private facing architecture |
-| environment | dev | This will be prepended to resources in the environment. E.g. Dev. Prod. etc.  |
-| client | intellio | This will be postpended to resources in the environment - use company or organization name |
-| vpcCidrBlock | 10.1 | Only the first two digits here, not the full CIDR block |
-| availabilityZoneA | us-west-2a | Not all regions have availability zones |
-| availabilityZoneB | us-west-2b | Not all regions have availability zones |
-| RDSmasterusername | admin | Database master username |
-| RDSmasterpassword | password123 | Database master password - mark sensitive |
-| stageUsername | stageuser | Database stage username for metastore access |
-| stagePassword | password123 | Database stage password for metastore access - mark sensitive |
-| imageVersion | 2.3.2 | Deployment version for the platform |
-| dockerUsername | wmpintellio | DockerHub service account username |
-| dockerPassword | xxxxx | DockerHub service account password |
-| urlEnvPrefix | dev | Prefix for environment site url |
-| baseUrl | intellioplatform | the base URL of the certificate - example [https://\(urlEnvPrefix\)\(baseUrl\).com](https://%28urlEnvPrefix%29%28baseUrl%29.com) This should not include www. .com or https://. e.g. "wmp" |
-| usEast1CertURL | \*.intellioplatform.com | Full certificate name \(with wildcards\) used for SSL |
-| auth0Domain | intellioplatform.auth0.com | Domain of Auth0 account |
-| auth0ClientId | jdflsdfsdf | Client ID of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
-| auth0ClientSecret | faddfjXXXSssddff | Client Secret of API Explorer Application in Auth0 \(needs to be generated when account is created\) |
-| databricksE2Enabled | yes | Is Databricks E2 architecture being used in this environment? |
-| databricksAccountId | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2 |
-| databricksAccountUser | user@wmp.com | Username for main E2 account user |
-| databricksAccountPassword | xxxxxxxxx | Password for main E2 account user |
+| Variable                  | Example                              | Description                                                                                                                                                                        |
+| ------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| awsRegion                 | us-west-2                            | AWS Region for deployment - As of 11/9/2020 us-west-1 is not supported                                                                                                             |
+| awsAccessKey              | AKIAXXXXXXXX                         | Access Key for Master Deployment IAM user  - mark as sensitive                                                                                                                     |
+| awsSecretKey              | fdldsjfs8f34dfsdf344334\*\*          | Secret Key for Master Deployment IAM user - mark as sensitive                                                                                                                      |
+| publicFacing              | yes                                  | yes/no - controls public vs private facing architecture                                                                                                                            |
+| environment               | dev                                  | This will be prepended to resources in the environment. E.g. Dev. Prod. etc.                                                                                                       |
+| client                    | intellio                             | This will be postpended to resources in the environment - use company or organization name                                                                                         |
+| vpcCidrBlock              | 10.1                                 | Only the first two digits here, not the full CIDR block                                                                                                                            |
+| availabilityZoneA         | us-west-2a                           | Not all regions have availability zones                                                                                                                                            |
+| availabilityZoneB         | us-west-2b                           | Not all regions have availability zones                                                                                                                                            |
+| RDSmasterusername         | admin                                | Database master username                                                                                                                                                           |
+| RDSmasterpassword         | password123                          | Database master password - mark sensitive                                                                                                                                          |
+| stageUsername             | stageuser                            | Database stage username for metastore access                                                                                                                                       |
+| stagePassword             | password123                          | Database stage password for metastore access - mark sensitive                                                                                                                      |
+| imageVersion              | 2.3.2                                | Deployment version for the platform                                                                                                                                                |
+| dockerUsername            | wmpintellio                          | DockerHub service account username                                                                                                                                                 |
+| dockerPassword            | xxxxx                                | DockerHub service account password                                                                                                                                                 |
+| urlEnvPrefix              | dev                                  | Prefix for environment site url                                                                                                                                                    |
+| baseUrl                   | intellioplatform                     | the base URL of the certificate - example [https://(urlEnvPrefix)(baseUrl).com](https://\(urlenvprefix\)\(baseurl\).com) This should not include www. .com or https://. e.g. "wmp" |
+| usEast1CertURL            | \*.intellioplatform.com              | Full certificate name (with wildcards) used for SSL                                                                                                                                |
+| auth0Domain               | intellioplatform.auth0.com           | Domain of Auth0 account                                                                                                                                                            |
+| auth0ClientId             | jdflsdfsdf                           | Client ID of API Explorer Application in Auth0 (needs to be generated when account is created)                                                                                     |
+| auth0ClientSecret         | faddfjXXXSssddff                     | Client Secret of API Explorer Application in Auth0 (needs to be generated when account is created)                                                                                 |
+| databricksE2Enabled       | yes                                  | Is Databricks E2 architecture being used in this environment?                                                                                                                      |
+| databricksAccountId       | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2                                                                                                                                                       |
+| databricksAccountUser     | user@wmp.com                         | Username for main E2 account user                                                                                                                                                  |
+| databricksAccountPassword | xxxxxxxxx                            | Password for main E2 account user                                                                                                                                                  |
 
 If running a non-public facing deployment - these variables will need to be added:
 
-| Variable | Example | Description |
-| :--- | :--- | :--- |
-| publicFacing | no | Triggers the infrastructure to deploy non-public facing resources |
-| privateApiName | api.intellio.test | API url |
-| privateDomainName | intellio.test | Base url for the environment |
-| privateUIName | dev.intellio.test | UI url |
+| Variable          | Example           | Description                                                       |
+| ----------------- | ----------------- | ----------------------------------------------------------------- |
+| publicFacing      | no                | Triggers the infrastructure to deploy non-public facing resources |
+| privateApiName    | api.intellio.test | API url                                                           |
+| privateDomainName | intellio.test     | Base url for the environment                                      |
+| privateUIName     | dev.intellio.test | UI url                                                            |
 
 If running a non-public facing deployment - these variables are optional:
 
-| Variable | Example | Description |
-| :--- | :--- | :--- |
-| privateCertArn | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If this variable is not added, a new certificate will be requested by the Terraform script. |
-| privateRoute53ZoneId | Z04XXXXXXXX | Id for private hosted zone to add route 53 records to. If this variable is not added, a new private hosted zone will be created by the Terraform script. |
-| usePublicRoute53 | no | If set to yes, an existing public route 53 zone will be used instead of using/creating a private zone. |
+| Variable             | Example                                                                         | Description                                                                                                                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| privateCertArn       | arn:aws:acm:us-east-2:678910112:certificate/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | ARN to an imported SSL certificate that will be attached to the HTTPS listener on the internal load balancer. If this variable is not added, a new certificate will be requested by the Terraform script. |
+| privateRoute53ZoneId | Z04XXXXXXXX                                                                     | Id for private hosted zone to add route 53 records to. If this variable is not added, a new private hosted zone will be created by the Terraform script.                                                  |
+| usePublicRoute53     | no                                                                              | If set to yes, an existing public route 53 zone will be used instead of using/creating a private zone.                                                                                                    |
 
 There are some advanced variables that can be added as well - please refer to the variables file in the infrastructure repository to see a list of all variables.
 
@@ -92,7 +92,7 @@ After the terraform is complete, there will be various resources created in the 
 
 Log into the Databricks account that was created during the Terraform deploy. The account URL is an output variable from the Terraform apply.
 
-Navigate to the S3 bucket named "&lt;environment&gt;-datalake-&lt;client&gt;" Ex: dev-datalake-intellio
+Navigate to the S3 bucket named "\<environment>-datalake-\<client>" Ex: dev-datalake-intellio
 
 Place the following file in the bucket root-
 
@@ -104,51 +104,22 @@ If the workbook runs successfully, move on to the next step!
 
 ## Running Deployment Container
 
-Navigate to the Container instance named &lt;environment&gt;-Deployment-&lt;client&gt;. Ex: Dev-Deployment-Intellio. Click "Containers" on the left blade menu and then click "Logs". Check to see if the container has ran successfully. There should be a final message in the logs that says
+Navigate to the Container instance named \<environment>-Deployment-\<client>. Ex: Dev-Deployment-Intellio. Click "Containers" on the left blade menu and then click "Logs". Check to see if the container has ran successfully. There should be a final message in the logs that says
 
-```text
+```
  INFO  Azure.AzureDeployActor - Deployment complete
 ```
 
 If this message exists - the first time deployment is good to go.
 
-If this message does not exist - try running the container again \(click stop and start on the container\) and troubleshoot from there. 
-
-## Configuring Postgres System Configuration Table
-
-Use the "database-connection" value from the Private secret in Key Vault to connect to the RDS in the RDS service within AWS.
-
-Run the following queries in the database named &lt;environment&gt;. Update the region parameter with the AWS region that DataOps is deployed in.
-
-{% hint style="info" %}
-Replace the "DEV" values with the name of your environment. Make sure that the databricks-db-name is all lowercase.
-{% endhint %}
-
-```text
-
-update meta.system_configuration set value = 'DEV' where name = 'environment';
-update meta.system_configuration set value = 'dev' where name = 'databricks-db-name';
-update meta.system_configuration set value = 'Databricks' where name = 'spark-provider';
-update meta.system_configuration set value = 'AWS' where name = 'cloud';
-```
-
-## Restart Everything!
-
-At this point, all the post Terraform configuration should be good to go. There are three container instances that should be restarted now - Core, Agent, and Api. Navigate to each of the containers, click stop on them, and then click start once they're fully stopped. We recommend starting them in the following order -
-
-1. Api
-2. Core
-3. Agent
-
-Check the container logs to ensure the containers have started and are running with no errors. Once all three containers are running, it's time to go on the site!
+If this message does not exist - try running the container again (click stop and start on the container) and troubleshoot from there. 
 
 ## Auth0 Rule Updates
 
 In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
 
-![](../../../.gitbook/assets/image%20%28277%29%20%281%29.png)
+![](<../../../.gitbook/assets/image (277) (1).png>)
 
 ## Accessing Private Facing Environments
 
 To access the site in a private facing environment, a VM will need to be setup that is connected to the IDO VPC that was deployed by Terraform. Amazon Appstream can be used, as well as creating a jumpbox VM manually, as long as either have access to the IDO VPC - directly or through peering connection.
-
