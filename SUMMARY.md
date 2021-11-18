@@ -97,6 +97,7 @@
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
   * [2.4](releases/changelog/2.4/README.md)
+    * [2.4.3- November 18th Hotfix ​](releases/changelog/2.4/2.4.3-november-18th-hotfix.md)
     * [2.4.3- October 29th Hotfix](releases/changelog/2.4/2.4.3-october-29th-hotfix.md)
     * [2.4.2](releases/changelog/2.4/2.4.2.md)
     * [2.4.1 - July 23rd Hotfix](releases/changelog/2.4/2.4.1-july-23rd-hotfix.md)
