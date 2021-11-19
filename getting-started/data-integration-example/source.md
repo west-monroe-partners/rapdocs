@@ -10,7 +10,7 @@ description: >-
 
 ![](../../.gitbook/assets/source-location.png)
 
-Sources  managing the entire logical data flow. Through setting parameters within the setting or through the different sub-tabs within the Source UI the flow from ingestion through output is managed. This means the four steps discussed in the How It Works section are managed from the Sources UI. What is covered in this step is how Input and Staging are set up. 
+Sources  managing the entire logical data flow. Through setting parameters within the setting or through the different sub-tabs within the Source UI the flow from ingestion through output is managed. This means the four steps discussed in the How It Works section are managed from the Sources UI. What is covered in this step is how Input and Staging are set up.&#x20;
 
 ## Step 1: Create a Source
 
@@ -20,7 +20,7 @@ Navigate to the Sources screen through the Menu, then create and name a new Sour
 The below image shows some available controls that we will not use in this basic example. Because these are more advanced features, this section only provides a brief description of each.
 {% endhint %}
 
-![Extra Options; Leave as-is](../../.gitbook/assets/screenshot_5%20%283%29.png)
+![Extra Options; Leave as-is](<../../.gitbook/assets/screenshot\_5 (3).png>)
 
 {% tabs %}
 {% tab title="Hide Advanced Parameters" %}
@@ -54,7 +54,7 @@ Select `Key`. The Divvy Stations file is suitable for the Key refresh type. Each
 
 {% tabs %}
 {% tab title="Key" %}
-Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups. In the terminology of traditional star schema models, Key Sources are analogous to Dimensions.
+Sources with the** Key **refresh type contain a unique identifier or _key_ tied to a logical entity. These can be used as lookups from other sources. Sources with a refresh type other than Key cannot be used as lookups. In the terminology of traditional star schema models, Key Sources are analogous to Dimensions.
 {% endtab %}
 
 {% tab title="Timestamp" %}
@@ -62,15 +62,15 @@ Sources with the **Key** refresh type contain a unique identifier or _key_ tied 
 {% endtab %}
 
 {% tab title="Sequence" %}
-**Sequence** sources identify changes in data using a column containing integer numbers that follow a sequence. Data with higher value sequences replace data with lower value sequences.
+**Sequence **sources identify changes in data using a column containing integer numbers that follow a sequence. Data with higher value sequences replace data with lower value sequences.
 {% endtab %}
 
 {% tab title="Full" %}
-**Full** sources replace the data completely whenever RAP ingests new data into the source.  
+**Full **sources replace the data completely whenever RAP ingests new data into the source. &#x20;
 {% endtab %}
 
 {% tab title="None" %}
-**None** sources do not track changes in data. Instead, RAP appends any new data to the existing data.
+**None **sources do not track changes in data. Instead, RAP appends any new data to the existing data.
 {% endtab %}
 {% endtabs %}
 
@@ -86,11 +86,11 @@ Select `File`, and then select `Delimited`from the File Type option that will ap
 
 {% tabs %}
 {% tab title="File" %}
-DataOps supports two common **File** types: **Delimited** files designate a single character of text to separate data fields such as a comma. **Fixed Width** files are plain text files that use spaces to separate data. Data is spaced differently for each file, so DataOps requires additional information before it can ingest Fixed Width files.
+DataOps supports two common **File **types: **Delimited **files designate a single character of text to separate data fields such as a comma. **Fixed Width **files are plain text files that use spaces to separate data. Data is spaced differently for each file, so DataOps requires additional information before it can ingest Fixed Width files.
 {% endtab %}
 
 {% tab title="Table" %}
-A **Table** is a collection of data that exists in a database in an arrangement of rows and columns. Data from tables can be obtained using a query language such as SQL.
+A **Table **is a collection of data that exists in a database in an arrangement of rows and columns. Data from tables can be obtained using a query language such as SQL.
 {% endtab %}
 
 {% tab title="SFTP" %}
@@ -99,7 +99,7 @@ A database table to be ingested at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on Connection Type attributes.
+When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](broken-reference) for more details on Connection Type attributes.
 {% endhint %}
 
 After selecting a Connection Type, select the connection that you configured on the previous page from the connection drop-down list. The list of connections available depends on your Connection Type.
@@ -108,13 +108,13 @@ After selecting a Connection Type, select the connection that you configured on 
 
 ### **Initiation Type**
 
-_The Initiation Type specifies how_ DataOps _ingests data._
+_The Initiation Type specifies how _DataOps _ingests data._
 
 Select `Watcher`.
 
 {% tabs %}
 {% tab title="Watcher" %}
-DataOps continuously monitors a data path \(a local/network folder path or database connection\) and ingests data as soon as it becomes available.
+DataOps continuously monitors a data path (a local/network folder path or database connection) and ingests data as soon as it becomes available.
 {% endtab %}
 
 {% tab title="Scheduled" %}
@@ -123,7 +123,7 @@ RAP ingests data from a data path at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on Initiation Type attributes.
+When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](broken-reference) for more details on Initiation Type attributes.
 {% endhint %}
 
 ## **Step 3: Specify Input Parameters**
@@ -154,15 +154,14 @@ Click the **Save** button to save the Source; all parameters should be configure
 
 ![Source Details](../../.gitbook/assets/step-5-save.png)
 
-_DataOps_ _now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the DataOps_ _internal storage database._ 
+_DataOps_ _now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the DataOps_ _internal storage database. _
 
 ## Step 6: Validate File Input
 
 Check the Inputs tab at the top of the page to verify that the file has been successfully pushed to the system.
 
-![Input Found &amp; Ingested](../../.gitbook/assets/rap-6-inputs-update.png)
+![Input Found & Ingested](../../.gitbook/assets/rap-6-inputs-update.png)
 
 {% hint style="info" %}
 DataOps will automatically begin the Input phase when the input files appear in the Connection specified earlier. These files will disappear once DataOps ingests them.
 {% endhint %}
-

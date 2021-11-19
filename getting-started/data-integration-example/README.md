@@ -6,9 +6,9 @@ description: This example acts as a Hello World tutorial for DataOps
 
 ## Introduction
 
-This simple introductory example looks at one specific use of DataOps. 
+This simple introductory example looks at one specific use of DataOps.&#x20;
 
-For more detailed configuration instructions, please refer to the [Configuration Guide](). 
+For more detailed configuration instructions, please refer to the [Configuration Guide](broken-reference).&#x20;
 
 This Data Integration Example progresses in five parts:
 
@@ -36,5 +36,4 @@ Access to Google Chrome, the only browser fully-certified for use with DataOps
 
 Divvy is a Chicago-based bike sharing service. Every quarter, they release two data sets – one file for every ride taken between two stations by customers throughout the quarter, and one that accounts for every Divvy station in the city.
 
-This tutorial runs through a scenario using the Divvy Stations data for Q1 and Q2 2017, available in a public AWS bucket here: [Divvy\_Trips\_2017\_Q1Q2.zip](https://s3.amazonaws.com/divvy-data/tripdata/Divvy_Trips_2017_Q1Q2.zip). The [Setting up](setting-up.md) section covers all the steps to using Divvy Stations data from AWS.
-
+This tutorial runs through a scenario using the Divvy Stations data for Q1 and Q2 2017, available in a public AWS bucket here: [Divvy\_Trips\_2017\_Q1Q2.zip](https://s3.amazonaws.com/divvy-data/tripdata/Divvy\_Trips\_2017\_Q1Q2.zip). The [Setting up](setting-up.md) section covers all the steps to using Divvy Stations data from AWS.

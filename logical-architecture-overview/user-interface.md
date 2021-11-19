@@ -19,30 +19,30 @@ Sources, Outputs, and Connections can be viewed and filtered from their respecti
 Note that clicking on a specific Source on the Sources page will show all of the details and options related to that Source. The same is true for the Outputs and Connections pages.
 
 {% hint style="info" %}
-Provided in this section is a brief overview of the Intellio DataOps UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide]().
+Provided in this section is a brief overview of the Intellio DataOps UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide](broken-reference).
 {% endhint %}
 
 ## Sources and Processing
 
-The Source Dashboard \(the UI shown when 'Sources' is selected from the left-hand menu\) shows the current status of all Sources as well as the status of the individual phases of the Source processes. The user can also view the status history of Sources and keep track of activity trends. When a Source is clicked on the user is brought to the tab navigation of that Source.
+The Source Dashboard (the UI shown when 'Sources' is selected from the left-hand menu) shows the current status of all Sources as well as the status of the individual phases of the Source processes. The user can also view the status history of Sources and keep track of activity trends. When a Source is clicked on the user is brought to the tab navigation of that Source.
 
 ![Tabs within a Source.](../.gitbook/assets/rap-ui-sources-tabs.png)
 
-Sources are the main containers of the DataOps interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of DataOps enable Sources to work through the Logical Architecture. 
+Sources are the main containers of the DataOps interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of DataOps enable Sources to work through the Logical Architecture.&#x20;
 
 Within a Source the tab structure along the top provides a framework of organizing a monitoring different aspects of the logical data flow. Enumerated below are the general summary of what each tab represents.
 
 ### Sources Tabs
 
-| Tab | Summary |
-| :--- | :--- |
-| Settings | The main interface for set up and configuration of a Source. Set the Connection and Agent.  |
-| Dependencies | Sources may be dependent upon other Sources. This tab displays additional data flows the Source may be dependent upon. |
-| Relations | Additional data may be joined to a source and this tab displays the details of these joins. |
-| Enrichments | Documentation of row level manipulations of the data, inclusive of both enrichments and validation rules. Adding new enrichments allows the user to apply business logic to the data. |
-| Inputs | View of the associated raw data that is ingested through the Connection settings. |
-| Process | Overview of the logical data flow and the calculations enacted. This view checks the status of the logical data flow. |
-| Data View | Provide a view of the first so many rows in the Source Hub Table. |
+| Tab          | Summary                                                                                                                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Settings     | The main interface for set up and configuration of a Source. Set the Connection and Agent.                                                                                            |
+| Dependencies | Sources may be dependent upon other Sources. This tab displays additional data flows the Source may be dependent upon.                                                                |
+| Relations    | Additional data may be joined to a source and this tab displays the details of these joins.                                                                                           |
+| Enrichments  | Documentation of row level manipulations of the data, inclusive of both enrichments and validation rules. Adding new enrichments allows the user to apply business logic to the data. |
+| Inputs       | View of the associated raw data that is ingested through the Connection settings.                                                                                                     |
+| Process      | Overview of the logical data flow and the calculations enacted. This view checks the status of the logical data flow.                                                                 |
+| Data View    | Provide a view of the first so many rows in the Source Hub Table.                                                                                                                     |
 
 ### Processing
 
@@ -52,7 +52,7 @@ The Processing page and Source Dashboard allows users to monitor Sources and Pro
 
 ![Process Tab and status of logical data flow ](../.gitbook/assets/rap-ui-process.png)
 
-Within the Process Tab, logs are kept on how data flows through the logical data flow. As seen in the above image, Process IDs 2143-2150 at the bottom of the image report on this particular source going through Ingestion, Capture Data Change \(CDC\), Enrich, Refresh, Attribution Recalculation \(Recalculate\), and Output. When errors occur the Process Tab will held identify at which stage the error occurs.
+Within the Process Tab, logs are kept on how data flows through the logical data flow. As seen in the above image, Process IDs 2143-2150 at the bottom of the image report on this particular source going through Ingestion, Capture Data Change (CDC), Enrich, Refresh, Attribution Recalculation (Recalculate), and Output. When errors occur the Process Tab will held identify at which stage the error occurs.
 
 ## Connections and Outputs
 
@@ -62,7 +62,7 @@ Connections and Outputs are the means in which data is moved into and out of Int
 
 ![Connections Settings.](../.gitbook/assets/rap-ui-connections.png)
 
-Connections contain the necessary information to locate data that will be ingested or outputted. Based on connection type and storage type different parameters will appear that need to be populated. These parameters could be just the file path \(inclusive of S3\), credentials to access a database, or additional information to support the DataOps Agent.
+Connections contain the necessary information to locate data that will be ingested or outputted. Based on connection type and storage type different parameters will appear that need to be populated. These parameters could be just the file path (inclusive of S3), credentials to access a database, or additional information to support the DataOps Agent.
 
 ### Outputs
 
@@ -88,15 +88,14 @@ If you require assistance with Intellio DataOps, the Contact Support option exis
 
 ## Sign Up and Log In
 
-When you first encounter the Intellio DataOps environment you will be prompted to either sign up or to log in. 
+When you first encounter the Intellio DataOps environment you will be prompted to either sign up or to log in.&#x20;
 
 ![Intellio DataOps login screen.](../.gitbook/assets/rap-ui-login-signup.png)
 
 In the sign up case you will be prompted to enter a username and a password. The admin of the Intellio DataOps environment should white list emails of the client domain and implementation team. If you email is appropriately whitelisted, then a confirmation email will be sent to the email and next steps will be prompted for the user to login.
 
-In the login case, enter your username and password. Upon logging in you will land on the Sources UI. 
+In the login case, enter your username and password. Upon logging in you will land on the Sources UI.&#x20;
 
 {% hint style="warning" %}
 Portions of this page are under development. Additional information may be added in the future pertaining to Cost, Queue times, and additional detail on functionality.
 {% endhint %}
-

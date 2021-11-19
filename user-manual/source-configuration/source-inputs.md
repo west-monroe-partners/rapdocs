@@ -7,9 +7,9 @@ description: >-
 
 # Inputs
 
-An "Input" is Intellio’s atomic unit of data processing. Conceptually, an Input corresponds to a single file or scheduled Table pull from a configured Source. 
+An "Input" is Intellio’s atomic unit of data processing. Conceptually, an Input corresponds to a single file or scheduled Table pull from a configured Source.&#x20;
 
-## Source Inputs Tab <a id="validations-screen"></a>
+## Source Inputs Tab <a href="validations-screen" id="validations-screen"></a>
 
 The Source Inputs screen allows users to monitor the status of their Sources' Inputs. The Inputs tab provides insight into the processing of all stages for a given Source. The top of the page has a variety of filters, which allow filtering based on the status of all four processing stages, as well as the file path name. The fields displayed are as follows:
 
@@ -21,21 +21,22 @@ The Source Inputs screen allows users to monitor the status of their Sources' In
 * **Size** - The total file size of the source file/database pull
 * **Record Count** - The number of records appearing in the original input file/database pull
 * **Effective Record Count** - The number of records appearing in the hub table after CDC.
-* **Status** - Indicates whether an input has successfully gone through all of its processing steps. Click this status to navigate to the Process page filtered for that input.
+*   **Status** - Indicates whether an input has successfully gone through all of its processing steps. Click this status to navigate to the Process page filtered for that input.
 
-  * ![](../../.gitbook/assets/completed.png)  Everything has processed correctly
-  * ![](../../.gitbook/assets/failed.png)  A failure has occurred for this input
-  * ![](../../.gitbook/assets/pending%20%281%29.png)  The input is waiting in the dependency queue
-  * ![](../../.gitbook/assets/inprogress.png)  The input is currently running a process
-  * ![](../../.gitbook/assets/image%20%28291%29.png)The input is launching a new cluster
-  * ![](../../.gitbook/assets/delete.png)The input is queued for deletion
-  * Grey Check Mark - The input has passed processing but contains 0 records.
+    * ![](../../.gitbook/assets/completed.png)  Everything has processed correctly
+    * ![](../../.gitbook/assets/failed.png)  A failure has occurred for this input
+    * ![](<../../.gitbook/assets/pending (1).png>)  The input is waiting in the dependency queue
+    * ![](../../.gitbook/assets/inprogress.png)  The input is currently running a process
+    * ![](<../../.gitbook/assets/image (291).png>)The input is launching a new cluster
+    * ![](../../.gitbook/assets/delete.png)The input is queued for deletion
+    * Grey Check Mark - The input has passed processing but contains 0 records.
 
-* **Checkbox -** Used to select multiple inputs for reprocessing
 
-![The Inputs Page](../../.gitbook/assets/image%20%28293%29%20%281%29%20%281%29.png)
+* **Checkbox - **Used to select multiple inputs for reprocessing
 
-### Three Dot Menu 
+![The Inputs Page](<../../.gitbook/assets/image (293) (1) (1).png>)
+
+### Three Dot Menu&#x20;
 
 Contains reprocessing options. Kicking off any of these reprocess options will lead to all downstream processes running as well. i.e. Reset Capture Data Changes will perform enrichment, refresh, and output after completing. If one of these options is greyed out, hover over the value to find out why it is not currently a valid choice.
 
@@ -57,7 +58,7 @@ Contains reprocessing options. Kicking off any of these reprocess options will l
   * This process type can cause other inputs to process in order to fill in data gaps.
   * Use this to get rid of unwanted data
 
-![Example Menu with Invalid Options](../../.gitbook/assets/image%20%28289%29.png)
+![Example Menu with Invalid Options](<../../.gitbook/assets/image (289).png>)
 
 ## Controlling All Inputs
 
@@ -66,13 +67,11 @@ Users can control all of the Inputs for a Source using the options below. Not al
 * **Reset All Output:** Reset the Output phase for all inputs
 * **Reset All Parsing:** Reset the Parsing phase for all inputs
 * **Reset All Enrichment:** Reset the Enrichment phase for all inputs
-* **Reset All Capture Data Changes:** Reset the CDC phase for all inputs
+* **Reset All Capture Data Changes: **Reset the CDC phase for all inputs
 * **Delete All Source Data:** Delete all stored data for the Source
 * **View Data:** Navigate to the Data View tab
-* **Pull Data Now:** Immediately generate a new Input for this Source \(not available on watcher sources\)
+* **Pull Data Now:** Immediately generate a new Input for this Source (not available on watcher sources)
 * **Recalculate**: Perform all net new and changed enrichments on the hub table to bring it up to date.
 
-![Options for all inputs](../../.gitbook/assets/image%20%28292%29.png)
-
-
+![Options for all inputs](<../../.gitbook/assets/image (292).png>)
 

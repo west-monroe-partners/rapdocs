@@ -69,6 +69,7 @@
 
 * [Deployment & Management](operations/deployment/README.md)
   * [Changing Sparky Pool Instance Type](operations/deployment/changing-sparky-pool-instance-type.md)
+  * [AWS: Migrate Legacy Databricks to E2 Workspace](operations/deployment/aws-migrate-legacy-databricks-to-e2-workspace.md)
   * [Deploying a Snowflake Instance](operations/deployment/deploying-a-snowflake-instance.md)
   * [Merging Latest Terraform Changes](operations/deployment/merging-latest-terraform-changes.md)
   * [Deployment to AWS](operations/deployment/deployment-to-amazon-web-services/README.md)

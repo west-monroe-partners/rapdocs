@@ -15,19 +15,19 @@ The Custom Ingestion SDK will allow users to define their own data acquisition c
 
 Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON synatx. We will cover how these connections are accessed in user code as part of a later section. **Dummy connection for now**
 
-![Custom Connection](../../.gitbook/assets/image%20%28334%29.png)
+![Custom Connection](<../../.gitbook/assets/image (334).png>)
 
 ### Creating a Custom Source
 
-In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. After clicking the Custom button, users will first be asked to select a connection from any of the preconfigured custom connections. 
+In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. After clicking the Custom button, users will first be asked to select a connection from any of the preconfigured custom connections.&#x20;
 
-Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook. 
+Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook.&#x20;
 
 After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If the user plans to run the notebook manually, as we will in this example, this can set to "N/A". In the future, the notebook path can be found in the Databricks workspace tab.
 
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
-![Custom Source Screen](../../.gitbook/assets/image%20%28336%29.png)
+![Custom Source Screen](<../../.gitbook/assets/image (336).png>)
 
 ### Specifying a Custom Cluster
 
@@ -36,14 +36,14 @@ Cluster configuration is a very important part of ensuring reliable execution of
 {% hint style="danger" %}
 Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
 
-While potentially viable in specific situations, DataOps is not responsible for state clearing and results controls. Developers must handle these within their notebooks to guarantee reliable results and stability. 
+While potentially viable in specific situations, DataOps is not responsible for state clearing and results controls. Developers must handle these within their notebooks to guarantee reliable results and stability.&#x20;
 {% endhint %}
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_  with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-\#\#\#\#._ Users will also need to replace the _**`<DataOpsSourceName>`**_ with the name of the associated custom DataOps source.
+Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName> `**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsSourceName>` **_with the name of the associated custom DataOps source.
 
-```text
+```
 import com.wmp.intellio.dataops.sdk._
 import org.apache.spark.sql.DataFrame
 
@@ -64,7 +64,7 @@ The first three lines are standard import statements. They are needed to utilize
 
 #### Ingestion Session - Line 4
 
-The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed. 
+The 4th line creates a new DataOps ingestion session. When this line is run, a new input record and a new process record will be created in DataOps to track the ingetsion process. It will also begin a heartbeat that constantly communicates with DataOps to ensure the job has not crashed.&#x20;
 
 
 
@@ -80,7 +80,7 @@ The 10th line runs the custom ingest. It pulls the data as specified in the inge
 
 The custom ingestion can be run in one of three ways
 
-1. Execute the Notebook directly in Databricks. This will allow for fast troubleshooting and development iteration. You must attach the SDK jar to your cluster before running. The coordinates for the current version of the SDK are S3://&lt;YourDatalakeBucket&gt;/dataops-sdk.jar for AWS or TBD for Azure
+1. Execute the Notebook directly in Databricks. This will allow for fast troubleshooting and development iteration. You must attach the SDK jar to your cluster before running. The coordinates for the current version of the SDK are S3://\<YourDatalakeBucket>/dataops-sdk.jar for AWS or TBD for Azure
 2. Execute a Pull Now on the Custom Source. This will automatically handle attaching the SDK code to your cluster.
 3. Set a schedule for the Custom Source.
 
@@ -88,4 +88,3 @@ The custom ingestion can be run in one of three ways
 
 * Custom Parameters and custom connections can be used to allow a single notebook to connect to multiple different data sources. i.e. Create a generic SalesForce connector, then specify the table name in the custom parameters.
 * Latest tracking fields are available for each session. They include latest timestamp, latest sequence, extract datetime, and input id. They can be accessed with session.latestTrackingFields.{sTimestamp, sSequence, extractDatetime, inputId}
-
