@@ -6,9 +6,9 @@ description: Lineage queries
 
 ### Queries
 
-select_ \*_ _ from meta.l\_get\_origin\_recursive(start\_node\_type, start\_object\_id) - returns recursive list of all origin nodes for the given start node, including path_
+select _\*_ _from meta.l\_get\_origin\_recursive(start\_node\_type, start\_object\_id) - returns recursive list of all origin nodes for the given start node, including path_
 
-_select _ \* from meta.l\_get\_destination\_recursive(_start\_node\_type, start\_object\_id_) - _returns recursive list of all destination nodes for the given start node, including path_
+_select_ \* from meta.l\_get\_destination\_recursive(_start\_node\_type, start\_object\_id_) - _returns recursive list of all destination nodes for the given start node, including path_
 
 __
 

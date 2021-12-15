@@ -26,23 +26,23 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 
 * **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources. To ensure Sources are organized easily searchable, follow [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions).
 * **Description\*:** The description of the Source.
-* **Hub View Name: ** Name of view alias of the raw hub table in Databricks
-* **Group Name: **Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
-* **Source Name Template: **Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
+* **Hub View Name:** Name of view alias of the raw hub table in Databricks
+* **Group Name:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
+* **Source Name Template:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
 * **Active\*:** If set to Active, the Source will run as specified.
-* **Connection Type\*: **Selector to help filter the [Connection ](../connections.md)dropdown
-* **Connection\*: **The [Connection ](../connections.md)to use for this source
+* **Connection Type\*:** Selector to help filter the [Connection ](../connections.md)dropdown
+* **Connection\*:** The [Connection ](../connections.md)to use for this source
 
 ### Connection Type Specific Parameters
 
 {% tabs %}
 {% tab title="Custom" %}
-* **Initiation Type\*: **Specifies if your custom code is compiled into an executable Jar file, or is in a Databricks Notebook
+* **Initiation Type\*:** Specifies if your custom code is compiled into an executable Jar file, or is in a Databricks Notebook
 
 #### Jar
 
-* **Jar Location\*: **Specifies the location in the Cloud storage technology where the Jar is stored
-* **Main Class Name\*: **Name of the primary class in the Jar to be run when executed
+* **Jar Location\*:** Specifies the location in the Cloud storage technology where the Jar is stored
+* **Main Class Name\*:** Name of the primary class in the Jar to be run when executed
 
 #### Notebook
 
@@ -51,16 +51,16 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 {% endtab %}
 
 {% tab title="File" %}
-* **File Mask\*: **Name of file within the connection folder/path.
+* **File Mask\*:** Name of file within the connection folder/path.
   * Glob syntax supported: eg. myfile\*.csv
-* **File Type\*: **Serialization format of the file
-* **Parser\*: **DataOps has two supported parsers for certain File Types
+* **File Type\*:** Serialization format of the file
+* **Parser\*:** DataOps has two supported parsers for certain File Types
   * Spark: Native Spark libraries or extensions used
   * Core: DataOps custom Akka streams parser for delimited files with advanced error handling and malformed file debugging
 {% endtab %}
 
 {% tab title="Loopback" %}
-* **Virtual Output\*: **Name of the virtual output this source is linked to and will pull data from
+* **Virtual Output\*:** Name of the virtual output this source is linked to and will pull data from
 {% endtab %}
 
 {% tab title="SFTP" %}
@@ -87,13 +87,13 @@ A Data Refresh Type specifies how DataOps should handle processing, refreshing, 
 
 {% tabs %}
 {% tab title="Full" %}
-**Full **sources assume each batch of data contains the most recent version of all data for all history. It is a full truncate and reload style refresh.
+**Full** sources assume each batch of data contains the most recent version of all data for all history. It is a full truncate and reload style refresh.
 
 Full refresh is the most simple and can process any data. It's often useful to start with Full refresh if you do not yet know which more specific and performant alternative to use.
 {% endtab %}
 
 {% tab title="Key" %}
-Sources with the** Key **refresh type contain a unique identifier or _key_ tied to a logical entity.
+Sources with the **Key** refresh type contain a unique identifier or _key_ tied to a logical entity.
 
 Key refresh is often the most convenient logically, but has performance trade-offs at scale when compared to None, Sequence, or Timestamp. If possible, those alternatives are preferred, but not always logically possible.
 {% endtab %}
@@ -105,13 +105,13 @@ It is also often useful for performance optimization vs Keyed if the source data
 {% endtab %}
 
 {% tab title="Sequence" %}
-**Sequence **sources identify changes in data using a column that contains a monotonically increasing ID tracking field and follows a write-once pattern.
+**Sequence** sources identify changes in data using a column that contains a monotonically increasing ID tracking field and follows a write-once pattern.
 
 It is also often useful for performance optimization vs Keyed if the source data has a defined range where records can be updated, after which they are guaranteed to be static.
 {% endtab %}
 
 {% tab title="None" %}
-**None **is used when it can be assumed that all data from new Inputs can be considered New.
+**None** is used when it can be assumed that all data from new Inputs can be considered New.
 
 This is useful for datasets that have an upstream CDC process and can guarantee once-and-only-once delivery of Data to DataOps.
 
@@ -160,7 +160,7 @@ With Custom Connection Type Sources utilizing the [SDK](../sdk/), it is possible
 }
 ```
 
-* **DataOps Managed: **This setting with use the default cluster configuration for the environment, optionally tune-able via the Performance & Cost detailed parameters section.
+* **DataOps Managed:** This setting with use the default cluster configuration for the environment, optionally tune-able via the Performance & Cost detailed parameters section.
 
 ## Advanced Parameters
 

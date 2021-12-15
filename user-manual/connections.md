@@ -21,12 +21,12 @@ The connection settings page enables users to provide the necessary parameters t
 
 ![](<../.gitbook/assets/image (347).png>)
 
-* **Name\*: **A unique name
-* **Description\*: **A description
-* **Uses Agent\*: **A visual indicator showing whether or not this connection will use an Agent, and the configuration of which [Agent ](../logical-architecture-overview/rap-agent.md)will be used
-* **Active: **Allows users to disable the connection without deleting the configuration
+* **Name\*:** A unique name
+* **Description\*:** A description
+* **Uses Agent\*:** A visual indicator showing whether or not this connection will use an Agent, and the configuration of which [Agent ](../logical-architecture-overview/rap-agent.md)will be used
+* **Active:** Allows users to disable the connection without deleting the configuration
 * **Connection Direction:** Specifies if this connection is used to ingest or output data
-* **Connection Type:** Specifies the format or location style of the source or target data.** **Depending on the Type selected, the remaining parameters will change
+* **Connection Type:** Specifies the format or location style of the source or target data. **** Depending on the Type selected, the remaining parameters will change
 
 ## Custom
 
@@ -40,16 +40,16 @@ These parameters should be a JSON object in format of\
 For connections that do not need any parameters, enter an empty JSON object {}
 
 * **Public Connection Parameters\*:**  Passed in as plain-text to the custom ingestion session
-* **Private Connection Parameters\*: **These parameters are stored on save into the [Databricks Secrets](https://docs.databricks.com/security/secrets/index.html) of the respective cloud service
+* **Private Connection Parameters\*:** These parameters are stored on save into the [Databricks Secrets](https://docs.databricks.com/security/secrets/index.html) of the respective cloud service
 
 ## File
 
-* **Storage Technology\*: **Specifies the type of file storage Agent/Databricks will attempt to access
-* **File Path\*: **The folder/container path for DataOps to access when pulling or generating files
+* **Storage Technology\*:** Specifies the type of file storage Agent/Databricks will attempt to access
+* **File Path\*:** The folder/container path for DataOps to access when pulling or generating files
 
 ## Table
 
-* **Driver\*: **Which JDBC driver should be used
+* **Driver\*:** Which JDBC driver should be used
 
 ## Parameters
 

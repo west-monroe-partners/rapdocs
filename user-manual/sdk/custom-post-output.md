@@ -22,7 +22,7 @@ While potentially viable in specific situations, DataOps is not responsible for 
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up a post output session and then prints a simple Hello World.  A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName> `**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsOutputName> and <DataOpsOutputChannelName>` **_with the name of the associated custom DataOps output and output channel respectively.
+Below is a sample of notebook code that sets up a post output session and then prints a simple Hello World.  A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsOutputName> and <DataOpsOutputChannelName>` **_ with the name of the associated custom DataOps output and output channel respectively.
 
 ```
 import com.wmp.intellio.dataops.sdk._

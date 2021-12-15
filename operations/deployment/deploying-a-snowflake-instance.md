@@ -22,7 +22,7 @@ The email that signed up for the Snowflake account will receive an email with su
 
 ![](<../../.gitbook/assets/image (187).png>)
 
-This will navigate to the Snowflake activation page. Create an admin user name and password. Be sure to record this username and password. Click **Get Started. **Notice the URL of the page you are navigated to after clicking **Get Started**. This contains the account URL that will be needed in the future. Record it.
+This will navigate to the Snowflake activation page. Create an admin user name and password. Be sure to record this username and password. Click **Get Started.** Notice the URL of the page you are navigated to after clicking **Get Started**. This contains the account URL that will be needed in the future. Record it.
 
 ## Setting up networking
 
@@ -74,7 +74,7 @@ Instructions for setting up an AWS storage integration can be found [here](https
 
 Instructions for setting up and Azure storage integration can be found [here](https://docs.snowflake.com/en/user-guide/data-load-azure-config.html#option-1-configuring-a-snowflake-storage-integration).
 
-Snowflake integrations should be named_ DATAOPS\_OUTPUT\_<>_ replacing the <> with the name of the DataOps environment. Notice that the name is in ALL CAPS.&#x20;
+Snowflake integrations should be named _DATAOPS\_OUTPUT\_<>_ replacing the <> with the name of the DataOps environment. Notice that the name is in ALL CAPS.&#x20;
 
 Snowflake integrations should have allowed storage locations of "s3://\<datalakeBucket>" for AWS environments and "azure://\<storageAccount>.blob.core.windows.net/\<datalakeContainer" for Azure environments.
 

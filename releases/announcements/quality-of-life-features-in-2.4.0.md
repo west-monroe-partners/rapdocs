@@ -21,7 +21,7 @@ In the past, schedules were created for each source individually. As a result, d
 
 As part of the 2.4.0 deploy, all scheduled sources will automatically be converted to use the new schedule objects. &#x20;
 
-### **Post-Output SDK + Custom Loopback **
+### **Post-Output SDK + Custom Loopback**&#x20;
 
 We have often received requests to run a code snippet after the output process completes. With the new extensions to our DataOps SDK, custom post output, users will now be able to specify a Databricks notebook to run commands after out has completed. This opens up a large new set of capabilities. From triggering a custom ingestion to creating a summary file on the data anything that can be written in a Databricks notebook can be executed. Find full documentation [here](https://intellio.gitbook.io/dataops/v/master/configuring-the-data-integration-process/custom-post-output).&#x20;
 

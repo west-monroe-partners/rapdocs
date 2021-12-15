@@ -11,7 +11,7 @@ description: >-
 To create a Relation, select a Source from the Sources screen, select the Relations tab, and click "New Relation" button in the top-right corner of the screen. Once the button has been clicked, the create Relation Modal will open. Fill out all the required parameters and all desired optional parameters (more info below) and press the save button to create your new relation. The save button will be disabled until all required parameters are filled in, and a valid expression has been entered.
 
 {% hint style="info" %}
-**Self Relations: **The user can define a relation between the current source and itself by selecting the current source in the related source modal. Self relations can _never _be primary.
+**Self Relations:** The user can define a relation between the current source and itself by selecting the current source in the related source modal. Self relations can _never_ be primary.
 {% endhint %}
 
 ![New Relation Button](<../../.gitbook/assets/image (302).png>)
@@ -20,9 +20,9 @@ To create a Relation, select a Source from the Sources screen, select the Relati
 
 ## Relation Properties
 
-* **Relation Name:**_ _The name of the Relation must be globally unique. If no relation name is specified, the relation name will default to the pattern: '_Current Source Name - Related Source Name'_
-* **Related Source: **Specifies the source for which a relationship with the current source is being defined.&#x20;
-* **Relation Expression: ** This is a boolean expression written in SQL that "joins" the current Source (denoted by "\[This]") to the related Source (denoted by "\[Related]"). The Relation will return 0, 1, or many records depending on the result of the expression.&#x20;
+* **Relation Name:** __ The name of the Relation must be globally unique. If no relation name is specified, the relation name will default to the pattern: '_Current Source Name - Related Source Name'_
+* **Related Source:** Specifies the source for which a relationship with the current source is being defined.&#x20;
+* **Relation Expression:** This is a boolean expression written in SQL that "joins" the current Source (denoted by "\[This]") to the related Source (denoted by "\[Related]"). The Relation will return 0, 1, or many records depending on the result of the expression.&#x20;
 * **Primary Flag:** Useful when there is only one valid relation between two sources, or a set of traversals between sources. Has no logical significance, but allows for a short-hand syntax in IntellioQL
 * **Active Flag**: Indicates if the Relation is currently available to Rule expressions and can be accessed during data processing.
 
@@ -56,7 +56,7 @@ In practice, the most important property of primary relations is that they can b
 
 ## Relation Expressions
 
-The relation expression defines the SQL applied to the ON condition of a JOIN statement. See the Relation Example below for further details. Expressions must resolve to a boolean value, and every relation expression must contain an instance of each of the source containers _\[This] _and _\[Related] _. In essence, each row in _\[This] _source (in other words, the current source) is related to every row in the _\[Related]_ source in which the relation expression is true. See the [Intellio™ QL](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions) page for more details on expression syntax.
+The relation expression defines the SQL applied to the ON condition of a JOIN statement. See the Relation Example below for further details. Expressions must resolve to a boolean value, and every relation expression must contain an instance of each of the source containers _\[This]_ and _\[Related]_ . In essence, each row in _\[This]_ source (in other words, the current source) is related to every row in the _\[Related]_ source in which the relation expression is true. See the [Intellio™ QL](https://app.gitbook.com/@intellio/s/dataops/v/master/configuring-the-data-integration-process/expressions) page for more details on expression syntax.
 
 ### Example Relation Expressions
 

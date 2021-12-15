@@ -9,7 +9,7 @@ description: >-
 
 An "Input" is Intellio’s atomic unit of data processing. Conceptually, an Input corresponds to a single file or scheduled Table pull from a configured Source.&#x20;
 
-## Source Inputs Tab <a href="validations-screen" id="validations-screen"></a>
+## Source Inputs Tab <a href="#validations-screen" id="validations-screen"></a>
 
 The Source Inputs screen allows users to monitor the status of their Sources' Inputs. The Inputs tab provides insight into the processing of all stages for a given Source. The top of the page has a variety of filters, which allow filtering based on the status of all four processing stages, as well as the file path name. The fields displayed are as follows:
 
@@ -32,7 +32,7 @@ The Source Inputs screen allows users to monitor the status of their Sources' In
     * Grey Check Mark - The input has passed processing but contains 0 records.
 
 
-* **Checkbox - **Used to select multiple inputs for reprocessing
+* **Checkbox -** Used to select multiple inputs for reprocessing
 
 ![The Inputs Page](<../../.gitbook/assets/image (293) (1) (1).png>)
 
@@ -67,7 +67,7 @@ Users can control all of the Inputs for a Source using the options below. Not al
 * **Reset All Output:** Reset the Output phase for all inputs
 * **Reset All Parsing:** Reset the Parsing phase for all inputs
 * **Reset All Enrichment:** Reset the Enrichment phase for all inputs
-* **Reset All Capture Data Changes: **Reset the CDC phase for all inputs
+* **Reset All Capture Data Changes:** Reset the CDC phase for all inputs
 * **Delete All Source Data:** Delete all stored data for the Source
 * **View Data:** Navigate to the Data View tab
 * **Pull Data Now:** Immediately generate a new Input for this Source (not available on watcher sources)

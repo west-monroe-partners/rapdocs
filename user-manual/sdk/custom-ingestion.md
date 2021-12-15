@@ -41,7 +41,7 @@ While potentially viable in specific situations, DataOps is not responsible for 
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName> `**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsSourceName>` **_with the name of the associated custom DataOps source.
+Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsSourceName>` **_ with the name of the associated custom DataOps source.
 
 ```
 import com.wmp.intellio.dataops.sdk._

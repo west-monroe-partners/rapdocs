@@ -1,6 +1,6 @@
 # Hotfix Upgrade Process
 
-**Goal: **This document details the steps to upgrade Azure-based Intellio DataOps deployments to a new hotfix version.
+**Goal:** This document details the steps to upgrade Azure-based Intellio DataOps deployments to a new hotfix version.
 
 **Process:**
 

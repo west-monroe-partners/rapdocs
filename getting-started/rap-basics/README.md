@@ -4,7 +4,7 @@ description: A conceptual outline of DataOps components, and how to configure in
 
 # DataOps Basics
 
-DataOps Basics provides a brief_ _conceptual overview of the DataOps data integration processes. For a more detailed example, see the provided [Data Integration Example](../data-integration-example/).
+DataOps Basics provides a brief __ conceptual overview of the DataOps data integration processes. For a more detailed example, see the provided [Data Integration Example](../data-integration-example/).
 
 DataOps Basics has three parts:
 

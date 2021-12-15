@@ -1,6 +1,6 @@
 # New Version Upgrade Process (Terraform)
 
-**Goal: **This document details the steps to upgrade Azure-based Intellio DataOps deployments to a new version.
+**Goal:** This document details the steps to upgrade Azure-based Intellio DataOps deployments to a new version.
 
 **Process:**
 

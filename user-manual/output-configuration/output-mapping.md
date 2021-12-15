@@ -11,10 +11,10 @@ description: >-
 * **Columns:** Define the final schema of the Output data, such as the target file headers or table column names and types.
 * **Channel:** Union between a source and the output, that defines how attributes from the source flow into the output.
 * **Mapping:** Expression that ties a channel to a column.
-* **Output Mapping: **Collection of all mappings that collectively defines how the data moves from all channels into the output table.
+* **Output Mapping:** Collection of all mappings that collectively defines how the data moves from all channels into the output table.
 
 {% hint style="info" %}
-Changes made to an output mapping will not take effect unless the user presses the **Save **button at the bottom right hand corner of the output mapping screen.
+Changes made to an output mapping will not take effect unless the user presses the **Save** button at the bottom right hand corner of the output mapping screen.
 {% endhint %}
 
 ## Adding a Channel
@@ -29,14 +29,14 @@ This will bring up the Channel configuration modal. To select the source to map,
 
 #### Options:&#x20;
 
-* **Filter Expression: **Allows users to define a condition that will exclude rows of data from the output, for which the filter expression does not evaluate to **true**.
+* **Filter Expression:** Allows users to define a condition that will exclude rows of data from the output, for which the filter expression does not evaluate to **true**.
 * **Operation Type:** Default is "N/A". Allows the user to mark a channel as an aggregate. More information on aggregate channels can be found [below](output-mapping.md#aggregate-channels).
-* **Name: **The name of the Channel defaults to name of the source itself. The user may want to set their own name for the channel, for instance to help distinguish between two Channels that come from the same source.
-* **Description: **Allows the user to briefly describe to other users the use case of the Channel.
-* **Auto Add Columns: **Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
-* **Key History: **Default is false. Output key history for channels of Key sources - ignore for Time Series sources.
-* **Post Processing Command: **Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB. This aligns to the Synopsis Processing phase.
-* **Allow Output Regeneration: **Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
+* **Name:** The name of the Channel defaults to name of the source itself. The user may want to set their own name for the channel, for instance to help distinguish between two Channels that come from the same source.
+* **Description:** Allows the user to briefly describe to other users the use case of the Channel.
+* **Auto Add Columns:** Default is ".\*". Regex pattern, all matching column headers will be automatically added to the output.
+* **Key History:** Default is false. Output key history for channels of Key sources - ignore for Time Series sources.
+* **Post Processing Command:** Default is true. SQL Command to run after output is complete WARNING: This will run live against your destination DB. This aligns to the Synopsis Processing phase.
+* **Allow Output Regeneration:** Default is true. If set to false, the output will not be generated if triggered by an output reset or validation reset
 
 ## Adding Columns
 
@@ -58,7 +58,7 @@ The Column Data Types listed in this drop down are the target system's available
 
 ## Aggregate Channels
 
-Aggregate channels allow users to output data at a higher grain than their actual data. A channel is set as aggregate by checking the **Aggregate **option of the **Operation Type** field on the channel details modal. Aggregate channels are denoted on screen by the icon circled in the picture below:
+Aggregate channels allow users to output data at a higher grain than their actual data. A channel is set as aggregate by checking the **Aggregate** option of the **Operation Type** field on the channel details modal. Aggregate channels are denoted on screen by the icon circled in the picture below:
 
 ![](../../.gitbook/assets/aggregateicon.png)
 
@@ -71,7 +71,7 @@ Which category a column falls under is determined by the expression mapped to it
 
 ![](../../.gitbook/assets/aggregateexpression.png)
 
-If an aggregate function is selected, the column automatically becomes a **MEASURE **column. Conversely, if no aggregate function is selected, the column automatically becomes a **GROUP **column.
+If an aggregate function is selected, the column automatically becomes a **MEASURE** column. Conversely, if no aggregate function is selected, the column automatically becomes a **GROUP** column.
 
 {% hint style="info" %}
 For more information on what each aggregate function does, please refer to Spark SQL documentation: [https://spark.apache.org/docs/latest/api/sql/](https://spark.apache.org/docs/latest/api/sql/)
@@ -83,17 +83,17 @@ Furthermore, if an aggregate function for a column has been selected, the user h
 
 ## Channel Menu Controls
 
-To open the Channel control menu, click on the kebab button (⋮) at the far right of the **Source/Mapping Name **column of the output mapping.&#x20;
+To open the Channel control menu, click on the kebab button (⋮) at the far right of the **Source/Mapping Name** column of the output mapping.&#x20;
 
 None of these actions take effect unless the output mapping save button is pressed afterwards.
 
 ![Channel Menu can be seen on the right](<../../.gitbook/assets/image (270).png>)
 
-* **View/Edit Details: **Will open the configuration details modal of the selected channel.
-* **Automap: **Will map attributes from the source from the selected channel to any columns that the user may have created that have column names that match an attribute name.
-* **Add\&Map All Source Columns: **Adds a column for each attribute of the source from the selected channel, and maps the corresponding attribute to the column automatically. The newly created column names will be that of their corresponding attributes.
-* **Clear Mappings: **Clears all expressions mapped to columns from the source from the selected channel.
-* **Remove: **Removes the channel in question from the output.
+* **View/Edit Details:** Will open the configuration details modal of the selected channel.
+* **Automap:** Will map attributes from the source from the selected channel to any columns that the user may have created that have column names that match an attribute name.
+* **Add\&Map All Source Columns:** Adds a column for each attribute of the source from the selected channel, and maps the corresponding attribute to the column automatically. The newly created column names will be that of their corresponding attributes.
+* **Clear Mappings:** Clears all expressions mapped to columns from the source from the selected channel.
+* **Remove:** Removes the channel in question from the output.
 
 {% hint style="warning" %}
 Note: It is best practice to manually add all Output Columns when configuring an enterprise grade system to adhere to destination naming convention and semantics.
@@ -105,13 +105,13 @@ To open the column menu, click on the list icon button (circled in the image bel
 
 ![](../../.gitbook/assets/columnmenu.png)
 
-* **View/Edit Details: **Opens the column configuration modal of the selected column.
-* **Move Left: **Shifts the column one place over to the left on the UI.
-* **Move Right: **Shifts the column one place over to the right on the UI.
-* **Automap: **Maps an expression to each channel in the output mapping that has a source attribute matching whose name matches the column name.
-* **Clear Mappings: **Clears all expressions mapped to the column across all channels in the output mapping.
-* **Hide: **Takes the column off the screen in the UI, without actually removing the column from the output.
-* **Remove: **Removes column from the output mapping.
+* **View/Edit Details:** Opens the column configuration modal of the selected column.
+* **Move Left:** Shifts the column one place over to the left on the UI.
+* **Move Right:** Shifts the column one place over to the right on the UI.
+* **Automap:** Maps an expression to each channel in the output mapping that has a source attribute matching whose name matches the column name.
+* **Clear Mappings:** Clears all expressions mapped to the column across all channels in the output mapping.
+* **Hide:** Takes the column off the screen in the UI, without actually removing the column from the output.
+* **Remove:** Removes column from the output mapping.
 
 ## Mapping Expressions
 

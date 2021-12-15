@@ -163,7 +163,7 @@ A final note on this new feature, just as with source names, users need not fear
 
 ## Delta Lake Output
 
-_By: Joe Swanson - Senior Consultant, Application & Infrastructure Engineering Lead _
+_By: Joe Swanson - Senior Consultant, Application & Infrastructure Engineering Lead_&#x20;
 
 Users can now create and write to Databricks Delta Lake tables using the Output features in the UI. Before, the only way to create a Hive output in Databricks was by using the Virtual Output feature - however, the virtual output only created a view in the Databricks metastore. Now, by using the Delta Lake Output feature, users can create a persisted Hive output table in Databricks that is optimized with Delta Lake capabilities.&#x20;
 
@@ -195,7 +195,7 @@ Learn more about Databricks Delta Lake here: [https://docs.databricks.com/delta/
 
 ## External API Routes&#x20;
 
-_By: Joe Swanson - Senior Consultant, Application & Infrastructure Engineering Lead _
+_By: Joe Swanson - Senior Consultant, Application & Infrastructure Engineering Lead_&#x20;
 
 We’ve exposed 4 routes on our API application that can be accessed with a new Auth0 Machine to Machine application that is created by Terraform in the DataOps Auth0 tenant. The application will be called \<environment>-External-\<client>. Request a JWT token using the Client ID and Client Secret of the new external application and these routes will be accessible.&#x20;
 
@@ -220,6 +220,6 @@ GET /external/sources-filtered-by-name/\<filter>&#x20;
 
 ## Specify Target Database for Virtual Outputs&#x20;
 
-_By: Joe Swanson - Senior Consultant, Application & Infrastructure Engineering Lead _
+_By: Joe Swanson - Senior Consultant, Application & Infrastructure Engineering Lead_&#x20;
 
 Virtual Outputs can now be created in any database in the Databricks metastore. Use the “View Database” parameter in the Output settings page to define the database. If left blank, the database will be defaulted to the DataOps hub database.&#x20;

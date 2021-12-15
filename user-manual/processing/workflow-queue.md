@@ -10,13 +10,13 @@ Detailed breakdown of each header:
 * **Time Created**: When the workflow item was initialized.
 * **Source**: Name of source.
 * **Input Id**: A unique key identifier for input.
-*   **Operation Type**: Each of the following operation types represent a different stage of the data processing workflow. To see a full list of all available operation types - please execute the _following _query.
+*   **Operation Type**: Each of the following operation types represent a different stage of the data processing workflow. To see a full list of all available operation types - please execute the _following_ query.
 
     ```
     --Query to get all operation type names
     select process_name from meta.process_type;
     ```
-*   **Wait Type**: Each wait type represents the item state in the workflow queue. To see a full list of all available wait types - please execute the _following _query.
+*   **Wait Type**: Each wait type represents the item state in the workflow queue. To see a full list of all available wait types - please execute the _following_ query.
 
     ```
     --Query to get all wait type names

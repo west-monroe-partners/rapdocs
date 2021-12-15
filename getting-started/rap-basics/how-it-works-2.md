@@ -34,7 +34,7 @@ DataOps imports the appropriately transformed raw data from source systems into 
 
 #### Enrichment
 
-**Enrichment (Enrich) **is the step of the logical data flow that applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Enrichment rules represent the majority of the logic and structure of data processing within DataOps, and provide a flexible, yet guided framework for data management. The **Refresh** and **Recalculate** steps are also tightly coupled to this process, as those steps involve ensuring that historical data that needs to have their enriched fields kept current will be updated.
+**Enrichment (Enrich)** is the step of the logical data flow that applies data quality checks and executes business logic. This happens within the Data Hub, where user-specified configuration rules drive transformations and processing in several automated steps. The Enrichment rules represent the majority of the logic and structure of data processing within DataOps, and provide a flexible, yet guided framework for data management. The **Refresh** and **Recalculate** steps are also tightly coupled to this process, as those steps involve ensuring that historical data that needs to have their enriched fields kept current will be updated.
 
 The Enrichment step is facilitated by the Enrichment tab within the Source screen in the DataOps interface.&#x20;
 
@@ -46,11 +46,11 @@ DataOps supports many types of enrichments, and not all types of business logic 
 
 ### DataOps Data Hub
 
-The **Data Hub **consists of a Hive table optimized to process and store data for DataOps. As data moves through processing steps, DataOps automatically and continuously modifies the underlying table structures to ensure optimal performance.
+The **Data Hub** consists of a Hive table optimized to process and store data for DataOps. As data moves through processing steps, DataOps automatically and continuously modifies the underlying table structures to ensure optimal performance.
 
 #### Output
 
-The **Output **step of the logical data flow and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
+The **Output** step of the logical data flow and maps transformed data from the Data Hub to a Data Warehouse or 3rd party. Output typically consists of very limited transformation logic, instead focusing on simple mappings of data fields from the Data Hub to the final location.
 
 The Output step is facilitated by the connections and outputs screens in the DataOps interface.
 

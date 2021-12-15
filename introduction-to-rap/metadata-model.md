@@ -39,19 +39,19 @@ Configuration metadata tracks and stores all of the configurations that a user p
   * This table tracks the configurations of Outputs. A single record is created for each output, tracking its parameters and connection.
   * Changing values in the Setting tab of the Output page will change values in this table.
   * Key field: output\_id
-* **Output Source **(output\_source)
+* **Output Source** (output\_source)
   * This table tracks the configurations of Source to Output Mappings. A single record is created for each Source to Output Mapping, tracking its source, output, and parameters.
   * Adding/Removing Sources in the Mappings tab or editing a Source to Output Mapping in the View/Edit Details popup will changes values in this table.
   * Key field: output\_source\_id
-* **Output Column **(output\_column)
+* **Output Column** (output\_column)
   * This table tracks the configurations for the individual columns that exist within an output. A single record exists for each column defined on an output, tracking its name, position, associated output, and datatype.
   * Adding/removing/editing an output column on the Mappings tab of the Output page will change values in this table.
   * Key Field: output\_column\_id
-* **Output Source Column **(output\_source\_column)
+* **Output Source Column** (output\_source\_column)
   * This table tracks the configurations for the individual fields that are mapped into output columns. A single record exists for each Output Column to Source Field, tracking its associated output column, associated output source, and associated field.
   * Adding/removing/editing a cell in the Mapping tab of the Output page will change values in this table.
   * Key field: Output\_source\_column\_id
-* &#x20;**Source Dependency **(source\_dependency)
+* &#x20;**Source Dependency** (source\_dependency)
   * This table tracks the configurations for Source Dependencies. A single record is created for each dependency, tracking its associated sources and and interval settings.
   * Adding or editing a dependency on the Dependencies tab of the Source page will change values in this table.&#x20;
   * Key field: source\_dependency\_id
@@ -59,7 +59,7 @@ Configuration metadata tracks and stores all of the configurations that a user p
   * This table tracks configurations for Agents. A single record is created for each agent, tracking its name, code, and parameters.
   * Adding or editing an Agent on the Agents tab will change values in this table.
   * Key field: agent\_code
-* ** Connection**
+* &#x20;**Connection**
   * This table tracks configuration of Connections to be used in Sources and Outputs, tracking its credentials and relevant file paths.
   * Adding or editing a Connection on the Connections page will change values in this table.
   * Key field: connection\_id
@@ -71,23 +71,23 @@ Configuration metadata tracks and stores all of the configurations that a user p
 
 These tables store dynamic data that is derived from user input. Editing configurations in the UI does not directly change them, but they are updated to reflect changes in their associated User Configured tables.
 
-* **Raw Attribute **(raw\_attribute)
+* **Raw Attribute** (raw\_attribute)
   * This table tracks the raw attributes that appear in each source. A single record is created for each attribute present in the data upon ingestion. The table tracks the original name of the attribute, the normalized name, with things like numbers, spaces etc. removed, the DataOps column alias, and the most recent input that had the attribute present.
   * Raw attributes will be added and updated whenever a new input is pulled into a source.
   * Raw attributes are referenced in the creation of Rules and Relations.
   * Key fields: source\_id/raw\_attribute\_name/data\_type
-* **Enrichment Parameter **(enrichment\_parameter)
+* **Enrichment Parameter** (enrichment\_parameter)
   * This table tracks all of the attributes that are used in enrichment rules. This includes raw, system, and enriched attributes. A single record exists for each attribute that appears in an enrichment rule, tracking its associated enrichment, associated attribute, and any relations needed to get there.
   * Enrichment parameters will be added, updated, or deleted whenever enrichments are added/edited by the user.
   * Enrichment parameters are referenced in the expression\_parsed field of the enrichment table and the enrichment aggregation table.
   * Key field: enrichment\_parameter\_id
-* **Enrichment Aggregation **(enrichment\_aggregation)
+* **Enrichment Aggregation** (enrichment\_aggregation)
   * This table tracks all of the aggregations used in enrichment rules when utilizing x-to-many relations. A single record exists for each aggregation that appears in an enrichment rule, tracking the aggregation used and the expression that is contained within it.
   * Enrichment Aggregations contain expressions, which are further parsed down to enrichment parameters.
   * Enrichment parameters will be added, updated, or deleted whenever Rules using x-to-many relations are added/edited by the user.
   * Enrichment parameters are referenced in the expression\_parsed field of the enrichment table.
   * Key field: enrichment\_aggregation\_id
-* **Source Relation Parameter **(source\_relation\_parameter)
+* **Source Relation Parameter** (source\_relation\_parameter)
   * This table tracks all of the attributes used in source relations. This includes raw, system, and enriched attributes. A single record exists for each attribute that appears in a relation, tracking the attribute and the source that it comes from.
   * Source Relation Parameters will be added, updated, or deleted whenever source relations are added/edited by the user.
   * Source Relation Parameters are referenced in the expression \_parsed field of the source relation table.
@@ -97,11 +97,11 @@ These tables store dynamic data that is derived from user input. Editing configu
 
 These tables store static data provided by Intellio itself. This data is used as a reference and drives aspects of the tables discussed above.
 
-* **System Attribute **(system\_attribute)
+* **System Attribute** (system\_attribute)
   * This table has a record for each system attribute that is available for use in output column mappings, rules, and relations.
   * It tracks which source refresh types have each attribute as well as their datatypes.
   * Key field: system\_attribute\_id
-* **Type Map **(type\_map)
+* **Type Map** (type\_map)
   * This table has a record for each datatype that is supported for usage in output columns. Based on the data types of the fields mapped in the output mapping page, this table will determine what datatypes are valid for user to set the output column too. It also helps determine if a particular source field can be mapped to a particular output column.
   * Each record has an output type, signifying the type of output a user is trying to create, an internal type, and an external type mapping specific to the outputs type.&#x20;
   * The presence of a record in this table indicates that the type mapping is valid i.e. a number can be mapped to numeric or string so both of those records exist. A string can only be mapped to string, so no other type mappings exist.&#x20;
@@ -112,14 +112,14 @@ These tables store static data provided by Intellio itself. This data is used as
 
 ## Runtime Metadata
 
-Processing metadata tracks and stores the movement and manipulation of data within Intellio. Every time that data is pulled into the system, it goes through a standard set of operations that can be found [here](https://intellio.gitbook.io/dataops/logical-architecture-overview/data-processing-engine/data-processing-1). Throughout the course of this processing, Intellio must constantly evaluate if and when a process is valid to proceed forward to its next steps. This logic called the Intellio **Workflow** takes place in a series of tables and functions. Additionally, details about each process and the Spark jobs that run it are stored in **Log **tables keep track of all logs produced by the processes.
+Processing metadata tracks and stores the movement and manipulation of data within Intellio. Every time that data is pulled into the system, it goes through a standard set of operations that can be found [here](https://intellio.gitbook.io/dataops/logical-architecture-overview/data-processing-engine/data-processing-1). Throughout the course of this processing, Intellio must constantly evaluate if and when a process is valid to proceed forward to its next steps. This logic called the Intellio **Workflow** takes place in a series of tables and functions. Additionally, details about each process and the Spark jobs that run it are stored in **Log** tables keep track of all logs produced by the processes.
 
 ### **Workflow**
 
 #### **Tables**
 
 * **User Configured**
-  * &#x20;Source Dependency** **(source\_dependency)
+  * &#x20;Source Dependency **** (source\_dependency)
     * This table tracks the configurations for Source Dependencies. A single record is created for each dependency, tracking its associated sources and and interval settings. This table will be considered when determining if an enrichment process is clear to run.
     * Adding or editing a dependency on the Dependencies tab of the Source page will change values in this table.&#x20;
     * Key field: source\_dependency\_id
