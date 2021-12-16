@@ -10,7 +10,7 @@ description: >-
 
 ![](../../.gitbook/assets/source-location.png)
 
-Sources  managing the entire logical data flow. Through setting parameters within the setting or through the different sub-tabs within the Source UI the flow from ingestion through output is managed. This means the four steps discussed in the How It Works section are managed from the Sources UI. What is covered in this step is how Input and Staging are set up. 
+Sources  managing the entire logical data flow. Through setting parameters within the setting or through the different sub-tabs within the Source UI the flow from ingestion through output is managed. This means the four steps discussed in the How It Works section are managed from the Sources UI. What is covered in this step is how Input and Staging are set up.&#x20;
 
 ## Step 1: Create a Source
 
@@ -20,7 +20,7 @@ Navigate to the Sources screen through the Menu, then create and name a new Sour
 The below image shows some available controls that we will not use in this basic example. Because these are more advanced features, this section only provides a brief description of each.
 {% endhint %}
 
-![Extra Options; Leave as-is](../../.gitbook/assets/screenshot_5%20%283%29.png)
+![Extra Options; Leave as-is](<../../.gitbook/assets/screenshot\_5 (3).png>)
 
 {% tabs %}
 {% tab title="Hide Advanced Parameters" %}
@@ -66,7 +66,7 @@ Sources with the **Key** refresh type contain a unique identifier or _key_ tied 
 {% endtab %}
 
 {% tab title="Full" %}
-**Full** sources replace the data completely whenever RAP ingests new data into the source.  
+**Full** sources replace the data completely whenever RAP ingests new data into the source. &#x20;
 {% endtab %}
 
 {% tab title="None" %}
@@ -99,7 +99,7 @@ A database table to be ingested at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on Connection Type attributes.
+When selecting an Connection Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](broken-reference) for more details on Connection Type attributes.
 {% endhint %}
 
 After selecting a Connection Type, select the connection that you configured on the previous page from the connection drop-down list. The list of connections available depends on your Connection Type.
@@ -114,7 +114,7 @@ Select `Watcher`.
 
 {% tabs %}
 {% tab title="Watcher" %}
-DataOps continuously monitors a data path \(a local/network folder path or database connection\) and ingests data as soon as it becomes available.
+DataOps continuously monitors a data path (a local/network folder path or database connection) and ingests data as soon as it becomes available.
 {% endtab %}
 
 {% tab title="Scheduled" %}
@@ -123,7 +123,7 @@ RAP ingests data from a data path at a scheduled time and cadence.
 {% endtabs %}
 
 {% hint style="warning" %}
-When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide]() for more details on Initiation Type attributes.
+When selecting an Initiation Type, the screen fields will dynamically update in the Schedule and Input Parameters sections of the Source configuration. Reference the [Configuration Guide](broken-reference) for more details on Initiation Type attributes.
 {% endhint %}
 
 ## **Step 3: Specify Input Parameters**
@@ -154,15 +154,14 @@ Click the **Save** button to save the Source; all parameters should be configure
 
 ![Source Details](../../.gitbook/assets/step-5-save.png)
 
-_DataOps_ _now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the DataOps_ _internal storage database._ 
+_DataOps_ _now has all the information it needs to complete the Input & Staging phases, allowing the source data to be ingested, read, and written into the DataOps_ _internal storage database._&#x20;
 
 ## Step 6: Validate File Input
 
 Check the Inputs tab at the top of the page to verify that the file has been successfully pushed to the system.
 
-![Input Found &amp; Ingested](../../.gitbook/assets/rap-6-inputs-update.png)
+![Input Found & Ingested](../../.gitbook/assets/rap-6-inputs-update.png)
 
 {% hint style="info" %}
 DataOps will automatically begin the Input phase when the input files appear in the Connection specified earlier. These files will disappear once DataOps ingests them.
 {% endhint %}
-

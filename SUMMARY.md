@@ -90,7 +90,6 @@
 ## Releases
 
 * [Announcements](releases/announcements/README.md)
-  * [Page 1](releases/announcements/page-1.md)
   * [Log4j Vulnerability Impact on IDO](releases/announcements/log4j-vulnerability-impact-on-ido.md)
   * [2.4.3 Features](releases/announcements/2.4.3-features.md)
   * [2.4.2 Quality of Life Improvments](releases/announcements/2.4.2-quality-of-life-improvments.md)

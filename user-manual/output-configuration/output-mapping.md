@@ -6,7 +6,7 @@ description: >-
 
 # Mapping
 
-## Key Terms 
+## Key Terms&#x20;
 
 * **Columns:** Define the final schema of the Output data, such as the target file headers or table column names and types.
 * **Channel:** Union between a source and the output, that defines how attributes from the source flow into the output.
@@ -21,13 +21,13 @@ Changes made to an output mapping will not take effect unless the user presses t
 
 To enable mappings between an output and a source, the first step is to add the channel to the Output Mapping screen, thus generating a link between this Source and Output. Click **Add Source Mapping** at the top of the mapping table and underneath the **Mapping** tab, as seen below.
 
-![](../../.gitbook/assets/addoutputsource%20%281%29.png)
+![](<../../.gitbook/assets/addoutputsource (1).png>)
 
 This will bring up the Channel configuration modal. To select the source to map, click on the **Select Source** search bar/drop down menu circled below, begin typing the name of the source that needs to be mapped, and once the desired source appears in the dropdown menu, it can be selected.
 
 ![](../../.gitbook/assets/selectmappingsource.png)
 
-#### Options: 
+#### Options:&#x20;
 
 * **Filter Expression:** Allows users to define a condition that will exclude rows of data from the output, for which the filter expression does not evaluate to **true**.
 * **Operation Type:** Default is "N/A". Allows the user to mark a channel as an aggregate. More information on aggregate channels can be found [below](output-mapping.md#aggregate-channels).
@@ -44,9 +44,9 @@ This will bring up the Channel configuration modal. To select the source to map,
 
 To add a single column, click on **Add Column** in the top middle of the screen, seen next to the **Remove All Columns** button in the image above.
 
-Then, when the create column modal opens \(seen in the image below\), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
+Then, when the create column modal opens (seen in the image below), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
 
-![](../../.gitbook/assets/image%20%28265%29.png)
+![](<../../.gitbook/assets/image (265).png>)
 
 Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
 
@@ -62,7 +62,7 @@ Aggregate channels allow users to output data at a higher grain than their actua
 
 ![](../../.gitbook/assets/aggregateicon.png)
 
- All columns of an aggregate channel fall into one of two categories:
+&#x20;All columns of an aggregate channel fall into one of two categories:
 
 * **GROUPS:** Static fields by which rows with matching values will be grouped together. Akin to columns in a SQL "GROUP BY" clause.
 * **MEASURES:** Usually numeric fields that we will perform aggregate operations on.
@@ -83,15 +83,15 @@ Furthermore, if an aggregate function for a column has been selected, the user h
 
 ## Channel Menu Controls
 
-To open the Channel control menu, click on the kebab button \(⋮\) at the far right of the **Source/Mapping Name** column of the output mapping. 
+To open the Channel control menu, click on the kebab button (⋮) at the far right of the **Source/Mapping Name** column of the output mapping.&#x20;
 
 None of these actions take effect unless the output mapping save button is pressed afterwards.
 
-![Channel Menu can be seen on the right](../../.gitbook/assets/image%20%28270%29.png)
+![Channel Menu can be seen on the right](<../../.gitbook/assets/image (270).png>)
 
 * **View/Edit Details:** Will open the configuration details modal of the selected channel.
 * **Automap:** Will map attributes from the source from the selected channel to any columns that the user may have created that have column names that match an attribute name.
-* **Add&Map All Source Columns:** Adds a column for each attribute of the source from the selected channel, and maps the corresponding attribute to the column automatically. The newly created column names will be that of their corresponding attributes.
+* **Add\&Map All Source Columns:** Adds a column for each attribute of the source from the selected channel, and maps the corresponding attribute to the column automatically. The newly created column names will be that of their corresponding attributes.
 * **Clear Mappings:** Clears all expressions mapped to columns from the source from the selected channel.
 * **Remove:** Removes the channel in question from the output.
 
@@ -101,7 +101,7 @@ Note: It is best practice to manually add all Output Columns when configuring an
 
 ## Column Menu Controls
 
-To open the column menu, click on the list icon button \(circled in the image below\) at the far right of each column header. None of these actions take effect unless the output mapping save button is pressed afterwards.
+To open the column menu, click on the list icon button (circled in the image below) at the far right of each column header. None of these actions take effect unless the output mapping save button is pressed afterwards.
 
 ![](../../.gitbook/assets/columnmenu.png)
 
@@ -121,11 +121,10 @@ Once at least one channel and column have been created, the user can start mappi
 
 Once the user clicks the empty cell they would like to map a value to, the expression entry modal will appear:
 
-![](../../.gitbook/assets/image%20%28264%29.png)
+![](<../../.gitbook/assets/image (264).png>)
 
-To begin mapping an attribute, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel and the target source of the channel, represented by _\[This\]_.   
-  
-To map an attribute from the target source of the channel select _\[This\]_, or to map an attribute from a source that is related to the target source of the channel, choose one of the other sources in the drop down.  
-  
+To begin mapping an attribute, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel and the target source of the channel, represented by _\[This]_. \
+\
+To map an attribute from the target source of the channel select _\[This]_, or to map an attribute from a source that is related to the target source of the channel, choose one of the other sources in the drop down.\
+\
 Once a source has been selected, they can type a period "." to reveal a drop down of all attributes of this selected source. Choose an attribute from the drop down to map it to the target field.
-
