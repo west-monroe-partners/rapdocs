@@ -96,6 +96,7 @@
 ## Releases
 
 * [Announcements](releases/announcements/README.md)
+  * [Log4j Vulnerability Impact on IDO](releases/announcements/log4j-vulnerability-impact-on-ido.md)
   * [2.4.2 Quality of Life Improvments](releases/announcements/2.4.2-quality-of-life-improvments.md)
   * [Performance Improvements and Delta Lake in 2.4.1](releases/announcements/performance-improvements-and-delta-lake-in-2.4.1.md)
   * [Quality of Life Features in 2.4.0](releases/announcements/quality-of-life-features-in-2.4.0.md)
