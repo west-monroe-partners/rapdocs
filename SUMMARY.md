@@ -90,6 +90,8 @@
 ## Releases
 
 * [Announcements](releases/announcements/README.md)
+  * [Page 1](releases/announcements/page-1.md)
+  * [Log4j Vulnerability Impact on IDO](releases/announcements/log4j-vulnerability-impact-on-ido.md)
   * [2.4.3 Features](releases/announcements/2.4.3-features.md)
   * [2.4.2 Quality of Life Improvments](releases/announcements/2.4.2-quality-of-life-improvments.md)
   * [Performance Improvements and Delta Lake in 2.4.1](releases/announcements/performance-improvements-and-delta-lake-in-2.4.1.md)
@@ -97,6 +99,7 @@
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
   * [2.4](releases/changelog/2.4/README.md)
+    * [2.4.3- November 18th Hotfix](releases/changelog/2.4/2.4.3-november-18th-hotfix.md)
     * [2.4.3 - October 29th Hotfix](releases/changelog/2.4/2.4.3-october-29th-hotfix.md)
     * [2.4.3](releases/changelog/2.4/2.4.3.md)
     * [2.4.2](releases/changelog/2.4/2.4.2.md)
