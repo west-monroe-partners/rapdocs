@@ -66,7 +66,8 @@
 * [System Configuration](user-manual/system-configuration/README.md)
   * [Global System Configuration Parameters](user-manual/system-configuration/managing-system-configuration.md)
   * [Cluster and Process Configuration Overview](user-manual/system-configuration/cluster-and-process-configuration-overview/README.md)
-    * [Cluster Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration.md)
+    * [Cluster Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/README.md)
+      * [Spot instance configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/spot-instance-configuration.md)
     * [Process Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration.md)
 
 ## Operations
