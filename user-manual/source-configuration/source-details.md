@@ -1,10 +1,10 @@
 ---
 description: >-
-  The Details tab for a Source allows a user to specify key information about
+  The Settings tab for a Source allows a user to specify key information about
   the Source including input types and file types.
 ---
 
-# Settings
+# Source Settings
 
 ## Settings Tab
 
@@ -16,7 +16,7 @@ Most of the parameters focus on where, how, and when to ingest data into the Dat
 
 After the Source is created you can access the Settings tab at any time by clicking on the Settings tab in the upper left.
 
-![](<../../.gitbook/assets/image (316).png>)
+![](../../.gitbook/assets/source\_settings\_001.png)
 
 ## Base Parameters
 
@@ -29,6 +29,7 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 * **Hub View Name:** Name of view alias of the raw hub table in Databricks
 * **Group Name:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
 * **Source Name Template:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
+* **Process Config\*:** The[ Process Configuration](../system-configuration/cluster-and-process-configuration-overview/process-configuration.md). Selected from a dropdown.
 * **Active\*:** If set to Active, the Source will run as specified.
 * **Connection Type\*:** Selector to help filter the [Connection ](../connections.md)dropdown
 * **Connection\*:** The [Connection ](../connections.md)to use for this source
@@ -37,17 +38,7 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 
 {% tabs %}
 {% tab title="Custom" %}
-* **Initiation Type\*:** Specifies if your custom code is compiled into an executable Jar file, or is in a Databricks Notebook
-
-#### Jar
-
-* **Jar Location\*:** Specifies the location in the Cloud storage technology where the Jar is stored
-* **Main Class Name\*:** Name of the primary class in the Jar to be run when executed
-
-#### Notebook
-
-* **Notebook Path**\***:** Path to the notebook within Databricks.
-  * eg. /Shared/mynotebookname
+* **Cluster Config\*:** The [Cluster Configuration](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/#cluster-settings). Selected from a dropdown of available configurations.
 {% endtab %}
 
 {% tab title="File" %}
@@ -61,12 +52,6 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 
 {% tab title="Loopback" %}
 * **Virtual Output\*:** Name of the virtual output this source is linked to and will pull data from
-{% endtab %}
-
-{% tab title="SFTP" %}
-**SFTP**, or Secure File Transfer Protocol, is a method of transferring files between machines over a secure connection.
-
-**See File tab for detailed parameters overview**
 {% endtab %}
 
 {% tab title="Table" %}

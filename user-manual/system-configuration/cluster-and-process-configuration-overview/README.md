@@ -6,7 +6,6 @@
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <p>Cluster </p><p>Configuration</p> | <p>Stores all configuration settings required for the databricks job: cluster configuration, job configuration + few IDO-specific parameters used to control job execution. <br>Cluster configuration record is directly linked to the databricks job via unique job_id attribute.</p> |
 | Process Configuration               | Comprised of one default cluster configuration and optional set of cluster configurations for each specific process type. Process configuration is attached to each Source in IDO.                                                                                                     |
-|                                     |                                                                                                                                                                                                                                                                                        |
 
 
 
