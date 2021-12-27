@@ -77,7 +77,6 @@
     * [New Version Upgrade Process (Terraform)](operations/deployment/deployment-to-amazon-web-services/new-version-upgrade-process-terraform.md)
     * [New Version Upgrade Process (Manual)](operations/deployment/deployment-to-amazon-web-services/using-the-deployment-service-in-ecs.md)
     * [Hotfix Upgrade Process](operations/deployment/deployment-to-amazon-web-services/hotfix-upgrade-process.md)
-    * [!! Installing a New Agent On ECS (AWS)](operations/deployment/deployment-to-amazon-web-services/installing-a-new-rap-agent-ecs.md)
   * [Deployment to Microsoft Azure](operations/deployment/deployment-to-microsoft-azure/README.md)
     * [Pre Deployment Requirements](operations/deployment/deployment-to-microsoft-azure/pre-deployment-requirements.md)
     * [Performing the Deployment](operations/deployment/deployment-to-microsoft-azure/performing-the-deployment.md)
