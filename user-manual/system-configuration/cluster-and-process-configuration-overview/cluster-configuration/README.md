@@ -16,7 +16,7 @@ The cluster configurations table shows all of the major details on any existing 
 
 If a cluster has an associated job ID, users can view the job details or start a new job run. To start a new job run, click on the **launch icon** under the **Start** column. The view job details, click on the **ID** number under the **Job ID** column.&#x20;
 
-Click any other column will direct users to the settings page of the cluster. To make a new cluster, hit the **NEW CLUSTER** button in the top right corner.
+Clicking any other column will direct users to the settings page of the cluster. To make a new cluster, hit the **NEW CLUSTER** button in the top right corner.
 
 ![](../../../../.gitbook/assets/cluster\_003.png)
 
@@ -29,23 +29,23 @@ The cluster settings page allows users to create and update cluster configuratio
 * **Name\*:** A unique name.
 * **Description\*:** A one sentence summary describing the cluster.
 * **Default Cluster Configuration:** A flag that marks the cluster as the default. Once active, toggle is disabled until another default cluster is selected.
-* **Cluster Type\*:** Create either a new Job or a new Job from the pool.
-* **Scale Mode\*:** The number of works is automatically managed by DataBricks or is a fixed value.
-* **Job Task Type\*:** Jobs with either execute a custom notebook or Intellio sparky will be used.
-* **Notebook Path \*:** The fill file path to the custom notebook. Only required when custom notebook job task type is selected.
+* **Cluster Type\*:** Create either a new Job or a new Job from sparky-pool (default) or user specified pool.
+* **Scale Mode\*:** The number of workers can be automatically managed by Databricks or can be a fixed value.
+* **Job Task Type\*:** Jobs will either execute a custom notebook in Databricks or Intellio Sparky Jar will be used.
+* **Notebook Path\*:** The full file path to the custom notebook. Only required when custom notebook job task type is selected.
 
 {% hint style="info" %}
-The DataOPs jar will use sparky for all process types except custom
+Selecting DataOps jar as Job Task Type will use the Intellio Sparky Jar for all process types except custom.
 {% endhint %}
 
 ## Advanced Parameters
 
-Depending on the selections made in the required parameters section, the advanced parameters section will provide various sub-settings to help configurators tune the jobs to their needs.&#x20;
+Depending on the selections made in the required parameters section, the advanced parameters section will provide various sub-settings to help configurators tune jobs to their needs.&#x20;
 
-Descriptions for each are included in the UI.  Please refer to the Databricks [documentation ](https://docs.databricks.com/dev-tools/api/2.0/jobs.html#newcluster)for in-depth details. Please submit a support ticket if the descriptions in the UI do not adequately explain the functionality of a specific parameter.
+Descriptions for each are included in the UI.  Please refer to the Databricks [documentation ](https://docs.databricks.com/dev-tools/api/2.0/jobs.html#newcluster)for in-depth details. Please submit a feature request support ticket if the descriptions in the UI do not adequately explain the functionality of a specific parameter.
 
 {% hint style="info" %}
-Any user modified parameters will be marked with a bold font weight.
+Any user modified parameters will be displayed as bold
 {% endhint %}
 
 
