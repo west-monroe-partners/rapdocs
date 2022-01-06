@@ -48,6 +48,3 @@ Descriptions for each are included in the UI.  Please refer to the Databricks [d
 Any user modified parameters will be displayed as bold
 {% endhint %}
 
-
-
-![](<../../../../.gitbook/assets/image (381).png>)
