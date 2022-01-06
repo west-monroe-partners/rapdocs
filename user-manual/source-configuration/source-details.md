@@ -116,36 +116,7 @@ This determines how new Inputs are generated within DataOps. Most Connections Ty
 
 With Custom Connection Type Sources utilizing the [SDK](../sdk/), it is possible to have a source be both scheduled and/or initialized from outside of DataOps utilizing the methods within the SDK and the Databricks APIs, providing maximum flexibility for any custom integration with 3rd party tools or in-house built applications&#x20;
 
-## Cluster Type
 
-* **Custom:** Allows you to specify the infrastructure used by DataOps to process the data. You are able to specify any parameters available in the "existing\_cluster\_id OR new\_cluster" and "libraries" of the [Databricks Jobs API](https://docs.databricks.com/dev-tools/api/latest/jobs.html).
-  * These parameters should be structured as a single JSON object with the top level keys set as the relevant Field Names under the API docs from Databricks listed above.
-  * Here are some examples:
-
-```
-{
-"new_cluster": {
-  "spark_version": "7.3.x-scala2.12",
-  "node_type_id": "r3.xlarge",
-    "aws_attributes": {
-      "availability": "ON_DEMAND"
-    },
-    "num_workers": 10
-  },
-  "libraries": [
-    {
-      "jar": "dbfs:/my-jar.jar"
-    },
-    {
-      "maven": {
-        "coordinates": "org.jsoup:jsoup:1.7.2"
-      }
-    }
-  ]       
-}
-```
-
-* **DataOps Managed:** This setting with use the default cluster configuration for the environment, optionally tune-able via the Performance & Cost detailed parameters section.
 
 ## Advanced Parameters
 
