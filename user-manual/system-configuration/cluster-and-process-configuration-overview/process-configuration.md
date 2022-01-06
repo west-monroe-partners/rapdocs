@@ -14,7 +14,7 @@ Process configuration was previously found under the Source Settings tab within 
 
 The process configurations table displays all of the high level details on existing process configurations. Simply hover over and click on any listed process configuration to be taken to its settings page
 
-To make a new process configuration, click on the **NEW PROCESS CONFIGURATIONS** button in the top right corner.
+To make a new process configuration, click on the **NEW PROCESS CONFIGURATION** button in the top right corner.
 
 ![](../../../.gitbook/assets/process\_configs\_002.png)
 
@@ -25,7 +25,7 @@ The process settings page allows users to create and update process configuratio
 ![](../../../.gitbook/assets/process\_configs\_003.png)
 
 * **Name\*:** A unique name.
-* **Description\*:** A one sentence summary describing the process configuration.
+* **Description:** A one sentence summary describing the process configuration.
 * **Cluster Config\*:** The [**Cluster Configuration**](cluster-configuration/) that the process configuration will be using. Default is the currently flagged default cluster.
 * **Default Process Configuration:** Flag that marks one process configuration as the default. In order to remove default flag, another process configuration must be flagged as default.
 
