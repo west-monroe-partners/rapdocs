@@ -1,16 +1,16 @@
 # Import/Export
 
-## Intro <a href="intro" id="intro"></a>
+## Intro <a href="#intro" id="intro"></a>
 
 In Intellio DataOps, import/export functionality allows the user to copy sources and outputs, in their entirety, from one environment to another, without having to do any manual reconfiguration in the importing environment. There are two basic ways of exporting: from the source level or from the output level.
 
-### Prerequisite <a href="prerequisite" id="prerequisite"></a>
+### Prerequisite <a href="#prerequisite" id="prerequisite"></a>
 
 Any connection(s) used in an exported entity must have an equivalent connection with an IDENTICAL name in the target environment.
 
-## Exporting <a href="exporting" id="exporting"></a>
+## Exporting <a href="#exporting" id="exporting"></a>
 
-### Initiating an Output level Export <a href="initiating-an-output-level-export" id="initiating-an-output-level-export"></a>
+### Initiating an Output level Export <a href="#initiating-an-output-level-export" id="initiating-an-output-level-export"></a>
 
 1. Navigate to the output mapping tab of the output that has mappings that the user would like to export.
 2. In the second column of the table, click the checkbox of each source mapping that the user wants to export, or click on the top checkbox in the header row to select all source mappings.
@@ -37,7 +37,7 @@ Any connection(s) used in an exported entity must have an equivalent connection 
 
 
 
-### Initiating a Source Level Export <a href="initiating-a-source-level-export" id="initiating-a-source-level-export"></a>
+### Initiating a Source Level Export <a href="#initiating-a-source-level-export" id="initiating-a-source-level-export"></a>
 
 1\. Navigate to the main sources page.
 
@@ -67,14 +67,14 @@ Any connection(s) used in an exported entity must have an equivalent connection 
 
 
 
-## Importing <a href="importing" id="importing"></a>
+## Importing <a href="#importing" id="importing"></a>
 
 ### ​Initiating an Import
 
 1\. Navigate to the main Sources page \
 2\. Press the 'Import' button on the far right of the header
 
-![](<../.gitbook/assets/image (258) (1).png>)
+![](<../../.gitbook/assets/image (258) (1).png>)
 
 3\. In the Validation Results tab of the import modal, review the following object types to make sure all their components are being deleted, inserted, updated, or are unchanged as expected:
 
@@ -95,6 +95,6 @@ Any connection(s) used in an exported entity must have an equivalent connection 
 
 ## Workflow Diagrams
 
-![Exporting from a Source](<../.gitbook/assets/exporting-from-a-source (1).jpg>)
+![Exporting from a Source](<../../.gitbook/assets/exporting-from-a-source (1).jpg>)
 
-![Exporting from an Output Source](<../.gitbook/assets/exporting-from-output-source (1).jpg>)
+![Exporting from an Output Source](<../../.gitbook/assets/exporting-from-output-source (1).jpg>)
