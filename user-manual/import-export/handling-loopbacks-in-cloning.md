@@ -32,5 +32,6 @@ The best workaround for this issue is to edit the .YAML file that is exported. T
 5. Replace the Output name with a new one that leverages the desired new Group name (i.e. Loopback Output Group A becomes Loopback Output Group B)
 6. Repeat steps 4 & 5 until all instances of the old Output name have been replaced.
 7. Repeat steps 3 through 6 until all Loopback Outputs have been addressed.
+8. Import the .YAML
 
 The same steps can be followed for any Output that should create an entirely separate Output during the clone process rather than a new Output Channel within the same Output. Simply search for output\_name and replace any Output name that should be created as a net new Ouptut
