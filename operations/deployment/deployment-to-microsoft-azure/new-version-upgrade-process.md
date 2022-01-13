@@ -1,5 +1,7 @@
 # New Version Upgrade Process (Terraform)
 
+Before using this guide, make sure that latest Terraform changes are merged by following this guide: [merging-latest-terraform-changes.md](../merging-latest-terraform-changes.md "mention")
+
 **Goal:** This document details the steps to upgrade Azure-based Intellio DataOps deployments to a new version.
 
 **Process:**
