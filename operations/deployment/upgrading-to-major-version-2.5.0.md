@@ -17,7 +17,8 @@
 
 When deployment finishes and the API is up and running each new Cluster Configuration in the environment will need to be opened and saved, so that a Job is added in Databricks and Job ID is generated
 
-Azure specific: A script to change storage location paths will need to be ran in Databricks. The script will be auto-generated in a notebook in the Shared location. Make sure this script is ran before any processing is done in the environment or there will be failures in Enrichment and Refresh.
+* Azure
+  * A script to change storage location paths will need to be ran in Databricks. The script will be auto-generated in a notebook in the Shared location. Make sure this script is ran before any processing is done in the environment or there will be failures in Enrichment and Refresh.
 
 ### Rollback to 2.4.3
 
@@ -25,3 +26,24 @@ Azure specific: A script to change storage location paths will need to be ran in
 If any sources process on 2.5.0 and a rollback to 2.4.3 is done, then the source will no longer work on 2.4.3 and will need source data cleared and new inputs pulled in
 {% endhint %}
 
+Revert the GitHub pull request that was made to upgrade infrastructure to 2.5.0
+
+Restore Postgres database to point in time before deployment was done
+
+* Azure
+  * Restore name should be the original database name with -restore at the end, i.e. prod-database-ido-restore
+  * Once restore finishes, wait 10 minutes to get a restore point on the restored database, and delete the original database
+  * Restore restored database into a new database with the original database name, i.e. prod-database-ido
+* AWS
+  * Restore name should be the original database name with -restore at the end, i.e. prod-database-ido-restore
+  * Delete the original database
+  * Rename restored database to the original database name, i.e. prod-database-ido
+
+Change imageVersion variable in Terraform to 2.4.3
+
+Plan and apply 2.4.3 infrastructure in Terraform
+
+Once apply runs, make sure Deployment container runs successfully and that 2.4.3 is displayed in the UI
+
+* Azure
+  * Rerun storage location script from the post deployment step but flip paths around&#x20;
