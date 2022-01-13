@@ -11,5 +11,5 @@
 
 Below is high level diagram representing relationship of cluster and process configurations to other IDO metadata tables and Databricks objects
 
-![Diagram 1](<../../../.gitbook/assets/image (380) (1).png>)
+![Diagram 1](<../../../.gitbook/assets/image (380) (1) (1).png>)
 
