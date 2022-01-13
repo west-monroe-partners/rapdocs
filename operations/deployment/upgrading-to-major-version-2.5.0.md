@@ -4,6 +4,7 @@
 
 * AWS
   * Databricks workspace must be on E2 architecture. If the Databricks workspace is not on E2, follow this guide to migrate to E2 before the 2.5.0 deployment is ran: [aws-migrate-legacy-databricks-to-e2-workspace.md](aws-migrate-legacy-databricks-to-e2-workspace.md "mention"). If you are unsure that if your Databricks workspace is on E2 or not, check Terraform variables for existence of a variable called "databricksAccountId". If it is not defined, then your workspace is not on E2.
+  * For private facing environments, the UI will now be deployed on a ECS container instead of S3 static website bucket. Please reach out to West Monroe infrastructure team for guidance on updating networking for the new UI container.
   * Infrastructure is updated using "master-2.4.3" branch from Intellio infrastructure repository in Github. There is a Databricks provider upgrade that needs to be applied so rollback to 2.4.3 can be possible.
 
 ### Terraform Variable Additions
