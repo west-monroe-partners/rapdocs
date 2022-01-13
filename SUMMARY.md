@@ -75,6 +75,7 @@
 ## Operations
 
 * [Deployment & Management](operations/deployment/README.md)
+  * [Upgrading to Major Version 2.5.0](operations/deployment/upgrading-to-major-version-2.5.0.md)
   * [Changing Sparky Pool Instance Type](operations/deployment/changing-sparky-pool-instance-type.md)
   * [AWS: Migrate Legacy Databricks to E2 Workspace](operations/deployment/aws-migrate-legacy-databricks-to-e2-workspace.md)
   * [Deploying a Snowflake Instance](operations/deployment/deploying-a-snowflake-instance.md)
