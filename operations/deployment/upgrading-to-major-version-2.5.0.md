@@ -16,6 +16,8 @@
 
 ### Post Deployment
 
+For AWS, you may need to run the Deployment service again if it fails from running before the Terraform apply finishes. Update the service to 1 task desired, or stop the deployment task if it's still up and another will start.
+
 When deployment finishes and the API is up and running each new Cluster Configuration in the environment will need to be opened and saved, so that a Job is added in Databricks and Job ID is generated
 
 * Azure
