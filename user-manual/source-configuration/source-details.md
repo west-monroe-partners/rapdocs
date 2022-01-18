@@ -29,7 +29,7 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 * **Hub View Name:** Name of view alias of the raw hub table in Databricks
 * **Group Name:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
 * **Source Name Template:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
-* **Process Config\*:** The[ Process Configuration](../system-configuration-1/cluster-and-process-configuration-overview/process-configuration.md). Selected from a dropdown.
+* **Process Config\*:** The[ Process Configuration](../system-configuration/cluster-and-process-configuration-overview/process-configuration.md). Selected from a dropdown.
 * **Active\*:** If set to Active, the Source will run as specified.
 * **Connection Type\*:** Selector to help filter the [Connection ](../connections.md)dropdown
 * **Connection\*:** The [Connection ](../connections.md)to use for this source
@@ -38,7 +38,7 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 
 {% tabs %}
 {% tab title="Custom" %}
-* **Cluster Config\*:** The [Cluster Configuration](../system-configuration-1/cluster-and-process-configuration-overview/cluster-configuration/#cluster-settings). Selected from a dropdown of available configurations.
+* **Cluster Config\*:** The [Cluster Configuration](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/#cluster-settings). Selected from a dropdown of available configurations.
 {% endtab %}
 
 {% tab title="File" %}

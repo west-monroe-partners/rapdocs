@@ -10,7 +10,7 @@ description: >-
 
 Cluster configuration was previously found under the Source settings tab within the parameter table (<2.5.0). It has now moved into its own page which is accessed from the main menu; simply click on **System Configurations** and select **Cluster Configurations**.
 
-![](../../../../.gitbook/assets/cluster\_001.png) ![](../../../../.gitbook/assets/cluster\_002.png)
+![System Configurations on the main menu](../../../../.gitbook/assets/cluster\_001.png) ![Select Cluster Configurations](../../../../.gitbook/assets/cluster\_002.png)
 
 The cluster configurations table shows all of the major details on any existing clusters. Users can filter by cluster names and descriptions as well as sort by column value.&#x20;
 
@@ -18,13 +18,13 @@ If a cluster has an associated job ID, users can view the job details or start a
 
 Clicking any other column will direct users to the settings page of the cluster. To make a new cluster, hit the **NEW CLUSTER** button in the top right corner.
 
-![](../../../../.gitbook/assets/cluster\_003.png)
+![Cluster configurations listed](../../../../.gitbook/assets/cluster\_003.png)
 
 ## Settings
 
 The cluster settings page allows users to create and update cluster configurations for their sources. The example below shows the default settings for a new cluster configuration.
 
-![](../../../../.gitbook/assets/cluster\_004.png)
+![New cluster configuration settings page](../../../../.gitbook/assets/cluster\_004.png)
 
 * **Name\*:** A unique name.
 * **Description\*:** A one sentence summary describing the cluster.
