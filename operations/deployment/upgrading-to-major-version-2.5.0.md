@@ -22,7 +22,9 @@ This release will not support import/export between 2.4.x and 2.5.0. Please take
 
 For AWS, you may need to run the Deployment service again if it fails from running before the Terraform apply finishes. Update the service to 1 task desired, or stop the deployment task if it's still up and another will start.
 
-When deployment finishes and the API is up and running each new Cluster Configuration in the environment will need to be opened and saved, so that a Job is added in Databricks and Job ID is generated
+When deployment finishes and the API is up and running each new Cluster Configuration in the environment will need to be opened and saved, so that a Job is added in Databricks and Job ID is generated.
+
+If a custom cluster configuration was migrated and it contained cluster specific elements like spark\_conf or libraries, you will see an ACTION REQUIRED message in the cluster configuration name. Please look at the description to find the elements that you will need to add to the new cluster configuration.
 
 * Azure
   * A script to change storage location paths will need to be ran in Databricks. The script will be auto-generated in a notebook in the Shared location. Make sure this script is ran before any processing is done in the environment or there will be failures in Enrichment and Refresh.
