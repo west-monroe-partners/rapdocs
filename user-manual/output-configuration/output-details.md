@@ -80,4 +80,4 @@ Asterisks (\*) in the Parameter Name column indicate mandatory parameters
 
 ### Post Output Commands \*
 
-When Custom Notebook value is selected, Custom Cluster Configuration for the Post-Output step needs to be [selected](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md#configure-cluster-for-custom-post-output).
+When Custom Notebook value is selected, Custom Cluster Configuration for the Post-Output step needs to be [selected](../system-configuration-1/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md#configure-cluster-for-custom-post-output).
