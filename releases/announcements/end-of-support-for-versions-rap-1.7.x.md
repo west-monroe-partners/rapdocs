@@ -14,5 +14,5 @@ Customers who have yet to upgrade from v1.7.x (originally released September 201
 
 Please reach out to your West Monroe account executive to discuss how to upgrade your environment to the latest version.
 
-Additionally, please inquire about the new support and licensing terms which improve the long-term engagement model.
+Additionally, please inquire about the new support and licensing terms which improve the long-term engagement model, and how the newest versions can reduce your total cost of ownership of the platform.
 
