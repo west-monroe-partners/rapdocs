@@ -33,6 +33,7 @@
 
 * [Sources](user-manual/source-configuration/README.md)
   * [Source Settings](user-manual/source-configuration/source-details.md)
+  * [Raw Schema](user-manual/source-configuration/raw-schema.md)
   * [Dependencies](user-manual/source-configuration/dependency-configuration.md)
   * [Relations](user-manual/source-configuration/relations-1.md)
   * [Rules](user-manual/source-configuration/enrichment-rule-configuration.md)
