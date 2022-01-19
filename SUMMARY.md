@@ -111,6 +111,8 @@
   * [Quality of Life Features in 2.4.0](releases/announcements/quality-of-life-features-in-2.4.0.md)
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
+  * [2.5](releases/changelog/2.5/README.md)
+    * [2.5.0](releases/changelog/2.5/2.5.0.md)
   * [2.4](releases/changelog/2.4/README.md)
     * [2.4.3 - November 18 Hotfix ​](releases/changelog/2.4/2.4.3-november-18-hotfix.md)
     * [2.4.3 - October 29 Hotfix](releases/changelog/2.4/2.4.3-october-29-hotfix.md)
