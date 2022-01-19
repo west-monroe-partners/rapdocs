@@ -40,13 +40,13 @@ This will bring up the Channel configuration modal. To select the source to map,
 
 ## Adding Columns
 
-![](../../.gitbook/assets/addoutputsource.png)
+![Add Column button](../../.gitbook/assets/output\_mapping01.png)
 
 To add a single column, click on **Add Column** in the top middle of the screen, seen next to the **Remove All Columns** button in the image above.
 
 Then, when the create column modal opens (seen in the image below), a column name must be added. The column name should start with a letter and may contain only letters, numbers, and underscores.
 
-![](<../../.gitbook/assets/image (265).png>)
+![](../../.gitbook/assets/output\_mapping05.png)
 
 Optionally, the user can add a description to the column, or explicitly set the datatype of the column. If no datatype is set, the datatype of the column will be automatically inferred based on what source attributes are mapped to the column.
 
@@ -69,7 +69,7 @@ Aggregate channels allow users to output data at a higher grain than their actua
 
 Which category a column falls under is determined by the expression mapped to it for the aggregate channel.
 
-![](../../.gitbook/assets/aggregateexpression.png)
+![](../../.gitbook/assets/output\_mapping00.png)
 
 If an aggregate function is selected, the column automatically becomes a **MEASURE** column. Conversely, if no aggregate function is selected, the column automatically becomes a **GROUP** column.
 
@@ -79,7 +79,7 @@ For more information on what each aggregate function does, please refer to Spark
 
 Furthermore, if an aggregate function for a column has been selected, the user has the option aggregate on only distinct values within the selected aggregate field, by clicking the checkbox shown below:
 
-![](../../.gitbook/assets/distinctcheckbox.png)
+![](../../.gitbook/assets/output\_mapping02.png)
 
 ## Channel Menu Controls
 
@@ -117,11 +117,11 @@ To open the column menu, click on the list icon button (circled in the image bel
 
 Once at least one channel and column have been created, the user can start mapping attributes by clicking on the empty cell that lies at the intersection of the target channel and the target column, example below:
 
-![](../../.gitbook/assets/enteringexpression.png)
+![](../../.gitbook/assets/output\_mapping03.png)
 
 Once the user clicks the empty cell they would like to map a value to, the expression entry modal will appear:
 
-![](<../../.gitbook/assets/image (264).png>)
+![](../../.gitbook/assets/output\_mapping04.png)
 
 To begin mapping an attribute, type an opening bracket "\[" to reveal a drop down of all sources that have an active primary relation chain to the source of the target channel and the target source of the channel, represented by _\[This]_. \
 \
