@@ -69,9 +69,12 @@
   * [Global System Configuration Parameters](user-manual/system-configuration/managing-system-configuration.md)
   * [Cluster and Process Configuration Overview](user-manual/system-configuration/cluster-and-process-configuration-overview/README.md)
     * [Cluster Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/README.md)
+      * [Cluster Configuration Example - Databricks 9.1](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-example-databricks-9.1.md)
+      * [Process Configuration Example - Databricks 9.1](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/process-configuration-example-databricks-9.1.md)
       * [Cluster Configuration for Custom Processing Steps](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md)
       * [Spot instance configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/spot-instance-configuration.md)
-    * [Process Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration.md)
+    * [Process Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration/README.md)
+      * [Process Override Example - Databricks 9.1](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration/process-override-example-databricks-9.1.md)
 
 ## Operations
 

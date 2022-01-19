@@ -20,7 +20,7 @@ Users may also edit an existing cluster by selecting a cluster configuration fro
 
 Sources configured to use Custom Parse on the [**Source Settings**](../../../source-configuration/source-details.md) **** page require user to select Cluster Configuration for the Custom Parse step:
 
-![](<../../../../.gitbook/assets/image (381) (1).png>)
+![](<../../../../.gitbook/assets/image (381) (1) (1).png>)
 
 
 
