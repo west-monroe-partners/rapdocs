@@ -2,7 +2,7 @@
 description: 01/19/2022
 ---
 
-# End of support for versions 1.7.x
+# End of support for versions RAP 1.7.x
 
 {% hint style="danger" %}
 1.7.x (RAP) will be End of Life and out of support on December 31st 2022
