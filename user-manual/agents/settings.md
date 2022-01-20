@@ -1,4 +1,4 @@
-# Settings
+# Agent Settings
 
 ## Settings Tab
 
@@ -28,3 +28,13 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 * **CheckDeltaInterval:** Main heartbeat of the Agent in seconds. The interval in which Agent configuration changes are checked, such as schedule, source query, and other applicable Ingestion parameters.
 * **CheckPushFilesInterval:** Heartbeat for the file watcher. Every time this interval passes, all file watcher locations are checked for potential files to ingest.
 * **Plugins:** JSON array of Plugin metadata for the Agent. Example of a value would be: \[{"type":"oracle","files":"s3://development-agentjar-wmp/oracle/"}]
+
+## Restarting Agent
+
+If an Agent is alive and heartbeating, the Agent can be restarted from the UI. Navigate to the main Agent screen and click on the triple dots to the right of the Agent that needs a restart. A "Restart Agent" button will appear - click it to trigger a restart of the Agent.
+
+![](<../../.gitbook/assets/image (378).png>)
+
+The Agent should restart within 30 sec - 1 minute of clicking the button. Check the Agent logs to make sure it restarts successfully.
+
+If the Agent isn't heartbeating, it will most likely need a manual restart. Either restart the Agent service on the on-prem server that is installed on or either stop the Agent container task (AWS) or restart the Agent container instance (Azure).

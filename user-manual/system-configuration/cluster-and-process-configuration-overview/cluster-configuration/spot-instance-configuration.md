@@ -11,7 +11,7 @@ When SPOT capacity is not available, jobs configured to use SPOT instances from 
 2. Create new databricks pool to use selected instance type: ![](<../../../../.gitbook/assets/image (380) (1) (1) (1).png>)![](<../../../../.gitbook/assets/image (381) (1) (1) (1) (1) (1).png>)
 3. Click create, and copy new pool id from the browser URL:
 
-![](<../../../../.gitbook/assets/image (378) (1).png>)
+![](<../../../../.gitbook/assets/image (378) (1) (1).png>)
 
 &#x20; 4\. Update IDO cluster configuration to use pool\_id of the new pool:
 
@@ -27,7 +27,7 @@ SPOT_FALLBACK option allows databricks to use regular-priced EC2 instances when 
 
 &#x20;_and select SPOT\_WITH\_FALLBACK option (AWS):_
 
-![](<../../../../.gitbook/assets/image (378).png>)
+![](<../../../../.gitbook/assets/image (378) (1).png>)
 
 or SPOT\_WITH\_FALLBACK\_AZURE (Azure):&#x20;
 
