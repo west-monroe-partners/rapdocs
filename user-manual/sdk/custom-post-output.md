@@ -4,21 +4,13 @@ The Custom Post Output SDK will allow users to define code in a Databricks Noteb
 
 ## Creating a Custom Post Output&#x20;
 
-Any output can have post output commands attached to it. Simply select whether the source should run its post output commands via a Notebook or a Jar in the Custom Post Output section.&#x20;
+Any output can have post output commands attached to it. Simply select a Cluster Configuration that specifies the notebook containing the desired commands.&#x20;
 
-Users will have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook.&#x20;
+Notebooks can also be run manually from Databricks.
 
-After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If the user plans to run the notebook manually, as we will in this example, this can set to "N/A". In the future, the notebook path can be found in the Databricks workspace tab.&#x20;
+See [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md) for more information about setting up a Custom Post Output Cluster Configuration.
 
-### Specifying a Custom Cluster
 
-Cluster configuration is a very important part of ensuring reliable execution of your custom job. Please refer to this[ ](custom-post-output.md#creating-a-custom-post-output) [page ](custom-post-output.md#creating-a-custom-post-output)for a detailed overview of options.
-
-{% hint style="danger" %}
-Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
-
-While potentially viable in specific situations, DataOps is not responsible for state clearing and results controls. Developers must handle these within their notebooks to guarantee reliable results and stability.&#x20;
-{% endhint %}
 
 ### Creating your first Notebook
 

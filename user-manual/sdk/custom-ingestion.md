@@ -21,25 +21,13 @@ Because DataOps cannot track all of the different potential connection types tha
 
 In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. After clicking the Custom button, users will first be asked to select a connection from any of the preconfigured custom connections.&#x20;
 
-Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook.&#x20;
+Users will also need to select a Cluster Configuration to run the ingestion. Instructions for doing so can be found [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).
 
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
 ![](<../../.gitbook/assets/image (381).png>)
 
-### Specifying a Custom Cluster
 
-Cluster configuration is a very important part of ensuring reliable execution of your custom job.&#x20;
-
-**T**he link to the notebook path can be found in Cluster Configuration settings tab.
-
-Please refer to the [Sources Settings](../source-configuration/source-details.md#cluster-type) page for a detailed overview of options.
-
-{% hint style="danger" %}
-Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
-
-While potentially viable in specific situations, DataOps is not responsible for state clearing and results controls. Developers must handle these within their notebooks to guarantee reliable results and stability.&#x20;
-{% endhint %}
 
 ### Creating your first Notebook
 
