@@ -6,13 +6,13 @@ The first step to deploying Snowflake is to create a Snowflake account. We recom
 
 On the initial page, contact info must be filled out for the account.&#x20;
 
-![](<../../.gitbook/assets/image (120).png>)
+![](<../../../.gitbook/assets/image (120).png>)
 
 The next page will be used for basic account configuration. The Snowflake edition must be selected on this page. For deployments without public endpoints, Business Critical Edition must be used for security integration using PrivateLink. For all other types of deployments, we recommend Enterprise edition.&#x20;
 
 After selecting the Snowflake edition. Select the cloud provider that matches your DataOps deployment, then select the region that is same as/closest to the region in which your DataOps instance is deployed.
 
-![](<../../.gitbook/assets/image (206).png>)
+![](<../../../.gitbook/assets/image (206).png>)
 
 That's it for this page. Next we will need to activate the account via email.
 
@@ -20,7 +20,7 @@ That's it for this page. Next we will need to activate the account via email.
 
 The email that signed up for the Snowflake account will receive an email with subject line **Activate Your Snowflake Account**. Click the **Click to Activate** link to continue.
 
-![](<../../.gitbook/assets/image (187).png>)
+![](<../../../.gitbook/assets/image (187).png>)
 
 This will navigate to the Snowflake activation page. Create an admin user name and password. Be sure to record this username and password. Click **Get Started.** Notice the URL of the page you are navigated to after clicking **Get Started**. This contains the account URL that will be needed in the future. Record it.
 
@@ -94,6 +94,6 @@ GRANT USAGE ON INTEGRATION DATAOPS_OUTPUT_SNOWFLAKEEXAMPLE TO ROLE RW_ROLE;
 
 The Snowflake instance is now ready for use with DataOps. Create a new connection and fill it out with the information relevant to your snowflake setup. We recommend leaving Connection String and Table Schema blank unless specifically needed.
 
-![](<../../.gitbook/assets/image (209).png>)
+![](<../../../.gitbook/assets/image (209).png>)
 
 After creating the connection. It will be available for use in Snowflake outputs. You are now ready to output to Snowflake via DataOps.

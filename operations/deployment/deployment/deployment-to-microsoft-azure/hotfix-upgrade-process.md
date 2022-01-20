@@ -12,7 +12,7 @@ SELECT * FROM meta.process
 
 Navigate to the Deployment container in your DataOps resource group in Azure Portal.
 
-![](<../../../.gitbook/assets/image (371).png>)
+![](<../../../../.gitbook/assets/image (371).png>)
 
 Start the container by clicking the "Start" button in the Overview section. If the container is running from a previous deployment, click Stop and then Start - or Restart.
 
@@ -24,7 +24,7 @@ INFO  Azure.AzureDeployActor - Deployment complete
 
 Navigate to the Intellio DataOps UI and confirm that the hover-over on the Menu tab indicates the newest version of the software.
 
-![](<../../../.gitbook/assets/image (325) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (325) (1) (1).png>)
 
 
 

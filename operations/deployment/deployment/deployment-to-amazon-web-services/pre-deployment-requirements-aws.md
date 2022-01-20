@@ -137,4 +137,4 @@ If running a non-public facing deployment - these variables are optional:
 
 ## Verify the deployment
 
-Once DataOps is up and running, the [Data Integration Example](../../../getting-started/data-integration-example/) in the Getting Started Guide can be followed to verify that the full DataOps stack is working correctly.&#x20;
+Once DataOps is up and running, the [Data Integration Example](../../../../getting-started/data-integration-example/) in the Getting Started Guide can be followed to verify that the full DataOps stack is working correctly.&#x20;

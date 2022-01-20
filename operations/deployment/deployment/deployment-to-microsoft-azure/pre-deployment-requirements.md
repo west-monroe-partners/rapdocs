@@ -115,4 +115,4 @@ Once all of the prerequisites are complete, and the variables have been figured 
 
 ## Verify the deployment
 
-Once DataOps is up and running, the [Data Integration Example](../../../getting-started/data-integration-example/) in the Getting Started Guide can be followed to verify that the full DataOps stack is working correctly.
+Once DataOps is up and running, the [Data Integration Example](../../../../getting-started/data-integration-example/) in the Getting Started Guide can be followed to verify that the full DataOps stack is working correctly.

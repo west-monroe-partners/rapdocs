@@ -11,11 +11,11 @@
 
 1\. For hotfixes, we don't need to tweak the task definition since we're still using the same image version for our ECS containers. Head to the clusters page and click into the ECS Cluster that contains the containers that are being updated with the hotfix. When in the cluster, select the deployment Service Name and click "Update".
 
-![Cluster and Services](../../../.gitbook/assets/d2.png)
+![Cluster and Services](../../../../.gitbook/assets/d2.png)
 
 10\. Set the "Number of tasks" value from 0 to 1. Confirm that Task Definition is still on the latest. Click "Skip to review" and then "Update Service"
 
-![Updating the Service](../../../.gitbook/assets/d3.png)
+![Updating the Service](../../../../.gitbook/assets/d3.png)
 
 11\. The service is now updated to start the deployment container, and will now start a task shortly. The task will run, perform the deployment steps in the running container, and then set the service back to 0.
 

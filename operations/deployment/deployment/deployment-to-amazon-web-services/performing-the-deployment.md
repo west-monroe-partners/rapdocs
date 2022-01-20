@@ -26,7 +26,7 @@ Make sure that the Terraform version in the workspace is set to "0.14.11"
 
 ## Populating Variables in Terraform Cloud
 
-Manually enter the following variable names and set values accordingly. If the pre-deployment steps were followed, these values should be mostly known. 
+Manually enter the following variable names and set values accordingly. If the pre-deployment steps were followed, these values should be mostly known.&#x20;
 
 {% hint style="danger" %}
 The variable names are case sensitive - please enter them as they appear in this list
@@ -86,7 +86,7 @@ When the variables are configured, Terraform is ready to generate a plan. Click 
 
 ## Post Terraform Steps
 
-After the terraform is complete, there will be various resources created in the AWS account. These are the main resources created by Terraform, but there are still configuration changes that need to be done before any data can be brought into the platform. 
+After the terraform is complete, there will be various resources created in the AWS account. These are the main resources created by Terraform, but there are still configuration changes that need to be done before any data can be brought into the platform.&#x20;
 
 ## Configuring Databricks
 
@@ -100,7 +100,7 @@ Place the following file in the bucket root-
 
 Once this file is uploaded, connect the workbook called "databricks-init" and run the workbook. Attach to the "dataops-init-cluster"
 
-If the workbook runs successfully, move on to the next step! 
+If the workbook runs successfully, move on to the next step!&#x20;
 
 ## Running Deployment Container
 
@@ -112,7 +112,7 @@ Navigate to the Container instance named \<environment>-Deployment-\<client>. Ex
 
 If this message exists - the first time deployment is good to go.
 
-If this message does not exist - try running the container again (click stop and start on the container) and troubleshoot from there. 
+If this message does not exist - try running the container again (click stop and start on the container) and troubleshoot from there.&#x20;
 
 ## Restart Everything!
 
@@ -128,7 +128,7 @@ Check the container logs to ensure the containers have started and are running w
 
 In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
 
-![](<../../../.gitbook/assets/image (277) (1).png>)
+![](<../../../../.gitbook/assets/image (277) (1).png>)
 
 ## Accessing Private Facing Environments
 
