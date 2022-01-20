@@ -13,10 +13,14 @@ This release will not support import/export between 2.4.x and 2.5.0. Please take
 
 ### Terraform Variable Additions
 
-| Variable         | Description                                                                                                  |
-| ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| usageAuth0Secret | Must acquire from West Monroe deployment resource. Secret that allows Usage Agent to call to West Monroe API |
-| usagePassword    | Password for usage user in Postgres database                                                                 |
+| Variable         | Description                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| usageAuth0Secret | Must acquire from West Monroe deployment resource. Secret that allows Usage Agent to call to West Monroe API (REQUIRED) |
+| usagePassword    | Password for usage user in Postgres database (REQUIRED)                                                                 |
+
+Optional variables have been added to provide more flexibility with networking in AWS. These variables are: existingVpcId, existingInternetGatewayId, existingNATGatewayId, existingPublicRouteTableId, existingPrivateRouteTableId, existingWebAZ1Id, existingWebAZ2Id, existingAppAZ1Id, existingAppAZ2Id, existingDbAZ1Id, existingDBAZ2Id, existingDatabricksAZ1Id, existingDatabricksAZ2Id. Entering the AWS resource ID for the specific resource into the matching variable will have Terraform reference the existing VPC, gateway, route table, or subnet. For more info, please examine the variable.tf file in aws/main-deployment/
+
+Optional variables have been added to provide more flexibility with container CPU and memory in AWS and Azure. These variables are: apiCPU, apiMemory, coreCPU, coreMemory, agentCPU, agentMemory. Adding these variables will override the default container instance sizing that Terraform uses. For more info, please examine the variable.tf file in aws/main-deployment/ or azure/
 
 ### Post Deployment
 
