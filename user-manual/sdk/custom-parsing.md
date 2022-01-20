@@ -4,19 +4,13 @@ The Custom Parsing SDK will allow users to define their own file parsing code in
 
 ## Configuring a Custom Parsing Source
 
-Any file type source in IDO can be made into a Custom Parse source.  For this example, we will be using a CSV file. 
+Any file type source in IDO can be made into a Custom Parse source.  For this example, we will be using a CSV file.&#x20;
 
 In order to create a Custom Parsing source, users should first select a File Connection Type. After choosing to ingest a file, users will be able to choose which type of file they are ingesting. For the purpose of this example, we will use Delimited, but note that ANY file type can be ingested through the "Other" type. Just be sure to correctly specify the file extension in the file mask parameter.
 
-Finally, we will choose a parser. In this example we will choose Custom Notebook to use custom Databricks notebook code to parse our data. Note that for the "Other" file type only the Custom parsers are available. 
+Next, we will choose a parser. In this example we will choose Custom Notebook to use custom Databricks notebook code to parse our data. Note that for the "Other" file type only the Custom parsers are available.&#x20;
 
-With Custom Notebook selected. We will now fill out the Notebook Path parameter to point toward our Databricks notebook.
+![](<../../.gitbook/assets/image (385).png>)
 
-![](../../.gitbook/assets/image%20%28373%29.png)
-
-
-
-After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If the user plans to run the notebook manually, as we will in this example, this can set to "N/A". In the future, the notebook path can be found in the Databricks workspace tab.
-
-
+Finally, select the Cluster Config pointing to the custom cluster configuration for the parser, which will have a link to the notebook path.
 

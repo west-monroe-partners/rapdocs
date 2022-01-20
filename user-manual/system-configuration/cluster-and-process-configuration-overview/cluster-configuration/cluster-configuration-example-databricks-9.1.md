@@ -6,7 +6,7 @@ IDO 2.5.0 now offers support for Databricks Runtime 9.1. This version utilizes S
 
 From any IDO page, click the hamburger menu icon in the top left, navigate to System configuration, then click Cluster Configurations. This will bring users to the Cluster Configuration homepage
 
-![Navigating to Cluster Configurations](<../../../../.gitbook/assets/image (385).png>)
+![Navigating to Cluster Configurations](<../../../../.gitbook/assets/image (385) (1).png>)
 
 ## Starting a New Cluster Config
 

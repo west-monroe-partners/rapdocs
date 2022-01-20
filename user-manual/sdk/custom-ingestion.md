@@ -13,7 +13,7 @@ The Custom Ingestion SDK will allow users to define their own data acquisition c
 
 ### Creating a Custom Connection
 
-Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON synatx. We will cover how these connections are accessed in user code as part of a later section. **Dummy connection for now**
+Because DataOps cannot track all of the different potential connection types that can be used in user notebooks, a generic Custom Connection type has been created. The custom connection type will allow users to fill out two fields: Private and Public connection parameters. Public connection parameters will be stored unencrypted for easy access and editing. Private connection parameters will be encrypted and obfuscated when seen in the UI. Each of these parameters should be created as a set of key-value pairs, following standard JSON syntax. We will cover how these connections are accessed in user code as part of a later section. **Dummy connection for now**
 
 ![Custom Connection](<../../.gitbook/assets/image (334).png>)
 
@@ -23,15 +23,17 @@ In order to create a Custom Ingestion source, users should use the Custom radio 
 
 Users will also have the option to select whether they want their code to be run as a Notebook or as a JAR. For this demo we will use a notebook.&#x20;
 
-After selecting an initiation type, a location for the Notebook/JAR will need to be provided. If the user plans to run the notebook manually, as we will in this example, this can set to "N/A". In the future, the notebook path can be found in the Databricks workspace tab.
-
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
-![Custom Source Screen](<../../.gitbook/assets/image (336).png>)
+![](<../../.gitbook/assets/image (381).png>)
 
 ### Specifying a Custom Cluster
 
-Cluster configuration is a very important part of ensuring reliable execution of your custom job. Please refer to the [Sources Settings](../source-configuration/source-details.md#cluster-type) page for a detailed overview of options.
+Cluster configuration is a very important part of ensuring reliable execution of your custom job.&#x20;
+
+**T**he link to the notebook path can be found in Cluster Configuration settings tab.
+
+Please refer to the [Sources Settings](../source-configuration/source-details.md#cluster-type) page for a detailed overview of options.
 
 {% hint style="danger" %}
 Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
@@ -41,7 +43,11 @@ While potentially viable in specific situations, DataOps is not responsible for 
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsSourceName>` **_ with the name of the associated custom DataOps source.
+Below is a sample of notebook code that sets up an ingestion session and then queries the DataOps datatypes table. A line by line breakdown can be found below.  Users will also need to replace the _**`<DataOpsSourceName>` **_ with the name of the associated custom DataOps source.
+
+{% hint style="info" %}
+_`First parameter,`**`<DataOpsEnvironmentName>`**` ``had been deprecated in release 2.5 and is no longer required.`_&#x20;
+{% endhint %}
 
 ```
 import com.wmp.intellio.dataops.sdk._

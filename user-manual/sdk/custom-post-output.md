@@ -12,7 +12,7 @@ After selecting an initiation type, a location for the Notebook/JAR will need to
 
 ### Specifying a Custom Cluster
 
-Cluster configuration is a very important part of ensuring reliable execution of your custom job. Please refer to the [Sources Settings](../source-configuration/source-details.md#cluster-type) page for a detailed overview of options.
+Cluster configuration is a very important part of ensuring reliable execution of your custom job. Please refer to this[ ](custom-post-output.md#creating-a-custom-post-output) [page ](custom-post-output.md#creating-a-custom-post-output)for a detailed overview of options.
 
 {% hint style="danger" %}
 Specifying interactive clusters for job execution is not supported - especially the existing mini-sparky cluster that DataOps uses for query validation and Data Viewer.
@@ -22,7 +22,13 @@ While potentially viable in specific situations, DataOps is not responsible for 
 
 ### Creating your first Notebook
 
-Below is a sample of notebook code that sets up a post output session and then prints a simple Hello World.  A line by line breakdown can be found below. Users will need to replace _**`<DataOpsEnvironmentName>`**_ with the name of the DataOps Environment. This can be found by navigating to the Databricks Jobs tab. All jobs names will follow the format _Intellio-**EnvironmentName**-####._ Users will also need to replace the _**`<DataOpsOutputName> and <DataOpsOutputChannelName>` **_ with the name of the associated custom DataOps output and output channel respectively.
+Below is a sample of notebook code that sets up a post output session and then prints a simple Hello World.  A line by line breakdown can be found below.&#x20;
+
+{% hint style="info" %}
+_`First parameter,`**`<DataOpsEnvironmentName>`**` ``had been deprecated in release 2.5 and is no longer required.`_&#x20;
+{% endhint %}
+
+&#x20;Users will need to replace the _**`<DataOpsOutputName> and <DataOpsOutputChannelName>` **_ with the name of the associated custom DataOps output and output channel respectively.
 
 ```
 import com.wmp.intellio.dataops.sdk._
