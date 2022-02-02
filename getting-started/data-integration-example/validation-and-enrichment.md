@@ -107,13 +107,13 @@ Recall that the `File Push` Input Type configuration creates a Source that autom
 
 To remedy this, navigate to Inputs page, and for the most recent line item, click on the ellipsis on the far right and select **Reset All Validation & Enrichment**. See below.
 
-![Reset All Validation & Enrichment](../../.gitbook/assets/rap-reset-enrichments.png)
+![Reset All Validation & Enrichment](<../../.gitbook/assets/Reset Enrichment.PNG>)
 
 ## Step 4: Ensure Validation and Enrichment Completion
 
 Navigate to the **Data View** to double-check that the Validation and Enrichment steps were successful**.** The image below shows the view that should display. Note that naming in image if off due to test environment.
 
-![New Column in Data View](../../.gitbook/assets/screen-shot-2020-07-08-at-11.09.27-am.png)
+![New Column in Data View](<../../.gitbook/assets/Enrichment Validation.PNG>)
 
 For every enrichment, a green column should be created in the Data View. Additionally, every entry that is flagged as `Warn` should appear yellow. In this case, no records should be flagged.
 
