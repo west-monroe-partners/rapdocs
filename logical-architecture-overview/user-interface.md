@@ -26,7 +26,7 @@ Provided in this section is a brief overview of the Intellio DataOps UI, if you 
 
 The Source Dashboard (the UI shown when 'Sources' is selected from the left-hand menu) shows the current status of all Sources as well as the status of the individual phases of the Source processes. The user can also view the status history of Sources and keep track of activity trends. When a Source is clicked on the user is brought to the tab navigation of that Source.
 
-![Tabs within a Source.](../.gitbook/assets/rap-ui-sources-tabs.png)
+![Tabs within a Source](<../.gitbook/assets/Source Tab.PNG>)
 
 Sources are the main containers of the DataOps interface. There is one logical data flow per source. Connections, Outputs, and Agents are parts of Sources, and these other aspects of DataOps enable Sources to work through the Logical Architecture.&#x20;
 
@@ -39,7 +39,7 @@ Within a Source the tab structure along the top provides a framework of organizi
 | Settings     | The main interface for set up and configuration of a Source. Set the Connection and Agent.                                                                                            |
 | Dependencies | Sources may be dependent upon other Sources. This tab displays additional data flows the Source may be dependent upon.                                                                |
 | Relations    | Additional data may be joined to a source and this tab displays the details of these joins.                                                                                           |
-| Enrichments  | Documentation of row level manipulations of the data, inclusive of both enrichments and validation rules. Adding new enrichments allows the user to apply business logic to the data. |
+| Rules        | Documentation of row level manipulations of the data, inclusive of both enrichments and validation rules. Adding new enrichments allows the user to apply business logic to the data. |
 | Inputs       | View of the associated raw data that is ingested through the Connection settings.                                                                                                     |
 | Process      | Overview of the logical data flow and the calculations enacted. This view checks the status of the logical data flow.                                                                 |
 | Data View    | Provide a view of the first so many rows in the Source Hub Table.                                                                                                                     |
@@ -50,7 +50,7 @@ If errors occur during configuration, the DataOps user interface has some troubl
 
 The Processing page and Source Dashboard allows users to monitor Sources and Processes at a global level. From the Processing page, users can view and search all current and upcoming DataOps processes as well as any process dependencies.
 
-![Process Tab and status of logical data flow ](../.gitbook/assets/rap-ui-process.png)
+![Process Tab and Status of logical data flow](../.gitbook/assets/Process.PNG)
 
 Within the Process Tab, logs are kept on how data flows through the logical data flow. As seen in the above image, Process IDs 2143-2150 at the bottom of the image report on this particular source going through Ingestion, Capture Data Change (CDC), Enrich, Refresh, Attribution Recalculation (Recalculate), and Output. When errors occur the Process Tab will held identify at which stage the error occurs.
 
@@ -66,7 +66,7 @@ Connections contain the necessary information to locate data that will be ingest
 
 ### Outputs
 
-![The Outputs Mapping Interface.](../.gitbook/assets/rap-ui-outputs.png)
+![The Output Mapping Interface](../.gitbook/assets/Output.PNG)
 
 The settings of Outputs are similar to that of Connections but are distinctly different in that the Outputs settings utilize a Connection for the file path and the parameters are associated with end object name and or credentials of the end database.
 
