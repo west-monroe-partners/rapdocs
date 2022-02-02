@@ -9,8 +9,6 @@ description: >-
 
 ## Sources Screen
 
-![Spark configuration](../../.gitbook/assets/output\_mapping04.png)
-
 On the Sources screen, users can see all previously created Sources, as well as search, edit, and filter them. By default, only Active Sources are listed. Users can change this by toggling the **Active Only** toggle. Note that only Active Sources are processed.
 
 ![Sources - Active Only](../../.gitbook/assets/active-only-sources.png)
