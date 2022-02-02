@@ -16,7 +16,7 @@ A Validation Rule consists of validation logic, in the form of a SQL WHERE state
 
 Navigate to the previously configured (`Divvy - Stations 2017 Q1Q2` ) Source's Validation tab, and click New Enrichment.
 
-![Create a New Validation Rule](../../.gitbook/assets/rap-enrishment-locations-um.png)
+![Create a New Validation Rule](../../.gitbook/assets/Source\_Rules\_Page.PNG)
 
 In the screen that opens, select Type **Validation**.
 
@@ -36,7 +36,7 @@ For the Validation Expression input the following. Note that \[This] represents 
 
 Click **Save** to finish.
 
-![Complete Validation Rule](../../.gitbook/assets/rap-complete-validation-rule.png)
+![Complete Validation Rule](<../../.gitbook/assets/Validation Rule.PNG>)
 
 {% hint style="info" %}
 When entering an expression, type \`\`\`\`\` to reveal all of the Source fields available.
