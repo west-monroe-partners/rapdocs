@@ -24,7 +24,7 @@ After the Source is created you can access the Settings tab at any time by click
 Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 {% endhint %}
 
-* **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources. To ensure Sources are organized easily searchable, follow [Naming Conventions](https://intellio.gitbook.io/dataops/v/master/best-practices/naming-conventions).
+* **Name\*:** The name of the Source. The Name must be unique. This will be displayed on the Sources screen when browsing Sources.
 * **Description\*:** The description of the Source.
 * **Hub View Name:** Name of view alias of the raw hub table in Databricks
 * **Group Name:** Used as part of [Templates and Tokens](../validation-and-enrichment-rule-templates/)
