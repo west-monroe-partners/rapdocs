@@ -19,7 +19,7 @@ Sources, Outputs, and Connections can be viewed and filtered from their respecti
 Note that clicking on a specific Source on the Sources page will show all of the details and options related to that Source. The same is true for the Outputs and Connections pages.
 
 {% hint style="info" %}
-Provided in this section is a brief overview of the Intellio DataOps UI, if you are looking for a more in depth explanation of the parameters within each section see the [Configuration Guide](broken-reference).
+Provided in this section is a brief overview of the Intellio DataOps UI, if you are looking for a more in depth explanation of the parameters within each section.
 {% endhint %}
 
 ## Sources and Processing
