@@ -73,6 +73,6 @@ Some process types require minimal configuration, but have high levels of automa
 
 To account for this, each Process Type has a base factor to either increase or decrease the IPU calculation for each process successfully completed of that Process Type.
 
-These factors will be published and maintained in the meta.process\_type table
+These Process Type Base Factors will be published and maintained in the meta.process\_type table starting in version 2.5.1.
 
 #### Rules / Mappings Factors
