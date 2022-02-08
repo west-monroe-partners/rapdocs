@@ -100,6 +100,7 @@
   * [Installing a New Agent](operations/deployment/installing-a-new-agent.md)
 * [Metadata Monitoring Dataset](operations/metadata-monitoring-dataset.md)
 * [Lineage Queries](operations/lineage.md)
+* [Intellio Processing Units](operations/intellio-processing-units.md)
 
 ## Releases
 
