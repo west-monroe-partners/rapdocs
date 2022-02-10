@@ -32,6 +32,10 @@ For AWS, you may need to run the Deployment service again if it fails from runni
 
 When deployment finishes and the API is up and running each new Cluster Configuration in the environment will need to be opened and saved, so that a Job is added in Databricks and Job ID is generated.
 
+{% hint style="warning" %}
+Make sure each cluster configuration has been opened and saved before running any jobs in IDO. If the cluster configuration does not have a Job Id on the cluster configurations page, **all processes that try to run using it will fail**.
+{% endhint %}
+
 If a custom cluster configuration was migrated and it contained cluster specific elements like spark\_conf or libraries, you will see an ACTION REQUIRED message in the cluster configuration name. Please look at the description to find the elements that you will need to add to the new cluster configuration.
 
 * Azure
