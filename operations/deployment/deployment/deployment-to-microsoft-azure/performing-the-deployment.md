@@ -26,7 +26,7 @@ Create a new workspace in Terraform Cloud. Choose "Version control workflow". Co
 When the VCS connection is created, set the working directory to "terraform/azure". The VCS branch can be the default branch, as it generally defaults to master.
 
 {% hint style="info" %}
-Make sure that the Terraform version in the workspace is set to "0.14.11"
+Make sure that the Terraform version in the workspace is set to "1.1.5"
 {% endhint %}
 
 ## Populating Variables in Terraform Cloud
