@@ -4,7 +4,7 @@
 
 In the current state of Import/Export in IDO, any Output Channel that is cloned will create an additional Output Channel in the same Output as the existing Output Channel. This is beneficial for Outputs that are configed in the One Big Table model, with multiple groups of Sources feeding into one large reporting Output.
 
-![Cloning works well for an OBT model](<../../.gitbook/assets/image (383) (1).png>)
+![Cloning works well for an OBT model](<../../.gitbook/assets/image (383) (1) (1).png>)
 
 ## Loopback Problems
 

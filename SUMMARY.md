@@ -101,6 +101,7 @@
 * [Metadata Monitoring Dataset](operations/metadata-monitoring-dataset.md)
 * [Lineage Queries](operations/lineage.md)
 * [Intellio Processing Units](operations/intellio-processing-units.md)
+* [Cluster and Processing Tuning](operations/cluster-and-processing-tuning.md)
 
 ## Releases
 

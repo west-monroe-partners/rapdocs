@@ -23,7 +23,7 @@ _<mark style="color:red;">**If this approach still results in SPOT availability 
 
 SPOT_FALLBACK option allows databricks to use regular-priced EC2 instances when SPOT capacity is not available. As of Dec 2021, databricks pools don't support SPOTFALLBACK option. To get around this limitation, reconfigure IDO cluster to not use pool:_&#x20;
 
-![](<../../../../.gitbook/assets/image (383) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (383) (1) (1) (1) (1).png>)
 
 &#x20;_and select SPOT\_WITH\_FALLBACK option (AWS):_
 

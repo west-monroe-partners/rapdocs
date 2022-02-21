@@ -24,7 +24,7 @@ Simply click on the Cluster Config dropdown under the Description field to acces
 
 Click save. The Process Config has been successfully created! Now that the configuration has been saved. It can be applied to Sources. To apply the configuration to a Source, navigate to the desired Source Settings page. Look for the Process Config drop down on the page and select the 9.1 Demo config that was just created. Hit save.
 
-![A source configured to use the 9.1 Demo Process Config](<../../../../.gitbook/assets/image (383).png>)
+![A source configured to use the 9.1 Demo Process Config](<../../../../.gitbook/assets/image (383) (1).png>)
 
 All processes on this source will now be performed using the 9.1 cluster configuration. Expect faster results!
 
