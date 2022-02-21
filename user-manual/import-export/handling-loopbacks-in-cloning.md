@@ -10,7 +10,7 @@ In the current state of Import/Export in IDO, any Output Channel that is cloned 
 
 This logic is unfortunately not the desired logic for most Loopbacks. The desired logic, seen below, requires that each Output Channel creates an entirely separate Output. Additionally each of these separated Outputs should feed into its own Loopback Source.
 
-![Desired Loopback Cloning behavior](<../../.gitbook/assets/image (384).png>)
+![Desired Loopback Cloning behavior](<../../.gitbook/assets/image (384) (1).png>)
 
 With the current logic,  cloning a Loopback results in a setup like the one below. It has two Output Channels within a single Output and both Loopback Sources are pulling data from that Output.&#x20;
 

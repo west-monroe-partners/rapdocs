@@ -12,31 +12,49 @@ It is focused on only the details needed for performance tuning jobs within the 
 
 In order to know how to tune your specific process, it's important to first understand the fundamentals of how Spark takes complex processes and breaks them down into parallelizable chunks of work and distribute this work among all the compute resources available to the cluster.
 
-![Logical Model between IDO, Databricks, and Spark Structures](<../.gitbook/assets/image (383).png>)
+This guide will primarily focus on the Databricks and Spark Structures in the diagram above.
 
-For additional details on how IDO Cluster Configs and IDO Processes connect to the rest of the Intellio DataOps metadata structures, please refer to the [Cluster and Process Configuration Overview](../user-manual/system-configuration/cluster-and-process-configuration-overview/) section.
+For details on IDO Cluster Configs and IDO Processes, as well as how they connect to the rest of the Intellio DataOps metadata structures, please refer to the [Cluster and Process Configuration Overview](../user-manual/system-configuration/cluster-and-process-configuration-overview/) section.
 
-This guide will primarily focus on the detailed Spark Structures in the diagram above, but will also cover how to adjust the infrastructure these structures operate on top of to improve performance and cost efficiency.
+![](<../.gitbook/assets/image (388).png>)
 
-### Spark Driver
+### Databricks Job
 
-The Spark Driver is responsible for translating your code into a Spark Job, Spark Stages, [Spark Tasks](cluster-and-processing-tuning.md#spark-task), and scheduling the order of operations and dependencies between tasks within a job.
+A Databricks Job is a set of configurations to run non-interactive code within Databricks. It includes what code to run (notebook or Jar executable), what type of cluster to run the code on, and optionally, what order to run Databricks Tasks in.
 
-Once it has generated these tasks and their associated schedule (also referred to as a Directed Analytic Graph or DAG) the Driver then sends a request to the [Cluster Manager](cluster-and-processing-tuning.md#cluster-manager) to be allocated [Spark Executors](cluster-and-processing-tuning.md#spark-executor) to begin processing the data.
+A IDO Cluster Config is a wrapper around a Databricks Job that allows users to integrate Databricks Job configurations with the rest of the IDO Meta structures, as well as hold some additional IDO specific parameters.
+
+### Databricks Task
+
+A Databricks Task is a logical grouping of non-interactive code.
+
+All Jabs managed by IDO, including Custom Notebooks integrated via SDK as assumed to only have one task per job. IDO does not currently support integration with Databricks orchestration of multiple tasks feature.
+
+Databricks Tasks are roughly analogous to IDO Processes and/or Process Types, but lack a large number of features required to support the IDO meta framework. Because of these lack of features, IDO Processes are not a wrapper around, but a completely separate concept from Databricks Tasks at this time.
+
+### Databricks Job Run
+
+A Databricks Job Run is a specific execution (not to be confused with a Spark Executor) of a defined Databricks Task.
+
+A IDO Job Run is a wrapper around a Databricks Job Run for purposes of integration with the IDO meta structures via the IDO Process structure.
 
 ### Spark Job
 
 A Spark Job is a user-defined logical grouping of one or more Spark Stage(s), Tasks, and their associated schedules to complete a data processing pipeline. Often times, a Job is a single code block or group of code that is individually submitted to the Spark environment for processing.
 
-{% hint style="info" %}
-A Databricks Job, Databricks Job Run, IDO Run, and IDO Process are all different concepts and structures than a Spark Job.
+A Spark Job's scope and number of stages, tasks, etc. it can generate are unbounded and completely defined by both the developer's code, and how they submit that code to the Spark Driver.
 
-While helpful in debugging, the nuanced differences between these concepts and how they interact is largely moot for the purposes of performance tuning.
-{% endhint %}
+### Spark Driver
+
+The Spark Driver is responsible for translating your code into Spark Stages, [Spark Tasks](cluster-and-processing-tuning.md#spark-task), and Directed Analytic Graphs (DAGs).
+
+You can think of the Spark Driver as the planner of operations for the Spark ecosystem. It generates Spark sub-structures to achieve the result requested by all code submitted to it via the Spark Job.
+
+Once it has generated these structures, the Driver then sends a request to the [Cluster Manager](cluster-and-processing-tuning.md#cluster-manager) to be allocated [Spark Executors](cluster-and-processing-tuning.md#spark-executor) to begin processing the data.
 
 ### Spark Stage
 
-
+A Spark Stage is an execution plan for a&#x20;
 
 ### Cluster Manager
 

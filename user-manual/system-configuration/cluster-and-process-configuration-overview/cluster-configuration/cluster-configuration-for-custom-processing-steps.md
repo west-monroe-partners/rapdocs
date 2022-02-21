@@ -28,4 +28,4 @@ Sources configured to use Custom Parse on the [**Source Settings**](../../../sou
 
 Sources configured to use Custom Post Output on the [**Output Settings**](../../../output-configuration/output-details.md) **** page require user to select Cluster Configuration for the Custom Post Output step:
 
-![](<../../../../.gitbook/assets/image (384) (1).png>)
+![](<../../../../.gitbook/assets/image (384) (1) (1).png>)

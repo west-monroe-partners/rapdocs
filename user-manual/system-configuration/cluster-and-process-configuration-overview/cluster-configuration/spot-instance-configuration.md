@@ -15,7 +15,7 @@ When SPOT capacity is not available, jobs configured to use SPOT instances from 
 
 &#x20; 4\. Update IDO cluster configuration to use pool\_id of the new pool:
 
-![](<../../../../.gitbook/assets/image (384) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (384) (1) (1) (1).png>)
 
 _<mark style="color:red;">**If this approach still results in SPOT availability errors during job launch:**</mark>_&#x20;
 
