@@ -78,7 +78,7 @@
 
 ## Operations
 
-* [Deployment & Management](operations/deployment/README.md)
+* [Deployment & Version Management](operations/deployment/README.md)
   * [Deployment](operations/deployment/deployment/README.md)
     * [Deployment to AWS](operations/deployment/deployment/deployment-to-amazon-web-services/README.md)
       * [Pre Deployment Requirements](operations/deployment/deployment/deployment-to-amazon-web-services/pre-deployment-requirements-aws.md)
