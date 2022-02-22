@@ -40,9 +40,48 @@ A IDO Job Run is a wrapper around a Databricks Job Run for purposes of integrati
 
 ### Spark Job
 
-A Spark Job is a user-defined logical grouping of one or more Spark Stage(s), Tasks, and their associated schedules to complete a data processing pipeline. Often times, a Job is a single code block or group of code that is individually submitted to the Spark environment for processing.
+A Spark Job is a stand-alone execution of parallelizable spark code, bounded by a [Spark Action](https://spark.apache.org/docs/latest/rdd-programming-guide.html#actions). Each Spark Action generates a separate Spark Job, which will be executed lazily and in FIFO order by default.
 
-A Spark Job's scope and number of stages, tasks, etc. it can generate are unbounded and completely defined by both the developer's code, and how they submit that code to the Spark Driver.
+By default, no data is shared between jobs, as they are by definition assumed to be fully parallelizable - even though they are executed FIFO by default.
+
+In order to ensure operations across jobs are not duplicated, developers must manually code persistence hand-offs between Spark Action sub-segments. See the spark [documentation ](https://spark.apache.org/docs/latest/rdd-programming-guide.html#rdd-persistence)for details.
+
+#### Spark Job Optimization Example:
+
+In this example, we will show the importance of spark coding best practices to avoid duplicate processing and improve performance by designing Spark Actions and using caching between them.
+
+In this example, we will create a sample Dataframe, create a new calculated column summarizing two columns for each row, rollup the calculation by department, count the records before and after the rollup, print out the difference between counts, and then save the summarized Dataframe to a file.
+
+Example 1: Naive / Bad Practice Design
+
+```scala
+import spark.implicits._
+
+val sourceData = Seq(("James","Sales","NY",90000,34,10000),
+  ("Michael","Sales","NY",86000,56,20000),
+  ("Robert","Sales","CA",81000,30,23000),
+  ("Maria","Finance","CA",90000,24,23000),
+  ("Raman","Finance","CA",99000,40,24000),
+  ("Scott","Finance","NY",83000,36,19000),
+  ("Jen","Finance","NY",79000,53,15000),
+  ("Jeff","Marketing","CA",80000,25,18000),
+  ("Kumar","Marketing","NY",91000,50,21000)
+).toDF("employee_name","department","state","salary","age","bonus")
+
+val df2 = sourceData.withColumn("total_comp", col("salary") + col("bonus") )
+
+val df3 = df2.groupBy("department").sum("total_comp")
+
+val originalCount = df2.count()
+val newCount = df3.count()
+
+val difference = originalCount - newCount
+println(difference)
+
+df2.write.text("examples/src/main/resources/output.txt")
+```
+
+This example shows how a developer may intuitively write the code to&#x20;
 
 ### Spark Driver
 
@@ -54,7 +93,7 @@ Once it has generated these structures, the Driver then sends a request to the [
 
 ### Spark Stage
 
-A Spark Stage is an execution plan for a&#x20;
+A Spark Stage is an execution plan for a portion of a Spark Job, delineated by computational boundaries such as&#x20;
 
 ### Cluster Manager
 
