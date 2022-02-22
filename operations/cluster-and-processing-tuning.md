@@ -58,6 +58,10 @@ In order to ensure operations across jobs are not duplicated, developers must ma
 
 In this example, we will show the importance of spark coding best practices to avoid duplicate processing and improve performance by designing Spark Actions and using persistence/caching between them.
 
+The examples are written in Scala, which has the most clear syntax for management and organization of these performance optimizations, but it is also applicable to Python, R, and SQL interfaces as well.&#x20;
+
+This clarity for performance control is one of the reason we recommend Scala when coding your own notebooks when integrating with IDO.&#x20;
+
 In this example, we will create a sample Dataframe, create a new calculated column summarizing two columns for each row, rollup the calculation by department, count the records before and after the rollup, print out the difference between counts, and then save the summarized Dataframe to a file.
 
 #### Example 1: Naive / Bad Practice Design
@@ -82,8 +86,8 @@ val totalCompAdded: DataFrame = sourceData
 val groupedByDepartment: RelationalGroupedDataset = 
   totalCompAdded.groupBy("department")
 
-val salarySummarized: DataFrame = 
-  groupedByDepartment.sum("salary")
+val salarySummarized: DataFrame =
+  groupedByDepartment.sum("salary", "bonus", "total_comp")
 
 val originalCount: Long = totalCompAdded.count()
 val newCount: Long = salarySummarized.count()
@@ -98,22 +102,23 @@ salarySummarized.write.text("examples/src/main/resources/output.txt")
 
 This example shows how a developer may intuitively write the code to build this data pipeline. While relatively easy to follow and read, this simple code block will actually perform a number of calculations multiple times across multiple jobs.
 
-Spark will generate one Spark Job per Spark Action written in the code. In this case, there are four Spark Actions:
+With this code, Spark will generate one Spark Job per Spark Action written in the code. In this case, there are four Spark Actions:
 
 ```scala
-val df4: DataFrame = df3.sum("salary")
+val salarySummarized: DataFrame =
+  groupedByDepartment.sum("salary", "bonus", "total_comp")
 ```
 
 ```scala
-val originalCount: Long = df2.count()
+val originalCount: Long = totalCompAdded.count()
 ```
 
 ```scala
-val newCount: Long = df4.count()
+val newCount: Long = salarySummarized.count()
 ```
 
 ```scala
-df2.write.text("examples/src/main/resources/output.txt")
+salarySummarized.write.text("examples/src/main/resources/output.txt")
 ```
 
 As a result, Spark will translate this code into four separate jobs that will execute independently from each other. Here is the code equivalent for the four jobs that the Spark Driver will generate:
@@ -140,57 +145,15 @@ val totalCompAdded: DataFrame = sourceData
 val groupedByDepartment: RelationalGroupedDataset = 
   totalCompAdded.groupBy("department")
 
-val salarySummarized: DataFrame = 
-  groupedByDepartment.sum("salary")
+val salarySummarized: DataFrame =
+  groupedByDepartment.sum("salary", "bonus", "total_comp")
 ```
 
-Because we referenced totalCompAdded as the starting dataframe for the groupBy and subsequent sum Action, Job 1 will perform both the new column calculation as well as the sum operation.
+Looking at this Spark Job code stand-alone, we can see a clear logical dependency between each Dataframe.
 
-This job highlights the first optimization: perform actions as early in the transformation pipeline as possible.
+sourceData -> totalCompAdded -> salarySummarized&#x20;
 
-With a simple tweak, we can cut out the column calculation from this job:
-
-```scala
-//old code referencing totalCompAdded
-val groupedByDepartment: RelationalGroupedDataset = 
-  totalCompAdded.groupBy("department")
-
-val salarySummarized: DataFrame = 
-  groupedByDepartment.sum("salary")
-  
-//new code referencing the SourceData dataframe, as it will logically result
-//in the same count (we do not need the total_comp column to calculate the count)
-val groupedByDepartment: RelationalGroupedDataset = 
-  sourceData.groupBy("department")
-
-val salarySummarized: DataFrame = 
-  groupedByDepartment.sum("salary")
-```
-
-As a result, the column calculation is eliminated from Job 1:
-
-```scala
-import spark.implicits._
-
-val sourceData: DataFrame = Seq(("James","Sales","NY",90000,34,10000),
-  ("Michael","Sales","NY",86000,56,20000),
-  ("Robert","Sales","CA",81000,30,23000),
-  ("Maria","Finance","CA",90000,24,23000),
-  ("Raman","Finance","CA",99000,40,24000),
-  ("Scott","Finance","NY",83000,36,19000),
-  ("Jen","Finance","NY",79000,53,15000),
-  ("Jeff","Marketing","CA",80000,25,18000),
-  ("Kumar","Marketing","NY",91000,50,21000)
-).toDF("employee_name","department","state","salary","age","bonus")
-
-val groupedByDepartment: RelationalGroupedDataset = 
-  sourceData.groupBy("department")
-
-val salarySummarized: DataFrame = 
-  groupedByDepartment.sum("salary")
-```
-
-Careful elimination of upstream dependencies in your logical pipeline is the most clean and effective way to reduce processing and improve performance.
+Each Dataframe requires the previous in this chain to complete the Action (sum) correctly.
 
 #### Job 2: Count rows before summarization
 
@@ -208,19 +171,23 @@ val sourceData: DataFrame = Seq(("James","Sales","NY",90000,34,10000),
   ("Kumar","Marketing","NY",91000,50,21000)
 ).toDF("employee_name","department","state","salary","age","bonus")
 
-//Similar to Job 1, this code block can be eliminated
 val totalCompAdded: DataFrame = sourceData
   .withColumn("total_comp", col("salary") + col("bonus") )
 
-//totalCompAdded should be changed to sourceData to avoid unnecessary processing
 val originalCount: Long = totalCompAdded.count()
 ```
 
-Job 2 does not execute the groupBy or sum steps, even though in the original code, they are written before the count Action.
+As you can see, Job 2 does not execute the groupBy or sum steps, even though in the original code, they are written before the "count" Spark Action.
 
-Similar to Job 1, this job can be optimized by refencing the sourceData Dataframe rather than the totalCompAdded Dataframe.
+As written, the Dataframe chain will look like:
 
-The resulting Job looks like:
+sourceData -> totalCompAdded -> originalCount
+
+But if you look closely, it becomes clear that logically, we do not need totalCompAdded's calculation to get the correct count of the original Dataframe.
+
+By referencing sourceData instead of totalCompAdded for originalCount's Action, we can eliminate the calculation from this Job
+
+The resulting optimized Job looks like:
 
 ```scala
 import spark.implicits._
@@ -236,10 +203,45 @@ val sourceData: DataFrame = Seq(("James","Sales","NY",90000,34,10000),
   ("Kumar","Marketing","NY",91000,50,21000)
 ).toDF("employee_name","department","state","salary","age","bonus")
 
+//Changed from totalCompAdded to sourceData
 val originalCount: Long = sourceData.count()
 ```
 
+{% hint style="success" %}
+Ensuring Dataframe references for Actions are as early in the transformation pipeline as possible can eliminate duplicate executions across generated jobs
+{% endhint %}
 
+#### Job 3: Count rows in summarized dataframe
+
+```scala
+import spark.implicits._
+
+val sourceData: DataFrame = Seq(("James","Sales","NY",90000,34,10000),
+  ("Michael","Sales","NY",86000,56,20000),
+  ("Robert","Sales","CA",81000,30,23000),
+  ("Maria","Finance","CA",90000,24,23000),
+  ("Raman","Finance","CA",99000,40,24000),
+  ("Scott","Finance","NY",83000,36,19000),
+  ("Jen","Finance","NY",79000,53,15000),
+  ("Jeff","Marketing","CA",80000,25,18000),
+  ("Kumar","Marketing","NY",91000,50,21000)
+).toDF("employee_name","department","state","salary","age","bonus")
+
+val totalCompAdded: DataFrame = sourceData
+  .withColumn("total_comp", col("salary") + col("bonus") )
+
+val groupedByDepartment: RelationalGroupedDataset =
+  totalCompAdded.groupBy("department")
+
+val salarySummarized: DataFrame =
+  groupedByDepartment.sum("salary", "bonus", "total_comp")
+  
+val newCount: Long = salarySummarized.count()
+```
+
+As you can see, Job 3 fully covers Job 1. Unfortunately, the Spark Driver is not smart enough to recognize this overlap as written, and will fully re-execute the logic from Job 2 as part of Job 3's execution.
+
+**Job 4: Write summarized Dataframe to text file**
 
 ###
 
