@@ -14,7 +14,7 @@ This logic is unfortunately not the desired logic for most Loopbacks. The desire
 
 With the current logic,  cloning a Loopback results in a setup like the one below. It has two Output Channels within a single Output and both Loopback Sources are pulling data from that Output.&#x20;
 
-![Actual Loopback Cloning behavior](<../../.gitbook/assets/image (382) (1) (1).png>)
+![Actual Loopback Cloning behavior](<../../.gitbook/assets/image (382) (1) (1) (1).png>)
 
 ## Workaround
 

@@ -106,6 +106,7 @@
 ## Releases
 
 * [Announcements](releases/announcements/README.md)
+  * ["Job Launch Error" 2.4.3 Hotfix](releases/announcements/job-launch-error-2.4.3-hotfix.md)
   * [2.5.0 New Features and Performance Optimization](releases/announcements/2.5.0-new-features-and-performance-optimization.md)
   * [End of support for versions 1.7.x (RAP)](releases/announcements/end-of-support-for-versions-1.7.x-rap.md)
   * [Log4j Vulnerability Impact on IDO](releases/announcements/log4j-vulnerability-impact-on-ido.md)
