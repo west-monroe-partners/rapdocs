@@ -81,17 +81,18 @@ Each configuration implementing business logic or transformations within IDO wil
 
 Rules:
 
-* Rule with compiled length < 250 characters = 3 weight
-* Rule with compiled length > 250 characters = 8 weight
+* Rule with compiled length <= 250 characters = +3 weight
+* Rule with compiled length > 250 characters = +8 weight
   * See compiled expression under meta.enrichment -> expression\_parsed
   * Compiled expressions are used to normalize against any non-primary relation traversal syntax differences and source name lengths.
-  * Users are not punished for using descriptive names or long-form syntax for their business logic
-* Expressions that include an aggregate function over a MANY relation traversal = 5 weight
-* Expressions that include a window function = 5 weight
+  * Compile expressions ensure users are not punished for using descriptive object names or long-form syntax for their business logic
+* Expressions that include an aggregate function over a MANY relation traversal = +5 weight
+* Expressions that include a window function = +5 weight
 
 Output Mappings:
 
-* Direct mappings (i.e. \[This].mycolumn) = 1 weight
-* Mappings including a traversal through a relation = 3 weight
+* Base Mapping Weight(i.e. \[This].mycolumn) = +1 weight
+* Mappings including a traversal through a relation = +3 weight
+* Aggregate Function Mappings = +5 weight
 
 Rules are only counted/added to the weight&#x20;
