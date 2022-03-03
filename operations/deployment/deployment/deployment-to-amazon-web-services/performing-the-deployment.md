@@ -60,6 +60,9 @@ The variable names are case sensitive - please enter them as they appear in this
 | databricksAccountId       | 638396f1-xxxx-xxxx-xxxx-ddf61adc4b06 | Account ID for Databricks E2                                                                                                                                                       |
 | databricksAccountUser     | user@wmp.com                         | Username for main E2 account user                                                                                                                                                  |
 | databricksAccountPassword | xxxxxxxxx                            | Password for main E2 account user                                                                                                                                                  |
+| readOnlyPassword          | xxxxxxxxx                            | Password for read only user, auto generate with alphanumeric only                                                                                                                  |
+| usageAuth0Secret          | fdldsjfs8f34dfsdf344334\*\*          | Auth0 Secret for Usage Agent - reach out to West Monroe resource to get this value                                                                                                 |
+| usagePassword             | xxxxxxxxx                            | Password for usage user, auto generate with alphanumeric only                                                                                                                      |
 
 If running a non-public facing deployment - these variables will need to be added:
 
