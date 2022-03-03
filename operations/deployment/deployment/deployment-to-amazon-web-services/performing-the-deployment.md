@@ -127,6 +127,8 @@ At this point, all the post Terraform configuration should be good to go. There 
 
 Check the container logs to ensure the containers have started and are running with no errors. Once all three containers are running, it's time to go on the site!
 
+When the environment is up, navigate to Cluster Configuration tab, there should be a "Default Sparky Configuration". If it does not appear, try running deployment container a second time. If it still does not appear, please reach out to Support. You must save this configuration so it generates a job id in Databricks before any processes can be ran in the enviornment.
+
 ## Auth0 Rule Updates
 
 In the Auth0 Dashboard there is a section on the left hand menu called "Rules". Edit the "Email domain whitelist" rule to add domains that should be able to sign up to the Intellio Frontend. By default, the rule is generated with only the WMP emails.
