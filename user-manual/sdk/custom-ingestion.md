@@ -25,7 +25,7 @@ Users will also need to select a Cluster Configuration to run the ingestion. Ins
 
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
-![](<../../.gitbook/assets/image (381).png>)
+![](<../../.gitbook/assets/image (381) (1).png>)
 
 
 

@@ -33,7 +33,7 @@ Asterisks (\*) mean the Parameter is mandatory and must be specified by users.
 
 If an Agent is alive and heartbeating, the Agent can be restarted from the UI. Navigate to the main Agent screen and click on the triple dots to the right of the Agent that needs a restart. A "Restart Agent" button will appear - click it to trigger a restart of the Agent.
 
-![](<../../.gitbook/assets/image (378).png>)
+![](<../../.gitbook/assets/image (378) (1).png>)
 
 The Agent should restart within 30 sec - 1 minute of clicking the button. Check the Agent logs to make sure it restarts successfully.
 
