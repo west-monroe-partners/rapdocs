@@ -1,9 +1,3 @@
----
-description: >-
-  The Details tab for an Output allows a user to specify key information about
-  the Output including the Connection to use and the Output Type.
----
-
 # Output Settings
 
 In the Output Settings screen, users can see the various components that make up an Output, including tabs for Output Settings, Mappings, and Output History. When initially configuring an Output, this is the only visible tab.
