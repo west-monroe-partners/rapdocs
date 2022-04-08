@@ -12,6 +12,18 @@ Create a Distribution Group or Microsoft 365 group for all 3rd party account sig
 
 * DataOps uses as many native Azure services as possible, but some 3rd party vendors are used to allow for easier customization per client, and simplified operations for version upgrades/rollback
 
+## Create Azure Environment
+
+Recommend this account not be tied to any one person, and create an account for the DataOps development team. The account should be able to create Active Directory resources.
+
+The Azure account should be upgraded to a Pay-As-You-Go plan at minimum, and a subscription should be created for the IDO deployment, unless there is an existing Subscription to use. The $29/mo Azure support plan is highly recommended at minimum, as there may be need to raise quotas in the Subscription if this is a new account.&#x20;
+
+There is also a chance that the Subscription will be locked for creating new VM's and this will be a blocker for deployment. This is usually seen in brand new Azure accounts. Once the Azure account is created and a Subscription is created, try going to the Subscription and creating a VM. If you can't create any VM's, the following process will need to be followed before you can deploy IDO. [https://docs.microsoft.com/en-us/troubleshoot/azure/general/region-access-request-process](https://docs.microsoft.com/en-us/troubleshoot/azure/general/region-access-request-process)
+
+{% hint style="danger" %}
+If creating a brand new Azure account is necessary, we strongly recommend doing these  steps 1-2 weeks in advance of the deployment
+{% endhint %}
+
 ## Decide on Public or Private Endpoint Architecture
 
 Public Endpoints
@@ -32,6 +44,7 @@ Please reach out to IDO team for diagrams of both architectures
 * One name for UI and one for API
   * EX: prod.dataops.com and api.prod.dataops.com
 * Delegate subdomain or create DNS records in DNS provider
+* GoDaddy recommended if there is no DNS provider currently being used
 
 ## SSL Certificate
 
@@ -39,7 +52,7 @@ A valid SSL certificate that the client organization controls to perform secure 
 
 * Use an existing certificate and define a subdomain allocated to DataOps.
 * Purchase a new SSL certificate for a new domain or subdomain.
-  * An Azure partner is Digicert.com
+  * An Azure partner is Digicert.com, GoDaddy is recommended if DNS is set up using GoDaddy
   * Deployment requires either a wildcard certificate or two single domain certificates per environment.
   * Certificate must cover the DNS names defined in the previous step!
   * After purchase is complete, verify ownership of the domain to receive the certificate. **This is a requirement for deployment.**
@@ -54,12 +67,8 @@ Create if one does not already exist with the following guidance:
 
 * We recommend this account is not tied to an employee&#x20;
 * [https://auth0.com/](https://auth0.com)
-* Auth0 tier should be a minimum of “Developer” ($23/month) with external users, 100 external active users, and 1,000 Machine to Machine tokens
+* Auth0 tier should be a minimum of free tier, but “Developer” ($23/month) with external users, 100 external active users, and 1,000 Machine to Machine tokens is recommended if deploying more than one environment
 * Create an account for the DataOps deployment team
-
-## Create Azure Environment
-
-Again, recommend this account not be tied to any one person, and create an account for the DataOps development team. The account should be able to create Active Directory resources.
 
 ## Create a Terraform Cloud Account
 
