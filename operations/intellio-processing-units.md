@@ -69,37 +69,37 @@ Conversely, users can decrease their IPU usage by:
 
 The following table provides an overview of the base weights for each process:
 
-| Process Name                                     | Process Group | Base Weight |
-| ------------------------------------------------ | ------------- | ----------- |
-| capture\_data\_changes                           | cdc           | 2           |
-| <p>manual_reset_all_<br>capture_data_changes</p> | cdc           | 2           |
-| <p>manual_reset_all_<br>processing_from_cdc</p>  | cdc           | 20          |
-| <p>manual_reset_capture_<br>data_changes</p>     | cdc           | 2           |
-| custom\_ingestion                                | custom        | 5           |
-| custom\_parse                                    | custom        | 5           |
-| custom\_post\_output                             | custom        | 5           |
-| <p>manual_reset_custom_<br>parse</p>             | custom        | 5           |
-| input\_delete                                    | delete        | 3           |
-| enrichment                                       | enrichment    | 1           |
-| <p>manual_reset_all_<br>enrichment</p>           | enrichment    | 1           |
-| <p>manual_reset_<br>enrichment</p>               | enrichment    | 1           |
-| import                                           | import        | 10          |
-| ingestion                                        | ingestion     | 1           |
-| loopback\_ingestion                              | ingestion     | 1           |
-| sparky\_ingestion                                | ingestion     | 1           |
-| cleanup                                          | maitanence    | 0.5         |
-| meta\_monitor\_refresh                           | maitanence    | 0.5         |
-| manual\_reset\_all\_output                       | output        | 1           |
-| manual\_reset\_output                            | output        | 1           |
-| output                                           | output        | 1           |
-| manual\_reset\_parse                             | parse         | 2           |
-| <p>manual_reset_sparky_<br>parse</p>             | parse         | 2           |
-| parse                                            | parse         | 2           |
-| sparky\_parse                                    | parse         | 2           |
-| data\_profile                                    | profile       | 1           |
-| attribute\_recalculation                         | recalculate   | 1           |
-| <p>manual_attribute_<br>recalculation</p>        | recalculate   | 1           |
-| refresh                                          | refresh       | 1           |
+| Process Name                                     | Base Weight |
+| ------------------------------------------------ | ----------- |
+| capture\_data\_changes                           | 2           |
+| <p>manual_reset_all_<br>capture_data_changes</p> | 2           |
+| <p>manual_reset_all_<br>processing_from_cdc</p>  | 20          |
+| <p>manual_reset_capture_<br>data_changes</p>     | 2           |
+| custom\_ingestion                                | 5           |
+| custom\_parse                                    | 5           |
+| custom\_post\_output                             | 5           |
+| <p>manual_reset_custom_<br>parse</p>             | 5           |
+| input\_delete                                    | 3           |
+| enrichment                                       | 1           |
+| <p>manual_reset_all_<br>enrichment</p>           | 1           |
+| <p>manual_reset_<br>enrichment</p>               | 1           |
+| import                                           | 10          |
+| ingestion                                        | 1           |
+| loopback\_ingestion                              | 1           |
+| sparky\_ingestion                                | 1           |
+| cleanup                                          | 0.5         |
+| meta\_monitor\_refresh                           | 0.5         |
+| manual\_reset\_all\_output                       | 1           |
+| manual\_reset\_output                            | 1           |
+| output                                           | 1           |
+| manual\_reset\_parse                             | 2           |
+| <p>manual_reset_sparky_<br>parse</p>             | 2           |
+| parse                                            | 2           |
+| sparky\_parse                                    | 2           |
+| data\_profile                                    | 1           |
+| attribute\_recalculation                         | 1           |
+| <p>manual_attribute_<br>recalculation</p>        | 1           |
+| refresh                                          | 1           |
 
 These weights will remain largely static over time as long as the definition/scope of the process does not change.
 
