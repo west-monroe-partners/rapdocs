@@ -116,6 +116,7 @@
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
   * [2.5](releases/changelog/2.5/README.md)
+    * [2.5.0 - April 11th 2022 Hotfix](releases/changelog/2.5/2.5.0-april-11th-2022-hotfix.md)
     * [2.5.0 - March 10th 2022 Hotfix](releases/changelog/2.5/2.5.0-march-10th-2022-hotfix.md)
     * [2.5.0](releases/changelog/2.5/2.5.0.md)
   * [2.4](releases/changelog/2.4/README.md)
