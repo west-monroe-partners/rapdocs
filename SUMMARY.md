@@ -43,6 +43,7 @@
 * [Processing](user-manual/processing/README.md)
   * [Processing Queue](user-manual/processing/processing-queue.md)
   * [Workflow Queue](user-manual/processing/workflow-queue.md)
+  * [Job Runs](user-manual/processing/job-runs.md)
   * [Resetting Processes](user-manual/processing/resetting-processes.md)
   * [Development Environment Setup](user-manual/processing/development-environment-setup.md)
 * [Outputs](user-manual/output-configuration/README.md)
