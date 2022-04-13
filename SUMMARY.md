@@ -105,6 +105,7 @@
 
 ## Releases
 
+* [Support Version Lifecycle](releases/support-version-lifecycle.md)
 * [Announcements](releases/announcements/README.md)
   * [Versioning Update](releases/announcements/versioning-update.md)
   * ["Job Launch Error" 2.4.3 Hotfix](releases/announcements/job-launch-error-2.4.3-hotfix.md)
