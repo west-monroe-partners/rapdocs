@@ -6,5 +6,9 @@ Old version for 2.5.0 and versions prior followed the format of PlatformVersion.
 
 The new versioning change will remove the "PlatformVersion" concept and add an integer for hotfix version, which will more closely follow the principles of [Semantic Versioning](https://semver.org). The versioning will be Major.Minor.Hotfix, and as an example for our first release using this format, the version will be 5.1.0 instead of 2.5.1.
 
-This shouldn't change anything infrastructure or deployment related for environments, as this change is not meant to affect those processes.
+Nothing involving infrastructure is changing as a result of this change. As an example for post 2.5.0, all that needs to be done for the release is to get latest Terraform changes using the versioned master branch (master-5.1.0), update the imageVersion variable in Terraform to 5.1.0, and plan/apply the Terraform changes.
+
+{% hint style="warning" %}
+We will no longer support rerunnable Deployment containers for hotfix patching - all hotfixes will now require an imageVersion variable update in Terraform and a Terraform run.
+{% endhint %}
 
