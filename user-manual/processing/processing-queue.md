@@ -22,11 +22,11 @@ The fields displayed for process are as follows:
 
     **Status:**  An icon and help-text indicating the result of the Processing Step
 
-    ![](../../.gitbook/assets/completed.png)   No errors or warnings. Processed successfully\
-    ![](../../.gitbook/assets/failed.png)   A failure has occurred in the process chain\
-    ![](../../.gitbook/assets/inprogress.png)   The process is currently running\
-    ![](<../../.gitbook/assets/image (291).png>)  The process is launching a new cluster\
-    ![](<../../.gitbook/assets/image (351).png>) The process chain has encountered an error but recovered successfully
+    <img src="../../.gitbook/assets/completed.png" alt="" data-size="original">   No errors or warnings. Processed successfully\
+    <img src="../../.gitbook/assets/failed.png" alt="" data-size="original">   A failure has occurred in the process chain\
+    <img src="../../.gitbook/assets/inprogress.png" alt="" data-size="original">   The process is currently running\
+    <img src="../../.gitbook/assets/image (291).png" alt="" data-size="original">  The process is launching a new cluster\
+    <img src="../../.gitbook/assets/image (351).png" alt="" data-size="original"> The process chain has encountered an error but recovered successfully
 * **Cost:** An _estimate_ of the cost to execute a specific job, based on published costs by the cloud vendor and Databricks multiplied by runtime, in cents.
 * **#:** Processed record counts popup to quickly access and display metadata about the data processed
 * **Log:** Provides a popup to the indexed logging stored in Postgres for this specific process

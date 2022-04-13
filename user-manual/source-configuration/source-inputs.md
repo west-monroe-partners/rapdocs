@@ -23,12 +23,12 @@ The Source Inputs screen allows users to monitor the status of their Sources' In
 * **Effective Record Count** - The number of records appearing in the hub table after CDC.
 *   **Status** - Indicates whether an input has successfully gone through all of its processing steps. Click this status to navigate to the Process page filtered for that input.
 
-    * ![](../../.gitbook/assets/completed.png)  Everything has processed correctly
-    * ![](../../.gitbook/assets/failed.png)  A failure has occurred for this input
-    * ![](<../../.gitbook/assets/pending (1).png>)  The input is waiting in the dependency queue
-    * ![](../../.gitbook/assets/inprogress.png)  The input is currently running a process
-    * ![](<../../.gitbook/assets/image (291).png>)The input is launching a new cluster
-    * ![](../../.gitbook/assets/delete.png)The input is queued for deletion
+    * <img src="../../.gitbook/assets/completed.png" alt="" data-size="original">  Everything has processed correctly
+    * <img src="../../.gitbook/assets/failed.png" alt="" data-size="original">  A failure has occurred for this input
+    * <img src="../../.gitbook/assets/pending (1).png" alt="" data-size="original">  The input is waiting in the dependency queue
+    * <img src="../../.gitbook/assets/inprogress.png" alt="" data-size="original">  The input is currently running a process
+    * <img src="../../.gitbook/assets/image (291).png" alt="" data-size="original">The input is launching a new cluster
+    * <img src="../../.gitbook/assets/delete.png" alt="" data-size="original">The input is queued for deletion
     * Grey Check Mark - The input has passed processing but contains 0 records.
 
 
