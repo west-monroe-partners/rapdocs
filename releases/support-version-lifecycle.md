@@ -8,9 +8,9 @@ Intellio provides full support for both the current version, as well as the late
 
 This includes major version upgrades, meaning customers have a roughly 2 month window to upgrade their systems in the case of a major release.
 
-Starting with v2.5.1/5.1.0 we are moving to the industry standard naming convention for release versioning as defined at [https://semver.org/](https://semver.org) and removing the prefix of "2" from our releases.
+This format is \<major>.\<minor>.\<hotfix>
 
-This new format is \<major>.\<minor>.\<hotfix>
+See this [announcement page](announcements/versioning-update.md) for details&#x20;
 
 **Example Supported Versions:**
 
