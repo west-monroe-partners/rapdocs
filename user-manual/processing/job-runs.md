@@ -39,22 +39,22 @@ If a date has an asterisk \*, the date is different from the Launch date. Hover 
 
 The job runs table also includes an array of filter options for users to choose. Filters are either pre-populated dropdowns or standard inputs:
 
-* Active/Terminated
+* **Active/Terminated**
   * Filter by active or terminated jobs
   * Dropdown
-* Cluster Configuration
+* **Cluster Configuration**
   * Filter by specific cluster configuration name
   * Dropdown
-* Current Source ID
+* **Current Source ID**
   * Integer input
-* Databricks Run ID
+* **Databricks Run ID**
   * Integer input
-* Job Run ID
+* **Job Run ID**
   * Integer input
-* State
+* **State**
   * Filter by the key or value of the state
   * Text input
-* Stop Reason
+* **Stop Reason**
   * Filter by the stop reason for a job
   * Text input
 
