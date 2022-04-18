@@ -158,7 +158,7 @@ Because IDO does not process the data (Databricks processes the data) linear wei
 
 After analyzing numerous models, the following formula correlates volume to feature value:
 
-![](<../.gitbook/assets/image (387).png>)
+![](<../.gitbook/assets/image (387) (1).png>)
 
 To illustrate how this complex formula materializes, the following table illustrates samples across various data volumes:
 

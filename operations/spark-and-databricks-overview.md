@@ -16,7 +16,7 @@ This guide will primarily focus on the Databricks and Spark Structures in the di
 
 For details on IDO Cluster Configs and IDO Processes, as well as how they connect to the rest of the Intellio DataOps metadata structures, please refer to the [Cluster and Process Configuration Overview](../user-manual/system-configuration/cluster-and-process-configuration-overview/) section.
 
-![](<../.gitbook/assets/image (388).png>)
+![](<../.gitbook/assets/image (388) (1).png>)
 
 ### Databricks Job
 
