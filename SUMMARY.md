@@ -109,6 +109,7 @@
 
 * [Support Version Lifecycle](releases/support-version-lifecycle.md)
 * [Announcements](releases/announcements/README.md)
+  * [5.1.0 Bug Fixes, Cleanup Configuration, and New Features](releases/announcements/5.1.0-bug-fixes-cleanup-configuration-and-new-features.md)
   * [Versioning Update Post 2.5.0](releases/announcements/versioning-update-post-2.5.0.md)
   * ["Job Launch Error" 2.4.3 Hotfix](releases/announcements/job-launch-error-2.4.3-hotfix.md)
   * [2.5.0 New Features and Performance Optimization](releases/announcements/2.5.0-new-features-and-performance-optimization.md)
@@ -119,7 +120,7 @@
   * [Quality of Life Features in 2.4.0](releases/announcements/quality-of-life-features-in-2.4.0.md)
   * [2.3.0 Released!](releases/announcements/2.3.0-released.md)
 * [Changelog](releases/changelog/README.md)
-  * [5.1.0](releases/changelog/5.1.0.md)
+  * [5.1.0](releases/changelog/2.5/2.5.1-less-than-date-greater-than.md)
   * [2.5](releases/changelog/2.5/README.md)
     * [2.5.0 - April 11th 2022 Hotfix](releases/changelog/2.5/2.5.0-april-11th-2022-hotfix.md)
     * [2.5.0 - March 10th 2022 Hotfix](releases/changelog/2.5/2.5.0-march-10th-2022-hotfix.md)
