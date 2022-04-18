@@ -68,6 +68,7 @@
   * [Handling Loopbacks in Cloning](user-manual/import-export/handling-loopbacks-in-cloning.md)
 * [System Configuration](user-manual/system-configuration/README.md)
   * [Global System Configuration Parameters](user-manual/system-configuration/managing-system-configuration.md)
+  * [Cleanup Configuration](user-manual/system-configuration/cleanup-configuration.md)
   * [Cluster and Process Configuration Overview](user-manual/system-configuration/cluster-and-process-configuration-overview/README.md)
     * [Cluster Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/README.md)
       * [Cluster Configuration Example - Databricks 9.1](user-manual/system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-example-databricks-9.1.md)
@@ -108,7 +109,7 @@
 
 * [Support Version Lifecycle](releases/support-version-lifecycle.md)
 * [Announcements](releases/announcements/README.md)
-  * [Versioning Update](releases/announcements/versioning-update.md)
+  * [Versioning Update Post 2.5.0](releases/announcements/versioning-update-post-2.5.0.md)
   * ["Job Launch Error" 2.4.3 Hotfix](releases/announcements/job-launch-error-2.4.3-hotfix.md)
   * [2.5.0 New Features and Performance Optimization](releases/announcements/2.5.0-new-features-and-performance-optimization.md)
   * [End of support for versions 1.7.x (RAP)](releases/announcements/end-of-support-for-versions-1.7.x-rap.md)

@@ -10,7 +10,7 @@ This includes major version upgrades, meaning customers have a roughly 2 month w
 
 This format is \<major>.\<minor>.\<hotfix>
 
-See this [announcement page](announcements/versioning-update.md) for details&#x20;
+See this [announcement page](announcements/versioning-update-post-2.5.0.md) for details&#x20;
 
 **Example Supported Versions:**
 

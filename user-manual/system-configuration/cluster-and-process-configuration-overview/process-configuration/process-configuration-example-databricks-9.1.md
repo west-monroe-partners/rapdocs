@@ -18,7 +18,7 @@ Clicking the "New Process Configuration" button in the top right will bring the 
 
 Simply click on the Cluster Config dropdown under the Description field to access the available Cluster Configurations. Scroll down and click 9.1 Demo to change the associated Cluster Configuration to the 9.1 configuration created in previous steps.
 
-![The Process Configuration now uses the 9.1 Demo Cluster Config](<../../../../.gitbook/assets/image (386) (1) (1).png>)
+![The Process Configuration now uses the 9.1 Demo Cluster Config](<../../../../.gitbook/assets/image (386) (1) (1) (1).png>)
 
 ## Saving the configuration & applying to Sources
 

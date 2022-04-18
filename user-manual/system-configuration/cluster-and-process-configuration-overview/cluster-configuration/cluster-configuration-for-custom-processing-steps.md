@@ -8,7 +8,7 @@ Custom processing steps (Custom Ingestion, Custom Parse, Custom Post-Output) req
 
 Sources configured to use Custom Ingestion (**Custom** connection type) on the [**Source Settings**](../../../source-configuration/source-details.md) **** page require user to select Cluster Configuration for the Custom Ingestion step:
 
-![](<../../../../.gitbook/assets/image (390).png>)
+![](<../../../../.gitbook/assets/image (390) (1).png>)
 
 After the **Custom** connection type is selected, a **Custom Ingest** **Cluster Config** dropdown will appear. Simply click on the dropdown to select an existing cluster configuration for that source.
 
