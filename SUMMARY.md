@@ -85,6 +85,13 @@
     * [Process Configuration](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration/README.md)
       * [Process Configuration Example - Databricks 9.1](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration/process-configuration-example-databricks-9.1.md)
       * [Process Override Example - Databricks 9.1](user-manual/system-configuration/cluster-and-process-configuration-overview/process-configuration/process-override-example-databricks-9.1.md)
+* [Cloning](user-manual/cloning/README.md)
+  * [Overview](user-manual/cloning/overview.md)
+  * [Very Basic Cloning](user-manual/cloning/very-basic-cloning/README.md)
+    * [Source Name Templates](user-manual/cloning/very-basic-cloning/source-name-templates.md)
+    * [Groups](user-manual/cloning/very-basic-cloning/groups.md)
+    * [Performing a Basic Clone](user-manual/cloning/very-basic-cloning/performing-a-basic-clone.md)
+  * [Cloning with Relations](user-manual/cloning/cloning-with-relations.md)
 
 ## Operations
 

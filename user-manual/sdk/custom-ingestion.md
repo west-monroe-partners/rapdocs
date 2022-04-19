@@ -10,7 +10,7 @@ In order to create a Custom Ingestion source, users should use the Custom radio 
 
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
-![](<../../.gitbook/assets/image (381) (1).png>)
+![](<../../.gitbook/assets/image (381) (1) (1).png>)
 
 
 

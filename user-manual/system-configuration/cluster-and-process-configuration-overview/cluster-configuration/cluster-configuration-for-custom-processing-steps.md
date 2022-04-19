@@ -8,7 +8,7 @@ Custom processing steps (Custom Ingestion, Custom Parse, Custom Post-Output) req
 
 Sources configured to use Custom Ingestion (**Custom** connection type) on the [**Source Settings**](../../../source-configuration/source-details.md) **** page require user to select Cluster Configuration for the Custom Ingestion step:
 
-![](<../../../../.gitbook/assets/image (390) (1).png>)
+![](<../../../../.gitbook/assets/image (390) (2).png>)
 
 After the **Custom** connection type is selected, a **Custom Ingest** **Cluster Config** dropdown will appear. Simply click on the dropdown to select an existing cluster configuration for that source.
 
@@ -20,7 +20,7 @@ Users may also edit an existing cluster by selecting a cluster configuration fro
 
 Sources configured to use Custom Parse on the [**Source Settings**](../../../source-configuration/source-details.md) **** page require user to select a **Custom Parse Cluster Config** for the Custom Parse step:
 
-![](<../../../../.gitbook/assets/image (381).png>)
+![](<../../../../.gitbook/assets/image (381) (1).png>)
 
 
 
@@ -28,4 +28,4 @@ Sources configured to use Custom Parse on the [**Source Settings**](../../../sou
 
 Sources configured to use Custom Post Output on the [**Output Settings**](../../../output-configuration/output-details.md) **** page require user to select a **Custom Post Output Cluster Configuration** for the Custom Post Output step:
 
-![](<../../../../.gitbook/assets/image (385).png>)
+![](<../../../../.gitbook/assets/image (385) (1).png>)
