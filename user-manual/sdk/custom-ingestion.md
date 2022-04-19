@@ -6,11 +6,11 @@ The Custom Ingestion SDK will allow users to define their own data acquisition c
 
 ### Creating a Custom Source
 
-In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. Users will also need to select a Cluster Configuration to run the ingestion. Instructions for doing so can be found [here](../../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).
+In order to create a Custom Ingestion source, users should use the Custom radio button in the source configuration page. Users will also need to select a Cluster Configuration to run the ingestion. Instructions for doing so can be found [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).
 
 All Custom Ingestion sources are setup as Scheduled sources by default.
 
-![](<../../../.gitbook/assets/image (381) (1).png>)
+![](<../../.gitbook/assets/image (381) (1).png>)
 
 
 

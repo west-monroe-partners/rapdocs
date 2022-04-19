@@ -8,7 +8,7 @@ Any output can have post output commands attached to it. Simply select a Cluster
 
 Notebooks can also be run manually from Databricks.
 
-See [here](../../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md) for more information about setting up a Custom Post Output Cluster Configuration.
+See [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md) for more information about setting up a Custom Post Output Cluster Configuration.
 
 
 

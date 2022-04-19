@@ -30,7 +30,7 @@ The connection settings page enables users to provide the necessary parameters t
 
 ## Custom
 
-Used in the [SDK ](sdk/)as part of [Custom Ingestion](sdk/custom-process-hello-world-examples/custom-ingestion.md).
+Used in the [SDK ](sdk/)as part of [Custom Ingestion](sdk/custom-ingestion.md).
 
 Parameters here are optional, as not all custom ingestion notebooks require parameterization.
 
