@@ -16,7 +16,7 @@ From the Process Configuration page, click Add Override to create a new Override
 
 For this example, we would like to override processes related to Output in order to avoid errors with Databricks Runtime 9.1. To do so, click the Select Process Type dropdown and the click on Output. Under the Cluster Configuration, we will select Default Sparky Configuration as it still runs on Databricks Runtime 7.3. However, users could use any Cluster Configuration configured to run Databricks 7.3. Repeat these steps for process type "Manual Reset Output" and "Manual Reset All Output" in order to ensure all Output processes use the correct cluster type. Then click Save.
 
-![Three process overrides added to the 9.1 Demo Process Configuration](<../../../../.gitbook/assets/image (381) (1) (1) (1) (1).png>)
+![Three process overrides added to the 9.1 Demo Process Configuration](<../../../../.gitbook/assets/image (381) (1) (1) (1) (1) (1).png>)
 
 ## Further Steps
 

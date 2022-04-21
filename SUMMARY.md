@@ -60,7 +60,9 @@
   * [Relation Templates](user-manual/validation-and-enrichment-rule-templates/relation-templates/README.md)
     * [Overview](user-manual/validation-and-enrichment-rule-templates/relation-templates/overview.md)
     * [Configuration & Creation](user-manual/validation-and-enrichment-rule-templates/relation-templates/configuration-and-creation.md)
-  * [Rule Templates](user-manual/validation-and-enrichment-rule-templates/rule-templates.md)
+  * [Rule Templates](user-manual/validation-and-enrichment-rule-templates/rule-templates/README.md)
+    * [Overview](user-manual/validation-and-enrichment-rule-templates/rule-templates/overview.md)
+    * [Creation & Configuration](user-manual/validation-and-enrichment-rule-templates/rule-templates/creation-and-configuration.md)
   * [Best Practices](user-manual/validation-and-enrichment-rule-templates/best-practices.md)
 * [SDK](user-manual/sdk/README.md)
   * [Overview](user-manual/sdk/overview.md)
@@ -99,7 +101,10 @@
     * [Configuring a Master Data Relation Template](user-manual/cloning/cloning-with-relations/configuring-a-master-data-relation-template.md)
     * [Configuring a Group Relation Template](user-manual/cloning/cloning-with-relations/configuring-a-group-relation-template.md)
     * [Performing a Clone with Relationships](user-manual/cloning/cloning-with-relations/performing-a-clone-with-relationships.md)
-  * [Cloning with Enrichments](user-manual/cloning/cloning-with-enrichments.md)
+  * [Cloning with Enrichments](user-manual/cloning/cloning-with-enrichments/README.md)
+    * [Overview](user-manual/cloning/cloning-with-enrichments/overview.md)
+    * [Templatizing \[This\] Source and Master Data Relation Rules](user-manual/cloning/cloning-with-enrichments/templatizing-this-source-and-master-data-relation-rules.md)
+    * [Templatizing Group Relation Rules](user-manual/cloning/cloning-with-enrichments/templatizing-group-relation-rules.md)
 
 ## Operations
 

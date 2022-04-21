@@ -2,7 +2,7 @@
 
 In the prior sections, we setup both Group Relation and Master Data Relations to control the logic of our Clone operation for Company 1. As a reminder, the setup for Company 1 is below.&#x20;
 
-![Company 1 Setup](<../../../.gitbook/assets/image (381).png>)
+![Company 1 Setup](<../../../.gitbook/assets/image (381) (1).png>)
 
 ## Performing the Clone
 

@@ -8,7 +8,7 @@ When SPOT capacity is not available, jobs configured to use SPOT instances from 
 
 1. **AWS:** Open [AWS spot advisor](https://aws.amazon.com/ec2/spot/instance-advisor/), select your region and find the instance type supported by databricks (list here) with minimal Frequency of Interruption (<5%). For general workloads we recommend all purpose instance types (m5\*.large or m5\*.xlarge). For jobs having complex joins, aggregations, window functions and large data volumes we recommend memory-optimized (r5\*.large, r5\*.xlarge) types.\
    **Azure**:  this [link ](https://databricks.com/blog/2021/05/25/leverage-unused-compute-capacity-for-data-ai-with-azure-spot-instances-and-azure-databricks.html)describes details on acceing spot pricing history by instance type. Using Azure portal, identify instance type that is least susceptible to interruptions&#x20;
-2. Create new databricks pool to use selected instance type: ![](<../../../../.gitbook/assets/image (380) (1) (1) (1) (1) (1).png>)![](<../../../../.gitbook/assets/image (381) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+2. Create new databricks pool to use selected instance type: ![](<../../../../.gitbook/assets/image (380) (1) (1) (1) (1) (1).png>)![](<../../../../.gitbook/assets/image (381) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 3. Click create, and copy new pool id from the browser URL:
 
 ![](<../../../../.gitbook/assets/image (378) (1) (1) (1) (1).png>)

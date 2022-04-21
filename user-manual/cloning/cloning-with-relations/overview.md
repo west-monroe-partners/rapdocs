@@ -10,7 +10,7 @@ As seen in the Very Basic Cloning example, single Sources can be copied into new
 
 The 3 Relations between Company 1 Sources and the Sources that exist outside of the Company 1 Group (Product, Territory, and Customer) are unique because there are not separate Product, Territory, or Customer Sources for each Group. When configuring Sources for Company 2, the user will want Company 2 Sources to be related to the EXACT same global Product, Territory and Customer. We call these "Master Data Relations". When the user performs a Clone operation, the desired behavior resembled the image below. Notice that after cloning, there is still a single Master Data Source, and it has been related to the newly created Source.
 
-![A Master Data Relation Clone](<../../../.gitbook/assets/image (391).png>)
+![A Master Data Relation Clone](<../../../.gitbook/assets/image (391) (1).png>)
 
 
 
@@ -22,7 +22,7 @@ The other Relation in the Company 1 diagram, between Company 1 Sales Order Heade
 
 ![Desired Behavior for Group Relations](<../../../.gitbook/assets/image (383).png>)
 
-![Undesired Behavior](<../../../.gitbook/assets/image (401).png>)
+![Undesired Behavior](<../../../.gitbook/assets/image (401) (1).png>)
 
 ## Example
 

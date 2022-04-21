@@ -14,13 +14,13 @@ In the example seen on the Overview page there were two groups, Company 1 and Co
 
 Really, the Group is just a bit of text that helps name Sources. This is reflected in the fact that the Groups settings page in IDO has only two fields: Name and Description. Below we create a Group for Company 1 by simply naming it "Company 1".&#x20;
 
-![Creating a Group is Simple](<../../../.gitbook/assets/image (400) (1).png>)
+![Creating a Group is Simple](<../../../.gitbook/assets/image (400) (1) (1).png>)
 
 ## Applying A Group To A Source
 
 The group can then be applied to the relevant Sources by using the "Group" control on the Source Settings page. For the Company 1 example we have been working with, both the Company 1 Sales Order Detail and Company 1 Sales Order Header Sources would go into the Company 1 Group.
 
-![Applying the Company 1 Group to a Source](<../../../.gitbook/assets/image (390) (1).png>)
+![Applying the Company 1 Group to a Source](<../../../.gitbook/assets/image (390) (1) (1).png>)
 
 These Groups will be extremely important to the Cloning process. Users will choose to Clone an entire Group and recreate EVERYTHING inside of it with a new Group.&#x20;
 

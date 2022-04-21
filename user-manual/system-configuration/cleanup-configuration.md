@@ -23,4 +23,4 @@ When new source is created, it is automatically assigned default cleanup configu
 
 &#x20;
 
-![](<../../.gitbook/assets/image (390) (1) (1).png>)
+![](<../../.gitbook/assets/image (390) (1) (1) (1).png>)
