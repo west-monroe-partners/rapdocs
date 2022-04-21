@@ -60,7 +60,7 @@
   * [Relation Templates](user-manual/validation-and-enrichment-rule-templates/relation-templates/README.md)
     * [Overview](user-manual/validation-and-enrichment-rule-templates/relation-templates/overview.md)
     * [Configuration & Creation](user-manual/validation-and-enrichment-rule-templates/relation-templates/configuration-and-creation.md)
-  * [Rule Templates](user-manual/validation-and-enrichment-rule-templates/rule-templates/README.md)
+  * [Rule Templates](user-manual/validation-and-enrichment-rule-templates/rule-templates.md)
     * [Overview](user-manual/validation-and-enrichment-rule-templates/rule-templates/overview.md)
     * [Creation & Configuration](user-manual/validation-and-enrichment-rule-templates/rule-templates/creation-and-configuration.md)
   * [Best Practices](user-manual/validation-and-enrichment-rule-templates/best-practices.md)
@@ -101,10 +101,15 @@
     * [Configuring a Master Data Relation Template](user-manual/cloning/cloning-with-relations/configuring-a-master-data-relation-template.md)
     * [Configuring a Group Relation Template](user-manual/cloning/cloning-with-relations/configuring-a-group-relation-template.md)
     * [Performing a Clone with Relationships](user-manual/cloning/cloning-with-relations/performing-a-clone-with-relationships.md)
-  * [Cloning with Enrichments](user-manual/cloning/cloning-with-enrichments/README.md)
+  * [Cloning with Enrichments](user-manual/cloning/cloning-with-enrichments.md)
     * [Overview](user-manual/cloning/cloning-with-enrichments/overview.md)
     * [Templatizing \[This\] Source and Master Data Relation Rules](user-manual/cloning/cloning-with-enrichments/templatizing-this-source-and-master-data-relation-rules.md)
     * [Templatizing Group Relation Rules](user-manual/cloning/cloning-with-enrichments/templatizing-group-relation-rules.md)
+  * [Cloning with Outputs](user-manual/cloning/cloning-with-outputs/README.md)
+    * [Overview](user-manual/cloning/cloning-with-outputs/overview.md)
+    * [Creating a Multi Group Output](user-manual/cloning/cloning-with-outputs/creating-a-multi-group-output.md)
+    * [Creating A Single Group Output](user-manual/cloning/cloning-with-outputs/creating-a-single-group-output.md)
+    * [Performing the Clone](user-manual/cloning/cloning-with-outputs/performing-the-clone.md)
 
 ## Operations
 

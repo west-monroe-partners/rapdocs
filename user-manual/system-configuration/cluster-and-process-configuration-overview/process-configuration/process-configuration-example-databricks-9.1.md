@@ -6,19 +6,19 @@ IDO 2.5.0 now offers support for Databricks Runtime 9.1. This version utilizes S
 
 From any IDO page, click the hamburger menu icon in the top left, navigate to System Configuration, then click Process Configurations. This will bring users to the Process Configuration homepage.
 
-![Navigating to Cluster Configurations](<../../../../.gitbook/assets/image (385) (1) (1) (1) (1).png>)
+![Navigating to Cluster Configurations](<../../../../.gitbook/assets/image (385) (1) (1) (1) (1) (1).png>)
 
 ## Starting a New Process Config
 
 Clicking the "New Process Configuration" button in the top right will bring the user to the new Process Configuration creation page. For this example, we will name the Process Configuration "9.1 Demo" Notice that by default the Process Configuration uses "Default Sparky Configuration"
 
-![A new Process Configuration using the Default Sparky Configuration](<../../../../.gitbook/assets/image (380) (1) (1) (1).png>)
+![A new Process Configuration using the Default Sparky Configuration](<../../../../.gitbook/assets/image (380) (1) (1) (1) (1).png>)
 
 ## Switching to Databricks 9.1
 
 Simply click on the Cluster Config dropdown under the Description field to access the available Cluster Configurations. Scroll down and click 9.1 Demo to change the associated Cluster Configuration to the 9.1 configuration created in previous steps.
 
-![The Process Configuration now uses the 9.1 Demo Cluster Config](<../../../../.gitbook/assets/image (386) (1) (1) (1) (1).png>)
+![The Process Configuration now uses the 9.1 Demo Cluster Config](<../../../../.gitbook/assets/image (386) (1) (1) (1) (1) (1).png>)
 
 ## Saving the configuration & applying to Sources
 

@@ -14,7 +14,7 @@ The first step to creating Relation Templates is to Remove the Primary Flag from
 
 After hitting Save, reopen the Relation and hit the Convert To Template button. This will create a Relation Template that matches the current Relation EXACTLY. It will also apply that Template to the currently open Relation. After applying the Relation Template, the Relation is now locked. It can only be edited from the Relation Template screen.
 
-![A locked Relation associated with a Template](<../../../.gitbook/assets/image (380).png>)
+![A locked Relation associated with a Template](<../../../.gitbook/assets/image (380) (1).png>)
 
 We wil repeat these steps for each of the three Relations between Company 1 Sources and Global Sources.&#x20;
 

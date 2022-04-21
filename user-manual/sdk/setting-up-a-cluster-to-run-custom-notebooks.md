@@ -22,7 +22,7 @@ While IDO comes out of the box with two Databricks clusters, mini-sparky and dat
 * The default Node Type should be fine for now. Consider adjusting based on the data that will be processed
 * **Advanced Options - Users will need to set the Instance Profile! There should only be one option in the standard IDO deployment.**&#x20;
 
-![An example cluster configuration](<../../.gitbook/assets/image (393) (1).png>)
+![An example cluster configuration](<../../.gitbook/assets/image (393) (1) (1).png>)
 
 3\. Click Create Cluster at the top of the page. The cluster is now created and the user is automatically naviagated to the Cluster page! Next the SDK Libraries must be attached. From the Cluster Page, Click the Libraries tab, then click Install New.
 
@@ -32,7 +32,7 @@ While IDO comes out of the box with two Databricks clusters, mini-sparky and dat
 
 ![An Azure example](<../../.gitbook/assets/image (391) (1) (1).png>)
 
-![The hover over menu for accessing Environment and Client values](<../../.gitbook/assets/image (404).png>)
+![The hover over menu for accessing Environment and Client values](<../../.gitbook/assets/image (404) (1).png>)
 
 5\. The Cluster is ready to go. In the final step of this instruction, it will be attached to a Notebook to run code. Again click the Create button along the left-hand side of the Databricks UI. Then Click Notebook. In the resulting popup, the notebook can be named anything. For this example we will use CustomProcessNotebook. The langauge should be Scala and the Cluster should be the Cluster created in the above steps. Click Create to create the Notebook and to be redirected to the Notebook itself. You are now ready to run CustomProcess Notebooks in Databricks.
 

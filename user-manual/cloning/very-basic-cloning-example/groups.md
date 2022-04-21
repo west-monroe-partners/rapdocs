@@ -8,7 +8,7 @@ Groups can take many different names in different orgainzations. Hubs, Groups, C
 
 In the example seen on the Overview page there were two groups, Company 1 and Company 2. Each "Company" is separate and never relates directly to the other.  &#x20;
 
-![Two Groups of Sources with a few shared Related Sources](<../../../.gitbook/assets/image (385).png>)
+![Two Groups of Sources with a few shared Related Sources](<../../../.gitbook/assets/image (385) (1).png>)
 
 ## Making A Group
 

@@ -14,7 +14,7 @@ The Sales Order Detail Source writes its data to an Output called Sales Output.
 
 Now, the user wants to configure sources for Company 2, Company 3, Company 4, etc. createing new version of the blue Sources in the diagram above all using the exact same logic and related to the exact same global Sources. After adding sources for Company 2, the environment should look like the below image.
 
-![A setup with Company 1 & 2](<../../.gitbook/assets/image (386).png>)
+![A setup with Company 1 & 2](<../../.gitbook/assets/image (386) (1).png>)
 
 Without cloning, users are left to recreate all of the logic by hand, a process prone to mistakes that requires a large amount of overhead to manage. However, through the use of Groups and Templates, the entire setup of Company 1 can be copied over for Company 2 with just a few clicks.
 
