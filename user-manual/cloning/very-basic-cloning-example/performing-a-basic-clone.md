@@ -28,7 +28,7 @@ Clicking "Proceed" will download a file containing all of the Configuration deta
 
 In order to clone this Group, the user will need to supply a new Group name to put all of the newly create objects into. For this example, we will use the Group "Basic Clone". To specify this new Group name, the user must open the file that was downloaded in the step above and locate the "Group" key as seen below. Simply replace the value with the desired new Group Name and resave the file.
 
-![The Export file with Group name updated to Basic Clone](<../../../.gitbook/assets/image (395) (1) (1).png>)
+![The Export file with Group name updated to Basic Clone](<../../../.gitbook/assets/image (395) (1) (1) (1).png>)
 
 #### Uploading the File to Perform the Clone
 
@@ -42,7 +42,7 @@ After validating the Import Summary, scroll down and click the "Import" button. 
 
 The newly created Source will also be available in the Sources list with identical settings to the original Company 1 Sales Order Detail Source.
 
-![The newly created Source](<../../../.gitbook/assets/image (381) (1) (1).png>)
+![The newly created Source](<../../../.gitbook/assets/image (381) (1) (1) (1).png>)
 
 
 

@@ -14,7 +14,7 @@ In the example seen on the Overview page there were two groups, Company 1 and Co
 
 Really, the Group is just a bit of text that helps name Sources. This is reflected in the fact that the Groups settings page in IDO has only two fields: Name and Description. Below we create a Group for Company 1 by simply naming it "Company 1".&#x20;
 
-![Creating a Group is Simple](<../../../.gitbook/assets/image (400) (1) (1).png>)
+![Creating a Group is Simple](<../../../.gitbook/assets/image (400) (1) (1) (1).png>)
 
 ## Applying A Group To A Source
 

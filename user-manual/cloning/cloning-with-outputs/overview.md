@@ -12,7 +12,7 @@ A Multi Group Output contains mappings from Sources in a number of different IDO
 
 In the event that the user wants to perform a Clone to create "Company 3", the desired behavior would be to add an additional Channel into the existing Output A for the Company 3 Sasles Order Detail Source to write data into, similar to the image below.
 
-![The Company 3 Source has been mapped into the same Output](<../../../.gitbook/assets/image (419).png>)
+![The Company 3 Source has been mapped into the same Output](<../../../.gitbook/assets/image (419) (1).png>)
 
 ### Single Group Outputs
 
@@ -32,7 +32,7 @@ In the upcoming sections, we will explore how Output Name Templates can be utili
 
 We will configure the Outputs so that after Cloning, the environment looks like the image below. Notice the newly created Output Cloning Single Group Output and the new Channel in the Multi Group Output.
 
-![Desired Clone Output](<../../../.gitbook/assets/image (405).png>)
+![Desired Clone Output](<../../../.gitbook/assets/image (405) (1).png>)
 
 
 

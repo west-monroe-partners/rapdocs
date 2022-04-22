@@ -28,7 +28,7 @@ In the [Cloning with Relations](../cloning-with-relations/) section, we analyzed
 
 The third rule is unique compared to the previous two. "Header Account Number" utilizes a Relation to a Source in the same Group as our Sales Order Detail Source, specifically "Account Number" field from the Sales Order Header Source. Below is the Rule definition for the Company 1 Sales Order Detail Source. Notice that it specifically mentions the Company 1 Sales Order Header Source in the Rule expression.
 
-![The Header Account Number Rule for Company 1](<../../../.gitbook/assets/image (408).png>)
+![The Header Account Number Rule for Company 1](<../../../.gitbook/assets/image (408) (1).png>)
 
 This Rule utilizes a Group Relation, so when the Source is cloned, we will not want a lingering reference to the original Sources. i.e. We do not want Company 2 to still have an expression that tries to get data from a Company 1 Source. In this case, IDO will automatically update the Rule expression to preserve the intra-Group logic of Company 1 <-> Company 1 and Company 2 <-> Company 2. Observe below how the expression for Company 2 Sales Order Detail has only references to Company 2 in its expression.
 

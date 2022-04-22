@@ -12,7 +12,7 @@ When deploying the initial DataOps workspace in Terraform, the Terraform Cloud a
 
 Merging the latest changes from the dataops-infrastructure repository to the forked dataops-infrastructure can be done by navigating to the forked repository and making a pull request from the master dataops-infrastructure branch that matches the version that the infrastructure is upgrading to. For example, if an upgrade to 2.5.0 is being made, then the pull request should be made from "master-2.5.0".
 
-![](<../../../.gitbook/assets/image (381) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (381) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Once the pull request is created, review the changes and make sure that any custom changes that may be made aren't getting wiped out by the PR. If they are, manual edits may need to be made to the PR, or updates may need to be made post PR merge.
 

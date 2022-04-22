@@ -10,7 +10,7 @@ For this example, we will be converting the existing Relations between the Compa
 
 The first step to creating Relation Templates is to Remove the Primary Flag from any Relation that will be templated. Relations CANNOT be Primary if they will be templated. To do this, we simply open each relation, flip the Primary toggle, and hit save.&#x20;
 
-![De-primary the Relation](<../../../.gitbook/assets/image (398) (1).png>)
+![De-primary the Relation](<../../../.gitbook/assets/image (398) (1) (1).png>)
 
 After hitting Save, reopen the Relation and hit the Convert To Template button. This will create a Relation Template that matches the current Relation EXACTLY. It will also apply that Template to the currently open Relation. After applying the Relation Template, the Relation is now locked. It can only be edited from the Relation Template screen.
 

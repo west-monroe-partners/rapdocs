@@ -28,6 +28,6 @@ The other Relation in the Company 1 diagram, between Company 1 Sales Order Heade
 
 Below is an example of the desired behavior when performing a Clone operation for Company 1. Notice the difference in behavior between the Master Data Relations and the Group Relations.&#x20;
 
-![Desired Cloning behaviro with Master Data and Group Relations](<../../../.gitbook/assets/image (395) (1).png>)
+![Desired Cloning behaviro with Master Data and Group Relations](<../../../.gitbook/assets/image (395) (1) (1).png>)
 
 The next sections will cover the creation of Relation Templates to control this Group vs Master Data logic when configuring objects in IDO. Note that it is recommended to use Relation template for ALL relations of a Source that will be cloned. For more information on Relation Templates and why they exist, check out the page [here](../../validation-and-enrichment-rule-templates/relation-templates/overview.md).

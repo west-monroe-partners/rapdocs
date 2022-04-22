@@ -2,7 +2,7 @@
 
 In the prior sections, we setup both Group Relation and Master Data Relations to control the logic of our Clone operation for Company 1. As a reminder, the setup for Company 1 is below.&#x20;
 
-![Company 1 Setup](<../../../.gitbook/assets/image (381) (1).png>)
+![Company 1 Setup](<../../../.gitbook/assets/image (381) (1) (1).png>)
 
 ## Performing the Clone
 
@@ -12,7 +12,7 @@ To perform the clone, follow the steps described [here](../very-basic-cloning-ex
 
 After Cloning, two new Company 2 Sources have been created for Sales Order Detail and Sales Order Header. See the image below.
 
-![Company 2 Relations](<../../../.gitbook/assets/image (377).png>)
+![Company 2 Relations](<../../../.gitbook/assets/image (377) (1).png>)
 
 A few things to notice
 

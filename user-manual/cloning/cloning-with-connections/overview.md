@@ -8,7 +8,7 @@ When configuring Source and Ouptputs in IDO, users must configure each Object to
 
 Multi Group Connections are useful when Cloning Groups that all pull from the same Database/File Path. When a Source or Output attached to a Multi Group Connection is Cloned, the new versions will be attached to the existing Connection, similar to the image below.&#x20;
 
-![Multi Group Connection behavior](<../../../.gitbook/assets/image (404).png>)
+![Multi Group Connection behavior](<../../../.gitbook/assets/image (405).png>)
 
 #### Single Group Connections
 

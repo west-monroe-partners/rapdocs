@@ -12,7 +12,7 @@ From any IDO page, click the hamburger menu icon in the top left, navigate to Sy
 
 Clicking the "New Cluster" button in the top right will bring the user to the new Cluster Configuration creation page. For this example, we will name the Cluster Configuration "9.1 Demo" Notice that by default the cluster uses Databricks version 7.3.
 
-![A new cluster config with default 7.3 Databricks Runtime](<../../../../.gitbook/assets/image (382) (1) (1) (1) (1).png>)
+![A new cluster config with default 7.3 Databricks Runtime](<../../../../.gitbook/assets/image (382) (1) (1) (1) (1) (1).png>)
 
 ## Switching to Databricks 9.1
 

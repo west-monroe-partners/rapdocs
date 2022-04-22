@@ -108,11 +108,13 @@
   * [Cloning with Outputs](user-manual/cloning/cloning-with-outputs/README.md)
     * [Overview](user-manual/cloning/cloning-with-outputs/overview.md)
     * [Creating a Multi Group Output](user-manual/cloning/cloning-with-outputs/creating-a-multi-group-output.md)
-    * [Creating A Single Group Output with Output Name Templates](user-manual/cloning/cloning-with-outputs/creating-a-single-group-output-with-output-name-templates.md)
+    * [Creating A Single Group Output with Output Name Templates](user-manual/cloning/cloning-with-outputs/creating-a-single-group-output.md)
     * [Performing the Clone](user-manual/cloning/cloning-with-outputs/performing-the-clone.md)
   * [Cloning with Connections](user-manual/cloning/cloning-with-connections/README.md)
     * [Overview](user-manual/cloning/cloning-with-connections/overview.md)
     * [Creating a Multi Group Connection](user-manual/cloning/cloning-with-connections/creating-a-multi-group-connection.md)
+    * [Creating a Single Group Connection with Connection Name Templates](user-manual/cloning/cloning-with-connections/creating-a-single-group-connection-with-connection-name-templates.md)
+    * [Performing the Clone](user-manual/cloning/cloning-with-connections/performing-the-clone.md)
 
 ## Operations
 

@@ -1,8 +1,8 @@
-# Creating A Single Group Output
+# Creating A Single Group Output with Output Name Templates
 
 The creation of a Single Group Output requires two Objects, a Group and an Output Name Template. Let's take a look at the Single Group Output from the example. In this example we will edit an already existing Output.
 
-![The Company 1 Single Group Output](<../../../.gitbook/assets/image (418).png>)
+![The Company 1 Single Group Output](<../../../.gitbook/assets/image (418) (1).png>)
 
 Looking at the name of the Output, it is extremely similar in style to the name of the Source Company 1 Sales Order Detail. It contains a reference to the Group, "Company 1", and a reference to the Data it processes "Single Group Output" much in the same way that the Source does. Simlarly to the Source configuration, we will also use the Group object and a Name Template to set up this Output to be Single Group.
 
@@ -16,7 +16,7 @@ Similar to Source Name Templates, Output Name Templates allow users to setup IDO
 
 An Output Name Template is another extremely simple object. It has 1 configurable field: Output Name. That field has 1 requirement. It must have the text ${GROUP} somehwere in it. The ${GROUP} token will tell IDO where the user wants the Group name dynamically inserted into the Output name. AS stated above, the "Company 1 Single Group Output" Output name has two parts, the "Company 1" Group, and the "Single Group Output" that indicates what data is in the Output. Creating an Output Name Template for it would look like the image below.
 
-![The Single Group Output Template](<../../../.gitbook/assets/image (400).png>)
+![The Single Group Output Template](<../../../.gitbook/assets/image (400) (1).png>)
 
 ### Applying the Group & Template
 
@@ -26,7 +26,7 @@ With a "Company 1" Group and a "Single Group Output" Template created, we are re
 
 Apply the Group and Output Template by using the associated dropdowns. Once both are selected, the Output Name control will be greyed out and automatically populated by IDO, just like a Source using a Group and Template.&#x20;
 
-![Group and Output Template applied](<../../../.gitbook/assets/image (398).png>)
+![Group and Output Template applied](<../../../.gitbook/assets/image (398) (1).png>)
 
 The Output has now been converted into a Single Group Output! When the Company 1 Group is cloned, a brand new Output associated with the newly created Group will be made. In the next section, we will perform a clone of Company 1 to see how the Outputs behave.
 

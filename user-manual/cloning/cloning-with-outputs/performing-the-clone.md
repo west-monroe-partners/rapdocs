@@ -26,6 +26,6 @@ There is a newly created Output Cloning Single Group Output in the environment. 
 
 
 
-The clone has been successfuly and preserved the desired user logic! The image below shows the new environment setup with the Output Cloning objects added.
+The clone has been completed successfuly and preserved the desired user logic! The image below shows the new environment setup with the Output Cloning objects added.
 
 ![The updated environment](<../../../.gitbook/assets/image (384).png>)

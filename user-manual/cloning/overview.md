@@ -10,7 +10,7 @@ Sales Order Header is related to global Sources for Product, Territory, and Cust
 
 The Sales Order Detail Source writes its data to an Output called Sales Output.
 
-![Company 1 Setup](<../../.gitbook/assets/image (382).png>)
+![Company 1 Setup](<../../.gitbook/assets/image (382) (1).png>)
 
 Now, the user wants to configure sources for Company 2, Company 3, Company 4, etc. createing new version of the blue Sources in the diagram above all using the exact same logic and related to the exact same global Sources. After adding sources for Company 2, the environment should look like the below image.
 
