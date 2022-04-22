@@ -18,7 +18,7 @@ The Multi Group Output now contains an additional Output Channel for "Output Clo
 
 The Company 1 Single Group Output has been left alone. It still only has one Output Channel mapped to Company 1 Sales Order Detail.
 
-![Only the Company 1 Mapping](<../../../.gitbook/assets/image (385).png>)
+![Only the Company 1 Mapping](<../../../.gitbook/assets/image (385) (1).png>)
 
 There is a newly created Output Cloning Single Group Output in the environment. It has the Output Cloning Sales Order Detail Source mapped into it.
 

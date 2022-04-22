@@ -8,7 +8,7 @@ IDO 2.5.0 now offers support for Databricks Runtime 9.1. This version utilizes S
 
 From any IDO page, click the hamburger menu icon in the top left, navigate to System Configuration, then click Process Configurations. This will bring users to the Process Configuration homepage. Then click the name of the Process Configuration to add overrides to. In this case, 9.1 Demo
 
-![Navigating to Cluster Configurations](<../../../../.gitbook/assets/image (385) (1) (1) (1) (1) (1).png>)
+![Navigating to Cluster Configurations](<../../../../.gitbook/assets/image (385) (1) (1) (1) (1) (1) (1).png>)
 
 ## Adding the Process Overrides
 

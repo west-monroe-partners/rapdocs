@@ -6,7 +6,7 @@ In the Company 1 Example, the Relations between the Company 1 Sources and the Gl
 
 For this example, we will be converting the existing Relations between the Company 1 Sources and the Global Sources into Relation Templates. The beginning setup is below.
 
-![Beginning Setup](<../../../.gitbook/assets/image (399) (1).png>)
+![Beginning Setup](<../../../.gitbook/assets/image (399) (1) (1).png>)
 
 The first step to creating Relation Templates is to Remove the Primary Flag from any Relation that will be templated. Relations CANNOT be Primary if they will be templated. To do this, we simply open each relation, flip the Primary toggle, and hit save.&#x20;
 

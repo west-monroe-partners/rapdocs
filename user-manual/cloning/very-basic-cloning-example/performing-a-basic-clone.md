@@ -34,11 +34,11 @@ In order to clone this Group, the user will need to supply a new Group name to p
 
 After resaving the file with the new Group name, the user must navigate back to the Groups page to perform the Clone. Locate and click the "Import" button along the top of the page. A popup will launch where the user can specify the Clone file that was edited in the steps above. After picking a file IDO will display a summary of all objects that will be created as part of the Clone operation. It is highly recommended that users analyze this popup to ensure no unexpected objects are included.
 
-![The Import Summary](<../../../.gitbook/assets/image (399) (1) (1).png>)
+![The Import Summary](<../../../.gitbook/assets/image (399) (1) (1) (1).png>)
 
 After validating the Import Summary, scroll down and click the "Import" button. The window will disappear and a process will run to complete the Cloning procedure. Within 30 seconds, a refresh of the page should show the new Group.&#x20;
 
-![The newly created Group](<../../../.gitbook/assets/image (378).png>)
+![The newly created Group](<../../../.gitbook/assets/image (378) (1).png>)
 
 The newly created Source will also be available in the Sources list with identical settings to the original Company 1 Sales Order Detail Source.
 

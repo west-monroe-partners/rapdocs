@@ -10,7 +10,7 @@ In order to create a Custom Parsing source, users should first select a File Con
 
 Next, we will choose a parser. In this example we will choose Custom Notebook to use custom Databricks notebook code to parse our data. Note that for the "Other" file type only the Custom parsers are available.&#x20;
 
-![](<../../.gitbook/assets/image (385) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (385) (1) (1) (1) (1) (1).png>)
 
 Finally, select the Cluster Config pointing to the custom cluster configuration for the parser, learn more about setting up a Cluster Configuration for Custom Processes [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).
 

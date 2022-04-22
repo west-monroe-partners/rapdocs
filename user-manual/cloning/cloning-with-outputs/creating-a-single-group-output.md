@@ -29,3 +29,7 @@ Apply the Group and Output Template by using the associated dropdowns. Once both
 ![Group and Output Template applied](<../../../.gitbook/assets/image (398).png>)
 
 The Output has now been converted into a Single Group Output! When the Company 1 Group is cloned, a brand new Output associated with the newly created Group will be made. In the next section, we will perform a clone of Company 1 to see how the Outputs behave.
+
+## Notes
+
+Note that an Output that has a Group MUST be in the same Group as all of its mapped Sources., or the mapped Sources must be ungrouped. In the event that a user maps a Source from a different Group into a Grouped Ouptput, IDO will throw an error and prevent the action.

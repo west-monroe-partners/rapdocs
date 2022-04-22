@@ -2,7 +2,7 @@
 
 In the Company 1 Example, the Relation between Company 1 Sales Order Header and Company 1 Sales Order Detail is an example of a Group Relation. When the user Clones the Company 1 Sources to make Company 2, they will want a new Relation to be created between the Company 2 Sales Order Header and the Company 2 Sales Order Detail Sources. See below for a visual example.&#x20;
 
-![Desired Group Relation behavior when Cloning](<../../../.gitbook/assets/image (393) (1).png>)
+![Desired Group Relation behavior when Cloning](<../../../.gitbook/assets/image (393) (1) (1).png>)
 
 ## Converting Existing Relations into Templates
 

@@ -28,7 +28,7 @@ In the event that the user performs a Clone to create Company 3, the desired beh
 
 In the upcoming sections, we will explore how Output Name Templates can be utilized to control the whether an Output and its Output Channels are treated as Single Group or Multi Group. For this example we will expand upon the Company 1 example introduced in the Cloning Overview by adding a couple of outputs seen in the diagram below.
 
-![Our starting example with 2 Outputs](<../../../.gitbook/assets/image (397).png>)
+![Our starting example with 2 Outputs](<../../../.gitbook/assets/image (397) (1).png>)
 
 We will configure the Outputs so that after Cloning, the environment looks like the image below. Notice the newly created Output Cloning Single Group Output and the new Channel in the Multi Group Output.
 
