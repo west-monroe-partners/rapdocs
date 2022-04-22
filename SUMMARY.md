@@ -73,6 +73,8 @@
     * [Custom Post Output](user-manual/sdk/custom-post-output.md)
   * [Setting Up Custom Processes for Automatic Processing](user-manual/sdk/setting-up-custom-processes-for-automatic-processing.md)
   * [Advanced Patterns](user-manual/sdk/advanced-patterns/README.md)
+    * [Custom Connections](user-manual/sdk/advanced-patterns/custom-connections.md)
+    * [Parameters](user-manual/sdk/advanced-patterns/parameters.md)
     * [Custom Post Output](user-manual/sdk/advanced-patterns/custom-post-output.md)
     * [Custom Parsing](user-manual/sdk/advanced-patterns/custom-parsing.md)
     * [Custom Ingestion](user-manual/sdk/advanced-patterns/custom-ingestion.md)

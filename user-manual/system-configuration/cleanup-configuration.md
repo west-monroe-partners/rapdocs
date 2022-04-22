@@ -2,7 +2,7 @@
 
 Cleanup Configuration defines retention settings for data lake objects and metadata. It is accessible via main menu under System Configuration -> Cleanup Configurations.&#x20;
 
-![](<../../.gitbook/assets/image (386) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (386) (1) (1) (1) (1).png>)
 
 Default configuration object is created automatically and is assigned to all existing and new sources.
 

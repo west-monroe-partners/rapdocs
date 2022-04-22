@@ -2,7 +2,7 @@
 
 We will start off by taking a look at an example Connection. It is configured to pull data from the AdventureWorks database and is attached to the Company Sales Order Header Source.
 
-![The Multi Group Connection](<../../../.gitbook/assets/image (400).png>)
+![The Multi Group Connection](<../../../.gitbook/assets/image (404).png>)
 
 Notice in the above image that the Group and Connection Template fields are both blank and the Connection Name is hard coded to "Multi Group Connection".&#x20;
 

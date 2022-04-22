@@ -12,7 +12,11 @@ Next, we will choose a parser. In this example we will choose Custom Notebook to
 
 ![](<../../.gitbook/assets/image (385) (1) (1) (1) (1) (1).png>)
 
-Finally, select the Cluster Config pointing to the custom cluster configuration for the parser, learn more about setting up a Cluster Configuration for Custom Processes [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).
+Finally, select the Cluster Config pointing to the custom cluster configuration for the parser. If one does not already exist in the environment, the user can create one similar to the image below as a temporary placeholder.
+
+![A placeholder Cluster Config](<../../.gitbook/assets/image (379).png>)
+
+Learn more about setting up a Cluster Configuration for Custom Processes [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).
 
 ## Creating your first Custom Parse Notebook
 

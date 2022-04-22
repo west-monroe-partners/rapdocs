@@ -4,7 +4,7 @@
 
 As seen in the Very Basic Cloning example, single Sources can be copied into new Groups easily. However, real configuration setups are always substantially more complex, particularly because they contain logic around Relations. Let's look at the Company 1 configuration as an example. In the below image there are 4 relations. 2 of the Relations are between Company 1 Sales Order Header and Sources that exist outside of the Company 1 Group. 1 Relation is between Company 1 Sales Order Detail and a Source that exists outside of the Company 1 Group. The other Relation is a Relation between two members of the same Group, Company 1 Sales Order Header and Company 1 Sales Order Detail. The sections below will break down the desired Cloning behavior for each.
 
-![Company 1 Relations](<../../../.gitbook/assets/image (394) (1).png>)
+![Company 1 Relations](<../../../.gitbook/assets/image (394) (1) (1).png>)
 
 ## Master Data Relations
 
@@ -20,9 +20,9 @@ The 3 Relations between Company 1 Sources and the Sources that exist outside of 
 
 The other Relation in the Company 1 diagram, between Company 1 Sales Order Header and Company 1 Sales Order Detail, is different from the above Master Data Relation because it exists between two sources in the same Group. When thinking of the Company 2 Sources that a Clone operation would create, the desired behavior is to create two brand new Sources and relate them to each other, not to relate the new Company 2 Sources to the Company 1 Sources. We call these "Group Relations". See the two images below for examples of desired and undesired behavior. Notice that in the desired behavior the newly created Group is completely independent from the Original Group.
 
-![Desired Behavior for Group Relations](<../../../.gitbook/assets/image (383).png>)
+![Desired Behavior for Group Relations](<../../../.gitbook/assets/image (383) (1).png>)
 
-![Undesired Behavior](<../../../.gitbook/assets/image (401) (1).png>)
+![Undesired Behavior](<../../../.gitbook/assets/image (401) (1) (1).png>)
 
 ## Example
 

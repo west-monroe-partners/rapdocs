@@ -12,7 +12,7 @@ Below is the Company 1 Sales Order Detail Source. It is the only Source in its G
 
 Navigating to the Applied Objects tab in the Groups page for Company 1, the user can see that there is only one assoicated object.
 
-![Only 1 Associated Source](<../../../.gitbook/assets/image (403) (1).png>)
+![Only 1 Associated Source](<../../../.gitbook/assets/image (403) (1) (1).png>)
 
 ## Performing the Clone
 
@@ -20,7 +20,7 @@ Navigating to the Applied Objects tab in the Groups page for Company 1, the user
 
 Now we will clone the "Company 1" Group, to create the "Basic Clone" Group. First, the user must navigate to the Groups page of the UI and locate the Group they desire to clone. Along the right side of the screen, a 3 dot button exists. Clicking that button will open a menu with the Clone option. Clicking the Clone button will display a screen summarizing the objects included in the Group. It is HIGHLY recommended that users check this summary to ensure no extra objects are being included in the Clone.
 
-![The Company 1 Clone Summary](<../../../.gitbook/assets/image (383) (1).png>)
+![The Company 1 Clone Summary](<../../../.gitbook/assets/image (383) (1) (1).png>)
 
 Clicking "Proceed" will download a file containing all of the Configuration details for the Group.
 

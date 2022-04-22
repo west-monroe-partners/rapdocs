@@ -16,17 +16,17 @@ Similar to Source Name Templates, Connection Name Templates allow users to setup
 
 A Connection Name Template is another extremely simple object. It has 1 configurable field: Connection Name. That field has 1 requirement. It must have the text ${GROUP} somehwere in it. The ${GROUP} token will tell IDO where the user wants the Group name dynamically inserted into the Connection name. As stated above, the "Company 1 Single Group Connection" Connection name has two parts, the "Company 1" Group, and the "Single Group Connection" that indicates what the Connection connects to. Creating a Connection Name Template for it would look like the image below.
 
-![The Single Group Connection Template](<../../../.gitbook/assets/image (419).png>)
+![The Single Group Connection Template](<../../../.gitbook/assets/image (420).png>)
 
 ### Applying the Group & Template
 
 With a "Company 1" Group and a "Single Group Connection" Template created, we are ready to transform the existing "Company 1 Single Group Connection" into a true Single Group Connection. As of right now, it has no Group and no Connection Template applied. As we learned in the Creating a Multi Group Connection page, this means that it would behave as a Multi Group Connection if Cloned.
 
-![The Singe Group Connection before applying the Group and Template](<../../../.gitbook/assets/image (404).png>)
+![The Singe Group Connection before applying the Group and Template](<../../../.gitbook/assets/image (405).png>)
 
 Apply the Group and Connection Template by using the associated dropdowns. Once both are selected, the Connection Name control will be greyed out and automatically populated by IDO, just like a Source using a Group and Template.&#x20;
 
-![The Group and Template have been applied](<../../../.gitbook/assets/image (398).png>)
+![The Group and Template have been applied](<../../../.gitbook/assets/image (402).png>)
 
 The Connection has now been converted into a Single Group Connection! When the Company 1 Group is cloned, a brand new Connection associated with the newly created Group will be made if it does not exist already. In the next section, we will perform a clone of Company 1 to see how the Connections behave.
 

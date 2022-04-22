@@ -23,7 +23,7 @@ A few things to notice
 
 Additionally, looking at the Linked Sources tab for any of the Relation Templates will show that they are now applied to Sources for both Company 1 and Company 2. See the image below.
 
-![The Relation Template is linked to Sources in both Groups](<../../../.gitbook/assets/image (380).png>)
+![The Relation Template is linked to Sources in both Groups](<../../../.gitbook/assets/image (380) (1).png>)
 
 
 

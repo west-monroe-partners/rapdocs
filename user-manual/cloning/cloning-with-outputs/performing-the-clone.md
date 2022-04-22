@@ -2,7 +2,7 @@
 
 As a reminder, this is the current setup of the environment.&#x20;
 
-![The Setup](<../../../.gitbook/assets/image (403).png>)
+![The Setup](<../../../.gitbook/assets/image (403) (1).png>)
 
 ## Performing the Clone
 
@@ -28,4 +28,4 @@ There is a newly created Output Cloning Single Group Output in the environment. 
 
 The clone has been completed successfuly and preserved the desired user logic! The image below shows the new environment setup with the Output Cloning objects added.
 
-![The updated environment](<../../../.gitbook/assets/image (384).png>)
+![The updated environment](<../../../.gitbook/assets/image (384) (1).png>)

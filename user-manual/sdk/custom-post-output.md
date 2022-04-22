@@ -4,11 +4,13 @@ The Custom Post Output SDK will allow users to define code in a Databricks Noteb
 
 ## Creating a Custom Post Output&#x20;
 
-Any output can have post output commands attached to it. Simply select a Cluster Configuration that specifies the notebook containing the desired commands.&#x20;
+Any output can have post output commands attached to it by clicking the "Custom Notebook" button under the Post Output Commands control on the Output Settings page. After selecting the "Custom Notebook" button, users will need to select a Cluster Configuration that specifies the notebook containing the desired commands. If one does not already exist in the environment, the user can create one similar to the image below as a temporary placeholder.
 
-Notebooks can also be run manually from Databricks.
+![A placeholder Cluster Config](<../../.gitbook/assets/image (379).png>)
 
-See [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md) for more information about setting up a Custom Post Output Cluster Configuration.
+Further information about Cluster Configs can be found [here](../system-configuration/cluster-and-process-configuration-overview/cluster-configuration/cluster-configuration-for-custom-processing-steps.md).&#x20;
+
+Notebooks can also be run manually from Databricks. For the purpose of this Hello World we will be running the notebook manually in Databricks.&#x20;
 
 
 

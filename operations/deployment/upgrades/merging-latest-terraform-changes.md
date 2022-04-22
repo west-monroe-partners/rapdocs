@@ -4,7 +4,7 @@ When performing a version upgrade, it is sometimes necessary to update Terraform
 
 The master Terraform repository is hosted in GitHub and looks like the below image. Please reach out to your Intellio DataOps project team to gain access to this repository. There will be a master-\* branch for each minor and major version starting with 2.4.3, i.e. "master-2.4.3" and "master-2.5.0".
 
-![](<../../../.gitbook/assets/image (380) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (380) (1) (1) (1) (1) (1) (1).png>)
 
 When deploying the initial DataOps workspace in Terraform, the Terraform Cloud account is connected to a forked version of this repository. As new master version branches are added the forked repositories will slowly become behind the master in terms of commits.
 

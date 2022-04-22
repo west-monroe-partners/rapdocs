@@ -1,9 +1,6 @@
 # Custom Post Output
 
-
-
-* Custom Parameters and custom connections can be used to allow a single notebook to connect to multiple different data sources. i.e. Create a generic SalesForce connector, then specify the table name in the custom parameters.&#x20;
-* Custom ingest sessions can be embedded within custom post output sessions to create a loopback. See the example below:
+Custom ingest sessions can be embedded within custom post output sessions to create a Loopback. The example below will pull create an input and write data into the CustomIngestTest source every time the PostOutput Output runs!
 
 ```
 import com.wmp.intellio.dataops.sdk._

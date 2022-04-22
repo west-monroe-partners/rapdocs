@@ -2,7 +2,7 @@
 
 We will start off by taking a look at an example Output. It has a single Output Channel attached to Demo Company 1 Sales Order Detail.&#x20;
 
-![A single Ouput Channel in the Multi Group Output](<../../../.gitbook/assets/image (386).png>)
+![A single Ouput Channel in the Multi Group Output](<../../../.gitbook/assets/image (386) (1).png>)
 
 Navigating back to the Output Settings page, notice in the below image that the Group and Output Template fields are both blank and the Output Name is hard coded to "Multi Group Output".&#x20;
 

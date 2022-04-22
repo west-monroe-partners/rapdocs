@@ -14,7 +14,7 @@ As it currently stands, this Source is a part of the Company 1 Group and the nam
 
 A Source Name Template is another extremely simple object. It has 1 configurable field: Source Name. That field has 1 requirement. It must have the text ${GROUP} somehwere in it. The ${GROUP} token will tell IDO where the user wants the Group name dynamically inserted into the Source name. Take our "Company 1 Sales Order Detail" Source. It has two parts, the "Company 1" Group, and the "Sales Order Detail" that indicates what data is in the Source. Creating a Source Name Template for it would look like the image below.
 
-![Creating the Sales Order Detail Source Name Template](<../../../.gitbook/assets/image (394) (1) (1).png>)
+![Creating the Sales Order Detail Source Name Template](<../../../.gitbook/assets/image (394) (1) (1) (1).png>)
 
 Notice the ${GROUP} token where "Company 1" would normally go and the rest of the Source name is normal.
 

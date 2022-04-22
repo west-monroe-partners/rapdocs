@@ -12,19 +12,19 @@ From any IDO page, click the hamburger menu icon in the top left, navigate to Sy
 
 Clicking the "New Process Configuration" button in the top right will bring the user to the new Process Configuration creation page. For this example, we will name the Process Configuration "9.1 Demo" Notice that by default the Process Configuration uses "Default Sparky Configuration"
 
-![A new Process Configuration using the Default Sparky Configuration](<../../../../.gitbook/assets/image (380) (1) (1) (1) (1).png>)
+![A new Process Configuration using the Default Sparky Configuration](<../../../../.gitbook/assets/image (380) (1) (1) (1) (1) (1).png>)
 
 ## Switching to Databricks 9.1
 
 Simply click on the Cluster Config dropdown under the Description field to access the available Cluster Configurations. Scroll down and click 9.1 Demo to change the associated Cluster Configuration to the 9.1 configuration created in previous steps.
 
-![The Process Configuration now uses the 9.1 Demo Cluster Config](<../../../../.gitbook/assets/image (386) (1) (1) (1) (1) (1).png>)
+![The Process Configuration now uses the 9.1 Demo Cluster Config](<../../../../.gitbook/assets/image (386) (1) (1) (1) (1) (1) (1).png>)
 
 ## Saving the configuration & applying to Sources
 
 Click save. The Process Config has been successfully created! Now that the configuration has been saved. It can be applied to Sources. To apply the configuration to a Source, navigate to the desired Source Settings page. Look for the Process Config drop down on the page and select the 9.1 Demo config that was just created. Hit save.
 
-![A source configured to use the 9.1 Demo Process Config](<../../../../.gitbook/assets/image (383) (1) (1) (1).png>)
+![A source configured to use the 9.1 Demo Process Config](<../../../../.gitbook/assets/image (383) (1) (1) (1) (1).png>)
 
 All processes on this source will now be performed using the 9.1 cluster configuration. Expect faster results!
 

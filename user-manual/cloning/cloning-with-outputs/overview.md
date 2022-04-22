@@ -8,7 +8,7 @@ When configuring Output Channels in IDO, two use cases commonly arise. We will r
 
 A Multi Group Output contains mappings from Sources in a number of different IDO Groups. To build on the earlier Company 1 example, imagine a scenario where Company 1 and Company 2 Groups exist in an environment. Each Group has a Sales Order Detail Source and the user wants to write all of Sales data into a single Output table. The setup looks something like the below image.
 
-![Both Sources are mapped into the same Output](<../../../.gitbook/assets/image (402).png>)
+![Both Sources are mapped into the same Output](<../../../.gitbook/assets/image (402) (1).png>)
 
 In the event that the user wants to perform a Clone to create "Company 3", the desired behavior would be to add an additional Channel into the existing Output A for the Company 3 Sasles Order Detail Source to write data into, similar to the image below.
 
@@ -22,7 +22,7 @@ A Single Group Output contains mappings from Sources that are all in the same Gr
 
 In the event that the user performs a Clone to create Company 3, the desired behavior is to create an entirely new Output with the Company 3 Source(s) mapped into it, similar to the image below.
 
-![The newly created Company 3 Source has its own Output](<../../../.gitbook/assets/image (379).png>)
+![The newly created Company 3 Source has its own Output](<../../../.gitbook/assets/image (379) (1).png>)
 
 ## The Example
 
