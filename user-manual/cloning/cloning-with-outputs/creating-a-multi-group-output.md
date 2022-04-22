@@ -10,4 +10,4 @@ Navigating back to the Output Settings page, notice in the below image that the 
 
 With this seup, the Output is not assicated with any Group. It exists separately from all of the Groups and is able to be connected to ANY Source in the environment. Think of this Output in a similar way to the Global Sources in the Cloning with Relations example. When a Source attached to this Output is cloned, it will create a new Channel to the EXACT same Output.
 
-That is it for creating an Multi Group Output. Multi Group is treated as the default behavior when Cloning and requires very little additional configuration. See the next section for steps required to create a Single Group Output using Output Name Templates.
+That is it for creating a Multi Group Output. Multi Group is treated as the default behavior when Cloning and requires very little additional configuration. See the next section for steps required to create a Single Group Output using Output Name Templates.
