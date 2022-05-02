@@ -144,6 +144,7 @@
 * [Lineage Queries](operations/lineage.md)
 * [Intellio Processing Units](operations/intellio-processing-units.md)
 * [Spark and Databricks Overview](operations/spark-and-databricks-overview.md)
+* [Open Source Software List](operations/open-source-software-list.md)
 
 ## Releases
 
